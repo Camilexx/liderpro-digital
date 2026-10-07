@@ -1,8 +1,14 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import AnnouncementBar from "@/components/AnnouncementBar";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import "./globals.css";
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+};
 
 export const metadata: Metadata = {
   title: "LiderPro — Tu vehículo. Nuestra experiencia | Repuestos y Baterías Ecuador",
@@ -18,7 +24,6 @@ export const metadata: Metadata = {
     "repuestos chevrolet sail",
   ],
   authors: [{ name: "LiderPro Digital" }],
-  viewport: "width=device-width, initial-scale=1, maximum-scale=5",
 };
 
 export default function RootLayout({

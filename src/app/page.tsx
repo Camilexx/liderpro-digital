@@ -1,19 +1,15 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
-  ShieldCheck,
   Truck,
+  ShieldCheck,
   Wrench,
-  Zap,
-  MessageCircle,
-  Search,
-  CheckCircle,
-  HelpCircle,
-  ArrowRight,
-  Layers,
   MapPin,
-  Clock,
-  ChevronRight,
-  BookOpen,
+  Search,
+  MessageCircle,
+  ArrowRight,
+  Zap,
+  Layers,
 } from "lucide-react";
 import VehicleFinder from "@/components/VehicleFinder";
 import ProductCard from "@/components/ProductCard";
@@ -29,240 +25,214 @@ export default function HomePage() {
   const featuredProducts = PRODUCTS.slice(0, 4);
 
   return (
-    <div className="space-y-16 sm:space-y-24">
-      {/* 01 & 02: HERO SECTION */}
-      <section className="relative bg-gradient-to-b from-brand-navy via-slate-900 to-brand-dark text-white pt-12 pb-20 sm:pt-20 sm:pb-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        {/* Subtle grid background glow */}
-        <div className="absolute inset-0 bg-[radial-gradient(#334155_1px,transparent_1px)] [background-size:24px_24px] opacity-20 pointer-events-none" />
-        <div className="absolute -top-40 -right-40 w-96 h-96 bg-brand-primary/20 rounded-full blur-3xl pointer-events-none" />
-
-        <div className="max-w-7xl mx-auto relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            {/* Left Column: Core Positioning Copy & CTAs */}
-            <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/15 text-xs font-bold text-slate-200">
-                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
-                <span>Atención Costa y Sierra • Pedernales & Quito</span>
-              </div>
-
-              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight">
-                {BUSINESS_CONFIG.slogan}
-              </h1>
-
-              <p className="text-base sm:text-xl text-slate-300 font-medium leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                {BUSINESS_CONFIG.supportingProposition}
-              </p>
-
-              {/* CTAs */}
-              <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
-                <a
-                  href="#buscador"
-                  className="w-full sm:w-auto px-8 py-4 bg-brand-primary hover:bg-brand-primaryHover text-white font-black text-sm uppercase tracking-wider rounded-xl shadow-lg hover:shadow-glow transition-all flex items-center justify-center gap-2.5 active:scale-95"
-                >
-                  <Search className="w-5 h-5" />
-                  <span>ENCONTRAR MI PRODUCTO</span>
-                </a>
-
-                <a
-                  href={buildWhatsAppLink("general_quote")}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full sm:w-auto px-8 py-4 bg-white/10 hover:bg-white/20 text-white border border-white/20 font-bold text-sm uppercase tracking-wider rounded-xl transition-all flex items-center justify-center gap-2.5 backdrop-blur-sm"
-                >
-                  <MessageCircle className="w-5 h-5 text-brand-whatsapp" />
-                  <span>HABLAR CON UN ASESOR</span>
-                </a>
-              </div>
-
-              {/* Trust Strip */}
-              <div className="pt-8 border-t border-slate-800/80 grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs text-slate-300">
-                <div className="flex items-center gap-2 justify-center lg:justify-start">
-                  <Truck className="w-4 h-4 text-amber-400 shrink-0" />
-                  <span>Envíos a nivel nacional</span>
-                </div>
-                <div className="flex items-center gap-2 justify-center lg:justify-start">
-                  <Clock className="w-4 h-4 text-emerald-400 shrink-0" />
-                  <span>Entrega estimada 24–48 h*</span>
-                </div>
-                <div className="flex items-center gap-2 justify-center lg:justify-start">
-                  <Wrench className="w-4 h-4 text-blue-400 shrink-0" />
-                  <span>Asesoría especializada</span>
-                </div>
-                <div className="flex items-center gap-2 justify-center lg:justify-start">
-                  <MapPin className="w-4 h-4 text-rose-400 shrink-0" />
-                  <span>Atención Costa y Sierra</span>
-                </div>
-              </div>
-
-              {/* Shipping disclaimer */}
-              <p className="text-[11px] text-slate-400 italic">
-                {BUSINESS_CONFIG.shipping.disclaimer}
-              </p>
+    <div className="space-y-16 sm:space-y-24 pb-16">
+      {/* 01: HERO SECTION — Clean Minimal & Premium Automotive */}
+      <section className="pt-8 sm:pt-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          {/* Left: Value Proposition */}
+          <div className="lg:col-span-6 space-y-6 text-left">
+            <div className="text-[11px] font-bold tracking-widest uppercase text-slate-500">
+              ATENCIÓN COSTA + SIERRA
             </div>
 
-            {/* Right Column: Visual Value Card */}
-            <div className="lg:col-span-5">
-              <div className="bg-slate-800/80 backdrop-blur-md rounded-3xl p-6 sm:p-8 border border-slate-700 shadow-2xl space-y-6">
-                <div className="flex items-center justify-between pb-4 border-b border-slate-700">
-                  <span className="text-xs font-mono font-bold text-amber-400 uppercase tracking-wider">
-                    Ecosistema LiderPro
-                  </span>
-                  <span className="text-xs px-2.5 py-1 bg-emerald-500/20 text-emerald-300 rounded-full font-bold">
-                    Operación Activa
-                  </span>
-                </div>
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-slate-950 leading-[1.08]">
+              Tu vehículo.
+              <br />
+              <span className="text-brand-primary">Nuestra experiencia.</span>
+            </h1>
 
-                <div className="space-y-4">
-                  <div className="p-4 bg-slate-900/60 rounded-2xl border border-slate-700/60 flex items-start gap-3">
-                    <div className="w-8 h-8 rounded-lg bg-red-500/20 text-brand-primary flex items-center justify-center shrink-0 font-bold">
-                      1
-                    </div>
-                    <div>
-                      <h4 className="text-sm font-bold text-white">Identificación y Compatibilidad</h4>
-                      <p className="text-xs text-slate-400 mt-0.5">
-                        Filtramos el producto exacto para tu modelo, año y motor sin margen de error.
-                      </p>
-                    </div>
-                  </div>
+            <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-lg">
+              Encuentra el producto adecuado para tu vehículo, recibe asesoría especializada y cómpralo con confianza.
+            </p>
 
-                  <div className="p-4 bg-slate-900/60 rounded-2xl border border-slate-700/60 flex items-start gap-3">
-                    <div className="w-8 h-8 rounded-lg bg-emerald-500/20 text-brand-whatsapp flex items-center justify-center shrink-0 font-bold">
-                      2
-                    </div>
-                    <div>
-                      <h4 className="text-sm font-bold text-white">Asesoría Humana en WhatsApp</h4>
-                      <p className="text-xs text-slate-400 mt-0.5">
-                        Confirmamos stock en tiempo real, fotos reales y especificación técnica.
-                      </p>
-                    </div>
-                  </div>
+            {/* CTAs */}
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
+              <a
+                href="#buscador"
+                className="px-8 h-13 bg-brand-primary hover:bg-brand-primaryHover text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-all shadow-sm flex items-center justify-center gap-2 active:scale-95 text-center"
+              >
+                <Search className="w-4 h-4" />
+                <span>ENCONTRAR MI PRODUCTO</span>
+              </a>
 
-                  <div className="p-4 bg-slate-900/60 rounded-2xl border border-slate-700/60 flex items-start gap-3">
-                    <div className="w-8 h-8 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center shrink-0 font-bold">
-                      3
-                    </div>
-                    <div>
-                      <h4 className="text-sm font-bold text-white">Despacho Pedernales / Quito</h4>
-                      <p className="text-xs text-slate-400 mt-0.5">
-                        Seleccionamos el punto de envío más conveniente para entrega rápida en tu ciudad.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+              <a
+                href={buildWhatsAppLink("general_quote")}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 h-13 border border-slate-300 hover:border-slate-400 bg-white hover:bg-slate-50 text-slate-900 font-bold text-xs uppercase tracking-wider rounded-xl transition-all flex items-center justify-center gap-2 text-center"
+              >
+                <MessageCircle className="w-4 h-4 text-emerald-600" />
+                <span>HABLAR CON UN ASESOR</span>
+              </a>
+            </div>
+          </div>
 
-                <div className="pt-2">
-                  <Link
-                    href="/sucursales"
-                    className="block text-center text-xs font-bold text-amber-400 hover:text-amber-300 transition-colors"
-                  >
-                    Conoce nuestros puntos en Pedernales y Quito →
-                  </Link>
-                </div>
+          {/* Right: Studio Automotive Photography Stage */}
+          <div className="lg:col-span-6">
+            <div className="relative aspect-[16/10] sm:aspect-[16/9] lg:aspect-[4/3] rounded-3xl overflow-hidden border border-slate-200/90 shadow-sm bg-slate-950">
+              <Image
+                src="/images/hero/automotive-hero.jpg"
+                alt="LiderPro Ingeniería y Repuestos Automotrices"
+                fill
+                priority
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent pointer-events-none" />
+              <div className="absolute bottom-4 left-5 right-5 text-white flex items-center justify-between text-xs">
+                <span className="font-semibold tracking-wide">
+                  Ingeniería & Repuestos Certificados
+                </span>
+                <span className="text-[11px] font-mono text-slate-300">
+                  Pedernales • Quito
+                </span>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 04: VEHICLE / PRODUCT FINDER (Interactive) */}
-      <section id="buscador" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-16 sm:-mt-24 relative z-20">
+      {/* 02: TRUST STRIP — Minimal 4 elements */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="py-6 px-6 sm:px-10 rounded-2xl border border-slate-200/80 bg-white grid grid-cols-2 md:grid-cols-4 gap-6 text-xs text-slate-700">
+          <div className="flex items-center gap-2.5">
+            <Truck className="w-4 h-4 text-slate-950 shrink-0" />
+            <span className="font-bold tracking-tight">ENVÍOS NACIONALES</span>
+          </div>
+          <div className="flex items-center gap-2.5">
+            <Wrench className="w-4 h-4 text-slate-950 shrink-0" />
+            <span className="font-bold tracking-tight">ASESORÍA ESPECIALIZADA</span>
+          </div>
+          <div className="flex items-center gap-2.5">
+            <MapPin className="w-4 h-4 text-slate-950 shrink-0" />
+            <span className="font-bold tracking-tight">ATENCIÓN COSTA + SIERRA</span>
+          </div>
+          <div className="flex items-center gap-2.5">
+            <ShieldCheck className="w-4 h-4 text-slate-950 shrink-0" />
+            <span className="font-bold tracking-tight">COMPATIBILIDAD VERIFICADA*</span>
+          </div>
+        </div>
+      </section>
+
+      {/* 03: VEHICLE FINDER (Hero Tool Asset) */}
+      <section id="buscador" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <VehicleFinder />
       </section>
 
-      {/* 05: MAIN CATEGORIES (Clean automotive grid) */}
+      {/* 04: CATEGORIES — Editorial & Minimal */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-2xl mx-auto mb-12 space-y-2">
-          <div className="text-xs font-bold text-brand-primary uppercase tracking-wider">
-            Líneas Especializadas
-          </div>
-          <h2 className="text-2xl sm:text-3xl font-black text-brand-dark">
-            Categorías Principales
+        <div className="mb-8 space-y-1">
+          <span className="text-xs font-bold uppercase tracking-wider text-slate-500">
+            Líneas Principales
+          </span>
+          <h2 className="text-2xl sm:text-3xl font-black text-slate-950">
+            Categorías
           </h2>
-          <p className="text-xs sm:text-sm text-slate-500">
-            Productos formulados y probados para alta exigencia mecánica.
-          </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           <Link
             href="/baterias"
-            className="p-6 bg-white rounded-2xl border border-slate-200 shadow-soft hover:shadow-card hover:border-brand-primary transition-all group text-center flex flex-col items-center"
+            className="p-6 rounded-2xl border border-slate-200 bg-white hover:border-slate-400 transition-all group flex flex-col justify-between h-48"
           >
-            <div className="w-14 h-14 rounded-2xl bg-red-50 text-brand-primary group-hover:scale-110 group-hover:bg-brand-primary group-hover:text-white transition-all flex items-center justify-center mb-4">
-              <Zap className="w-7 h-7" />
+            <div className="w-10 h-10 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-center text-slate-950 group-hover:bg-brand-primary group-hover:text-white group-hover:border-brand-primary transition-all">
+              <Zap className="w-5 h-5" />
             </div>
-            <h3 className="font-black text-brand-dark text-base group-hover:text-brand-primary transition-colors">
-              Baterías
-            </h3>
-            <p className="text-xs text-slate-500 mt-1">
-              Libres de mantenimiento • 15 a 18 meses
-            </p>
+            <div>
+              <h3 className="font-black text-base text-slate-950 group-hover:text-brand-primary transition-colors">
+                Baterías
+              </h3>
+              <p className="text-xs text-slate-500 mt-1">
+                Selladas de 15 a 18 meses de garantía.
+              </p>
+            </div>
+            <div className="text-xs font-bold text-slate-900 flex items-center gap-1 group-hover:text-brand-primary">
+              <span>Explorar</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </div>
           </Link>
 
           <Link
             href="/lubricantes"
-            className="p-6 bg-white rounded-2xl border border-slate-200 shadow-soft hover:shadow-card hover:border-brand-primary transition-all group text-center flex flex-col items-center"
+            className="p-6 rounded-2xl border border-slate-200 bg-white hover:border-slate-400 transition-all group flex flex-col justify-between h-48"
           >
-            <div className="w-14 h-14 rounded-2xl bg-amber-50 text-amber-600 group-hover:scale-110 group-hover:bg-amber-500 group-hover:text-white transition-all flex items-center justify-center mb-4">
-              <Layers className="w-7 h-7" />
+            <div className="w-10 h-10 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-center text-slate-950 group-hover:bg-brand-primary group-hover:text-white group-hover:border-brand-primary transition-all">
+              <Layers className="w-5 h-5" />
             </div>
-            <h3 className="font-black text-brand-dark text-base group-hover:text-brand-primary transition-colors">
-              Lubricantes
-            </h3>
-            <p className="text-xs text-slate-500 mt-1">
-              Sintéticos 5W-30 y Diésel 15W-40
-            </p>
+            <div>
+              <h3 className="font-black text-base text-slate-950 group-hover:text-brand-primary transition-colors">
+                Lubricantes
+              </h3>
+              <p className="text-xs text-slate-500 mt-1">
+                Sintéticos 5W-30 y diésel 15W-40.
+              </p>
+            </div>
+            <div className="text-xs font-bold text-slate-900 flex items-center gap-1 group-hover:text-brand-primary">
+              <span>Explorar</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </div>
           </Link>
 
           <Link
             href="/filtros"
-            className="p-6 bg-white rounded-2xl border border-slate-200 shadow-soft hover:shadow-card hover:border-brand-primary transition-all group text-center flex flex-col items-center"
+            className="p-6 rounded-2xl border border-slate-200 bg-white hover:border-slate-400 transition-all group flex flex-col justify-between h-48"
           >
-            <div className="w-14 h-14 rounded-2xl bg-blue-50 text-blue-600 group-hover:scale-110 group-hover:bg-blue-600 group-hover:text-white transition-all flex items-center justify-center mb-4">
-              <Wrench className="w-7 h-7" />
+            <div className="w-10 h-10 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-center text-slate-950 group-hover:bg-brand-primary group-hover:text-white group-hover:border-brand-primary transition-all">
+              <Wrench className="w-5 h-5" />
             </div>
-            <h3 className="font-black text-brand-dark text-base group-hover:text-brand-primary transition-colors">
-              Filtros
-            </h3>
-            <p className="text-xs text-slate-500 mt-1">
-              Aceite, aire y combustible blindados
-            </p>
+            <div>
+              <h3 className="font-black text-base text-slate-950 group-hover:text-brand-primary transition-colors">
+                Filtros
+              </h3>
+              <p className="text-xs text-slate-500 mt-1">
+                Blindados de alta retención de micras.
+              </p>
+            </div>
+            <div className="text-xs font-bold text-slate-900 flex items-center gap-1 group-hover:text-brand-primary">
+              <span>Explorar</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </div>
           </Link>
 
           <Link
             href="/productos"
-            className="p-6 bg-white rounded-2xl border border-slate-200 shadow-soft hover:shadow-card hover:border-brand-primary transition-all group text-center flex flex-col items-center"
+            className="p-6 rounded-2xl border border-slate-200 bg-white hover:border-slate-400 transition-all group flex flex-col justify-between h-48"
           >
-            <div className="w-14 h-14 rounded-2xl bg-emerald-50 text-emerald-600 group-hover:scale-110 group-hover:bg-emerald-600 group-hover:text-white transition-all flex items-center justify-center mb-4">
-              <ShieldCheck className="w-7 h-7" />
+            <div className="w-10 h-10 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-center text-slate-950 group-hover:bg-brand-primary group-hover:text-white group-hover:border-brand-primary transition-all">
+              <ShieldCheck className="w-5 h-5" />
             </div>
-            <h3 className="font-black text-brand-dark text-base group-hover:text-brand-primary transition-colors">
-              Refrigerantes y Frenos
-            </h3>
-            <p className="text-xs text-slate-500 mt-1">
-              OAT 50/50 y pastillas cerámicas
-            </p>
+            <div>
+              <h3 className="font-black text-base text-slate-950 group-hover:text-brand-primary transition-colors">
+                Frenos y Refrigerantes
+              </h3>
+              <p className="text-xs text-slate-500 mt-1">
+                Pastillas cerámicas y coolant OAT.
+              </p>
+            </div>
+            <div className="text-xs font-bold text-slate-900 flex items-center gap-1 group-hover:text-brand-primary">
+              <span>Explorar</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </div>
           </Link>
         </div>
       </section>
 
-      {/* 06: FEATURED PRODUCTS */}
+      {/* 05: FEATURED PRODUCTS — Scannable Commercial Powerhouse */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-4">
+        <div className="flex items-baseline justify-between mb-8">
           <div>
-            <div className="text-xs font-bold text-brand-primary uppercase tracking-wider">
-              Disponibilidad Inmediata
-            </div>
-            <h2 className="text-2xl sm:text-3xl font-black text-brand-dark">
+            <span className="text-xs font-bold uppercase tracking-wider text-slate-500">
+              Catálogo
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-black text-slate-950">
               Productos Destacados
             </h2>
           </div>
           <Link
             href="/productos"
-            className="text-xs font-bold text-brand-primary hover:underline flex items-center gap-1"
+            className="text-xs font-bold text-slate-900 hover:text-brand-primary transition-colors flex items-center gap-1"
           >
-            <span>Ver catálogo completo ({PRODUCTS.length} referencias verificadas)</span>
-            <ChevronRight className="w-4 h-4" />
+            <span>Ver todos ({PRODUCTS.length})</span>
+            <ArrowRight className="w-3.5 h-3.5" />
           </Link>
         </div>
 
@@ -273,114 +243,66 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 07: ¿NO SABES CUÁL NECESITAS? */}
+      {/* 06: AUTOMOTIVE EDITORIAL — Problem -> Solution Hook */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-slate-900 text-white rounded-3xl p-8 sm:p-12 border border-slate-800 flex flex-col lg:flex-row items-center justify-between gap-8">
-          <div className="space-y-3 max-w-xl text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-amber-400/20 text-amber-300 rounded-full text-xs font-bold uppercase">
-              <HelpCircle className="w-3.5 h-3.5" />
-              Asesoría Técnica Gratuita
-            </div>
-            <h3 className="text-2xl sm:text-3xl font-black tracking-tight">
-              ¿No sabes exactamente qué repuesto o batería necesitas?
+        <div className="rounded-3xl border border-slate-200 bg-white p-8 sm:p-14 flex flex-col md:flex-row items-center justify-between gap-8">
+          <div className="space-y-3 max-w-xl">
+            <span className="text-xs font-bold uppercase tracking-wider text-slate-500">
+              Asesoría Técnica
+            </span>
+            <h3 className="text-2xl sm:text-3xl font-black text-slate-950 tracking-tight">
+              ¿No sabes qué batería necesita tu vehículo?
             </h3>
-            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-              No tienes que ser mecánico. Envíanos una foto de tu producto actual, la tarjeta de matrícula o indícanos marca y modelo por WhatsApp. Te decimos con certeza matemática cuál es el correcto.
+            <p className="text-sm text-slate-600 leading-relaxed">
+              Te ayudamos a identificar el amperaje, la polaridad y las medidas exactas antes de comprar. Sin margen de error.
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row items-center gap-3 w-full lg:w-auto">
+          <div className="shrink-0 flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+            <Link
+              href="/baterias"
+              className="px-6 py-3.5 bg-brand-primary hover:bg-brand-primaryHover text-white text-xs font-bold uppercase tracking-wider rounded-xl transition-colors text-center"
+            >
+              ENCONTRAR MI BATERÍA
+            </Link>
             <a
               href={buildWhatsAppLink("general_quote")}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto px-8 py-4 bg-brand-whatsapp hover:bg-brand-whatsappHover text-white font-black text-xs uppercase tracking-wider rounded-xl shadow-lg flex items-center justify-center gap-2 transition-all active:scale-95"
+              className="px-6 py-3.5 border border-slate-300 hover:border-slate-400 bg-white text-slate-900 text-xs font-bold uppercase tracking-wider rounded-xl transition-colors text-center flex items-center justify-center gap-2"
             >
-              <MessageCircle className="w-5 h-5" />
-              <span>CONSULTAR CON UN ASESOR</span>
+              <MessageCircle className="w-4 h-4 text-emerald-600" />
+              <span>CONSULTAR POR FOTO</span>
             </a>
           </div>
         </div>
       </section>
 
-      {/* 08: EMERGENCY PATH (¿Tu carro no enciende?) */}
+      {/* 07: EMERGENCY BATTERY PATH */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <EmergencyBanner />
       </section>
 
-      {/* 09: PEDERNALES + QUITO LOGISTICS & FULFILLMENT */}
+      {/* 08: LOCATIONS — Pedernales + Quito */}
       <LocationsLogisticsSection />
 
-      {/* 10: TRUST SYSTEM */}
+      {/* 09: GUIDES (Editorial selection) */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-12 space-y-2">
-          <div className="text-xs font-bold text-brand-primary uppercase tracking-wider">
-            Seguridad Comercial
-          </div>
-          <h2 className="text-2xl sm:text-3xl font-black text-brand-dark">
-            ¿Por qué comprar en LiderPro con total tranquilidad?
-          </h2>
-          <p className="text-xs sm:text-sm text-slate-500">
-            Eliminamos la incertidumbre y el riesgo de recibir productos incompatibles o de dudosa procedencia.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="p-6 bg-white rounded-2xl border border-slate-200 shadow-soft">
-            <div className="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-4">
-              <CheckCircle className="w-6 h-6" />
-            </div>
-            <h4 className="font-black text-base text-brand-dark mb-2">
-              Cero Falsificaciones
-            </h4>
-            <p className="text-xs text-slate-600 leading-relaxed">
-              Todos nuestros lubricantes, baterías y componentes proceden de formulaciones certificadas y cuentan con trazabilidad de lote y empaque sellado.
-            </p>
-          </div>
-
-          <div className="p-6 bg-white rounded-2xl border border-slate-200 shadow-soft">
-            <div className="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-4">
-              <MapPin className="w-6 h-6" />
-            </div>
-            <h4 className="font-black text-base text-brand-dark mb-2">
-              Presencia Física Real
-            </h4>
-            <p className="text-xs text-slate-600 leading-relaxed">
-              No somos una tienda virtual sin dirección. Puedes visitarnos o retirar tu producto en nuestros puntos de Pedernales (Manabí) y Quito (Pichincha).
-            </p>
-          </div>
-
-          <div className="p-6 bg-white rounded-2xl border border-slate-200 shadow-soft">
-            <div className="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center mb-4">
-              <ShieldCheck className="w-6 h-6" />
-            </div>
-            <h4 className="font-black text-base text-brand-dark mb-2">
-              Garantía Técnica Escrita
-            </h4>
-            <p className="text-xs text-slate-600 leading-relaxed">
-              Baterías con respaldo de 15 a 18 meses ante cualquier defecto de fábrica con atención y chequeo de sistema eléctrico.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* 11: AUTOMOTIVE GUIDES */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-4">
+        <div className="flex items-baseline justify-between mb-8">
           <div>
-            <div className="text-xs font-bold text-brand-primary uppercase tracking-wider">
-              Contenido Técnico Educativo
-            </div>
-            <h2 className="text-2xl sm:text-3xl font-black text-brand-dark">
-              Guías Automotrices
+            <span className="text-xs font-bold uppercase tracking-wider text-slate-500">
+              Conocimiento
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-black text-slate-950">
+              Guías Técnicas
             </h2>
           </div>
           <Link
             href="/guias"
-            className="text-xs font-bold text-brand-primary hover:underline flex items-center gap-1"
+            className="text-xs font-bold text-slate-900 hover:text-brand-primary transition-colors flex items-center gap-1"
           >
-            <span>Ver todas las guías</span>
-            <ChevronRight className="w-4 h-4" />
+            <span>Ver todas</span>
+            <ArrowRight className="w-3.5 h-3.5" />
           </Link>
         </div>
 
@@ -388,64 +310,78 @@ export default function HomePage() {
           {EDUCATIONAL_ARTICLES.slice(0, 2).map((art) => (
             <div
               key={art.slug}
-              className="bg-white rounded-2xl p-6 border border-slate-200 shadow-soft hover:shadow-card transition-all flex flex-col justify-between"
+              className="p-8 rounded-2xl border border-slate-200 bg-white flex flex-col justify-between space-y-4"
             >
-              <div>
-                <div className="flex items-center justify-between text-xs text-slate-500 mb-3">
-                  <span className="font-bold text-brand-primary uppercase tracking-wider">
-                    {art.category}
-                  </span>
-                  <span>{art.readTime}</span>
-                </div>
-                <h3 className="font-black text-lg text-brand-dark mb-2">
+              <div className="space-y-2">
+                <span className="text-[11px] font-bold uppercase tracking-wider text-brand-primary">
+                  {art.category}
+                </span>
+                <h3 className="font-black text-xl text-slate-950">
                   <Link href={`/guias/${art.slug}`} className="hover:text-brand-primary transition-colors">
                     {art.title}
                   </Link>
                 </h3>
-                <p className="text-xs text-slate-600 leading-relaxed mb-4">
+                <p className="text-xs text-slate-600 leading-relaxed">
                   {art.subtitle}
                 </p>
               </div>
 
-              <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
-                <Link
-                  href={`/guias/${art.slug}`}
-                  className="text-xs font-bold text-brand-primary hover:underline flex items-center gap-1"
-                >
-                  <span>Leer solución completa</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </Link>
-              </div>
+              <Link
+                href={`/guias/${art.slug}`}
+                className="text-xs font-bold text-slate-900 hover:text-brand-primary flex items-center gap-1 pt-2"
+              >
+                <span>Leer guía</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
             </div>
           ))}
         </div>
       </section>
 
-      {/* 12: FAQ SECTION */}
+      {/* 10: FAQ SECTION */}
       <FAQSection />
 
-      {/* 13: FINAL CONVERSION CTA */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
-        <div className="bg-gradient-to-r from-brand-primary to-red-700 text-white rounded-3xl p-8 sm:p-14 text-center space-y-6 shadow-xl">
-          <h2 className="text-2xl sm:text-4xl font-black tracking-tight max-w-2xl mx-auto">
+      {/* 11: FINAL CONVERSION CTA */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="bg-slate-950 text-white rounded-3xl p-8 sm:p-14 text-center space-y-5 border border-slate-900">
+          <h2 className="text-2xl sm:text-4xl font-black tracking-tight max-w-xl mx-auto">
             ¿Listo para equipar tu vehículo con el producto exacto?
           </h2>
-          <p className="text-xs sm:text-base text-red-100 max-w-xl mx-auto">
-            Escríbenos directamente por WhatsApp. Te confirmamos compatibilidad, stock en Pedernales o Quito y opciones de despacho nacional en minutos.
+          <p className="text-xs sm:text-sm text-slate-400 max-w-md mx-auto leading-relaxed">
+            Escríbenos por WhatsApp. Confirmamos compatibilidad, stock en Pedernales o Quito y opciones de despacho en minutos.
           </p>
           <div className="pt-2">
             <a
               href={buildWhatsAppLink("general_quote")}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2.5 px-8 py-4 bg-white hover:bg-slate-100 text-brand-dark font-black text-xs uppercase tracking-wider rounded-xl shadow-lg transition-all active:scale-95"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-all shadow-sm active:scale-95"
             >
-              <MessageCircle className="w-5 h-5 text-brand-whatsapp" />
-              <span>INICIAR CONVERSACIÓN POR WHATSAPP</span>
+              <MessageCircle className="w-4 h-4" />
+              <span>HABLAR CON UN ASESOR POR WHATSAPP</span>
             </a>
           </div>
         </div>
       </section>
+
+      {/* Sticky Mobile WhatsApp CTA Bar */}
+      <div className="fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200 p-3 sm:hidden shadow-lg flex items-center gap-2">
+        <a
+          href="#buscador"
+          className="flex-1 py-3 text-center bg-slate-900 text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-colors"
+        >
+          Buscar Producto
+        </a>
+        <a
+          href={buildWhatsAppLink("general_quote")}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex-1 py-3 bg-emerald-600 text-white font-bold text-xs uppercase tracking-wider rounded-xl flex items-center justify-center gap-1.5 transition-colors"
+        >
+          <MessageCircle className="w-4 h-4" />
+          <span>Asesor</span>
+        </a>
+      </div>
     </div>
   );
 }

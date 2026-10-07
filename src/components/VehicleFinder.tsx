@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Search, CheckCircle2, AlertTriangle, ArrowRight, MessageCircle, RotateCcw } from "lucide-react";
+import Image from "next/image";
+import { Search, CheckCircle2, MessageCircle, RotateCcw } from "lucide-react";
 import { VEHICLE_DATABASE } from "@/data/vehicles";
 import { PRODUCTS, Product } from "@/data/products";
 import { buildWhatsAppLink } from "@/lib/whatsapp";
@@ -13,7 +14,7 @@ interface VehicleFinderProps {
   isCompact?: boolean;
 }
 
-export default function VehicleFinder({ initialCategory = "baterias", isCompact = false }: VehicleFinderProps) {
+export default function VehicleFinder({ initialCategory = "baterias" }: VehicleFinderProps) {
   const [selectedMake, setSelectedMake] = useState<string>("");
   const [selectedModel, setSelectedModel] = useState<string>("");
   const [selectedYear, setSelectedYear] = useState<string>("");
@@ -21,15 +22,11 @@ export default function VehicleFinder({ initialCategory = "baterias", isCompact 
   const [selectedNeed, setSelectedNeed] = useState<string>(initialCategory);
   const [hasSearched, setHasSearched] = useState<boolean>(false);
 
-  // Available models based on selected make
   const currentMakeData = VEHICLE_DATABASE.find((v) => v.make === selectedMake);
   const availableModels = currentMakeData ? currentMakeData.models : [];
 
-  // Available years based on model
   const currentModelData = availableModels.find((m) => m.model === selectedModel);
   const availableYears = currentModelData ? currentModelData.years : [];
-
-  // Available engines based on model
   const availableEngines = currentModelData ? currentModelData.engines : [];
 
   const handleMakeChange = (make: string) => {
@@ -69,7 +66,6 @@ export default function VehicleFinder({ initialCategory = "baterias", isCompact 
     setHasSearched(false);
   };
 
-  // Find exact products matching compatibility
   let matchedProducts: Product[] = [];
   let isExactMatch = false;
 
@@ -87,43 +83,41 @@ export default function VehicleFinder({ initialCategory = "baterias", isCompact 
   }
 
   return (
-    <div className={`bg-white rounded-2xl shadow-card border border-slate-200 overflow-hidden ${isCompact ? "p-4" : "p-6 sm:p-8"}`}>
-      <div className="flex flex-col md:flex-row md:items-center justify-between pb-6 border-b border-slate-100 gap-4">
+    <div className="bg-white rounded-2xl border border-slate-200/90 shadow-sm p-6 sm:p-10">
+      {/* Editorial Title */}
+      <div className="flex flex-col sm:flex-row sm:items-baseline justify-between pb-6 border-b border-slate-100 gap-2">
         <div>
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-red-50 text-brand-primary rounded-full text-xs font-bold tracking-wide uppercase mb-2">
-            <Search className="w-3.5 h-3.5" />
-            Buscador Técnico de Compatibilidad
-          </div>
-          <h2 className="text-xl sm:text-2xl font-black text-brand-dark tracking-tight">
-            ¿Qué repuesto necesita tu vehículo?
+          <h2 className="text-xl sm:text-2xl font-black text-slate-950 tracking-tight">
+            Encuentra lo que tu vehículo necesita
           </h2>
           <p className="text-xs sm:text-sm text-slate-500 mt-1">
-            Filtra por marca, modelo, año y motor para encontrar el producto exacto con respaldo técnico.
+            Selecciona tu vehículo y te ayudamos a encontrar el producto adecuado.
           </p>
         </div>
 
         {hasSearched && (
           <button
             onClick={handleReset}
-            className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-500 hover:text-slate-800 transition-colors self-start md:self-center"
+            className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-500 hover:text-slate-900 transition-colors"
           >
             <RotateCcw className="w-3.5 h-3.5" />
-            Nueva búsqueda
+            Reiniciar selector
           </button>
         )}
       </div>
 
-      <form onSubmit={handleSearch} className="mt-6 space-y-4">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 sm:gap-4">
-          {/* Step 1: Marca */}
+      {/* Selectors Grid */}
+      <form onSubmit={handleSearch} className="mt-8 space-y-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3.5 sm:gap-4">
+          {/* Marca */}
           <div>
-            <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
-              1. Marca
+            <label className="block text-[11px] font-bold text-slate-600 uppercase tracking-wider mb-2">
+              Marca
             </label>
             <select
               value={selectedMake}
               onChange={(e) => handleMakeChange(e.target.value)}
-              className="w-full h-11 px-3 bg-slate-50 border border-slate-300 rounded-xl text-sm font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-primary/40 focus:border-brand-primary transition-all"
+              className="w-full h-12 px-3.5 bg-slate-50 border border-slate-200 rounded-xl text-sm font-medium text-slate-900 focus:bg-white focus:outline-none focus:border-slate-400 transition-colors"
               required
             >
               <option value="">Selecciona Marca</option>
@@ -135,20 +129,20 @@ export default function VehicleFinder({ initialCategory = "baterias", isCompact 
             </select>
           </div>
 
-          {/* Step 2: Modelo */}
+          {/* Modelo */}
           <div>
-            <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
-              2. Modelo
+            <label className="block text-[11px] font-bold text-slate-600 uppercase tracking-wider mb-2">
+              Modelo
             </label>
             <select
               value={selectedModel}
               onChange={(e) => handleModelChange(e.target.value)}
               disabled={!selectedMake}
-              className="w-full h-11 px-3 bg-slate-50 border border-slate-300 rounded-xl text-sm font-medium text-slate-800 disabled:opacity-50 disabled:bg-slate-100 focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-primary/40 focus:border-brand-primary transition-all"
+              className="w-full h-12 px-3.5 bg-slate-50 border border-slate-200 rounded-xl text-sm font-medium text-slate-900 disabled:opacity-40 disabled:bg-slate-100 focus:bg-white focus:outline-none focus:border-slate-400 transition-colors"
               required
             >
               <option value="">
-                {selectedMake ? "Selecciona Modelo" : "Primero elige marca"}
+                {selectedMake ? "Selecciona Modelo" : "Elige marca primero"}
               </option>
               {availableModels.map((item) => (
                 <option key={item.model} value={item.model}>
@@ -158,20 +152,20 @@ export default function VehicleFinder({ initialCategory = "baterias", isCompact 
             </select>
           </div>
 
-          {/* Step 3: Año */}
+          {/* Año */}
           <div>
-            <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
-              3. Año
+            <label className="block text-[11px] font-bold text-slate-600 uppercase tracking-wider mb-2">
+              Año
             </label>
             <select
               value={selectedYear}
               onChange={(e) => setSelectedYear(e.target.value)}
               disabled={!selectedModel}
-              className="w-full h-11 px-3 bg-slate-50 border border-slate-300 rounded-xl text-sm font-medium text-slate-800 disabled:opacity-50 disabled:bg-slate-100 focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-primary/40 focus:border-brand-primary transition-all"
+              className="w-full h-12 px-3.5 bg-slate-50 border border-slate-200 rounded-xl text-sm font-medium text-slate-900 disabled:opacity-40 disabled:bg-slate-100 focus:bg-white focus:outline-none focus:border-slate-400 transition-colors"
               required
             >
               <option value="">
-                {selectedModel ? "Selecciona Año" : "Primero elige modelo"}
+                {selectedModel ? "Selecciona Año" : "Elige modelo"}
               </option>
               {availableYears.map((yr) => (
                 <option key={yr} value={yr}>
@@ -181,18 +175,18 @@ export default function VehicleFinder({ initialCategory = "baterias", isCompact 
             </select>
           </div>
 
-          {/* Step 4: Motor */}
+          {/* Motor */}
           <div>
-            <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
-              4. Motor
+            <label className="block text-[11px] font-bold text-slate-600 uppercase tracking-wider mb-2">
+              Motor / Cilindraje
             </label>
             <select
               value={selectedEngine}
               onChange={(e) => setSelectedEngine(e.target.value)}
               disabled={!selectedModel}
-              className="w-full h-11 px-3 bg-slate-50 border border-slate-300 rounded-xl text-sm font-medium text-slate-800 disabled:opacity-50 disabled:bg-slate-100 focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-primary/40 focus:border-brand-primary transition-all"
+              className="w-full h-12 px-3.5 bg-slate-50 border border-slate-200 rounded-xl text-sm font-medium text-slate-900 disabled:opacity-40 disabled:bg-slate-100 focus:bg-white focus:outline-none focus:border-slate-400 transition-colors"
             >
-              <option value="">Todos / Cilindraje</option>
+              <option value="">Cualquier motor</option>
               {availableEngines.map((eng) => (
                 <option key={eng} value={eng}>
                   {eng}
@@ -201,99 +195,95 @@ export default function VehicleFinder({ initialCategory = "baterias", isCompact 
             </select>
           </div>
 
-          {/* Step 5: ¿Qué necesitas? */}
+          {/* Necesidad */}
           <div>
-            <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
-              5. ¿Qué necesitas?
+            <label className="block text-[11px] font-bold text-slate-600 uppercase tracking-wider mb-2">
+              ¿Qué necesitas?
             </label>
             <select
               value={selectedNeed}
               onChange={(e) => setSelectedNeed(e.target.value)}
-              className="w-full h-11 px-3 bg-slate-50 border border-slate-300 rounded-xl text-sm font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-primary/40 focus:border-brand-primary transition-all"
+              className="w-full h-12 px-3.5 bg-slate-50 border border-slate-200 rounded-xl text-sm font-medium text-slate-900 focus:bg-white focus:outline-none focus:border-slate-400 transition-colors"
             >
-              <option value="baterias">Batería Automotriz</option>
-              <option value="lubricantes">Aceite / Lubricante</option>
-              <option value="filtros">Filtros (Aceite/Aire)</option>
-              <option value="refrigerantes">Refrigerante / Coolant</option>
+              <option value="baterias">Batería</option>
+              <option value="lubricantes">Lubricante</option>
+              <option value="filtros">Filtro</option>
+              <option value="refrigerantes">Refrigerante</option>
               <option value="frenos">Pastillas de Freno</option>
-              <option value="otro">Otro repuesto / Asesoría</option>
+              <option value="otro">Otro repuesto</option>
             </select>
           </div>
         </div>
 
-        {/* Action Button */}
+        {/* Action Button & Subtext */}
         <div className="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-slate-400">
-            *Base de datos con especificaciones técnicas reales para el parque automotor ecuatoriano.
-          </p>
+          <div className="text-xs text-slate-500 flex items-center gap-1.5">
+            <span>¿No estás seguro de los datos de tu auto?</span>
+            <a
+              href={buildWhatsAppLink("general_quote")}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-slate-900 font-bold underline hover:text-brand-primary"
+            >
+              Habla con un asesor
+            </a>
+          </div>
+
           <button
             type="submit"
-            className="w-full sm:w-auto px-8 h-12 bg-brand-primary hover:bg-brand-primaryHover text-white font-black text-sm uppercase tracking-wider rounded-xl shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 active:scale-95"
+            className="w-full sm:w-auto px-8 h-12 bg-brand-primary hover:bg-brand-primaryHover text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-all shadow-sm active:scale-95 flex items-center justify-center gap-2"
           >
             <Search className="w-4 h-4" />
-            <span>Consultar Compatibilidad</span>
+            <span>VER PRODUCTOS COMPATIBLES</span>
           </button>
         </div>
       </form>
 
-      {/* Results Box */}
+      {/* Results presentation */}
       {hasSearched && (
-        <div className="mt-8 pt-8 border-t border-slate-200">
+        <div className="mt-8 pt-8 border-t border-slate-100">
           {isExactMatch ? (
             <div className="space-y-6">
-              <div className="p-4 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-3">
-                <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0" />
-                <div>
-                  <h4 className="text-sm font-bold text-emerald-950">
-                    Compatibilidad Técnica Confirmada para {selectedMake} {selectedModel} ({selectedYear})
-                  </h4>
-                  <p className="text-xs text-emerald-700 mt-0.5">
-                    Se han identificado los siguientes productos verificados en nuestro catálogo para tu configuración.
-                  </p>
-                </div>
+              <div className="flex items-center gap-2 text-xs font-bold text-emerald-800 bg-emerald-50 px-3.5 py-2.5 rounded-xl border border-emerald-200/80">
+                <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                <span>
+                  Compatibilidad verificada para {selectedMake} {selectedModel} ({selectedYear})
+                </span>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {matchedProducts.map((prod) => (
                   <div
                     key={prod.id}
-                    className="p-5 border border-slate-200 rounded-xl bg-slate-50/60 hover:bg-white hover:border-slate-300 transition-all flex flex-col justify-between"
+                    className="p-5 border border-slate-200 rounded-xl bg-slate-50/50 flex flex-col sm:flex-row items-center gap-4 justify-between"
                   >
-                    <div>
-                      <div className="flex items-center justify-between gap-2 mb-2">
-                        <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-brand-navy text-white">
-                          {prod.brand}
-                        </span>
-                        <span className="text-xs font-mono font-semibold text-slate-600">
-                          SKU: {prod.sku}
-                        </span>
-                      </div>
-                      <h4 className="font-black text-base text-brand-dark mb-1">
+                    <div className="w-20 h-20 relative shrink-0 bg-white rounded-lg border border-slate-200 p-2">
+                      <Image
+                        src={prod.imageUrl}
+                        alt={prod.name}
+                        fill
+                        className="object-contain p-1"
+                      />
+                    </div>
+
+                    <div className="flex-grow space-y-1 text-center sm:text-left">
+                      <span className="text-[10px] font-bold uppercase tracking-wider text-slate-500">
+                        {prod.brand} • {prod.sku}
+                      </span>
+                      <h4 className="text-sm font-bold text-slate-900 leading-snug">
                         {prod.name}
                       </h4>
-                      <p className="text-xs text-slate-600 mb-3 font-medium">
+                      <p className="text-xs text-slate-500 font-medium">
                         {prod.shortSpec}
                       </p>
-                      <div className="text-xs text-slate-500 mb-2">
-                        <strong>Garantía:</strong> {prod.warranty}
-                      </div>
                       {prod.priceEstimate && (
-                        <div className="text-base font-black text-brand-primary">
-                          {prod.priceEstimate}{" "}
-                          <span className="text-[10px] font-normal text-slate-500">
-                            (Referencial)
-                          </span>
+                        <div className="text-sm font-bold text-slate-950 pt-1">
+                          {prod.priceEstimate}
                         </div>
                       )}
                     </div>
 
-                    <div className="mt-5 pt-4 border-t border-slate-200 flex flex-col sm:flex-row items-center gap-2">
-                      <Link
-                        href={`/productos/${prod.slug}`}
-                        className="w-full sm:w-1/2 py-2.5 px-3 text-center border border-slate-300 hover:border-slate-400 bg-white text-xs font-bold text-slate-700 rounded-lg transition-colors"
-                      >
-                        Ver Ficha Técnica
-                      </Link>
+                    <div className="flex flex-col gap-2 shrink-0 w-full sm:w-auto">
                       <a
                         href={buildWhatsAppLink("product", {
                           productName: prod.name,
@@ -301,73 +291,51 @@ export default function VehicleFinder({ initialCategory = "baterias", isCompact 
                           vehicleMake: selectedMake,
                           vehicleModel: selectedModel,
                           vehicleYear: selectedYear,
-                          vehicleEngine: selectedEngine,
                         })}
                         target="_blank"
                         rel="noopener noreferrer"
-                        onClick={() =>
-                          trackEvent("whatsapp_product", {
-                            product: prod.name,
-                            sku: prod.sku,
-                          })
-                        }
-                        className="w-full sm:w-1/2 py-2.5 px-3 text-center bg-brand-whatsapp hover:bg-brand-whatsappHover text-white text-xs font-bold rounded-lg shadow-sm flex items-center justify-center gap-1.5 transition-all"
+                        className="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold rounded-lg text-center flex items-center justify-center gap-1.5 transition-colors"
                       >
                         <MessageCircle className="w-3.5 h-3.5" />
-                        <span>Confirmar WhatsApp</span>
+                        <span>Consultar</span>
                       </a>
+                      <Link
+                        href={`/productos/${prod.slug}`}
+                        className="px-3 py-1.5 text-slate-600 hover:text-slate-950 text-xs font-semibold text-center"
+                      >
+                        Ficha técnica
+                      </Link>
                     </div>
                   </div>
                 ))}
               </div>
             </div>
           ) : (
-            /* Safe Fallback: NEVER fabricate compatibility */
-            <div className="p-6 bg-amber-50/80 border border-amber-200 rounded-xl space-y-4">
-              <div className="flex items-start gap-3">
-                <AlertTriangle className="w-6 h-6 text-amber-600 shrink-0 mt-0.5" />
-                <div>
-                  <h4 className="text-base font-bold text-amber-950">
-                    No encontramos una coincidencia automática exacta para {selectedMake} {selectedModel} ({selectedYear})
-                  </h4>
-                  <p className="text-xs sm:text-sm text-amber-900 mt-1 leading-relaxed">
-                    Para evitar darte una especificación incorrecta o que compres el producto equivocado, un asesor técnico de LiderPro verificará el manual y catálogo del fabricante directamente.
-                  </p>
-                </div>
+            <div className="p-6 bg-slate-50 rounded-xl border border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div className="space-y-1 text-center sm:text-left">
+                <h4 className="text-sm font-bold text-slate-900">
+                  No encontramos una coincidencia automática para {selectedMake} {selectedModel} ({selectedYear})
+                </h4>
+                <p className="text-xs text-slate-500">
+                  No inventamos compatibilidades. Envíanos el número de parte o foto por WhatsApp y un asesor técnico confirmará la pieza exacta.
+                </p>
               </div>
 
-              <div className="bg-white p-4 rounded-xl border border-amber-200 flex flex-col sm:flex-row items-center justify-between gap-4">
-                <div className="text-xs text-slate-600">
-                  <p className="font-semibold text-slate-800">
-                    ¿Deseas confirmarlo con nuestro equipo en 2 minutos?
-                  </p>
-                  <p className="text-[11px] text-slate-500 mt-0.5">
-                    Te pediremos una foto de tu producto actual o el número de chasis para garantizar 100% de compatibilidad.
-                  </p>
-                </div>
-
-                <a
-                  href={buildWhatsAppLink("vehicle", {
-                    vehicleMake: selectedMake,
-                    vehicleModel: selectedModel,
-                    vehicleYear: selectedYear,
-                    vehicleEngine: selectedEngine,
-                    neededItem: selectedNeed,
-                  })}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() =>
-                    trackEvent("whatsapp_vehicle", {
-                      make: selectedMake,
-                      model: selectedModel,
-                    })
-                  }
-                  className="w-full sm:w-auto px-6 py-3 bg-brand-whatsapp hover:bg-brand-whatsappHover text-white text-xs font-bold uppercase tracking-wider rounded-xl shadow-sm flex items-center justify-center gap-2 shrink-0 transition-all"
-                >
-                  <MessageCircle className="w-4 h-4" />
-                  <span>CONFIRMAR POR WHATSAPP</span>
-                </a>
-              </div>
+              <a
+                href={buildWhatsAppLink("vehicle", {
+                  vehicleMake: selectedMake,
+                  vehicleModel: selectedModel,
+                  vehicleYear: selectedYear,
+                  vehicleEngine: selectedEngine,
+                  neededItem: selectedNeed,
+                })}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto px-6 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold rounded-xl flex items-center justify-center gap-2 shrink-0 transition-colors"
+              >
+                <MessageCircle className="w-4 h-4" />
+                <span>CONFIRMAR POR WHATSAPP</span>
+              </a>
             </div>
           )}
         </div>

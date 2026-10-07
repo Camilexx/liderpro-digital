@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { MessageCircle, ShieldCheck, Zap, ArrowRight } from "lucide-react";
+import Image from "next/image";
+import { MessageCircle } from "lucide-react";
 import { Product } from "@/data/products";
 import { buildWhatsAppLink } from "@/lib/whatsapp";
 import { trackEvent } from "@/lib/analytics";
@@ -19,70 +20,52 @@ export default function ProductCard({ product }: ProductCardProps) {
   };
 
   return (
-    <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-soft hover:shadow-card transition-all duration-300 flex flex-col justify-between group">
+    <div className="bg-white rounded-2xl border border-slate-200/90 overflow-hidden hover:border-slate-300 transition-all duration-200 flex flex-col justify-between group">
       <div>
-        {/* Card Header & Badge */}
-        <div className="p-5 pb-3">
-          <div className="flex items-center justify-between gap-2 mb-2">
-            <span className="text-[10px] font-black uppercase tracking-wider px-2.5 py-1 rounded-full bg-slate-100 text-slate-800">
-              {product.brand}
-            </span>
-            <span className="text-[11px] font-mono font-medium text-slate-600">
-              {product.sku}
-            </span>
+        {/* Product Image Stage */}
+        <div className="relative aspect-[4/3] bg-slate-50/60 p-6 flex items-center justify-center border-b border-slate-100 overflow-hidden">
+          <Image
+            src={product.imageUrl}
+            alt={product.name}
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+            className="object-contain p-4 group-hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+
+        {/* Text Details */}
+        <div className="p-5 pb-2 space-y-2">
+          <div className="flex items-center justify-between text-[11px] font-semibold text-slate-500 uppercase tracking-wider">
+            <span>{product.brand}</span>
+            <span className="font-mono text-slate-400">{product.sku}</span>
           </div>
 
-          <h3 className="text-base font-black text-brand-dark group-hover:text-brand-primary transition-colors line-clamp-2">
+          <h3 className="text-base font-bold text-slate-950 group-hover:text-brand-primary transition-colors line-clamp-2 leading-snug">
             <Link href={`/productos/${product.slug}`}>
               {product.name}
             </Link>
           </h3>
 
-          <p className="text-xs text-slate-600 mt-2 font-medium line-clamp-2">
+          <p className="text-xs text-slate-500 line-clamp-1">
             {product.shortSpec}
           </p>
         </div>
-
-        {/* Technical cues & Stock */}
-        <div className="px-5 py-3 bg-slate-50/70 border-y border-slate-100 space-y-2 text-xs">
-          <div className="flex items-center justify-between text-slate-600">
-            <span className="font-semibold text-slate-500">Garantía:</span>
-            <span className="font-bold text-slate-800">{product.warranty}</span>
-          </div>
-          <div className="flex items-center justify-between text-slate-600">
-            <span className="font-semibold text-slate-500">Disponibilidad:</span>
-            <span className="text-emerald-700 font-bold flex items-center gap-1">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-              {product.stockStatusText}
-            </span>
-          </div>
-        </div>
       </div>
 
-      {/* Card Footer / Pricing & Actions */}
-      <div className="p-5 pt-4">
+      {/* Pricing & CTA */}
+      <div className="p-5 pt-3">
         {product.priceEstimate && (
-          <div className="mb-4">
-            <div className="text-xl font-black text-brand-dark tracking-tight">
+          <div className="mb-3">
+            <div className="text-lg font-black text-slate-950">
               {product.priceEstimate}
-              <span className="text-[10px] font-normal text-slate-600 ml-1.5">
-                (Ref. con despacho)
-              </span>
             </div>
-            <p className="text-[10px] text-slate-600 leading-tight">
-              {product.priceNote}
-            </p>
+            <div className="text-[10px] text-slate-500 font-medium">
+              Garantía: {product.warranty}
+            </div>
           </div>
         )}
 
-        <div className="grid grid-cols-2 gap-2">
-          <Link
-            href={`/productos/${product.slug}`}
-            className="py-2.5 px-3 text-center border border-slate-200 hover:border-slate-300 bg-white hover:bg-slate-50 text-xs font-bold text-slate-700 rounded-xl transition-all"
-          >
-            Ficha Técnica
-          </Link>
-
+        <div className="grid grid-cols-2 gap-2 pt-2 border-t border-slate-100">
           <a
             href={buildWhatsAppLink("product", {
               productName: product.name,
@@ -91,11 +74,18 @@ export default function ProductCard({ product }: ProductCardProps) {
             target="_blank"
             rel="noopener noreferrer"
             onClick={handleWhatsApp}
-            className="py-2.5 px-3 bg-brand-whatsapp hover:bg-brand-whatsappHover text-white text-xs font-bold rounded-xl shadow-sm hover:shadow flex items-center justify-center gap-1.5 transition-all active:scale-95 text-center"
+            className="py-2.5 px-3 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold rounded-xl flex items-center justify-center gap-1.5 transition-colors"
           >
             <MessageCircle className="w-3.5 h-3.5" />
             <span>Consultar</span>
           </a>
+
+          <Link
+            href={`/productos/${product.slug}`}
+            className="py-2.5 px-3 text-center border border-slate-200 hover:border-slate-300 text-xs font-semibold text-slate-700 rounded-xl transition-colors"
+          >
+            Ficha técnica
+          </Link>
         </div>
       </div>
     </div>

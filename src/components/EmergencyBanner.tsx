@@ -1,8 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
-import { Zap, MessageCircle, AlertCircle, ArrowRight, ShieldAlert, Check } from "lucide-react";
+import { Zap, MessageCircle } from "lucide-react";
 import { buildWhatsAppLink } from "@/lib/whatsapp";
 import { trackEvent } from "@/lib/analytics";
 
@@ -15,99 +14,72 @@ export default function EmergencyBanner() {
   };
 
   return (
-    <div className="bg-gradient-to-r from-red-950 via-brand-dark to-slate-900 text-white rounded-3xl p-6 sm:p-10 border border-red-800/40 shadow-2xl relative overflow-hidden">
-      {/* Decorative subtle background accents */}
-      <div className="absolute top-0 right-0 -mt-12 -mr-12 w-80 h-80 bg-red-600/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 left-1/4 -mb-12 w-64 h-64 bg-amber-500/10 rounded-full blur-2xl pointer-events-none" />
-
-      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-        {/* Left column: Problem & Emotional urgency */}
+    <div className="bg-slate-950 text-white rounded-3xl p-6 sm:p-12 border border-slate-900 shadow-xl">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        {/* Left Column: Problem & Urgency */}
         <div className="lg:col-span-7 space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-500/20 border border-red-500/40 text-red-300 text-xs font-black tracking-wider uppercase">
-            <span className="w-2 h-2 rounded-full bg-red-400 animate-ping" />
-            Canal Prioritario de Asistencia
+          <div className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-red-500">
+            <Zap className="w-4 h-4 fill-red-500" />
+            <span>Servicio de Batería Urgente</span>
           </div>
 
           <h2 className="text-2xl sm:text-4xl font-black tracking-tight leading-tight">
-            ¿Tu vehículo no enciende?{" "}
-            <span className="text-amber-400 block sm:inline">
-              Te ayudamos de inmediato.
-            </span>
+            ¿Tu vehículo no enciende?
           </h2>
 
-          <p className="text-sm sm:text-base text-slate-300 leading-relaxed max-w-xl">
-            No pierdas tiempo adivinando si es la batería o el alternador. Identificamos el código exacto de tu auto y coordinamos la entrega e instalación en Pedernales, Quito o despacho urgente nacional.
+          <p className="text-sm sm:text-base text-slate-400 max-w-lg leading-relaxed">
+            Te ayudamos a encontrar la batería adecuada y coordinamos el despacho inmediato en Pedernales, Quito y cobertura nacional.
           </p>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2 text-xs text-slate-200">
-            <div className="flex items-center gap-2">
-              <Check className="w-4 h-4 text-emerald-400 shrink-0" />
-              <span>Diagnóstico rápido</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Check className="w-4 h-4 text-emerald-400 shrink-0" />
-              <span>Baterías 100% selladas</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Check className="w-4 h-4 text-emerald-400 shrink-0" />
-              <span>Garantía de 15 a 18 meses</span>
-            </div>
+          <div className="pt-2 flex flex-wrap gap-4 text-xs text-slate-400">
+            <span>• Diagnóstico de batería vs alternador</span>
+            <span>• Garantía técnica 15 a 18 meses</span>
+            <span>• Libre de mantenimiento</span>
           </div>
         </div>
 
-        {/* Right column: Interactive urgent friction-free box */}
-        <div className="lg:col-span-5 bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/15 space-y-4">
-          <h3 className="text-sm font-bold text-white uppercase tracking-wider flex items-center gap-2">
-            <Zap className="w-4 h-4 text-amber-400 fill-amber-400" />
-            Ruta Rápida: Auxilio Batería
-          </h3>
+        {/* Right Column: Clean Form */}
+        <div className="lg:col-span-5 bg-slate-900/80 p-6 rounded-2xl border border-slate-800 space-y-3.5">
+          <div>
+            <label className="block text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">
+              Vehículo (Marca, Modelo, Año)
+            </label>
+            <input
+              type="text"
+              placeholder="Ej. Chevrolet Sail 2018"
+              value={vehicle}
+              onChange={(e) => setVehicle(e.target.value)}
+              className="w-full h-11 px-3.5 bg-slate-950 border border-slate-800 rounded-xl text-sm text-white placeholder-slate-500 focus:outline-none focus:border-red-500 transition-colors"
+            />
+          </div>
 
-          <div className="space-y-3">
-            <div>
-              <label className="block text-[11px] font-bold text-slate-300 uppercase tracking-wider mb-1">
-                Tu Vehículo (Marca, Modelo, Año)
-              </label>
-              <input
-                type="text"
-                placeholder="Ej. Chevrolet Sail 2018 / Kia Rio"
-                value={vehicle}
-                onChange={(e) => setVehicle(e.target.value)}
-                className="w-full px-3.5 py-2.5 rounded-xl bg-slate-900/80 border border-slate-700 text-sm text-white placeholder-slate-400 focus:outline-none focus:border-amber-400 transition-colors"
-              />
-            </div>
-
-            <div>
-              <label className="block text-[11px] font-bold text-slate-300 uppercase tracking-wider mb-1">
-                ¿En qué ciudad te encuentras?
-              </label>
-              <input
-                type="text"
-                placeholder="Ej. Pedernales, Quito, Manta, etc."
-                value={city}
-                onChange={(e) => setCity(e.target.value)}
-                className="w-full px-3.5 py-2.5 rounded-xl bg-slate-900/80 border border-slate-700 text-sm text-white placeholder-slate-400 focus:outline-none focus:border-amber-400 transition-colors"
-              />
-            </div>
+          <div>
+            <label className="block text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">
+              Ciudad
+            </label>
+            <input
+              type="text"
+              placeholder="Ej. Pedernales, Quito, Manta..."
+              value={city}
+              onChange={(e) => setCity(e.target.value)}
+              className="w-full h-11 px-3.5 bg-slate-950 border border-slate-800 rounded-xl text-sm text-white placeholder-slate-500 focus:outline-none focus:border-red-500 transition-colors"
+            />
           </div>
 
           <a
             href={buildWhatsAppLink("emergency", {
               productName: "Batería Automotriz Urgente",
-              vehicleMake: vehicle || "Vehículo del cliente",
+              vehicleMake: vehicle || "Vehículo sin encendido",
               city: city || "Ecuador",
             })}
             target="_blank"
             rel="noopener noreferrer"
             onClick={handleEmergencyClick}
-            className="w-full py-3.5 px-4 bg-brand-whatsapp hover:bg-brand-whatsappHover text-white font-black text-xs uppercase tracking-wider rounded-xl shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-2 active:scale-95 text-center mt-2"
+            className="w-full h-12 bg-brand-primary hover:bg-brand-primaryHover text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-all flex items-center justify-center gap-2 mt-2 shadow-sm"
           >
-            <MessageCircle className="w-5 h-5 fill-white text-brand-whatsapp" />
-            <span>SOLICITAR ASISTENCIA AHORA</span>
+            <MessageCircle className="w-4 h-4" />
+            <span>NECESITO UNA BATERÍA</span>
           </a>
-
-          <p className="text-[11px] text-slate-300 text-center">
-            Respuesta humana directa con un técnico de LiderPro.
-          </p>
         </div>
       </div>
     </div>

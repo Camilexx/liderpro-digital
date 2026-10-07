@@ -91,7 +91,7 @@ export default function VehicleFinder({ initialCategory = "baterias" }: VehicleF
             Encuentra lo que tu vehículo necesita
           </h2>
           <p className="text-xs sm:text-sm text-slate-500 mt-1">
-            Selecciona tu vehículo y te ayudamos a encontrar el producto adecuado.
+            No necesitas saber de mecánica. Nosotros te ayudamos a encontrar el producto exacto.
           </p>
         </div>
 

@@ -33,18 +33,18 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8 text-[13px] font-semibold text-slate-700">
+          <nav className="hidden md:flex items-center gap-7 text-[13.5px] font-semibold text-slate-700">
+            <Link
+              href="/encuentra-tu-producto"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-950 font-bold transition-all text-xs tracking-tight"
+            >
+              <span>🔍 Encuentra tu producto</span>
+            </Link>
             <Link
               href="/productos"
               className="hover:text-brand-primary transition-colors py-1"
             >
               Productos
-            </Link>
-            <Link
-              href="/encuentra-tu-producto"
-              className="hover:text-brand-primary transition-colors py-1 text-slate-900 font-bold"
-            >
-              Encuentra tu producto
             </Link>
             <Link
               href="/baterias"
@@ -62,7 +62,7 @@ export default function Header() {
               href="/sucursales"
               className="hover:text-brand-primary transition-colors py-1 text-slate-600"
             >
-              Sucursales
+              Sucursales y Envíos
             </Link>
           </nav>
 
@@ -73,9 +73,9 @@ export default function Header() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={handleWhatsAppClick}
-              className="text-xs font-semibold text-slate-600 hover:text-slate-950 transition-colors"
+              className="text-xs font-semibold text-slate-500 hover:text-slate-900 transition-colors"
             >
-              ¿No sabes cuál necesitas?
+              ¿Dudas de compatibilidad?
             </a>
 
             <a
@@ -83,10 +83,10 @@ export default function Header() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={handleWhatsAppClick}
-              className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold rounded-lg transition-all active:scale-95 shadow-sm"
+              className="inline-flex items-center gap-2 px-4 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold rounded-xl transition-all active:scale-95 shadow-sm"
             >
-              <MessageCircle className="w-3.5 h-3.5" />
-              <span>Hablar con asesor</span>
+              <MessageCircle className="w-4 h-4" />
+              <span>Asesor WhatsApp</span>
             </a>
           </div>
 

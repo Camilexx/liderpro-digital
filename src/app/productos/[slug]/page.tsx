@@ -127,7 +127,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
                 className="w-full h-13 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs uppercase tracking-wider rounded-xl shadow-sm flex items-center justify-center gap-2 transition-all active:scale-95"
               >
                 <MessageCircle className="w-4 h-4" />
-                <span>CONSULTAR / COMPRAR POR WHATSAPP</span>
+                <span>CONSULTAR DISPONIBILIDAD POR WHATSAPP</span>
               </a>
 
               <div className="flex items-center justify-between text-[11px] text-slate-500 font-medium px-1">

@@ -88,10 +88,10 @@ export default function VehicleFinder({ initialCategory = "baterias" }: VehicleF
       <div className="flex flex-col sm:flex-row sm:items-baseline justify-between pb-6 border-b border-slate-100 gap-2">
         <div>
           <h2 className="text-xl sm:text-2xl font-black text-slate-950 tracking-tight">
-            Encuentra lo que tu vehículo necesita
+            Encuentra lo correcto para tu vehículo
           </h2>
           <p className="text-xs sm:text-sm text-slate-500 mt-1">
-            No necesitas saber de mecánica. Nosotros te ayudamos a encontrar el producto exacto.
+            No necesitas saber de mecánica. Te ayudamos a encontrar el producto adecuado.
           </p>
         </div>
 
@@ -210,6 +210,8 @@ export default function VehicleFinder({ initialCategory = "baterias" }: VehicleF
               <option value="filtros">Filtro</option>
               <option value="refrigerantes">Refrigerante</option>
               <option value="frenos">Pastillas de Freno</option>
+              <option value="bujias">Bujías</option>
+              <option value="aditivos">Aditivos</option>
               <option value="otro">Otro repuesto</option>
             </select>
           </div>
@@ -314,10 +316,10 @@ export default function VehicleFinder({ initialCategory = "baterias" }: VehicleF
             <div className="p-6 bg-slate-50 rounded-xl border border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4">
               <div className="space-y-1 text-center sm:text-left">
                 <h4 className="text-sm font-bold text-slate-900">
-                  No encontramos una coincidencia automática para {selectedMake} {selectedModel} ({selectedYear})
+                  No encontramos una coincidencia exacta para {selectedMake} {selectedModel} ({selectedYear})
                 </h4>
-                <p className="text-xs text-slate-500">
-                  No inventamos compatibilidades. Envíanos el número de parte o foto por WhatsApp y un asesor técnico confirmará la pieza exacta.
+                <p className="text-xs text-slate-600">
+                  Un asesor técnico puede confirmarlo por WhatsApp con el número de chasis o foto del repuesto actual.
                 </p>
               </div>
 
@@ -331,10 +333,10 @@ export default function VehicleFinder({ initialCategory = "baterias" }: VehicleF
                 })}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto px-6 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold rounded-xl flex items-center justify-center gap-2 shrink-0 transition-colors"
+                className="w-full sm:w-auto px-6 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold rounded-xl flex items-center justify-center gap-2 shrink-0 transition-colors shadow-sm"
               >
                 <MessageCircle className="w-4 h-4" />
-                <span>CONFIRMAR POR WHATSAPP</span>
+                <span>CONFIRMAR CON UN ASESOR</span>
               </a>
             </div>
           )}

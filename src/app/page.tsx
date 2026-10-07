@@ -42,10 +42,10 @@ export default function HomePage() {
             </h1>
 
             <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-lg">
-              Encuentra el producto adecuado para tu vehículo, recibe asesoría especializada y cómpralo con confianza.
+              Encuentra el repuesto, batería o lubricante exacto para tu auto. Asesoría técnica humana directa, despacho prioritario desde Pedernales y Quito, y envíos a todo el Ecuador.
             </p>
 
-            {/* CTAs */}
+            {/* CTAs: Level 1 (Find Product) + Level 2 (WhatsApp Specialist) */}
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
               <a
                 href="#buscador"
@@ -64,6 +64,18 @@ export default function HomePage() {
                 <MessageCircle className="w-4 h-4 text-emerald-600" />
                 <span>HABLAR CON UN ASESOR</span>
               </a>
+            </div>
+
+            {/* Level 3: Emergency Shortcut (High Intent) */}
+            <div className="pt-2 flex items-center gap-2.5 text-xs">
+              <span className="text-slate-500 font-medium">¿Tu vehículo no enciende?</span>
+              <Link
+                href="/emergencia-bateria"
+                className="font-bold text-red-600 hover:text-red-700 underline underline-offset-4 flex items-center gap-1"
+              >
+                <Zap className="w-3.5 h-3.5 fill-red-600" />
+                <span>Necesito una batería urgente →</span>
+              </Link>
             </div>
           </div>
 
@@ -129,88 +141,130 @@ export default function HomePage() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
           <Link
             href="/baterias"
-            className="p-6 rounded-2xl border border-slate-200 bg-white hover:border-slate-400 transition-all group flex flex-col justify-between h-48"
+            className="p-5 rounded-2xl border border-slate-200 bg-white hover:border-slate-400 transition-all group flex flex-col justify-between h-44"
           >
-            <div className="w-10 h-10 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-center text-slate-950 group-hover:bg-brand-primary group-hover:text-white group-hover:border-brand-primary transition-all">
-              <Zap className="w-5 h-5" />
+            <div className="w-9 h-9 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-center text-slate-950 group-hover:bg-brand-primary group-hover:text-white group-hover:border-brand-primary transition-all">
+              <Zap className="w-4 h-4" />
             </div>
             <div>
-              <h3 className="font-black text-base text-slate-950 group-hover:text-brand-primary transition-colors">
+              <h3 className="font-black text-sm text-slate-950 group-hover:text-brand-primary transition-colors">
                 Baterías
               </h3>
-              <p className="text-xs text-slate-500 mt-1">
-                Selladas de 15 a 18 meses de garantía.
+              <p className="text-[11px] text-slate-500 mt-0.5 line-clamp-2">
+                15 a 18 meses garantía.
               </p>
             </div>
-            <div className="text-xs font-bold text-slate-900 flex items-center gap-1 group-hover:text-brand-primary">
-              <span>Explorar</span>
-              <ArrowRight className="w-3.5 h-3.5" />
+            <div className="text-[11px] font-bold text-slate-900 flex items-center gap-1 group-hover:text-brand-primary">
+              <span>Ver</span>
+              <ArrowRight className="w-3 h-3" />
             </div>
           </Link>
 
           <Link
             href="/lubricantes"
-            className="p-6 rounded-2xl border border-slate-200 bg-white hover:border-slate-400 transition-all group flex flex-col justify-between h-48"
+            className="p-5 rounded-2xl border border-slate-200 bg-white hover:border-slate-400 transition-all group flex flex-col justify-between h-44"
           >
-            <div className="w-10 h-10 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-center text-slate-950 group-hover:bg-brand-primary group-hover:text-white group-hover:border-brand-primary transition-all">
-              <Layers className="w-5 h-5" />
+            <div className="w-9 h-9 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-center text-slate-950 group-hover:bg-brand-primary group-hover:text-white group-hover:border-brand-primary transition-all">
+              <Layers className="w-4 h-4" />
             </div>
             <div>
-              <h3 className="font-black text-base text-slate-950 group-hover:text-brand-primary transition-colors">
+              <h3 className="font-black text-sm text-slate-950 group-hover:text-brand-primary transition-colors">
                 Lubricantes
               </h3>
-              <p className="text-xs text-slate-500 mt-1">
-                Sintéticos 5W-30 y diésel 15W-40.
+              <p className="text-[11px] text-slate-500 mt-0.5 line-clamp-2">
+                Sintéticos 5W-30 y 15W-40.
               </p>
             </div>
-            <div className="text-xs font-bold text-slate-900 flex items-center gap-1 group-hover:text-brand-primary">
-              <span>Explorar</span>
-              <ArrowRight className="w-3.5 h-3.5" />
+            <div className="text-[11px] font-bold text-slate-900 flex items-center gap-1 group-hover:text-brand-primary">
+              <span>Ver</span>
+              <ArrowRight className="w-3 h-3" />
             </div>
           </Link>
 
           <Link
             href="/filtros"
-            className="p-6 rounded-2xl border border-slate-200 bg-white hover:border-slate-400 transition-all group flex flex-col justify-between h-48"
+            className="p-5 rounded-2xl border border-slate-200 bg-white hover:border-slate-400 transition-all group flex flex-col justify-between h-44"
           >
-            <div className="w-10 h-10 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-center text-slate-950 group-hover:bg-brand-primary group-hover:text-white group-hover:border-brand-primary transition-all">
-              <Wrench className="w-5 h-5" />
+            <div className="w-9 h-9 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-center text-slate-950 group-hover:bg-brand-primary group-hover:text-white group-hover:border-brand-primary transition-all">
+              <Wrench className="w-4 h-4" />
             </div>
             <div>
-              <h3 className="font-black text-base text-slate-950 group-hover:text-brand-primary transition-colors">
+              <h3 className="font-black text-sm text-slate-950 group-hover:text-brand-primary transition-colors">
                 Filtros
               </h3>
-              <p className="text-xs text-slate-500 mt-1">
-                Blindados de alta retención de micras.
+              <p className="text-[11px] text-slate-500 mt-0.5 line-clamp-2">
+                Blindados alta retención.
               </p>
             </div>
-            <div className="text-xs font-bold text-slate-900 flex items-center gap-1 group-hover:text-brand-primary">
-              <span>Explorar</span>
-              <ArrowRight className="w-3.5 h-3.5" />
+            <div className="text-[11px] font-bold text-slate-900 flex items-center gap-1 group-hover:text-brand-primary">
+              <span>Ver</span>
+              <ArrowRight className="w-3 h-3" />
             </div>
           </Link>
 
           <Link
             href="/productos"
-            className="p-6 rounded-2xl border border-slate-200 bg-white hover:border-slate-400 transition-all group flex flex-col justify-between h-48"
+            className="p-5 rounded-2xl border border-slate-200 bg-white hover:border-slate-400 transition-all group flex flex-col justify-between h-44"
           >
-            <div className="w-10 h-10 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-center text-slate-950 group-hover:bg-brand-primary group-hover:text-white group-hover:border-brand-primary transition-all">
-              <ShieldCheck className="w-5 h-5" />
+            <div className="w-9 h-9 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-center text-slate-950 group-hover:bg-brand-primary group-hover:text-white group-hover:border-brand-primary transition-all">
+              <ShieldCheck className="w-4 h-4" />
             </div>
             <div>
-              <h3 className="font-black text-base text-slate-950 group-hover:text-brand-primary transition-colors">
-                Frenos y Refrigerantes
+              <h3 className="font-black text-sm text-slate-950 group-hover:text-brand-primary transition-colors">
+                Frenos
               </h3>
-              <p className="text-xs text-slate-500 mt-1">
-                Pastillas cerámicas y coolant OAT.
+              <p className="text-[11px] text-slate-500 mt-0.5 line-clamp-2">
+                Pastillas cerámicas OEM.
               </p>
             </div>
-            <div className="text-xs font-bold text-slate-900 flex items-center gap-1 group-hover:text-brand-primary">
+            <div className="text-[11px] font-bold text-slate-900 flex items-center gap-1 group-hover:text-brand-primary">
+              <span>Ver</span>
+              <ArrowRight className="w-3 h-3" />
+            </div>
+          </Link>
+
+          <Link
+            href="/productos"
+            className="p-5 rounded-2xl border border-slate-200 bg-white hover:border-slate-400 transition-all group flex flex-col justify-between h-44"
+          >
+            <div className="w-9 h-9 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-center text-slate-950 group-hover:bg-brand-primary group-hover:text-white group-hover:border-brand-primary transition-all">
+              <Zap className="w-4 h-4" />
+            </div>
+            <div>
+              <h3 className="font-black text-sm text-slate-950 group-hover:text-brand-primary transition-colors">
+                Refrigerantes
+              </h3>
+              <p className="text-[11px] text-slate-500 mt-0.5 line-clamp-2">
+                Orgánico OAT 50/50.
+              </p>
+            </div>
+            <div className="text-[11px] font-bold text-slate-900 flex items-center gap-1 group-hover:text-brand-primary">
+              <span>Ver</span>
+              <ArrowRight className="w-3 h-3" />
+            </div>
+          </Link>
+
+          <Link
+            href="/productos"
+            className="p-5 rounded-2xl border border-slate-200 bg-white hover:border-slate-400 transition-all group flex flex-col justify-between h-44"
+          >
+            <div className="w-9 h-9 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-center text-slate-950 group-hover:bg-brand-primary group-hover:text-white group-hover:border-brand-primary transition-all">
+              <Search className="w-4 h-4" />
+            </div>
+            <div>
+              <h3 className="font-black text-sm text-slate-950 group-hover:text-brand-primary transition-colors">
+                Catálogo Total
+              </h3>
+              <p className="text-[11px] text-slate-500 mt-0.5 line-clamp-2">
+                Aditivos y repuestos.
+              </p>
+            </div>
+            <div className="text-[11px] font-bold text-slate-900 flex items-center gap-1 group-hover:text-brand-primary">
               <span>Explorar</span>
-              <ArrowRight className="w-3.5 h-3.5" />
+              <ArrowRight className="w-3 h-3" />
             </div>
           </Link>
         </div>
@@ -364,22 +418,23 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Sticky Mobile WhatsApp CTA Bar */}
-      <div className="fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200 p-3 sm:hidden shadow-lg flex items-center gap-2">
+      {/* Sticky Mobile WhatsApp CTA Bar (Mobile 375/390/430px optimized) */}
+      <div className="fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200/90 p-2.5 sm:hidden shadow-2xl flex items-center gap-2">
         <a
           href="#buscador"
-          className="flex-1 py-3 text-center bg-slate-900 text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-colors"
+          className="flex-1 py-3 px-2 text-center bg-slate-900 active:bg-slate-950 text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-colors flex items-center justify-center gap-1.5"
         >
-          Buscar Producto
+          <Search className="w-3.5 h-3.5" />
+          <span>Buscar Producto</span>
         </a>
         <a
           href={buildWhatsAppLink("general_quote")}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex-1 py-3 bg-emerald-600 text-white font-bold text-xs uppercase tracking-wider rounded-xl flex items-center justify-center gap-1.5 transition-colors"
+          className="flex-1 py-3 px-2 bg-emerald-600 active:bg-emerald-700 text-white font-bold text-xs uppercase tracking-wider rounded-xl flex items-center justify-center gap-1.5 transition-colors shadow-sm"
         >
           <MessageCircle className="w-4 h-4" />
-          <span>Asesor</span>
+          <span>Asesor WhatsApp</span>
         </a>
       </div>
     </div>

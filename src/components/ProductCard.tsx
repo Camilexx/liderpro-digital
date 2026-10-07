@@ -31,6 +31,9 @@ export default function ProductCard({ product }: ProductCardProps) {
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
             className="object-contain p-4 group-hover:scale-105 transition-transform duration-300"
           />
+          <div className="absolute top-2.5 right-2.5 px-2 py-0.5 bg-white/90 backdrop-blur-sm rounded-md border border-slate-200/80 text-[9.5px] font-mono text-slate-500 uppercase tracking-tight">
+            Ref. Visual
+          </div>
         </div>
 
         {/* Text Details */}
@@ -74,7 +77,7 @@ export default function ProductCard({ product }: ProductCardProps) {
             target="_blank"
             rel="noopener noreferrer"
             onClick={handleWhatsApp}
-            className="py-2.5 px-3 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold rounded-xl flex items-center justify-center gap-1.5 transition-colors"
+            className="py-2.5 px-3 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold rounded-xl flex items-center justify-center gap-1.5 transition-colors shadow-sm"
           >
             <MessageCircle className="w-3.5 h-3.5" />
             <span>Consultar</span>
@@ -82,9 +85,9 @@ export default function ProductCard({ product }: ProductCardProps) {
 
           <Link
             href={`/productos/${product.slug}`}
-            className="py-2.5 px-3 text-center border border-slate-200 hover:border-slate-300 text-xs font-semibold text-slate-700 rounded-xl transition-colors"
+            className="py-2.5 px-3 text-center border border-slate-200 hover:border-slate-400 bg-slate-50/50 hover:bg-white text-xs font-semibold text-slate-800 rounded-xl transition-colors flex items-center justify-center"
           >
-            Ficha técnica
+            Ver ficha
           </Link>
         </div>
       </div>

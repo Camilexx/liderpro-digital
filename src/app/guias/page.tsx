@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { EDUCATIONAL_ARTICLES } from "@/data/articles";
-import { BookOpen, ArrowRight, HelpCircle } from "lucide-react";
-import { buildWhatsAppLink } from "@/lib/whatsapp";
+import { BookOpen, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Guías Técnicas y Consejos Automotrices | LiderPro Ecuador",

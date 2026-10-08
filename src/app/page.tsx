@@ -18,7 +18,6 @@ import LocationsLogisticsSection from "@/components/LocationsLogisticsSection";
 import FAQSection from "@/components/FAQSection";
 import { PRODUCTS } from "@/data/products";
 import { EDUCATIONAL_ARTICLES } from "@/data/articles";
-import { BUSINESS_CONFIG } from "@/data/businessConfig";
 import { buildWhatsAppLink } from "@/lib/whatsapp";
 
 export default function HomePage() {
@@ -145,11 +144,11 @@ export default function HomePage() {
                 Necesito una batería
               </h3>
               <p className="text-xs text-slate-600 mt-1 leading-relaxed">
-                ¿El auto no prende o hace clic? Despacho urgente y diagnóstico técnico de batería vs. alternador.
+                ¿El auto no prende o hace clic? Diagnóstico guiado de batería vs. alternador y verificación de aplicación.
               </p>
             </div>
             <div className="text-xs font-bold text-red-600 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-              <span>Auxilio inmediato de batería</span>
+              <span>Orientación para batería</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </div>
           </Link>

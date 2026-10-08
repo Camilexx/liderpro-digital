@@ -146,7 +146,7 @@ export const PRODUCTS: Product[] = [
     warranty: "Garantía de lote certificado de fábrica",
     commercialStatus: "REFERENCE",
     inStock: true,
-    stockStatusText: "Disponible para envío inmediato",
+    stockStatusText: "Disponible para despacho coordinado",
     primaryOriginRecommendation: "Nacional",
     imageUrl: "/images/products/oil-5w30.jpg",
     compatibleVehicles: [

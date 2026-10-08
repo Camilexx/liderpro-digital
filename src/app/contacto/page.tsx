@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { MessageCircle, Send, MapPin, Building2, Wrench, ShieldCheck } from "lucide-react";
+import { MessageCircle, Building2 } from "lucide-react";
 import { buildWhatsAppLink } from "@/lib/whatsapp";
 import { trackEvent } from "@/lib/analytics";
 import { BUSINESS_CONFIG } from "@/data/businessConfig";

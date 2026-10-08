@@ -3,9 +3,9 @@ import EmergencyBanner from "@/components/EmergencyBanner";
 import { buildWhatsAppLink } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
-  title: "¿Tu Vehículo No Enciende? Auxilio de Batería Inmediato | LiderPro Ecuador",
+  title: "¿Tu Vehículo No Enciende? Diagnóstico y Asistencia de Batería | LiderPro Ecuador",
   description:
-    "Servicio de respuesta rápida para vehículos sin encendido. Identificación de batería, prueba de carga y despacho urgente en Pedernales, Quito y nacional.",
+    "Orientación para vehículos sin encendido. Identificación de polaridad, capacidad CCA y verificación técnica de alternador con cobertura en todo Ecuador.",
 };
 
 export default function EmergencyBatteryPage() {

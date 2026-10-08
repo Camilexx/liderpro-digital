@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, BookOpen, CheckCircle, MessageCircle, AlertCircle } from "lucide-react";
-import { EDUCATIONAL_ARTICLES, EducationalArticle } from "@/data/articles";
+import { EDUCATIONAL_ARTICLES } from "@/data/articles";
 import { buildWhatsAppLink } from "@/lib/whatsapp";
 
 interface GuideDetailProps {

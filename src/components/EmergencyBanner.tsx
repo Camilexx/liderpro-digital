@@ -25,11 +25,11 @@ export default function EmergencyBanner() {
   return (
     <div className="bg-slate-950 text-white rounded-3xl p-6 sm:p-12 border border-slate-900 shadow-xl">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-        {/* Left Column: Problem & Urgency */}
+        {/* Left Column: Problem & Guidance */}
         <div className="lg:col-span-6 space-y-4">
           <div className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-red-500">
             <Zap className="w-4 h-4 fill-red-500" />
-            <span>Servicio de Batería Inmediato</span>
+            <span>Diagnóstico y Asistencia de Batería</span>
           </div>
 
           <h2 className="text-2xl sm:text-4xl font-black tracking-tight leading-tight">
@@ -37,7 +37,7 @@ export default function EmergencyBanner() {
           </h2>
 
           <p className="text-sm sm:text-base text-slate-400 max-w-lg leading-relaxed">
-            Diagnóstico de batería vs. alternador, verificación de polaridad y amperaje exacto para tu auto. Despacho y atención en Pedernales, Quito y todo Ecuador.
+            Diagnóstico de batería vs. alternador, verificación de polaridad y amperaje exacto para tu auto. Coordinación de despacho y atención a todo Ecuador.
           </p>
 
           <div className="pt-2 space-y-2 text-xs text-slate-400">
@@ -121,7 +121,7 @@ export default function EmergencyBanner() {
             className="w-full h-12 bg-brand-primary hover:bg-brand-primaryHover text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-all flex items-center justify-center gap-2 mt-2 shadow-sm"
           >
             <MessageCircle className="w-4 h-4" />
-            <span>SOLICITAR AUXILIO DE BATERÍA POR WHATSAPP</span>
+            <span>CONSULTAR ASISTENCIA DE BATERÍA POR WHATSAPP</span>
           </a>
         </div>
       </div>

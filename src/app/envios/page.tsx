@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Truck, Clock, ShieldCheck, MapPin, CheckCircle2, MessageCircle } from "lucide-react";
+import { Truck, MapPin, CheckCircle2, MessageCircle } from "lucide-react";
 import { BUSINESS_CONFIG } from "@/data/businessConfig";
 import { buildWhatsAppLink } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
   title: "Políticas de Envíos Nacionales y Cobertura | LiderPro Ecuador",
   description:
-    "Envíos a todo el Ecuador con entrega estimada de 24 a 48 horas. Despachos estratégicos desde Pedernales y Quito mediante transporte interprovincial y courier.",
+    "Envíos a todo el Ecuador coordinados mediante transporte interprovincial y courier. Tiempos transparentes según destino y disponibilidad de producto.",
 };
 
 export default function ShippingPage() {

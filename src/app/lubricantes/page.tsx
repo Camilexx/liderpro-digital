@@ -3,12 +3,11 @@ import ProductCard from "@/components/ProductCard";
 import VehicleFinder from "@/components/VehicleFinder";
 import { PRODUCTS } from "@/data/products";
 import { Layers, ShieldCheck, CheckCircle } from "lucide-react";
-import { buildWhatsAppLink } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
   title: "Aceites y Lubricantes para Motor | Sintéticos 5W-30 y Diésel 15W-40 | LiderPro Ecuador",
   description:
-    "Lubricantes 100% sintéticos API SP y aceites diésel heavy duty. Protección térmica avanzada para el clima ecuatoriano con stock en Pedernales y Quito.",
+    "Lubricantes 100% sintéticos API SP y aceites diésel heavy duty. Protección térmica avanzada para el clima ecuatoriano con envíos a nivel nacional.",
 };
 
 export default function LubricantsPage() {
@@ -59,7 +58,7 @@ export default function LubricantsPage() {
             Lubricantes Disponibles
           </h2>
           <span className="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200">
-            Envíos Nacionales Inmediatos
+            Envíos a Nivel Nacional
           </span>
         </div>
 

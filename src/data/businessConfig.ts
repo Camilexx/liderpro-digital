@@ -83,15 +83,15 @@ export const BUSINESS_CONFIG: BusinessConfig = {
       region: "Costa",
       role: "Atención directa, despacho rápido y cobertura para Manabí y perfil costero.",
       address: "Av. Principal y Acceso Comercial (Punto Autorizado)",
-      phone: "+593 99 999 9999", // Editable placeholder
-      whatsapp: "593999999999",
+      phone: "+593 98 188 1515",
+      whatsapp: "593981881515",
       hours: "Lunes a Sábado: 08:00 – 18:00",
       isStrategicHub: true,
       features: [
-        "Despacho prioritario para la Costa",
+        "Despacho coordinado para Manabí y Costa",
         "Diagnóstico y prueba de baterías en local",
         "Retiro en punto físico habilitado",
-        "Asesoría técnica automotriz inmediata",
+        "Asesoría técnica automotriz directa",
       ],
     },
     quito: {
@@ -101,8 +101,8 @@ export const BUSINESS_CONFIG: BusinessConfig = {
       region: "Sierra",
       role: "Atención comercial, coordinación logística y soporte para Pichincha y Sierra.",
       address: "Sector Estratégico Norte / Centro Logístico",
-      phone: "+593 99 888 8888", // Editable placeholder
-      whatsapp: "593998888888",
+      phone: "+593 98 188 1515",
+      whatsapp: "593981881515",
       hours: "Lunes a Viernes: 08:30 – 17:30 | Sábados: 09:00 – 13:00",
       isStrategicHub: true,
       features: [
@@ -115,16 +115,15 @@ export const BUSINESS_CONFIG: BusinessConfig = {
   },
   shipping: {
     primaryMessage: "Envíos a nivel nacional",
-    subMessage: "Entrega estimada 24–48 h*",
+    subMessage: "Tiempos de entrega según destino y operador*",
     disclaimer:
-      "*Tiempo estimado sujeto a disponibilidad de stock, cobertura de la transportadora, ciudad de destino, hora de confirmación del pedido y condiciones viales/logísticas.",
+      "*Tiempo de tránsito sujeto a disponibilidad de producto, cobertura de la transportadora, ciudad de destino y confirmación con tu asesor técnico.",
     zones: [
-      "Manabí (Despacho prioritario desde Pedernales)",
-      "Pichincha (Cobertura desde Quito)",
-      "Costa (Guayas, El Oro, Esmeraldas, Los Ríos, Santo Domingo)",
-      "Sierra (Azuay, Tungurahua, Chimborazo, Imbabura, Loja)",
+      "Manabí y Costa (Coordinación desde Pedernales)",
+      "Pichincha y Sierra (Coordinación desde Quito)",
+      "Guayas, Azuay y principales capitales de provincia",
       "Oriente y zonas especiales (Bajo confirmación de cobertura)",
     ],
   },
-  whatsappMasterNumber: "593999999999", // Master number
+  whatsappMasterNumber: "593981881515", // Master official number
 };

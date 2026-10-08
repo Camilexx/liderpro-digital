@@ -14,6 +14,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/encuentra-tu-producto",
     "/sucursales",
     "/envios",
+    "/b2b",
+    "/asesoria",
     "/guias",
     "/contacto",
     "/emergencia-bateria",
@@ -21,7 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${baseUrl}${route}`,
     lastModified: new Date().toISOString(),
     changeFrequency: "weekly" as const,
-    priority: route === "" ? 1.0 : 0.8,
+    priority: route === "" ? 1.0 : route === "/b2b" || route === "/asesoria" ? 0.85 : 0.8,
   }));
 
   const productRoutes = PRODUCTS.map((prod) => ({

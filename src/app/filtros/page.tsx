@@ -7,7 +7,7 @@ import { Wrench, ShieldCheck, CheckCircle } from "lucide-react";
 export const metadata: Metadata = {
   title: "Filtros de Aceite y Combustible | Blindados y Alta Eficiencia | LiderPro Ecuador",
   description:
-    "Filtros de aceite blindados con válvula de retención y sellos de alta temperatura. Compatibilidad garantizada para vehículos en Ecuador.",
+    "Filtros de aceite blindados con válvula de retención y sellos de alta temperatura. Verificación técnica de compatibilidad para vehículos en Ecuador.",
 };
 
 export default function FiltersPage() {

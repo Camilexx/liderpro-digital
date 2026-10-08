@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
 import ProductCard from "@/components/ProductCard";
 import { PRODUCTS } from "@/data/products";
-import { Search, Filter, ShieldCheck } from "lucide-react";
 import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Catálogo de Productos Automotrices | LiderPro Ecuador",
   description:
-    "Catálogo técnico de baterías automotrices, aceites 100% sintéticos, filtros y refrigerantes. Despacho desde Pedernales y Quito a todo el Ecuador.",
+    "Catálogo técnico de baterías automotrices, aceites 100% sintéticos, filtros y refrigerantes con asesoría y envíos a todo el Ecuador.",
 };
 
 export default function ProductsPage() {

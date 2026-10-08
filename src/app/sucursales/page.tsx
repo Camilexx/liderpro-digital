@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import LocationsLogisticsSection from "@/components/LocationsLogisticsSection";
+import { MapPin, ShieldCheck } from "lucide-react";
 import { BUSINESS_CONFIG } from "@/data/businessConfig";
-import { MapPin, Clock, Phone, MessageCircle, ShieldCheck, Truck } from "lucide-react";
-import { buildWhatsAppLink } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
   title: "Puntos de Atención en Pedernales y Quito | LiderPro Ecuador",
@@ -11,7 +10,6 @@ export const metadata: Metadata = {
 };
 
 export default function BranchesPage() {
-  const { pedernales, quito } = BUSINESS_CONFIG.locations;
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-12">

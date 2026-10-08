@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import VehicleFinder from "@/components/VehicleFinder";
-import { Search, ShieldAlert, MessageCircle } from "lucide-react";
-import { buildWhatsAppLink } from "@/lib/whatsapp";
+import { Search, ShieldAlert } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Buscador de Compatibilidad por Vehículo | LiderPro Ecuador",

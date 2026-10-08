@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, MapPin, Truck } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { BUSINESS_CONFIG } from "@/data/businessConfig";
 import { buildWhatsAppLink } from "@/lib/whatsapp";
 import { trackEvent } from "@/lib/analytics";
@@ -100,8 +100,8 @@ export default function LocationsLogisticsSection() {
                 "Seleccionamos la alternativa de despacho más conveniente según disponibilidad, ubicación y cobertura."
               </p>
               <div className="text-xs text-slate-500 space-y-1 border-t border-slate-200/60 pt-3">
-                <p><strong>Tiempo estimado:</strong> 24–48 h*</p>
-                <p><strong>Transporte:</strong> Cooperativa y Courier</p>
+                <p><strong>Tiempo estimado:</strong> Sujeto a destino y transportadora*</p>
+                <p><strong>Transporte:</strong> Cooperativa interprovincial y Courier</p>
               </div>
             </div>
 

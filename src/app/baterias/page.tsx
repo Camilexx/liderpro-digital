@@ -1,16 +1,14 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import ProductCard from "@/components/ProductCard";
 import VehicleFinder from "@/components/VehicleFinder";
 import EmergencyBanner from "@/components/EmergencyBanner";
 import { PRODUCTS } from "@/data/products";
 import { Zap, ShieldCheck, Clock, CheckCircle } from "lucide-react";
-import { buildWhatsAppLink } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
-  title: "Baterías Automotrices Selladas en Ecuador | Pedernales y Quito | LiderPro",
+  title: "Baterías Automotrices Selladas | Alta Capacidad y Respaldo Técnico | LiderPro Ecuador",
   description:
-    "Baterías selladas libres de mantenimiento con 15 a 18 meses de garantía. Servicio de entrega e instalación en Pedernales y Quito, y envíos a todo el Ecuador.",
+    "Baterías selladas libres de mantenimiento con respaldo técnico de 15 a 18 meses. Orientación de polaridad y envíos a todo el Ecuador.",
 };
 
 export default function BatteriesPage() {

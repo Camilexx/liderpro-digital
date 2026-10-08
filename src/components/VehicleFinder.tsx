@@ -104,7 +104,7 @@ export default function VehicleFinder({ initialCategory = "baterias" }: VehicleF
             Encuentra el producto exacto para tu vehículo
           </h2>
           <p className="text-xs sm:text-sm text-slate-500 mt-1">
-            No necesitas saber el número de parte. Nosotros te ayudamos a encontrarlo con compatibilidad garantizada.
+            No necesitas saber el número de parte. Te ayudamos a identificar la aplicación adecuada antes de comprar.
           </p>
         </div>
 

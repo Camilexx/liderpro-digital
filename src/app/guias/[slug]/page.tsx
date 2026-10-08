@@ -111,7 +111,7 @@ export default async function GuideDetailPage({ params }: GuideDetailProps) {
             href={buildWhatsAppLink("general_quote")}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-brand-whatsapp hover:bg-brand-whatsappHover text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-all active:scale-95"
+            className="inline-flex items-center gap-2 px-6 py-3 btn-whatsapp font-bold text-xs uppercase tracking-wider rounded-xl transition-all active:scale-95 shadow-md"
           >
             <MessageCircle className="w-4 h-4" />
             <span>CONSULTAR CON UN ASESOR TÉCNICO</span>

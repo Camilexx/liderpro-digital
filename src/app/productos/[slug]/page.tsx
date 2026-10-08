@@ -124,7 +124,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
                 })}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full h-14 bg-emerald-600 hover:bg-emerald-700 text-white font-black text-xs sm:text-sm uppercase tracking-wider rounded-xl shadow-md flex items-center justify-center gap-2.5 transition-all active:scale-95"
+                className="w-full h-14 btn-whatsapp font-black text-xs sm:text-sm uppercase tracking-wider rounded-xl flex items-center justify-center gap-2.5 transition-all active:scale-95 shadow-lg"
               >
                 <MessageCircle className="w-5 h-5" />
                 <span>CONFIRMAR COMPATIBILIDAD Y DISPONIBILIDAD</span>

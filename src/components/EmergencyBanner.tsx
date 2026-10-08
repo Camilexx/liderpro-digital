@@ -23,13 +23,20 @@ export default function EmergencyBanner() {
   };
 
   return (
-    <div className="bg-slate-950 text-white rounded-3xl p-6 sm:p-12 border border-slate-900 shadow-xl">
+    <div className="bg-gradient-to-br from-slate-950 via-slate-900 to-black text-white rounded-3xl p-6 sm:p-10 border border-red-900/30 shadow-2xl shadow-red-950/20 relative overflow-hidden">
+      {/* Top Accent Neon Bar */}
+      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-red-600 via-rose-500 to-red-600" />
+
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
         {/* Left Column: Problem & Guidance */}
         <div className="lg:col-span-6 space-y-4">
-          <div className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-red-500">
-            <Zap className="w-4 h-4 fill-red-500" />
-            <span>Diagnóstico y Asistencia de Batería</span>
+          <div className="inline-flex items-center gap-2 px-3 py-1 bg-red-950/80 border border-red-500/40 text-red-400 rounded-full text-[11px] font-black uppercase tracking-wider">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+            </span>
+            <Zap className="w-3.5 h-3.5 fill-red-500" />
+            <span>Centro de Emergencia Automotriz</span>
           </div>
 
           <h2 className="text-2xl sm:text-4xl font-black tracking-tight leading-tight">
@@ -68,7 +75,7 @@ export default function EmergencyBanner() {
                     onClick={() => setSelectedSymptom(sym.label)}
                     className={`text-left p-2.5 rounded-xl border text-xs transition-all ${
                       isSelected
-                        ? "bg-red-950/60 border-red-500 text-white font-bold"
+                        ? "bg-red-950/80 border-red-500 text-white font-bold shadow-md shadow-red-950"
                         : "bg-slate-950/60 border-slate-800 text-slate-400 hover:border-slate-700"
                     }`}
                   >
@@ -90,7 +97,7 @@ export default function EmergencyBanner() {
                 placeholder="Ej. Chevrolet Sail 2018"
                 value={vehicle}
                 onChange={(e) => setVehicle(e.target.value)}
-                className="w-full h-10 px-3 bg-slate-950 border border-slate-800 rounded-xl text-xs text-white placeholder-slate-500 focus:outline-none focus:border-red-500 transition-colors"
+                className="w-full h-11 px-3 bg-slate-950 border border-slate-800 rounded-xl text-xs text-white placeholder-slate-500 focus:outline-none focus:border-red-500 transition-colors"
               />
             </div>
 
@@ -103,7 +110,7 @@ export default function EmergencyBanner() {
                 placeholder="Ej. Pedernales, Quito..."
                 value={city}
                 onChange={(e) => setCity(e.target.value)}
-                className="w-full h-10 px-3 bg-slate-950 border border-slate-800 rounded-xl text-xs text-white placeholder-slate-500 focus:outline-none focus:border-red-500 transition-colors"
+                className="w-full h-11 px-3 bg-slate-950 border border-slate-800 rounded-xl text-xs text-white placeholder-slate-500 focus:outline-none focus:border-red-500 transition-colors"
               />
             </div>
           </div>
@@ -118,7 +125,7 @@ export default function EmergencyBanner() {
             target="_blank"
             rel="noopener noreferrer"
             onClick={handleEmergencyClick}
-            className="w-full h-12 bg-brand-primary hover:bg-brand-primaryHover text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-all flex items-center justify-center gap-2 mt-2 shadow-sm"
+            className="btn-primary !w-full !h-13 !text-xs !font-black !tracking-wider flex items-center justify-center gap-2.5 mt-2 animate-pulse-glow-red"
           >
             <MessageCircle className="w-4 h-4" />
             <span>CONSULTAR ASISTENCIA DE BATERÍA POR WHATSAPP</span>

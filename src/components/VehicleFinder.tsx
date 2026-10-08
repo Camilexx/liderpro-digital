@@ -96,15 +96,22 @@ export default function VehicleFinder({ initialCategory = "baterias" }: VehicleF
   if (selectedMake && selectedModel && selectedYear && selectedEngine) currentStep = 5;
 
   return (
-    <div className="bg-white rounded-2xl border border-slate-200/90 shadow-sm p-6 sm:p-10 animate-fade-up">
+    <div className="bg-white rounded-3xl border border-slate-200/90 shadow-xl shadow-slate-200/50 p-6 sm:p-10 animate-fade-up relative overflow-hidden">
+      {/* Top Accent Gradient Bar */}
+      <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-red-600 via-amber-500 to-emerald-600" />
+
       {/* Editorial Title */}
       <div className="flex flex-col sm:flex-row sm:items-baseline justify-between pb-6 border-b border-slate-100 gap-4">
         <div>
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-slate-100 text-slate-800 rounded-full text-[10.5px] font-black uppercase tracking-wider mb-2">
+            <span className="w-1.5 h-1.5 rounded-full bg-red-600" />
+            <span>Terminal de Compatibilidad LiderPro</span>
+          </div>
           <h2 className="text-xl sm:text-2xl font-black text-slate-950 tracking-tight">
             Encuentra el producto exacto para tu vehículo
           </h2>
-          <p className="text-xs sm:text-sm text-slate-500 mt-1">
-            No necesitas saber el número de parte. Te ayudamos a identificar la aplicación adecuada antes de comprar.
+          <p className="text-xs sm:text-sm text-slate-600 mt-1 max-w-xl">
+            Ingresa tu vehículo o síntoma. Cotejamos código, polaridad y especificación técnica antes de comprar.
           </p>
         </div>
 
@@ -312,10 +319,11 @@ export default function VehicleFinder({ initialCategory = "baterias" }: VehicleF
 
           <button
             type="submit"
-            className="w-full sm:w-auto px-8 h-12 bg-brand-primary hover:bg-brand-primaryHover text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-all shadow-sm active:scale-95 flex items-center justify-center gap-2"
+            className="btn-primary w-full sm:w-auto !py-3.5 !px-8 text-xs font-black tracking-wider flex items-center justify-center gap-2 group"
           >
             <Search className="w-4 h-4" />
             <span>VER PRODUCTOS COMPATIBLES</span>
+            <span className="text-white/80 group-hover:translate-x-1 transition-transform">→</span>
           </button>
         </div>
       </form>
@@ -376,7 +384,7 @@ export default function VehicleFinder({ initialCategory = "baterias" }: VehicleF
                         })}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold rounded-lg text-center flex items-center justify-center gap-1.5 transition-colors shadow-sm"
+                        className="px-4 py-2 btn-whatsapp text-white text-xs font-bold rounded-lg text-center flex items-center justify-center gap-1.5 shadow-sm"
                       >
                         <MessageCircle className="w-3.5 h-3.5" />
                         <span>Consultar</span>
@@ -424,7 +432,7 @@ export default function VehicleFinder({ initialCategory = "baterias" }: VehicleF
                 }
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto px-6 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold rounded-xl flex items-center justify-center gap-2 shrink-0 transition-colors shadow-sm"
+                className="w-full sm:w-auto px-6 py-2.5 btn-whatsapp text-white text-xs font-bold rounded-xl flex items-center justify-center gap-2 shrink-0 shadow-sm"
               >
                 <MessageCircle className="w-4 h-4" />
                 <span>CONFIRMAR CON UN ASESOR</span>

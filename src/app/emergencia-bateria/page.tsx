@@ -48,7 +48,7 @@ export default function EmergencyBatteryPage() {
               href={buildWhatsAppLink("emergency")}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto px-6 py-3 bg-brand-whatsapp hover:bg-brand-whatsappHover text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-all"
+              className="w-full sm:w-auto px-6 py-3 btn-whatsapp font-bold text-xs uppercase tracking-wider rounded-xl transition-all shadow-md text-center"
             >
               Pedir Asistencia por WhatsApp
             </a>

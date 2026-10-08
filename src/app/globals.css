@@ -15,7 +15,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Custom subtle scrollbars and utility styles */
+/* Custom subtle scrollbars */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -34,7 +34,7 @@ body {
   background: #94A3B8;
 }
 
-/* Micro-animations and Premium Motion Tokens (Lightweight CSS) */
+/* Micro-animations and Premium Motion Tokens */
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
@@ -43,7 +43,7 @@ body {
 @keyframes fadeUp {
   from {
     opacity: 0;
-    transform: translateY(12px);
+    transform: translateY(14px);
   }
   to {
     opacity: 1;
@@ -51,12 +51,39 @@ body {
   }
 }
 
-@keyframes pulseSubtle {
+@keyframes pulseGlowRed {
   0%, 100% {
-    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4);
+    box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.45);
   }
   50% {
-    box-shadow: 0 0 0 10px rgba(16, 185, 129, 0);
+    box-shadow: 0 0 0 12px rgba(220, 38, 38, 0);
+  }
+}
+
+@keyframes pulseGlowGreen {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.45);
+  }
+  50% {
+    box-shadow: 0 0 0 12px rgba(16, 185, 129, 0);
+  }
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
   }
 }
 
@@ -68,8 +95,69 @@ body {
   animation: fadeUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-.animate-pulse-subtle {
-  animation: pulseSubtle 3s infinite cubic-bezier(0.4, 0, 0.6, 1);
+.animate-pulse-glow-red {
+  animation: pulseGlowRed 2.5s infinite cubic-bezier(0.4, 0, 0.6, 1);
+}
+
+.animate-pulse-glow-green {
+  animation: pulseGlowGreen 2.5s infinite cubic-bezier(0.4, 0, 0.6, 1);
+}
+
+.animate-float-slow {
+  animation: floatSlow 4s ease-in-out infinite;
+}
+
+/* High-Impact Institutional Button Utilities */
+.btn-primary {
+  @apply relative inline-flex items-center justify-center gap-2 px-6 py-3.5 text-xs font-black uppercase tracking-wider text-white rounded-xl bg-gradient-to-r from-red-600 via-red-600 to-rose-700 shadow-md shadow-red-600/25 hover:shadow-xl hover:shadow-red-600/35 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] transition-all duration-200 overflow-hidden;
+}
+
+.btn-primary::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+.btn-primary:hover::after {
+  transform: translateX(100%);
+}
+
+.btn-whatsapp {
+  @apply relative inline-flex items-center justify-center gap-2 px-6 py-3.5 text-xs font-black uppercase tracking-wider text-white rounded-xl bg-gradient-to-r from-emerald-600 via-emerald-600 to-teal-700 shadow-md shadow-emerald-600/25 hover:shadow-xl hover:shadow-emerald-600/40 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] transition-all duration-200;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center gap-2 px-5 py-3 text-xs font-bold uppercase tracking-wider text-slate-800 bg-white hover:bg-slate-50 border border-slate-300 hover:border-slate-400 rounded-xl shadow-sm hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] transition-all duration-200;
+}
+
+.btn-ghost-dark {
+  @apply inline-flex items-center justify-center gap-2 px-5 py-3 text-xs font-bold uppercase tracking-wider text-slate-300 hover:text-white bg-slate-900/80 hover:bg-slate-800 border border-slate-700/80 hover:border-slate-600 rounded-xl transition-all duration-200;
+}
+
+/* Card Depth and Interactive Tokens */
+.card-interactive {
+  @apply bg-white rounded-2xl border border-slate-200/90 hover:border-slate-300/90 shadow-sm hover:shadow-xl hover:shadow-slate-200/60 hover:-translate-y-1 transition-all duration-300 ease-out;
+}
+
+.card-dark-glass {
+  @apply bg-slate-950/95 border border-slate-800/90 rounded-3xl backdrop-blur-xl shadow-2xl;
+}
+
+/* Subtle Technical Textures */
+.bg-dot-pattern {
+  background-image: radial-gradient(rgba(15, 23, 42, 0.08) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.bg-dot-pattern-dark {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 20px 20px;
 }
 
 /* Reduced Motion Override for Accessibility */

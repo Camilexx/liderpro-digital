@@ -38,9 +38,9 @@ export default function FloatingWhatsApp() {
         onFocus={() => setIsHovered(true)}
         onBlur={() => setIsHovered(false)}
         aria-label="Contactar a un asesor técnico por WhatsApp"
-        className="w-12 h-12 sm:w-13 sm:h-13 bg-emerald-600 hover:bg-emerald-700 text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-200 active:scale-95 animate-pulse-subtle focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
+        className="w-13 h-13 sm:w-14 sm:h-14 btn-whatsapp text-white rounded-full flex items-center justify-center shadow-[0_10px_25px_rgba(16,185,129,0.45)] hover:shadow-[0_14px_30px_rgba(16,185,129,0.6)] transition-all duration-300 active:scale-95 animate-pulse-glow-green focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2"
       >
-        <MessageCircle className="w-6 h-6" />
+        <MessageCircle className="w-6 h-6 sm:w-7 sm:h-7" />
       </a>
     </aside>
   );

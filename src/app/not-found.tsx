@@ -19,7 +19,7 @@ export default function NotFound() {
       <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
         <Link
           href="/"
-          className="w-full sm:w-auto px-6 py-3 bg-brand-primary hover:bg-brand-primaryHover text-white text-xs font-bold uppercase tracking-wider rounded-xl transition-all flex items-center justify-center gap-2"
+          className="w-full sm:w-auto px-6 py-3 btn-primary text-xs font-bold uppercase tracking-wider rounded-xl transition-all flex items-center justify-center gap-2"
         >
           <Home className="w-4 h-4" />
           <span>Volver al Inicio</span>

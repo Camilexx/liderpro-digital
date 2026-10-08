@@ -49,14 +49,14 @@ export default function FAQSection() {
   };
 
   return (
-    <section className="py-16 sm:py-24 bg-white">
+    <section className="py-10 sm:py-14 bg-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center space-y-3 mb-12">
+        <div className="text-center space-y-2.5 mb-8 sm:mb-10">
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-xs font-bold uppercase tracking-wider">
             <HelpCircle className="w-3.5 h-3.5 text-brand-primary" />
             Resolución de Dudas Frecuentes
           </div>
-          <h2 className="text-2xl sm:text-4xl font-black text-brand-dark tracking-tight">
+          <h2 className="text-2xl sm:text-3xl font-black text-brand-dark tracking-tight">
             Todo lo que necesitas saber antes de comprar
           </h2>
           <p className="text-xs sm:text-sm text-slate-500 max-w-xl mx-auto">
@@ -70,7 +70,7 @@ export default function FAQSection() {
             return (
               <div
                 key={idx}
-                className="border border-slate-200 rounded-2xl overflow-hidden transition-all duration-200"
+                className="border border-slate-200/90 rounded-2xl overflow-hidden transition-all duration-200 hover:border-slate-300 shadow-sm"
               >
                 <button
                   onClick={() => toggle(idx)}

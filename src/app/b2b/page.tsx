@@ -100,7 +100,7 @@ export default function B2BPage() {
             href={buildWhatsAppLink("b2b")}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-8 h-13 bg-brand-primary hover:bg-brand-primaryHover text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-all shadow-sm flex items-center justify-center gap-2"
+            className="px-8 h-13 btn-primary font-bold text-xs uppercase tracking-wider rounded-xl transition-all flex items-center justify-center gap-2"
           >
             <MessageCircle className="w-4 h-4" />
             <span>SOLICITAR ATENCIÓN B2B POR WHATSAPP</span>

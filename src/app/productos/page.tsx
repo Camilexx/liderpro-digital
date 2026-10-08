@@ -46,7 +46,7 @@ export default function ProductsPage() {
             </Link>
             <Link
               href="/encuentra-tu-producto"
-              className="px-3.5 py-1.5 bg-brand-primary text-white rounded-lg font-bold hover:bg-brand-primaryHover transition-colors"
+              className="px-3.5 py-1.5 btn-primary text-white rounded-lg font-bold text-xs"
             >
               🔍 Filtrar por mi vehículo
             </Link>

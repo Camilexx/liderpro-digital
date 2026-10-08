@@ -85,7 +85,7 @@ export default function AsesoriaPage() {
             href={buildWhatsAppLink("unknown_need")}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-8 h-13 bg-brand-whatsapp hover:bg-brand-whatsappHover text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-all shadow-sm flex items-center justify-center gap-2"
+            className="px-8 h-13 btn-whatsapp font-bold text-xs uppercase tracking-wider rounded-xl transition-all shadow-md flex items-center justify-center gap-2"
           >
             <MessageCircle className="w-4 h-4" />
             <span>AYÚDAME A IDENTIFICAR EL PRODUCTO</span>

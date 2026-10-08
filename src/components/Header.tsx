@@ -72,27 +72,25 @@ export default function Header() {
             </Link>
           </nav>
 
-          {/* Right Action: Asesor / WhatsApp */}
+          {/* Right Action: Live Status + Asesor WhatsApp */}
           <div className="hidden sm:flex items-center gap-4">
-            <a
-              href={buildWhatsAppLink("general_quote")}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={handleWhatsAppClick}
-              className="text-xs font-semibold text-slate-500 hover:text-slate-900 transition-colors"
-            >
-              ¿Dudas de compatibilidad?
-            </a>
+            <div className="flex items-center gap-2 px-3 py-1 bg-slate-50 border border-slate-200/80 rounded-full text-[11px] font-semibold text-slate-600">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+              </span>
+              <span>Asesoría Activa</span>
+            </div>
 
             <a
               href={buildWhatsAppLink("general_quote")}
               target="_blank"
               rel="noopener noreferrer"
               onClick={handleWhatsAppClick}
-              className="inline-flex items-center gap-2 px-4 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold rounded-xl transition-all active:scale-95 shadow-sm"
+              className="btn-whatsapp !py-2.5 !px-4 text-xs tracking-wider"
             >
               <MessageCircle className="w-4 h-4" />
-              <span>Asesor WhatsApp</span>
+              <span>ASESOR WHATSAPP</span>
             </a>
           </div>
 
@@ -103,7 +101,7 @@ export default function Header() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={handleWhatsAppClick}
-              className="p-2 bg-emerald-600 text-white rounded-lg"
+              className="p-2.5 btn-whatsapp rounded-lg"
               aria-label="Hablar con asesor"
             >
               <MessageCircle className="w-4 h-4" />
@@ -169,7 +167,7 @@ export default function Header() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={handleWhatsAppClick}
-              className="w-full py-3 bg-emerald-600 text-white text-xs font-bold rounded-lg flex items-center justify-center gap-2"
+              className="w-full py-3 btn-whatsapp text-xs font-bold rounded-xl flex items-center justify-center gap-2"
             >
               <MessageCircle className="w-4 h-4" />
               <span>Hablar con un asesor</span>

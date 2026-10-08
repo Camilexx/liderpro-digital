@@ -108,7 +108,7 @@ export default function ContactPage() {
 
             <button
               type="submit"
-              className="w-full py-4 px-6 bg-brand-whatsapp hover:bg-brand-whatsappHover text-white font-black text-xs uppercase tracking-wider rounded-xl shadow-md flex items-center justify-center gap-2 transition-all active:scale-95"
+              className="w-full py-4 px-6 btn-whatsapp font-black text-xs uppercase tracking-wider rounded-xl shadow-lg flex items-center justify-center gap-2 transition-all active:scale-95"
             >
               <MessageCircle className="w-5 h-5" />
               <span>ENVIAR COTIZACIÓN A WHATSAPP</span>

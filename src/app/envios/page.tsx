@@ -90,7 +90,7 @@ export default function ShippingPage() {
           href={buildWhatsAppLink("shipping")}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 px-8 py-4 bg-brand-whatsapp hover:bg-brand-whatsappHover text-white font-black text-xs uppercase tracking-wider rounded-xl shadow-md transition-all active:scale-95"
+          className="inline-flex items-center gap-2 px-8 py-4 btn-whatsapp font-black text-xs uppercase tracking-wider rounded-xl shadow-lg transition-all active:scale-95"
         >
           <MessageCircle className="w-5 h-5" />
           <span>CONSULTAR FLETE Y TIEMPO A MI CIUDAD</span>

@@ -26,33 +26,34 @@ export default function HomePage() {
 
   return (
     <div className="space-y-16 sm:space-y-24 pb-16">
-      {/* 01: HERO SECTION — Clean Minimal & Premium Automotive */}
-      <section className="pt-8 sm:pt-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      {/* 01: HERO SECTION — Premium National Automotive Specialist */}
+      <section className="pt-8 sm:pt-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto animate-fade-in">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           {/* Left: Value Proposition */}
           <div className="lg:col-span-6 space-y-6 text-left">
-            <div className="text-[11px] font-bold tracking-widest uppercase text-slate-500">
-              ATENCIÓN COSTA + SIERRA
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-slate-100 text-slate-800 rounded-full text-[11px] font-bold tracking-widest uppercase">
+              <span className="w-2 h-2 rounded-full bg-brand-primary" />
+              <span>COBERTURA NACIONAL • ASESORÍA ESPECIALIZADA</span>
             </div>
 
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-slate-950 leading-[1.08]">
-              Tu vehículo.
+              El producto correcto para tu vehículo.
               <br />
-              <span className="text-brand-primary">Nuestra experiencia.</span>
+              <span className="text-brand-primary">Sin adivinar.</span>
             </h1>
 
             <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-lg">
-              Encuentra el repuesto, batería o lubricante exacto para tu auto. Asesoría técnica humana directa, despacho prioritario desde Pedernales y Quito, y envíos a todo el Ecuador.
+              Encuentra baterías, lubricantes y repuestos automotrices de calidad especializada, con asesoría técnica real y envíos a todo Ecuador.
             </p>
 
-            {/* CTAs: Level 1 (Find Product) + Level 2 (WhatsApp Specialist) */}
+            {/* CTAs */}
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
               <a
                 href="#buscador"
                 className="px-8 h-13 bg-brand-primary hover:bg-brand-primaryHover text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-all shadow-sm flex items-center justify-center gap-2 active:scale-95 text-center"
               >
                 <Search className="w-4 h-4" />
-                <span>ENCONTRAR MI PRODUCTO</span>
+                <span>ENCUENTRA MI PRODUCTO</span>
               </a>
 
               <a
@@ -66,16 +67,10 @@ export default function HomePage() {
               </a>
             </div>
 
-            {/* Level 3: Emergency Shortcut (High Intent) */}
-            <div className="pt-2 flex items-center gap-2.5 text-xs">
-              <span className="text-slate-500 font-medium">¿Tu vehículo no enciende?</span>
-              <Link
-                href="/emergencia-bateria"
-                className="font-bold text-red-600 hover:text-red-700 underline underline-offset-4 flex items-center gap-1"
-              >
-                <Zap className="w-3.5 h-3.5 fill-red-600" />
-                <span>Necesito una batería urgente →</span>
-              </Link>
+            {/* Reassurance Microcopy */}
+            <div className="pt-2 flex items-center gap-2 text-xs text-slate-500">
+              <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" />
+              <span>Verificamos compatibilidad antes de comprar para que evites errores.</span>
             </div>
           </div>
 
@@ -84,7 +79,7 @@ export default function HomePage() {
             <div className="relative aspect-[16/10] sm:aspect-[16/9] lg:aspect-[4/3] rounded-3xl overflow-hidden border border-slate-200/90 shadow-sm bg-slate-950">
               <Image
                 src="/images/hero/automotive-hero.jpg"
-                alt="LiderPro Ingeniería y Repuestos Automotrices"
+                alt="LiderPro Especialista Automotriz Ecuador"
                 fill
                 priority
                 className="object-cover"
@@ -92,10 +87,10 @@ export default function HomePage() {
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent pointer-events-none" />
               <div className="absolute bottom-4 left-5 right-5 text-white flex items-center justify-between text-xs">
                 <span className="font-semibold tracking-wide">
-                  Ingeniería & Repuestos Certificados
+                  Calidad Especializada & Asesoría Técnica
                 </span>
                 <span className="text-[11px] font-mono text-slate-300">
-                  Pedernales • Quito
+                  Envíos a todo Ecuador
                 </span>
               </div>
             </div>
@@ -210,141 +205,140 @@ export default function HomePage() {
         <VehicleFinder />
       </section>
 
-      {/* 04: CATEGORIES — Editorial & Minimal */}
+      {/* 04: CATEGORÍAS CONCEPTUALES — Identidad Visual Propia */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-8 space-y-1">
           <span className="text-xs font-bold uppercase tracking-wider text-slate-500">
-            Líneas Principales
+            Líneas de Especialidad Técnica
           </span>
           <h2 className="text-2xl sm:text-3xl font-black text-slate-950">
             Categorías
           </h2>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+          {/* 1. ENERGÍA Y ARRANQUE */}
           <Link
             href="/baterias"
-            className="p-5 rounded-2xl border border-slate-200 bg-white hover:border-slate-400 transition-all group flex flex-col justify-between h-44"
+            className="p-6 rounded-2xl border-2 border-red-100 bg-white hover:border-red-500 hover:shadow-md transition-all group flex flex-col justify-between h-56"
           >
-            <div className="w-9 h-9 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-center text-slate-950 group-hover:bg-brand-primary group-hover:text-white group-hover:border-brand-primary transition-all">
-              <Zap className="w-4 h-4" />
-            </div>
             <div>
-              <h3 className="font-black text-sm text-slate-950 group-hover:text-brand-primary transition-colors">
+              <div className="flex items-center justify-between mb-3">
+                <span className="text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded bg-red-50 text-red-700">
+                  Energía & Arranque
+                </span>
+                <Zap className="w-5 h-5 text-red-600" />
+              </div>
+              <h3 className="font-black text-lg text-slate-950 group-hover:text-brand-primary transition-colors">
                 Baterías
               </h3>
-              <p className="text-[11px] text-slate-500 mt-0.5 line-clamp-2">
-                15 a 18 meses garantía.
+              <p className="text-xs text-slate-600 mt-1 leading-relaxed">
+                Alta capacidad de reserva, amperaje CCA comprobado y aleación calcio-plata sellada.
               </p>
             </div>
-            <div className="text-[11px] font-bold text-slate-900 flex items-center gap-1 group-hover:text-brand-primary">
-              <span>Ver</span>
-              <ArrowRight className="w-3 h-3" />
+            <div className="text-xs font-bold text-brand-primary flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+              <span>Explorar baterías</span>
+              <ArrowRight className="w-3.5 h-3.5" />
             </div>
           </Link>
 
+          {/* 2. PROTECCIÓN DEL MOTOR */}
           <Link
             href="/lubricantes"
-            className="p-5 rounded-2xl border border-slate-200 bg-white hover:border-slate-400 transition-all group flex flex-col justify-between h-44"
+            className="p-6 rounded-2xl border-2 border-amber-100 bg-white hover:border-amber-500 hover:shadow-md transition-all group flex flex-col justify-between h-56"
           >
-            <div className="w-9 h-9 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-center text-slate-950 group-hover:bg-brand-primary group-hover:text-white group-hover:border-brand-primary transition-all">
-              <Layers className="w-4 h-4" />
-            </div>
             <div>
-              <h3 className="font-black text-sm text-slate-950 group-hover:text-brand-primary transition-colors">
+              <div className="flex items-center justify-between mb-3">
+                <span className="text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded bg-amber-50 text-amber-800">
+                  Protección Motor
+                </span>
+                <Layers className="w-5 h-5 text-amber-700" />
+              </div>
+              <h3 className="font-black text-lg text-slate-950 group-hover:text-amber-800 transition-colors">
                 Lubricantes
               </h3>
-              <p className="text-[11px] text-slate-500 mt-0.5 line-clamp-2">
-                Sintéticos 5W-30 y 15W-40.
+              <p className="text-xs text-slate-600 mt-1 leading-relaxed">
+                Sintéticos avanzados API SP e ILSAC GF-6A para control de fricción y temperatura.
               </p>
             </div>
-            <div className="text-[11px] font-bold text-slate-900 flex items-center gap-1 group-hover:text-brand-primary">
-              <span>Ver</span>
-              <ArrowRight className="w-3 h-3" />
+            <div className="text-xs font-bold text-amber-800 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+              <span>Ver lubricantes</span>
+              <ArrowRight className="w-3.5 h-3.5" />
             </div>
           </Link>
 
+          {/* 3. MANTENIMIENTO */}
           <Link
             href="/filtros"
-            className="p-5 rounded-2xl border border-slate-200 bg-white hover:border-slate-400 transition-all group flex flex-col justify-between h-44"
+            className="p-6 rounded-2xl border-2 border-blue-100 bg-white hover:border-blue-500 hover:shadow-md transition-all group flex flex-col justify-between h-56"
           >
-            <div className="w-9 h-9 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-center text-slate-950 group-hover:bg-brand-primary group-hover:text-white group-hover:border-brand-primary transition-all">
-              <Wrench className="w-4 h-4" />
-            </div>
             <div>
-              <h3 className="font-black text-sm text-slate-950 group-hover:text-brand-primary transition-colors">
-                Filtros
+              <div className="flex items-center justify-between mb-3">
+                <span className="text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded bg-blue-50 text-blue-700">
+                  Mantenimiento
+                </span>
+                <Wrench className="w-5 h-5 text-blue-600" />
+              </div>
+              <h3 className="font-black text-lg text-slate-950 group-hover:text-blue-700 transition-colors">
+                Filtros y Fluidos
               </h3>
-              <p className="text-[11px] text-slate-500 mt-0.5 line-clamp-2">
-                Blindados alta retención.
+              <p className="text-xs text-slate-600 mt-1 leading-relaxed">
+                Retención de micras certificada, refrigerantes OAT 50/50 y elementos de protección.
               </p>
             </div>
-            <div className="text-[11px] font-bold text-slate-900 flex items-center gap-1 group-hover:text-brand-primary">
-              <span>Ver</span>
-              <ArrowRight className="w-3 h-3" />
+            <div className="text-xs font-bold text-blue-700 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+              <span>Ver mantenimiento</span>
+              <ArrowRight className="w-3.5 h-3.5" />
             </div>
           </Link>
 
+          {/* 4. SEGURIDAD */}
           <Link
             href="/productos"
-            className="p-5 rounded-2xl border border-slate-200 bg-white hover:border-slate-400 transition-all group flex flex-col justify-between h-44"
+            className="p-6 rounded-2xl border-2 border-slate-200 bg-white hover:border-slate-800 hover:shadow-md transition-all group flex flex-col justify-between h-56"
           >
-            <div className="w-9 h-9 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-center text-slate-950 group-hover:bg-brand-primary group-hover:text-white group-hover:border-brand-primary transition-all">
-              <ShieldCheck className="w-4 h-4" />
-            </div>
             <div>
-              <h3 className="font-black text-sm text-slate-950 group-hover:text-brand-primary transition-colors">
+              <div className="flex items-center justify-between mb-3">
+                <span className="text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded bg-slate-100 text-slate-800">
+                  Seguridad
+                </span>
+                <ShieldCheck className="w-5 h-5 text-slate-800" />
+              </div>
+              <h3 className="font-black text-lg text-slate-950 group-hover:text-slate-900 transition-colors">
                 Frenos
               </h3>
-              <p className="text-[11px] text-slate-500 mt-0.5 line-clamp-2">
-                Pastillas cerámicas OEM.
+              <p className="text-xs text-slate-600 mt-1 leading-relaxed">
+                Compuestos semi-metálicos con coeficiente de fricción estable y cero fade térmico.
               </p>
             </div>
-            <div className="text-[11px] font-bold text-slate-900 flex items-center gap-1 group-hover:text-brand-primary">
-              <span>Ver</span>
-              <ArrowRight className="w-3 h-3" />
+            <div className="text-xs font-bold text-slate-900 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+              <span>Ver frenos</span>
+              <ArrowRight className="w-3.5 h-3.5" />
             </div>
           </Link>
 
+          {/* 5. REPUESTOS Y SOLUCIONES */}
           <Link
             href="/productos"
-            className="p-5 rounded-2xl border border-slate-200 bg-white hover:border-slate-400 transition-all group flex flex-col justify-between h-44"
+            className="p-6 rounded-2xl border-2 border-emerald-100 bg-white hover:border-emerald-600 hover:shadow-md transition-all group flex flex-col justify-between h-56"
           >
-            <div className="w-9 h-9 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-center text-slate-950 group-hover:bg-brand-primary group-hover:text-white group-hover:border-brand-primary transition-all">
-              <Zap className="w-4 h-4" />
-            </div>
             <div>
-              <h3 className="font-black text-sm text-slate-950 group-hover:text-brand-primary transition-colors">
-                Refrigerantes
-              </h3>
-              <p className="text-[11px] text-slate-500 mt-0.5 line-clamp-2">
-                Orgánico OAT 50/50.
-              </p>
-            </div>
-            <div className="text-[11px] font-bold text-slate-900 flex items-center gap-1 group-hover:text-brand-primary">
-              <span>Ver</span>
-              <ArrowRight className="w-3 h-3" />
-            </div>
-          </Link>
-
-          <Link
-            href="/productos"
-            className="p-5 rounded-2xl border border-slate-200 bg-white hover:border-slate-400 transition-all group flex flex-col justify-between h-44"
-          >
-            <div className="w-9 h-9 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-center text-slate-950 group-hover:bg-brand-primary group-hover:text-white group-hover:border-brand-primary transition-all">
-              <Search className="w-4 h-4" />
-            </div>
-            <div>
-              <h3 className="font-black text-sm text-slate-950 group-hover:text-brand-primary transition-colors">
+              <div className="flex items-center justify-between mb-3">
+                <span className="text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded bg-emerald-50 text-emerald-800">
+                  Soluciones
+                </span>
+                <Search className="w-5 h-5 text-emerald-600" />
+              </div>
+              <h3 className="font-black text-lg text-slate-950 group-hover:text-emerald-800 transition-colors">
                 Catálogo Total
               </h3>
-              <p className="text-[11px] text-slate-500 mt-0.5 line-clamp-2">
-                Aditivos y repuestos.
+              <p className="text-xs text-slate-600 mt-1 leading-relaxed">
+                Acceso general a componentes, bujías y soluciones bajo pedido con asesoría.
               </p>
             </div>
-            <div className="text-[11px] font-bold text-slate-900 flex items-center gap-1 group-hover:text-brand-primary">
-              <span>Explorar</span>
-              <ArrowRight className="w-3 h-3" />
+            <div className="text-xs font-bold text-emerald-700 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+              <span>Ver catálogo</span>
+              <ArrowRight className="w-3.5 h-3.5" />
             </div>
           </Link>
         </div>

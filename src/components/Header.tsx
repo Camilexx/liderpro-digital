@@ -59,10 +59,16 @@ export default function Header() {
               Lubricantes
             </Link>
             <Link
+              href="/b2b"
+              className="hover:text-brand-primary transition-colors py-1 text-slate-800 font-bold"
+            >
+              Atención B2B
+            </Link>
+            <Link
               href="/sucursales"
               className="hover:text-brand-primary transition-colors py-1 text-slate-600"
             >
-              Sucursales y Envíos
+              Puntos y Envíos
             </Link>
           </nav>
 

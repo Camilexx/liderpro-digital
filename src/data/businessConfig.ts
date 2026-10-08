@@ -1,7 +1,24 @@
+export type CommercialTruthStatus = "VERIFIED" | "REFERENCE" | "PENDING_VERIFICATION" | "NOT_PUBLISHABLE";
+
+export interface CommercialDataField<T = string> {
+  value: T;
+  source: string;
+  status: CommercialTruthStatus;
+  verifiedAt?: string;
+  verifiedBy?: string;
+}
+
 export interface BusinessConfig {
   name: string;
   slogan: string;
+  heroHeadline: string;
+  heroSubtitle: string;
   supportingProposition: string;
+  supportAvailability: {
+    status: CommercialTruthStatus;
+    label: string;
+    description: string;
+  };
   legalNotice: string;
   relationshipStatus: string;
   locations: {
@@ -43,11 +60,19 @@ export interface BusinessConfig {
 
 export const BUSINESS_CONFIG: BusinessConfig = {
   name: "LiderPro",
-  slogan: "Tu vehículo. Nuestra experiencia.",
+  slogan: "El producto correcto para tu vehículo. Sin adivinar.",
+  heroHeadline: "El producto correcto para tu vehículo. Sin adivinar.",
+  heroSubtitle:
+    "Encuentra baterías, lubricantes y repuestos automotrices de calidad especializada, con asesoría técnica real y envíos a todo Ecuador.",
   supportingProposition:
-    "Identificamos tu vehículo, verificamos la compatibilidad y te ayudamos a conseguir el producto correcto, con atención directa por WhatsApp y envíos a todo Ecuador.",
+    "Calidad especializada, asesoría técnica real y envíos a todo Ecuador. Verificamos la compatibilidad exacta antes de comprar para que evites errores.",
+  supportAvailability: {
+    status: "PENDING_VERIFICATION",
+    label: "Atención comercial y asesoría técnica activa",
+    description: "Horario comercial extendido con respuesta ágil por WhatsApp.",
+  },
   legalNotice:
-    "Operación comercial independiente bajo el modelo y estándares de LiderPro, con conexión operativa directa con la planta principal. Puntos estratégicos de atención y distribución en Pedernales (Manabí) y Quito (Pichincha).",
+    "Operación comercial independiente bajo el modelo y estándares de LiderPro, con conexión operativa directa con la planta principal. Centros de atención y distribución técnica en Pedernales (Manabí) y Quito (Pichincha) con cobertura nacional.",
   relationshipStatus:
     "Operación independiente LiderPro con enlace operativo directo con planta principal.",
   locations: {

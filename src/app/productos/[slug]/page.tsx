@@ -137,7 +137,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
                 </div>
                 <div className="flex items-center gap-2">
                   <MapPin className="w-4 h-4 text-slate-700 shrink-0" />
-                  <span><strong>Despacho estratégico:</strong> Coordinado desde Pedernales o Quito hacia tu ciudad.</span>
+                  <span><strong>Despacho nacional:</strong> Coordinado desde centros de distribución estratégicos hacia cualquier provincia.</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Truck className="w-4 h-4 text-slate-700 shrink-0" />

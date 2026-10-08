@@ -88,28 +88,53 @@ export default function VehicleFinder({ initialCategory = "baterias" }: VehicleF
     }
   }
 
+  // Progressive Step Calculator (1 to 5)
+  let currentStep = 1;
+  if (selectedMake) currentStep = 2;
+  if (selectedMake && selectedModel) currentStep = 3;
+  if (selectedMake && selectedModel && selectedYear) currentStep = 4;
+  if (selectedMake && selectedModel && selectedYear && selectedEngine) currentStep = 5;
+
   return (
-    <div className="bg-white rounded-2xl border border-slate-200/90 shadow-sm p-6 sm:p-10">
+    <div className="bg-white rounded-2xl border border-slate-200/90 shadow-sm p-6 sm:p-10 animate-fade-up">
       {/* Editorial Title */}
-      <div className="flex flex-col sm:flex-row sm:items-baseline justify-between pb-6 border-b border-slate-100 gap-2">
+      <div className="flex flex-col sm:flex-row sm:items-baseline justify-between pb-6 border-b border-slate-100 gap-4">
         <div>
           <h2 className="text-xl sm:text-2xl font-black text-slate-950 tracking-tight">
-            Encuentra lo correcto para tu vehículo
+            Encuentra el producto exacto para tu vehículo
           </h2>
           <p className="text-xs sm:text-sm text-slate-500 mt-1">
-            No necesitas saber de mecánica. Te ayudamos a encontrar el producto adecuado.
+            No necesitas saber el número de parte. Nosotros te ayudamos a encontrarlo con compatibilidad garantizada.
           </p>
         </div>
 
-        {hasSearched && (
-          <button
-            onClick={handleReset}
-            className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-500 hover:text-slate-900 transition-colors"
-          >
-            <RotateCcw className="w-3.5 h-3.5" />
-            Reiniciar selector
-          </button>
-        )}
+        <div className="flex items-center gap-3">
+          <div className="flex items-center gap-1.5 bg-slate-50 px-3 py-1.5 rounded-xl border border-slate-200">
+            <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">
+              Paso {currentStep} de 5
+            </span>
+            <div className="flex gap-1 ml-1">
+              {[1, 2, 3, 4, 5].map((step) => (
+                <span
+                  key={step}
+                  className={`w-2 h-2 rounded-full transition-all ${
+                    step <= currentStep ? "bg-brand-primary" : "bg-slate-300"
+                  }`}
+                />
+              ))}
+            </div>
+          </div>
+
+          {hasSearched && (
+            <button
+              onClick={handleReset}
+              className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-500 hover:text-slate-900 transition-colors"
+            >
+              <RotateCcw className="w-3.5 h-3.5" />
+              Reiniciar
+            </button>
+          )}
+        </div>
       </div>
 
       {/* Selectors Grid */}
@@ -370,11 +395,11 @@ export default function VehicleFinder({ initialCategory = "baterias" }: VehicleF
           ) : (
             <div className="p-6 bg-slate-50 rounded-xl border border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4">
               <div className="space-y-1 text-center sm:text-left">
-                <h4 className="text-sm font-bold text-slate-900">
-                  No encontramos una coincidencia exacta para {selectedMake} {selectedModel} ({selectedYear})
+                <h4 className="text-sm font-black text-slate-900">
+                  Necesitamos una validación adicional para {selectedMake} {selectedModel} ({selectedYear || "tu vehículo"})
                 </h4>
                 <p className="text-xs text-slate-600">
-                  Un asesor técnico puede confirmarlo por WhatsApp con el número de chasis o foto del repuesto actual.
+                  No adivinamos compatibilidad. Un especialista técnico verificará el catálogo de fábrica por WhatsApp en menos de 2 minutos.
                 </p>
               </div>
 

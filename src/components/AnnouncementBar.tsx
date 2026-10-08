@@ -6,17 +6,17 @@ export default function AnnouncementBar() {
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="flex items-center gap-2">
           <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-          <span className="font-medium text-slate-200">
-            Puntos de atención en Pedernales (Manabí) y Quito (Pichincha)
+          <span className="font-semibold text-slate-200">
+            Envíos a todo el Ecuador • Calidad especializada y asesoría técnica real
           </span>
         </div>
         <div className="hidden sm:flex items-center gap-3 text-slate-400">
-          <span>Envíos a todo el Ecuador • 24–48 h*</span>
+          <span>Puntos de atención y distribución en Pedernales y Quito</span>
           <Link
-            href="/sucursales"
+            href="/envios"
             className="text-slate-200 hover:text-white underline underline-offset-2 transition-colors font-medium"
           >
-            Ver sedes
+            Detalle logístico
           </Link>
         </div>
       </div>

@@ -125,6 +125,86 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* 02.5: THREE CONVERSION PATHS — Explicit Intent Routing */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mb-4 space-y-1">
+          <span className="text-[11px] font-bold uppercase tracking-wider text-slate-500">
+            ¿Cómo podemos ayudarte hoy?
+          </span>
+          <h2 className="text-xl sm:text-2xl font-black text-slate-950">
+            Selecciona tu punto de partida
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {/* Path A: Emergency Battery */}
+          <Link
+            href="/emergencia-bateria"
+            className="p-6 rounded-2xl border-2 border-red-100 bg-red-50/30 hover:border-red-300 hover:bg-red-50/60 transition-all flex flex-col justify-between group h-52"
+          >
+            <div>
+              <div className="w-10 h-10 rounded-xl bg-red-100 text-red-600 flex items-center justify-center mb-3 group-hover:scale-105 transition-transform">
+                <Zap className="w-5 h-5 fill-red-600" />
+              </div>
+              <h3 className="font-black text-base text-slate-950 group-hover:text-red-700 transition-colors">
+                Necesito una batería
+              </h3>
+              <p className="text-xs text-slate-600 mt-1 leading-relaxed">
+                ¿El auto no prende o hace clic? Despacho urgente y diagnóstico técnico de batería vs. alternador.
+              </p>
+            </div>
+            <div className="text-xs font-bold text-red-600 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+              <span>Auxilio inmediato de batería</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </div>
+          </Link>
+
+          {/* Path B: Specific Product */}
+          <a
+            href="#buscador"
+            className="p-6 rounded-2xl border-2 border-slate-200 bg-white hover:border-slate-400 transition-all flex flex-col justify-between group h-52"
+          >
+            <div>
+              <div className="w-10 h-10 rounded-xl bg-slate-100 text-slate-900 flex items-center justify-center mb-3 group-hover:scale-105 transition-transform">
+                <Search className="w-5 h-5" />
+              </div>
+              <h3 className="font-black text-base text-slate-950 group-hover:text-brand-primary transition-colors">
+                Busco un producto específico
+              </h3>
+              <p className="text-xs text-slate-600 mt-1 leading-relaxed">
+                Filtra por marca, modelo, año y motor para encontrar el aceite, filtro o repuesto compatible.
+              </p>
+            </div>
+            <div className="text-xs font-bold text-brand-primary flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+              <span>Abrir buscador por vehículo</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </div>
+          </a>
+
+          {/* Path C: Unknown / Guided Assistance */}
+          <Link
+            href="/asesoria"
+            className="p-6 rounded-2xl border-2 border-amber-100 bg-amber-50/20 hover:border-amber-300 hover:bg-amber-50/50 transition-all flex flex-col justify-between group h-52"
+          >
+            <div>
+              <div className="w-10 h-10 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center mb-3 group-hover:scale-105 transition-transform">
+                <MessageCircle className="w-5 h-5" />
+              </div>
+              <h3 className="font-black text-base text-slate-950 group-hover:text-amber-900 transition-colors">
+                No sé qué necesito
+              </h3>
+              <p className="text-xs text-slate-600 mt-1 leading-relaxed">
+                Cuéntanos el síntoma, ruido o envíanos una foto de la pieza. Un asesor te asiste sin compromiso.
+              </p>
+            </div>
+            <div className="text-xs font-bold text-amber-800 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+              <span>Asistencia guiada por WhatsApp</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </div>
+          </Link>
+        </div>
+      </section>
+
       {/* 03: VEHICLE FINDER (Hero Tool Asset) */}
       <section id="buscador" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <VehicleFinder />

@@ -45,7 +45,7 @@ export const BUSINESS_CONFIG: BusinessConfig = {
   name: "LiderPro",
   slogan: "Tu vehículo. Nuestra experiencia.",
   supportingProposition:
-    "Encuentra el producto adecuado para tu vehículo, recibe asesoría especializada y recíbelo donde estés.",
+    "Identificamos tu vehículo, verificamos la compatibilidad y te ayudamos a conseguir el producto correcto, con atención directa por WhatsApp y envíos a todo Ecuador.",
   legalNotice:
     "Operación comercial independiente bajo el modelo y estándares de LiderPro, con conexión operativa directa con la planta principal. Puntos estratégicos de atención y distribución en Pedernales (Manabí) y Quito (Pichincha).",
   relationshipStatus:

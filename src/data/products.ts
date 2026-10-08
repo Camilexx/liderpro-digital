@@ -11,6 +11,7 @@ export interface Product {
   priceEstimate?: string;
   priceNote: string;
   warranty: string;
+  commercialStatus: "VERIFIED" | "REFERENCE" | "PENDING_VERIFICATION";
   inStock: boolean;
   stockStatusText: string;
   primaryOriginRecommendation: "Pedernales" | "Quito" | "Nacional";
@@ -47,7 +48,8 @@ export const PRODUCTS: Product[] = [
       "Batería sellada con aleación plomo-calcio-plata de alta resistencia a ciclos térmicos. Diseñada para arranques confiables tanto en el nivel del mar como a gran altura.",
     priceEstimate: "$74.00 (Referencial)",
     priceNote: "Precio referencial sujeto a confirmación de stock y entrega de batería usada en parte de pago.",
-    warranty: "15 Meses de garantía técnica directa",
+    warranty: "15 Meses sujeta a prueba técnica del alternador",
+    commercialStatus: "REFERENCE",
     inStock: true,
     stockStatusText: "Disponible en Pedernales y Quito",
     primaryOriginRecommendation: "Pedernales",
@@ -60,10 +62,10 @@ export const PRODUCTS: Product[] = [
       { make: "Kia", model: "Rio", yearRange: "2012-2020", engine: "1.4L / 1.6L" },
     ],
     features: [
-      "Tecnología alemana en formulación de rejillas",
+      "Tecnología de aleación en rejillas para alta durabilidad",
       "Ojo visor hidrómetro para control visual de carga",
-      "Arranque en frío superior (480 CCA certificados)",
-      "Soporte anti-vibración para carreteras exigentes",
+      "Arranque en frío superior (480 CCA de prueba)",
+      "Soporte reforzado para rutas y carreteras exigentes",
     ],
     faqs: [
       {
@@ -72,7 +74,7 @@ export const PRODUCTS: Product[] = [
       },
       {
         question: "¿Qué garantía tiene este producto?",
-        answer: "Cuenta con 15 meses de garantía contra defectos de fabricación con respaldo de la red LiderPro.",
+        answer: "Cuenta con 15 meses de garantía contra defectos de fabricación, previa validación técnica del sistema de carga.",
       },
     ],
   },
@@ -90,13 +92,14 @@ export const PRODUCTS: Product[] = [
       "CCA (-18°C)": "600 A",
       "Norma": "DIN 66 / LN2",
       "Polaridad": "Derecha (- / + invertido estándar europeo)",
-      "Garantía": "18 Meses nacional",
+      "Garantía": "18 Meses sujeta a prueba técnica",
     },
     description:
       "Formato europeo bajo perfil con alta reserva de energía para vehículos con alta demanda eléctrica y computadoras de a bordo exigentes.",
     priceEstimate: "$98.00 (Referencial)",
     priceNote: "Precio referencial sujeto a confirmación de stock y entrega de batería usada en parte de pago.",
-    warranty: "18 Meses de garantía técnica",
+    warranty: "18 Meses sujeta a diagnóstico del vehículo",
+    commercialStatus: "REFERENCE",
     inStock: true,
     stockStatusText: "Stock confirmado en Quito y Pedernales",
     primaryOriginRecommendation: "Quito",
@@ -140,7 +143,8 @@ export const PRODUCTS: Product[] = [
       "Lubricante formulado para máxima protección contra el pre-encendido a baja velocidad (LSPI) en motores modernos turboalimentados y de inyección directa.",
     priceEstimate: "$28.50 (Referencial)",
     priceNote: "Precio referencial por galón sujeto a confirmación. Consultar promociones y combos con filtro.",
-    warranty: "Garantía de originalidad y lote certificado de fábrica",
+    warranty: "Garantía de lote certificado de fábrica",
+    commercialStatus: "REFERENCE",
     inStock: true,
     stockStatusText: "Disponible para envío inmediato",
     primaryOriginRecommendation: "Nacional",
@@ -182,7 +186,8 @@ export const PRODUCTS: Product[] = [
       "Aceite de alta resistencia térmica para camionetas, furgones y flotas de trabajo comercial e interprovincial en Ecuador.",
     priceEstimate: "$24.00 (Referencial)",
     priceNote: "Precio referencial por galón. Consultar precios por volumen para flotas y talleres.",
-    warranty: "Autenticidad certificada",
+    warranty: "Autenticidad de formulación",
+    commercialStatus: "REFERENCE",
     inStock: true,
     stockStatusText: "Stock para flotas y talleres disponible",
     primaryOriginRecommendation: "Pedernales",
@@ -194,7 +199,7 @@ export const PRODUCTS: Product[] = [
     ],
     features: [
       "Control avanzado de lodos y acidez por combustibles con azufre",
-      "Resistencia extrema para transporte de carga y rutas costeras/montaña",
+      "Resistencia térmica para transporte de carga en rutas costeras y de montaña",
     ],
     faqs: [],
   },
@@ -208,7 +213,7 @@ export const PRODUCTS: Product[] = [
     shortSpec: "Filtración sintética 99% a 20 micras • Válvula anti-drenaje de silicona",
     fullSpecs: {
       "Tipo": "Metálico blindado tipo roscado",
-      "Válvula Bypass": "Tarada a especificación OEM",
+      "Válvula Bypass": "Tarada a especificación técnica",
       "Medio filtrante": "Microfibra celulosa resinada",
     },
     description:
@@ -216,6 +221,7 @@ export const PRODUCTS: Product[] = [
     priceEstimate: "$5.50 - $8.00 (Referencial)",
     priceNote: "Precio referencial sujeto a rosca y aplicación exacta del vehículo.",
     warranty: "Garantía contra defectos de sellado",
+    commercialStatus: "REFERENCE",
     inStock: true,
     stockStatusText: "Todas las aplicaciones más comunes en stock",
     primaryOriginRecommendation: "Nacional",
@@ -251,7 +257,8 @@ export const PRODUCTS: Product[] = [
       "Refrigerante anticongelante y antioxidante para sistemas modernos con radiadores de aluminio y componentes plásticos de alta temperatura.",
     priceEstimate: "$14.50 (Referencial)",
     priceNote: "Precio referencial por galón sujeto a confirmación de stock.",
-    warranty: "Fórmula de grado industrial",
+    warranty: "Formulación de grado técnico",
+    commercialStatus: "REFERENCE",
     inStock: true,
     stockStatusText: "En stock permanente",
     primaryOriginRecommendation: "Nacional",
@@ -264,8 +271,8 @@ export const PRODUCTS: Product[] = [
     ],
     features: [
       "No requiere agregar agua: viene listo con agua desionizada",
-      "Evita sobrecalentamiento en cuestas de la Sierra y trancones costeros",
-      "Protección anticorrosión en bloque y culata",
+      "Ayuda a prevenir sobrecalentamiento en pendientes y tráfico",
+      "Protección anticorrosión en radiadores de aluminio",
     ],
     faqs: [],
   },
@@ -281,13 +288,14 @@ export const PRODUCTS: Product[] = [
       "Material": "Cerámica de fricción con microfibras de cobre",
       "Polvo residual": "Muy bajo (mantiene aros limpios)",
       "Ruido": "Coeficiente acústico reducido con shims amortiguadores",
-      "Resistencia térmica": "Hasta 550°C sin fatiga (fade-resistant)",
+      "Resistencia térmica": "Alta resistencia a fatiga en pendientes",
     },
     description:
-      "Juego de pastillas de freno para eje delantero, formuladas para una frenada progresiva y segura sin chirridos ni desgaste prematuro del disco.",
+      "Juego de pastillas de freno para eje delantero, formuladas para un frenado progresivo y seguro sin chirridos excesivos.",
     priceEstimate: "$22.00 - $35.00 (Referencial)",
     priceNote: "Precio referencial sujeto a versión y aplicación exacta del vehículo.",
-    warranty: "Garantía de adaptación exacta OEM",
+    warranty: "Garantía de adaptación según modelo",
+    commercialStatus: "REFERENCE",
     inStock: true,
     stockStatusText: "Consultar aplicación por modelo exacto",
     primaryOriginRecommendation: "Quito",

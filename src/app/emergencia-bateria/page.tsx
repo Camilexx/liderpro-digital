@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import EmergencyBanner from "@/components/EmergencyBanner";
-import { Zap, ShieldCheck, MapPin, Phone, MessageCircle } from "lucide-react";
 import { buildWhatsAppLink } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {

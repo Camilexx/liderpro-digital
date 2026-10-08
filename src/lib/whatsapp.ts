@@ -7,7 +7,8 @@ export type WhatsAppActionType =
   | "general_quote"
   | "shipping"
   | "branch"
-  | "b2b";
+  | "b2b"
+  | "unknown_need";
 
 export interface WhatsAppContext {
   productName?: string;
@@ -17,6 +18,8 @@ export interface WhatsAppContext {
   vehicleYear?: string | number;
   vehicleEngine?: string;
   neededItem?: string;
+  symptom?: string;
+  issueDescription?: string;
   city?: string;
   locationChoice?: "pedernales" | "quito" | "nacional";
   b2bNotes?: string;
@@ -34,35 +37,45 @@ export function buildWhatsAppLink(action: WhatsAppActionType, context: WhatsAppC
     case "product":
       message =
         `Hola LiderPro 👋\n\n` +
-        `Quiero consultar/comprar:\n\n` +
+        `Quiero consultar compatibilidad y disponibilidad:\n\n` +
         `• Producto: ${context.productName || "Repuesto automotriz"}\n` +
         `• SKU: ${context.sku || "N/A"}\n` +
         `• Vehículo: ${context.vehicleMake ? `${context.vehicleMake} ${context.vehicleModel || ""} (${context.vehicleYear || ""})` : "Por confirmar"}\n` +
         `• Ciudad: ${context.city || "Ecuador"}\n\n` +
-        `¿Me pueden confirmar disponibilidad, precio y tiempo de despacho?`;
+        `¿Me pueden confirmar compatibilidad técnica, disponibilidad y entrega?`;
       break;
 
     case "vehicle":
       message =
         `Hola LiderPro 👋\n\n` +
-        `Quisiera confirmar compatibilidad para mi vehículo:\n\n` +
+        `Necesito ayuda con el producto correcto para mi vehículo:\n\n` +
         `• Marca: ${context.vehicleMake || "No especificada"}\n` +
         `• Modelo: ${context.vehicleModel || "No especificado"}\n` +
         `• Año: ${context.vehicleYear || "No especificado"}\n` +
         `• Motor/Cilindraje: ${context.vehicleEngine || "No especificado"}\n` +
-        `• ¿Qué necesito?: ${context.neededItem || "Asesoría general"}\n` +
+        `• Necesidad: ${context.neededItem || "Asesoría general"}\n` +
         `• Ciudad: ${context.city || "Ecuador"}\n\n` +
-        `¿Qué producto me recomiendan?`;
+        `¿Me ayudan a encontrar el producto correcto?`;
       break;
 
     case "emergency":
       message =
-        `🚨 *EMERGENCIA BATERÍA — LIDERPRO*\n\n` +
-        `Mi vehículo no enciende y necesito asistencia rápida para batería.\n\n` +
-        `• Vehículo: ${context.vehicleMake || ""} ${context.vehicleModel || ""} ${context.vehicleYear ? `(${context.vehicleYear})` : ""}\n` +
-        `• Ciudad/Ubicación: ${context.city || "Pedernales / Quito / Ecuador"}\n` +
-        `• Estado: No da arranque / Batería agotada\n\n` +
-        `Por favor indíquenme si tienen entrega inmediata o auxilio técnico.`;
+        `🚨 *SOLICITUD DE BATERÍA URGENTE*\n\n` +
+        `Mi vehículo no enciende y necesito asistencia para batería.\n\n` +
+        `• Vehículo: ${context.vehicleMake || "Por confirmar"} ${context.vehicleModel || ""} ${context.vehicleYear ? `(${context.vehicleYear})` : ""}\n` +
+        `• Ciudad: ${context.city || "Ecuador"}\n` +
+        `• Síntoma: ${context.symptom || "No da arranque"}\n\n` +
+        `Necesito ayuda para identificar la batería correcta y disponibilidad.`;
+      break;
+
+    case "unknown_need":
+      message =
+        `Hola LiderPro 👋\n\n` +
+        `*NO SÉ EXACTAMENTE QUÉ REPUESTO NECESITO* y requiero asesoría técnica:\n\n` +
+        `• Vehículo: ${context.vehicleMake || "Por indicar"} ${context.vehicleModel || ""} ${context.vehicleYear ? `(${context.vehicleYear})` : ""}\n` +
+        `• Problema / Síntoma: ${context.issueDescription || context.symptom || "Por describir"}\n` +
+        `• Ciudad: ${context.city || "Ecuador"}\n\n` +
+        `Tengo fotos de la pieza/etiqueta para enviarles por este chat. ¿Me pueden ayudar a identificar el repuesto correcto?`;
       break;
 
     case "shipping":

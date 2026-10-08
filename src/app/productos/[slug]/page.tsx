@@ -115,7 +115,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
               ))}
             </div>
 
-            {/* WhatsApp CTA Action */}
+            {/* WhatsApp CTA Action — Priority 1 Decision */}
             <div className="pt-4 space-y-3">
               <a
                 href={buildWhatsAppLink("product", {
@@ -124,15 +124,25 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
                 })}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full h-13 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs uppercase tracking-wider rounded-xl shadow-sm flex items-center justify-center gap-2 transition-all active:scale-95"
+                className="w-full h-14 bg-emerald-600 hover:bg-emerald-700 text-white font-black text-xs sm:text-sm uppercase tracking-wider rounded-xl shadow-md flex items-center justify-center gap-2.5 transition-all active:scale-95"
               >
-                <MessageCircle className="w-4 h-4" />
-                <span>CONSULTAR DISPONIBILIDAD POR WHATSAPP</span>
+                <MessageCircle className="w-5 h-5" />
+                <span>CONFIRMAR COMPATIBILIDAD Y DISPONIBILIDAD</span>
               </a>
 
-              <div className="flex items-center justify-between text-[11px] text-slate-500 font-medium px-1">
-                <span>Garantía: {product.warranty}</span>
-                <span>Despacho: Pedernales & Quito</span>
+              <div className="bg-slate-50 border border-slate-200/80 rounded-xl p-3.5 space-y-2 text-xs text-slate-600">
+                <div className="flex items-center gap-2">
+                  <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" />
+                  <span><strong>Validación técnica previa:</strong> Te confirmamos antes de comprar para evitar devoluciones.</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <MapPin className="w-4 h-4 text-slate-700 shrink-0" />
+                  <span><strong>Despacho estratégico:</strong> Coordinado desde Pedernales o Quito hacia tu ciudad.</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Truck className="w-4 h-4 text-slate-700 shrink-0" />
+                  <span><strong>Garantía:</strong> {product.warranty} (sujeta a términos del fabricante).</span>
+                </div>
               </div>
             </div>
           </div>

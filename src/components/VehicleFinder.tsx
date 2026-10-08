@@ -15,6 +15,8 @@ interface VehicleFinderProps {
 }
 
 export default function VehicleFinder({ initialCategory = "baterias" }: VehicleFinderProps) {
+  const [selectedIntent, setSelectedIntent] = useState<string>("repuesto");
+  const [selectedCity, setSelectedCity] = useState<string>("");
   const [selectedMake, setSelectedMake] = useState<string>("");
   const [selectedModel, setSelectedModel] = useState<string>("");
   const [selectedYear, setSelectedYear] = useState<string>("");
@@ -49,6 +51,8 @@ export default function VehicleFinder({ initialCategory = "baterias" }: VehicleF
     e.preventDefault();
     setHasSearched(true);
     trackEvent("vehicle_finder_complete", {
+      intent: selectedIntent,
+      city: selectedCity,
       make: selectedMake,
       model: selectedModel,
       year: selectedYear,
@@ -58,6 +62,8 @@ export default function VehicleFinder({ initialCategory = "baterias" }: VehicleF
   };
 
   const handleReset = () => {
+    setSelectedIntent("repuesto");
+    setSelectedCity("");
     setSelectedMake("");
     setSelectedModel("");
     setSelectedYear("");
@@ -108,7 +114,41 @@ export default function VehicleFinder({ initialCategory = "baterias" }: VehicleF
 
       {/* Selectors Grid */}
       <form onSubmit={handleSearch} className="mt-8 space-y-6">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3.5 sm:gap-4">
+        {/* Step 1: Intention / Goal */}
+        <div>
+          <label className="block text-[11px] font-bold text-slate-600 uppercase tracking-wider mb-2">
+            Paso 1: ¿Qué quieres resolver?
+          </label>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 text-xs">
+            {[
+              { id: "no_enciende", label: "Mi auto no prende", category: "baterias" },
+              { id: "bateria", label: "Necesito batería", category: "baterias" },
+              { id: "aceite", label: "Cambio de aceite", category: "lubricantes" },
+              { id: "mantenimiento", label: "Filtros / Servicio", category: "filtros" },
+              { id: "frenos", label: "Frenos / Pastillas", category: "frenos" },
+              { id: "no_se", label: "No sé qué necesito", category: "otro" },
+            ].map((intent) => (
+              <button
+                key={intent.id}
+                type="button"
+                onClick={() => {
+                  setSelectedIntent(intent.id);
+                  if (intent.category !== "otro") setSelectedNeed(intent.category);
+                }}
+                className={`py-2 px-3 rounded-xl border text-center font-bold transition-all ${
+                  selectedIntent === intent.id
+                    ? "bg-slate-900 text-white border-slate-900 shadow-sm"
+                    : "bg-slate-50 hover:bg-slate-100 text-slate-700 border-slate-200"
+                }`}
+              >
+                {intent.label}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Step 2-5: Vehicle Specs + Step 6: City */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-3.5 sm:gap-4">
           {/* Marca */}
           <div>
             <label className="block text-[11px] font-bold text-slate-600 uppercase tracking-wider mb-2">
@@ -142,7 +182,7 @@ export default function VehicleFinder({ initialCategory = "baterias" }: VehicleF
               required
             >
               <option value="">
-                {selectedMake ? "Selecciona Modelo" : "Elige marca primero"}
+                {selectedMake ? "Selecciona Modelo" : "Elige marca"}
               </option>
               {availableModels.map((item) => (
                 <option key={item.model} value={item.model}>
@@ -198,7 +238,7 @@ export default function VehicleFinder({ initialCategory = "baterias" }: VehicleF
           {/* Necesidad */}
           <div>
             <label className="block text-[11px] font-bold text-slate-600 uppercase tracking-wider mb-2">
-              ¿Qué necesitas?
+              Línea Requerida
             </label>
             <select
               value={selectedNeed}
@@ -214,6 +254,20 @@ export default function VehicleFinder({ initialCategory = "baterias" }: VehicleF
               <option value="aditivos">Aditivos</option>
               <option value="otro">Otro repuesto</option>
             </select>
+          </div>
+
+          {/* Ciudad */}
+          <div>
+            <label className="block text-[11px] font-bold text-slate-600 uppercase tracking-wider mb-2">
+              Ciudad (Entrega)
+            </label>
+            <input
+              type="text"
+              placeholder="Ej. Pedernales, Quito..."
+              value={selectedCity}
+              onChange={(e) => setSelectedCity(e.target.value)}
+              className="w-full h-12 px-3.5 bg-slate-50 border border-slate-200 rounded-xl text-sm font-medium text-slate-900 focus:bg-white focus:outline-none focus:border-slate-400 transition-colors"
+            />
           </div>
         </div>
 
@@ -293,10 +347,11 @@ export default function VehicleFinder({ initialCategory = "baterias" }: VehicleF
                           vehicleMake: selectedMake,
                           vehicleModel: selectedModel,
                           vehicleYear: selectedYear,
+                          city: selectedCity,
                         })}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold rounded-lg text-center flex items-center justify-center gap-1.5 transition-colors"
+                        className="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold rounded-lg text-center flex items-center justify-center gap-1.5 transition-colors shadow-sm"
                       >
                         <MessageCircle className="w-3.5 h-3.5" />
                         <span>Consultar</span>
@@ -305,7 +360,7 @@ export default function VehicleFinder({ initialCategory = "baterias" }: VehicleF
                         href={`/productos/${prod.slug}`}
                         className="px-3 py-1.5 text-slate-600 hover:text-slate-950 text-xs font-semibold text-center"
                       >
-                        Ficha técnica
+                        Ver ficha
                       </Link>
                     </div>
                   </div>
@@ -324,13 +379,24 @@ export default function VehicleFinder({ initialCategory = "baterias" }: VehicleF
               </div>
 
               <a
-                href={buildWhatsAppLink("vehicle", {
-                  vehicleMake: selectedMake,
-                  vehicleModel: selectedModel,
-                  vehicleYear: selectedYear,
-                  vehicleEngine: selectedEngine,
-                  neededItem: selectedNeed,
-                })}
+                href={
+                  selectedIntent === "no_se"
+                    ? buildWhatsAppLink("unknown_need", {
+                        vehicleMake: selectedMake,
+                        vehicleModel: selectedModel,
+                        vehicleYear: selectedYear,
+                        city: selectedCity,
+                        issueDescription: "No sé qué repuesto necesito, requiero ayuda para identificarlo",
+                      })
+                    : buildWhatsAppLink("vehicle", {
+                        vehicleMake: selectedMake,
+                        vehicleModel: selectedModel,
+                        vehicleYear: selectedYear,
+                        vehicleEngine: selectedEngine,
+                        neededItem: selectedNeed,
+                        city: selectedCity,
+                      })
+                }
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto px-6 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold rounded-xl flex items-center justify-center gap-2 shrink-0 transition-colors shadow-sm"

@@ -60,14 +60,12 @@ Todas las rutas del sitio son completamente estáticas o estáticas generadas po
 ## 3. Integración Continua y Despliegue en Vercel
 
 - **Vercel Git Integration:** El proyecto está vinculado al repositorio GitHub `Camilexx/liderpro-digital`.
-- Cada `git push origin main` desencadena automáticamente una compilación de producción en la infraestructura de Vercel.
-- **Variables de Entorno Recomendadas:**
-  - `NEXT_PUBLIC_GA_ID`: (Opcional, para Google Analytics 4)
-  - `NEXT_PUBLIC_GTM_ID`: (Opcional, para Google Tag Manager)
-  - `NEXT_PUBLIC_PIXEL_ID`: (Opcional, para Meta Pixel)
-  - `NEXT_PUBLIC_WHATSAPP_NUMBER`: (Opcional, para sobreescribir el número maestro de WhatsApp)
+- **URL Oficial de Producción en Vivo:** [https://liderpro-digital.vercel.app](https://liderpro-digital.vercel.app)
+- **Deployment ID:** `6924735004` (Commit `4d0cc5a1cee5c61a1003eb18e51ab599e180a094`)
+- **Estado en Vercel:** `Deployment has completed` (100% exitoso, HTTP 200 en todas las rutas)
+- **Seguridad:** Next.js actualizado a `15.1.11` (parche oficial para pasar los gates de seguridad de Vercel).
 
 ---
 
 ## 4. Estado de Producción
-El build es 100% reproducible, sin errores en tiempo de compilación y optimizado para la entrega web ultrarrápida.
+El despliegue en Vercel está completamente operativo en la web pública, verificado con peticiones HTTP 200 en todas las rutas clave.

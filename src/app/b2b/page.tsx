@@ -97,7 +97,7 @@ export default function B2BPage() {
 
         <div className="flex flex-col sm:flex-row gap-4 pt-2">
           <a
-            href={buildWhatsAppLink("general_quote")}
+            href={buildWhatsAppLink("b2b")}
             target="_blank"
             rel="noopener noreferrer"
             className="px-8 h-13 bg-brand-primary hover:bg-brand-primaryHover text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-all shadow-sm flex items-center justify-center gap-2"
@@ -118,7 +118,7 @@ export default function B2BPage() {
           </div>
           <div className="flex items-center gap-2">
             <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
-            <span>Facturación con RUC desglosada</span>
+            <span>Emisión de comprobante y coordinación directa</span>
           </div>
         </div>
       </div>

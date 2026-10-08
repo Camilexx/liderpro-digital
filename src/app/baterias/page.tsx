@@ -8,7 +8,7 @@ import { Zap, ShieldCheck, Clock, CheckCircle } from "lucide-react";
 export const metadata: Metadata = {
   title: "Baterías Automotrices Selladas | Alta Capacidad y Respaldo Técnico | LiderPro Ecuador",
   description:
-    "Baterías selladas libres de mantenimiento con respaldo técnico de 15 a 18 meses. Orientación de polaridad y envíos a todo el Ecuador.",
+    "Baterías selladas libres de mantenimiento con respaldo técnico de fábrica. Orientación de polaridad y envíos a todo el Ecuador.",
 };
 
 export default function BatteriesPage() {
@@ -32,7 +32,7 @@ export default function BatteriesPage() {
           <div className="flex flex-wrap gap-4 pt-2 text-xs text-slate-200">
             <div className="flex items-center gap-1.5">
               <ShieldCheck className="w-4 h-4 text-emerald-400" />
-              <span>Garantía de 15 a 18 meses</span>
+              <span>Garantía técnica de fábrica</span>
             </div>
             <div className="flex items-center gap-1.5">
               <CheckCircle className="w-4 h-4 text-emerald-400" />

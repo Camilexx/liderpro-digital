@@ -42,7 +42,7 @@ export const PRODUCTS: Product[] = [
       "Tecnología": "Calcio-Plata Sellada (Libre de mantenimiento)",
       "Polaridad": "Izquierda (-/+)",
       "Dimensiones": "238 x 129 x 227 mm",
-      "Garantía": "15 Meses con cobertura nacional",
+      "Garantía": "15 Meses sujeta a diagnóstico técnico",
     },
     description:
       "Batería sellada con aleación plomo-calcio-plata de alta resistencia a ciclos térmicos. Diseñada para arranques confiables tanto en el nivel del mar como a gran altura.",
@@ -164,7 +164,7 @@ export const PRODUCTS: Product[] = [
     faqs: [
       {
         question: "¿Este aceite sirve para climas calientes como la Costa?",
-        answer: "Sí, el índice '30' a temperatura de operación mantiene una película protectora robusta incluso en calor extremo, mientras el '5W' asegura lubricación inmediata al arranque.",
+        answer: "Sí, el índice '30' a temperatura de operación mantiene una película protectora robusta incluso en calor extremo, mientras el '5W' asegura lubricación rápida al arranque.",
       },
     ],
   },
@@ -234,7 +234,7 @@ export const PRODUCTS: Product[] = [
     ],
     features: [
       "Retención de partículas de carbón y viruta metálica",
-      "Válvula de alivio que garantiza flujo constante aún en frío",
+      "Válvula de alivio diseñada para mantener flujo continuo aún en frío",
     ],
     faqs: [],
   },

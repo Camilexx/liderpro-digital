@@ -50,7 +50,7 @@ export default function EmergencyBatteryPage() {
               rel="noopener noreferrer"
               className="w-full sm:w-auto px-6 py-3 bg-brand-whatsapp hover:bg-brand-whatsappHover text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-all"
             >
-              Pedir Asistencia Inmediata
+              Pedir Asistencia por WhatsApp
             </a>
           </div>
         </div>

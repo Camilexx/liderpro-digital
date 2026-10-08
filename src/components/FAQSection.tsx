@@ -22,12 +22,12 @@ const FAQS: FAQItem[] = [
   {
     question: "¿Cuánto demora en llegar mi pedido a otras provincias del Ecuador?",
     answer:
-      "El tiempo estimado promedio de entrega es de 24 a 48 horas hábiles mediante cooperativas interprovinciales o courier certificado (Servientrega / LaarCourier), sujeto a disponibilidad de stock y condiciones logísticas.",
+      "Coordinamos despachos a nivel nacional desde Pedernales y Quito mediante transporte interprovincial y servicios logísticos autorizados. Consulta el tiempo de entrega estimado y el costo de flete según tu ciudad de destino y disponibilidad por WhatsApp.",
   },
   {
     question: "¿Qué garantía tienen las baterías y repuestos vendidos en LiderPro?",
     answer:
-      "Todas nuestras baterías cuentan con 15 a 18 meses de garantía técnica directa contra defectos de fábrica. Los lubricantes y filtros son 100% originales con trazabilidad de lote.",
+      "Nuestras baterías cuentan con respaldo técnico y garantía de fábrica según la marca y modelo, sujeta a diagnóstico del sistema eléctrico. Los lubricantes y filtros son productos originales de grado técnico con respaldo de lote.",
   },
   {
     question: "¿Puedo retirar mi compra en el local de Pedernales o Quito?",

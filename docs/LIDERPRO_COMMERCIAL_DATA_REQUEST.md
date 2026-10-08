@@ -1,15 +1,15 @@
 # LIDERPRO DIGITAL — COMMERCIAL DATA REQUEST (CHECKLIST CLIENTE)
-**Documento Oficial de Requerimiento de Datos Reales para Validación Previa a V9**  
-**Versión:** 8.5 Pre-Demo  
-**Estado:** REQUERIMIENTO ACTIVO  
+**Documento Oficial de Requerimiento de Datos Reales para Validación Comercial Final V9.2**  
+**Versión:** V9.2 Commercial Truth Lock  
+**Estado:** REQUERIMIENTO ACTIVO (PENDIENTE RESPUESTA FORMAL DEL CLIENTE)  
 
 ---
 
 ## INTRODUCCIÓN
-Para consolidar la plataforma comercial en su versión definitiva y dar paso a la integración con el motor de ingresos (V9 Revenue Engine), requerimos que la gerencia y el equipo comercial de LiderPro completen o ratifiquen los siguientes puntos.
+Para consolidar la plataforma comercial en su versión definitiva de producción comercial plena, requerimos que la gerencia y el equipo comercial de LiderPro completen o ratifiquen los siguientes puntos con evidencia documental.
 
 > [!IMPORTANT]
-> **Principio de Verdad Comercial:** Ningún dato no verificado será publicado como definitivo; hasta recibir respuesta formal permanecerá bajo etiqueta `REFERENCE` o `PENDING_VERIFICATION`.
+> **Principio de Verdad Comercial V9.2:** Ningún dato no verificado será publicado como hecho definitivo en el código de producción. La plataforma pública utiliza redacción neutral y condicional hasta recibir confirmación formal. Todos los datos referenciales permanecen bajo etiqueta `REFERENCE` o `PENDING_VERIFICATION`.
 
 ---
 

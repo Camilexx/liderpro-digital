@@ -43,7 +43,7 @@ export default function EmergencyBanner() {
           <div className="pt-2 space-y-2 text-xs text-slate-400">
             <div className="flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-red-500" />
-              <span>Garantía técnica de 15 a 18 meses sujeta a condiciones del fabricante.</span>
+              <span>Garantía técnica de fábrica según marca y modelo (sujeta a términos del fabricante).</span>
             </div>
             <div className="flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-red-500" />
@@ -110,7 +110,7 @@ export default function EmergencyBanner() {
 
           <a
             href={buildWhatsAppLink("emergency", {
-              productName: "Batería Automotriz Inmediata",
+              productName: "Batería Automotriz Asistencia Urgente",
               vehicleMake: vehicle || "Vehículo sin encendido",
               city: city || "Ecuador",
               symptom: selectedSymptom,

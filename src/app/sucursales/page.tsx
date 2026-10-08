@@ -39,7 +39,7 @@ export default function BranchesPage() {
           {BUSINESS_CONFIG.legalNotice}
         </p>
         <p className="text-xs text-slate-400 leading-relaxed">
-          No nos presentamos como sede corporativa central ni casa matriz nacional; somos una operación ágil, técnica y orientada al cliente con stock real, respuesta humana inmediata por WhatsApp y despacho confiable a todo el Ecuador.
+          No nos presentamos como sede corporativa central ni casa matriz nacional; somos una operación ágil, técnica y orientada al cliente con stock real, respuesta humana ágil y personalizada por WhatsApp y despacho confiable a todo el Ecuador.
         </p>
       </div>
     </div>

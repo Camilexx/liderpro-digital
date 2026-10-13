@@ -119,9 +119,9 @@ export default function Header() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={handleWhatsAppClick}
-              className="btn-whatsapp btn-shine !py-2.5 !px-5 text-xs font-black tracking-wider flex items-center gap-2 rounded-xl shadow-lg shadow-emerald-950/40"
+              className="btn-whatsapp btn-shine !bg-[#25D366] hover:!bg-[#20ba59] !text-slate-950 hover:!text-black !py-2.5 !px-5 text-xs font-black tracking-wider flex items-center gap-2 rounded-xl shadow-lg shadow-emerald-950/40 border border-emerald-400/30"
             >
-              <MessageCircle className="w-4 h-4 text-white fill-white/20" />
+              <MessageCircle className="w-4 h-4 text-slate-950 fill-black/10" />
               <span>ASESOR WHATSAPP</span>
             </a>
           </div>

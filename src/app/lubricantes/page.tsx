@@ -20,13 +20,13 @@ export default function LubricantsPage() {
         <div className="max-w-2xl space-y-4 relative z-10">
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-amber-400/20 text-amber-300 rounded-full text-xs font-bold uppercase tracking-wider">
             <Layers className="w-3.5 h-3.5" />
-            Máxima Protección Térmica y Reducción de Fricción
+            Mannol • Motul • Mobil • Havoline • Castrol
           </div>
           <h1 className="text-3xl sm:text-5xl font-black tracking-tight leading-tight">
-            Aceites y Lubricantes de Motor
+            Aceites y Lubricantes Multimarca
           </h1>
           <p className="text-xs sm:text-base text-slate-300 leading-relaxed">
-            Formulaciones 100% sintéticas con especificación API SP / ILSAC GF-6A para motores a gasolina modernos y 15W-40 Heavy Duty para camionetas y trabajo pesado diésel en Ecuador.
+            Sintéticos 5W-30 API SP / ILSAC GF-6A para autos modernos, Diésel 15W-40 CK-4 en Galón, Caneca de 5 Galones y Tambor de 55 Galones para flotas y camaroneras, y línea Motul 4T Ester JASO MA2 para motocicletas.
           </p>
           <div className="flex flex-wrap gap-4 pt-2 text-xs text-slate-200">
             <div className="flex items-center gap-1.5">

@@ -21,13 +21,13 @@ export default function BatteriesPage() {
         <div className="max-w-2xl space-y-4 relative z-10">
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-amber-400/20 text-amber-300 rounded-full text-xs font-bold uppercase tracking-wider">
             <Zap className="w-3.5 h-3.5" />
-            Línea de Alta Potencia y Arranque en Frío
+            Distribuidor Autorizado • Baterías Ecuador & Bosch
           </div>
           <h1 className="text-3xl sm:text-5xl font-black tracking-tight leading-tight">
-            Baterías Automotrices Selladas
+            Baterías Automotrices e Industriales
           </h1>
           <p className="text-xs sm:text-base text-slate-300 leading-relaxed">
-            Formulaciones plomo-calcio-plata resistentes a la vibración y a ciclos climáticos extremos tanto a nivel del mar (Manabí) como en altura (Pichincha).
+            Línea completa <strong>Baterías Ecuador</strong> (NS40 11 Placas, NS60 13 Placas, 27R Reforzada, Grupo 31 Heavy Duty para camiones y camaroneras) y <strong>Bosch</strong> (S4 Silver y S5 EFB/AGM Start-Stop) con despacho inmediato desde Sede Pedernales.
           </p>
           <div className="flex flex-wrap gap-4 pt-2 text-xs text-slate-200">
             <div className="flex items-center gap-1.5">

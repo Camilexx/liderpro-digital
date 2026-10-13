@@ -117,9 +117,16 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
 
             {/* WhatsApp CTA Action — Priority 1 Decision */}
             <div className="pt-4 space-y-3">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-emerald-50 border border-emerald-200 rounded-xl text-xs font-bold text-emerald-800">
+                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                <span>{product.dispatchIndicator}</span>
+              </div>
+
               <a
                 href={buildWhatsAppLink("product", {
+                  brand: product.brand,
                   productName: product.name,
+                  presentation: product.volume || product.plates,
                   sku: product.sku,
                 })}
                 target="_blank"
@@ -127,21 +134,21 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
                 className="w-full h-14 btn-whatsapp font-black text-xs sm:text-sm uppercase tracking-wider rounded-xl flex items-center justify-center gap-2.5 transition-all active:scale-95 shadow-lg"
               >
                 <MessageCircle className="w-5 h-5" />
-                <span>CONFIRMAR COMPATIBILIDAD Y DISPONIBILIDAD</span>
+                <span>COTIZAR EN SEDE PEDERNALES POR WHATSAPP</span>
               </a>
 
               <div className="bg-slate-50 border border-slate-200/80 rounded-xl p-3.5 space-y-2 text-xs text-slate-600">
                 <div className="flex items-center gap-2">
                   <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" />
-                  <span><strong>Validación técnica previa:</strong> Te confirmamos antes de comprar para evitar devoluciones.</span>
+                  <span><strong>Distribuidor Autorizado Multimarca:</strong> Producto 100% original con facturación SRI.</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <MapPin className="w-4 h-4 text-slate-700 shrink-0" />
-                  <span><strong>Despacho nacional:</strong> Coordinado desde centros de distribución estratégicos hacia cualquier provincia.</span>
+                  <span><strong>Hub Logístico Pedernales:</strong> Despacho diario por encomienda interprovincial y courier a las 24 provincias.</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Truck className="w-4 h-4 text-slate-700 shrink-0" />
-                  <span><strong>Garantía:</strong> {product.warranty} (sujeta a términos del fabricante).</span>
+                  <span><strong>Garantía:</strong> {product.warranty}.</span>
                 </div>
               </div>
             </div>
@@ -153,13 +160,13 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 space-y-4">
           <h3 className="text-base font-black text-slate-950 border-b border-slate-100 pb-3">
-            Ficha Técnica
+            Ficha Técnica y Especificaciones
           </h3>
           <div className="space-y-2.5 text-xs">
-            {Object.entries(product.fullSpecs).map(([key, val]) => (
+            {Object.entries(product.specifications).map(([key, val]) => (
               <div key={key} className="flex justify-between py-1.5 border-b border-slate-50 last:border-0">
                 <span className="font-semibold text-slate-500">{key}</span>
-                <span className="font-bold text-slate-900">{val}</span>
+                <span className="font-bold text-slate-900 text-right">{val}</span>
               </div>
             ))}
           </div>

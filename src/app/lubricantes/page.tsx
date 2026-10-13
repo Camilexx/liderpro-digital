@@ -16,17 +16,17 @@ export default function LubricantsPage() {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-12">
       {/* Category Hero */}
-      <div className="bg-gradient-to-r from-brand-navy via-slate-900 to-amber-950 text-white p-6 sm:p-12 rounded-3xl border border-slate-800 shadow-xl relative overflow-hidden">
+      <div className="bg-gradient-to-r from-[#061B40] via-slate-900 to-[#0A3B8C] text-white p-6 sm:p-12 rounded-3xl border border-[#0A3B8C]/40 shadow-xl relative overflow-hidden">
         <div className="max-w-2xl space-y-4 relative z-10">
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-amber-400/20 text-amber-300 rounded-full text-xs font-bold uppercase tracking-wider">
             <Layers className="w-3.5 h-3.5" />
-            Mannol • Motul • Mobil • Havoline • Castrol
+            Aroil • Mannol • Mobil • Motul
           </div>
           <h1 className="text-3xl sm:text-5xl font-black tracking-tight leading-tight">
             Aceites y Lubricantes Multimarca
           </h1>
           <p className="text-xs sm:text-base text-slate-300 leading-relaxed">
-            Sintéticos 5W-30 API SP / ILSAC GF-6A para autos modernos, Diésel 15W-40 CK-4 en Galón, Caneca de 5 Galones y Tambor de 55 Galones para flotas y camaroneras, y línea Motul 4T Ester JASO MA2 para motocicletas.
+            Las fórmulas de mayor rotación y salida en el mercado: <strong>AROIL Super 40</strong> (Top #1 en ventas), <strong>Mannol Special Plus 10W-30</strong>, <strong>AROIL 15W-40 CI-4</strong>, <strong>AROIL 25W-60 en Caneca de 5 Galones</strong>, <strong>Mobil Delvac 1300 Super</strong> en Caneca, y <strong>Motul 4T / Mannol Motorbike</strong> para motocicletas.
           </p>
           <div className="flex flex-wrap gap-4 pt-2 text-xs text-slate-200">
             <div className="flex items-center gap-1.5">

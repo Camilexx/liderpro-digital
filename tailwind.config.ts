@@ -10,12 +10,18 @@ export default {
     extend: {
       colors: {
         brand: {
-          navy: "#0A192F",
-          dark: "#0F172A",
-          surface: "#1E293B",
-          primary: "#D92D20", // Automotive red
-          primaryHover: "#B42318",
-          amber: "#F59E0B", // Energy / Alert / Performance
+          navy: "#061B40",
+          blue: "#0A3B8C", // Azul LiderPro Oficial
+          blueHover: "#082E6E",
+          gold: "#FFC500", // Amarillo / Oro Velocidad Oficial
+          goldHover: "#E6B200",
+          goldLight: "#FEF9C3",
+          dark: "#081325",
+          surface: "#0E244D",
+          primary: "#0A3B8C", // Azul LiderPro
+          primaryHover: "#082E6E",
+          accent: "#FFC500", // Speed Gold
+          amber: "#FFC500", // Energy / Alert / Performance
           cyan: "#0284C7", // Coolant / Tech
           neutralBg: "#F8FAFC",
           cardBg: "#FFFFFF",
@@ -33,7 +39,8 @@ export default {
       boxShadow: {
         soft: "0 4px 20px -2px rgba(15, 23, 42, 0.06)",
         card: "0 10px 30px -5px rgba(15, 23, 42, 0.08)",
-        glow: "0 0 25px rgba(217, 45, 32, 0.25)",
+        glow: "0 0 25px rgba(10, 59, 140, 0.25)",
+        goldGlow: "0 0 25px rgba(255, 197, 0, 0.35)",
       },
     },
   },

@@ -37,13 +37,13 @@ export default function ProductsPage() {
               href="/lubricantes"
               className="px-3.5 py-2 bg-slate-100 hover:bg-slate-200 text-slate-800 rounded-lg font-bold transition-colors"
             >
-              🛢️ Mannol, Motul, Mobil, Havoline & Castrol
+              🛢️ Aroil, Mannol, Mobil & Motul
             </Link>
             <Link
               href="/filtros"
               className="px-3.5 py-2 bg-slate-100 hover:bg-slate-200 text-slate-800 rounded-lg font-bold transition-colors"
             >
-              ⚙️ Filtros Fram/Bosch & Químicos
+              ⚙️ Advance Filters & Químicos ATE/ABRO
             </Link>
             <Link
               href="/encuentra-tu-producto"

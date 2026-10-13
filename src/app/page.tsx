@@ -85,7 +85,7 @@ export default function HomePage() {
             <h1 className="text-3xl sm:text-5xl lg:text-[3.25rem] font-black tracking-tight text-slate-950 leading-[1.06]">
               Distribuidor Autorizado Multimarca.
               <br />
-              <span className="bg-gradient-to-r from-red-600 via-red-600 to-rose-700 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#0A3B8C] via-[#0D47A1] to-[#0A3B8C] bg-clip-text text-transparent">
                 Desde Pedernales a todo el Ecuador.
               </span>
             </h1>
@@ -195,6 +195,42 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* 02.5: PRODUCTOS CON MAYOR ROTACIÓN Y MÁS VENDIDOS EN BODEGA PEDERNALES */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 animate-fade-up">
+        <div className="bg-gradient-to-br from-blue-50/80 via-white to-amber-50/50 border border-blue-200/80 rounded-3xl p-6 sm:p-8 space-y-6 shadow-sm">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
+            <div>
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#061B40] text-[#FFC500] rounded-full text-[11px] font-black uppercase tracking-wider shadow-sm mb-2">
+                <span>⭐ ALTA ROTACIÓN & MÁS VENDIDOS</span>
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-black text-slate-950 tracking-tight">
+                Productos con Mayor Demanda en Mostrador Pedernales
+              </h2>
+              <p className="text-xs sm:text-sm text-slate-600 mt-1 max-w-2xl">
+                Los artículos con mayor rotación diaria en lubricantes, baterías y aditivos de alta demanda. Stock físico verificado para retiro en local o despacho express interprovincial.
+              </p>
+            </div>
+            <a
+              href={buildWhatsAppLink("fleet_bulk", {
+                neededItem: "Productos Más Vendidos en Pedernales",
+                city: "Pedernales / Despacho Nacional",
+              })}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-gold !py-2.5 !px-5 text-xs font-black self-start md:self-auto shrink-0 shadow-md"
+            >
+              <span>Consultar Stock de Mayor Salida</span>
+            </a>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {PRODUCTS.filter((p) => p.isBestSeller).slice(0, 4).map((prod) => (
+              <ProductCard key={prod.id} product={prod} />
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* 03: SELECTOR TÁCTIL POR TIPO DE VEHÍCULO (Segmentación en 1 Clic) + CATÁLOGO MULTIMARCA */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 animate-fade-up delay-200">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
@@ -234,7 +270,7 @@ export default function HomePage() {
                 }
                 className={`card-interactive p-5 text-left flex flex-col justify-between gap-3 cursor-pointer ${
                   isActive
-                    ? "!border-brand-primary !bg-red-50/30 ring-2 ring-brand-primary/20"
+                    ? "!border-[#0A3B8C] !bg-blue-50/50 ring-2 ring-[#0A3B8C]/20"
                     : ""
                 }`}
               >
@@ -245,7 +281,7 @@ export default function HomePage() {
                   <span
                     className={`text-[10px] font-black uppercase tracking-wider px-2.5 py-0.5 rounded-md ${
                       isActive
-                        ? "bg-brand-primary text-white"
+                        ? "bg-[#0A3B8C] text-white"
                         : "bg-slate-100 text-slate-700"
                     }`}
                   >
@@ -260,7 +296,7 @@ export default function HomePage() {
                     {seg.subtitle}
                   </p>
                 </div>
-                <div className="text-[11px] font-black text-brand-primary flex items-center gap-1 pt-1">
+                <div className="text-[11px] font-black text-[#0A3B8C] flex items-center gap-1 pt-1">
                   <span>{isActive ? "Mostrando selección" : "Filtrar catálogo"}</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </div>
@@ -284,7 +320,7 @@ export default function HomePage() {
             </div>
             <Link
               href="/productos"
-              className="text-xs font-black text-brand-primary hover:text-red-700 transition-colors flex items-center gap-1 uppercase tracking-wider"
+              className="text-xs font-black text-[#0A3B8C] hover:text-blue-900 transition-colors flex items-center gap-1 uppercase tracking-wider"
             >
               <span>Ver catálogo completo ({PRODUCTS.length} referencias)</span>
               <ArrowRight className="w-3.5 h-3.5" />
@@ -361,19 +397,19 @@ export default function HomePage() {
           >
             <div>
               <div className="flex items-center justify-between mb-3">
-                <span className="text-[10px] font-black uppercase tracking-wider px-2.5 py-0.5 rounded bg-red-50 text-red-700 border border-red-100">
+                <span className="text-[10px] font-black uppercase tracking-wider px-2.5 py-0.5 rounded bg-blue-50 text-[#0A3B8C] border border-blue-200/80">
                   Baterías Ecuador & Bosch
                 </span>
-                <Zap className="w-5 h-5 text-red-600" />
+                <Zap className="w-5 h-5 text-[#0A3B8C]" />
               </div>
-              <h3 className="font-black text-lg text-slate-950 group-hover:text-brand-primary transition-colors">
+              <h3 className="font-black text-lg text-slate-950 group-hover:text-[#0A3B8C] transition-colors">
                 Baterías Automotrices e Industriales
               </h3>
               <p className="text-xs text-slate-600 mt-1 leading-relaxed">
-                NS40 (11 Placas), NS60 (13 Placas), 27R Reforzada, Grupo 31 Heavy Duty y Bosch S4/S5 AGM.
+                NS40 (11 Placas), 34 HP I (80 Amp), 42 HP (62 Amp), 27R Reforzada y Grupo 31 Heavy Duty.
               </p>
             </div>
-            <div className="text-xs font-black text-brand-primary flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+            <div className="text-xs font-black text-[#0A3B8C] flex items-center gap-1 group-hover:translate-x-1 transition-transform">
               <span>Ver baterías</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </div>
@@ -489,7 +525,7 @@ export default function HomePage() {
             >
               <div className="space-y-2">
                 <div className="flex items-center justify-between">
-                  <span className="text-[11px] font-black uppercase tracking-wider text-brand-primary bg-red-50 px-2.5 py-0.5 rounded border border-red-100">
+                  <span className="text-[11px] font-black uppercase tracking-wider text-[#0A3B8C] bg-blue-50 px-2.5 py-0.5 rounded border border-blue-200/80">
                     {art.category}
                   </span>
                   <span className="text-[11px] text-slate-400 font-medium">
@@ -523,8 +559,8 @@ export default function HomePage() {
 
       {/* 11: FINAL HIGH-CONVERSION CTA BANNER */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-gradient-to-br from-slate-950 via-slate-900 to-black text-white rounded-3xl p-8 sm:p-14 text-center space-y-6 border border-slate-800 shadow-2xl relative overflow-hidden">
-          <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-red-600 via-emerald-500 to-red-600" />
+        <div className="bg-gradient-to-br from-[#061B40] via-slate-950 to-black text-white rounded-3xl p-8 sm:p-14 text-center space-y-6 border border-[#0A3B8C]/40 shadow-2xl relative overflow-hidden">
+          <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#0A3B8C] via-[#FFC500] to-[#0A3B8C]" />
 
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/10 rounded-full text-xs font-bold text-slate-200 uppercase tracking-wider mx-auto">
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />

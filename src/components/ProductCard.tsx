@@ -34,11 +34,21 @@ export default function ProductCard({ product }: ProductCardProps) {
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
             className="object-contain p-4 group-hover:scale-105 transition-transform duration-500 ease-out"
           />
-          <div className="absolute top-3 left-3 px-2.5 py-1 bg-slate-950/90 backdrop-blur-sm rounded-md text-[10px] font-black text-white uppercase tracking-wider shadow-sm">
-            {product.brand}
+
+          {/* Badges: Brand & Best Seller */}
+          <div className="absolute top-3 left-3 flex flex-col gap-1.5 z-10">
+            <span className="px-2.5 py-1 bg-[#061B40] backdrop-blur-sm rounded-md text-[10px] font-black text-white uppercase tracking-wider shadow-sm border border-white/10">
+              {product.brand}
+            </span>
+            {product.isBestSeller && (
+              <span className="px-2 py-0.5 bg-gradient-to-r from-[#FFC500] to-[#FDB813] text-slate-950 font-black text-[9px] uppercase tracking-wider rounded-md shadow-sm border border-amber-400/80 flex items-center gap-1">
+                ⭐ Más Vendido
+              </span>
+            )}
           </div>
+
           {presentation && (
-            <div className="absolute top-3 right-3 px-2 py-0.5 bg-white/95 backdrop-blur-sm rounded-md border border-slate-200/90 text-[9.5px] font-bold text-slate-700 tracking-tight shadow-2xs">
+            <div className="absolute top-3 right-3 px-2 py-0.5 bg-white/95 backdrop-blur-sm rounded-md border border-slate-200/90 text-[9.5px] font-bold text-slate-700 tracking-tight shadow-2xs z-10">
               {presentation}
             </div>
           )}
@@ -47,11 +57,13 @@ export default function ProductCard({ product }: ProductCardProps) {
         {/* Text Details */}
         <div className="p-5 pb-2 space-y-2">
           <div className="flex items-center justify-between text-[10.5px] font-bold uppercase tracking-wider">
-            <span className="text-brand-primary font-black">{product.category}</span>
-            <span className="font-mono text-slate-400 text-[10px]">{product.sku}</span>
+            <span className="text-[#0A3B8C] font-black">{product.category}</span>
+            <span className="font-mono text-slate-500 text-[10px] bg-slate-100 px-1.5 py-0.5 rounded">
+              SKU: {product.sku}
+            </span>
           </div>
 
-          <h3 className="text-base font-black text-slate-950 group-hover:text-brand-primary transition-colors line-clamp-2 leading-snug">
+          <h3 className="text-base font-black text-slate-950 group-hover:text-[#0A3B8C] transition-colors line-clamp-2 leading-snug">
             <Link href={`/productos/${product.slug}`}>
               {product.name}
             </Link>
@@ -66,10 +78,25 @@ export default function ProductCard({ product }: ProductCardProps) {
       {/* Dispatch Status & CTA */}
       <div className="p-5 pt-3">
         <div className="mb-3.5 pb-2.5 border-b border-slate-100 space-y-1.5">
-          <div className="flex items-center gap-1.5 text-[11px] font-bold text-emerald-800 bg-emerald-50/90 px-2.5 py-1 rounded-lg border border-emerald-200/70">
-            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse shrink-0" />
-            <span className="truncate">{product.dispatchIndicator}</span>
-          </div>
+          {product.realStock !== undefined ? (
+            <div className="flex items-center justify-between text-[11px] font-semibold text-slate-700 bg-slate-50 px-2.5 py-1 rounded-lg border border-slate-200/80">
+              <span className="flex items-center gap-1.5 text-emerald-700 font-bold">
+                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse shrink-0" />
+                <span>Stock Pedernales: {product.realStock} uds</span>
+              </span>
+              {product.dailySales ? (
+                <span className="text-[10px] text-amber-700 font-bold bg-amber-50 px-1.5 py-0.5 rounded border border-amber-200/60">
+                  Alta Rotación
+                </span>
+              ) : null}
+            </div>
+          ) : (
+            <div className="flex items-center gap-1.5 text-[11px] font-bold text-emerald-800 bg-emerald-50/90 px-2.5 py-1 rounded-lg border border-emerald-200/70">
+              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse shrink-0" />
+              <span className="truncate">{product.dispatchIndicator}</span>
+            </div>
+          )}
+
           <div className="flex items-center justify-between text-[10.5px] text-slate-500 font-medium px-0.5">
             <span>{product.warranty}</span>
             <span className="font-bold text-slate-800 uppercase">{product.applicationType}</span>
@@ -95,7 +122,7 @@ export default function ProductCard({ product }: ProductCardProps) {
 
           <Link
             href={`/productos/${product.slug}`}
-            className="btn-secondary !py-2.5 !px-3 !text-xs font-bold text-center flex items-center justify-center"
+            className="btn-secondary !py-2.5 !px-3 !text-xs font-bold text-center flex items-center justify-center hover:border-[#0A3B8C] hover:text-[#0A3B8C]"
           >
             Ver Ficha
           </Link>

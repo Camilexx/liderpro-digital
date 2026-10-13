@@ -51,12 +51,21 @@ body {
   }
 }
 
-@keyframes pulseGlowRed {
+@keyframes pulseGlowBlue {
   0%, 100% {
-    box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.4);
+    box-shadow: 0 0 0 0 rgba(10, 59, 140, 0.4);
   }
   50% {
-    box-shadow: 0 0 0 10px rgba(220, 38, 38, 0);
+    box-shadow: 0 0 0 10px rgba(10, 59, 140, 0);
+  }
+}
+
+@keyframes pulseGlowGold {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(255, 197, 0, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(255, 197, 0, 0);
   }
 }
 
@@ -98,8 +107,12 @@ body {
   animation-delay: 300ms;
 }
 
-.animate-pulse-glow-red {
-  animation: pulseGlowRed 2.5s infinite cubic-bezier(0.4, 0, 0.6, 1);
+.animate-pulse-glow-blue {
+  animation: pulseGlowBlue 2.5s infinite cubic-bezier(0.4, 0, 0.6, 1);
+}
+
+.animate-pulse-glow-gold {
+  animation: pulseGlowGold 2.5s infinite cubic-bezier(0.4, 0, 0.6, 1);
 }
 
 .animate-pulse-glow-green {
@@ -133,9 +146,9 @@ body {
   transform: translateX(100%);
 }
 
-/* High-Impact Institutional Button Utilities */
+/* High-Impact Institutional Button Utilities — Azul LiderPro (#0A3B8C) & Speed Gold (#FFC500) */
 .btn-primary {
-  @apply relative inline-flex items-center justify-center gap-2 px-6 py-3.5 text-xs font-black uppercase tracking-wider text-white rounded-xl bg-gradient-to-r from-red-600 via-red-600 to-rose-700 shadow-md shadow-red-600/25 hover:shadow-xl hover:shadow-red-600/35 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] transition-all duration-200 overflow-hidden;
+  @apply relative inline-flex items-center justify-center gap-2 px-6 py-3.5 text-xs font-black uppercase tracking-wider text-white rounded-xl bg-gradient-to-r from-[#0A3B8C] via-[#0D47A1] to-[#0A3B8C] border border-blue-400/25 shadow-md shadow-[#0A3B8C]/25 hover:shadow-xl hover:shadow-[#0A3B8C]/40 hover:border-amber-400/50 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] transition-all duration-200 overflow-hidden;
 }
 
 .btn-primary::after {
@@ -152,6 +165,27 @@ body {
 }
 
 .btn-primary:hover::after {
+  transform: translateX(100%);
+}
+
+.btn-gold {
+  @apply relative inline-flex items-center justify-center gap-2 px-6 py-3.5 text-xs font-black uppercase tracking-wider text-slate-950 rounded-xl bg-gradient-to-r from-[#FFC500] via-[#FDB813] to-[#FFC500] border border-amber-300 shadow-md shadow-amber-500/25 hover:shadow-xl hover:shadow-amber-500/40 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98] transition-all duration-200 overflow-hidden;
+}
+
+.btn-gold::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+
+.btn-gold:hover::after {
   transform: translateX(100%);
 }
 

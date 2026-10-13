@@ -17,7 +17,7 @@ export default function BatteriesPage() {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-12">
       {/* Category Hero Banner */}
-      <div className="bg-gradient-to-r from-brand-dark via-slate-900 to-red-950 text-white p-6 sm:p-12 rounded-3xl border border-slate-800 shadow-xl relative overflow-hidden">
+      <div className="bg-gradient-to-r from-[#061B40] via-slate-900 to-[#0A3B8C] text-white p-6 sm:p-12 rounded-3xl border border-[#0A3B8C]/40 shadow-xl relative overflow-hidden">
         <div className="max-w-2xl space-y-4 relative z-10">
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-amber-400/20 text-amber-300 rounded-full text-xs font-bold uppercase tracking-wider">
             <Zap className="w-3.5 h-3.5" />
@@ -27,7 +27,7 @@ export default function BatteriesPage() {
             Baterías Automotrices e Industriales
           </h1>
           <p className="text-xs sm:text-base text-slate-300 leading-relaxed">
-            Línea completa <strong>Baterías Ecuador</strong> (NS40 11 Placas, NS60 13 Placas, 27R Reforzada, Grupo 31 Heavy Duty para camiones y camaroneras) y <strong>Bosch</strong> (S4 Silver y S5 EFB/AGM Start-Stop) con despacho inmediato desde Sede Pedernales.
+            Línea completa <strong>Baterías Ecuador</strong> (34 HP I 80 Amp, 42 HP 62 Amp, 27 HP 95 Amp, Grupo 31 SHD 105 Amp para camiones y camaroneras, N150 SHD 160 Amp) y <strong>Bosch</strong> (S4 Silver 85 Amp) con despacho inmediato desde Hub Central Pedernales.
           </p>
           <div className="flex flex-wrap gap-4 pt-2 text-xs text-slate-200">
             <div className="flex items-center gap-1.5">

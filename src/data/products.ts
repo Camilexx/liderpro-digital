@@ -40,832 +40,1762 @@ export interface Product {
   }[];
   features: string[];
   faqs: { question: string; answer: string }[];
+  realStock?: number;
+  rotationIndex?: number;
+  dailySales?: number;
+  isBestSeller?: boolean;
 }
 
 export const OFFICIAL_BRANDS = [
-  { name: "BATERÍAS ECUADOR", origin: "Línea Oficial Nacional", specialty: "Energía & Arranque" },
-  { name: "BOSCH", origin: "Tecnología Alemana", specialty: "Baterías S4/S5 & Filtración" },
-  { name: "MANNOL", origin: "Ingeniería Alemana", specialty: "Lubricantes Sintéticos & Aditivos" },
-  { name: "MOTUL", origin: "Especialista Francés", specialty: "Motos 4T Ester & Alto Rendimiento" },
-  { name: "MOBIL", origin: "Alto Desempeño", specialty: "Mobil Delvac Diésel & Mobil 1" },
-  { name: "HAVOLINE", origin: "Tecnología Chevron", specialty: "ProDS Full Synthetic & 20W-50" },
-  { name: "CASTROL", origin: "Ingeniería Líquida", specialty: "Magnatec Dualock & GTX" },
-  { name: "FRAM", origin: "Filtración Blindada", specialty: "Filtros de Aceite & Aire" },
+  { name: "BATERÍAS ECUADOR", origin: "Línea Oficial Nacional", specialty: "Energía & Arranque High Power" },
+  { name: "BOSCH", origin: "Tecnología Alemana", specialty: "Baterías S4 PowerFrame" },
+  { name: "MANNOL", origin: "Ingeniería Alemana", specialty: "Sintéticos 5W-30, 10W-30, Aditivos & Coolant" },
+  { name: "AROIL", origin: "Alta Rotación Ecuador", specialty: "Super 40, 15W-40, 25W-60 & ATF D-III" },
+  { name: "MOBIL", origin: "ExxonMobil Global", specialty: "Mobil Delvac 1300 Super & 20W-50" },
+  { name: "MOTUL", origin: "Especialista Francés", specialty: "Motos 4T Technosynthese Ester" },
+  { name: "ADVANCE", origin: "Filtración Automotriz", specialty: "Filtros de Aceite, Combustible & Aire" },
+  { name: "ATE", origin: "Equipo Original Alemán", specialty: "Líquidos de Freno DOT 3 & DOT 4" },
+  { name: "NGK", origin: "Líder en Encendido", specialty: "Bujías Platino G-Power & Cobre" },
+  { name: "ABRO", origin: "Fórmula Americana", specialty: "Refrigerantes & Químicos" },
 ] as const;
 
 export const PRODUCTS: Product[] = [
-  // ═══════════════════════════════════════════════════════════════════════════
-  // A. BATERÍAS AUTOMOTRICES E INDUSTRIALES — BATERÍAS ECUADOR & BOSCH
-  // ═══════════════════════════════════════════════════════════════════════════
   {
-    id: "bat-ec-ns40",
-    sku: "BE-BAT-NS40ZL-11",
-    slug: "bateria-ecuador-ns40zl-11-placas",
-    name: "Batería Ecuador NS40ZL / 11 Placas Sellada (38Ah / 350 CCA)",
-    brand: "Baterías Ecuador",
-    category: "baterias",
-    applicationType: "autos",
-    plates: "11 Placas (38Ah)",
-    shortSpec: "12V 38Ah • 350 CCA (-18°C) • 11 Placas • Compactos y City Cars",
-    specifications: {
-      "Marca Oficial": "Baterías Ecuador",
-      "Modelo / Caja": "NS40ZL (11 Placas)",
-      "Voltaje Nominal": "12V",
-      "Capacidad (C20)": "38 Ah",
-      "Arranque en Frío (CCA -18°C)": "350 A",
+    "id": "bat-ec-34hp-i",
+    "sku": "03034-HP-I",
+    "slug": "bateria-ecuador-34-hp-i-80-amp",
+    "name": "Batería Ecuador 34 HP I High Power 80 Amp (Invertida)",
+    "brand": "Baterías Ecuador",
+    "category": "baterias",
+    "applicationType": "autos",
+    "plates": "13 Placas (80Ah)",
+    "shortSpec": "12V 80Ah • 650 CCA (-18°C) • 13 Placas • Polaridad Invertida • Sedanes y SUVs",
+    "specifications": {
+      "Código Bodega": "03034-HP-I",
+      "Marca": "Baterías Ecuador (Línea High Power)",
+      "Capacidad": "80 Amp (Ah)",
+      "Voltaje": "12V",
+      "Polaridad": "Invertida (Borne Izquierdo)",
+      "Ubicación": "Bodega Pedernales (Disponibilidad Inmediata)"
+    },
+    "fullSpecs": {
+      "Código Bodega": "03034-HP-I",
+      "Marca": "Baterías Ecuador (Línea High Power)",
+      "Capacidad": "80 Amp (Ah)",
+      "Voltaje": "12V",
       "Tecnología": "Plomo-Calcio Sellada Libre de Mantenimiento",
-      "Despacho": "Despacho inmediato desde Sede Pedernales",
+      "Arranque en Frío": "650 CCA (-18°C)",
+      "Despacho": "Despacho diario desde Hub Central Pedernales a todo el país"
     },
-    fullSpecs: {
-      "Marca Oficial": "Baterías Ecuador",
-      "Modelo / Caja": "NS40ZL (11 Placas)",
-      "Voltaje Nominal": "12V",
-      "Capacidad (C20)": "38 Ah",
-      "Arranque en Frío (CCA -18°C)": "350 A",
-      "Tecnología": "Plomo-Calcio Sellada Libre de Mantenimiento",
-      "Despacho": "Despacho inmediato desde Sede Pedernales",
-    },
-    description:
-      "Batería oficial de 11 placas diseñada específicamente para vehículos compactos y utilitarios urbanos. Arranque ágil, dimensiones exactas para bandeja original y alta resistencia al clima costero y de sierra.",
-    priceEstimate: "Cotización Directa",
-    priceNote: "Precio especial entregando batería usada en parte de pago. Facturación SRI inmediata.",
-    warranty: "Garantía de Fábrica con respaldo nacional",
-    commercialStatus: "VERIFIED",
-    inStock: true,
-    stockStatusText: "Despacho inmediato desde Sede Pedernales",
-    dispatchIndicator: "Despacho inmediato desde Sede Pedernales",
-    primaryOriginRecommendation: "Pedernales",
-    imageUrl: "/images/products/battery-ns60.jpg",
-    compatibleVehicles: [
-      { make: "Chevrolet", model: "Spark GT / Spark Life", yearRange: "2010-2023", engine: "1.0L / 1.2L" },
-      { make: "Kia", model: "Picanto", yearRange: "2011-2024", engine: "1.0L / 1.25L" },
-      { make: "Hyundai", model: "Grand i10 / i10", yearRange: "2011-2023", engine: "1.0L / 1.2L" },
-      { make: "Suzuki", model: "Alto / Celerio", yearRange: "2012-2023", engine: "0.8L / 1.0L" },
-    ],
-    features: [
-      "Dimensiones originales NS40 para ajuste sin modificaciones",
-      "Rejillas expandidas resistentes a la corrosión térmica en Costa",
-      "Sellada libre de mantenimiento con visor de carga integrado",
-      "Despacho inmediato desde Sede Pedernales a las 24 provincias",
-    ],
-    faqs: [
+    "description": "Batería de alto rendimiento de la línea High Power de Baterías Ecuador. Diseñada para vehículos con alta demanda eléctrica, aire acondicionado constante y climas cálidos y salinos como Manabí y la Costa.",
+    "priceEstimate": "Cotización Directa",
+    "priceNote": "Aceptamos batería usada como parte de pago. Facturación electrónica SRI incluida.",
+    "warranty": "Garantía de Fábrica Nacional con red de centros autorizados",
+    "commercialStatus": "VERIFIED",
+    "inStock": true,
+    "stockStatusText": "Stock en Bodega Pedernales",
+    "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
+    "primaryOriginRecommendation": "Pedernales",
+    "imageUrl": "/images/products/battery-ns60.jpg",
+    "compatibleVehicles": [
       {
-        question: "¿Le calza exactamente al Chevrolet Spark y Kia Picanto?",
-        answer: "Sí, la caja NS40ZL de 11 placas tiene el ancho, largo y polaridad exacta de fábrica para Spark, Picanto e i10.",
+        "make": "Chevrolet",
+        "model": "Cruze / Tracker / Orlando",
+        "yearRange": "2012-2023",
+        "engine": "1.4T / 1.8L"
       },
-    ],
-  },
-  {
-    id: "bat-ec-ns60",
-    sku: "BE-BAT-NS60-13",
-    slug: "bateria-ecuador-ns60-13-placas-55ah",
-    name: "Batería Ecuador NS60 / 13 Placas (55Ah - 60Ah / 480 CCA)",
-    brand: "Baterías Ecuador",
-    category: "baterias",
-    applicationType: "autos",
-    plates: "13 Placas (55Ah - 60Ah)",
-    shortSpec: "12V 55Ah-60Ah • 480 CCA (-18°C) • 13 Placas • Sedanes y Taxis",
-    specifications: {
-      "Marca Oficial": "Baterías Ecuador",
-      "Modelo / Caja": "NS60L / NS60R (13 Placas)",
-      "Voltaje Nominal": "12V",
-      "Capacidad (C20)": "55 Ah - 60 Ah",
-      "Arranque en Frío (CCA -18°C)": "480 A",
-      "Reserva de Capacidad": "90 Minutos",
-      "Despacho": "Despacho inmediato desde Sede Pedernales",
-    },
-    fullSpecs: {
-      "Marca Oficial": "Baterías Ecuador",
-      "Modelo / Caja": "NS60L / NS60R (13 Placas)",
-      "Voltaje Nominal": "12V",
-      "Capacidad (C20)": "55 Ah - 60 Ah",
-      "Arranque en Frío (CCA -18°C)": "480 A",
-      "Reserva de Capacidad": "90 Minutos",
-      "Despacho": "Despacho inmediato desde Sede Pedernales",
-    },
-    description:
-      "La referencia de mayor rotación en el parque automotor ecuatoriano. Batería de 13 placas con aleación calcio-plata para sedanes familiares y vehículos de servicio intensivo.",
-    priceEstimate: "Cotización Directa",
-    priceNote: "Disponible en polaridad izquierda (L) y derecha (R). Consulta descuento por casco usado.",
-    warranty: "Garantía Oficial Baterías Ecuador",
-    commercialStatus: "VERIFIED",
-    inStock: true,
-    stockStatusText: "Despacho inmediato desde Sede Pedernales",
-    dispatchIndicator: "Despacho inmediato desde Sede Pedernales",
-    primaryOriginRecommendation: "Pedernales",
-    imageUrl: "/images/products/battery-ns60.jpg",
-    compatibleVehicles: [
-      { make: "Chevrolet", model: "Sail", yearRange: "2012-2023", engine: "1.4L / 1.5L" },
-      { make: "Chevrolet", model: "Aveo Family / Emotion", yearRange: "2008-2019", engine: "1.5L / 1.6L" },
-      { make: "Kia", model: "Rio", yearRange: "2012-2023", engine: "1.4L / 1.6L" },
-      { make: "Toyota", model: "Yaris", yearRange: "2007-2022", engine: "1.3L / 1.5L" },
-      { make: "Hyundai", model: "Accent", yearRange: "2012-2022", engine: "1.4L / 1.6L" },
-    ],
-    features: [
-      "13 placas reforzadas para ciclos de arranque continuo",
-      "Respaldo directo de fábrica en todo el territorio nacional",
-      "Excelente comportamiento térmico en Pedernales, Manabí y Sierra",
-    ],
-    faqs: [
       {
-        question: "¿Cómo confirmo si mi auto lleva borne izquierdo o derecho?",
-        answer: "Al escribirnos por WhatsApp te confirmamos al instante según el modelo y año exacto de tu vehículo.",
+        "make": "Kia",
+        "model": "Sportage Active / Revolution",
+        "yearRange": "2010-2022",
+        "engine": "2.0L"
       },
+      {
+        "make": "Hyundai",
+        "model": "Tucson IX / Santa Fe",
+        "yearRange": "2010-2022",
+        "engine": "2.0L / 2.4L"
+      }
     ],
+    "features": [
+      "Línea High Power con aleación de calcio plata resistente a vibraciones",
+      "Rotación comprobada en mostrador Pedernales con arranque instantáneo"
+    ],
+    "faqs": [
+      {
+        "question": "¿Cuál es la diferencia de la versión 'I'?",
+        "answer": "La 'I' indica polaridad invertida en los bornes para coincidir exactamente con el cableado original de fábrica."
+      }
+    ],
+    "realStock": 2.0,
+    "rotationIndex": 3.06,
+    "dailySales": 0.17,
+    "isBestSeller": true
   },
   {
-    id: "bat-ec-27r",
-    sku: "BE-BAT-27R-17",
-    slug: "bateria-ecuador-grupo-27r-17-placas-camionetas",
-    name: "Batería Ecuador Grupo 27R / 15-17 Placas Reforzada (85Ah / 700 CCA)",
-    brand: "Baterías Ecuador",
-    category: "baterias",
-    applicationType: "camionetas",
-    plates: "15-17 Placas Reforzada (85Ah)",
-    shortSpec: "12V 85Ah • 700 CCA (-18°C) • 15-17 Placas • Camionetas Diésel 4x4",
-    specifications: {
-      "Marca Oficial": "Baterías Ecuador",
-      "Grupo BCI": "Grupo 27R / 27F (15-17 Placas)",
-      "Capacidad (C20)": "85 Ah",
-      "Arranque en Frío (CCA -18°C)": "700 A",
-      "Estructura": "Separadores anti-vibración para caminos de tercer orden",
-      "Despacho": "Despacho inmediato desde Sede Pedernales",
+    "id": "bat-ec-42hp",
+    "sku": "03042-HP",
+    "slug": "bateria-ecuador-42-hp-62-amp",
+    "name": "Batería Ecuador 42 HP High Power 62 Amp",
+    "brand": "Baterías Ecuador",
+    "category": "baterias",
+    "applicationType": "autos",
+    "plates": "11 Placas (62Ah)",
+    "shortSpec": "12V 62Ah • 500 CCA • 11 Placas • Compactos, Sedanes y City Cars",
+    "specifications": {
+      "Código Bodega": "03042-HP",
+      "Marca": "Baterías Ecuador",
+      "Capacidad": "62 Amp",
+      "Voltaje": "12V",
+      "Tecnología": "High Power Libre Mantenimiento"
     },
-    fullSpecs: {
-      "Marca Oficial": "Baterías Ecuador",
-      "Grupo BCI": "Grupo 27R / 27F (15-17 Placas)",
-      "Capacidad (C20)": "85 Ah",
-      "Arranque en Frío (CCA -18°C)": "700 A",
-      "Estructura": "Separadores anti-vibración para caminos de tercer orden",
-      "Despacho": "Despacho inmediato desde Sede Pedernales",
+    "fullSpecs": {
+      "Código Bodega": "03042-HP",
+      "Marca": "Baterías Ecuador",
+      "Capacidad": "62 Amp",
+      "Voltaje": "12V",
+      "Garantía": "Respaldo oficial en 24 provincias"
     },
-    description:
-      "Batería de alto amperaje de arranque diseñada para vencer la compresión de motores diésel 2.5L y 3.0L en camionetas de trabajo agrícola, ganadero, camaronero y construcción.",
-    priceEstimate: "Cotización Directa",
-    priceNote: "Stock permanente en Sede Pedernales para entrega inmediata o envío interprovincial.",
-    warranty: "Garantía Oficial Baterías Ecuador",
-    commercialStatus: "VERIFIED",
-    inStock: true,
-    stockStatusText: "Despacho inmediato desde Sede Pedernales",
-    dispatchIndicator: "Despacho inmediato desde Sede Pedernales",
-    primaryOriginRecommendation: "Pedernales",
-    imageUrl: "/images/products/battery-din66.jpg",
-    compatibleVehicles: [
-      { make: "Chevrolet", model: "D-Max CRDi / 4x4", yearRange: "2008-2024", engine: "2.5L / 3.0L Diésel" },
-      { make: "Toyota", model: "Hilux D-4D", yearRange: "2006-2024", engine: "2.4L / 2.5L / 2.8L Diésel" },
-      { make: "Mazda", model: "BT-50", yearRange: "2010-2023", engine: "2.2L / 2.5L / 3.2L Diésel" },
-      { make: "Nissan", model: "Frontier NP300", yearRange: "2010-2024", engine: "2.5L YD25 Diésel" },
+    "description": "La batería más versátil para vehículos livianos de uso urbano e interprovincial en Ecuador. Excelente relación potencia-durabilidad.",
+    "priceEstimate": "Cotización Directa",
+    "priceNote": "Descuento entregando batería usada en Pedernales o en ruta.",
+    "warranty": "Garantía Oficial de Fábrica",
+    "commercialStatus": "VERIFIED",
+    "inStock": true,
+    "stockStatusText": "Stock en Bodega Pedernales",
+    "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
+    "primaryOriginRecommendation": "Pedernales",
+    "imageUrl": "/images/products/battery-din66.jpg",
+    "compatibleVehicles": [
+      {
+        "make": "Chevrolet",
+        "model": "Sail / Aveo / Corsa / Spark GT",
+        "yearRange": "2008-2024",
+        "engine": "1.2L / 1.4L / 1.5L"
+      },
+      {
+        "make": "Kia",
+        "model": "Rio / Picanto / Soluto",
+        "yearRange": "2012-2024",
+        "engine": "1.2L / 1.4L"
+      },
+      {
+        "make": "Hyundai",
+        "model": "Grand i10 / Accent",
+        "yearRange": "2012-2024",
+        "engine": "1.2L / 1.4L"
+      }
     ],
-    features: [
-      "Placas de espesor industrial para soportar vibración en fincas y vías rurales",
-      "Potencia real de 700 CCA para motores diésel de inyección directa",
-      "Anclaje técnico seguro para transporte nacional",
+    "features": [
+      "Índice de rotación 2.78 en Pedernales por alta demanda en taxis y particulares",
+      "Placas reforzadas contra calor extremo y baches"
     ],
-    faqs: [],
+    "faqs": [],
+    "realStock": 1.0,
+    "rotationIndex": 2.78,
+    "dailySales": 0.17,
+    "isBestSeller": true
   },
   {
-    id: "bat-ec-g31",
-    sku: "BE-BAT-G31-110",
-    slug: "bateria-ecuador-grupo-31-heavy-duty-110ah",
-    name: "Batería Ecuador Grupo 31 Heavy Duty (100Ah - 110Ah / 925 CCA)",
-    brand: "Baterías Ecuador",
-    category: "baterias",
-    applicationType: "pesado",
-    plates: "19-21 Placas Heavy Duty (100Ah - 110Ah)",
-    shortSpec: "12V 110Ah • 925 CCA (-18°C) • Bornes Perno/Poste • Pesado y Camaroneras",
-    specifications: {
-      "Marca Oficial": "Baterías Ecuador",
-      "Grupo BCI": "Grupo 31 Heavy Duty",
-      "Capacidad (C20)": "100 Ah - 110 Ah",
-      "Arranque en Frío (CCA -18°C)": "925 A",
-      "Tipo de Terminal": "Perno roscado (Stud) o Poste estándar",
-      "Aplicación": "Camiones, Buses, Maquinaria, Bombas de Camaronera",
-      "Despacho": "Despacho inmediato desde Sede Pedernales",
+    "id": "bat-ec-27hp",
+    "sku": "03027-HP",
+    "slug": "bateria-ecuador-27-hp-95-amp",
+    "name": "Batería Ecuador 27 HP High Power 95 Amp (Camionetas & 4x4)",
+    "brand": "Baterías Ecuador",
+    "category": "baterias",
+    "applicationType": "camionetas",
+    "plates": "15 Placas (95Ah)",
+    "shortSpec": "12V 95Ah • 750 CCA • 15 Placas Reforzadas • Chevrolet D-Max, Toyota Hilux",
+    "specifications": {
+      "Código Bodega": "03027-HP",
+      "Marca": "Baterías Ecuador",
+      "Capacidad": "95 Amp",
+      "Voltaje": "12V",
+      "Aplicación": "Camionetas Diésel y 4x4 Trabajo Pesado"
     },
-    fullSpecs: {
-      "Marca Oficial": "Baterías Ecuador",
-      "Grupo BCI": "Grupo 31 Heavy Duty",
-      "Capacidad (C20)": "100 Ah - 110 Ah",
-      "Arranque en Frío (CCA -18°C)": "925 A",
-      "Tipo de Terminal": "Perno roscado (Stud) o Poste estándar",
-      "Aplicación": "Camiones, Buses, Maquinaria, Bombas de Camaronera",
-      "Despacho": "Despacho inmediato desde Sede Pedernales",
+    "fullSpecs": {
+      "Código Bodega": "03027-HP",
+      "Marca": "Baterías Ecuador",
+      "Capacidad": "95 Amp",
+      "Voltaje": "12V",
+      "CCA": "750 A",
+      "Tecnología": "High Power Heavy Duty"
     },
-    description:
-      "Batería de ciclo pesado para transporte interprovincial, camiones de carga, tractores, generadores industriales y estaciones de bombeo en el sector camaronero y agroindustrial.",
-    priceEstimate: "Cotización Flotas / Mayorista",
-    priceNote: "Precios preferenciales por volumen para cooperativas, camaroneras y flotas pesadas.",
-    warranty: "Garantía de Fábrica Trabajo Pesado",
-    commercialStatus: "VERIFIED",
-    inStock: true,
-    stockStatusText: "Despacho inmediato desde Sede Pedernales",
-    dispatchIndicator: "Despacho inmediato desde Sede Pedernales",
-    primaryOriginRecommendation: "Pedernales",
-    imageUrl: "/images/products/battery-din66.jpg",
-    compatibleVehicles: [
-      { make: "Hino", model: "Serie 300 / 500 / Dutro", yearRange: "2008-2024", engine: "Diésel Industrial" },
-      { make: "Chevrolet", model: "NHR / NKR / NPR / FVR", yearRange: "2008-2024", engine: "Diésel Isuzu" },
-      { make: "Hyundai", model: "HD65 / HD72 / HD78", yearRange: "2010-2023", engine: "3.9L Diésel" },
+    "description": "Potencia de arranque superior para camionetas diésel con turbo y alta compresión. Ideal para flotas que operan en Manabí, Santo Domingo, Esmeraldas y rutas de montaña.",
+    "priceEstimate": "Cotización Directa",
+    "priceNote": "Descuento por canje de casco usado. Facturación SRI.",
+    "warranty": "Garantía de Fábrica Baterías Ecuador",
+    "commercialStatus": "VERIFIED",
+    "inStock": true,
+    "stockStatusText": "Stock en Bodega Pedernales (3 unidades)",
+    "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
+    "primaryOriginRecommendation": "Pedernales",
+    "imageUrl": "/images/products/battery-din66.jpg",
+    "compatibleVehicles": [
+      {
+        "make": "Chevrolet",
+        "model": "D-Max 2.5 / 3.0 CRDi / Luv D-Max",
+        "yearRange": "2006-2024",
+        "engine": "Diésel CRDi"
+      },
+      {
+        "make": "Toyota",
+        "model": "Hilux 2.4 / 2.8 D-4D / Fortuner",
+        "yearRange": "2008-2024",
+        "engine": "1GD / 2GD / 1KD"
+      },
+      {
+        "make": "Great Wall",
+        "model": "Wingle 5 / Wingle 7 / Poer",
+        "yearRange": "2015-2024",
+        "engine": "2.0T Diésel"
+      }
     ],
-    features: [
-      "925 CCA para arranques exigentes en motores de gran cilindrada",
-      "Carcasa de polipropileno de alto impacto resistente a ambientes salinos",
-      "Disponibilidad por lote para bancos de baterías 12V/24V",
+    "features": [
+      "Batería insignia para el sector agropecuario y camaronero",
+      "Soporta arranques repetidos y uso continuo de wincha/neblineros"
     ],
-    faqs: [],
+    "faqs": [],
+    "realStock": 3.0,
+    "rotationIndex": 1.79,
+    "dailySales": 0.17,
+    "isBestSeller": true
   },
   {
-    id: "bat-bosch-s4",
-    sku: "BOSCH-S4-SILVER-66",
-    slug: "bateria-bosch-s4-silver-suv-sedan",
-    name: "Batería Bosch S4 Silver Tecnología PowerFrame (60Ah - 66Ah / 600 CCA)",
-    brand: "Bosch",
-    category: "baterias",
-    applicationType: "autos",
-    plates: "Rejilla Patentada PowerFrame Silver",
-    shortSpec: "12V • 600 CCA (-18°C) • Línea Premium Alemana • SUVs y Sedanes Modernos",
-    specifications: {
-      "Marca Oficial": "Bosch Automotive",
-      "Línea": "Bosch S4 Silver",
-      "Capacidad": "60 Ah / 66 Ah (Norma DIN / BCI)",
-      "Arranque en Frío (CCA -18°C)": "600 A",
-      "Tecnología de Rejilla": "PowerFrame® estampada de flujo óptimo",
-      "Despacho": "Despacho inmediato desde Sede Pedernales",
+    "id": "bat-ec-31shd",
+    "sku": "03031-SHD",
+    "slug": "bateria-ecuador-31-shd-105-amp",
+    "name": "Batería Ecuador 31 SHD Super Heavy Duty 105 Amp (Camaroneras & Flotas)",
+    "brand": "Baterías Ecuador",
+    "category": "baterias",
+    "applicationType": "pesado",
+    "plates": "17 Placas (105Ah)",
+    "shortSpec": "12V 105Ah • 900 CCA • Grupo 31 SHD • Generadores, Camaroneras y Camiones",
+    "specifications": {
+      "Código Bodega": "03031-SHD",
+      "Marca": "Baterías Ecuador SHD",
+      "Capacidad": "105 Amp",
+      "Voltaje": "12V",
+      "Grupo": "Grupo 31 con Bornes Roscados / Poste"
     },
-    fullSpecs: {
-      "Marca Oficial": "Bosch Automotive",
-      "Línea": "Bosch S4 Silver",
-      "Capacidad": "60 Ah / 66 Ah (Norma DIN / BCI)",
-      "Arranque en Frío (CCA -18°C)": "600 A",
-      "Tecnología de Rejilla": "PowerFrame® estampada de flujo óptimo",
-      "Despacho": "Despacho inmediato desde Sede Pedernales",
+    "fullSpecs": {
+      "Código Bodega": "03031-SHD",
+      "Marca": "Baterías Ecuador",
+      "Tipo": "Super Heavy Duty (SHD)",
+      "Capacidad": "105 Amp",
+      "Voltaje": "12V",
+      "Resistencia": "Ciclo profundo y vibración severa"
     },
-    description:
-      "Ingeniería alemana Bosch con tecnología de rejilla PowerFrame que ofrece hasta 15% más potencia de arranque en frío y 20% mayor vida útil en SUVs y vehículos modernos con alta demanda electrónica.",
-    priceEstimate: "Cotización Directa",
-    priceNote: "Consulta el código exacto Bosch S4 para la bandeja de tu SUV o sedán.",
-    warranty: "Garantía Oficial Bosch",
-    commercialStatus: "VERIFIED",
-    inStock: true,
-    stockStatusText: "Despacho inmediato desde Sede Pedernales",
-    dispatchIndicator: "Despacho inmediato desde Sede Pedernales",
-    primaryOriginRecommendation: "Pedernales",
-    imageUrl: "/images/products/battery-din66.jpg",
-    compatibleVehicles: [
-      { make: "Chevrolet", model: "Tracker Turbo / Captiva", yearRange: "2019-2024", engine: "1.2L / 1.5L Turbo" },
-      { make: "Kia", model: "Sportage Active / GT Line", yearRange: "2012-2024", engine: "2.0L" },
-      { make: "Hyundai", model: "Tucson / Creta", yearRange: "2012-2024", engine: "1.6L / 2.0L" },
-      { make: "Renault", model: "Duster", yearRange: "2013-2024", engine: "1.6L / 2.0L" },
+    "description": "La batería más resistente para el sector camaronero de Manabí y transporte pesado. Diseñada para motores estacionarios, bombas de agua, generadores y camiones de carga Hino, Isuzu e International.",
+    "priceEstimate": "Cotización Mayorista / Directa",
+    "priceNote": "Precios especiales por lote para empresas camaroneras y cooperativas.",
+    "warranty": "Garantía Industrial Baterías Ecuador",
+    "commercialStatus": "VERIFIED",
+    "inStock": true,
+    "stockStatusText": "Stock en Bodega Pedernales",
+    "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
+    "primaryOriginRecommendation": "Pedernales",
+    "imageUrl": "/images/products/battery-din66.jpg",
+    "compatibleVehicles": [
+      {
+        "make": "Hino",
+        "model": "Serie 300 / 500 (Dutro / Ranger)",
+        "yearRange": "2008-2024",
+        "engine": "N04C / J08E"
+      },
+      {
+        "make": "Chevrolet",
+        "model": "Camiones FTR / FVR / NPR / NQR",
+        "yearRange": "2008-2024",
+        "engine": "Isuzu 4HK1 / 6HK1"
+      },
+      {
+        "make": "Sector Productivo",
+        "model": "Bombas Camaroneras & Generadores Diésel",
+        "yearRange": "Todos",
+        "engine": "Cummins / Perkins / Yanmar"
+      }
     ],
-    features: [
-      "Flujo eléctrico estable para módulos ECU, pantallas y sensores",
-      "Tapa laberíntica con doble sello 100% libre de mantenimiento",
-      "Protección integrada contra chispas y reflujo",
+    "features": [
+      "Blindaje anticorrosión salina especial para piscinas camaroneras",
+      "Alta reserva de ciclo profundo para arranques prolongados"
     ],
-    faqs: [],
+    "faqs": [],
+    "realStock": 1.0,
+    "rotationIndex": 1.76,
+    "dailySales": 0.1,
+    "isBestSeller": true
   },
   {
-    id: "bat-bosch-s5",
-    sku: "BOSCH-S5-AGM-EFB",
-    slug: "bateria-bosch-s5-efb-agm-start-stop",
-    name: "Batería Bosch S5 EFB / AGM Alta Gama & Sistemas Start-Stop",
-    brand: "Bosch",
-    category: "baterias",
-    applicationType: "camionetas",
-    plates: "Tecnología EFB / AGM Ciclo Profundo",
-    shortSpec: "12V 70Ah-80Ah • 760 CCA (-18°C) • Start-Stop y Camionetas Alta Gama",
-    specifications: {
-      "Marca Oficial": "Bosch Automotive",
-      "Línea": "Bosch S5 EFB / AGM",
-      "Capacidad": "70 Ah - 80 Ah",
-      "Arranque en Frío (CCA -18°C)": "760 A",
-      "Tecnología": "Fibra de Vidrio Absorbente (AGM) / EFB reforzada",
-      "Aplicación": "Vehículos Start-Stop, Híbridos suaves y Camionetas 4x4 modernas",
-      "Despacho": "Despacho inmediato desde Sede Pedernales",
+    "id": "bat-bosch-27hpi-s4",
+    "sku": "02727HPIS4",
+    "slug": "bateria-bosch-27-hp-i-s4-85amp",
+    "name": "Batería Bosch 27 HP I S4 85 Amp (Tecnología Alemana)",
+    "brand": "Bosch",
+    "category": "baterias",
+    "applicationType": "camionetas",
+    "plates": "Tecnología S4 Silver",
+    "shortSpec": "12V 85Ah • 680 CCA • Rejilla Silver Power Frame • Camionetas & SUVs",
+    "specifications": {
+      "Código Bodega": "02727HPIS4 (602738)",
+      "Marca": "Bosch S4",
+      "Capacidad": "85 Amp",
+      "Voltaje": "12V",
+      "Tecnología": "Bosch Silver PowerFrame"
     },
-    fullSpecs: {
-      "Marca Oficial": "Bosch Automotive",
-      "Línea": "Bosch S5 EFB / AGM",
-      "Capacidad": "70 Ah - 80 Ah",
-      "Arranque en Frío (CCA -18°C)": "760 A",
-      "Tecnología": "Fibra de Vidrio Absorbente (AGM) / EFB reforzada",
-      "Aplicación": "Vehículos Start-Stop, Híbridos suaves y Camionetas 4x4 modernas",
-      "Despacho": "Despacho inmediato desde Sede Pedernales",
+    "fullSpecs": {
+      "Código Bodega": "02727HPIS4",
+      "Marca": "Bosch",
+      "Línea": "S4 Silver",
+      "Capacidad": "85 Amp",
+      "Garantía": "Respaldo directo Robert Bosch"
     },
-    description:
-      "Máximo estándar energético de Bosch para camionetas modernas, SUVs de alta gama y sistemas con apagado/encendido automático (Start-Stop) y frenado regenerativo.",
-    priceEstimate: "Cotización Directa",
-    priceNote: "Verificación técnica obligatoria por número de chasis o referencia original.",
-    warranty: "Garantía Oficial Bosch",
-    commercialStatus: "VERIFIED",
-    inStock: true,
-    stockStatusText: "Despacho inmediato desde Sede Pedernales",
-    dispatchIndicator: "Despacho inmediato desde Sede Pedernales",
-    primaryOriginRecommendation: "Pedernales",
-    imageUrl: "/images/products/battery-din66.jpg",
-    compatibleVehicles: [
-      { make: "Ford", model: "Ranger / Explorer", yearRange: "2016-2024", engine: "2.0L Bi-Turbo / 3.2L" },
-      { make: "Mazda", model: "CX-5 /CX-30 / BT-50 Pro", yearRange: "2017-2024", engine: "SkyActiv" },
-      { make: "Toyota", model: "Fortuner / Hilux SRV", yearRange: "2018-2024", engine: "2.8L GD" },
+    "description": "Batería Bosch S4 con rejilla estampada patentada PowerFrame que garantiza flujo óptimo de energía, menor corrosión y vida útil prolongada bajo altas temperaturas.",
+    "priceEstimate": "Cotización Directa",
+    "priceNote": "Facturación SRI y entrega de certificado de garantía Bosch.",
+    "warranty": "Garantía Oficial Bosch Ecuador",
+    "commercialStatus": "VERIFIED",
+    "inStock": true,
+    "stockStatusText": "Stock en Bodega Pedernales (2 unidades)",
+    "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
+    "primaryOriginRecommendation": "Pedernales",
+    "imageUrl": "/images/products/battery-din66.jpg",
+    "compatibleVehicles": [
+      {
+        "make": "Toyota",
+        "model": "Hilux / Fortuner / Prado",
+        "yearRange": "2010-2024",
+        "engine": "Gasolina y Diésel"
+      },
+      {
+        "make": "Chevrolet",
+        "model": "D-Max / Trailblazer",
+        "yearRange": "2012-2024",
+        "engine": "Diésel"
+      },
+      {
+        "make": "Nissan",
+        "model": "Navara / Frontier NP300",
+        "yearRange": "2010-2024",
+        "engine": "YD25 / YS23"
+      }
     ],
-    features: [
-      "Soporta hasta 3 veces más ciclos de carga/descarga que una batería convencional",
-      "100% a prueba de derrames incluso en inclinaciones extremas 4x4",
-      "Recarga ultrarrápida para trayectos cortos y tráfico denso",
+    "features": [
+      "Rejilla PowerFrame con tecnología alemana de máxima durabilidad",
+      "Índice de rotación 1.41 en mostrador Pedernales"
     ],
-    faqs: [],
-  },
-
-  // ═══════════════════════════════════════════════════════════════════════════
-  // B. ACEITES Y LUBRICANTES DE MOTOR — MANNOL, MOTUL, MOBIL, HAVOLINE, CASTROL
-  // ═══════════════════════════════════════════════════════════════════════════
-  {
-    id: "lub-mannol-5w30",
-    sku: "MANNOL-5W30-SP",
-    slug: "aceite-mannol-energy-ultra-5w30-api-sp",
-    name: "Mannol Energy Ultra 5W-30 API SP / ILSAC GF-6A Sintético",
-    brand: "Mannol",
-    category: "lubricantes",
-    applicationType: "autos",
-    volume: "Galón (4L) & Cuarto (1L)",
-    shortSpec: "SAE 5W-30 • API SP / ILSAC GF-6A • Tecnología Alemana • Galón & Cuarto",
-    specifications: {
-      "Marca Oficial": "Mannol (Alemania)",
-      "Viscosidad SAE": "5W-30",
-      "Norma API / ILSAC": "API SP (RC) / ILSAC GF-6A",
-      "Aprobaciones OEM": "GM dexos1 Gen 3, Ford WSS-M2C961-A1, Chrysler MS-6395",
-      "Presentación": "Galón (4 Litros) y Cuarto (1 Litro)",
-      "Despacho": "Despacho inmediato desde Sede Pedernales",
-    },
-    fullSpecs: {
-      "Marca Oficial": "Mannol (Alemania)",
-      "Viscosidad SAE": "5W-30",
-      "Norma API / ILSAC": "API SP (RC) / ILSAC GF-6A",
-      "Aprobaciones OEM": "GM dexos1 Gen 3, Ford WSS-M2C961-A1, Chrysler MS-6395",
-      "Presentación": "Galón (4 Litros) y Cuarto (1 Litro)",
-      "Despacho": "Despacho inmediato desde Sede Pedernales",
-    },
-    description:
-      "Lubricante sintético alemán de última generación API SP desarrollado para motores modernos a gasolina (aspirados y turbo GDI). Previene el pre-encendido a baja velocidad (LSPI) y protege la cadena de distribución.",
-    priceEstimate: "Cotización Directa",
-    priceNote: "Disponible por cuarto, galón o caja cerrada para talleres. Incluye asesoría de filtro.",
-    warranty: "Sellado de fábrica importado original",
-    commercialStatus: "VERIFIED",
-    inStock: true,
-    stockStatusText: "Despacho inmediato desde Sede Pedernales",
-    dispatchIndicator: "Despacho inmediato desde Sede Pedernales",
-    primaryOriginRecommendation: "Pedernales",
-    imageUrl: "/images/products/oil-5w30.jpg",
-    compatibleVehicles: [
-      { make: "Chevrolet", model: "Sail / Onix Turbo / Tracker", yearRange: "2014-2024", engine: "1.0L / 1.2L / 1.5L" },
-      { make: "Kia", model: "Rio / Soluto / Sportage", yearRange: "2014-2024", engine: "1.4L / 1.6L / 2.0L" },
-      { make: "Hyundai", model: "Accent / Creta / Tucson", yearRange: "2014-2024", engine: "1.4L / 1.6L / 2.0L" },
-      { make: "Toyota", model: "Yaris / Corolla / Raize", yearRange: "2012-2024", engine: "1.2L / 1.5L / 1.8L" },
-    ],
-    features: [
-      "Protección térmica superior en el clima cálido de Manabí y Costa",
-      "Ahorro de combustible comprobado bajo estándar ILSAC GF-6A",
-      "Mantiene los anillos y turbocompresores libres de depósitos",
-    ],
-    faqs: [],
+    "faqs": [],
+    "realStock": 2.0,
+    "rotationIndex": 1.41,
+    "dailySales": 0.1,
+    "isBestSeller": true
   },
   {
-    id: "lub-mannol-15w40-ck4",
-    sku: "MANNOL-15W40-CK4",
-    slug: "aceite-mannol-diesel-tdi-15w40-ck4-caneca-galon",
-    name: "Mannol Diesel Heavy Duty 15W-40 API CK-4 (Galón, Caneca 5 Gal y Tambor 55 Gal)",
-    brand: "Mannol",
-    category: "lubricantes",
-    applicationType: "pesado",
-    volume: "Galón / Caneca 5 Gal (20L) / Tambor 55 Gal (208L)",
-    shortSpec: "SAE 15W-40 • API CK-4 / CJ-4 • Diésel Turbo Pesado, Camionetas y Camaroneras",
-    specifications: {
-      "Marca Oficial": "Mannol (Alemania)",
-      "Viscosidad SAE": "15W-40",
-      "Norma API": "API CK-4 / CJ-4 / CI-4 Plus / SN",
-      "Norma Europea": "ACEA E9 / E7, Volvo VDS-4.5, Cummins CES 20086, Mack EOS-4.5",
-      "Presentaciones": "Galón, Caneca 5 Galones (20L) y Tambor 55 Galones (208L)",
-      "Despacho": "Despacho inmediato desde Sede Pedernales",
+    "id": "bat-ec-n150-shd",
+    "sku": "030N150-SHD",
+    "slug": "bateria-ecuador-n150-shd-160-amp",
+    "name": "Batería Ecuador N150 SHD 160 Amp (Equipo Pesado & Marino)",
+    "brand": "Baterías Ecuador",
+    "category": "baterias",
+    "applicationType": "pesado",
+    "plates": "25 Placas (160Ah)",
+    "shortSpec": "12V 160Ah • 1050 CCA • 25 Placas • Tractomulas, Barcos y Maquinaria Pesada",
+    "specifications": {
+      "Código Bodega": "030N150-SHD",
+      "Marca": "Baterías Ecuador SHD",
+      "Capacidad": "160 Amp",
+      "Voltaje": "12V",
+      "Aplicación": "Equipo Caminero, Embarcaciones y Cabezales"
     },
-    fullSpecs: {
-      "Marca Oficial": "Mannol (Alemania)",
-      "Viscosidad SAE": "15W-40",
-      "Norma API": "API CK-4 / CJ-4 / CI-4 Plus / SN",
-      "Norma Europea": "ACEA E9 / E7, Volvo VDS-4.5, Cummins CES 20086, Mack EOS-4.5",
-      "Presentaciones": "Galón, Caneca 5 Galones (20L) y Tambor 55 Galones (208L)",
-      "Despacho": "Despacho inmediato desde Sede Pedernales",
+    "fullSpecs": {
+      "Código Bodega": "030N150-SHD",
+      "Marca": "Baterías Ecuador",
+      "Capacidad": "160 Amp",
+      "Voltaje": "12V",
+      "CCA": "1050 A",
+      "Resistencia": "Uso industrial severo continuo"
     },
-    description:
-      "Formulación diésel de servicio severo API CK-4 con base éster-sintética para camionetas 4x4, transporte pesado, maquinaria amarilla y motores estacionarios de bombeo en camaroneras.",
-    priceEstimate: "Cotización por Presentación",
-    priceNote: "Precios mayoristas en Canecas de 5 Galones y Tambores de 55 Galones para sector productivo.",
-    warranty: "Certificación internacional API CK-4",
-    commercialStatus: "VERIFIED",
-    inStock: true,
-    stockStatusText: "Despacho inmediato desde Sede Pedernales",
-    dispatchIndicator: "Despacho inmediato desde Sede Pedernales",
-    primaryOriginRecommendation: "Pedernales",
-    imageUrl: "/images/products/oil-15w40.jpg",
-    compatibleVehicles: [
-      { make: "Chevrolet", model: "D-Max / NHR / NPR / FVR", yearRange: "2008-2024", engine: "Diésel Turbo CRDi" },
-      { make: "Toyota", model: "Hilux D-4D", yearRange: "2006-2024", engine: "2.5L / 2.8L / 3.0L Diésel" },
-      { make: "Hino", model: "Serie 300 / 500", yearRange: "2008-2024", engine: "Diésel Trabajo Pesado" },
+    "description": "Máxima capacidad para maquinaria pesada Caterpillar, Komatsu, cabezales Freightliner, Kenworth y embarcaciones pesqueras/camaroneras.",
+    "priceEstimate": "Cotización Industrial",
+    "priceNote": "Despacho con embalaje reforzado y anclaje técnico desde Pedernales.",
+    "warranty": "Garantía Industrial Nacional",
+    "commercialStatus": "VERIFIED",
+    "inStock": true,
+    "stockStatusText": "Stock en Bodega Pedernales",
+    "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
+    "primaryOriginRecommendation": "Pedernales",
+    "imageUrl": "/images/products/battery-din66.jpg",
+    "compatibleVehicles": [
+      {
+        "make": "Freightliner / Kenworth / Mack",
+        "model": "Tractocamiones y Volquetas",
+        "yearRange": "Todos",
+        "engine": "Cummins ISX / Detroit DD15"
+      },
+      {
+        "make": "Caterpillar / Komatsu",
+        "model": "Retroexcavadoras y Tractores",
+        "yearRange": "Todos",
+        "engine": "Diésel Pesado"
+      }
     ],
-    features: [
-      "Control extremo de hollín y oxidación en jornadas continuas de 24 horas",
-      "Neutralización de ácidos producidos por azufre en el combustible",
-      "Disponibilidad inmediata en canecas y tambores en Hub Pedernales",
+    "features": [
+      "25 placas blindadas con separadores de fibra de vidrio",
+      "Diseñada para resistir condiciones salinas extremas"
     ],
-    faqs: [],
+    "faqs": [],
+    "realStock": 1.0,
+    "rotationIndex": 1.09,
+    "dailySales": 0.07,
+    "isBestSeller": false
   },
   {
-    id: "adi-mannol-ceramo",
-    sku: "MANNOL-CERAMO-9829",
-    slug: "aditivo-mannol-ceramo-ester-9829-antifriccion",
-    name: "Aditivo Mannol Ceramo Ester 9829 Tratamiento Cerámico Antifricción",
-    brand: "Mannol",
-    category: "aditivos",
-    applicationType: "autos",
-    volume: "Envase 300 ml (Trata hasta 5 Litros de aceite)",
-    shortSpec: "Tecnología Éster + Cerámica Hexagonal • Reduce fricción, ruido y temperatura",
-    specifications: {
-      "Marca Oficial": "Mannol (Alemania)",
-      "Código Técnico": "SCT-Mannol 9829 Ceramo Ester",
-      "Compuesto Activo": "Moléculas de Éster + Micropartículas Cerámicas (h-BN)",
-      "Compatibilidad": "Motores a gasolina y diésel (con o sin turbo)",
-      "Duración del Efecto": "Hasta 50,000 km de protección residual",
-      "Despacho": "Despacho inmediato desde Sede Pedernales",
+    "id": "lub-aroil-super40",
+    "sku": "0368AR00032",
+    "slug": "aroil-super-40-sl-cf-1-litro",
+    "name": "Aceite de Motor AROIL Super 40 SL/CF (1 Litro)",
+    "brand": "Aroil",
+    "category": "lubricantes",
+    "applicationType": "autos",
+    "volume": "1 Litro (Envase Individual)",
+    "shortSpec": "Monogrado SAE 40 • API SL/CF • Protección Antidesgaste • El #1 Más Vendido en Pedernales",
+    "specifications": {
+      "Código Bodega": "0368AR00032",
+      "Marca": "AROIL Lubricants",
+      "Viscosidad": "SAE 40",
+      "Norma API": "SL/CF",
+      "Presentación": "1 Litro (Caja 12 unidades disponible)",
+      "Stock en Pedernales": "31 unidades verificadas"
     },
-    fullSpecs: {
-      "Marca Oficial": "Mannol (Alemania)",
-      "Código Técnico": "SCT-Mannol 9829 Ceramo Ester",
-      "Compuesto Activo": "Moléculas de Éster + Micropartículas Cerámicas (h-BN)",
-      "Compatibilidad": "Motores a gasolina y diésel (con o sin turbo)",
-      "Duración del Efecto": "Hasta 50,000 km de protección residual",
-      "Despacho": "Despacho inmediato desde Sede Pedernales",
+    "fullSpecs": {
+      "Código Bodega": "0368AR00032",
+      "Marca": "AROIL",
+      "Viscosidad": "SAE 40 Monogrado",
+      "API": "SL/CF",
+      "Aplicación": "Motores a gasolina y diésel ligero que requieran monogrado",
+      "Origen Despacho": "Bodega Central Pedernales"
     },
-    description:
-      "Innovador protector de motor basado en ésteres sintéticos y nitruro de boro hexagonal (grafito blanco). Crea una película cerámica ultrarresistente que protege en el arranque en frío y bajo cargas extremas.",
-    priceEstimate: "Cotización Directa",
-    priceNote: "Ideal para agregar en cada cambio de aceite en autos, camionetas o motores de alto trabajo.",
-    warranty: "Producto Original SCT-Germany",
-    commercialStatus: "VERIFIED",
-    inStock: true,
-    stockStatusText: "Despacho inmediato desde Sede Pedernales",
-    dispatchIndicator: "Despacho inmediato desde Sede Pedernales",
-    primaryOriginRecommendation: "Pedernales",
-    imageUrl: "/images/products/oil-5w30.jpg",
-    compatibleVehicles: [
-      { make: "Chevrolet", model: "D-Max / Sail / Tracker", yearRange: "2008-2024", engine: "Gasolina y Diésel" },
-      { make: "Toyota", model: "Hilux / Yaris / Fortuner", yearRange: "2008-2024", engine: "Gasolina y Diésel" },
+    "description": "El producto con mayor volumen de salida diaria en la provincia de Manabí. Formulado con aditivos detergentes y dispersantes de alto desempeño que controlan los depósitos y mantienen la presión de aceite estable.",
+    "priceEstimate": "Venta por Litro y Caja x 12",
+    "priceNote": "Precio especial por caja completa de 12 litros para talleres y revendedores.",
+    "warranty": "Calidad Certificada API",
+    "commercialStatus": "VERIFIED",
+    "inStock": true,
+    "stockStatusText": "Stock en Bodega Pedernales (31 unidades)",
+    "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
+    "primaryOriginRecommendation": "Pedernales",
+    "imageUrl": "/images/products/oil-15w40.jpg",
+    "compatibleVehicles": [
+      {
+        "make": "Chevrolet",
+        "model": "San Remo / Monza / Luv Clásica",
+        "yearRange": "1990-2005",
+        "engine": "Gasolina y Diésel"
+      },
+      {
+        "make": "Motores Estacionarios",
+        "model": "Bombas de Riego / Generadores Pequeños",
+        "yearRange": "Todos",
+        "engine": "4 Tiempos"
+      }
     ],
-    features: [
-      "Reduce significativamente el ruido de taqués y fricción interna",
-      "Protege el motor incluso ante pérdida momentánea de presión de aceite",
-      "Compatible con todo tipo de aceites minerales, semisintéticos y sintéticos",
+    "features": [
+      "Top #1 en Ventas Diarias (0.87 litros/día de promedio) en Pedernales",
+      "Excelente estabilidad térmica en climas cálidos de costa"
     ],
-    faqs: [],
+    "faqs": [
+      {
+        "question": "¿Se vende por caja?",
+        "answer": "Sí, disponemos de cajas de 12 litros con precio diferenciado al por mayor."
+      }
+    ],
+    "realStock": 31.0,
+    "rotationIndex": 0.73,
+    "dailySales": 0.87,
+    "isBestSeller": true
   },
   {
-    id: "lub-motul-5100",
-    sku: "MOTUL-5100-4T",
-    slug: "aceite-motul-5100-4t-10w40-15w50-ester-motos",
-    name: "Motul 5100 4T 10W-40 / 15W-50 Technosynthese® Ester (JASO MA2)",
-    brand: "Motul",
-    category: "lubricantes",
-    applicationType: "motos",
-    volume: "Cuarto (1 Litro)",
-    shortSpec: "4 Tiempos • 10W-40 y 15W-50 • Tecnología Ester • JASO MA2 (Embrague Húmedo)",
-    specifications: {
-      "Marca Oficial": "Motul (Francia)",
-      "Viscosidades Disponibles": "SAE 10W-40 y SAE 15W-50",
-      "Tecnología": "Technosynthese® reforzado con base Ester",
-      "Norma Embrague": "JASO MA2 (Cero patinaje de discos de embrague)",
-      "Norma API": "API SM / SL",
-      "Presentación": "Envase 1 Litro",
-      "Despacho": "Despacho inmediato desde Sede Pedernales",
+    "id": "lub-mannol-10w30-gl",
+    "sku": "012MN7512-4A",
+    "slug": "mannol-special-plus-10w30-galon",
+    "name": "Aceite Mannol Special Plus 10W-30 Semisintético (Galón 4 Litros)",
+    "brand": "Mannol",
+    "category": "lubricantes",
+    "applicationType": "autos",
+    "volume": "Galón 4 Litros (4/1 GL)",
+    "shortSpec": "10W-30 Semisintético • API SN Plus / ILSAC GF-5 • Tecnología Alemana • Alta Rotación",
+    "specifications": {
+      "Código Bodega": "012MN7512-4A",
+      "Marca": "Mannol (Alemania)",
+      "Viscosidad": "10W-30",
+      "Norma API": "SN Plus / ILSAC GF-5",
+      "Presentación": "Galón 4 Litros",
+      "Rotación": "1.51 (Alta demanda)"
     },
-    fullSpecs: {
-      "Marca Oficial": "Motul (Francia)",
-      "Viscosidades Disponibles": "SAE 10W-40 y SAE 15W-50",
-      "Tecnología": "Technosynthese® reforzado con base Ester",
-      "Norma Embrague": "JASO MA2 (Cero patinaje de discos de embrague)",
-      "Norma API": "API SM / SL",
-      "Presentación": "Envase 1 Litro",
-      "Despacho": "Despacho inmediato desde Sede Pedernales",
+    "fullSpecs": {
+      "Código Bodega": "012MN7512-4A",
+      "Marca": "Mannol Special Plus",
+      "Viscosidad": "10W-30",
+      "Base": "Tecnología de Síntesis HC Alemana",
+      "Protección": "Reduce fricción, previene el fenómeno LSPI en motores modernos",
+      "Despacho": "Hub Central Pedernales"
     },
-    description:
-      "El lubricante preferido para el parque masivo de motocicletas de trabajo, reparto y transporte diario en Ecuador. Protege motor y caja de cambios integrada evitando que el embrague patine.",
-    priceEstimate: "Cotización Directa",
-    priceNote: "Precios especiales por caja para talleres de motos y flotas de delivery.",
-    warranty: "100% Original Motul con sello de seguridad",
-    commercialStatus: "VERIFIED",
-    inStock: true,
-    stockStatusText: "Despacho inmediato desde Sede Pedernales",
-    dispatchIndicator: "Despacho inmediato desde Sede Pedernales",
-    primaryOriginRecommendation: "Pedernales",
-    imageUrl: "/images/products/oil-5w30.jpg",
-    compatibleVehicles: [
-      { make: "Honda", model: "CB190R / Invicta / XR150L / Navi", yearRange: "2012-2024", engine: "4T" },
-      { make: "Bajaj", model: "Pulsar NS200 / Dominar / Boxer", yearRange: "2012-2024", engine: "4T" },
-      { make: "Shineray", model: "XY150 / XY200 /GY200 / Chief", yearRange: "2014-2024", engine: "4T" },
-      { make: "Daytona", model: "Scorpion / Shark / DY150 / DY200", yearRange: "2014-2024", engine: "4T" },
+    "description": "Lubricante premium de ingeniería alemana ideal para vehículos asiáticos y americanos modernos. Proporciona protección insuperable en arranque en frío y ahorro comprobado de combustible.",
+    "priceEstimate": "Cotización Galón o Caja x 4",
+    "priceNote": "Sello de originalidad alemán con código QR verificable.",
+    "warranty": "Homologación Europea de Fábrica",
+    "commercialStatus": "VERIFIED",
+    "inStock": true,
+    "stockStatusText": "Stock en Bodega Pedernales (10 galones)",
+    "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
+    "primaryOriginRecommendation": "Pedernales",
+    "imageUrl": "/images/products/oil-5w30.jpg",
+    "compatibleVehicles": [
+      {
+        "make": "Chevrolet",
+        "model": "Sail / Aveo / Spin / Cobalt",
+        "yearRange": "2012-2024",
+        "engine": "1.4L / 1.5L / 1.8L"
+      },
+      {
+        "make": "Kia",
+        "model": "Rio / Cerato / Sportage",
+        "yearRange": "2010-2024",
+        "engine": "1.4L / 1.6L / 2.0L"
+      },
+      {
+        "make": "Hyundai",
+        "model": "Accent / Elantra / Tucson",
+        "yearRange": "2010-2024",
+        "engine": "1.4L / 1.6L / 2.0L"
+      },
+      {
+        "make": "Toyota",
+        "model": "Yaris / Corolla / Avanza",
+        "yearRange": "2008-2024",
+        "engine": "1.3L / 1.5L / 1.8L"
+      }
     ],
-    features: [
-      "Película lubricante resistente a altas temperaturas en tráfico costero",
-      "Certificación JASO MA2 para cambios de marcha suaves y precisos",
-      "Ideal para motos utilitarias, enduro, calle y reparto intensivo",
+    "features": [
+      "Top Seller con índice de rotación 1.51 en Pedernales",
+      "Fórmula especial contra desgaste de levas y cadenas de distribución"
     ],
-    faqs: [],
+    "faqs": [],
+    "realStock": 10.0,
+    "rotationIndex": 1.51,
+    "dailySales": 0.4,
+    "isBestSeller": true
   },
   {
-    id: "lub-motul-7100",
-    sku: "MOTUL-7100-4T",
-    slug: "aceite-motul-7100-4t-100-sintetico-ester",
-    name: "Motul 7100 4T 100% Sintético Ester (10W-40 / 20W-50 API SN JASO MA2)",
-    brand: "Motul",
-    category: "lubricantes",
-    applicationType: "motos",
-    volume: "Cuarto (1 Litro)",
-    shortSpec: "100% Sintético Ester • JASO MA2 / API SN • Motos de Alta Cilindrada y Competencia",
-    specifications: {
-      "Marca Oficial": "Motul (Francia)",
-      "Base": "100% Sintética con Tecnología Ester",
-      "Viscosidades": "10W-40 / 15W-50 / 20W-50",
-      "Normas": "API SN / SM • JASO MA2",
-      "Presentación": "Envase 1 Litro",
-      "Despacho": "Despacho inmediato desde Sede Pedernales",
+    "id": "lub-aroil-15w40-lt",
+    "sku": "0368AR10031",
+    "slug": "aroil-15w40-ci4-1-litro",
+    "name": "Aceite de Motor AROIL 15W-40 CI-4 Diésel y Gasolina (1 Litro)",
+    "brand": "Aroil",
+    "category": "lubricantes",
+    "applicationType": "camionetas",
+    "volume": "1 Litro (Envase)",
+    "shortSpec": "15W-40 Multigrado • API CI-4/SL • Alto Poder Dispersante de Hollín • Flotas y 4x4",
+    "specifications": {
+      "Código Bodega": "0368AR10031",
+      "Marca": "AROIL",
+      "Viscosidad": "15W-40",
+      "Norma API": "CI-4 / SL",
+      "Presentación": "1 Litro (Caja 12 unidades)"
     },
-    fullSpecs: {
-      "Marca Oficial": "Motul (Francia)",
-      "Base": "100% Sintética con Tecnología Ester",
-      "Viscosidades": "10W-40 / 15W-50 / 20W-50",
-      "Normas": "API SN / SM • JASO MA2",
-      "Presentación": "Envase 1 Litro",
-      "Despacho": "Despacho inmediato desde Sede Pedernales",
+    "fullSpecs": {
+      "Código Bodega": "0368AR10031",
+      "Marca": "AROIL",
+      "Viscosidad": "15W-40 Multigrado Heavy Duty",
+      "API": "CI-4 / CH-4 / CG-4 / SL",
+      "Aplicación": "Camionetas turbo diésel, camiones ligeros y flotas mixtas"
     },
-    description:
-      "Lubricante 100% sintético de color rojo característico formulado con ésteres puros para motocicletas de alto rendimiento, deportivas, adventure y motores sometidos a altas revoluciones.",
-    priceEstimate: "Cotización Directa",
-    priceNote: "Consulta la viscosidad exacta según el manual de tu motocicleta.",
-    warranty: "100% Original Importado",
-    commercialStatus: "VERIFIED",
-    inStock: true,
-    stockStatusText: "Despacho inmediato desde Sede Pedernales",
-    dispatchIndicator: "Despacho inmediato desde Sede Pedernales",
-    primaryOriginRecommendation: "Pedernales",
-    imageUrl: "/images/products/oil-5w30.jpg",
-    compatibleVehicles: [
-      { make: "Yamaha", model: "MT-03 / MT-07 / MT-09 / R3 / Tenere", yearRange: "2015-2024", engine: "4T Alto Rendimiento" },
-      { make: "KTM", model: "Duke 200 / 250 / 390 / Adventure", yearRange: "2015-2024", engine: "4T" },
-      { make: "Suzuki", model: "Gixxer 150 / 250 / V-Strom", yearRange: "2015-2024", engine: "4T" },
+    "description": "Lubricante de alta rotación para camionetas D-Max, Hilux, camiones Hino y maquinaria de faena. Excelente dispersión del hollín y resistencia a la oxidación a altas temperaturas de trabajo.",
+    "priceEstimate": "Venta por Litro y Caja x 12",
+    "priceNote": "Embalaje reforzado en paquetes de 12 para envío interprovincial.",
+    "warranty": "Garantía de Lubricación API",
+    "commercialStatus": "VERIFIED",
+    "inStock": true,
+    "stockStatusText": "Stock en Bodega Pedernales (16 unidades)",
+    "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
+    "primaryOriginRecommendation": "Pedernales",
+    "imageUrl": "/images/products/oil-15w40.jpg",
+    "compatibleVehicles": [
+      {
+        "make": "Chevrolet",
+        "model": "D-Max 2.5 / 3.0 / Luv D-Max",
+        "yearRange": "2005-2022",
+        "engine": "Diésel"
+      },
+      {
+        "make": "Toyota",
+        "model": "Hilux 2KD / 1KD",
+        "yearRange": "2006-2020",
+        "engine": "Diésel Turbo"
+      },
+      {
+        "make": "Hino",
+        "model": "Serie 300 / Dutro",
+        "yearRange": "2008-2022",
+        "engine": "N04C"
+      }
     ],
-    features: [
-      "Mínima pérdida por cizallamiento en engranajes de transmisión",
-      "Resistencia extrema a la degradación térmica a altas RPM",
-      "Respuesta inmediata del embrague en aceleraciones fuertes",
+    "features": [
+      "Venta diaria promedio de 0.40 litros en mostrador Pedernales",
+      "Protege contra el desgaste corrosivo provocado por azufre en el diésel"
     ],
-    faqs: [],
+    "faqs": [],
+    "realStock": 16.0,
+    "rotationIndex": 0.79,
+    "dailySales": 0.4,
+    "isBestSeller": true
   },
   {
-    id: "lub-mobil-delvac",
-    sku: "MOBIL-DELVAC-15W40",
-    slug: "aceite-mobil-delvac-15w40-mobil-1-5w30",
-    name: "Mobil Delvac Modern 15W-40 Diésel & Línea Mobil 1 Sintético 5W-30",
-    brand: "Mobil",
-    category: "lubricantes",
-    applicationType: "camionetas",
-    volume: "Galón (3.785L) & Caneca 5 Galones",
-    shortSpec: "Mobil Delvac 15W-40 (Diésel) y Mobil 1 5W-30 (Gasolina) • Alta Rotación Nacional",
-    specifications: {
-      "Marca Oficial": "Mobil",
-      "Línea Diésel": "Mobil Delvac 15W-40 Super Defense / Modern (API CK-4 / CI-4+)",
-      "Línea Gasolina": "Mobil 1 / Mobil Super 3000 5W-30 Full Synthetic (API SP)",
-      "Presentaciones": "Cuarto, Galón y Caneca (18.9 Litros)",
-      "Despacho": "Despacho inmediato desde Sede Pedernales",
+    "id": "lub-aroil-25w60-caneca",
+    "sku": "0368AR10010",
+    "slug": "aroil-25w60-cf-caneca-5-galones",
+    "name": "Aceite AROIL 25W-60 Alto Kilometraje CF (Caneca 5 Galones)",
+    "brand": "Aroil",
+    "category": "lubricantes",
+    "applicationType": "pesado",
+    "volume": "Caneca 5 Galones (19 Litros)",
+    "shortSpec": "25W-60 Alto Kilometraje • API CF/SL • Caneca 5 Galones • Rotación Récord 3.04",
+    "specifications": {
+      "Código Bodega": "0368AR10010",
+      "Marca": "AROIL",
+      "Viscosidad": "25W-60 Viscosidad Pesada",
+      "Presentación": "Caneca 5 Galones (19L sellada)",
+      "Rotación": "3.04 (Top Rotación)"
     },
-    fullSpecs: {
-      "Marca Oficial": "Mobil",
-      "Línea Diésel": "Mobil Delvac 15W-40 Super Defense / Modern (API CK-4 / CI-4+)",
-      "Línea Gasolina": "Mobil 1 / Mobil Super 3000 5W-30 Full Synthetic (API SP)",
-      "Presentaciones": "Cuarto, Galón y Caneca (18.9 Litros)",
-      "Despacho": "Despacho inmediato desde Sede Pedernales",
+    "fullSpecs": {
+      "Código Bodega": "0368AR10010",
+      "Marca": "AROIL Alto Kilometraje",
+      "Viscosidad": "25W-60",
+      "Presentación": "Caneca 5 Galones",
+      "Aplicación": "Motores con más de 150.000 km, consumo de aceite o trabajo severo continuo"
     },
-    description:
-      "Respaldo clásico de Mobil para el transporte ecuatoriano: Mobil Delvac 15W-40 para máxima vida útil en camionetas y camiones diésel, y Mobil 1 5W-30 para protección sintética en vehículos livianos.",
-    priceEstimate: "Cotización Directa",
-    priceNote: "Disponibilidad garantizada con sello de autenticidad en Sede Pedernales.",
-    warranty: "Originalidad Certificada Mobil",
-    commercialStatus: "VERIFIED",
-    inStock: true,
-    stockStatusText: "Despacho inmediato desde Sede Pedernales",
-    dispatchIndicator: "Despacho inmediato desde Sede Pedernales",
-    primaryOriginRecommendation: "Pedernales",
-    imageUrl: "/images/products/oil-15w40.jpg",
-    compatibleVehicles: [
-      { make: "Chevrolet", model: "D-Max / Colorado / Trailblazer", yearRange: "2008-2024", engine: "2.5L / 2.8L / 3.0L" },
-      { make: "Toyota", model: "Hilux / Prado / Fortuner", yearRange: "2006-2024", engine: "Diésel y Gasolina" },
-      { make: "Nissan", model: "Frontier NP300", yearRange: "2010-2024", engine: "2.5L Diésel" },
+    "description": "Fórmula de alta viscosidad para motores con desgaste natural, reduciendo fugas por retenes, humo azul y manteniendo la compresión en recorridos pesados.",
+    "priceEstimate": "Cotización Caneca",
+    "priceNote": "Despacho asegurado por Reina del Camino, Trans Esmeraldas o transporte pesado.",
+    "warranty": "Calidad Garantizada",
+    "commercialStatus": "VERIFIED",
+    "inStock": true,
+    "stockStatusText": "Stock en Bodega Pedernales (8 canecas)",
+    "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
+    "primaryOriginRecommendation": "Pedernales",
+    "imageUrl": "/images/products/oil-15w40.jpg",
+    "compatibleVehicles": [
+      {
+        "make": "Chevrolet / Ford / Toyota",
+        "model": "Vehículos y Camiones Alto Kilometraje",
+        "yearRange": "1995-2015",
+        "engine": "Gasolina y Diésel"
+      },
+      {
+        "make": "Sector Productivo",
+        "model": "Generadores y Maquinaria en Finca",
+        "yearRange": "Todos",
+        "engine": "Diésel"
+      }
     ],
-    features: [
-      "Estabilidad viscosimétrica comprobada en rutas de Costa a Sierra",
-      "Control superior de hollín y desgaste de anillos y cilindros",
+    "features": [
+      "Índice de rotación récord 3.04 en Pedernales",
+      "Caneca original sellada con precinto de seguridad"
     ],
-    faqs: [],
+    "faqs": [],
+    "realStock": 8.0,
+    "rotationIndex": 3.04,
+    "dailySales": 0.27,
+    "isBestSeller": true
   },
   {
-    id: "lub-havoline-prods",
-    sku: "HAVOLINE-PRODS-5W30",
-    slug: "aceite-havoline-prods-5w30-extra-20w50",
-    name: "Havoline ProDS Full Synthetic 5W-30 & Havoline Extra 20W-50",
-    brand: "Havoline",
-    category: "lubricantes",
-    applicationType: "autos",
-    volume: "Galón (3.785L) & Cuarto (946 ml)",
-    shortSpec: "Tecnología Deposit Shield® • 5W-30 Sintético API SP y 20W-50 Alto Kilometraje",
-    specifications: {
-      "Marca Oficial": "Chevron Havoline",
-      "Línea Sintética": "Havoline ProDS Full Synthetic SAE 5W-30 (API SP / dexos1)",
-      "Línea Tradicional": "Havoline Motor Oil / Extra SAE 20W-50 / 10W-30 (API SP)",
-      "Tecnología": "Escudo Protector Deposit Shield®",
-      "Presentación": "Galón (3.785L) y Cuarto",
-      "Despacho": "Despacho inmediato desde Sede Pedernales",
+    "id": "lub-mannol-ts4-10lt",
+    "sku": "012MN7104-10A",
+    "slug": "mannol-ts-4-shpd-15w40-caneca-10lt",
+    "name": "Aceite Mannol TS-4 SHPD 15W-40 Extra Diésel (Caneca 10 Litros)",
+    "brand": "Mannol",
+    "category": "lubricantes",
+    "applicationType": "pesado",
+    "volume": "Caneca 10 Litros (10 LT)",
+    "shortSpec": "15W-40 SHPD • API CI-4/SL • MB 228.3 • Caneca 10L • Transporte Pesado y Camaroneras",
+    "specifications": {
+      "Código Bodega": "012MN7104-10A",
+      "Marca": "Mannol SHPD (Super High Performance Diesel)",
+      "Viscosidad": "15W-40",
+      "Norma": "API CI-4 / SL, ACEA E7, MB 228.3, MAN M3275",
+      "Presentación": "Caneca 10 Litros Alemana"
     },
-    fullSpecs: {
-      "Marca Oficial": "Chevron Havoline",
-      "Línea Sintética": "Havoline ProDS Full Synthetic SAE 5W-30 (API SP / dexos1)",
-      "Línea Tradicional": "Havoline Motor Oil / Extra SAE 20W-50 / 10W-30 (API SP)",
-      "Tecnología": "Escudo Protector Deposit Shield®",
-      "Presentación": "Galón (3.785L) y Cuarto",
-      "Despacho": "Despacho inmediato desde Sede Pedernales",
+    "fullSpecs": {
+      "Código Bodega": "012MN7104-10A",
+      "Marca": "Mannol TS-4 SHPD",
+      "Viscosidad": "15W-40",
+      "Presentación": "Caneca 10 Litros",
+      "Aprobaciones": "Volvo VDS-3, Renault RLD-2, Mack EO-N, Caterpillar ECF-2"
     },
-    description:
-      "Línea completa Chevron Havoline de alta demanda en Ecuador: desde el 5W-30 ProDS 100% sintético para motores modernos hasta el confiable 20W-50 para motores de mayor recorrido.",
-    priceEstimate: "Cotización Directa",
-    priceNote: "Consulta combos de cambio de aceite (Galón + Filtro Blindado).",
-    warranty: "Originalidad Certificada Chevron",
-    commercialStatus: "VERIFIED",
-    inStock: true,
-    stockStatusText: "Despacho inmediato desde Sede Pedernales",
-    dispatchIndicator: "Despacho inmediato desde Sede Pedernales",
-    primaryOriginRecommendation: "Pedernales",
-    imageUrl: "/images/products/oil-5w30.jpg",
-    compatibleVehicles: [
-      { make: "Chevrolet", model: "Sail / Aveo / Spark / Corsa / Vitara", yearRange: "2004-2024", engine: "1.4L / 1.5L / 1.6L" },
-      { make: "Hyundai", model: "Accent / Tucson / Getz", yearRange: "2006-2024", engine: "1.4L / 1.6L / 2.0L" },
-      { make: "Kia", model: "Rio / Sportage / Picanto", yearRange: "2008-2024", engine: "1.2L / 1.4L / 2.0L" },
+    "description": "Aceite alemán de tecnología SHPD para motores diésel de servicio pesado con turbo e intercooler. Extiende los intervalos de cambio y protege contra el pulido de camisas.",
+    "priceEstimate": "Cotización Directa",
+    "priceNote": "Ideal para mantenimiento programado de flotas y cooperativas de transporte.",
+    "warranty": "Homologación OEM Fabricantes Europeos",
+    "commercialStatus": "VERIFIED",
+    "inStock": true,
+    "stockStatusText": "Stock en Bodega Pedernales (2 canecas)",
+    "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
+    "primaryOriginRecommendation": "Pedernales",
+    "imageUrl": "/images/products/oil-15w40.jpg",
+    "compatibleVehicles": [
+      {
+        "make": "Hino",
+        "model": "Serie 500 / 700 / GH / FG / FM",
+        "yearRange": "2008-2024",
+        "engine": "J08E / E13C"
+      },
+      {
+        "make": "Chevrolet",
+        "model": "FTR / FVR / FVZ",
+        "yearRange": "2010-2024",
+        "engine": "6HK1"
+      },
+      {
+        "make": "Mercedes-Benz / Scania",
+        "model": "Buses y Cabezales",
+        "yearRange": "Todos",
+        "engine": "OM457 / DC13"
+      }
     ],
-    features: [
-      "Tecnología Deposit Shield que recubre las piezas metálicas contra el desgaste",
-      "Excelente sellado en motores con alto kilometraje (versión 20W-50)",
+    "features": [
+      "Índice de rotación 1.98 en Pedernales para flotas interprovinciales",
+      "Excelente capacidad de dispersión de hollín y neutralización ácida (TBN > 10)"
     ],
-    faqs: [],
+    "faqs": [],
+    "realStock": 2.0,
+    "rotationIndex": 1.98,
+    "dailySales": 0.2,
+    "isBestSeller": true
   },
   {
-    id: "lub-castrol-magnatec",
-    sku: "CASTROL-MAGNATEC-5W30",
-    slug: "aceite-castrol-magnatec-5w30-gtx-20w50",
-    name: "Castrol MAGNATEC 5W-30 Dualock & Castrol GTX 20W-50 Ultraclean",
-    brand: "Castrol",
-    category: "lubricantes",
-    applicationType: "autos",
-    volume: "Galón (3.785L) & Cuarto (946 ml)",
-    shortSpec: "Moléculas Inteligentes Dualock • 5W-30 Sintético y GTX 20W-50 • API SP",
-    specifications: {
-      "Marca Oficial": "Castrol",
-      "Línea Magnatec": "Castrol MAGNATEC 5W-30 / 10W-30 (API SP / ILSAC GF-6)",
-      "Línea GTX": "Castrol GTX 20W-50 / 10W-40 Acción Anti-Lodos",
-      "Tecnología": "Moléculas Dualock que reducen un 50% el desgaste en calentamiento",
-      "Presentación": "Galón y Cuarto",
-      "Despacho": "Despacho inmediato desde Sede Pedernales",
+    "id": "lub-mobil-delvac-caneca",
+    "sku": "015MD-51300",
+    "slug": "mobil-delvac-1300-super-15w40-caneca-5gl",
+    "name": "Aceite Mobil Delvac 1300 Super 15W-40 (Caneca 5 Galones)",
+    "brand": "Mobil",
+    "category": "lubricantes",
+    "applicationType": "pesado",
+    "volume": "Caneca 5 Galones (19 Litros)",
+    "shortSpec": "15W-40 CK-4/CJ-4 • Mobil Delvac • Caneca 5 Galones • Rotación Récord 5.17",
+    "specifications": {
+      "Código Bodega": "015MD-51300",
+      "Marca": "Mobil Delvac",
+      "Viscosidad": "15W-40",
+      "Norma": "API CK-4 / CJ-4 / CI-4 Plus",
+      "Presentación": "Caneca 5 Galones (Sellada Mobil)",
+      "Rotación": "5.17 (Máxima rotación en diésel)"
     },
-    fullSpecs: {
-      "Marca Oficial": "Castrol",
-      "Línea Magnatec": "Castrol MAGNATEC 5W-30 / 10W-30 (API SP / ILSAC GF-6)",
-      "Línea GTX": "Castrol GTX 20W-50 / 10W-40 Acción Anti-Lodos",
-      "Tecnología": "Moléculas Dualock que reducen un 50% el desgaste en calentamiento",
-      "Presentación": "Galón y Cuarto",
-      "Despacho": "Despacho inmediato desde Sede Pedernales",
+    "fullSpecs": {
+      "Código Bodega": "015MD-51300",
+      "Marca": "Mobil Delvac 1300 Super",
+      "Viscosidad": "15W-40",
+      "Presentación": "Caneca 5 Galones (18.9L)",
+      "Tecnología": "ExxonMobil Heavy Duty",
+      "Despacho": "Bodega Pedernales a todo el país"
     },
-    description:
-      "Formulación Castrol con moléculas inteligentes que no escurren al apagar el motor, brindando protección instantánea desde el primer giro de la llave, complementado con la línea GTX contra lodos.",
-    priceEstimate: "Cotización Directa",
-    priceNote: "Stock permanente para despacho individual o por cajas.",
-    warranty: "Originalidad Certificada Castrol",
-    commercialStatus: "VERIFIED",
-    inStock: true,
-    stockStatusText: "Despacho inmediato desde Sede Pedernales",
-    dispatchIndicator: "Despacho inmediato desde Sede Pedernales",
-    primaryOriginRecommendation: "Pedernales",
-    imageUrl: "/images/products/oil-5w30.jpg",
-    compatibleVehicles: [
-      { make: "Chevrolet", model: "Sail / Tracker / Captiva / Cruze", yearRange: "2010-2024", engine: "Gasolina" },
-      { make: "Ford", model: "EcoSport / Escape / Explorer", yearRange: "2012-2024", engine: "Gasolina" },
-      { make: "Volkswagen", model: "Gol / Polo / Virtus / Tiguan", yearRange: "2012-2024", engine: "1.6L / TSI" },
+    "description": "El lubricante para motores diésel de mayor renombre mundial. Cumple con la exigente especificación API CK-4, protegiendo filtros de partículas DPF y sistemas EGR modernos.",
+    "priceEstimate": "Cotización Caneca",
+    "priceNote": "Producto 100% original ExxonMobil con sello inviolable.",
+    "warranty": "Garantía Oficial ExxonMobil",
+    "commercialStatus": "VERIFIED",
+    "inStock": true,
+    "stockStatusText": "Stock en Bodega Pedernales",
+    "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
+    "primaryOriginRecommendation": "Pedernales",
+    "imageUrl": "/images/products/oil-15w40.jpg",
+    "compatibleVehicles": [
+      {
+        "make": "Chevrolet",
+        "model": "D-Max Euro 5/6 / Camiones Isuzu",
+        "yearRange": "2015-2024",
+        "engine": "Diésel CRDi con DPF"
+      },
+      {
+        "make": "Toyota",
+        "model": "Hilux 2.8 D-4D",
+        "yearRange": "2016-2024",
+        "engine": "1GD-FTV"
+      },
+      {
+        "make": "Hino",
+        "model": "Serie 300 / 500 Euro 4/5",
+        "yearRange": "2015-2024",
+        "engine": "N04C / J08E"
+      }
     ],
-    features: [
-      "Protección ininterrumpida en tráfico pesado de parar y arrancar",
-      "Fórmula de doble acción GTX que limpia lodos antiguos y previene nuevos",
+    "features": [
+      "Índice de rotación récord de 5.17 en mostrador Pedernales",
+      "Protección contra espesamiento por oxidación en trabajo severo"
     ],
-    faqs: [],
-  },
-
-  // ═══════════════════════════════════════════════════════════════════════════
-  // C. FILTRACIÓN Y QUÍMICOS OPERATIVOS — FRAM, BOSCH & MANNOL
-  // ═══════════════════════════════════════════════════════════════════════════
-  {
-    id: "fil-fram-blindado",
-    sku: "FRAM-FIL-BLINDADO",
-    slug: "filtros-aceite-blindados-fram-bosch",
-    name: "Filtros de Aceite y Combustible Blindados (Líneas Oficiales Fram & Bosch)",
-    brand: "Fram",
-    category: "filtros",
-    applicationType: "autos",
-    volume: "Unidad Blindada Spin-On / Cartucho",
-    shortSpec: "Marcas Oficiales Fram y Bosch • Válvula Anti-Retorno Silicona • 99% Retención",
-    specifications: {
-      "Marcas Disponibles": "Fram (Extra Guard / Tough Guard) y Bosch",
-      "Eficiencia de Filtrado": "Hasta 99% en partículas >20 micras",
-      "Válvula Anti-Drenaje": "Silicona térmica para arranque lubricado inmediato",
-      "Aplicaciones": "Autos livianos, SUVs, Camionetas Diésel CRDi y Maquinaria",
-      "Despacho": "Despacho inmediato desde Sede Pedernales",
-    },
-    fullSpecs: {
-      "Marcas Disponibles": "Fram (Extra Guard / Tough Guard) y Bosch",
-      "Eficiencia de Filtrado": "Hasta 99% en partículas >20 micras",
-      "Válvula Anti-Drenaje": "Silicona térmica para arranque lubricado inmediato",
-      "Aplicaciones": "Autos livianos, SUVs, Camionetas Diésel CRDi y Maquinaria",
-      "Despacho": "Despacho inmediato desde Sede Pedernales",
-    },
-    description:
-      "Filtros blindados de aceite, aire y combustible diésel de las marcas líderes Fram y Bosch. Carcasa de acero resistente a alta presión, acabado texturizado SureGrip y sellos nitrílicos de alta temperatura.",
-    priceEstimate: "Cotización por Modelo",
-    priceNote: "Verificamos la rosca y código exacto para tu motor antes de facturar.",
-    warranty: "Garantía de Sellado y Especificación OEM",
-    commercialStatus: "VERIFIED",
-    inStock: true,
-    stockStatusText: "Despacho inmediato desde Sede Pedernales",
-    dispatchIndicator: "Despacho inmediato desde Sede Pedernales",
-    primaryOriginRecommendation: "Pedernales",
-    imageUrl: "/images/products/filter-oil.jpg",
-    compatibleVehicles: [
-      { make: "Chevrolet", model: "Sail / Aveo / Spark / D-Max / Tracker", yearRange: "2006-2024", engine: "Todas las versiones" },
-      { make: "Kia", model: "Rio / Picanto / Sportage / Cerato", yearRange: "2008-2024", engine: "Todas las versiones" },
-      { make: "Toyota", model: "Hilux / Yaris / Corolla / Fortuner", yearRange: "2006-2024", engine: "Gasolina y Diésel" },
-      { make: "Hyundai", model: "Accent / Tucson / i10 / Creta / HD78", yearRange: "2008-2024", engine: "Gasolina y Diésel" },
-    ],
-    features: [
-      "Cero fugas de presión y retención superior de lodos y hollín",
-      "Separadores de agua y filtros primarios/secundarios para camionetas diésel",
-    ],
-    faqs: [],
+    "faqs": [],
+    "realStock": 1.0,
+    "rotationIndex": 5.17,
+    "dailySales": 0.17,
+    "isBestSeller": true
   },
   {
-    id: "ref-mannol-procool",
-    sku: "MANNOL-PROCOOL-5050",
-    slug: "refrigerante-mannol-pro-cool-oat-5050",
-    name: "Refrigerante Mannol Pro Cool OAT 50/50 Listo para Usar (Climas Cálidos y Salinos)",
-    brand: "Mannol",
-    category: "refrigerantes",
-    applicationType: "autos",
-    volume: "Galón (4L) y 1 Litro Premezclado 50/50",
-    shortSpec: "Tecnología OAT • Premezclado 50/50 • Punto de Ebullición +129°C • Anticorrosivo",
-    specifications: {
-      "Marca Oficial": "Mannol (Alemania)",
-      "Tecnología": "Ácidos Orgánicos (OAT) Libre de Silicatos, Nitritos y Fosfatos",
-      "Concentración": "50/50 Listo para usar (No agregar agua)",
-      "Punto de Ebullición": "+129°C con sistema presurizado",
-      "Protección Especial": "Radiadores de aluminio y bloques expuestos a climas cálidos y salinos",
-      "Despacho": "Despacho inmediato desde Sede Pedernales",
+    "id": "lub-mannol-ceramic-5w30",
+    "sku": "012MN7720-4",
+    "slug": "mannol-ceramic-5w30-galon-4l",
+    "name": "Aceite Sintético Mannol Ceramic 5W-30 (Galón 4 Litros)",
+    "brand": "Mannol",
+    "category": "lubricantes",
+    "applicationType": "autos",
+    "volume": "Galón 4 Litros (4/1 GL)",
+    "shortSpec": "5W-30 Full Synthetic • Aditivo Cerámico Integrado • API SN Plus • Autos Modernos",
+    "specifications": {
+      "Código Bodega": "012MN7720-4",
+      "Marca": "Mannol Ceramic",
+      "Viscosidad": "5W-30",
+      "Norma": "API SN Plus, ACEA C3",
+      "Tecnología": "Micropartículas de Nitruro de Boro Cerámico"
     },
-    fullSpecs: {
-      "Marca Oficial": "Mannol (Alemania)",
-      "Tecnología": "Ácidos Orgánicos (OAT) Libre de Silicatos, Nitritos y Fosfatos",
-      "Concentración": "50/50 Listo para usar (No agregar agua)",
-      "Punto de Ebullición": "+129°C con sistema presurizado",
-      "Protección Especial": "Radiadores de aluminio y bloques expuestos a climas cálidos y salinos",
-      "Despacho": "Despacho inmediato desde Sede Pedernales",
+    "fullSpecs": {
+      "Código Bodega": "012MN7720-4",
+      "Marca": "Mannol",
+      "Línea": "Ceramic Advanced Protection",
+      "Viscosidad": "5W-30 Full Synthetic",
+      "Presentación": "Galón 4 Litros",
+      "Beneficio": "Capa protectora molecular autoregenerativa en cilindros y turbos"
     },
-    description:
-      "Refrigerante de tecnología orgánica avanzada formulado especialmente para evitar el recalentamiento, la corrosión galvánica y la cavitación de bombas de agua en climas exigentes como Manabí, Esmeraldas y rutas de ascenso a la Sierra.",
-    priceEstimate: "Cotización Directa",
-    priceNote: "Embalaje antiderrame garantizado para envíos interprovinciales.",
-    warranty: "Formulación Alemana Certificada",
-    commercialStatus: "VERIFIED",
-    inStock: true,
-    stockStatusText: "Despacho inmediato desde Sede Pedernales",
-    dispatchIndicator: "Despacho inmediato desde Sede Pedernales",
-    primaryOriginRecommendation: "Pedernales",
-    imageUrl: "/images/products/coolant-oat.jpg",
-    compatibleVehicles: [
-      { make: "Chevrolet", model: "Sail / D-Max / Tracker / Aveo", yearRange: "2008-2024", engine: "Todos" },
-      { make: "Toyota", model: "Hilux / Yaris / Corolla", yearRange: "2008-2024", engine: "Todos" },
-      { make: "Kia", model: "Rio / Sportage / Picanto", yearRange: "2008-2024", engine: "Todos" },
+    "description": "Fórmula sintética avanzada enriquecida con nanocerámica que reduce la fricción en un 40%, soporta temperaturas extremas de turbo y disminuye el consumo de combustible.",
+    "priceEstimate": "Cotización Galón",
+    "priceNote": "Sello de seguridad alemán original.",
+    "warranty": "Garantía de Fábrica Alemana",
+    "commercialStatus": "VERIFIED",
+    "inStock": true,
+    "stockStatusText": "Stock en Bodega Pedernales (4 galones)",
+    "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
+    "primaryOriginRecommendation": "Pedernales",
+    "imageUrl": "/images/products/oil-5w30.jpg",
+    "compatibleVehicles": [
+      {
+        "make": "Chevrolet",
+        "model": "Tracker Turbo / Onix Turbo / Montana",
+        "yearRange": "2020-2024",
+        "engine": "1.0T / 1.2T 3 Cilindros"
+      },
+      {
+        "make": "Kia",
+        "model": "Sportage Turbo / Seltos / K3",
+        "yearRange": "2020-2024",
+        "engine": "1.4T / 1.6T / 2.0L"
+      },
+      {
+        "make": "Hyundai",
+        "model": "Tucson Turbo / Creta / Kona",
+        "yearRange": "2020-2024",
+        "engine": "1.6T / 2.0L"
+      }
     ],
-    features: [
-      "Inhibidores de corrosión de larga duración para ambientes costeros y salinos",
-      "Evita la formación de sarro y obstrucciones en el radiador y termostato",
+    "features": [
+      "Índice de rotación 1.11 en Pedernales para SUVs y motores turbo modernos",
+      "Evita el desgaste por arranque start-stop"
     ],
-    faqs: [],
+    "faqs": [],
+    "realStock": 4.0,
+    "rotationIndex": 1.11,
+    "dailySales": 0.13,
+    "isBestSeller": true
   },
+  {
+    "id": "lub-mannol-4t-moto",
+    "sku": "012MN7812-1",
+    "slug": "mannol-4takt-motorbike-10w40-litro",
+    "name": "Aceite Mannol 4-Takt Motorbike 10W-40 JASO MA2 (1 Litro)",
+    "brand": "Mannol",
+    "category": "lubricantes",
+    "applicationType": "motos",
+    "volume": "1 Litro (20/1 LT)",
+    "shortSpec": "10W-40 4 Tiempos • JASO MA2 / API SL • Para Embrague Húmedo • Stock Alto en Pedernales",
+    "specifications": {
+      "Código Bodega": "012MN7812-1",
+      "Marca": "Mannol Motorbike",
+      "Viscosidad": "10W-40",
+      "Norma": "JASO MA/MA2, API SL",
+      "Presentación": "1 Litro (Stock 23 unidades)"
+    },
+    "fullSpecs": {
+      "Código Bodega": "012MN7812-1",
+      "Marca": "Mannol (Alemania)",
+      "Viscosidad": "10W-40 Semisintético para Motocicletas",
+      "Aplicación": "Motos de reparto, delivery, paseo y cross con caja integrada y embrague bañado en aceite"
+    },
+    "description": "Formulado para evitar el patinaje del embrague húmedo en motocicletas de trabajo continuo. Soporta altas revoluciones de motor sin degradación térmica.",
+    "priceEstimate": "Venta por Litro y Caja x 20",
+    "priceNote": "Precios especiales para flotas de reparto y delivery.",
+    "warranty": "Certificación JASO MA2 Oficial",
+    "commercialStatus": "VERIFIED",
+    "inStock": true,
+    "stockStatusText": "Stock en Bodega Pedernales (23 unidades)",
+    "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
+    "primaryOriginRecommendation": "Pedernales",
+    "imageUrl": "/images/products/oil-5w30.jpg",
+    "compatibleVehicles": [
+      {
+        "make": "Bajaj",
+        "model": "Pulsar NS200 / NS160 / Boxer 150",
+        "yearRange": "2015-2024",
+        "engine": "150cc - 200cc"
+      },
+      {
+        "make": "Yamaha",
+        "model": "FZ 2.0 / YBR 125 / Crypton",
+        "yearRange": "2012-2024",
+        "engine": "115cc - 150cc"
+      },
+      {
+        "make": "Honda",
+        "model": "CB125F / CB190R / XR150L / Wave",
+        "yearRange": "2014-2024",
+        "engine": "110cc - 190cc"
+      },
+      {
+        "make": "Shineray / Daytona / IGM",
+        "model": "Motos Utilitarias Chinas",
+        "yearRange": "Todos",
+        "engine": "125cc - 250cc"
+      }
+    ],
+    "features": [
+      "Venta constante en el sector comercial y delivery de Pedernales",
+      "Cambios de marcha más suaves y caja de velocidades protegida"
+    ],
+    "faqs": [],
+    "realStock": 23.0,
+    "rotationIndex": 0.19,
+    "dailySales": 0.17,
+    "isBestSeller": true
+  },
+  {
+    "id": "lub-motul-moto5100",
+    "sku": "01098960",
+    "slug": "motul-moto-5100-15w50-semisintetico-ester",
+    "name": "Aceite Motul 5100 15W-50 4T Semisintético Technosynthese Ester (1 Litro)",
+    "brand": "Motul",
+    "category": "lubricantes",
+    "applicationType": "motos",
+    "volume": "1 Litro (12/1 LT)",
+    "shortSpec": "15W-50 Technosynthese Ester • JASO MA2 / API SM • Motocicletas de Alto Desempeño",
+    "specifications": {
+      "Código Bodega": "01098960",
+      "Marca": "Motul (Francia)",
+      "Viscosidad": "15W-50",
+      "Tecnología": "Technosynthese con Éster",
+      "Norma": "JASO MA2 M033MOT158, API SM/SL"
+    },
+    "fullSpecs": {
+      "Código Bodega": "01098960",
+      "Marca": "Motul 5100 4T",
+      "Tecnología": "Éster Sintético",
+      "Viscosidad": "15W-50",
+      "Presentación": "1 Litro"
+    },
+    "description": "El lubricante francés de referencia para motociclistas exigentes. Su tecnología con Éster garantiza una película lubricante indestructible aún en tráfico pesado de costa y altas temperaturas.",
+    "priceEstimate": "Cotización Directa",
+    "priceNote": "Envase original sellado con tapón retráctil de seguridad.",
+    "warranty": "Homologación JASO MA2 Oficial",
+    "commercialStatus": "VERIFIED",
+    "inStock": true,
+    "stockStatusText": "Stock en Bodega Pedernales (12 unidades)",
+    "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
+    "primaryOriginRecommendation": "Pedernales",
+    "imageUrl": "/images/products/oil-5w30.jpg",
+    "compatibleVehicles": [
+      {
+        "make": "KTM",
+        "model": "Duke 200 / 250 / 390 / RC",
+        "yearRange": "2015-2024",
+        "engine": "200cc - 390cc"
+      },
+      {
+        "make": "BMW / Royal Enfield",
+        "model": "G310R / Himalayan / Classic 350",
+        "yearRange": "2018-2024",
+        "engine": "310cc - 411cc"
+      },
+      {
+        "make": "Suzuki / Yamaha",
+        "model": "Gixxer 250 / FZ25 / MT-03",
+        "yearRange": "2018-2024",
+        "engine": "250cc - 321cc"
+      }
+    ],
+    "features": [
+      "Tecnología de Éster para máxima respuesta al acelerador",
+      "Protección anti-cizallamiento en engranajes de transmisión"
+    ],
+    "faqs": [],
+    "realStock": 12.0,
+    "rotationIndex": 0.0,
+    "dailySales": 0.0,
+    "isBestSeller": false
+  },
+  {
+    "id": "lub-aroil-atf-diii",
+    "sku": "0368AR40045",
+    "slug": "aroil-atf-diii-1-litro",
+    "name": "Aceite de Transmisión Automática AROIL ATF D-III (1 Litro)",
+    "brand": "Aroil",
+    "category": "lubricantes",
+    "applicationType": "autos",
+    "volume": "1 Litro (Stock 43 unidades)",
+    "shortSpec": "Fluido de Transmisión Automática y Dirección Hidráulica • Dexron III / Mercon",
+    "specifications": {
+      "Código Bodega": "0368AR40045",
+      "Marca": "AROIL",
+      "Tipo": "ATF Dexron III / Mercon",
+      "Stock en Pedernales": "43 unidades verificadas"
+    },
+    "fullSpecs": {
+      "Código Bodega": "0368AR40045",
+      "Marca": "AROIL ATF",
+      "Especificación": "GM Dexron III-H, Ford Mercon, Allison C-4",
+      "Aplicación": "Cajas automáticas y direcciones hidráulicas asistidas"
+    },
+    "description": "Fluido de alta estabilidad química para transmisiones automáticas convencionales y depósitos de dirección asistida hidráulica. Previene chirridos y fugas por empaquetaduras.",
+    "priceEstimate": "Venta por Litro y Caja x 12",
+    "priceNote": "Gran disponibilidad de stock en bodega matriz Pedernales.",
+    "warranty": "Garantía de Especificación Técnica",
+    "commercialStatus": "VERIFIED",
+    "inStock": true,
+    "stockStatusText": "Stock en Bodega Pedernales (43 unidades)",
+    "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
+    "primaryOriginRecommendation": "Pedernales",
+    "imageUrl": "/images/products/oil-5w30.jpg",
+    "compatibleVehicles": [
+      {
+        "make": "Chevrolet / Toyota / Hyundai / Kia",
+        "model": "Sistemas de Dirección Hidráulica y Cajas Automáticas 4/5 Velocidades",
+        "yearRange": "Todos",
+        "engine": "Gasolina y Diésel"
+      }
+    ],
+    "features": [
+      "Stock líder en bodega matriz: 43 litros disponibles de inmediato",
+      "Color rojo translúcido característico para rápida detección de fugas"
+    ],
+    "faqs": [],
+    "realStock": 43.0,
+    "rotationIndex": 0.19,
+    "dailySales": 0.2,
+    "isBestSeller": true
+  },
+  {
+    "id": "chem-mannol-inyectores-diesel",
+    "sku": "012MN9980",
+    "slug": "mannol-limpiador-inyectores-diesel-300ml",
+    "name": "Limpiador de Inyectores Diésel Mannol Diesel Jet Cleaner 300ml",
+    "brand": "Mannol",
+    "category": "aditivos",
+    "applicationType": "camionetas",
+    "volume": "Envase 300 ml",
+    "shortSpec": "Tratamiento Concentrado Diésel • Limpia Toberas e Inyectores • Aumenta Cetano",
+    "specifications": {
+      "Código Bodega": "012MN9980",
+      "Marca": "Mannol (Alemania)",
+      "Capacidad": "300 ml",
+      "Aplicación": "Tanques de combustible diésel (hasta 50 litros)"
+    },
+    "fullSpecs": {
+      "Código Bodega": "012MN9980",
+      "Marca": "Mannol Diesel Jet Cleaner",
+      "Origen": "Alemania",
+      "Efecto": "Elimina depósitos carbonosos en toberas, bomba de alta presión y cámara de combustión"
+    },
+    "description": "Aditivo profesional alemán de alta rotación en Pedernales. Restaura el patrón de atomización en camionetas common rail D-Max, Hilux y camiones, reduciendo humo negro y ruidos de detonación.",
+    "priceEstimate": "Venta por Unidad y Caja x 24",
+    "priceNote": "Uso recomendado cada 5.000 km o antes de pruebas de opacidad en RTV.",
+    "warranty": "Fórmula Alemana Certificada",
+    "commercialStatus": "VERIFIED",
+    "inStock": true,
+    "stockStatusText": "Stock en Bodega Pedernales (11 unidades)",
+    "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
+    "primaryOriginRecommendation": "Pedernales",
+    "imageUrl": "/images/products/brake-pads.jpg",
+    "compatibleVehicles": [
+      {
+        "make": "Chevrolet",
+        "model": "D-Max CRDi 2.5 / 3.0 / 2.0T",
+        "yearRange": "2006-2024",
+        "engine": "Diésel Common Rail"
+      },
+      {
+        "make": "Toyota",
+        "model": "Hilux / Fortuner D-4D",
+        "yearRange": "2006-2024",
+        "engine": "Diésel"
+      },
+      {
+        "make": "Hino",
+        "model": "Serie 300 / 500",
+        "yearRange": "2008-2024",
+        "engine": "Diésel"
+      }
+    ],
+    "features": [
+      "Top Seller en aditivos: venta diaria de 0.23 unidades en Pedernales",
+      "Compatible con filtros DPF y catalizadores diésel"
+    ],
+    "faqs": [],
+    "realStock": 11.0,
+    "rotationIndex": 0.48,
+    "dailySales": 0.23,
+    "isBestSeller": true
+  },
+  {
+    "id": "chem-mannol-carburador",
+    "sku": "012MN9770",
+    "slug": "mannol-limpiador-carburador-600ml",
+    "name": "Limpiador de Carburador y Cuerpo de Aceleración Mannol 600ml (Aerosol)",
+    "brand": "Mannol",
+    "category": "aditivos",
+    "applicationType": "autos",
+    "volume": "Aerosol 600 ml (Stock 49 unidades)",
+    "shortSpec": "Spray Alta Presión 600ml • Disuelve Gomas, Carbón y Barnices al Instante",
+    "specifications": {
+      "Código Bodega": "012MN9770",
+      "Marca": "Mannol (Alemania)",
+      "Volumen": "600 ml en aerosol con cánula",
+      "Stock en Pedernales": "49 unidades verificadas"
+    },
+    "fullSpecs": {
+      "Código Bodega": "012MN9770",
+      "Marca": "Mannol Carburetor Cleaner",
+      "Capacidad": "600 ml",
+      "Aplicación": "Cuerpos de aceleración electrónicos, carburadores, válvulas IAC y sensores"
+    },
+    "description": "El aerosol más vendido en talleres mecánicos de Manabí. Disuelve residuos rebeldes de hollín, aceite recirculado por PCV y barnices en cuerpos de mariposa sin dañar componentes de aluminio.",
+    "priceEstimate": "Venta por Unidad y Caja x 12",
+    "priceNote": "Imprescindible en afinamientos y mantenimientos preventivos.",
+    "warranty": "Eficacia Inmediata Garantizada",
+    "commercialStatus": "VERIFIED",
+    "inStock": true,
+    "stockStatusText": "Stock en Bodega Pedernales (49 unidades)",
+    "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
+    "primaryOriginRecommendation": "Pedernales",
+    "imageUrl": "/images/products/brake-pads.jpg",
+    "compatibleVehicles": [
+      {
+        "make": "Todas las Marcas",
+        "model": "Autos, Camionetas y Motos con Inyección o Carburador",
+        "yearRange": "Todos",
+        "engine": "Todos"
+      }
+    ],
+    "features": [
+      "Stock récord de 49 unidades en bodega central Pedernales",
+      "Presión de disparo potente con cánula de precisión"
+    ],
+    "faqs": [],
+    "realStock": 49.0,
+    "rotationIndex": 0.18,
+    "dailySales": 0.23,
+    "isBestSeller": true
+  },
+  {
+    "id": "chem-mannol-inyectores-gasolina",
+    "sku": "012MN9957-025",
+    "slug": "mannol-injector-cleaner-gasolina-250ml",
+    "name": "Limpiador de Inyectores Gasolina Mannol Injector Cleaner 250ml",
+    "brand": "Mannol",
+    "category": "aditivos",
+    "applicationType": "autos",
+    "volume": "Envase 250 ml",
+    "shortSpec": "Tratamiento Gasolina • Limpieza Rápida de Inyectores • Rotación 2.0",
+    "specifications": {
+      "Código Bodega": "012MN9957-025",
+      "Marca": "Mannol",
+      "Capacidad": "250 ml",
+      "Rotación": "2.0 (Excelente salida)"
+    },
+    "fullSpecs": {
+      "Código Bodega": "012MN9957-025",
+      "Marca": "Mannol Injector Cleaner Gasolina",
+      "Origen": "Alemania",
+      "Aplicación": "Para vehículos a gasolina que presenten tirones o consumo elevado"
+    },
+    "description": "Limpia profundamente las agujas de inyectores y válvulas de admisión, eliminando suciedad originada por combustibles de bajo octanaje.",
+    "priceEstimate": "Cotización Directa",
+    "priceNote": "Agregar directamente al tanque antes de llenar.",
+    "warranty": "Fórmula Certificada Alemana",
+    "commercialStatus": "VERIFIED",
+    "inStock": true,
+    "stockStatusText": "Stock en Bodega Pedernales",
+    "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
+    "primaryOriginRecommendation": "Pedernales",
+    "imageUrl": "/images/products/brake-pads.jpg",
+    "compatibleVehicles": [
+      {
+        "make": "Chevrolet",
+        "model": "Sail / Aveo / Spark / Tracker",
+        "yearRange": "2008-2024",
+        "engine": "Gasolina"
+      },
+      {
+        "make": "Kia / Hyundai",
+        "model": "Picanto / Rio / Tucson / Sportage",
+        "yearRange": "2008-2024",
+        "engine": "Gasolina"
+      }
+    ],
+    "features": [
+      "Índice de rotación 2.0 en mostrador Pedernales",
+      "Mejora inmediata de la respuesta al acelerar"
+    ],
+    "faqs": [],
+    "realStock": 2.0,
+    "rotationIndex": 2.0,
+    "dailySales": 0.2,
+    "isBestSeller": true
+  },
+  {
+    "id": "ref-mannol-af12-rojo-1lt",
+    "sku": "012MN4012-1",
+    "slug": "mannol-refrigerante-rojo-af12-1lt",
+    "name": "Refrigerante Orgánico Rojo Mannol AF12+ Larga Vida 5 Años (1 Litro)",
+    "brand": "Mannol",
+    "category": "refrigerantes",
+    "applicationType": "autos",
+    "volume": "1 Litro (Stock 17 unidades)",
+    "shortSpec": "Tecnología OAT Orgánica • Vida Útil 5 Años • Color Rojo / Rosa • Protección Radiador Aluminio",
+    "specifications": {
+      "Código Bodega": "012MN4012-1",
+      "Marca": "Mannol (Alemania)",
+      "Tipo": "Orgánico OAT AF12+",
+      "Color": "Rojo / Rosa Fluorescente",
+      "Durabilidad": "5 Años / 250.000 km"
+    },
+    "fullSpecs": {
+      "Código Bodega": "012MN4012-1",
+      "Marca": "Mannol Antifreeze AF12+",
+      "Normas": "VW TL 774-D/F (G12/G12+), Ford WSS-M97B44-D, GM 6277M",
+      "Presentación": "1 Litro",
+      "Protección": "Anticorrosivo para radiadores de aluminio y bombas de agua en clima cálido"
+    },
+    "description": "Refrigerante premium con tecnología de carboxilatos orgánicos. No genera sarro, previene la cavitación y mantiene la temperatura de motor constante aún bajo el fuerte sol costero.",
+    "priceEstimate": "Venta por Litro y Caja x 12",
+    "priceNote": "Embalaje reforzado antiderrame garantizado para encomiendas.",
+    "warranty": "Garantía de Fábrica Alemana",
+    "commercialStatus": "VERIFIED",
+    "inStock": true,
+    "stockStatusText": "Stock en Bodega Pedernales (17 unidades)",
+    "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
+    "primaryOriginRecommendation": "Pedernales",
+    "imageUrl": "/images/products/coolant-oat.jpg",
+    "compatibleVehicles": [
+      {
+        "make": "Chevrolet",
+        "model": "Sail / D-Max / Aveo / Tracker / Onix",
+        "yearRange": "2008-2024",
+        "engine": "Gasolina y Diésel"
+      },
+      {
+        "make": "Toyota",
+        "model": "Hilux / Yaris / Corolla / Fortuner",
+        "yearRange": "2008-2024",
+        "engine": "Gasolina y Diésel"
+      },
+      {
+        "make": "Kia / Hyundai",
+        "model": "Sportage / Tucson / Rio / Accent",
+        "yearRange": "2010-2024",
+        "engine": "Gasolina y Diésel"
+      }
+    ],
+    "features": [
+      "Top Seller en refrigerantes en Pedernales (17 unidades en stock)",
+      "Evita el recalentamiento en rutas de ascenso hacia la Sierra"
+    ],
+    "faqs": [],
+    "realStock": 17.0,
+    "rotationIndex": 0.51,
+    "dailySales": 0.2,
+    "isBestSeller": true
+  },
+  {
+    "id": "ref-abro-rojo-galon",
+    "sku": "102EC-502",
+    "slug": "abro-refrigerante-rojo-galon",
+    "name": "Refrigerante ABRO Rojo Listo para Usar (Galón 3.785 Litros)",
+    "brand": "Abro",
+    "category": "refrigerantes",
+    "applicationType": "autos",
+    "volume": "Galón 3.785L (Stock 9 unidades)",
+    "shortSpec": "Premezclado Listo para Usar • Galón Completo • Color Rojo • Rotación 0.68",
+    "specifications": {
+      "Código Bodega": "102EC-502",
+      "Marca": "ABRO (USA)",
+      "Presentación": "Galón 3.785 Litros",
+      "Color": "Rojo"
+    },
+    "fullSpecs": {
+      "Código Bodega": "102EC-502",
+      "Marca": "ABRO Premium Coolant",
+      "Presentación": "1 Galón",
+      "Uso": "Listo para rellenar o cambio total de circuito de refrigeración"
+    },
+    "description": "Galón listo para verter directamente en el radiador y depósito auxiliar. Excelente relación costo-beneficio para transporte comercial y particular.",
+    "priceEstimate": "Cotización Galón",
+    "priceNote": "Despacho inmediato a toda la provincia.",
+    "warranty": "Calidad Americana ABRO",
+    "commercialStatus": "VERIFIED",
+    "inStock": true,
+    "stockStatusText": "Stock en Bodega Pedernales (9 galones)",
+    "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
+    "primaryOriginRecommendation": "Pedernales",
+    "imageUrl": "/images/products/coolant-oat.jpg",
+    "compatibleVehicles": [
+      {
+        "make": "Todas las Marcas",
+        "model": "Vehículos con refrigerante rojo de fábrica",
+        "yearRange": "Todos",
+        "engine": "Todos"
+      }
+    ],
+    "features": [
+      "Índice de rotación 0.68 en mostrador Pedernales",
+      "No requiere mezclar con agua, evita incrustaciones de cal"
+    ],
+    "faqs": [],
+    "realStock": 9.0,
+    "rotationIndex": 0.68,
+    "dailySales": 0.17,
+    "isBestSeller": true
+  },
+  {
+    "id": "fil-advance-combustible-dmax2025",
+    "sku": "080AFE-297",
+    "slug": "filtro-advance-combustible-chevrolet-dmax-20t-diesel-2025",
+    "name": "Filtro Advance de Combustible Chevrolet D-Max 2.0T Diésel 2025 (AFE-297)",
+    "brand": "Advance",
+    "category": "filtros",
+    "applicationType": "camionetas",
+    "shortSpec": "Filtro Diésel Alta Eficiencia • Chevrolet D-Max 2.0T Diésel 2025 • Código AFE-297",
+    "specifications": {
+      "Código Bodega": "080AFE-297",
+      "Marca": "Advance Filters",
+      "Referencia": "AFE-297",
+      "Aplicación Específica": "Chevrolet D-Max 2.0T Diésel Modelo 2024 / 2025",
+      "Rotación": "0.96 (Alta demanda último modelo)"
+    },
+    "fullSpecs": {
+      "Código Bodega": "080AFE-297",
+      "Marca": "Advance Filters",
+      "Tipo": "Elemento filtrante ecológico para combustible diésel",
+      "Retención": "Separa microgotas de agua y partículas mayores a 2 micras para proteger inyectores piezoeléctricos"
+    },
+    "description": "Filtro de combustible de última generación para la nueva Chevrolet D-Max 2.0 Turbo Diésel 2025. Máxima protección para el sistema de inyección diésel common rail de alta presión.",
+    "priceEstimate": "Cotización Directa",
+    "priceNote": "Verificamos año exacto de tu camioneta antes del envío.",
+    "warranty": "Garantía de Filtración OEM",
+    "commercialStatus": "VERIFIED",
+    "inStock": true,
+    "stockStatusText": "Stock en Bodega Pedernales (5 unidades)",
+    "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
+    "primaryOriginRecommendation": "Pedernales",
+    "imageUrl": "/images/products/filter-oil.jpg",
+    "compatibleVehicles": [
+      {
+        "make": "Chevrolet",
+        "model": "D-Max 2.0 Turbo Diésel Intercooler",
+        "yearRange": "2024-2025",
+        "engine": "2.0T Diésel"
+      }
+    ],
+    "features": [
+      "Top Seller en camionetas nuevas: rotación 0.96 en Pedernales",
+      "Evita daños catastróficos en la bomba de alta presión por agua en el diésel"
+    ],
+    "faqs": [],
+    "realStock": 5.0,
+    "rotationIndex": 0.96,
+    "dailySales": 0.13,
+    "isBestSeller": true
+  },
+  {
+    "id": "fil-advance-aceite-aveo-dmax",
+    "sku": "080AO-3387",
+    "slug": "filtro-advance-aceite-aveo-corsa-optra-dmax",
+    "name": "Filtro Advance de Aceite Aveo, Corsa, Optra, D-Max (PH-2862)",
+    "brand": "Advance",
+    "category": "filtros",
+    "applicationType": "autos",
+    "shortSpec": "Filtro de Aceite Blindado • Aveo / Corsa / Optra / D-Max 2.4 • Equivalente PH-2862",
+    "specifications": {
+      "Código Bodega": "080AO-3387",
+      "Marca": "Advance Filters",
+      "Referencia": "AO-3387 / PH-2862",
+      "Rosca": "M18 x 1.5"
+    },
+    "fullSpecs": {
+      "Código Bodega": "080AO-3387",
+      "Marca": "Advance Filters",
+      "Tipo": "Spin-On Blindado Metálico",
+      "Válvula Antidrenaje": "Silicona de alta temperatura"
+    },
+    "description": "El filtro de aceite de mayor circulación en el parque automotor ecuatoriano. Fabricado con medio filtrante microporoso que atrapa partículas abrasivas y mantiene la lubricación constante.",
+    "priceEstimate": "Venta por Unidad y Caja",
+    "priceNote": "Facturación inmediata en mostrador o para envío.",
+    "warranty": "Garantía de Sellado Hermético",
+    "commercialStatus": "VERIFIED",
+    "inStock": true,
+    "stockStatusText": "Stock en Bodega Pedernales (6 unidades)",
+    "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
+    "primaryOriginRecommendation": "Pedernales",
+    "imageUrl": "/images/products/filter-oil.jpg",
+    "compatibleVehicles": [
+      {
+        "make": "Chevrolet",
+        "model": "Aveo Family / Emotion / Activo",
+        "yearRange": "2006-2020",
+        "engine": "1.5L / 1.6L"
+      },
+      {
+        "make": "Chevrolet",
+        "model": "Optra / Corsa / Astra",
+        "yearRange": "2002-2015",
+        "engine": "1.4L / 1.6L / 1.8L"
+      },
+      {
+        "make": "Chevrolet",
+        "model": "Luv D-Max 2.4 Gasolina",
+        "yearRange": "2005-2015",
+        "engine": "2.4L"
+      }
+    ],
+    "features": [
+      "Top Seller con salida diaria comprobada en Pedernales",
+      "Carcasa metálica reforzada resistente a picos de presión en frío"
+    ],
+    "faqs": [],
+    "realStock": 6.0,
+    "rotationIndex": 0.53,
+    "dailySales": 0.13,
+    "isBestSeller": true
+  },
+  {
+    "id": "fil-advance-combustible-wingle-luv",
+    "sku": "080AFP-974",
+    "slug": "filtro-advance-combustible-luv-wingle-trooper",
+    "name": "Filtro Advance de Combustible Great Wall Wingle 2.4, Luv, Trooper (AFP-974)",
+    "brand": "Advance",
+    "category": "filtros",
+    "applicationType": "camionetas",
+    "shortSpec": "Filtro de Gasolina en Línea • Wingle 2.4 / Luv 2.2-2.4 / Trooper / N200",
+    "specifications": {
+      "Código Bodega": "080AFP-974",
+      "Marca": "Advance Filters",
+      "Referencia": "AFP-974",
+      "Ubicación": "Bodega Pedernales (8 unidades)"
+    },
+    "fullSpecs": {
+      "Código Bodega": "080AFP-974",
+      "Marca": "Advance",
+      "Tipo": "Filtro de combustible metálico con conectores rápidos y rosca"
+    },
+    "description": "Filtro para camionetas de trabajo Great Wall Wingle y Chevrolet Luv. Atrapa impurezas del combustible protegiendo la bomba y el riel de inyectores.",
+    "priceEstimate": "Cotización Directa",
+    "priceNote": "Recomendado cambio cada 10.000 a 15.000 km.",
+    "warranty": "Garantía de Flujo y Filtración",
+    "commercialStatus": "VERIFIED",
+    "inStock": true,
+    "stockStatusText": "Stock en Bodega Pedernales (8 unidades)",
+    "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
+    "primaryOriginRecommendation": "Pedernales",
+    "imageUrl": "/images/products/filter-oil.jpg",
+    "compatibleVehicles": [
+      {
+        "make": "Great Wall",
+        "model": "Wingle 5 / Wingle 3 Gasolina",
+        "yearRange": "2010-2022",
+        "engine": "2.4L Mitsubishi 4G69"
+      },
+      {
+        "make": "Chevrolet",
+        "model": "Luv 2.2 / 2.3 / Trooper / N200",
+        "yearRange": "1998-2015",
+        "engine": "Gasolina"
+      }
+    ],
+    "features": [
+      "Stock de 8 unidades en bodega Pedernales con rotación 0.64",
+      "Conexión perfecta sin fugas ni adaptaciones"
+    ],
+    "faqs": [],
+    "realStock": 8.0,
+    "rotationIndex": 0.64,
+    "dailySales": 0.13,
+    "isBestSeller": true
+  },
+  {
+    "id": "fil-advance-aceite-hino",
+    "sku": "080AO-1314",
+    "slug": "filtro-advance-aceite-hino-serie-300-500",
+    "name": "Filtro Advance de Aceite Hino Serie 300 / 500 FB, FD, FE (AO-1314)",
+    "brand": "Advance",
+    "category": "filtros",
+    "applicationType": "pesado",
+    "shortSpec": "Filtro Diésel Pesado • Hino FB1817 / FD2220 / FE3020 • Rotación 0.97",
+    "specifications": {
+      "Código Bodega": "080AO-1314",
+      "Marca": "Advance Filters Heavy Duty",
+      "Referencia": "AO-1314",
+      "Aplicación": "Camiones Hino Dutro y Ranger"
+    },
+    "fullSpecs": {
+      "Código Bodega": "080AO-1314",
+      "Marca": "Advance Heavy Duty",
+      "Tipo": "Filtro de aceite de gran volumen con válvula bypass reforzada"
+    },
+    "description": "Filtro para camiones de carga Hino que transportan productos del mar y carga pesada entre Manabí y la Sierra. Alta capacidad de retención de partículas carbonosas.",
+    "priceEstimate": "Cotización Flotas",
+    "priceNote": "Descuento por media docena o docena para empresas de transporte.",
+    "warranty": "Garantía de Presión Hidráulica",
+    "commercialStatus": "VERIFIED",
+    "inStock": true,
+    "stockStatusText": "Stock en Bodega Pedernales (3 unidades)",
+    "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
+    "primaryOriginRecommendation": "Pedernales",
+    "imageUrl": "/images/products/filter-oil.jpg",
+    "compatibleVehicles": [
+      {
+        "make": "Hino",
+        "model": "FB1817 / FD2220 / FD2320 / FE3020 / SG3320",
+        "yearRange": "2008-2024",
+        "engine": "Diésel Pesado"
+      }
+    ],
+    "features": [
+      "Índice de rotación 0.97 en camiones pesados",
+      "Soporta presión de trabajo continuo en viajes largos"
+    ],
+    "faqs": [],
+    "realStock": 3.0,
+    "rotationIndex": 0.97,
+    "dailySales": 0.1,
+    "isBestSeller": true
+  },
+  {
+    "id": "brake-ate-dot3-pintas",
+    "sku": "141ATE-P3",
+    "slug": "ate-liquido-frenos-dot3-pintas",
+    "name": "Líquido de Frenos ATE Original DOT 3 (Presentación Pinta / Medio Litro)",
+    "brand": "ATE",
+    "category": "frenos",
+    "applicationType": "autos",
+    "volume": "Envase Pinta (Stock 10 unidades)",
+    "shortSpec": "DOT 3 Original ATE • Tecnología Alemana • Punto de Ebullición Seguro",
+    "specifications": {
+      "Código Bodega": "141ATE-P3",
+      "Marca": "ATE (Continental Aftermarket)",
+      "Grado": "DOT 3",
+      "Stock en Pedernales": "10 unidades verificadas"
+    },
+    "fullSpecs": {
+      "Código Bodega": "141ATE-P3",
+      "Marca": "ATE Germany",
+      "Especificación": "FMVSS 116 DOT 3, SAE J1703, ISO 4925 Clase 3",
+      "Punto de Ebullición Seco": "Mínimo 205°C"
+    },
+    "description": "Líquido de frenos de equipo original alemán formulado para evitar el 'vapor lock' en descensos prolongados de montaña y climas húmedos. No ataca las mangueras ni los sellos de goma del cáliper.",
+    "priceEstimate": "Venta por Envase",
+    "priceNote": "Imprescindible en cada cambio de pastillas o mantenimiento de frenos.",
+    "warranty": "Garantía de Fábrica ATE Alemania",
+    "commercialStatus": "VERIFIED",
+    "inStock": true,
+    "stockStatusText": "Stock en Bodega Pedernales (10 unidades)",
+    "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
+    "primaryOriginRecommendation": "Pedernales",
+    "imageUrl": "/images/products/brake-pads.jpg",
+    "compatibleVehicles": [
+      {
+        "make": "Chevrolet / Kia / Hyundai / Toyota",
+        "model": "Vehículos con especificación DOT 3 de fábrica",
+        "yearRange": "Todos",
+        "engine": "Todos"
+      }
+    ],
+    "features": [
+      "Top Seller en líquidos de frenos en Pedernales",
+      "Excelente protección anticorrosiva para bombines y módulos ABS"
+    ],
+    "faqs": [],
+    "realStock": 10.0,
+    "rotationIndex": 0.24,
+    "dailySales": 0.1,
+    "isBestSeller": true
+  },
+  {
+    "id": "brake-ate-dot4-litro",
+    "sku": "141ATE-G4",
+    "slug": "ate-liquido-frenos-dot4-litro",
+    "name": "Líquido de Frenos ATE Original DOT 4 (Envase 1 Litro)",
+    "brand": "ATE",
+    "category": "frenos",
+    "applicationType": "autos",
+    "volume": "1 Litro (Stock 9 unidades)",
+    "shortSpec": "DOT 4 Alto Punto de Ebullición (+260°C) • Para Vehículos con ABS y ESP Modernos",
+    "specifications": {
+      "Código Bodega": "141ATE-G4",
+      "Marca": "ATE (Alemania)",
+      "Grado": "DOT 4",
+      "Punto de Ebullición": "+260°C Seco / +165°C Húmedo"
+    },
+    "fullSpecs": {
+      "Código Bodega": "141ATE-G4",
+      "Marca": "ATE Brake Fluid DOT 4",
+      "Normas": "FMVSS 116 DOT 4, SAE J1704, ISO 4925 Clase 4",
+      "Presentación": "Lata metálica hermética de 1 Litro"
+    },
+    "description": "Fluido de alto rendimiento para vehículos modernos con control de estabilidad (ESP/VSC) y frenadas de emergencia. Lata metálica sellada para evitar la absorción de humedad ambiental.",
+    "priceEstimate": "Venta por Litro",
+    "priceNote": "Envase metálico que preserva las propiedades hidroscópicas.",
+    "warranty": "Garantía Original ATE",
+    "commercialStatus": "VERIFIED",
+    "inStock": true,
+    "stockStatusText": "Stock en Bodega Pedernales (9 unidades)",
+    "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
+    "primaryOriginRecommendation": "Pedernales",
+    "imageUrl": "/images/products/brake-pads.jpg",
+    "compatibleVehicles": [
+      {
+        "make": "Chevrolet / Toyota / Ford / Volkswagen / Kia",
+        "model": "Vehículos modernos con frenos de disco en las 4 ruedas y ABS",
+        "yearRange": "2010-2024",
+        "engine": "Todos"
+      }
+    ],
+    "features": [
+      "Punto de ebullición superior para frenadas exigentes",
+      "Lata metálica que garantiza cero absorción de humedad en la Costa"
+    ],
+    "faqs": [],
+    "realStock": 9.0,
+    "rotationIndex": 0.0,
+    "dailySales": 0.0,
+    "isBestSeller": false
+  },
+  {
+    "id": "bujia-ngk-lfr5agp",
+    "sku": "042LFR5AGP",
+    "slug": "bujia-ngk-platino-tucson-vitara-hilux-lfr5agp",
+    "name": "Bujía NGK G-Power Platino Hyundai Tucson, Vitara SZ, Toyota Hilux (LFR5AGP)",
+    "brand": "NGK",
+    "category": "bujias",
+    "applicationType": "autos",
+    "shortSpec": "Electrodo de Platino G-Power • Rosca Larga • Tucson IX / Vitara SZ 2.4 / Hilux",
+    "specifications": {
+      "Código Bodega": "042LFR5AGP",
+      "Marca": "NGK G-Power",
+      "Referencia": "LFR5AGP (Punta de Platino)",
+      "Stock en Pedernales": "10 unidades verificadas"
+    },
+    "fullSpecs": {
+      "Código Bodega": "042LFR5AGP",
+      "Marca": "NGK Spark Plugs",
+      "Tipo": "Platino G-Power",
+      "Beneficio": "Arranque instantáneo, menor voltaje requerido a la bobina y vida útil de 40.000 km"
+    },
+    "description": "Bujía de alto rendimiento con punta fina de platino para camionetas y SUVs populares en Ecuador. Reduce el consumo de combustible y mejora la aceleración.",
+    "priceEstimate": "Venta por Juego (x4) o Unidad",
+    "priceNote": "Verificamos la calibración adecuada antes de entregar.",
+    "warranty": "Garantía Original NGK",
+    "commercialStatus": "VERIFIED",
+    "inStock": true,
+    "stockStatusText": "Stock en Bodega Pedernales (10 unidades)",
+    "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
+    "primaryOriginRecommendation": "Pedernales",
+    "imageUrl": "/images/products/brake-pads.jpg",
+    "compatibleVehicles": [
+      {
+        "make": "Hyundai",
+        "model": "Tucson IX 2.0 / Santa Fe",
+        "yearRange": "2010-2022",
+        "engine": "2.0L / 2.4L Gasolina"
+      },
+      {
+        "make": "Suzuki",
+        "model": "Grand Vitara SZ 2.0 / 2.4",
+        "yearRange": "2008-2020",
+        "engine": "J20A / J24B"
+      },
+      {
+        "make": "Toyota",
+        "model": "Hilux / Prado / Fortuner Gasolina",
+        "yearRange": "2006-2022",
+        "engine": "2TR-FE 2.7L"
+      }
+    ],
+    "features": [
+      "Punta de platino resistente a erosión por chispa",
+      "Encendido potente aún con combustible extra o ecopaís"
+    ],
+    "faqs": [],
+    "realStock": 10.0,
+    "rotationIndex": 0.0,
+    "dailySales": 0.0,
+    "isBestSeller": true
+  },
+  {
+    "id": "bujia-ngk-bkr5e",
+    "sku": "043BKR5E",
+    "slug": "bujia-ngk-bkr5e-aveo-sail-swift",
+    "name": "Bujía NGK Cobre Chevrolet Aveo, Sail, Corsa, Swift (BKR5E)",
+    "brand": "NGK",
+    "category": "bujias",
+    "applicationType": "autos",
+    "shortSpec": "Hexágono 5/8 • Núcleo de Cobre • Chevrolet Aveo / Sail / Corsa / Daewoo",
+    "specifications": {
+      "Código Bodega": "043BKR5E",
+      "Marca": "NGK",
+      "Referencia": "BKR5E / RC-12YC",
+      "Hexágono": "5/8 pulgada",
+      "Stock en Pedernales": "10 unidades verificadas"
+    },
+    "fullSpecs": {
+      "Código Bodega": "043BKR5E",
+      "Marca": "NGK Brasil / Japón",
+      "Tipo": "Electrodo con ranura en V (V-Power)",
+      "Aplicación": "Motores 8V y 16V Chevrolet, Daewoo, Suzuki"
+    },
+    "description": "La bujía estándar de mayor rotación para vehículos urbanos en Ecuador. Ranura en V patentada por NGK que mejora la inflamabilidad de la mezcla.",
+    "priceEstimate": "Venta por Juego (x4)",
+    "priceNote": "Facturación electrónica inmediata.",
+    "warranty": "Garantía de Fábrica NGK",
+    "commercialStatus": "VERIFIED",
+    "inStock": true,
+    "stockStatusText": "Stock en Bodega Pedernales (10 unidades)",
+    "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
+    "primaryOriginRecommendation": "Pedernales",
+    "imageUrl": "/images/products/brake-pads.jpg",
+    "compatibleVehicles": [
+      {
+        "make": "Chevrolet",
+        "model": "Aveo Family / Emotion / Sail 1.4 / Corsa",
+        "yearRange": "2002-2020",
+        "engine": "1.4L / 1.5L / 1.6L"
+      },
+      {
+        "make": "Suzuki",
+        "model": "Swift / Forza / Forsa 2",
+        "yearRange": "1995-2010",
+        "engine": "1.0L / 1.3L"
+      }
+    ],
+    "features": [
+      "Electrodo con ranura en V para menor consumo y encendido rápido",
+      "Gran rotación en talleres de mecánica general de Pedernales"
+    ],
+    "faqs": [],
+    "realStock": 10.0,
+    "rotationIndex": 0.0,
+    "dailySales": 0.0,
+    "isBestSeller": true
+  }
 ];

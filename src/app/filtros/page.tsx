@@ -20,17 +20,17 @@ export default function FiltersPage() {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-12">
-      <div className="bg-gradient-to-r from-brand-navy via-slate-900 to-blue-950 text-white p-6 sm:p-12 rounded-3xl border border-slate-800 shadow-xl relative overflow-hidden">
+      <div className="bg-gradient-to-r from-[#061B40] via-slate-900 to-[#0A3B8C] text-white p-6 sm:p-12 rounded-3xl border border-[#0A3B8C]/40 shadow-xl relative overflow-hidden">
         <div className="max-w-2xl space-y-4 relative z-10">
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-blue-400/20 text-blue-300 rounded-full text-xs font-bold uppercase tracking-wider">
+          <div className="inline-flex items-center gap-2 px-3 py-1 bg-amber-400/20 text-amber-300 rounded-full text-xs font-bold uppercase tracking-wider">
             <Wrench className="w-3.5 h-3.5" />
-            Fram • Bosch • Mannol Pro Cool OAT 50/50
+            Advance Filters • Mannol • ATE • ABRO
           </div>
           <h1 className="text-3xl sm:text-5xl font-black tracking-tight leading-tight">
             Filtración Blindada y Químicos Operativos
           </h1>
           <p className="text-xs sm:text-base text-slate-300 leading-relaxed">
-            Filtros de aceite y diésel de alta retención (Fram y Bosch), refrigerante orgánico Mannol Pro Cool OAT 50/50 para climas cálidos/salinos y aditivos antifricción Ceramo Ester.
+            Filtros de combustible y aceite <strong>Advance Filters</strong> (D-Max 2025 AFE-297, Aveo AO-3387, Wingle AFP-974, Hino AO-1314), refrigerante orgánico <strong>Mannol AF12+</strong> de 5 años, líquido de frenos <strong>ATE DOT 3 y DOT 4</strong>, y limpiadores de inyección y carburador.
           </p>
           <div className="flex flex-wrap gap-4 pt-2 text-xs text-slate-200">
             <div className="flex items-center gap-1.5">

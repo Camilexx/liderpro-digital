@@ -56,6 +56,11 @@ export interface BusinessConfig {
     zones: string[];
   };
   whatsappMasterNumber: string;
+  socialLinks: {
+    instagram: string;
+    facebook: string;
+    tiktok: string;
+  };
 }
 
 export const BUSINESS_CONFIG: BusinessConfig = {
@@ -126,4 +131,9 @@ export const BUSINESS_CONFIG: BusinessConfig = {
     ],
   },
   whatsappMasterNumber: "593981881515",
+  socialLinks: {
+    instagram: "https://www.instagram.com/liderpropedernales?srtk=MWRqOWcxd2w4YXMyeg==",
+    facebook: "https://www.facebook.com/share/1CHEkuMeis/",
+    tiktok: "https://www.tiktok.com/@lider.pro.pederna?_r=1&_t=ZS-9AOnTysHvDI",
+  },
 };

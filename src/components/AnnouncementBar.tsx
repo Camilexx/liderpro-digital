@@ -27,7 +27,7 @@ function TikTokIcon({ className = "w-3.5 h-3.5" }: { className?: string }) {
 
 export default function AnnouncementBar() {
   return (
-    <div className="bg-[#061B40] text-slate-200 py-1.5 px-4 sm:px-6 lg:px-8 text-xs border-b border-[#0A3B8C]/40">
+    <div className="bg-[#04122D] text-slate-300 py-2 px-4 sm:px-6 lg:px-8 text-xs border-b border-blue-900/40">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="flex items-center gap-2">
           <span className="w-2 h-2 rounded-full bg-[#FFC500] animate-pulse"></span>

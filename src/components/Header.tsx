@@ -40,73 +40,73 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/90 transition-all shadow-xs">
+    <header className="sticky top-0 z-40 bg-[#061B40] text-white border-b border-blue-900/60 shadow-lg transition-all backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-18 sm:h-20">
-          {/* Official Logo (Transparent with No Background Box) */}
-          <Link href="/" className="flex items-center group py-1.5 focus:outline-none">
+          {/* Official Logo with White Borders & Zero Black Box */}
+          <Link href="/" className="flex items-center group py-1.5 focus:outline-none shrink-0">
             <div className="relative">
               <Image
-                src="/images/logo-blue.png"
+                src="/images/logo-header.png"
                 alt="LiderPro - Productos Automotrices"
-                width={210}
-                height={50}
+                width={200}
+                height={48}
                 priority
-                className="h-10 sm:h-12 w-auto object-contain hover:scale-[1.03] transition-transform duration-300 drop-shadow-xs"
+                className="h-9 sm:h-11 w-auto object-contain hover:scale-[1.02] transition-transform duration-200"
               />
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-7 text-[13.5px] font-semibold text-slate-700">
+          {/* Desktop Navigation - Clean, Balanced & Well-Aligned */}
+          <nav className="hidden lg:flex items-center gap-6 xl:gap-8 text-[13px] font-semibold text-slate-200">
             <Link
               href="/encuentra-tu-producto"
-              className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-blue-50/90 border border-[#0A3B8C]/20 hover:bg-[#0A3B8C] hover:text-white text-[#0A3B8C] font-bold transition-all text-xs tracking-tight shadow-xs hover:shadow-sm"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-blue-950/70 border border-blue-400/30 hover:border-amber-400/60 hover:text-white text-slate-200 font-bold transition-all text-xs tracking-tight shadow-2xs hover:bg-blue-900/80"
             >
-              <Search className="w-3.5 h-3.5" />
-              <span>Encuentra tu producto</span>
+              <Search className="w-3.5 h-3.5 text-[#FFC500]" />
+              <span>Buscador Vehicular</span>
             </Link>
             <Link
               href="/productos"
-              className="hover:text-[#0A3B8C] transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-[#0A3B8C] after:scale-x-0 hover:after:scale-x-100 after:transition-transform"
+              className="hover:text-[#FFC500] transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-[#FFC500] after:scale-x-0 hover:after:scale-x-100 after:transition-transform"
             >
-              Catálogo ({BUSINESS_CONFIG.name})
+              Catálogo
             </Link>
             <Link
               href="/baterias"
-              className="hover:text-[#0A3B8C] transition-colors py-1"
+              className="hover:text-[#FFC500] transition-colors py-1"
             >
               Baterías
             </Link>
             <Link
               href="/lubricantes"
-              className="hover:text-[#0A3B8C] transition-colors py-1"
+              className="hover:text-[#FFC500] transition-colors py-1"
             >
               Lubricantes
             </Link>
             <Link
               href="/filtros"
-              className="hover:text-[#0A3B8C] transition-colors py-1"
+              className="hover:text-[#FFC500] transition-colors py-1"
             >
               Filtros
             </Link>
             <Link
               href="/b2b"
-              className="hover:text-[#0A3B8C] transition-colors py-1 text-slate-900 font-bold"
+              className="hover:text-[#FFC500] transition-colors py-1 text-amber-300 font-bold"
             >
               Atención B2B
             </Link>
             <Link
               href="/sucursales"
-              className="hover:text-[#0A3B8C] transition-colors py-1 text-slate-600"
+              className="hover:text-[#FFC500] transition-colors py-1 text-slate-300"
             >
-              Puntos y Envíos
+              Puntos & Envíos
             </Link>
           </nav>
 
-          {/* Right Action: Asesor WhatsApp */}
-          <div className="hidden sm:flex items-center gap-3.5">
-            <div className="hidden xl:flex items-center gap-2 px-3 py-1 bg-slate-50 border border-slate-200/80 rounded-full text-[11px] font-semibold text-slate-600">
+          {/* Right Action: Asesor WhatsApp (Oficial Verde Esmeralda) */}
+          <div className="hidden sm:flex items-center gap-3 shrink-0">
+            <div className="hidden xl:flex items-center gap-2 px-3 py-1 bg-blue-950/80 border border-blue-800/80 rounded-full text-[11px] font-semibold text-slate-300">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
@@ -119,9 +119,9 @@ export default function Header() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={handleWhatsAppClick}
-              className="btn-primary btn-shine !py-2.5 !px-5 text-xs font-black tracking-wider flex items-center gap-2 rounded-xl"
+              className="btn-whatsapp btn-shine !py-2.5 !px-5 text-xs font-black tracking-wider flex items-center gap-2 rounded-xl shadow-lg shadow-emerald-950/40"
             >
-              <MessageCircle className="w-4 h-4 text-emerald-400" />
+              <MessageCircle className="w-4 h-4 text-white fill-white/20" />
               <span>ASESOR WHATSAPP</span>
             </a>
           </div>
@@ -133,14 +133,14 @@ export default function Header() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={handleWhatsAppClick}
-              className="p-2.5 bg-emerald-600 text-white rounded-xl shadow-sm"
+              className="p-2.5 bg-emerald-600 active:bg-emerald-700 text-white rounded-xl shadow-sm"
               aria-label="Hablar con asesor"
             >
               <MessageCircle className="w-4 h-4" />
             </a>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 text-slate-700 hover:text-slate-950"
+              className="p-2 text-slate-200 hover:text-white"
               aria-label="Abrir menú"
             >
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import CatalogExplorer from "@/components/CatalogExplorer";
+import VehicleFinder from "@/components/VehicleFinder";
 import { OFFICIAL_BRANDS } from "@/data/products";
 import Link from "next/link";
 
@@ -66,6 +67,11 @@ export default function ProductsPage() {
           ))}
         </div>
       </div>
+
+      {/* Unified Vehicle Compatibility Finder - El buscador principal bien optimizado */}
+      <section id="buscador-vehiculo" className="scroll-mt-24">
+        <VehicleFinder />
+      </section>
 
       {/* Interactive Catalog Explorer with Instant Filter, Search & Pagination */}
       <CatalogExplorer />

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import ProductCard from "@/components/ProductCard";
-import VehicleFinder from "@/components/VehicleFinder";
 import { PRODUCTS } from "@/data/products";
 import { Wrench, ShieldCheck, CheckCircle } from "lucide-react";
 
@@ -45,13 +45,27 @@ export default function FiltersPage() {
         </div>
       </div>
 
-      <div>
-        <div className="mb-4">
-          <h2 className="text-xl font-black text-brand-dark">
-            Busca el filtro exacto por modelo de auto
-          </h2>
+      {/* Quick Search & Catalog Link Bar */}
+      <div className="bg-white p-5 rounded-2xl border border-slate-200/90 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="flex items-center gap-3">
+          <div className="w-10 h-10 rounded-xl bg-blue-50 text-[#0A3B8C] flex items-center justify-center shrink-0">
+            <Wrench className="w-5 h-5" />
+          </div>
+          <div>
+            <h3 className="text-sm font-black text-slate-950">
+              ¿Buscando código específico de filtro (AFE-297, AO-3387, AFP-974, AO-1314)?
+            </h3>
+            <p className="text-xs text-slate-500">
+              Contamos con más de 190 filtros Advance Filters y químicos de mantenimiento con búsqueda instantánea.
+            </p>
+          </div>
         </div>
-        <VehicleFinder initialCategory="filtros" />
+        <Link
+          href="/productos?cat=filtros"
+          className="btn-primary btn-shine text-xs font-black uppercase tracking-wider shrink-0 !py-3 !px-5"
+        >
+          Filtrar Filtros en Catálogo →
+        </Link>
       </div>
 
       <div>

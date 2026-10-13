@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Search, CheckCircle2, MessageCircle, RotateCcw } from "lucide-react";
+import { Search, CheckCircle2, MessageCircle, RotateCcw, Car, Truck, Tractor, Bike } from "lucide-react";
 import { VEHICLE_DATABASE } from "@/data/vehicles";
 import { PRODUCTS, Product, ApplicationType } from "@/data/products";
 import { buildWhatsAppLink } from "@/lib/whatsapp";
@@ -17,7 +17,7 @@ interface VehicleFinderProps {
 
 const SEGMENT_PRESETS: {
   id: ApplicationType;
-  emoji: string;
+  icon: typeof Car;
   title: string;
   subtitle: string;
   defaultMake: string;
@@ -25,7 +25,7 @@ const SEGMENT_PRESETS: {
 }[] = [
   {
     id: "autos",
-    emoji: "🚗",
+    icon: Car,
     title: "Autos & SUVs Familiares",
     subtitle: "Sintéticos 5W-30 / Baterías 11-13 Placas",
     defaultMake: "Chevrolet",
@@ -33,7 +33,7 @@ const SEGMENT_PRESETS: {
   },
   {
     id: "camionetas",
-    emoji: "🛻",
+    icon: Truck,
     title: "Camionetas 4x4 & Diésel",
     subtitle: "15W-40 CK-4 / Baterías 27R y Reforzadas (D-Max, Hilux)",
     defaultMake: "Chevrolet",
@@ -41,7 +41,7 @@ const SEGMENT_PRESETS: {
   },
   {
     id: "pesado",
-    emoji: "🚜",
+    icon: Tractor,
     title: "Sector Productivo, Camaroneras & Pesados",
     subtitle: "Canecas, Tambores, Baterías Grupo 31",
     defaultMake: "Pesado / Camaroneras / Flotas",
@@ -49,7 +49,7 @@ const SEGMENT_PRESETS: {
   },
   {
     id: "motos",
-    emoji: "🏍️",
+    icon: Bike,
     title: "Motos & Delivery",
     subtitle: "Motul 4T, Mannol Moto, Baterías Compactas de Gel",
     defaultMake: "Motos (Shineray / Daytona / Bajaj / Honda)",
@@ -231,11 +231,19 @@ export default function VehicleFinder({
                 }`}
               >
                 <div className="flex items-center justify-between">
-                  <span className="text-xl" aria-hidden="true">{seg.emoji}</span>
+                  <div
+                    className={`p-2 rounded-lg ${
+                      isSelected
+                        ? "bg-[#0A3B8C] text-[#FFC500]"
+                        : "bg-blue-50 text-[#0A3B8C]"
+                    }`}
+                  >
+                    <seg.icon className="w-5 h-5" />
+                  </div>
                   <span
                     className={`text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded ${
                       isSelected
-                        ? "bg-brand-primary text-white"
+                        ? "bg-[#0A3B8C] text-white"
                         : "bg-slate-100 text-slate-600"
                     }`}
                   >

@@ -19,7 +19,6 @@ import {
   Tractor,
   Bike,
 } from "lucide-react";
-import VehicleFinder from "@/components/VehicleFinder";
 import ProductCard from "@/components/ProductCard";
 import EmergencyBanner from "@/components/EmergencyBanner";
 import LocationsLogisticsSection from "@/components/LocationsLogisticsSection";
@@ -346,9 +345,38 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 04: TERMINAL DE COMPATIBILIDAD EXHAUSTIVA (VehicleFinder) */}
+      {/* 04: TERMINAL DE COMPATIBILIDAD INTELIGENTE (Acceso Rápido al Buscador) */}
       <section id="buscador" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <VehicleFinder />
+        <div className="bg-gradient-to-br from-slate-900 via-[#061B40] to-slate-950 text-white rounded-3xl p-6 sm:p-10 border border-[#0A3B8C]/40 shadow-xl flex flex-col lg:flex-row items-center justify-between gap-8">
+          <div className="space-y-3 max-w-2xl text-left">
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-amber-400/20 text-[#FFC500] rounded-full text-xs font-black uppercase tracking-wider">
+              <Search className="w-3.5 h-3.5" />
+              <span>Buscador Oficial de Compatibilidad Vehicular</span>
+            </div>
+            <h3 className="text-2xl sm:text-3xl font-black tracking-tight">
+              ¿Quieres saber qué batería o lubricante exacto usa tu modelo?
+            </h3>
+            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              Cruza más de 30 marcas de vehículos en Ecuador (Chevrolet D-Max, Kia Sportage, Toyota Hilux, Hyundai Tucson, Hino, motos) con nuestro motor de compatibilidad técnica verificado en bodega.
+            </p>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-3 w-full lg:w-auto shrink-0">
+            <Link
+              href="/encuentra-tu-producto"
+              className="btn-primary btn-shine !py-4 !px-6 text-xs font-black uppercase tracking-wider text-center flex items-center justify-center gap-2 shadow-lg"
+            >
+              <Search className="w-4 h-4" />
+              <span>ABRIR BUSCADOR POR VEHÍCULO</span>
+            </Link>
+            <Link
+              href="/productos"
+              className="btn-gold !py-4 !px-6 text-xs font-black uppercase tracking-wider text-center shadow-lg"
+            >
+              <span>EXPLORAR TODO EL CATÁLOGO (507)</span>
+            </Link>
+          </div>
+        </div>
       </section>
 
       {/* 05: B2B / CAMARONERAS / FLOTAS / CANECAS BANNER */}

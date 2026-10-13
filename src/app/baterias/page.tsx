@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import ProductCard from "@/components/ProductCard";
-import VehicleFinder from "@/components/VehicleFinder";
 import EmergencyBanner from "@/components/EmergencyBanner";
 import { PRODUCTS } from "@/data/products";
 import { Zap, ShieldCheck, Clock, CheckCircle } from "lucide-react";
@@ -49,14 +49,27 @@ export default function BatteriesPage() {
       {/* Emergency fast CTA strip */}
       <EmergencyBanner />
 
-      {/* Progressive Vehicle Finder focused on batteries */}
-      <div>
-        <div className="mb-4">
-          <h2 className="text-xl font-black text-brand-dark">
-            Encuentra la batería exacta para tu modelo
-          </h2>
+      {/* Quick Search & Catalog Link Bar */}
+      <div className="bg-white p-5 rounded-2xl border border-slate-200/90 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="flex items-center gap-3">
+          <div className="w-10 h-10 rounded-xl bg-blue-50 text-[#0A3B8C] flex items-center justify-center shrink-0">
+            <Zap className="w-5 h-5" />
+          </div>
+          <div>
+            <h3 className="text-sm font-black text-slate-950">
+              ¿No estás seguro de cuántas placas o amperaje necesita tu vehículo?
+            </h3>
+            <p className="text-xs text-slate-500">
+              Usa nuestro buscador inteligente multimarca en el catálogo o consúltanos por WhatsApp con tu placa o modelo.
+            </p>
+          </div>
         </div>
-        <VehicleFinder initialCategory="baterias" />
+        <Link
+          href="/productos?cat=baterias"
+          className="btn-primary btn-shine text-xs font-black uppercase tracking-wider shrink-0 !py-3 !px-5"
+        >
+          Filtrar Baterías en Catálogo →
+        </Link>
       </div>
 
       {/* Products list */}

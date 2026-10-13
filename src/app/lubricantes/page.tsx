@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import ProductCard from "@/components/ProductCard";
-import VehicleFinder from "@/components/VehicleFinder";
 import { PRODUCTS } from "@/data/products";
 import { Layers, ShieldCheck, CheckCircle } from "lucide-react";
 
@@ -41,14 +41,27 @@ export default function LubricantsPage() {
         </div>
       </div>
 
-      {/* Vehicle Finder focused on lubricants */}
-      <div>
-        <div className="mb-4">
-          <h2 className="text-xl font-black text-brand-dark">
-            Verifica la viscosidad recomendada por el fabricante
-          </h2>
+      {/* Quick Search & Catalog Link Bar */}
+      <div className="bg-white p-5 rounded-2xl border border-slate-200/90 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="flex items-center gap-3">
+          <div className="w-10 h-10 rounded-xl bg-blue-50 text-[#0A3B8C] flex items-center justify-center shrink-0">
+            <Layers className="w-5 h-5" />
+          </div>
+          <div>
+            <h3 className="text-sm font-black text-slate-950">
+              ¿Buscando la viscosidad exacta (5W-30, 10W-30, 15W-40, 20W-50)?
+            </h3>
+            <p className="text-xs text-slate-500">
+              Explora los 89 lubricantes disponibles o filtra por marca y tipo de motor en nuestro catálogo oficial.
+            </p>
+          </div>
         </div>
-        <VehicleFinder initialCategory="lubricantes" />
+        <Link
+          href="/productos?cat=lubricantes"
+          className="btn-primary btn-shine text-xs font-black uppercase tracking-wider shrink-0 !py-3 !px-5"
+        >
+          Filtrar Lubricantes en Catálogo →
+        </Link>
       </div>
 
       {/* Products list */}

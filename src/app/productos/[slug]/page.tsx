@@ -17,8 +17,11 @@ interface ProductPageProps {
   params: Promise<{ slug: string }>;
 }
 
+export const dynamicParams = true;
+
 export async function generateStaticParams() {
-  return PRODUCTS.map((product) => ({
+  // Prerender the top 60 highest-demand products at build time for speed, render remainder on-demand
+  return PRODUCTS.slice(0, 60).map((product) => ({
     slug: product.slug,
   }));
 }

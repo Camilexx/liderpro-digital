@@ -15,6 +15,9 @@ import {
   CheckCircle2,
   Sparkles,
   Award,
+  Car,
+  Tractor,
+  Bike,
 } from "lucide-react";
 import VehicleFinder from "@/components/VehicleFinder";
 import ProductCard from "@/components/ProductCard";
@@ -25,37 +28,39 @@ import { PRODUCTS, OFFICIAL_BRANDS, ApplicationType } from "@/data/products";
 import { EDUCATIONAL_ARTICLES } from "@/data/articles";
 import { buildWhatsAppLink } from "@/lib/whatsapp";
 
-const VEHICLE_SEGMENTS: {
+interface VehicleSegment {
   id: ApplicationType | "todos";
-  emoji: string;
+  icon: typeof Car;
   title: string;
   subtitle: string;
   badge: string;
-}[] = [
+}
+
+const VEHICLE_SEGMENTS: VehicleSegment[] = [
   {
     id: "autos",
-    emoji: "🚗",
+    icon: Car,
     title: "Autos & SUVs Familiares",
     subtitle: "Sintéticos 5W-30 / Baterías 11-13 Placas.",
     badge: "Livianos & SUVs",
   },
   {
     id: "camionetas",
-    emoji: "🛻",
+    icon: Truck,
     title: "Camionetas 4x4 & Diésel",
     subtitle: "15W-40 CK-4 / Baterías 27R y Reforzadas (D-Max, Hilux).",
     badge: "4x4 Trabajo",
   },
   {
     id: "pesado",
-    emoji: "🚜",
+    icon: Tractor,
     title: "Sector Productivo, Camaroneras & Pesados",
     subtitle: "Canecas, Tambores, Baterías Grupo 31.",
     badge: "Mayorista / Flotas",
   },
   {
     id: "motos",
-    emoji: "🏍️",
+    icon: Bike,
     title: "Motos & Delivery",
     subtitle: "Motul 4T, Mannol Moto, Baterías Compactas de Gel.",
     badge: "4 Tiempos Ester",
@@ -275,9 +280,15 @@ export default function HomePage() {
                 }`}
               >
                 <div className="flex items-center justify-between w-full">
-                  <span className="text-2xl" aria-hidden="true">
-                    {seg.emoji}
-                  </span>
+                  <div
+                    className={`p-2.5 rounded-xl ${
+                      isActive
+                        ? "bg-[#0A3B8C] text-[#FFC500]"
+                        : "bg-blue-50 text-[#0A3B8C] group-hover:bg-[#0A3B8C] group-hover:text-white"
+                    } transition-colors`}
+                  >
+                    <seg.icon className="w-6 h-6" />
+                  </div>
                   <span
                     className={`text-[10px] font-black uppercase tracking-wider px-2.5 py-0.5 rounded-md ${
                       isActive

@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import ProductCard from "@/components/ProductCard";
-import { PRODUCTS, OFFICIAL_BRANDS } from "@/data/products";
+import CatalogExplorer from "@/components/CatalogExplorer";
+import { OFFICIAL_BRANDS } from "@/data/products";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Catálogo Multimarca Autorizado | Baterías Ecuador, Bosch, Mannol, Motul | LiderPro",
+  title: "Catálogo Multimarca Autorizado (500+ Productos) | Baterías, Aceites, Filtros | LiderPro",
   description:
-    "Catálogo oficial multimarca: Baterías Ecuador, Bosch, Mannol, Motul, Mobil, Havoline, Castrol y Fram. Despacho inmediato desde Sede Pedernales a todo el Ecuador.",
+    "Catálogo oficial multimarca con más de 500 productos verificados en Bodega Pedernales: Baterías Ecuador, Bosch, Aroil, Mannol, Mobil, Motul, Advance Filters y ATE. Despacho a las 24 provincias.",
 };
 
 export default function ProductsPage() {
@@ -17,13 +17,13 @@ export default function ProductsPage() {
         <div className="max-w-3xl space-y-3">
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-emerald-50 text-emerald-800 border border-emerald-200 rounded-full text-xs font-bold uppercase tracking-wider">
             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-            <span>🟢 Stock disponible en Pedernales para despacho nacional</span>
+            <span>🟢 507 productos en inventario físico • Bodega Pedernales</span>
           </div>
           <h1 className="text-2xl sm:text-4xl font-black text-slate-950 tracking-tight">
             Catálogo Oficial Multimarca LiderPro
           </h1>
           <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-            Distribuidor autorizado con centro de operaciones mayorista y minorista en <strong>Pedernales, Manabí</strong>. Productos 100% originales con garantía de fábrica, facturación SRI y envíos diarios a las 24 provincias.
+            Distribuidor autorizado multimarca con centro logístico y de despacho mayorista/minorista en <strong>Pedernales, Manabí</strong>. Productos 100% legítimos con garantía de fábrica, facturación electrónica SRI y envíos diarios a las 24 provincias de Ecuador.
           </p>
 
           <div className="pt-2 flex flex-wrap gap-2 text-xs">
@@ -31,25 +31,25 @@ export default function ProductsPage() {
               href="/baterias"
               className="px-3.5 py-2 bg-slate-100 hover:bg-slate-200 text-slate-800 rounded-lg font-bold transition-colors"
             >
-              🔋 Baterías Ecuador & Bosch
+              🔋 Baterías Ecuador & Bosch (48)
             </Link>
             <Link
               href="/lubricantes"
               className="px-3.5 py-2 bg-slate-100 hover:bg-slate-200 text-slate-800 rounded-lg font-bold transition-colors"
             >
-              🛢️ Aroil, Mannol, Mobil & Motul
+              🛢️ Aroil, Mannol, Mobil & Motul (89)
             </Link>
             <Link
               href="/filtros"
               className="px-3.5 py-2 bg-slate-100 hover:bg-slate-200 text-slate-800 rounded-lg font-bold transition-colors"
             >
-              ⚙️ Advance Filters & Químicos ATE/ABRO
+              ⚙️ Advance Filters & Químicos ATE (250+)
             </Link>
             <Link
               href="/encuentra-tu-producto"
               className="px-3.5 py-2 btn-primary btn-shine text-white rounded-lg font-bold text-xs"
             >
-              🔍 Filtrar por mi vehículo
+              🔍 Buscador por Vehículo
             </Link>
           </div>
         </div>
@@ -67,23 +67,8 @@ export default function ProductsPage() {
         </div>
       </div>
 
-      {/* Grid of Verified Products */}
-      <div>
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-6">
-          <span className="text-xs font-bold uppercase tracking-wider text-slate-500">
-            Mostrando {PRODUCTS.length} líneas multimarca en stock
-          </span>
-          <span className="text-xs font-bold text-emerald-800 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200 w-fit">
-            Despacho inmediato desde Sede Pedernales
-          </span>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {PRODUCTS.map((prod) => (
-            <ProductCard key={prod.id} product={prod} />
-          ))}
-        </div>
-      </div>
+      {/* Interactive Catalog Explorer with Instant Filter, Search & Pagination */}
+      <CatalogExplorer />
     </div>
   );
 }

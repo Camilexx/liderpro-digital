@@ -33,13 +33,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           {/* Brand & Official Logo */}
           <div className="md:col-span-2 space-y-4">
-            <div className="inline-block p-2 rounded-xl bg-white/10 backdrop-blur-md border border-white/15">
+            <div className="inline-block">
               <Image
-                src="/images/logo.png"
+                src="/images/logo-white.png"
                 alt="LiderPro - Productos Automotrices"
-                width={210}
-                height={58}
-                className="h-12 sm:h-14 w-auto object-contain"
+                width={220}
+                height={55}
+                className="h-12 sm:h-14 w-auto object-contain hover:scale-[1.02] transition-transform duration-300"
               />
             </div>
 

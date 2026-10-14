@@ -40,10 +40,10 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-40 bg-[#061B40] text-white border-b border-blue-900/60 shadow-lg transition-all backdrop-blur-md">
+    <header className="sticky top-0 z-40 bg-[#0B0F19] text-white border-b border-[#FFC500]/20 shadow-xl transition-all backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-18 sm:h-20">
-          {/* Official Logo with White Borders & Zero Black Box */}
+          {/* Official Logo */}
           <Link href="/" className="flex items-center group py-1.5 focus:outline-none shrink-0">
             <div className="relative">
               <Image
@@ -52,74 +52,66 @@ export default function Header() {
                 width={200}
                 height={48}
                 priority
-                className="h-9 sm:h-11 w-auto object-contain hover:scale-[1.02] transition-transform duration-200"
+                className="h-10 sm:h-12 w-auto object-contain hover:scale-[1.02] transition-transform duration-200"
               />
             </div>
           </Link>
 
-          {/* Desktop Navigation - Clean, Balanced & Well-Aligned */}
-          <nav className="hidden lg:flex items-center gap-6 xl:gap-8 text-[13px] font-semibold text-slate-200">
+          {/* Desktop Navigation - 100% Golden & Single Word for Maximum Legibility */}
+          <nav className="hidden lg:flex items-center gap-6 xl:gap-8 text-[13px] font-bold text-[#FFC500]">
             <Link
               href="/encuentra-tu-producto"
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-blue-950/70 border border-blue-400/30 hover:border-amber-400/60 hover:text-white text-slate-200 font-bold transition-all text-xs tracking-tight shadow-2xs hover:bg-blue-900/80"
+              className="hover:text-white transition-colors py-1 flex items-center gap-1.5 relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-[#FFC500] after:scale-x-0 hover:after:scale-x-100 after:transition-transform"
             >
               <Search className="w-3.5 h-3.5 text-[#FFC500]" />
-              <span>Buscador Vehicular</span>
+              <span>Buscador</span>
             </Link>
             <Link
               href="/productos"
-              className="hover:text-[#FFC500] transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-[#FFC500] after:scale-x-0 hover:after:scale-x-100 after:transition-transform"
+              className="hover:text-white transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-[#FFC500] after:scale-x-0 hover:after:scale-x-100 after:transition-transform"
             >
               Catálogo
             </Link>
             <Link
               href="/baterias"
-              className="hover:text-[#FFC500] transition-colors py-1"
+              className="hover:text-white transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-[#FFC500] after:scale-x-0 hover:after:scale-x-100 after:transition-transform"
             >
               Baterías
             </Link>
             <Link
               href="/lubricantes"
-              className="hover:text-[#FFC500] transition-colors py-1"
+              className="hover:text-white transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-[#FFC500] after:scale-x-0 hover:after:scale-x-100 after:transition-transform"
             >
               Lubricantes
             </Link>
             <Link
               href="/filtros"
-              className="hover:text-[#FFC500] transition-colors py-1"
+              className="hover:text-white transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-[#FFC500] after:scale-x-0 hover:after:scale-x-100 after:transition-transform"
             >
               Filtros
             </Link>
             <Link
               href="/b2b"
-              className="hover:text-[#FFC500] transition-colors py-1 text-amber-300 font-bold"
+              className="hover:text-white transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-[#FFC500] after:scale-x-0 hover:after:scale-x-100 after:transition-transform"
             >
-              Atención B2B
+              Mayorista
             </Link>
             <Link
-              href="/sucursales"
-              className="hover:text-[#FFC500] transition-colors py-1 text-slate-300"
+              href="/envios"
+              className="hover:text-white transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-[#FFC500] after:scale-x-0 hover:after:scale-x-100 after:transition-transform"
             >
-              Puntos & Envíos
+              Envíos
             </Link>
           </nav>
 
-          {/* Right Action: Asesor WhatsApp (Oficial Verde Esmeralda) */}
+          {/* Right Action: Asesor WhatsApp (Oficial Verde Esmeralda) - Asesoría Activa removed */}
           <div className="hidden sm:flex items-center gap-3 shrink-0">
-            <div className="hidden xl:flex items-center gap-2 px-3 py-1 bg-blue-950/80 border border-blue-800/80 rounded-full text-[11px] font-semibold text-slate-300">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-              </span>
-              <span>Asesoría Activa</span>
-            </div>
-
             <a
               href={buildWhatsAppLink("general_quote")}
               target="_blank"
               rel="noopener noreferrer"
               onClick={handleWhatsAppClick}
-              className="btn-whatsapp btn-shine !bg-[#25D366] hover:!bg-[#20ba59] !text-slate-950 hover:!text-black !py-2.5 !px-5 text-xs font-black tracking-wider flex items-center gap-2 rounded-xl shadow-lg shadow-emerald-950/40 border border-emerald-400/30"
+              className="btn-whatsapp btn-shine !bg-[#25D366] hover:!bg-[#20ba59] !text-slate-950 hover:!text-black !py-2.5 !px-5 text-xs font-black tracking-wider flex items-center gap-2 rounded-xl shadow-lg shadow-emerald-950/40 border border-emerald-400/30 shrink-0"
             >
               <MessageCircle className="w-4 h-4 text-slate-950 fill-black/10" />
               <span>ASESOR WHATSAPP</span>
@@ -133,7 +125,7 @@ export default function Header() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={handleWhatsAppClick}
-              className="p-2.5 bg-emerald-600 active:bg-emerald-700 text-white rounded-xl shadow-sm"
+              className="p-2.5 bg-[#25D366] active:bg-[#20ba59] text-slate-950 rounded-xl shadow-sm font-bold"
               aria-label="Hablar con asesor"
             >
               <MessageCircle className="w-4 h-4" />
@@ -143,7 +135,7 @@ export default function Header() {
               className="p-2 text-slate-200 hover:text-white"
               aria-label="Abrir menú"
             >
-              {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+              {mobileMenuOpen ? <X className="w-5 h-5 text-[#FFC500]" /> : <Menu className="w-5 h-5 text-[#FFC500]" />}
             </button>
           </div>
         </div>
@@ -151,70 +143,69 @@ export default function Header() {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden border-t border-slate-200 bg-white px-5 py-5 space-y-4 shadow-xl">
-          <nav className="flex flex-col space-y-3 text-sm font-semibold text-slate-800">
+        <div className="lg:hidden border-t border-white/10 bg-[#0B0F19] px-5 py-5 space-y-4 shadow-2xl">
+          <nav className="flex flex-col space-y-3 text-sm font-bold text-[#FFC500]">
             <Link
               href="/encuentra-tu-producto"
               onClick={() => setMobileMenuOpen(false)}
-              className="text-[#0A3B8C] font-bold flex items-center gap-2"
+              className="hover:text-white flex items-center gap-2"
             >
-              <Search className="w-4 h-4" />
-              <span>Encuentra tu producto por vehículo</span>
+              <Search className="w-4 h-4 text-[#FFC500]" />
+              <span>Buscador</span>
             </Link>
             <Link
               href="/productos"
               onClick={() => setMobileMenuOpen(false)}
+              className="hover:text-white"
             >
-              Catálogo de Productos Completo
+              Catálogo
             </Link>
             <Link
               href="/baterias"
               onClick={() => setMobileMenuOpen(false)}
+              className="hover:text-white"
             >
-              Baterías Automotrices
+              Baterías
             </Link>
             <Link
               href="/lubricantes"
               onClick={() => setMobileMenuOpen(false)}
+              className="hover:text-white"
             >
-              Lubricantes y Aceites
+              Lubricantes
             </Link>
             <Link
               href="/filtros"
               onClick={() => setMobileMenuOpen(false)}
+              className="hover:text-white"
             >
-              Filtros y Químicos
+              Filtros
             </Link>
             <Link
               href="/b2b"
               onClick={() => setMobileMenuOpen(false)}
+              className="hover:text-white"
             >
-              Atención B2B y Flotas
+              Mayorista
             </Link>
             <Link
-              href="/sucursales"
+              href="/envios"
               onClick={() => setMobileMenuOpen(false)}
+              className="hover:text-white"
             >
-              Puntos Pedernales y Envíos
-            </Link>
-            <Link
-              href="/emergencia-bateria"
-              onClick={() => setMobileMenuOpen(false)}
-              className="text-amber-700 font-bold"
-            >
-              ⚡ ¿Tu vehículo no enciende?
+              Envíos
             </Link>
           </nav>
 
           {/* Mobile Social Links */}
-          <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
-            <span className="font-semibold text-slate-700">Síguenos:</span>
+          <div className="pt-3 border-t border-white/10 flex items-center justify-between text-xs text-slate-400">
+            <span className="font-semibold text-slate-300">Síguenos:</span>
             <div className="flex items-center gap-3">
               <a
                 href={BUSINESS_CONFIG.socialLinks.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded-lg bg-slate-100 text-slate-700 hover:text-[#0A3B8C]"
+                className="p-2 rounded-lg bg-white/5 text-slate-300 hover:text-[#FFC500]"
                 aria-label="Instagram"
               >
                 <InstagramIcon className="w-4 h-4" />
@@ -223,7 +214,7 @@ export default function Header() {
                 href={BUSINESS_CONFIG.socialLinks.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded-lg bg-slate-100 text-slate-700 hover:text-[#0A3B8C]"
+                className="p-2 rounded-lg bg-white/5 text-slate-300 hover:text-[#FFC500]"
                 aria-label="Facebook"
               >
                 <FacebookIcon className="w-4 h-4" />
@@ -232,7 +223,7 @@ export default function Header() {
                 href={BUSINESS_CONFIG.socialLinks.tiktok}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded-lg bg-slate-100 text-slate-700 hover:text-[#0A3B8C]"
+                className="p-2 rounded-lg bg-white/5 text-slate-300 hover:text-[#FFC500]"
                 aria-label="TikTok"
               >
                 <TikTokIcon className="w-4 h-4" />
@@ -246,10 +237,10 @@ export default function Header() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={handleWhatsAppClick}
-              className="w-full py-3 btn-primary text-xs font-bold rounded-xl flex items-center justify-center gap-2"
+              className="w-full py-3 !bg-[#25D366] hover:!bg-[#20ba59] !text-slate-950 text-xs font-black rounded-xl flex items-center justify-center gap-2 shadow-lg"
             >
               <MessageCircle className="w-4 h-4" />
-              <span>Hablar con un asesor técnico</span>
+              <span>ASESOR WHATSAPP</span>
             </a>
           </div>
         </div>

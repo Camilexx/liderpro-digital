@@ -94,7 +94,7 @@ export const BUSINESS_CONFIG: BusinessConfig = {
       isStrategicHub: true,
       features: [
         "Bodega matriz de Baterías Ecuador, Bosch, Mannol, Motul, Mobil, Havoline y Castrol",
-        "Despacho diario por Reina del Camino, Trans Esmeraldas, Enetsa y Couriers",
+        "Despacho diario a nivel nacional según destino coordinado por WhatsApp",
         "Abastecimiento de canecas, tambores y Baterías Grupo 31 para camaroneras y flotas",
         "Diagnóstico eléctrico y facturación electrónica SRI inmediata",
       ],
@@ -120,7 +120,7 @@ export const BUSINESS_CONFIG: BusinessConfig = {
   },
   shipping: {
     primaryMessage: "Hub Logístico Pedernales: Despacho Diario a las 24 Provincias",
-    subMessage: "Encomiendas Interprovinciales (Reina del Camino, Trans Esmeraldas, Enetsa) y Couriers Autorizados",
+    subMessage: "Transporte Interprovincial y Encomiendas a Nivel Nacional según Destino",
     disclaimer:
       "Todos los despachos salen verificados desde nuestra Sede Central en Pedernales (Manabí) con foto de guía y protocolo de seguridad: embalaje reforzado antiderrame para lubricantes/refrigerantes y anclaje técnico para baterías selladas.",
     zones: [

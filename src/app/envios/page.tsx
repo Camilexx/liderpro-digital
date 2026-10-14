@@ -6,7 +6,7 @@ import { buildWhatsAppLink } from "@/lib/whatsapp";
 export const metadata: Metadata = {
   title: "Despacho Nacional desde Hub Pedernales | Envíos a las 24 Provincias | LiderPro Ecuador",
   description:
-    "Despacho diario desde nuestra Sede Central en Pedernales por Reina del Camino, Trans Esmeraldas, Enetsa y couriers autorizados. Embalaje antiderrame y anclaje para baterías.",
+    "Despacho diario a nivel nacional a las 24 provincias desde nuestra Sede Central en Pedernales por transporte interprovincial y courier según destino. Embalaje antiderrame y anclaje técnico.",
 };
 
 export default function ShippingPage() {
@@ -40,18 +40,18 @@ export default function ShippingPage() {
             <span>Circuito Diario de Despacho</span>
           </div>
           <h3 className="text-xl font-black text-slate-950">
-            Encomiendas Interprovinciales y Couriers Autorizados
+            Despacho Nacional a las 24 Provincias
           </h3>
           <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-            Aprovechamos la conectividad estratégica de Pedernales con la Sierra y la Costa para realizar embarques diarios mediante:
+            Aprovechamos la conectividad estratégica de Pedernales con la Sierra y la Costa para realizar embarques diarios adaptados a tu ubicación:
           </p>
           <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200 space-y-2 text-xs text-slate-800">
-            <p><strong>• Transporte Interprovincial Directo:</strong> Reina del Camino, Trans Esmeraldas, Enetsa y cooperativas aliadas.</p>
-            <p><strong>• Couriers Autorizados:</strong> Entrega en agencia o dirección comercial según cobertura provincial.</p>
-            <p><strong>• Entrega al Día Siguiente (24h):</strong> Quito, Guayaquil, Santo Domingo, Manta, Portoviejo, Esmeraldas y Quevedo.</p>
+            <p><strong>• Transporte Interprovincial y Encomiendas:</strong> Despacho coordinado en la empresa de transporte más conveniente según tu cantón y provincia de destino.</p>
+            <p><strong>• Servicio de Courier Nacional:</strong> Entrega directa en agencia autorizada o dirección comercial según cobertura.</p>
+            <p><strong>• Rutas Directas (24h a 48h):</strong> Conexión ágil con Quito, Guayaquil, Santo Domingo, Manta, Portoviejo, Esmeraldas, Cuenca, Machala y todo el país.</p>
           </div>
           <p className="text-xs text-slate-500">
-            Tan pronto tu pedido es embarcado en Pedernales, tu asesor te envía por WhatsApp la foto del paquete sellado y el número de guía oficial.
+            La empresa encargada del envío se define y acuerda directamente contigo por WhatsApp según tu conveniencia. Al embarcar, te enviamos foto del paquete embalado y la guía de remisión oficial.
           </p>
         </div>
 

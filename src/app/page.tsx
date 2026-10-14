@@ -128,7 +128,7 @@ export default function HomePage() {
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                <span>Envíos diarios por Reina del Camino, Trans Esmeraldas y Enetsa</span>
+                <span>Despacho diario a nivel nacional según destino</span>
               </div>
             </div>
           </div>

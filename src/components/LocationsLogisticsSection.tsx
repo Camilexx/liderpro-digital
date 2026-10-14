@@ -87,7 +87,7 @@ export default function LocationsLogisticsSection() {
                 Entrega al Día Siguiente
               </h3>
               <p className="text-xs text-slate-600 leading-relaxed mb-4">
-                Despacho diario por encomiendas interprovinciales (<strong>Reina del Camino, Trans Esmeraldas, Enetsa</strong>) y couriers autorizados.
+                Despacho diario por transporte interprovincial y courier a nivel nacional. La empresa logística se define según tu cantón y destino directamente por WhatsApp.
               </p>
               <div className="text-xs text-slate-600 space-y-1.5 border-t border-slate-100 pt-3">
                 <p><strong>Rutas Express 24h:</strong> Quito, Guayaquil, Santo Domingo, Manta, Portoviejo y Esmeraldas.</p>

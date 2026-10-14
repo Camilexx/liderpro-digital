@@ -27,25 +27,25 @@ function TikTokIcon({ className = "w-3.5 h-3.5" }: { className?: string }) {
 
 export default function AnnouncementBar() {
   return (
-    <div className="bg-[#04122D] text-slate-300 py-2 px-4 sm:px-6 lg:px-8 text-xs border-b border-blue-900/40">
+    <div className="bg-[#070A10] text-slate-300 py-2 px-4 sm:px-6 lg:px-8 text-xs border-b border-white/10">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="flex items-center gap-2">
           <span className="w-2 h-2 rounded-full bg-[#FFC500] animate-pulse"></span>
           <span className="font-semibold text-white tracking-wide text-[11px] sm:text-xs">
             Hub Central Pedernales, Manabí
           </span>
-          <span className="text-slate-400 hidden md:inline">•</span>
+          <span className="text-slate-500 hidden md:inline">•</span>
           <span className="text-slate-300 hidden md:inline text-[11px]">
-            Despachos diarios a las 24 provincias (Reina del Camino, Trans Esmeraldas, Enetsa)
+            Despachos diarios a nivel nacional (24 provincias)
           </span>
         </div>
 
         <div className="flex items-center gap-4 text-[11px]">
           <Link
             href="/envios"
-            className="hidden sm:inline text-amber-300 hover:text-amber-200 font-semibold underline underline-offset-2"
+            className="hidden sm:inline text-[#FFC500] hover:text-white font-bold transition-colors"
           >
-            Rutas & Despacho
+            Envíos
           </Link>
           <div className="flex items-center gap-2.5 border-l border-slate-700/80 pl-3">
             <a

@@ -17,8 +17,8 @@ export interface Product {
   brand: string;
   category: ProductCategory;
   applicationType: ApplicationType;
-  volume?: string;
-  plates?: string;
+  volume?: string | null;
+  plates?: string | null;
   shortSpec: string;
   specifications: Record<string, string>;
   fullSpecs: Record<string, string>;

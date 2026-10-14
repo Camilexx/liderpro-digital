@@ -44,7 +44,7 @@ const SEGMENT_PRESETS: {
     icon: Tractor,
     title: "Sector Productivo, Camaroneras & Pesados",
     subtitle: "Canecas, Tambores, Baterías Grupo 31",
-    defaultMake: "Pesado / Camaroneras / Flotas",
+    defaultMake: "Sector Camaronero / Maquinaria Pesada",
     defaultNeed: "lubricantes",
   },
   {
@@ -52,7 +52,7 @@ const SEGMENT_PRESETS: {
     icon: Bike,
     title: "Motos & Delivery",
     subtitle: "Motul 4T, Mannol Moto, Baterías Compactas de Gel",
-    defaultMake: "Motos (Shineray / Daytona / Bajaj / Honda)",
+    defaultMake: "Motos Multimarca (Bajaj / Shineray / Daytona / Honda / Yamaha)",
     defaultNeed: "lubricantes",
   },
 ];
@@ -142,15 +142,39 @@ export default function VehicleFinder({
       matchLabel = segObj ? `Segmento activo: ${segObj.title}` : "Productos recomendados";
     } else if (selectedMake && selectedModel) {
       if (currentModelData && currentModelData.recommendedCategories) {
-        const categoryKey = selectedNeed as keyof typeof currentModelData.recommendedCategories;
-        const skus = currentModelData.recommendedCategories[categoryKey];
-        if (skus && skus.length > 0) {
-          matchedProducts = PRODUCTS.filter((p) => skus.includes(p.sku));
-          if (matchedProducts.length > 0) {
-            isExactMatch = true;
-            matchLabel = `Compatibilidad verificada para ${selectedMake} ${selectedModel} ${selectedYear ? `(${selectedYear})` : ""}`;
+        if (selectedNeed === "todas") {
+          const allSkus = Object.values(currentModelData.recommendedCategories).flat();
+          matchedProducts = PRODUCTS.filter((p) => allSkus.includes(p.sku));
+        } else {
+          const categoryKey = selectedNeed as keyof typeof currentModelData.recommendedCategories;
+          const skus = currentModelData.recommendedCategories[categoryKey];
+          if (skus && skus.length > 0) {
+            matchedProducts = PRODUCTS.filter((p) => skus.includes(p.sku));
           }
         }
+      }
+
+      // Supplementary search from p.compatibleVehicles if more products match this make/model
+      const supplementary = PRODUCTS.filter((p) => {
+        if (matchedProducts.some((m) => m.id === p.id)) return false;
+        if (selectedNeed !== "todas" && p.category !== selectedNeed) return false;
+        return p.compatibleVehicles.some(
+          (cv) =>
+            cv.make.toLowerCase() === selectedMake.toLowerCase() ||
+            selectedMake.toLowerCase().includes(cv.make.toLowerCase())
+        );
+      });
+
+      if (matchedProducts.length > 0) {
+        isExactMatch = true;
+        matchLabel = `Compatibilidad técnica verificada para ${selectedMake} ${selectedModel} ${selectedYear ? `(${selectedYear})` : ""}`;
+        if (supplementary.length > 0 && matchedProducts.length < 6) {
+          matchedProducts = [...matchedProducts, ...supplementary.slice(0, 6 - matchedProducts.length)];
+        }
+      } else if (supplementary.length > 0) {
+        matchedProducts = supplementary.slice(0, 8);
+        isExactMatch = true;
+        matchLabel = `Productos recomendados para ${selectedMake} ${selectedModel}`;
       }
     }
   }
@@ -396,11 +420,14 @@ export default function VehicleFinder({
               onChange={(e) => setSelectedNeed(e.target.value)}
               className="w-full h-12 px-3.5 bg-slate-50 border border-slate-200 rounded-xl text-sm font-medium text-slate-900 focus:bg-white focus:outline-none focus:border-slate-400 transition-colors"
             >
-              <option value="baterias">Baterías (Ecuador / Bosch)</option>
-              <option value="lubricantes">Aceites (Mannol / Motul / Mobil / Havoline / Castrol)</option>
-              <option value="filtros">Filtros Blindados (Fram / Bosch)</option>
-              <option value="refrigerantes">Refrigerante OAT 50/50</option>
-              <option value="aditivos">Aditivos Ceramo Ester</option>
+              <option value="todas">Ver Todos los Repuestos Compatibles</option>
+              <option value="baterias">Baterías (Baterías Ecuador / Bosch)</option>
+              <option value="lubricantes">Aceites (Mannol / Aroil / Mobil / Valvoline / Motul)</option>
+              <option value="filtros">Filtros Originales (Advance Filters)</option>
+              <option value="bujias">Bujías de Encendido (NGK / Denso)</option>
+              <option value="refrigerantes">Refrigerantes OAT AF12+ / Dexcoolant</option>
+              <option value="frenos">Líquidos de Freno (ATE Original)</option>
+              <option value="aditivos">Aditivos Ceramo Ester & Tratamientos Bardahl</option>
             </select>
           </div>
 

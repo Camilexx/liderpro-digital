@@ -9,6 +9,8 @@ import {
   ArrowLeft,
   MapPin,
   Check,
+  HelpCircle,
+  Wrench,
 } from "lucide-react";
 import { PRODUCTS } from "@/data/products";
 import { buildWhatsAppLink } from "@/lib/whatsapp";
@@ -162,9 +164,12 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
       {/* Specifications & Verified Applications */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 space-y-4">
-          <h3 className="text-base font-black text-slate-950 border-b border-slate-100 pb-3">
-            Ficha Técnica y Especificaciones
-          </h3>
+          <div className="flex items-center gap-2 border-b border-slate-100 pb-3">
+            <Wrench className="w-4 h-4 text-brand-primary" />
+            <h3 className="text-base font-black text-slate-950">
+              Ficha Técnica y Stock Físico
+            </h3>
+          </div>
           <div className="space-y-2.5 text-xs">
             {Object.entries(product.specifications).map(([key, val]) => (
               <div key={key} className="flex justify-between py-1.5 border-b border-slate-50 last:border-0">
@@ -176,22 +181,79 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
         </div>
 
         <div className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 space-y-4">
-          <h3 className="text-base font-black text-slate-950 border-b border-slate-100 pb-3">
-            Aplicaciones Verificadas
-          </h3>
+          <div className="flex items-center gap-2 border-b border-slate-100 pb-3">
+            <ShieldCheck className="w-4 h-4 text-emerald-600" />
+            <h3 className="text-base font-black text-slate-950">
+              Vehículos Compatibles Verificados ({product.compatibleVehicles.length})
+            </h3>
+          </div>
           <p className="text-xs text-slate-500">
-            Compatibilidad técnica comprobada para los siguientes modelos en Ecuador:
+            Compatibilidad mecánica e instalación directa verificada para el parque automotor de Ecuador:
           </p>
-          <div className="space-y-2 text-xs">
+          <div className="space-y-2 text-xs max-h-[380px] overflow-y-auto pr-1">
             {product.compatibleVehicles.map((veh, idx) => (
-              <div key={idx} className="p-3 bg-slate-50 rounded-xl flex justify-between items-center">
-                <span className="font-bold text-slate-900">{veh.make} {veh.model}</span>
-                <span className="text-slate-500 font-mono">{veh.yearRange}</span>
+              <div key={idx} className="p-3 bg-slate-50 hover:bg-slate-100/80 transition-colors rounded-xl flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1 border border-slate-100">
+                <div>
+                  <span className="font-bold text-slate-900">{veh.make} {veh.model}</span>
+                  {veh.engine && (
+                    <span className="block text-[11px] text-slate-500 font-medium">
+                      Motorización: {veh.engine}
+                    </span>
+                  )}
+                </div>
+                <span className="text-[11px] font-mono text-slate-600 bg-white px-2 py-0.5 rounded border border-slate-200 shrink-0 self-start sm:self-center">
+                  {veh.yearRange}
+                </span>
               </div>
             ))}
           </div>
         </div>
       </div>
+
+      {/* Deep Engineering Specs */}
+      {product.fullSpecs && Object.keys(product.fullSpecs).length > 0 && (
+        <div className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 space-y-4">
+          <h3 className="text-base font-black text-slate-950 border-b border-slate-100 pb-3 flex items-center gap-2">
+            <span>Especificaciones de Rendimiento y Tolerancia del Fabricante</span>
+          </h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-xs">
+            {Object.entries(product.fullSpecs).map(([param, val]) => (
+              <div key={param} className="p-3.5 bg-slate-50 rounded-xl border border-slate-100 space-y-1">
+                <span className="text-[10.5px] uppercase font-bold text-slate-500 tracking-wider block">
+                  {param}
+                </span>
+                <span className="font-bold text-slate-900 block text-xs">
+                  {val}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* FAQs and Shipping Guarantee */}
+      {product.faqs && product.faqs.length > 0 && (
+        <div className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 space-y-4">
+          <div className="flex items-center gap-2 border-b border-slate-100 pb-3">
+            <HelpCircle className="w-4 h-4 text-brand-primary" />
+            <h3 className="text-base font-black text-slate-950">
+              Preguntas Frecuentes y Garantía de Despacho
+            </h3>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+            {product.faqs.map((faq, idx) => (
+              <div key={idx} className="p-4 bg-slate-50 rounded-xl border border-slate-100 space-y-1.5">
+                <h4 className="font-bold text-slate-900">
+                  {faq.question}
+                </h4>
+                <p className="text-slate-600 leading-relaxed text-[11.5px]">
+                  {faq.answer}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 }

@@ -168,39 +168,54 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 02: FRANJA DE CONFIANZA DE MARCAS OFICIALES (Brand Showcase) */}
+      {/* 02: FRANJA INSTITUCIONAL DE MARCAS OFICIALES (Brand Showcase) */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 animate-fade-up delay-100">
-        <div className="bg-slate-100/80 border border-slate-200/90 rounded-2xl p-5 sm:p-6 space-y-4">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-            <div className="flex items-center gap-2 text-xs font-black uppercase tracking-wider text-slate-700">
-              <Award className="w-4 h-4 text-brand-primary" />
-              <span>Respaldo de Marcas Oficiales de Alta Rotación en Ecuador</span>
+        <div className="bg-white border border-slate-200/90 rounded-3xl p-6 sm:p-8 space-y-6 shadow-sm">
+          {/* Institutional Heading */}
+          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-4 border-b border-slate-100">
+            <div className="space-y-1.5 max-w-2xl">
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-blue-50 border border-blue-200/80 rounded-full text-[10.5px] font-black uppercase tracking-wider text-[#0A3B8C]">
+                <Award className="w-3.5 h-3.5" />
+                <span>Distribuidor Autorizado Multimarca • Sede Pedernales</span>
+              </div>
+              <h2 className="text-xl sm:text-2xl font-black text-slate-950 tracking-tight">
+                Respaldo de Marcas Oficiales de Alta Rotación en Ecuador
+              </h2>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                Abastecimiento directo con garantía de fabricante, fichas técnicas certificadas y lotes originales sellados para vehículos livianos, camionetas y flotas pesadas.
+              </p>
             </div>
-            <span className="text-[11px] text-slate-500 font-semibold">
-              Lotes 100% Originales • Sellados de Fábrica
-            </span>
+
+            <div className="flex flex-wrap items-center gap-3 text-xs font-bold text-slate-700">
+              <div className="flex items-center gap-2 px-3 py-1.5 bg-slate-50 border border-slate-200 rounded-xl">
+                <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                <span>100% Sellado de Fábrica</span>
+              </div>
+              <div className="flex items-center gap-2 px-3 py-1.5 bg-slate-50 border border-slate-200 rounded-xl">
+                <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                <span>Facturación SRI Inmediata</span>
+              </div>
+            </div>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-3">
+          {/* 14 Official Brands Matrix - 2 rows of 7 */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-3 sm:gap-3.5">
             {OFFICIAL_BRANDS.map((brand) => (
               <div
                 key={brand.name}
-                className="border border-slate-200/90 bg-white shadow-xs rounded-xl p-3 font-semibold text-slate-800 flex flex-col items-center justify-between text-center hover:border-blue-400 hover:shadow-md hover:-translate-y-1 transition-all duration-200 group"
+                className="border border-slate-200/80 bg-slate-50/60 hover:bg-white hover:border-[#0A3B8C] hover:shadow-md rounded-2xl p-3.5 flex flex-col items-center justify-between text-center transition-all duration-300 group"
               >
-                <div className="relative w-full h-11 flex items-center justify-center p-1">
+                <div className="relative w-full h-12 flex items-center justify-center p-1">
                   <Image
                     src={brand.logoUrl}
                     alt={`Logo oficial ${brand.name} Ecuador`}
-                    width={140}
-                    height={44}
-                    className="max-h-9 max-w-full object-contain group-hover:scale-105 transition-transform duration-200"
+                    width={150}
+                    height={48}
+                    className="max-h-10 max-w-full object-contain filter group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-                <div className="mt-2 w-full pt-1.5 border-t border-slate-100 flex flex-col items-center">
-                  <span className="text-[11px] font-black tracking-tight text-slate-900 line-clamp-1">
-                    {brand.name}
-                  </span>
-                  <span className="text-[9px] text-slate-500 font-medium mt-0.5 line-clamp-1">
+                <div className="mt-2.5 w-full pt-2 border-t border-slate-200/60 flex flex-col items-center">
+                  <span className="text-[10px] text-slate-600 font-semibold tracking-tight line-clamp-1 group-hover:text-slate-950 transition-colors">
                     {brand.specialty}
                   </span>
                 </div>

@@ -181,18 +181,29 @@ export default function HomePage() {
             </span>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-2.5">
+          <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-3">
             {OFFICIAL_BRANDS.map((brand) => (
               <div
                 key={brand.name}
-                className="border border-slate-200/80 bg-white shadow-sm rounded-lg py-2.5 px-3 font-semibold text-slate-800 flex flex-col items-center justify-center text-center hover:border-slate-400 hover:-translate-y-0.5 transition-all"
+                className="border border-slate-200/90 bg-white shadow-xs rounded-xl p-3 font-semibold text-slate-800 flex flex-col items-center justify-between text-center hover:border-blue-400 hover:shadow-md hover:-translate-y-1 transition-all duration-200 group"
               >
-                <span className="text-xs font-black tracking-tight text-slate-950">
-                  {brand.name}
-                </span>
-                <span className="text-[9.5px] text-slate-500 font-medium mt-0.5 line-clamp-1">
-                  {brand.specialty}
-                </span>
+                <div className="relative w-full h-11 flex items-center justify-center p-1">
+                  <Image
+                    src={brand.logoUrl}
+                    alt={`Logo oficial ${brand.name} Ecuador`}
+                    width={140}
+                    height={44}
+                    className="max-h-9 max-w-full object-contain group-hover:scale-105 transition-transform duration-200"
+                  />
+                </div>
+                <div className="mt-2 w-full pt-1.5 border-t border-slate-100 flex flex-col items-center">
+                  <span className="text-[11px] font-black tracking-tight text-slate-900 line-clamp-1">
+                    {brand.name}
+                  </span>
+                  <span className="text-[9px] text-slate-500 font-medium mt-0.5 line-clamp-1">
+                    {brand.specialty}
+                  </span>
+                </div>
               </div>
             ))}
           </div>

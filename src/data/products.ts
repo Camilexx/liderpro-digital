@@ -47,20 +47,20 @@ export interface Product {
 }
 
 export const OFFICIAL_BRANDS = [
-  { name: "BATERÍAS ECUADOR", origin: "Línea Oficial Nacional", specialty: "Energía & Arranque High Power" },
-  { name: "BOSCH", origin: "Tecnología Alemana", specialty: "Baterías S4 PowerFrame" },
-  { name: "MANNOL", origin: "Ingeniería Alemana", specialty: "Sintéticos 5W-30, 10W-30, Aditivos & Coolant" },
-  { name: "AROIL", origin: "Alta Rotación Ecuador", specialty: "Super 40, 15W-40, 25W-60 & ATF D-III" },
-  { name: "MOBIL", origin: "ExxonMobil Global", specialty: "Mobil Delvac 1300 Super & 20W-50" },
-  { name: "MOTUL", origin: "Especialista Francés", specialty: "Motos 4T Technosynthese Ester" },
-  { name: "VALVOLINE", origin: "Líder Americano", specialty: "Valvodiesel 15W-40 & Classic 20W-50" },
-  { name: "AMALIE", origin: "Fórmula Americana", specialty: "Synthetic Blend 10W-30 & 20W-50" },
-  { name: "ADVANCE", origin: "Filtración Automotriz", specialty: "Filtros de Aceite, Combustible & Aire" },
-  { name: "ATE", origin: "Equipo Original Alemán", specialty: "Líquidos de Freno DOT 3 & DOT 4" },
-  { name: "NGK", origin: "Líder en Encendido", specialty: "Bujías Platino G-Power & Cobre" },
-  { name: "DENSO", origin: "Equipo Original Japonés", specialty: "Bujías de Alta Precisión" },
-  { name: "BARDAHL", origin: "Aditivos Profesionales", specialty: "Tratamiento B1, B2 & Antifricción" },
-  { name: "ABRO", origin: "Fórmula Americana", specialty: "Refrigerantes & Químicos" },
+  { name: "BATERÍAS ECUADOR", logoUrl: "/images/brands/baterias-ecuador.png", origin: "Línea Oficial Nacional", specialty: "Energía & Arranque High Power" },
+  { name: "BOSCH", logoUrl: "/images/brands/bosch.png", origin: "Tecnología Alemana", specialty: "Baterías S4 PowerFrame" },
+  { name: "MANNOL", logoUrl: "/images/brands/mannol.png", origin: "Ingeniería Alemana", specialty: "Sintéticos 5W-30, 10W-30, Aditivos & Coolant" },
+  { name: "AROIL", logoUrl: "/images/brands/aroil.png", origin: "Alta Rotación Ecuador", specialty: "Super 40, 15W-40, 25W-60 & ATF D-III" },
+  { name: "MOBIL", logoUrl: "/images/brands/mobil.png", origin: "ExxonMobil Global", specialty: "Mobil Delvac 1300 Super & 20W-50" },
+  { name: "MOTUL", logoUrl: "/images/brands/motul.png", origin: "Especialista Francés", specialty: "Motos 4T Technosynthese Ester" },
+  { name: "VALVOLINE", logoUrl: "/images/brands/valvoline.png", origin: "Líder Americano", specialty: "Valvodiesel 15W-40 & Classic 20W-50" },
+  { name: "AMALIE", logoUrl: "/images/brands/amalie.png", origin: "Fórmula Americana", specialty: "Synthetic Blend 10W-30 & 20W-50" },
+  { name: "ADVANCE", logoUrl: "/images/brands/advance.png", origin: "Filtración Automotriz", specialty: "Filtros de Aceite, Combustible & Aire" },
+  { name: "ATE", logoUrl: "/images/brands/ate.png", origin: "Equipo Original Alemán", specialty: "Líquidos de Freno DOT 3 & DOT 4" },
+  { name: "NGK", logoUrl: "/images/brands/ngk.png", origin: "Líder en Encendido", specialty: "Bujías Platino G-Power & Cobre" },
+  { name: "DENSO", logoUrl: "/images/brands/denso.png", origin: "Equipo Original Japonés", specialty: "Bujías de Alta Precisión" },
+  { name: "BARDAHL", logoUrl: "/images/brands/bardahl.png", origin: "Aditivos Profesionales", specialty: "Tratamiento B1, B2 & Antifricción" },
+  { name: "ABRO", logoUrl: "/images/brands/abro.png", origin: "Fórmula Americana", specialty: "Refrigerantes & Químicos" },
 ] as const;
 
 export const PRODUCTS: Product[] = [

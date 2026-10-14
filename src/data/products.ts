@@ -17,8 +17,8 @@ export interface Product {
   brand: string;
   category: ProductCategory;
   applicationType: ApplicationType;
-  volume?: string | null;
-  plates?: string | null;
+  volume?: string;
+  plates?: string;
   shortSpec: string;
   specifications: Record<string, string>;
   fullSpecs: Record<string, string>;
@@ -73,7 +73,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "motos",
     "volume": "Envase 1 Litro",
-    "plates": null,
     "shortSpec": "Lubricante Motor Motul • Envase 1 Litro • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "01001012",
@@ -175,7 +174,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "motos",
     "volume": "Envase 1 Litro",
-    "plates": null,
     "shortSpec": "Lubricante Motor Motul • Envase 1 Litro • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "01098960",
@@ -277,7 +275,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "motos",
     "volume": "Envase 1 Litro",
-    "plates": null,
     "shortSpec": "Lubricante Motor Motul • Envase 1 Litro • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "01099362",
@@ -379,7 +376,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "pesado",
     "volume": "Envase 1 Litro",
-    "plates": null,
     "shortSpec": "Lubricante Motor Mannol • Envase 1 Litro • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "012MN2203-20",
@@ -457,7 +453,6 @@ export const PRODUCTS: Product[] = [
     "category": "refrigerantes",
     "applicationType": "autos",
     "volume": "Envase 1 Litro",
-    "plates": null,
     "shortSpec": "Refrigerante Anticongelante Mannol • Envase 1 Litro • Protección anticorrosiva",
     "specifications": {
       "Código de Artículo": "012MN4011-1",
@@ -527,7 +522,6 @@ export const PRODUCTS: Product[] = [
     "category": "refrigerantes",
     "applicationType": "autos",
     "volume": "Envase 1 Litro",
-    "plates": null,
     "shortSpec": "Refrigerante Anticongelante Mannol • Envase 1 Litro • Protección anticorrosiva",
     "specifications": {
       "Código de Artículo": "012MN4011-20",
@@ -597,7 +591,6 @@ export const PRODUCTS: Product[] = [
     "category": "refrigerantes",
     "applicationType": "autos",
     "volume": "Garrafa 5 Litros",
-    "plates": null,
     "shortSpec": "Refrigerante Anticongelante Mannol • Garrafa 5 Litros • Protección anticorrosiva",
     "specifications": {
       "Código de Artículo": "012MN4011-5",
@@ -667,7 +660,6 @@ export const PRODUCTS: Product[] = [
     "category": "refrigerantes",
     "applicationType": "autos",
     "volume": "Envase 1 Litro",
-    "plates": null,
     "shortSpec": "Refrigerante Anticongelante Mannol • Envase 1 Litro • Protección anticorrosiva",
     "specifications": {
       "Código de Artículo": "012MN4012-1",
@@ -755,7 +747,6 @@ export const PRODUCTS: Product[] = [
     "category": "refrigerantes",
     "applicationType": "autos",
     "volume": "Envase 1 Litro",
-    "plates": null,
     "shortSpec": "Refrigerante Anticongelante Mannol • Envase 1 Litro • Protección anticorrosiva",
     "specifications": {
       "Código de Artículo": "012MN4012-20",
@@ -843,7 +834,6 @@ export const PRODUCTS: Product[] = [
     "category": "refrigerantes",
     "applicationType": "autos",
     "volume": "Garrafa 5 Litros",
-    "plates": null,
     "shortSpec": "Refrigerante Anticongelante Mannol • Garrafa 5 Litros • Protección anticorrosiva",
     "specifications": {
       "Código de Artículo": "012MN4012-5",
@@ -931,7 +921,6 @@ export const PRODUCTS: Product[] = [
     "category": "refrigerantes",
     "applicationType": "autos",
     "volume": "Envase 1 Litro",
-    "plates": null,
     "shortSpec": "Refrigerante Anticongelante Mannol • Envase 1 Litro • Protección anticorrosiva",
     "specifications": {
       "Código de Artículo": "012MN4013-1",
@@ -1001,7 +990,6 @@ export const PRODUCTS: Product[] = [
     "category": "refrigerantes",
     "applicationType": "autos",
     "volume": "Garrafa 5 Litros",
-    "plates": null,
     "shortSpec": "Refrigerante Anticongelante Mannol • Garrafa 5 Litros • Protección anticorrosiva",
     "specifications": {
       "Código de Artículo": "012MN4013-5",
@@ -1071,7 +1059,6 @@ export const PRODUCTS: Product[] = [
     "category": "refrigerantes",
     "applicationType": "autos",
     "volume": "Envase 1 Litro",
-    "plates": null,
     "shortSpec": "Refrigerante Anticongelante Mannol • Envase 1 Litro • Protección anticorrosiva",
     "specifications": {
       "Código de Artículo": "012MN4016-1",
@@ -1147,7 +1134,6 @@ export const PRODUCTS: Product[] = [
     "category": "refrigerantes",
     "applicationType": "autos",
     "volume": "Garrafa 5 Litros",
-    "plates": null,
     "shortSpec": "Refrigerante Anticongelante Mannol • Garrafa 5 Litros • Protección anticorrosiva",
     "specifications": {
       "Código de Artículo": "012MN4016-5",
@@ -1223,7 +1209,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "250 ML",
-    "plates": null,
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN5022 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN5022",
@@ -1289,8 +1274,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Mannol",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN6145 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN6145",
@@ -1355,8 +1338,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Mannol",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN6149 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN6149",
@@ -1422,7 +1403,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "pesado",
     "volume": "Envase 1 Litro",
-    "plates": null,
     "shortSpec": "Lubricante Motor Mannol • Envase 1 Litro • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "012MN7104-1",
@@ -1542,7 +1522,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "pesado",
     "volume": "10 LT",
-    "plates": null,
     "shortSpec": "Lubricante Motor Mannol • 10 LT • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "012MN7104-10A",
@@ -1662,7 +1641,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "pesado",
     "volume": "1 CAN",
-    "plates": null,
     "shortSpec": "Lubricante Motor Mannol • 1 CAN • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "012MN7104-20A",
@@ -1782,7 +1760,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "pesado",
     "volume": "Garrafa 5 Litros",
-    "plates": null,
     "shortSpec": "Lubricante Motor Mannol • Garrafa 5 Litros • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "012MN7104-5A",
@@ -1902,7 +1879,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Envase 1 Litro",
-    "plates": null,
     "shortSpec": "Lubricante Motor Mannol • Envase 1 Litro • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "012MN7105-20",
@@ -1998,7 +1974,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Envase 1 Litro",
-    "plates": null,
     "shortSpec": "Lubricante Motor Mannol • Envase 1 Litro • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "012MN7404-1A",
@@ -2094,7 +2069,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Galón (3.785 L)",
-    "plates": null,
     "shortSpec": "Lubricante Motor Mannol • Galón (3.785 L) • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "012MN7404-4A",
@@ -2190,7 +2164,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Envase 1 Litro",
-    "plates": null,
     "shortSpec": "Lubricante Motor Mannol • Envase 1 Litro • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "012MN7501-1",
@@ -2286,7 +2259,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Galón (3.785 L)",
-    "plates": null,
     "shortSpec": "Lubricante Motor Mannol • Galón (3.785 L) • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "012MN7501-4",
@@ -2382,7 +2354,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Caneca 20 Litros",
-    "plates": null,
     "shortSpec": "Lubricante Motor Mannol • Caneca 20 Litros • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "012MN7512-1A",
@@ -2478,7 +2449,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Galón (3.785 L)",
-    "plates": null,
     "shortSpec": "Lubricante Motor Mannol • Galón (3.785 L) • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "012MN7512-4A",
@@ -2574,7 +2544,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Envase 1 Litro",
-    "plates": null,
     "shortSpec": "Lubricante Motor Mannol • Envase 1 Litro • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "012MN7701-1",
@@ -2670,7 +2639,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Envase 1 Litro",
-    "plates": null,
     "shortSpec": "Lubricante Motor Mannol • Envase 1 Litro • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "012MN7709-1",
@@ -2766,7 +2734,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Galón (3.785 L)",
-    "plates": null,
     "shortSpec": "Lubricante Motor Mannol • Galón (3.785 L) • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "012MN7709-4",
@@ -2862,7 +2829,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Envase 1 Litro",
-    "plates": null,
     "shortSpec": "Lubricante Motor Mannol • Envase 1 Litro • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "012MN7713-1",
@@ -2958,7 +2924,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Galón (3.785 L)",
-    "plates": null,
     "shortSpec": "Lubricante Motor Mannol • Galón (3.785 L) • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "012MN7713-4",
@@ -3054,7 +3019,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Envase 1 Litro",
-    "plates": null,
     "shortSpec": "Lubricante Motor Mannol • Envase 1 Litro • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "012MN7720-1",
@@ -3150,7 +3114,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Galón (3.785 L)",
-    "plates": null,
     "shortSpec": "Lubricante Motor Mannol • Galón (3.785 L) • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "012MN7720-4",
@@ -3246,7 +3209,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Garrafa 5 Litros",
-    "plates": null,
     "shortSpec": "Lubricante Motor Mannol • Garrafa 5 Litros • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "012MN7726-5",
@@ -3342,7 +3304,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "motos",
     "volume": "Envase 1 Litro",
-    "plates": null,
     "shortSpec": "Lubricante Motor Mannol • Envase 1 Litro • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "012MN7812-1",
@@ -3444,7 +3405,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "motos",
     "volume": "Envase 1 Litro",
-    "plates": null,
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN7814-1 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN7814-1",
@@ -3511,7 +3471,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Envase 1 Litro",
-    "plates": null,
     "shortSpec": "Lubricante Motor Mannol • Envase 1 Litro • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "012MN7832",
@@ -3589,7 +3548,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "200 ML",
-    "plates": null,
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN7901 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN7901",
@@ -3656,7 +3614,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "400 ML",
-    "plates": null,
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN7904 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN7904",
@@ -3723,7 +3680,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "Envase 1 Litro",
-    "plates": null,
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN7904-1 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN7904-1",
@@ -3790,7 +3746,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "Garrafa 5 Litros",
-    "plates": null,
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN7904-5 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN7904-5",
@@ -3857,7 +3812,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Envase 1 Litro",
-    "plates": null,
     "shortSpec": "Lubricante Motor Mannol • Envase 1 Litro • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "012MN7906-1A",
@@ -3935,7 +3889,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Galón (3.785 L)",
-    "plates": null,
     "shortSpec": "Lubricante Motor Mannol • Galón (3.785 L) • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "012MN7906-4A",
@@ -4013,7 +3966,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Envase 1 Litro",
-    "plates": null,
     "shortSpec": "Lubricante Motor Mannol • Envase 1 Litro • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "012MN7909-1",
@@ -4109,7 +4061,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Garrafa 5 Litros",
-    "plates": null,
     "shortSpec": "Lubricante Motor Mannol • Garrafa 5 Litros • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "012MN7909-5",
@@ -4205,7 +4156,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Envase 1 Litro",
-    "plates": null,
     "shortSpec": "Lubricante Motor Mannol • Envase 1 Litro • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "012MN7914-1A",
@@ -4301,7 +4251,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Galón (3.785 L)",
-    "plates": null,
     "shortSpec": "Lubricante Motor Mannol • Galón (3.785 L) • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "012MN7914-4A",
@@ -4397,7 +4346,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Envase 1 Litro",
-    "plates": null,
     "shortSpec": "Lubricante Motor Mannol • Envase 1 Litro • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "012MN7924-1",
@@ -4493,7 +4441,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Galón (3.785 L)",
-    "plates": null,
     "shortSpec": "Lubricante Motor Mannol • Galón (3.785 L) • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "012MN7924-4",
@@ -4588,8 +4535,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Mannol",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN8028-08 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN8028-08",
@@ -4654,8 +4599,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Mannol",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN8029 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN8029",
@@ -4720,8 +4663,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Mannol",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN8029-023 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN8029-023",
@@ -4786,8 +4727,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Mannol",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN8029-04 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN8029-04",
@@ -4852,8 +4791,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Mannol",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN8029-08 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN8029-08",
@@ -4919,7 +4856,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "Envase 1 Litro",
-    "plates": null,
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN8101-1A • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN8101-1A",
@@ -4986,7 +4922,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "Galón (3.785 L)",
-    "plates": null,
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN8101-4 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN8101-4",
@@ -5053,7 +4988,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Envase 1 Litro",
-    "plates": null,
     "shortSpec": "Lubricante Motor Mannol • Envase 1 Litro • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "012MN8105-20",
@@ -5143,7 +5077,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Galón (3.785 L)",
-    "plates": null,
     "shortSpec": "Lubricante Motor Mannol • Galón (3.785 L) • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "012MN8105-4",
@@ -5233,7 +5166,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Envase 1 Litro",
-    "plates": null,
     "shortSpec": "Lubricante Motor Mannol • Envase 1 Litro • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "012MN8106-1",
@@ -5323,7 +5255,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Galón (3.785 L)",
-    "plates": null,
     "shortSpec": "Lubricante Motor Mannol • Galón (3.785 L) • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "012MN8106-4",
@@ -5413,7 +5344,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Envase 1 Litro",
-    "plates": null,
     "shortSpec": "Lubricante Motor Mannol • Envase 1 Litro • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "012MN8107-20",
@@ -5503,7 +5433,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Galón (3.785 L)",
-    "plates": null,
     "shortSpec": "Lubricante Motor Mannol • Galón (3.785 L) • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "012MN8107-4",
@@ -5593,7 +5522,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Envase 1 Litro",
-    "plates": null,
     "shortSpec": "Lubricante Motor Mannol • Envase 1 Litro • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "012MN8108-1",
@@ -5683,7 +5611,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Galón (3.785 L)",
-    "plates": null,
     "shortSpec": "Lubricante Motor Mannol • Galón (3.785 L) • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "012MN8108-4",
@@ -5773,7 +5700,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "Envase 1 Litro",
-    "plates": null,
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN8115-1 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN8115-1",
@@ -5839,8 +5765,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Mannol",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN8116 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN8116",
@@ -5905,8 +5829,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Mannol",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN8121 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN8121",
@@ -5972,7 +5894,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "Envase 1 Litro",
-    "plates": null,
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN8202-1 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN8202-1",
@@ -6039,7 +5960,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Envase 1 Litro",
-    "plates": null,
     "shortSpec": "Lubricante Motor Mannol • Envase 1 Litro • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "012MN8206-1",
@@ -6117,7 +6037,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Envase 1 Litro",
-    "plates": null,
     "shortSpec": "Lubricante Motor Mannol • Envase 1 Litro • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "012MN8207-1",
@@ -6195,7 +6114,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "Envase 1 Litro",
-    "plates": null,
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN8220-1 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN8220-1",
@@ -6262,7 +6180,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Envase 1 Litro",
-    "plates": null,
     "shortSpec": "Lubricante Motor Mannol • Envase 1 Litro • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "012MN8222-1",
@@ -6340,7 +6257,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "motos",
     "volume": "450 ML",
-    "plates": null,
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN9009-045 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN9009-045",
@@ -6407,7 +6323,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "500 ML",
-    "plates": null,
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN9201 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN9201",
@@ -6474,7 +6389,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "450 ML",
-    "plates": null,
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN9202-045 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN9202-045",
@@ -6541,7 +6455,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "250 ML",
-    "plates": null,
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN9423-025 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN9423-025",
@@ -6608,7 +6521,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "450 ML",
-    "plates": null,
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN9669 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN9669",
@@ -6675,7 +6587,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "600 ml",
-    "plates": null,
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN9672 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN9672",
@@ -6742,7 +6653,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "650 ML",
-    "plates": null,
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN9673 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN9673",
@@ -6809,7 +6719,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "600 ml",
-    "plates": null,
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN9770 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN9770",
@@ -6875,8 +6784,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Mannol",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN9822 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN9822",
@@ -6942,7 +6849,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "250 ML",
-    "plates": null,
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN9829-025 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN9829-025",
@@ -7021,7 +6927,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "400 ML",
-    "plates": null,
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN9873 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN9873",
@@ -7088,7 +6993,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "400 ML",
-    "plates": null,
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN9892 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN9892",
@@ -7155,7 +7059,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "450 ML",
-    "plates": null,
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN9893 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN9893",
@@ -7221,8 +7124,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Mannol",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN9897 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN9897",
@@ -7288,7 +7189,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "motos",
     "volume": "350 ML",
-    "plates": null,
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN9900 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN9900",
@@ -7355,7 +7255,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "100 ML",
-    "plates": null,
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN9902-01 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN9902-01",
@@ -7422,7 +7321,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "100 ML",
-    "plates": null,
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN9903-01 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN9903-01",
@@ -7489,7 +7387,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "450 ML",
-    "plates": null,
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN9906 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN9906",
@@ -7555,8 +7452,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Mannol",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN9909 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN9909",
@@ -7621,8 +7516,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Mannol",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN9911 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN9911",
@@ -7688,7 +7581,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "250 ML",
-    "plates": null,
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN9923-025 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN9923-025",
@@ -7755,7 +7647,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "10 ML",
-    "plates": null,
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN9927 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN9927",
@@ -7822,7 +7713,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "450 ML",
-    "plates": null,
     "shortSpec": "Lubricante Motor Mannol • 450 ML • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "012MN9929-045",
@@ -7900,7 +7790,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "1 LT",
-    "plates": null,
     "shortSpec": "Lubricante Motor Mannol • 1 LT • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "012MN9929-1",
@@ -7978,7 +7867,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "100 ML",
-    "plates": null,
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN9930-01 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN9930-01",
@@ -8045,7 +7933,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "250 ML",
-    "plates": null,
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN9930-025 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN9930-025",
@@ -8112,7 +7999,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "650 ML",
-    "plates": null,
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN9931 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN9931",
@@ -8179,7 +8065,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "pesado",
     "volume": "500 ML",
-    "plates": null,
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN9939-05 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN9939-05",
@@ -8246,7 +8131,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "motos",
     "volume": "450 ML",
-    "plates": null,
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN9943 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN9943",
@@ -8313,7 +8197,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "450 ML",
-    "plates": null,
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN9944 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN9944",
@@ -8380,7 +8263,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "250 ML",
-    "plates": null,
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN9950-025 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN9950-025",
@@ -8447,7 +8329,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "450 ML",
-    "plates": null,
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN9954-045 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN9954-045",
@@ -8514,7 +8395,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "450 ML",
-    "plates": null,
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN9955-045 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN9955-045",
@@ -8581,7 +8461,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "250 ML",
-    "plates": null,
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN9956-025 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN9956-025",
@@ -8648,7 +8527,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "250 ML",
-    "plates": null,
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN9957-025 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN9957-025",
@@ -8715,7 +8593,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "400 ML",
-    "plates": null,
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN9958 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN9958",
@@ -8782,7 +8659,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "250 ML",
-    "plates": null,
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN9965 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN9965",
@@ -8849,7 +8725,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "250 ML",
-    "plates": null,
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN9966-025 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN9966-025",
@@ -8916,7 +8791,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "250 ML",
-    "plates": null,
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN9968-025 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN9968-025",
@@ -8983,7 +8857,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "520 ML",
-    "plates": null,
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN9971 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN9971",
@@ -9050,7 +8923,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "motos",
     "volume": "500 ML",
-    "plates": null,
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN9973 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN9973",
@@ -9117,7 +8989,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "500 ML",
-    "plates": null,
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN9974 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN9974",
@@ -9184,7 +9055,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "300 ML",
-    "plates": null,
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN9980 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN9980",
@@ -9251,7 +9121,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "300 ML",
-    "plates": null,
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN9981 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN9981",
@@ -9318,7 +9187,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "motos",
     "volume": "350 ML",
-    "plates": null,
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN9990 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN9990",
@@ -9385,7 +9253,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "300 ML",
-    "plates": null,
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN9991 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN9991",
@@ -9451,8 +9318,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Mannol",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MNAMB • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MNAMB",
@@ -9517,8 +9382,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Mannol",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Químico / Aditivo Mannol • SKU 012TDCM • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012TDCM",
@@ -9584,7 +9447,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "pesado",
     "volume": "Envase 1 Litro",
-    "plates": null,
     "shortSpec": "Lubricante Motor Mobil • Envase 1 Litro • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "01504MD04-15W40",
@@ -9704,7 +9566,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "pesado",
     "volume": "40 CAN",
-    "plates": null,
     "shortSpec": "Lubricante Motor Mobil • 40 CAN • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "015MD-51300",
@@ -9824,7 +9685,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "pesado",
     "volume": "Galón (3.785 L)",
-    "plates": null,
     "shortSpec": "Lubricante Motor Mobil • Galón (3.785 L) • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "015MD-513002.5",
@@ -9943,8 +9803,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Mobil",
     "category": "lubricantes",
     "applicationType": "pesado",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Lubricante Motor Mobil • Presentación Oficial • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "015MD12-15W40",
@@ -10062,8 +9920,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Mobil",
     "category": "lubricantes",
     "applicationType": "pesado",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Lubricante Motor Mobil • Presentación Oficial • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "015MD2.5-15W40",
@@ -10182,7 +10038,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "pesado",
     "volume": "40 CAN",
-    "plates": null,
     "shortSpec": "Lubricante Motor Mobil • 40 CAN • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "015MD5-15W40",
@@ -10302,7 +10157,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Galón (3.785 L)",
-    "plates": null,
     "shortSpec": "Lubricante Motor Mobil • Galón (3.785 L) • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "015MS04-10W30",
@@ -10398,7 +10252,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Galón (3.785 L)",
-    "plates": null,
     "shortSpec": "Lubricante Motor Mobil • Galón (3.785 L) • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "015MS04-20W50",
@@ -10494,7 +10347,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Envase 1 Litro",
-    "plates": null,
     "shortSpec": "Lubricante Motor Mobil • Envase 1 Litro • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "015MS12-10W30",
@@ -10590,7 +10442,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Envase 1 Litro",
-    "plates": null,
     "shortSpec": "Lubricante Motor Mobil • Envase 1 Litro • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "015MS12-20W50",
@@ -10686,7 +10537,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Envase 1 Litro",
-    "plates": null,
     "shortSpec": "Lubricante Motor Amalie • Envase 1 Litro • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "016AM-75676-56",
@@ -10782,7 +10632,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Galón (3.785 L)",
-    "plates": null,
     "shortSpec": "Lubricante Motor Amalie • Galón (3.785 L) • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "016AM-75677-36",
@@ -10878,7 +10727,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Envase 1 Litro",
-    "plates": null,
     "shortSpec": "Lubricante Motor Amalie • Envase 1 Litro • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "016AM-75696-56",
@@ -10974,7 +10822,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Galón (3.785 L)",
-    "plates": null,
     "shortSpec": "Lubricante Motor Amalie • Galón (3.785 L) • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "016AM-75697-36",
@@ -11069,7 +10916,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Bosch",
     "category": "baterias",
     "applicationType": "autos",
-    "volume": null,
     "plates": "64 Amperios (CCA Certificado)",
     "shortSpec": "Batería Automotriz Bosch • 64 Amperios (CCA Certificado) • Arranque en frío CCA verificado",
     "specifications": {
@@ -11170,7 +11016,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Bosch",
     "category": "baterias",
     "applicationType": "autos",
-    "volume": null,
     "plates": "64 Amperios (CCA Certificado)",
     "shortSpec": "Batería Automotriz Bosch • 64 Amperios (CCA Certificado) • Arranque en frío CCA verificado",
     "specifications": {
@@ -11271,7 +11116,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Bosch",
     "category": "baterias",
     "applicationType": "camionetas",
-    "volume": null,
     "plates": "85 Amperios (CCA Certificado)",
     "shortSpec": "Batería Automotriz Bosch • 85 Amperios (CCA Certificado) • Arranque en frío CCA verificado",
     "specifications": {
@@ -11372,7 +11216,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Bosch",
     "category": "baterias",
     "applicationType": "camionetas",
-    "volume": null,
     "plates": "88 Amperios (CCA Certificado)",
     "shortSpec": "Batería Automotriz Bosch • 88 Amperios (CCA Certificado) • Arranque en frío CCA verificado",
     "specifications": {
@@ -11473,7 +11316,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Bosch",
     "category": "baterias",
     "applicationType": "autos",
-    "volume": null,
     "plates": "70 Amperios (CCA Certificado)",
     "shortSpec": "Batería Automotriz Bosch • 70 Amperios (CCA Certificado) • Arranque en frío CCA verificado",
     "specifications": {
@@ -11574,7 +11416,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Bosch",
     "category": "baterias",
     "applicationType": "autos",
-    "volume": null,
     "plates": "45 Amperios (CCA Certificado)",
     "shortSpec": "Batería Automotriz Bosch • 45 Amperios (CCA Certificado) • Arranque en frío CCA verificado",
     "specifications": {
@@ -11675,7 +11516,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Bosch",
     "category": "baterias",
     "applicationType": "autos",
-    "volume": null,
     "plates": "55 Amperios (CCA Certificado)",
     "shortSpec": "Batería Automotriz Bosch • 55 Amperios (CCA Certificado) • Arranque en frío CCA verificado",
     "specifications": {
@@ -11776,7 +11616,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Bosch",
     "category": "baterias",
     "applicationType": "autos",
-    "volume": null,
     "plates": "Placas Reforzadas BCI",
     "shortSpec": "Batería Automotriz Bosch • Placas Reforzadas BCI • Arranque en frío CCA verificado",
     "specifications": {
@@ -11853,7 +11692,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Bosch",
     "category": "baterias",
     "applicationType": "autos",
-    "volume": null,
     "plates": "43 Amperios (CCA Certificado)",
     "shortSpec": "Batería Automotriz Bosch • 43 Amperios (CCA Certificado) • Arranque en frío CCA verificado",
     "specifications": {
@@ -11936,7 +11774,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Bosch",
     "category": "baterias",
     "applicationType": "autos",
-    "volume": null,
     "plates": "11-13 Placas (45 - 55 Ah)",
     "shortSpec": "Batería Automotriz Bosch • 11-13 Placas (45 - 55 Ah) • Arranque en frío CCA verificado",
     "specifications": {
@@ -12037,7 +11874,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Bosch",
     "category": "baterias",
     "applicationType": "autos",
-    "volume": null,
     "plates": "42 Amperios (CCA Certificado)",
     "shortSpec": "Batería Automotriz Bosch • 42 Amperios (CCA Certificado) • Arranque en frío CCA verificado",
     "specifications": {
@@ -12138,7 +11974,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Baterías Ecuador",
     "category": "baterias",
     "applicationType": "autos",
-    "volume": null,
     "plates": "65 Amperios (CCA Certificado)",
     "shortSpec": "Batería Automotriz Baterías Ecuador • 65 Amperios (CCA Certificado) • Arranque en frío CCA verificado",
     "specifications": {
@@ -12239,7 +12074,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Baterías Ecuador",
     "category": "baterias",
     "applicationType": "autos",
-    "volume": null,
     "plates": "65 Amperios (CCA Certificado)",
     "shortSpec": "Batería Automotriz Baterías Ecuador • 65 Amperios (CCA Certificado) • Arranque en frío CCA verificado",
     "specifications": {
@@ -12340,7 +12174,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Baterías Ecuador",
     "category": "baterias",
     "applicationType": "autos",
-    "volume": null,
     "plates": "85 Amperios (CCA Certificado)",
     "shortSpec": "Batería Automotriz Baterías Ecuador • 85 Amperios (CCA Certificado) • Arranque en frío CCA verificado",
     "specifications": {
@@ -12441,7 +12274,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Baterías Ecuador",
     "category": "baterias",
     "applicationType": "camionetas",
-    "volume": null,
     "plates": "80 Amperios (CCA Certificado)",
     "shortSpec": "Batería Automotriz Baterías Ecuador • 80 Amperios (CCA Certificado) • Arranque en frío CCA verificado",
     "specifications": {
@@ -12542,7 +12374,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Baterías Ecuador",
     "category": "baterias",
     "applicationType": "camionetas",
-    "volume": null,
     "plates": "80 Amperios (CCA Certificado)",
     "shortSpec": "Batería Automotriz Baterías Ecuador • 80 Amperios (CCA Certificado) • Arranque en frío CCA verificado",
     "specifications": {
@@ -12643,7 +12474,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Baterías Ecuador",
     "category": "baterias",
     "applicationType": "camionetas",
-    "volume": null,
     "plates": "95 Amperios (CCA Certificado)",
     "shortSpec": "Batería Automotriz Baterías Ecuador • 95 Amperios (CCA Certificado) • Arranque en frío CCA verificado",
     "specifications": {
@@ -12744,7 +12574,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Baterías Ecuador",
     "category": "baterias",
     "applicationType": "camionetas",
-    "volume": null,
     "plates": "95 Amperios (CCA Certificado)",
     "shortSpec": "Batería Automotriz Baterías Ecuador • 95 Amperios (CCA Certificado) • Arranque en frío CCA verificado",
     "specifications": {
@@ -12845,7 +12674,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Baterías Ecuador",
     "category": "baterias",
     "applicationType": "autos",
-    "volume": null,
     "plates": "105 Amperios (CCA Certificado)",
     "shortSpec": "Batería Automotriz Baterías Ecuador • 105 Amperios (CCA Certificado) • Arranque en frío CCA verificado",
     "specifications": {
@@ -12934,7 +12762,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Baterías Ecuador",
     "category": "baterias",
     "applicationType": "autos",
-    "volume": null,
     "plates": "65 Amperios (CCA Certificado)",
     "shortSpec": "Batería Automotriz Baterías Ecuador • 65 Amperios (CCA Certificado) • Arranque en frío CCA verificado",
     "specifications": {
@@ -13035,7 +12862,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Baterías Ecuador",
     "category": "baterias",
     "applicationType": "autos",
-    "volume": null,
     "plates": "65 Amperios (CCA Certificado)",
     "shortSpec": "Batería Automotriz Baterías Ecuador • 65 Amperios (CCA Certificado) • Arranque en frío CCA verificado",
     "specifications": {
@@ -13136,7 +12962,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Baterías Ecuador",
     "category": "baterias",
     "applicationType": "autos",
-    "volume": null,
     "plates": "80 Amperios (CCA Certificado)",
     "shortSpec": "Batería Automotriz Baterías Ecuador • 80 Amperios (CCA Certificado) • Arranque en frío CCA verificado",
     "specifications": {
@@ -13237,7 +13062,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Baterías Ecuador",
     "category": "baterias",
     "applicationType": "autos",
-    "volume": null,
     "plates": "80 Amperios (CCA Certificado)",
     "shortSpec": "Batería Automotriz Baterías Ecuador • 80 Amperios (CCA Certificado) • Arranque en frío CCA verificado",
     "specifications": {
@@ -13338,7 +13162,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Baterías Ecuador",
     "category": "baterias",
     "applicationType": "autos",
-    "volume": null,
     "plates": "50 Amperios (CCA Certificado)",
     "shortSpec": "Batería Automotriz Baterías Ecuador • 50 Amperios (CCA Certificado) • Arranque en frío CCA verificado",
     "specifications": {
@@ -13421,7 +13244,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Baterías Ecuador",
     "category": "baterias",
     "applicationType": "autos",
-    "volume": null,
     "plates": "55 Amperios (CCA Certificado)",
     "shortSpec": "Batería Automotriz Baterías Ecuador • 55 Amperios (CCA Certificado) • Arranque en frío CCA verificado",
     "specifications": {
@@ -13522,7 +13344,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Baterías Ecuador",
     "category": "baterias",
     "applicationType": "autos",
-    "volume": null,
     "plates": "62 Amperios (CCA Certificado)",
     "shortSpec": "Batería Automotriz Baterías Ecuador • 62 Amperios (CCA Certificado) • Arranque en frío CCA verificado",
     "specifications": {
@@ -13623,7 +13444,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Baterías Ecuador",
     "category": "baterias",
     "applicationType": "autos",
-    "volume": null,
     "plates": "62 Amperios (CCA Certificado)",
     "shortSpec": "Batería Automotriz Baterías Ecuador • 62 Amperios (CCA Certificado) • Arranque en frío CCA verificado",
     "specifications": {
@@ -13724,7 +13544,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Baterías Ecuador",
     "category": "baterias",
     "applicationType": "autos",
-    "volume": null,
     "plates": "63 Amperios (CCA Certificado)",
     "shortSpec": "Batería Automotriz Baterías Ecuador • 63 Amperios (CCA Certificado) • Arranque en frío CCA verificado",
     "specifications": {
@@ -13801,7 +13620,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Baterías Ecuador",
     "category": "baterias",
     "applicationType": "autos",
-    "volume": null,
     "plates": "63 Amperios (CCA Certificado)",
     "shortSpec": "Batería Automotriz Baterías Ecuador • 63 Amperios (CCA Certificado) • Arranque en frío CCA verificado",
     "specifications": {
@@ -13878,7 +13696,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Baterías Ecuador",
     "category": "baterias",
     "applicationType": "autos",
-    "volume": null,
     "plates": "65 Amperios (CCA Certificado)",
     "shortSpec": "Batería Automotriz Baterías Ecuador • 65 Amperios (CCA Certificado) • Arranque en frío CCA verificado",
     "specifications": {
@@ -13955,7 +13772,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Baterías Ecuador",
     "category": "baterias",
     "applicationType": "autos",
-    "volume": null,
     "plates": "84 Amperios (CCA Certificado)",
     "shortSpec": "Batería Automotriz Baterías Ecuador • 84 Amperios (CCA Certificado) • Arranque en frío CCA verificado",
     "specifications": {
@@ -14038,7 +13854,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Baterías Ecuador",
     "category": "baterias",
     "applicationType": "pesado",
-    "volume": null,
     "plates": "104 Amperios (CCA Certificado)",
     "shortSpec": "Batería Automotriz Baterías Ecuador • 104 Amperios (CCA Certificado) • Arranque en frío CCA verificado",
     "specifications": {
@@ -14121,7 +13936,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Baterías Ecuador",
     "category": "baterias",
     "applicationType": "pesado",
-    "volume": null,
     "plates": "160 Amperios (CCA Certificado)",
     "shortSpec": "Batería Automotriz Baterías Ecuador • 160 Amperios (CCA Certificado) • Arranque en frío CCA verificado",
     "specifications": {
@@ -14204,7 +14018,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Baterías Ecuador",
     "category": "baterias",
     "applicationType": "autos",
-    "volume": null,
     "plates": "45 Amperios (CCA Certificado)",
     "shortSpec": "Batería Automotriz Baterías Ecuador • 45 Amperios (CCA Certificado) • Arranque en frío CCA verificado",
     "specifications": {
@@ -14287,7 +14100,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Baterías Ecuador",
     "category": "baterias",
     "applicationType": "autos",
-    "volume": null,
     "plates": "50 Amperios (CCA Certificado)",
     "shortSpec": "Batería Automotriz Baterías Ecuador • 50 Amperios (CCA Certificado) • Arranque en frío CCA verificado",
     "specifications": {
@@ -14370,7 +14182,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Baterías Ecuador",
     "category": "baterias",
     "applicationType": "autos",
-    "volume": null,
     "plates": "50 Amperios (CCA Certificado)",
     "shortSpec": "Batería Automotriz Baterías Ecuador • 50 Amperios (CCA Certificado) • Arranque en frío CCA verificado",
     "specifications": {
@@ -14453,7 +14264,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Baterías Ecuador",
     "category": "baterias",
     "applicationType": "autos",
-    "volume": null,
     "plates": "42 Amperios (CCA Certificado)",
     "shortSpec": "Batería Automotriz Baterías Ecuador • 42 Amperios (CCA Certificado) • Arranque en frío CCA verificado",
     "specifications": {
@@ -14554,7 +14364,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Baterías Ecuador",
     "category": "baterias",
     "applicationType": "autos",
-    "volume": null,
     "plates": "42 Amperios (CCA Certificado)",
     "shortSpec": "Batería Automotriz Baterías Ecuador • 42 Amperios (CCA Certificado) • Arranque en frío CCA verificado",
     "specifications": {
@@ -14655,7 +14464,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Baterías Ecuador",
     "category": "baterias",
     "applicationType": "autos",
-    "volume": null,
     "plates": "45 Amperios (CCA Certificado)",
     "shortSpec": "Batería Automotriz Baterías Ecuador • 45 Amperios (CCA Certificado) • Arranque en frío CCA verificado",
     "specifications": {
@@ -14757,7 +14565,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Galón (3.785 L)",
-    "plates": null,
     "shortSpec": "Lubricante Motor Aroil • Galón (3.785 L) • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "0368AR00001",
@@ -14853,7 +14660,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Galón (3.785 L)",
-    "plates": null,
     "shortSpec": "Lubricante Motor Aroil • Galón (3.785 L) • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "0368AR00005",
@@ -14949,7 +14755,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Galón (3.785 L)",
-    "plates": null,
     "shortSpec": "Lubricante Motor Aroil • Galón (3.785 L) • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "0368AR00009",
@@ -15027,7 +14832,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Envase 1 Litro",
-    "plates": null,
     "shortSpec": "Lubricante Motor Aroil • Envase 1 Litro • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "0368AR00030",
@@ -15123,7 +14927,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Envase 1 Litro",
-    "plates": null,
     "shortSpec": "Lubricante Motor Aroil • Envase 1 Litro • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "0368AR00031",
@@ -15219,7 +15022,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Envase 1 Litro",
-    "plates": null,
     "shortSpec": "Lubricante Motor Aroil • Envase 1 Litro • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "0368AR00032",
@@ -15297,7 +15099,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "camionetas",
     "volume": "Galón (3.785 L)",
-    "plates": null,
     "shortSpec": "Lubricante Motor Aroil • Galón (3.785 L) • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "0368AR10001",
@@ -15417,7 +15218,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "camionetas",
     "volume": "2.5 GL",
-    "plates": null,
     "shortSpec": "Lubricante Motor Aroil • 2.5 GL • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "0368AR10002",
@@ -15537,7 +15337,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "camionetas",
     "volume": "5 GL",
-    "plates": null,
     "shortSpec": "Lubricante Motor Aroil • 5 GL • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "0368AR10003",
@@ -15657,7 +15456,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Galón (3.785 L)",
-    "plates": null,
     "shortSpec": "Lubricante Motor Aroil • Galón (3.785 L) • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "0368AR10008",
@@ -15735,7 +15533,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "2.5 GL",
-    "plates": null,
     "shortSpec": "Lubricante Motor Aroil • 2.5 GL • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "0368AR10009",
@@ -15813,7 +15610,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "5 GL",
-    "plates": null,
     "shortSpec": "Lubricante Motor Aroil • 5 GL • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "0368AR10010",
@@ -15891,7 +15687,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "Galón (3.785 L)",
-    "plates": null,
     "shortSpec": "Químico / Aditivo Aroil • SKU 0368AR10016 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "0368AR10016",
@@ -15958,7 +15753,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "camionetas",
     "volume": "Envase 1 Litro",
-    "plates": null,
     "shortSpec": "Lubricante Motor Aroil • Envase 1 Litro • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "0368AR10031",
@@ -16078,7 +15872,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Envase 1 Litro",
-    "plates": null,
     "shortSpec": "Lubricante Motor Aroil • Envase 1 Litro • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "0368AR10032",
@@ -16156,7 +15949,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "motos",
     "volume": "Envase 1 Litro",
-    "plates": null,
     "shortSpec": "Químico / Aditivo Aroil • SKU 0368AR20011 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "0368AR20011",
@@ -16223,7 +16015,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "motos",
     "volume": "Envase 1 Litro",
-    "plates": null,
     "shortSpec": "Lubricante Motor Aroil • Envase 1 Litro • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "0368AR30003",
@@ -16325,7 +16116,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "Galón (3.785 L)",
-    "plates": null,
     "shortSpec": "Químico / Aditivo Aroil • SKU 0368AR40001 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "0368AR40001",
@@ -16392,7 +16182,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Galón (3.785 L)",
-    "plates": null,
     "shortSpec": "Lubricante Motor Aroil • Galón (3.785 L) • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "0368AR40005",
@@ -16482,7 +16271,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "90 GL",
-    "plates": null,
     "shortSpec": "Lubricante Motor Aroil • 90 GL • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "0368AR40006",
@@ -16572,7 +16360,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Galón (3.785 L)",
-    "plates": null,
     "shortSpec": "Lubricante Motor Aroil • Galón (3.785 L) • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "0368AR40009",
@@ -16662,7 +16449,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "140 GL",
-    "plates": null,
     "shortSpec": "Lubricante Motor Aroil • 140 GL • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "0368AR40010",
@@ -16752,7 +16538,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "Galón (3.785 L)",
-    "plates": null,
     "shortSpec": "Químico / Aditivo Aroil • SKU 0368AR40013 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "0368AR40013",
@@ -16819,7 +16604,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "90 GL",
-    "plates": null,
     "shortSpec": "Químico / Aditivo Aroil • SKU 0368AR40014 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "0368AR40014",
@@ -16886,7 +16670,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "Galón (3.785 L)",
-    "plates": null,
     "shortSpec": "Químico / Aditivo Aroil • SKU 0368AR40017 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "0368AR40017",
@@ -16953,7 +16736,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "140 GL",
-    "plates": null,
     "shortSpec": "Químico / Aditivo Aroil • SKU 0368AR40018 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "0368AR40018",
@@ -17020,7 +16802,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "Envase 1 Litro",
-    "plates": null,
     "shortSpec": "Químico / Aditivo Aroil • SKU 0368AR40038 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "0368AR40038",
@@ -17087,7 +16868,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Envase 1 Litro",
-    "plates": null,
     "shortSpec": "Lubricante Motor Aroil • Envase 1 Litro • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "0368AR40039",
@@ -17177,7 +16957,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Envase 1 Litro",
-    "plates": null,
     "shortSpec": "Lubricante Motor Aroil • Envase 1 Litro • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "0368AR40040",
@@ -17267,7 +17046,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "Envase 1 Litro",
-    "plates": null,
     "shortSpec": "Químico / Aditivo Aroil • SKU 0368AR40041 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "0368AR40041",
@@ -17334,7 +17112,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "Envase 1 Litro",
-    "plates": null,
     "shortSpec": "Químico / Aditivo Aroil • SKU 0368AR40042 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "0368AR40042",
@@ -17401,7 +17178,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Envase 1 Litro",
-    "plates": null,
     "shortSpec": "Lubricante Motor Aroil • Envase 1 Litro • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "0368AR40045",
@@ -17479,7 +17255,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "pesado",
     "volume": "5 GL",
-    "plates": null,
     "shortSpec": "Lubricante Motor Aroil • 5 GL • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "0368AR50006",
@@ -17557,7 +17332,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "30 CAN",
-    "plates": null,
     "shortSpec": "Lubricante Motor Aroil • 30 CAN • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "0368AR60026",
@@ -17652,8 +17426,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Aroil",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Químico / Aditivo Aroil • SKU 0368AR90004 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "0368AR90004",
@@ -17718,8 +17490,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Aroil",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Químico / Aditivo Aroil • SKU 036AR90000 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "036AR90000",
@@ -17785,7 +17555,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "600 ml",
-    "plates": null,
     "shortSpec": "Químico / Aditivo LiderPro Selección • SKU 037H7-600ML • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "037H7-600ML",
@@ -17852,7 +17621,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "camionetas",
     "volume": "Envase 1 Litro",
-    "plates": null,
     "shortSpec": "Lubricante Motor Valvoline • Envase 1 Litro • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "038LUB-D1540-0025",
@@ -17972,7 +17740,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Envase 1 Litro",
-    "plates": null,
     "shortSpec": "Lubricante Motor Valvoline • Envase 1 Litro • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "038LUB-PC2050-0025",
@@ -18068,7 +17835,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Galón (3.785 L)",
-    "plates": null,
     "shortSpec": "Lubricante Motor Valvoline • Galón (3.785 L) • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "038LUB-PC2050-0100",
@@ -18164,7 +17930,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Envase 1 Litro",
-    "plates": null,
     "shortSpec": "Lubricante Motor Valvoline • Envase 1 Litro • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "038LUBC1030-0025",
@@ -18259,8 +18024,6 @@ export const PRODUCTS: Product[] = [
     "brand": "NGK",
     "category": "bujias",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Bujía de Encendido NGK • SKU 042K16PR-U • Combustión eficiente y encendido inmediato",
     "specifications": {
       "Código de Artículo": "042K16PR-U",
@@ -18340,8 +18103,6 @@ export const PRODUCTS: Product[] = [
     "brand": "NGK",
     "category": "bujias",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Bujía de Encendido NGK • SKU 042LFR5AGP • Combustión eficiente y encendido inmediato",
     "specifications": {
       "Código de Artículo": "042LFR5AGP",
@@ -18427,8 +18188,6 @@ export const PRODUCTS: Product[] = [
     "brand": "NGK",
     "category": "bujias",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Bujía de Encendido NGK • SKU 042W16EXR-U11 • Combustión eficiente y encendido inmediato",
     "specifications": {
       "Código de Artículo": "042W16EXR-U11",
@@ -18502,8 +18261,6 @@ export const PRODUCTS: Product[] = [
     "brand": "NGK",
     "category": "bujias",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Bujía de Encendido NGK • SKU 043BKR5E • Combustión eficiente y encendido inmediato",
     "specifications": {
       "Código de Artículo": "043BKR5E",
@@ -18583,8 +18340,6 @@ export const PRODUCTS: Product[] = [
     "brand": "NGK",
     "category": "bujias",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Bujía de Encendido NGK • SKU 043BKR5E-11 • Combustión eficiente y encendido inmediato",
     "specifications": {
       "Código de Artículo": "043BKR5E-11",
@@ -18664,8 +18419,6 @@ export const PRODUCTS: Product[] = [
     "brand": "NGK",
     "category": "bujias",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Bujía de Encendido NGK • SKU 043BKR5EGP • Combustión eficiente y encendido inmediato",
     "specifications": {
       "Código de Artículo": "043BKR5EGP",
@@ -18745,8 +18498,6 @@ export const PRODUCTS: Product[] = [
     "brand": "NGK",
     "category": "bujias",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Bujía de Encendido NGK • SKU 043BKR6E • Combustión eficiente y encendido inmediato",
     "specifications": {
       "Código de Artículo": "043BKR6E",
@@ -18826,8 +18577,6 @@ export const PRODUCTS: Product[] = [
     "brand": "NGK",
     "category": "bujias",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Bujía de Encendido NGK • SKU 043BKR6E-11 • Combustión eficiente y encendido inmediato",
     "specifications": {
       "Código de Artículo": "043BKR6E-11",
@@ -18907,8 +18656,6 @@ export const PRODUCTS: Product[] = [
     "brand": "NGK",
     "category": "bujias",
     "applicationType": "motos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Bujía de Encendido NGK • SKU 043BM6A • Combustión eficiente y encendido inmediato",
     "specifications": {
       "Código de Artículo": "043BM6A",
@@ -18982,8 +18729,6 @@ export const PRODUCTS: Product[] = [
     "brand": "NGK",
     "category": "bujias",
     "applicationType": "pesado",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Bujía de Encendido NGK • SKU 043BP5ES • Combustión eficiente y encendido inmediato",
     "specifications": {
       "Código de Artículo": "043BP5ES",
@@ -19057,8 +18802,6 @@ export const PRODUCTS: Product[] = [
     "brand": "NGK",
     "category": "bujias",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Bujía de Encendido NGK • SKU 043BPR5EGP-BRA • Combustión eficiente y encendido inmediato",
     "specifications": {
       "Código de Artículo": "043BPR5EGP-BRA",
@@ -19132,8 +18875,6 @@ export const PRODUCTS: Product[] = [
     "brand": "NGK",
     "category": "bujias",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Bujía de Encendido NGK • SKU 043BPR5EY • Combustión eficiente y encendido inmediato",
     "specifications": {
       "Código de Artículo": "043BPR5EY",
@@ -19207,8 +18948,6 @@ export const PRODUCTS: Product[] = [
     "brand": "NGK",
     "category": "bujias",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Bujía de Encendido NGK • SKU 043BPR6EY • Combustión eficiente y encendido inmediato",
     "specifications": {
       "Código de Artículo": "043BPR6EY",
@@ -19282,8 +19021,6 @@ export const PRODUCTS: Product[] = [
     "brand": "NGK",
     "category": "bujias",
     "applicationType": "motos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Bujía de Encendido NGK • SKU 043C7HSA • Combustión eficiente y encendido inmediato",
     "specifications": {
       "Código de Artículo": "043C7HSA",
@@ -19363,8 +19100,6 @@ export const PRODUCTS: Product[] = [
     "brand": "NGK",
     "category": "bujias",
     "applicationType": "motos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Bujía de Encendido NGK • SKU 043CR9E • Combustión eficiente y encendido inmediato",
     "specifications": {
       "Código de Artículo": "043CR9E",
@@ -19438,8 +19173,6 @@ export const PRODUCTS: Product[] = [
     "brand": "NGK",
     "category": "bujias",
     "applicationType": "motos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Bujía de Encendido NGK • SKU 043D8EA • Combustión eficiente y encendido inmediato",
     "specifications": {
       "Código de Artículo": "043D8EA",
@@ -19525,8 +19258,6 @@ export const PRODUCTS: Product[] = [
     "brand": "NGK",
     "category": "bujias",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Bujía de Encendido NGK • SKU 043DCPR7E-BRAS • Combustión eficiente y encendido inmediato",
     "specifications": {
       "Código de Artículo": "043DCPR7E-BRAS",
@@ -19600,8 +19331,6 @@ export const PRODUCTS: Product[] = [
     "brand": "NGK",
     "category": "bujias",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Bujía de Encendido NGK • SKU 043LFR5A-11-BR • Combustión eficiente y encendido inmediato",
     "specifications": {
       "Código de Artículo": "043LFR5A-11-BR",
@@ -19687,8 +19416,6 @@ export const PRODUCTS: Product[] = [
     "brand": "NGK",
     "category": "bujias",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Bujía de Encendido NGK • SKU 043LFR6C-11 • Combustión eficiente y encendido inmediato",
     "specifications": {
       "Código de Artículo": "043LFR6C-11",
@@ -19762,8 +19489,6 @@ export const PRODUCTS: Product[] = [
     "brand": "NGK",
     "category": "bujias",
     "applicationType": "motos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Bujía de Encendido NGK • SKU 043LKR6D-10E • Combustión eficiente y encendido inmediato",
     "specifications": {
       "Código de Artículo": "043LKR6D-10E",
@@ -19837,8 +19562,6 @@ export const PRODUCTS: Product[] = [
     "brand": "K&N",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Químico / Aditivo K&N • SKU 07199-5050 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "07199-5050",
@@ -19904,7 +19627,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "Balde 5 Galones",
-    "plates": null,
     "shortSpec": "Químico / Aditivo Global • SKU 072GB105 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "072GB105",
@@ -19976,8 +19698,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "camionetas",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 078AA-1531 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "078AA-1531",
@@ -20053,8 +19773,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "camionetas",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 078AA-3040 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "078AA-3040",
@@ -20124,8 +19842,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 078AC-1401 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "078AC-1401",
@@ -20201,8 +19917,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 078AC-30020 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "078AC-30020",
@@ -20272,8 +19986,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "pesado",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 078AFP-012 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "078AFP-012",
@@ -20343,8 +20055,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "pesado",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 078AFP-079 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "078AFP-079",
@@ -20420,8 +20130,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "pesado",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 078AFP-179 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "078AFP-179",
@@ -20503,8 +20211,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "pesado",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 078AFP-5138 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "078AFP-5138",
@@ -20592,8 +20298,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "pesado",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 078AFP-523 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "078AFP-523",
@@ -20669,8 +20373,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 078AO-10127 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "078AO-10127",
@@ -20746,8 +20448,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "camionetas",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 078AO-1539 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "078AO-1539",
@@ -20817,8 +20517,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "camionetas",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 078AO-2 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "078AO-2",
@@ -20900,8 +20598,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 078AO-2841 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "078AO-2841",
@@ -20983,8 +20679,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "camionetas",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 078AO-2849 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "078AO-2849",
@@ -21066,8 +20760,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "pesado",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 078AO-2863 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "078AO-2863",
@@ -21137,8 +20829,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 078AO-2870 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "078AO-2870",
@@ -21208,8 +20898,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 078AO-2879 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "078AO-2879",
@@ -21279,8 +20967,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 078AO-4967 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "078AO-4967",
@@ -21350,8 +21036,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "camionetas",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 078AO-50710 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "078AO-50710",
@@ -21421,8 +21105,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 078AO-7317 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "078AO-7317",
@@ -21504,8 +21186,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "camionetas",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 078AO-8 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "078AO-8",
@@ -21593,8 +21273,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "pesado",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 079AFE-1509 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "079AFE-1509",
@@ -21664,8 +21342,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "pesado",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 079AFE-268 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "079AFE-268",
@@ -21741,8 +21417,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "pesado",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 079AFK-001 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "079AFK-001",
@@ -21812,8 +21486,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "pesado",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 079AFP-1511 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "079AFP-1511",
@@ -21883,8 +21555,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 079AOE-10246 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "079AOE-10246",
@@ -21954,8 +21624,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AA-10086 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AA-10086",
@@ -22031,8 +21699,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AA-10088 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AA-10088",
@@ -22108,8 +21774,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AA-10286 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AA-10286",
@@ -22185,8 +21849,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AA-10699 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AA-10699",
@@ -22256,8 +21918,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AA-10891 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AA-10891",
@@ -22327,8 +21987,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AA-11071 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AA-11071",
@@ -22398,8 +22056,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "camionetas",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AA-11077 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AA-11077",
@@ -22475,8 +22131,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "camionetas",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AA-11085 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AA-11085",
@@ -22546,8 +22200,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "camionetas",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AA-11113 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AA-11113",
@@ -22617,8 +22269,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AA-11652 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AA-11652",
@@ -22688,8 +22338,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AA-11654 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AA-11654",
@@ -22759,8 +22407,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "camionetas",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AA-11674 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AA-11674",
@@ -22836,8 +22482,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AA-1380 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AA-1380",
@@ -22907,8 +22551,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AA-1485 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AA-1485",
@@ -22978,8 +22620,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AA-2070 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AA-2070",
@@ -23055,8 +22695,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AA-2217 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AA-2217",
@@ -23126,8 +22764,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "camionetas",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AA-25006 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AA-25006",
@@ -23197,8 +22833,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AA-25011 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AA-25011",
@@ -23268,8 +22902,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AA-25040 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AA-25040",
@@ -23339,8 +22971,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "camionetas",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AA-25128 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AA-25128",
@@ -23416,8 +23046,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "camionetas",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AA-2659 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AA-2659",
@@ -23487,8 +23115,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "camionetas",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AA-2662 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AA-2662",
@@ -23558,8 +23184,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AA-28115 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AA-28115",
@@ -23635,8 +23259,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "pesado",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AA-28130 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AA-28130",
@@ -23718,8 +23340,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AA-3603 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AA-3603",
@@ -23795,8 +23415,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "camionetas",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AA-38240 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AA-38240",
@@ -23866,8 +23484,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AA-4000 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AA-4000",
@@ -23937,8 +23553,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AA-4309 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AA-4309",
@@ -24008,8 +23622,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AA-4939 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AA-4939",
@@ -24091,8 +23703,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "camionetas",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AA-51943 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AA-51943",
@@ -24162,8 +23772,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AA-54661 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AA-54661",
@@ -24233,8 +23841,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AA-5827 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AA-5827",
@@ -24304,8 +23910,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "camionetas",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AA-5903 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AA-5903",
@@ -24393,8 +23997,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AA-6000 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AA-6000",
@@ -24464,8 +24066,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "pesado",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AA-6012 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AA-6012",
@@ -24535,8 +24135,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "camionetas",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AA-6127 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AA-6127",
@@ -24606,8 +24204,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "camionetas",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AA-6558 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AA-6558",
@@ -24683,8 +24279,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AA-6664 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AA-6664",
@@ -24760,8 +24354,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AA-6900 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AA-6900",
@@ -24837,8 +24429,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AA-7617 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AA-7617",
@@ -24914,8 +24504,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AA-8067 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AA-8067",
@@ -24997,8 +24585,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AA-8069 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AA-8069",
@@ -25074,8 +24660,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AA-8078 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AA-8078",
@@ -25151,8 +24735,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AA-8590 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AA-8590",
@@ -25228,8 +24810,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AA-8964 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AA-8964",
@@ -25299,8 +24879,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AA-9100 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AA-9100",
@@ -25376,8 +24954,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "camionetas",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AA-9102 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AA-9102",
@@ -25447,8 +25023,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "camionetas",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AA-9110 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AA-9110",
@@ -25518,8 +25092,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AA-9123 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AA-9123",
@@ -25589,8 +25161,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AA-9124 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AA-9124",
@@ -25660,8 +25230,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AA-9322 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AA-9322",
@@ -25731,8 +25299,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AA-9392 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AA-9392",
@@ -25814,8 +25380,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AA-9476 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AA-9476",
@@ -25897,8 +25461,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AA-9632 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AA-9632",
@@ -25980,8 +25542,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AA-9800 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AA-9800",
@@ -26051,8 +25611,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "pesado",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AA-9856 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AA-9856",
@@ -26122,8 +25680,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AA-9902 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AA-9902",
@@ -26193,8 +25749,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AA-994 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AA-994",
@@ -26264,8 +25818,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "pesado",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AAK-102 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AAK-102",
@@ -26347,8 +25899,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "pesado",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AAK-107 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AAK-107",
@@ -26418,8 +25968,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AAK-122 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AAK-122",
@@ -26501,8 +26049,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AC- 4418 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AC- 4418",
@@ -26572,8 +26118,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AC-10245-2 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AC-10245-2",
@@ -26655,8 +26199,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "camionetas",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AC-11105 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AC-11105",
@@ -26726,8 +26268,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AC-1114 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AC-1114",
@@ -26809,8 +26349,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AC-12775 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AC-12775",
@@ -26892,8 +26430,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AC-14050 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AC-14050",
@@ -26969,8 +26505,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AC-14051 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AC-14051",
@@ -27046,8 +26580,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "camionetas",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AC-17140 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AC-17140",
@@ -27123,8 +26655,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "camionetas",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AC-18120 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AC-18120",
@@ -27200,8 +26730,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "camionetas",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AC-22010 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AC-22010",
@@ -27277,8 +26805,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "camionetas",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AC-25091 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AC-25091",
@@ -27354,8 +26880,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AC-2807 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AC-2807",
@@ -27431,8 +26955,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AC-2808 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AC-2808",
@@ -27502,8 +27024,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AC-28151 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AC-28151",
@@ -27585,8 +27105,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AC-28160 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AC-28160",
@@ -27662,8 +27180,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AC-28261 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AC-28261",
@@ -27745,8 +27261,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "camionetas",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AC-4403-2 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AC-4403-2",
@@ -27816,8 +27330,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AC-4408 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AC-4408",
@@ -27887,8 +27399,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "camionetas",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AC-4412 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AC-4412",
@@ -27958,8 +27468,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "camionetas",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AC-4426 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AC-4426",
@@ -28035,8 +27543,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "camionetas",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AC-49030 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AC-49030",
@@ -28106,8 +27612,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AC-65210 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AC-65210",
@@ -28183,8 +27687,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AC-65220 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AC-65220",
@@ -28255,7 +27757,6 @@ export const PRODUCTS: Product[] = [
     "category": "filtros",
     "applicationType": "autos",
     "volume": "2.8 LT",
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AC-65340 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AC-65340",
@@ -28326,8 +27827,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AC-9858 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AC-9858",
@@ -28397,8 +27896,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "pesado",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AFE-15130 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AFE-15130",
@@ -28468,8 +27965,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "pesado",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AFE-295-1 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AFE-295-1",
@@ -28539,8 +28034,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "pesado",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AFE-296-1 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AFE-296-1",
@@ -28610,8 +28103,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "pesado",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AFE-297 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AFE-297",
@@ -28681,8 +28172,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "pesado",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AFE-385 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AFE-385",
@@ -28758,8 +28247,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "pesado",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AFI-9303 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AFI-9303",
@@ -28841,8 +28328,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "pesado",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AFI-9307 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AFI-9307",
@@ -28918,8 +28403,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "pesado",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AFK-002 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AFK-002",
@@ -29001,8 +28484,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "pesado",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AFP-023 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AFP-023",
@@ -29084,8 +28565,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "pesado",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AFP-046 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AFP-046",
@@ -29161,8 +28640,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "pesado",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AFP-072 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AFP-072",
@@ -29244,8 +28721,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "pesado",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AFP-083 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AFP-083",
@@ -29327,8 +28802,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "pesado",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AFP-1020 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AFP-1020",
@@ -29410,8 +28883,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "pesado",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AFP-140 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AFP-140",
@@ -29487,8 +28958,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "pesado",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AFP-202 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AFP-202",
@@ -29558,8 +29027,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "pesado",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AFP-203 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AFP-203",
@@ -29635,8 +29102,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "pesado",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AFP-31120 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AFP-31120",
@@ -29712,8 +29177,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "pesado",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AFP-3627 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AFP-3627",
@@ -29789,8 +29252,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "pesado",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AFP-4102 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AFP-4102",
@@ -29872,8 +29333,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "pesado",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AFP-4183 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AFP-4183",
@@ -29943,8 +29402,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "pesado",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AFP-555 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AFP-555",
@@ -30014,8 +29471,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "pesado",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AFP-5612 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AFP-5612",
@@ -30097,8 +29552,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "pesado",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AFP-573 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AFP-573",
@@ -30168,8 +29621,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "pesado",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AFP-704 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AFP-704",
@@ -30245,8 +29696,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "pesado",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AFP-874 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AFP-874",
@@ -30328,8 +29777,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "pesado",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AFP-876 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AFP-876",
@@ -30399,8 +29846,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "pesado",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AFP-877 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AFP-877",
@@ -30470,8 +29915,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "pesado",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AFP-974 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AFP-974",
@@ -30547,8 +29990,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "motos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AFS-1212 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AFS-1212",
@@ -30630,8 +30071,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "pesado",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AFS-127-1 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AFS-127-1",
@@ -30701,8 +30140,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "pesado",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AFS-1306 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AFS-1306",
@@ -30772,8 +30209,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "pesado",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AFS-193 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AFS-193",
@@ -30855,8 +30290,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "pesado",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AFS-194-1 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AFS-194-1",
@@ -30926,8 +30359,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "pesado",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AFS-7912 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AFS-7912",
@@ -30997,8 +30428,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "camionetas",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AO-1 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AO-1",
@@ -31074,8 +30503,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "camionetas",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AO-1051 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AO-1051",
@@ -31145,8 +30572,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AO-10600 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AO-10600",
@@ -31216,8 +30641,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "pesado",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AO-1302 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AO-1302",
@@ -31287,8 +30710,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "pesado",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AO-1314 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AO-1314",
@@ -31358,8 +30779,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "pesado",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AO-1318 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AO-1318",
@@ -31429,8 +30848,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "pesado",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AO-1321 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AO-1321",
@@ -31500,8 +30917,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "pesado",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AO-1513 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AO-1513",
@@ -31571,8 +30986,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "motos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AO-1522 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AO-1522",
@@ -31642,8 +31055,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "camionetas",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AO-2801 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AO-2801",
@@ -31713,8 +31124,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "camionetas",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AO-2825 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AO-2825",
@@ -31796,8 +31205,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AO-2841ST • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AO-2841ST",
@@ -31867,8 +31274,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "camionetas",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AO-2849ST • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AO-2849ST",
@@ -31938,8 +31343,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AO-2870ST • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AO-2870ST",
@@ -32021,8 +31424,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "camionetas",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AO-3387 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AO-3387",
@@ -32098,8 +31499,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AO-3387ST • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AO-3387ST",
@@ -32181,8 +31580,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "camionetas",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AO-3593 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AO-3593",
@@ -32264,8 +31661,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AO-3593ST • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AO-3593ST",
@@ -32347,8 +31742,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AO-3614 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AO-3614",
@@ -32436,8 +31829,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AO-3614ST • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AO-3614ST",
@@ -32507,8 +31898,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AO-3675 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AO-3675",
@@ -32578,8 +31967,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "pesado",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AO-3830 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AO-3830",
@@ -32661,8 +32048,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AO-3985 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AO-3985",
@@ -32732,8 +32117,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AO-4386ST • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AO-4386ST",
@@ -32809,8 +32192,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "camionetas",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AO-4952 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AO-4952",
@@ -32880,8 +32261,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "camionetas",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AO-500-1 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AO-500-1",
@@ -32957,8 +32336,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AO-500ST • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AO-500ST",
@@ -33040,8 +32417,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "camionetas",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AO-50710-1 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AO-50710-1",
@@ -33111,8 +32486,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "pesado",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AO-5190 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AO-5190",
@@ -33182,8 +32555,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AO-6102 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AO-6102",
@@ -33265,8 +32636,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AO-6607 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AO-6607",
@@ -33336,8 +32705,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AO-6607ST • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AO-6607ST",
@@ -33419,8 +32786,6 @@ export const PRODUCTS: Product[] = [
     "brand": "ATE",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AO-667-1 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AO-667-1",
@@ -33502,8 +32867,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AO-7317ST • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AO-7317ST",
@@ -33585,8 +32948,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "camionetas",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AO-9566 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AO-9566",
@@ -33662,8 +33023,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AO-9617 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AO-9617",
@@ -33745,8 +33104,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "camionetas",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AOE-11651ST • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AOE-11651ST",
@@ -33822,8 +33179,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AOE-11724ST • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AOE-11724ST",
@@ -33893,8 +33248,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "pesado",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AOE-1501 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AOE-1501",
@@ -33964,8 +33317,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AOE-486ST • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AOE-486ST",
@@ -34047,8 +33398,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AOE-9229-1 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AOE-9229-1",
@@ -34130,8 +33479,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AOE-9496ST • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AOE-9496ST",
@@ -34201,8 +33548,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "camionetas",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AOE-9540 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AOE-9540",
@@ -34272,8 +33617,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "camionetas",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AOE-9974ST • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AOE-9974ST",
@@ -34343,8 +33686,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU 081AA-1132 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "081AA-1132",
@@ -34426,7 +33767,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Baterías Ecuador",
     "category": "baterias",
     "applicationType": "autos",
-    "volume": null,
     "plates": "Placas Reforzadas BCI",
     "shortSpec": "Batería Automotriz Baterías Ecuador • Placas Reforzadas BCI • Arranque en frío CCA verificado",
     "specifications": {
@@ -34509,7 +33849,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Baterías Ecuador",
     "category": "baterias",
     "applicationType": "autos",
-    "volume": null,
     "plates": "Placas Reforzadas BCI",
     "shortSpec": "Batería Automotriz Baterías Ecuador • Placas Reforzadas BCI • Arranque en frío CCA verificado",
     "specifications": {
@@ -34592,7 +33931,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Baterías Ecuador",
     "category": "baterias",
     "applicationType": "autos",
-    "volume": null,
     "plates": "Placas Reforzadas BCI",
     "shortSpec": "Batería Automotriz Baterías Ecuador • Placas Reforzadas BCI • Arranque en frío CCA verificado",
     "specifications": {
@@ -34675,7 +34013,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Baterías Ecuador",
     "category": "baterias",
     "applicationType": "autos",
-    "volume": null,
     "plates": "Placas Reforzadas BCI",
     "shortSpec": "Batería Automotriz Baterías Ecuador • Placas Reforzadas BCI • Arranque en frío CCA verificado",
     "specifications": {
@@ -34758,7 +34095,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Baterías Ecuador",
     "category": "baterias",
     "applicationType": "autos",
-    "volume": null,
     "plates": "Placas Reforzadas BCI",
     "shortSpec": "Batería Automotriz Baterías Ecuador • Placas Reforzadas BCI • Arranque en frío CCA verificado",
     "specifications": {
@@ -34841,7 +34177,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Baterías Ecuador",
     "category": "baterias",
     "applicationType": "autos",
-    "volume": null,
     "plates": "Placas Reforzadas BCI",
     "shortSpec": "Batería Automotriz Baterías Ecuador • Placas Reforzadas BCI • Arranque en frío CCA verificado",
     "specifications": {
@@ -34924,7 +34259,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Baterías Ecuador",
     "category": "baterias",
     "applicationType": "autos",
-    "volume": null,
     "plates": "Placas Reforzadas BCI",
     "shortSpec": "Batería Automotriz Baterías Ecuador • Placas Reforzadas BCI • Arranque en frío CCA verificado",
     "specifications": {
@@ -35007,8 +34341,6 @@ export const PRODUCTS: Product[] = [
     "brand": "LiderPro Selección",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Químico / Aditivo LiderPro Selección • SKU 099AN-ANT • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "099AN-ANT",
@@ -35073,8 +34405,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Abro",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Químico / Aditivo Abro • SKU 10270.03.008 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "10270.03.008",
@@ -35140,7 +34470,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "10 OZ",
-    "plates": null,
     "shortSpec": "Químico / Aditivo Abro • SKU 10270.03.017 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "10270.03.017",
@@ -35207,7 +34536,6 @@ export const PRODUCTS: Product[] = [
     "category": "refrigerantes",
     "applicationType": "autos",
     "volume": "Galón (3.785 L)",
-    "plates": null,
     "shortSpec": "Refrigerante Anticongelante Abro • Galón (3.785 L) • Protección anticorrosiva",
     "specifications": {
       "Código de Artículo": "102EC-502",
@@ -35294,8 +34622,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Abro",
     "category": "refrigerantes",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Refrigerante Anticongelante Abro • Líquido Listo para Usar • Protección anticorrosiva",
     "specifications": {
       "Código de Artículo": "102EC-502LT",
@@ -35382,7 +34708,6 @@ export const PRODUCTS: Product[] = [
     "category": "refrigerantes",
     "applicationType": "autos",
     "volume": "Galón (3.785 L)",
-    "plates": null,
     "shortSpec": "Refrigerante Anticongelante Abro • Galón (3.785 L) • Protección anticorrosiva",
     "specifications": {
       "Código de Artículo": "102EC-503",
@@ -35451,8 +34776,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Abro",
     "category": "refrigerantes",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Refrigerante Anticongelante Abro • Líquido Listo para Usar • Protección anticorrosiva",
     "specifications": {
       "Código de Artículo": "102EC-503LT",
@@ -35520,8 +34843,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Abro",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Químico / Aditivo Abro • SKU 102LG990EVP • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "102LG990EVP",
@@ -35586,8 +34907,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Abro",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Químico / Aditivo Abro • SKU 102SS822 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "102SS822",
@@ -35653,7 +34972,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "15 oz (443 ml)",
-    "plates": null,
     "shortSpec": "Químico / Aditivo Bardahl • SKU 103B1016 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "103B1016",
@@ -35726,7 +35044,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "32 oz (946 ml)",
-    "plates": null,
     "shortSpec": "Químico / Aditivo Bardahl • SKU 103B1532 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "103B1532",
@@ -35799,7 +35116,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "15 oz (443 ml)",
-    "plates": null,
     "shortSpec": "Químico / Aditivo Bardahl • SKU 103B2115 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "103B2115",
@@ -35871,8 +35187,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Bardahl",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Químico / Aditivo Bardahl • SKU 103B3119 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "103B3119",
@@ -35944,7 +35258,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "1000 ml (1 L)",
-    "plates": null,
     "shortSpec": "Químico / Aditivo LiderPro Selección • SKU 1062000021 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "1062000021",
@@ -36017,7 +35330,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "1000 ml (1 L)",
-    "plates": null,
     "shortSpec": "Químico / Aditivo LiderPro Selección • SKU 1062000022 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "1062000022",
@@ -36089,8 +35401,6 @@ export const PRODUCTS: Product[] = [
     "brand": "LiderPro Selección",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Químico / Aditivo LiderPro Selección • SKU 1111048GR • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "1111048GR",
@@ -36155,8 +35465,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Simoniz",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Químico / Aditivo Simoniz • SKU 1213027CH • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "1213027CH",
@@ -36221,8 +35529,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Simoniz",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Químico / Aditivo Simoniz • SKU 1213027CT • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "1213027CT",
@@ -36287,8 +35593,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Simoniz",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Químico / Aditivo Simoniz • SKU 1213027FR • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "1213027FR",
@@ -36353,8 +35657,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Simoniz",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Químico / Aditivo Simoniz • SKU 1213027PT • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "1213027PT",
@@ -36419,8 +35721,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Simoniz",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Químico / Aditivo Simoniz • SKU 1213027SP • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "1213027SP",
@@ -36485,8 +35785,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Simoniz",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Químico / Aditivo Simoniz • SKU 1214020 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "1214020",
@@ -36551,8 +35849,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Bosch",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Químico / Aditivo Bosch • SKU 122006899 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "122006899",
@@ -36617,8 +35913,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Bosch",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Químico / Aditivo Bosch • SKU 122016727 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "122016727",
@@ -36683,8 +35977,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Bosch",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Químico / Aditivo Bosch • SKU 12204910 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "12204910",
@@ -36749,8 +36041,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Bosch",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Químico / Aditivo Bosch • SKU 12204911 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "12204911",
@@ -36815,8 +36105,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Bosch",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Químico / Aditivo Bosch • SKU 12204914 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "12204914",
@@ -36881,8 +36169,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Bosch",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Químico / Aditivo Bosch • SKU 12204915 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "12204915",
@@ -36947,8 +36233,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Bosch",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Químico / Aditivo Bosch • SKU 12204916 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "12204916",
@@ -37013,8 +36297,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Bosch",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Químico / Aditivo Bosch • SKU 12204918 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "12204918",
@@ -37079,8 +36361,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Bosch",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Químico / Aditivo Bosch • SKU 12206888 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "12206888",
@@ -37145,8 +36425,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Bosch",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Químico / Aditivo Bosch • SKU 12206890 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "12206890",
@@ -37211,8 +36489,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Bosch",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Químico / Aditivo Bosch • SKU 12206892 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "12206892",
@@ -37277,8 +36553,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Bosch",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Químico / Aditivo Bosch • SKU 12206894 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "12206894",
@@ -37343,8 +36617,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Bosch",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Químico / Aditivo Bosch • SKU 12206896 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "12206896",
@@ -37409,8 +36681,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Bosch",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Químico / Aditivo Bosch • SKU 12206898 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "12206898",
@@ -37475,8 +36745,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Bosch",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Químico / Aditivo Bosch • SKU 12216722 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "12216722",
@@ -37541,8 +36809,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Bosch",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Químico / Aditivo Bosch • SKU 12216724 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "12216724",
@@ -37607,8 +36873,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Bosch",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Químico / Aditivo Bosch • SKU 12216725 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "12216725",
@@ -37673,8 +36937,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Bosch",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Químico / Aditivo Bosch • SKU 12216726 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "12216726",
@@ -37739,8 +37001,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Bosch",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Químico / Aditivo Bosch • SKU 12216729 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "12216729",
@@ -37805,8 +37065,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Bosch",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Químico / Aditivo Bosch • SKU 12216730 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "12216730",
@@ -37871,8 +37129,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Bosch",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Químico / Aditivo Bosch • SKU 12216731 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "12216731",
@@ -37937,8 +37193,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Bosch",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Químico / Aditivo Bosch • SKU 122302803 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "122302803",
@@ -38003,8 +37257,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Bosch",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Químico / Aditivo Bosch • SKU 122302811 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "122302811",
@@ -38069,8 +37321,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Bosch",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Químico / Aditivo Bosch • SKU 122302814 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "122302814",
@@ -38135,8 +37385,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Areon",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Químico / Aditivo Areon • SKU 122APC06 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "122APC06",
@@ -38201,8 +37449,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Areon",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Químico / Aditivo Areon • SKU 122APC11 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "122APC11",
@@ -38267,8 +37513,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Areon",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Químico / Aditivo Areon • SKU 122PACKMA60 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "122PACKMA60",
@@ -38334,7 +37578,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "600 ml",
-    "plates": null,
     "shortSpec": "Químico / Aditivo LiderPro Selección • SKU 1243044 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "1243044",
@@ -38401,7 +37644,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Envase 1 Litro",
-    "plates": null,
     "shortSpec": "Lubricante Motor Mannol • Envase 1 Litro • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "12MN7916-1",
@@ -38497,7 +37739,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Galón (3.785 L)",
-    "plates": null,
     "shortSpec": "Lubricante Motor Mannol • Galón (3.785 L) • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "12MN7916-4",
@@ -38593,7 +37834,6 @@ export const PRODUCTS: Product[] = [
     "category": "frenos",
     "applicationType": "autos",
     "volume": "3 LITRO",
-    "plates": null,
     "shortSpec": "Líquido de Frenos ATE Original • Alto punto de ebullición seco y húmedo",
     "specifications": {
       "Código de Artículo": "141ATE-G3",
@@ -38681,7 +37921,6 @@ export const PRODUCTS: Product[] = [
     "category": "frenos",
     "applicationType": "autos",
     "volume": "4 LITRO",
-    "plates": null,
     "shortSpec": "Líquido de Frenos ATE Original • Alto punto de ebullición seco y húmedo",
     "specifications": {
       "Código de Artículo": "141ATE-G4",
@@ -38768,8 +38007,6 @@ export const PRODUCTS: Product[] = [
     "brand": "ATE",
     "category": "frenos",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Líquido de Frenos ATE Original • Alto punto de ebullición seco y húmedo",
     "specifications": {
       "Código de Artículo": "141ATE-M4",
@@ -38855,8 +38092,6 @@ export const PRODUCTS: Product[] = [
     "brand": "ATE",
     "category": "frenos",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Líquido de Frenos ATE Original • Alto punto de ebullición seco y húmedo",
     "specifications": {
       "Código de Artículo": "141ATE-P3",
@@ -38943,7 +38178,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "1 LT",
-    "plates": null,
     "shortSpec": "Químico / Aditivo LiderPro Selección • SKU 142A.DEST.LT • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "142A.DEST.LT",
@@ -39010,7 +38244,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "Balde 5 Galones",
-    "plates": null,
     "shortSpec": "Químico / Aditivo Lubristone • SKU 143DGN-5 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "143DGN-5",
@@ -39083,7 +38316,6 @@ export const PRODUCTS: Product[] = [
     "category": "refrigerantes",
     "applicationType": "autos",
     "volume": "50 GL",
-    "plates": null,
     "shortSpec": "Refrigerante Anticongelante ACDelco • 50 GL • Protección anticorrosiva",
     "specifications": {
       "Código de Artículo": "144ACR650-50",
@@ -39152,8 +38384,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Abro",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Químico / Aditivo Abro • SKU 15170.03.025 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "15170.03.025",
@@ -39218,8 +38448,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Abro",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Químico / Aditivo Abro • SKU 15170.03.039 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "15170.03.039",
@@ -39284,8 +38512,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Simoniz",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Químico / Aditivo Simoniz • SKU 1556236 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "1556236",
@@ -39350,7 +38576,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Bosch",
     "category": "baterias",
     "applicationType": "autos",
-    "volume": null,
     "plates": "55 Amperios (CCA Certificado)",
     "shortSpec": "Batería Automotriz Bosch • 55 Amperios (CCA Certificado) • Arranque en frío CCA verificado",
     "specifications": {
@@ -39451,8 +38676,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU AO-3985ST • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "AO-3985ST",
@@ -39523,7 +38746,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "pesado",
     "volume": "5 GL",
-    "plates": null,
     "shortSpec": "Lubricante Motor Aroil • 5 GL • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "AROIL AMBAR 0368BF00002",
@@ -39601,7 +38823,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "pesado",
     "volume": "5 GL",
-    "plates": null,
     "shortSpec": "Lubricante Motor Aroil • 5 GL • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "AROIL ROJO 0368BF00004",
@@ -39678,8 +38899,6 @@ export const PRODUCTS: Product[] = [
     "brand": "LiderPro Selección",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Químico / Aditivo LiderPro Selección • SKU ECOVL • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "ECOVL",
@@ -39744,7 +38963,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Baterías Ecuador",
     "category": "baterias",
     "applicationType": "autos",
-    "volume": null,
     "plates": "Placas Reforzadas BCI",
     "shortSpec": "Batería Automotriz Baterías Ecuador • Placas Reforzadas BCI • Arranque en frío CCA verificado",
     "specifications": {
@@ -39827,8 +39045,6 @@ export const PRODUCTS: Product[] = [
     "brand": "Advance",
     "category": "filtros",
     "applicationType": "camionetas",
-    "volume": null,
-    "plates": null,
     "shortSpec": "Filtro Automotriz Original Advance • SKU FILTRO AIRE 080AA-3038 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "FILTRO AIRE 080AA-3038",
@@ -39899,7 +39115,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Envase 1 Litro",
-    "plates": null,
     "shortSpec": "Lubricante Motor Mannol • Envase 1 Litro • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "MN2201-20",
@@ -39977,7 +39192,6 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "pesado",
     "volume": "Envase 1 Litro",
-    "plates": null,
     "shortSpec": "Lubricante Motor Mannol • Envase 1 Litro • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "MN2202-20",
@@ -40055,7 +39269,6 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "Envase 1 Litro",
-    "plates": null,
     "shortSpec": "Químico / Aditivo Mannol • SKU MN2501-20 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "MN2501-20",

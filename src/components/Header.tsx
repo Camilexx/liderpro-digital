@@ -40,14 +40,14 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-40 bg-[#0B0F19] text-white border-b border-[#FFC500]/20 shadow-xl transition-all backdrop-blur-md">
+    <header className="sticky top-0 z-40 bg-[#061B40] text-white border-b border-[#FFC500]/20 shadow-xl transition-all backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-18 sm:h-20">
           {/* Official Logo */}
           <Link href="/" className="flex items-center group py-1.5 focus:outline-none shrink-0">
             <div className="relative">
               <Image
-                src="/images/logo-header.png"
+                src="/images/logo-white.png"
                 alt="LiderPro - Productos Automotrices"
                 width={200}
                 height={48}
@@ -143,7 +143,7 @@ export default function Header() {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden border-t border-white/10 bg-[#0B0F19] px-5 py-5 space-y-4 shadow-2xl">
+        <div className="lg:hidden border-t border-[#0A3B8C]/60 bg-[#061B40] px-5 py-5 space-y-4 shadow-2xl">
           <nav className="flex flex-col space-y-3 text-sm font-bold text-[#FFC500]">
             <Link
               href="/encuentra-tu-producto"

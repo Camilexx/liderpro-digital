@@ -35,7 +35,7 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
 
   return {
     title: `${product.name} | LiderPro Ecuador`,
-    description: `${product.shortSpec}. Garantía: ${product.warranty}. Despacho desde Pedernales y Quito a nivel nacional.`,
+    description: `${product.shortSpec}. Garantía: ${product.warranty}. Despacho nacional diario desde Bodega Matriz en Pedernales (Manabí) con facturación electrónica SRI.`,
   };
 }
 
@@ -47,8 +47,34 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
     notFound();
   }
 
+  const productJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": product.name,
+    "image": `https://liderpro-digital.vercel.app${product.imageUrl}`,
+    "description": product.description,
+    "sku": product.sku,
+    "brand": {
+      "@type": "Brand",
+      "name": product.brand,
+    },
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "USD",
+      "availability": product.inStock ? "https://schema.org/InStock" : "https://schema.org/PreOrder",
+      "seller": {
+        "@type": "Organization",
+        "name": "LiderPro Ecuador",
+      },
+    },
+  };
+
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }}
+      />
       <div>
         <Link
           href="/productos"

@@ -113,7 +113,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/refrigerantes" className="hover:text-[#FFC500] transition-colors">
+                <Link href="/productos?cat=refrigerantes" className="hover:text-[#FFC500] transition-colors">
                   Refrigerantes Orgánicos AF12+
                 </Link>
               </li>

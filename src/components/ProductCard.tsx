@@ -1,8 +1,9 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { MessageCircle } from "lucide-react";
+import { MessageCircle, Package } from "lucide-react";
 import { Product } from "@/data/products";
 import { buildWhatsAppLink } from "@/lib/whatsapp";
 import { trackEvent } from "@/lib/analytics";
@@ -12,6 +13,7 @@ interface ProductCardProps {
 }
 
 export default function ProductCard({ product }: ProductCardProps) {
+  const [imgError, setImgError] = useState(false);
   const presentation = product.volume || product.plates;
 
   const handleWhatsApp = () => {
@@ -27,13 +29,23 @@ export default function ProductCard({ product }: ProductCardProps) {
       <div>
         {/* Product Image Stage */}
         <div className="relative aspect-[4/3] bg-gradient-to-b from-slate-50/90 to-slate-100/50 p-6 flex items-center justify-center border-b border-slate-100 overflow-hidden">
-          <Image
-            src={product.imageUrl}
-            alt={`${product.brand} - ${product.name}`}
-            fill
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-            className="object-contain p-4 group-hover:scale-105 transition-transform duration-500 ease-out"
-          />
+          {!imgError ? (
+            <Image
+              src={product.imageUrl}
+              alt={`${product.brand} - ${product.name}`}
+              fill
+              loading="lazy"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+              onError={() => setImgError(true)}
+              className="object-contain p-4 group-hover:scale-105 transition-transform duration-500 ease-out"
+            />
+          ) : (
+            <div className="flex flex-col items-center justify-center text-slate-400 gap-1.5 p-4 text-center">
+              <Package className="w-10 h-10 text-slate-300" />
+              <span className="text-[11px] font-bold text-slate-500">{product.brand}</span>
+              <span className="text-[10px] text-slate-400 line-clamp-1">{product.name}</span>
+            </div>
+          )}
 
           {/* Badges: Brand & Best Seller */}
           <div className="absolute top-3 left-3 flex flex-col gap-1.5 z-10">

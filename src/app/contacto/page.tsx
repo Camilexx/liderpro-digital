@@ -34,7 +34,7 @@ export default function ContactPage() {
           Contacto y Cotizaciones Especializadas
         </h1>
         <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-          Atención personalizada para particulares, talleres mecánicos y flotas comerciales con cobertura desde Pedernales y Quito.
+          Atención personalizada para particulares, talleres mecánicos y flotas comerciales desde nuestro Hub Central en Pedernales (Manabí) hacia las 24 provincias.
         </p>
       </div>
 

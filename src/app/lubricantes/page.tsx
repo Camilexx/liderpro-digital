@@ -52,7 +52,7 @@ export default function LubricantsPage() {
               ¿Buscando la viscosidad exacta (5W-30, 10W-30, 15W-40, 20W-50)?
             </h3>
             <p className="text-xs text-slate-500">
-              Explora los 89 lubricantes disponibles o filtra por marca y tipo de motor en nuestro catálogo oficial.
+              Explora los 94 lubricantes disponibles o filtra por marca y tipo de motor en nuestro catálogo oficial.
             </p>
           </div>
         </div>

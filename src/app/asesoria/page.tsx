@@ -64,7 +64,7 @@ export default function AsesoriaPage() {
           </div>
           <h3 className="font-bold text-sm text-slate-950">Confirmamos opción y costo</h3>
           <p className="text-xs text-slate-500 leading-relaxed">
-            Verificamos catálogo técnico, disponibilidad en Pedernales o Quito y tiempo de entrega a tu ciudad.
+            Verificamos catálogo técnico, disponibilidad en Bodega Matriz Pedernales y tiempo de despacho a tu ciudad.
           </p>
         </div>
       </div>

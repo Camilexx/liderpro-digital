@@ -51,9 +51,13 @@ export function buildWhatsAppLink(action: WhatsAppActionType, context: WhatsAppC
 
     case "b2b":
     case "fleet_bulk": {
-      const itemStr = context.b2bNotes || context.neededItem || "Aceites en Caneca/Tambor o Baterías Grupo 31";
-      const cityStr = context.city || "[Ciudad por confirmar]";
-      message = `Hola LiderPro Pedernales, requiero cotización al por mayor/flotas de ${itemStr}. Ciudad de entrega: ${cityStr}.`;
+      if (context.details) {
+        message = context.details;
+      } else {
+        const itemStr = context.b2bNotes || context.neededItem || "Aceites en Caneca/Tambor o Baterías Grupo 31";
+        const cityStr = context.city || "[Ciudad por confirmar]";
+        message = `Hola LiderPro Pedernales, requiero cotización al por mayor/flotas de ${itemStr}. Ciudad de entrega: ${cityStr}.`;
+      }
       break;
     }
 

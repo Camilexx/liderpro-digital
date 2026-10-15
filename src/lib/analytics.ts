@@ -15,6 +15,9 @@ export type AnalyticsEventName =
   | "shipping_product_type_select"
   | "shipping_whatsapp_click"
   | "shipping_whatsapp_calc_click"
+  | "b2b_view"
+  | "b2b_whatsapp_click"
+  | "b2b_calculator_use"
   | "purchase"
   | "lead_created";
 

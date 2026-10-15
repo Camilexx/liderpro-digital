@@ -10,6 +10,10 @@ export type AnalyticsEventName =
   | "quote_request"
   | "branch_view"
   | "shipping_view"
+  | "shipping_city_select"
+  | "shipping_province_select"
+  | "shipping_whatsapp_click"
+  | "shipping_whatsapp_calc_click"
   | "purchase"
   | "lead_created";
 

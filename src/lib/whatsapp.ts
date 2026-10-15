@@ -25,6 +25,7 @@ export interface WhatsAppContext {
   symptom?: string;
   issueDescription?: string;
   city?: string;
+  details?: string;
   locationChoice?: "pedernales" | "quito" | "nacional";
   b2bNotes?: string;
 }
@@ -101,7 +102,11 @@ export function buildWhatsAppLink(action: WhatsAppActionType, context: WhatsAppC
     case "shipping": {
       const cityStr = context.city || "[Mi Ciudad]";
       const prodStr = context.productName || "Baterías / Lubricantes / Filtros";
-      message = `Hola LiderPro Pedernales, requiero cotizar el despacho nacional de ${prodStr} hacia ${cityStr} por encomienda interprovincial o courier autorizado.`;
+      if (context.details) {
+        message = context.details;
+      } else {
+        message = `Hola LiderPro Pedernales, requiero cotizar el despacho nacional de ${prodStr} hacia ${cityStr} por encomienda interprovincial o courier autorizado.`;
+      }
       break;
     }
 

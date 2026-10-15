@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import {
-  Truck,
   CheckCircle2,
   MessageCircle,
   ShieldCheck,
@@ -11,18 +10,17 @@ import {
   BadgeCheck
 } from "lucide-react";
 import { buildWhatsAppLink } from "@/lib/whatsapp";
-import EcuadorLogistics3DMap from "@/components/EcuadorLogistics3DMap";
-import ProvinceShippingCalculator from "@/components/ProvinceShippingCalculator";
+import EcuadorLogistics2DMap from "@/components/EcuadorLogistics2DMap";
+import QuickDispatchAssistant from "@/components/QuickDispatchAssistant";
 import ShippingFAQAccordion from "@/components/ShippingFAQAccordion";
 
 export const metadata: Metadata = {
   title: "Despacho Nacional desde Hub Pedernales | Envíos a las 24 Provincias | LiderPro Ecuador",
   description:
-    "Despacho diario a nivel nacional a las 24 provincias desde nuestra Sede Central en Pedernales por transporte interprovincial y courier según destino. Mapa 3D de rutas, tiempos de entrega de 24h a 48h, protocolo técnico de embalaje antiderrame y facturación electrónica SRI.",
+    "Despacho diario a nivel nacional a las 24 provincias desde nuestra Sede Central en Pedernales por transporte interprovincial y courier según destino. Mapa 2D de rutas directas, tiempos de entrega de 24h a 48h, protocolo técnico de embalaje antiderrame y facturación electrónica SRI.",
 };
 
 export default function ShippingPage() {
-
   return (
     <div className="min-h-screen bg-[#F8FAFC]">
       {/* 1. HERO COMMAND SECTION */}
@@ -109,19 +107,19 @@ export default function ShippingPage() {
         </div>
       </section>
 
-      {/* 2. 3D INTERACTIVE ECUADOR LOGISTICS MAP */}
+      {/* 2. 2D INTERACTIVE ECUADOR LOGISTICS MAP */}
       <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-6">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
           <div className="space-y-2 max-w-2xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-blue-50 border border-blue-200 rounded-full text-xs font-bold text-brand-primary uppercase tracking-wider">
               <Sparkles className="w-3.5 h-3.5" />
-              <span>Visualizador Logístico 3D</span>
+              <span>Visualizador Logístico 2D Oficial</span>
             </div>
             <h2 className="text-2xl sm:text-4xl font-black text-slate-950 tracking-tight">
-              Topografía y Corredores Logísticos desde Pedernales
+              Mapa de Cobertura y Rutas desde Hub Pedernales
             </h2>
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              Explora en 3D la conectividad directa de nuestra bodega matriz con los principales centros urbanos e industriales del país. Haz clic en cualquier ciudad para consultar tiempos y rutas.
+              Explora en proyección plana 2D la conectividad directa de nuestra bodega matriz con los principales centros urbanos e industriales del país. Toca cualquier ciudad para consultar tiempos y rutas.
             </p>
           </div>
 
@@ -131,27 +129,13 @@ export default function ShippingPage() {
           </div>
         </div>
 
-        {/* The 3D Map Component */}
-        <EcuadorLogistics3DMap />
+        {/* The 2D Map Component */}
+        <EcuadorLogistics2DMap />
       </section>
 
-      {/* 3. INTERACTIVE 24-PROVINCE CALCULATOR */}
-      <section className="py-8 sm:py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-6">
-        <div className="text-center max-w-3xl mx-auto space-y-2 mb-8">
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-amber-50 border border-amber-200 rounded-full text-xs font-bold text-amber-900 uppercase tracking-wider">
-            <Truck className="w-3.5 h-3.5" />
-            <span>Consulta Inmediata por Cantón</span>
-          </div>
-          <h2 className="text-2xl sm:text-4xl font-black text-slate-950 tracking-tight">
-            Calculador y Directorio de las 24 Provincias
-          </h2>
-          <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-            Busca tu ciudad o provincia para conocer con exactitud la frecuencia de salida, tiempo estimado de entrega y compatibilidad con cargas pesadas (baterías y canecas de 20L).
-          </p>
-        </div>
-
-        {/* 24 Province Interactive Calculator */}
-        <ProvinceShippingCalculator />
+      {/* 3. QUICK DISPATCH ASSISTANT & ARTERIAL TRUNK CORRIDORS */}
+      <section className="py-8 sm:py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <QuickDispatchAssistant />
       </section>
 
       {/* 4. INDUSTRIAL PACKAGING & SECURITY STANDARDS */}

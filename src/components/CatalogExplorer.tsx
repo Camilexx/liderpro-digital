@@ -10,10 +10,10 @@ const ITEMS_PER_PAGE = 24;
 const CATEGORIES: { id: string; label: string; icon: string }[] = [
   { id: "todas", label: "Todas las categorías", icon: "📦" },
   { id: "baterias", label: "Baterías (48)", icon: "🔋" },
-  { id: "lubricantes", label: "Aceites & Lubricantes (89)", icon: "🛢️" },
+  { id: "lubricantes", label: "Aceites & Lubricantes (94)", icon: "🛢️" },
   { id: "filtros", label: "Filtros (193)", icon: "⚙️" },
   { id: "refrigerantes", label: "Refrigerantes (15)", icon: "❄️" },
-  { id: "aditivos", label: "Aditivos & Químicos (44)", icon: "🧪" },
+  { id: "aditivos", label: "Aditivos & Químicos (134)", icon: "🧪" },
   { id: "bujias", label: "Bujías (20)", icon: "⚡" },
   { id: "frenos", label: "Líquidos de Freno (4)", icon: "🛑" },
 ];

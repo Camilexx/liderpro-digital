@@ -18,7 +18,7 @@ export default function ProductsPage() {
         <div className="max-w-3xl space-y-3">
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-emerald-50 text-emerald-800 border border-emerald-200 rounded-full text-xs font-bold uppercase tracking-wider">
             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-            <span>🟢 507 productos en inventario físico • Bodega Pedernales</span>
+            <span>🟢 508 productos en inventario físico • Bodega Pedernales</span>
           </div>
           <h1 className="text-2xl sm:text-4xl font-black text-slate-950 tracking-tight">
             Catálogo Oficial Multimarca LiderPro
@@ -38,13 +38,13 @@ export default function ProductsPage() {
               href="/lubricantes"
               className="px-3.5 py-2 bg-slate-100 hover:bg-slate-200 text-slate-800 rounded-lg font-bold transition-colors"
             >
-              🛢️ Aroil, Mannol, Mobil & Motul (89)
+              🛢️ Aroil, Mannol, Mobil & Motul (94)
             </Link>
             <Link
               href="/filtros"
               className="px-3.5 py-2 bg-slate-100 hover:bg-slate-200 text-slate-800 rounded-lg font-bold transition-colors"
             >
-              ⚙️ Advance Filters & Químicos ATE (250+)
+              ⚙️ Advance Filters (193)
             </Link>
             <Link
               href="/encuentra-tu-producto"

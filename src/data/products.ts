@@ -105,7 +105,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 8 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-15w40.jpg",
+    "imageUrl": "/images/products/01001012.png",
     "compatibleVehicles": [
       {
         "make": "Bajaj",
@@ -206,7 +206,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 12 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/01098960.png",
     "compatibleVehicles": [
       {
         "make": "Bajaj",
@@ -307,7 +307,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 11 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-15w40.jpg",
+    "imageUrl": "/images/products/01099362.png",
     "compatibleVehicles": [
       {
         "make": "Bajaj",
@@ -408,7 +408,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 1 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-15w40.jpg",
+    "imageUrl": "/images/products/012MN7501-1.png",
     "compatibleVehicles": [
       {
         "make": "Sector Camaronero Pedernales",
@@ -483,7 +483,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 18 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/coolant-oat.jpg",
+    "imageUrl": "/images/products/012MN4011-1.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -552,7 +552,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 1 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/coolant-oat.jpg",
+    "imageUrl": "/images/products/012MN7501-1.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -621,7 +621,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 3 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/coolant-oat.jpg",
+    "imageUrl": "/images/products/012MN4011-5.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -690,7 +690,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 17 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/coolant-oat.jpg",
+    "imageUrl": "/images/products/012MN4012-1.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -777,7 +777,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 1 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/coolant-oat.jpg",
+    "imageUrl": "/images/products/012MN7501-1.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -864,7 +864,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 5 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/coolant-oat.jpg",
+    "imageUrl": "/images/products/012MN4012-5.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -951,7 +951,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 20 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/coolant-oat.jpg",
+    "imageUrl": "/images/products/012MN4013-1.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -1020,7 +1020,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 4 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/coolant-oat.jpg",
+    "imageUrl": "/images/products/012MN4013-5.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -1089,7 +1089,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 17 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/coolant-oat.jpg",
+    "imageUrl": "/images/products/012MN4016-1.png",
     "compatibleVehicles": [
       {
         "make": "General Motors / Chevrolet",
@@ -1164,7 +1164,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 5 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/coolant-oat.jpg",
+    "imageUrl": "/images/products/012MN4016-5.png",
     "compatibleVehicles": [
       {
         "make": "General Motors / Chevrolet",
@@ -1236,7 +1236,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 23 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN5022.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -1300,7 +1300,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 12 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN6145.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -1364,7 +1364,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 15 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN6149.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -1435,7 +1435,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 16 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-15w40.jpg",
+    "imageUrl": "/images/products/012MN7104-1.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -1554,7 +1554,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-15w40.jpg",
+    "imageUrl": "/images/products/012MN7104-10A.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -1673,7 +1673,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 8 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-15w40.jpg",
+    "imageUrl": "/images/products/012MN7104-20A.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -1792,7 +1792,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 8 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-15w40.jpg",
+    "imageUrl": "/images/products/012MN7104-5A.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -1911,7 +1911,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-15w40.jpg",
+    "imageUrl": "/images/products/012MN7501-1.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -2006,7 +2006,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 14 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-15w40.jpg",
+    "imageUrl": "/images/products/012MN7404-1A.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -2101,7 +2101,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 6 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-15w40.jpg",
+    "imageUrl": "/images/products/012MN7404-4A.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -2196,7 +2196,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 19 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-15w40.jpg",
+    "imageUrl": "/images/products/012MN7501-1.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -2291,7 +2291,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 6 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-15w40.jpg",
+    "imageUrl": "/images/products/012MN7501-4.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -2386,7 +2386,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 8 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN7512-1A.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -2481,7 +2481,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 10 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN7512-4A.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -2576,7 +2576,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 1 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN7701-1.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -2671,7 +2671,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 20 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN7709-1.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -2766,7 +2766,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 4 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN7709-4.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -2861,7 +2861,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 17 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN7713-1.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -2956,7 +2956,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 4 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN7713-4.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -3051,7 +3051,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 6 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN7720-1.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -3146,7 +3146,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 4 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN7720-4.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -3241,7 +3241,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 4 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-15w40.jpg",
+    "imageUrl": "/images/products/012MN7726-5.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -3336,7 +3336,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 23 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-15w40.jpg",
+    "imageUrl": "/images/products/012MN7812-1.png",
     "compatibleVehicles": [
       {
         "make": "Bajaj",
@@ -3432,7 +3432,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 19 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN7814-1.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -3503,7 +3503,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 35 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN7832.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -3575,7 +3575,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 6 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN7901.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -3641,7 +3641,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 24 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN7904.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -3707,7 +3707,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 20 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN7904-1.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -3773,7 +3773,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 4 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN7904-5.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -3844,7 +3844,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 20 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN7906-1A.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -3921,7 +3921,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 4 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN7906-4A.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -3998,7 +3998,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 6 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN7909-1.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -4093,7 +4093,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 4 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN7909-5.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -4188,7 +4188,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 20 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN7914-1A.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -4283,7 +4283,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 7 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN7914-4A.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -4378,7 +4378,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 20 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN7924-1.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -4473,7 +4473,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 3 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN7924-4.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -4561,7 +4561,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 24 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN7501-1.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -4625,7 +4625,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 1 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN7501-1.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -4689,7 +4689,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 12 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN7501-1.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -4753,7 +4753,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 23 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN7501-1.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -4817,7 +4817,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 1 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN7501-1.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -4883,7 +4883,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 18 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN8101-1A.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -4949,7 +4949,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 4 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN8101-4.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -5020,7 +5020,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 1 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-15w40.jpg",
+    "imageUrl": "/images/products/012MN7501-1.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -5109,7 +5109,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 4 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-15w40.jpg",
+    "imageUrl": "/images/products/012MN7501-1.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -5198,7 +5198,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 18 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN8106-1.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -5287,7 +5287,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN8106-4.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -5376,7 +5376,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 1 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN7501-1.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -5465,7 +5465,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN7501-1.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -5554,7 +5554,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 18 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN8108-1.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -5643,7 +5643,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 4 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN8108-4.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -5727,7 +5727,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 20 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN8115-1.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -5791,7 +5791,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 1 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN8116.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -5855,7 +5855,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 11 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN8121.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -5921,7 +5921,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 20 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN8202-1.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -5992,7 +5992,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 19 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN8206-1.png",
     "compatibleVehicles": [
       {
         "make": "Dirección Hidráulica",
@@ -6069,7 +6069,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 20 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN8207-1.png",
     "compatibleVehicles": [
       {
         "make": "Dirección Hidráulica",
@@ -6141,7 +6141,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 20 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN8220-1.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -6212,7 +6212,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 20 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN8222-1.png",
     "compatibleVehicles": [
       {
         "make": "Dirección Hidráulica",
@@ -6284,7 +6284,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 11 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN9009-045.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -6350,7 +6350,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 9 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN9201.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -6416,7 +6416,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 10 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN9202-045.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -6482,7 +6482,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 12 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN9423-025.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -6548,7 +6548,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 12 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN9669.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -6614,7 +6614,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 47 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN9672.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -6680,7 +6680,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 6 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN9673.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -6746,7 +6746,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 49 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN9770.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -6810,7 +6810,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 6 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN7501-1.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -6876,7 +6876,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 4 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN9829-025.png",
     "compatibleVehicles": [
       {
         "make": "Camionetas Turbo Diésel",
@@ -6954,7 +6954,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 6 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN9873.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -7020,7 +7020,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 6 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN9892.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -7086,7 +7086,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 8 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN9893.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -7150,7 +7150,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 12 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN9897.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -7216,7 +7216,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 12 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN9900.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -7282,7 +7282,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 6 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN9902-01.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -7348,7 +7348,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 10 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN9903-01.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -7414,7 +7414,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 6 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN9906.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -7478,7 +7478,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 6 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN9909.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -7542,7 +7542,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 18 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN9911.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -7608,7 +7608,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 12 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN9923-025.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -7674,7 +7674,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN9927.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -7745,7 +7745,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 6 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN9929-045.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -7822,7 +7822,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 12 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN9929-1.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -7894,7 +7894,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 5 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN9930-01.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -7960,7 +7960,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 10 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN9930-025.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -8026,7 +8026,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 10 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN9931.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -8092,7 +8092,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 12 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN9939-05.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -8158,7 +8158,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 7 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN9943.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -8224,7 +8224,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 12 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN9944.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -8290,7 +8290,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 12 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN9950-025.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -8356,7 +8356,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 3 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN9954-045.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -8422,7 +8422,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 10 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN9955-045.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -8488,7 +8488,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 24 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN9956-025.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -8554,7 +8554,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN9957-025.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -8620,7 +8620,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 12 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN9958.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -8686,7 +8686,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 6 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN9965.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -8752,7 +8752,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 9 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN9966-025.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -8818,7 +8818,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 5 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN9968-025.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -8884,7 +8884,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 12 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN9971.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -8950,7 +8950,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 6 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN9973.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -9016,7 +9016,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 6 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN9974.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -9082,7 +9082,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 11 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN9980.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -9148,7 +9148,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 12 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN9981.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -9214,7 +9214,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 18 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN9990.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -9280,7 +9280,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 12 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN9991.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -9344,7 +9344,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 20 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN7501-1.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -9408,7 +9408,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 5 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN7501-1.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -9479,7 +9479,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 4 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-15w40.jpg",
+    "imageUrl": "/images/products/01504MD04-15W40.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -9598,7 +9598,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 1 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-15w40.jpg",
+    "imageUrl": "/images/products/015MD-51300.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -9717,7 +9717,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-15w40.jpg",
+    "imageUrl": "/images/products/015MD-513002.5.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -9834,7 +9834,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 18 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-15w40.jpg",
+    "imageUrl": "/images/products/015MD12-15W40.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -9951,7 +9951,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-15w40.jpg",
+    "imageUrl": "/images/products/015MD2.5-15W40.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -10070,7 +10070,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-15w40.jpg",
+    "imageUrl": "/images/products/015MD5-15W40.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -10189,7 +10189,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 15 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/015MS04-10W30.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -10284,7 +10284,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 4 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-15w40.jpg",
+    "imageUrl": "/images/products/015MS04-20W50.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -10379,7 +10379,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 13 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/015MS12-10W30.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -10474,7 +10474,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 12 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-15w40.jpg",
+    "imageUrl": "/images/products/015MS12-20W50.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -10569,7 +10569,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 12 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/016AM-75676-56.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -10664,7 +10664,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 3 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/016AM-75677-36.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -10759,7 +10759,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 12 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-15w40.jpg",
+    "imageUrl": "/images/products/016AM-75696-56.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -10854,7 +10854,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 4 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-15w40.jpg",
+    "imageUrl": "/images/products/016AM-75697-36.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -10948,7 +10948,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/battery-ns60.jpg",
+    "imageUrl": "/images/products/bosch-s4-battery.png",
     "compatibleVehicles": [
       {
         "make": "Toyota",
@@ -11048,7 +11048,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/battery-ns60.jpg",
+    "imageUrl": "/images/products/bosch-s4-battery.png",
     "compatibleVehicles": [
       {
         "make": "Toyota",
@@ -11148,7 +11148,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/battery-din66.jpg",
+    "imageUrl": "/images/products/bosch-s4-battery.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -11248,7 +11248,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 1 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/battery-din66.jpg",
+    "imageUrl": "/images/products/bosch-s4-battery.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -11348,7 +11348,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/battery-ns60.jpg",
+    "imageUrl": "/images/products/bosch-s4-battery.png",
     "compatibleVehicles": [
       {
         "make": "Toyota",
@@ -11448,7 +11448,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 1 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/battery-ns60.jpg",
+    "imageUrl": "/images/products/bosch-s4-battery.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -11548,7 +11548,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 4 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/battery-ns60.jpg",
+    "imageUrl": "/images/products/bosch-s4-battery.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -11648,7 +11648,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 1 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/battery-ns60.jpg",
+    "imageUrl": "/images/products/bosch-s4-battery.png",
     "compatibleVehicles": [
       {
         "make": "Flota Taxi & Servicio Público",
@@ -11724,7 +11724,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/battery-ns60.jpg",
+    "imageUrl": "/images/products/bosch-s4-battery.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -11806,7 +11806,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 1 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/battery-ns60.jpg",
+    "imageUrl": "/images/products/bosch-s4-battery.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -11906,7 +11906,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 1 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/battery-din66.jpg",
+    "imageUrl": "/images/products/bosch-s4-battery.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -12006,7 +12006,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/battery-ns60.jpg",
+    "imageUrl": "/images/products/baterias-ecuador-fe.png",
     "compatibleVehicles": [
       {
         "make": "Toyota",
@@ -12106,7 +12106,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 1 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/battery-ns60.jpg",
+    "imageUrl": "/images/products/baterias-ecuador-fe.png",
     "compatibleVehicles": [
       {
         "make": "Toyota",
@@ -12206,7 +12206,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 4 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/battery-ns60.jpg",
+    "imageUrl": "/images/products/baterias-ecuador-fe.png",
     "compatibleVehicles": [
       {
         "make": "Toyota",
@@ -12306,7 +12306,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 1 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/battery-din66.jpg",
+    "imageUrl": "/images/products/baterias-ecuador-fe.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -12406,7 +12406,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 1 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/battery-din66.jpg",
+    "imageUrl": "/images/products/baterias-ecuador-fe.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -12506,7 +12506,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 3 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/battery-din66.jpg",
+    "imageUrl": "/images/products/baterias-ecuador-fe.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -12606,7 +12606,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 4 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/battery-din66.jpg",
+    "imageUrl": "/images/products/baterias-ecuador-fe.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -12706,7 +12706,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 1 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/battery-din66.jpg",
+    "imageUrl": "/images/products/baterias-ecuador-fe.png",
     "compatibleVehicles": [
       {
         "make": "Hino",
@@ -12794,7 +12794,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/battery-ns60.jpg",
+    "imageUrl": "/images/products/baterias-ecuador-fe.png",
     "compatibleVehicles": [
       {
         "make": "Toyota",
@@ -12894,7 +12894,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/battery-ns60.jpg",
+    "imageUrl": "/images/products/baterias-ecuador-fe.png",
     "compatibleVehicles": [
       {
         "make": "Toyota",
@@ -12994,7 +12994,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 1 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/battery-ns60.jpg",
+    "imageUrl": "/images/products/baterias-ecuador-fe.png",
     "compatibleVehicles": [
       {
         "make": "Toyota",
@@ -13094,7 +13094,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/battery-ns60.jpg",
+    "imageUrl": "/images/products/baterias-ecuador-fe.png",
     "compatibleVehicles": [
       {
         "make": "Toyota",
@@ -13194,7 +13194,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 1 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/battery-ns60.jpg",
+    "imageUrl": "/images/products/baterias-ecuador-fe.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -13276,7 +13276,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 1 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/battery-ns60.jpg",
+    "imageUrl": "/images/products/baterias-ecuador-fe.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -13376,7 +13376,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 1 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/battery-ns60.jpg",
+    "imageUrl": "/images/products/baterias-ecuador-fe.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -13476,7 +13476,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 4 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/battery-ns60.jpg",
+    "imageUrl": "/images/products/baterias-ecuador-fe.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -13576,7 +13576,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 1 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/battery-ns60.jpg",
+    "imageUrl": "/images/products/baterias-ecuador-fe.png",
     "compatibleVehicles": [
       {
         "make": "Flota Taxi & Servicio Público",
@@ -13652,7 +13652,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 1 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/battery-ns60.jpg",
+    "imageUrl": "/images/products/baterias-ecuador-fe.png",
     "compatibleVehicles": [
       {
         "make": "Flota Taxi & Servicio Público",
@@ -13728,7 +13728,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 1 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/battery-ns60.jpg",
+    "imageUrl": "/images/products/baterias-ecuador-fe.png",
     "compatibleVehicles": [
       {
         "make": "Flota Taxi & Servicio Público",
@@ -13804,7 +13804,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 1 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/battery-ns60.jpg",
+    "imageUrl": "/images/products/baterias-ecuador-fe.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -13886,7 +13886,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 1 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/battery-din66.jpg",
+    "imageUrl": "/images/products/baterias-ecuador-fe.png",
     "compatibleVehicles": [
       {
         "make": "Sector Camaronero",
@@ -13968,7 +13968,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/battery-din66.jpg",
+    "imageUrl": "/images/products/baterias-ecuador-fe.png",
     "compatibleVehicles": [
       {
         "make": "Sector Camaronero",
@@ -14050,7 +14050,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/battery-ns60.jpg",
+    "imageUrl": "/images/products/baterias-ecuador-fe.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -14132,7 +14132,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 1 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/battery-ns60.jpg",
+    "imageUrl": "/images/products/baterias-ecuador-fe.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -14214,7 +14214,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/battery-ns60.jpg",
+    "imageUrl": "/images/products/baterias-ecuador-fe.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -14296,7 +14296,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/battery-ns60.jpg",
+    "imageUrl": "/images/products/baterias-ecuador-fe.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -14396,7 +14396,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 1 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/battery-ns60.jpg",
+    "imageUrl": "/images/products/baterias-ecuador-fe.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -14496,7 +14496,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/battery-ns60.jpg",
+    "imageUrl": "/images/products/baterias-ecuador-fe.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -14597,7 +14597,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 5 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/0368AR00001.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -14692,7 +14692,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 4 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-15w40.jpg",
+    "imageUrl": "/images/products/0368AR00005.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -14787,7 +14787,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-15w40.jpg",
+    "imageUrl": "/images/products/0368AR00009.png",
     "compatibleVehicles": [
       {
         "make": "Flotas de Carga & Taxis",
@@ -14864,7 +14864,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 22 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/0368AR00030.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -14959,7 +14959,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 11 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-15w40.jpg",
+    "imageUrl": "/images/products/0368AR00031.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -15054,7 +15054,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 31 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-15w40.jpg",
+    "imageUrl": "/images/products/0368AR00032.png",
     "compatibleVehicles": [
       {
         "make": "Flotas de Carga & Taxis",
@@ -15131,7 +15131,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 5 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-15w40.jpg",
+    "imageUrl": "/images/products/0368AR10001.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -15250,7 +15250,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-15w40.jpg",
+    "imageUrl": "/images/products/0368AR10002.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -15369,7 +15369,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-15w40.jpg",
+    "imageUrl": "/images/products/0368AR00030.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -15488,7 +15488,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 12 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-15w40.jpg",
+    "imageUrl": "/images/products/0368AR10008.png",
     "compatibleVehicles": [
       {
         "make": "Flotas de Carga & Taxis",
@@ -15565,7 +15565,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 1 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-15w40.jpg",
+    "imageUrl": "/images/products/0368AR10009.png",
     "compatibleVehicles": [
       {
         "make": "Flotas de Carga & Taxis",
@@ -15642,7 +15642,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 8 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-15w40.jpg",
+    "imageUrl": "/images/products/0368AR10010.png",
     "compatibleVehicles": [
       {
         "make": "Flotas de Carga & Taxis",
@@ -15714,7 +15714,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 16 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/0368AR10016.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -15785,7 +15785,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 16 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-15w40.jpg",
+    "imageUrl": "/images/products/0368AR10031.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -15904,7 +15904,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 12 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-15w40.jpg",
+    "imageUrl": "/images/products/0368AR10032.png",
     "compatibleVehicles": [
       {
         "make": "Flotas de Carga & Taxis",
@@ -15976,7 +15976,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 10 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/0368AR00030.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -16047,7 +16047,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 8 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-15w40.jpg",
+    "imageUrl": "/images/products/0368AR30003.png",
     "compatibleVehicles": [
       {
         "make": "Bajaj",
@@ -16143,7 +16143,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 5 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/0368AR40001.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -16214,7 +16214,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 1 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/0368AR40005.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -16303,7 +16303,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 3 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/0368AR00030.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -16392,7 +16392,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 5 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-15w40.jpg",
+    "imageUrl": "/images/products/0368AR40009.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -16481,7 +16481,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-15w40.jpg",
+    "imageUrl": "/images/products/0368AR00030.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -16565,7 +16565,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 4 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/0368AR40013.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -16631,7 +16631,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/0368AR40014.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -16697,7 +16697,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 6 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/0368AR40017.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -16763,7 +16763,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/0368AR40018.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -16829,7 +16829,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 10 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/0368AR40038.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -16900,7 +16900,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 10 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/0368AR40039.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -16989,7 +16989,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 10 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-15w40.jpg",
+    "imageUrl": "/images/products/0368AR40040.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -17073,7 +17073,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 12 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/0368AR40041.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -17139,7 +17139,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 10 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/0368AR40042.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -17210,7 +17210,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 43 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/0368AR40045.png",
     "compatibleVehicles": [
       {
         "make": "Dirección Hidráulica",
@@ -17287,7 +17287,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 1 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-15w40.jpg",
+    "imageUrl": "/images/products/0368AR50006.png",
     "compatibleVehicles": [
       {
         "make": "Sector Camaronero Pedernales",
@@ -17364,7 +17364,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/0368AR60026.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -17452,7 +17452,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 1 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/0368AR00030.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -17516,7 +17516,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 1 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/0368AR00030.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -17582,7 +17582,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 4 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -17653,7 +17653,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 9 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-15w40.jpg",
+    "imageUrl": "/images/products/038LUB-D1540-0025.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -17772,7 +17772,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 9 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-15w40.jpg",
+    "imageUrl": "/images/products/038LUB-PC2050-0025.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -17867,7 +17867,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 1 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-15w40.jpg",
+    "imageUrl": "/images/products/038LUB-PC2050-0100.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -17962,7 +17962,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 7 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/038LUBC1030-0025.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -18053,7 +18053,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 4 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/ngk-spark-plug.png",
     "compatibleVehicles": [
       {
         "make": "Suzuki",
@@ -18132,7 +18132,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 10 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/ngk-spark-plug.png",
     "compatibleVehicles": [
       {
         "make": "Hyundai",
@@ -18217,7 +18217,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 4 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/ngk-spark-plug.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -18290,7 +18290,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 10 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/ngk-spark-plug.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -18369,7 +18369,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 4 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/ngk-spark-plug.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -18448,7 +18448,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 7 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/ngk-spark-plug.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -18527,7 +18527,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 10 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/ngk-spark-plug.png",
     "compatibleVehicles": [
       {
         "make": "Kia",
@@ -18606,7 +18606,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 10 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/ngk-spark-plug.png",
     "compatibleVehicles": [
       {
         "make": "Kia",
@@ -18685,7 +18685,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 10 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/ngk-spark-plug.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -18758,7 +18758,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 10 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/ngk-spark-plug.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -18831,7 +18831,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 8 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/ngk-spark-plug.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -18904,7 +18904,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 7 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/ngk-spark-plug.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -18977,7 +18977,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 10 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/ngk-spark-plug.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -19050,7 +19050,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 10 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/ngk-spark-plug.png",
     "compatibleVehicles": [
       {
         "make": "Honda",
@@ -19129,7 +19129,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 10 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/ngk-spark-plug.png",
     "compatibleVehicles": [
       {
         "make": "Suzuki",
@@ -19202,7 +19202,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 10 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/ngk-spark-plug.png",
     "compatibleVehicles": [
       {
         "make": "Honda",
@@ -19287,7 +19287,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 10 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/ngk-spark-plug.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -19360,7 +19360,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 14 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/ngk-spark-plug.png",
     "compatibleVehicles": [
       {
         "make": "Hyundai",
@@ -19445,7 +19445,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 10 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/ngk-spark-plug.png",
     "compatibleVehicles": [
       {
         "make": "Toyota",
@@ -19518,7 +19518,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 10 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/ngk-spark-plug.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -19588,7 +19588,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 1 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -19654,7 +19654,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 1 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Camionetas 4x4 y Flotas Costa",
@@ -19729,7 +19729,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 4 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-air-filter.png",
     "compatibleVehicles": [
       {
         "make": "Toyota",
@@ -19804,7 +19804,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 3 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-air-filter.png",
     "compatibleVehicles": [
       {
         "make": "JAC",
@@ -19873,7 +19873,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 4 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-cabin-filter.png",
     "compatibleVehicles": [
       {
         "make": "Suzuki",
@@ -19948,7 +19948,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 3 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-cabin-filter.png",
     "compatibleVehicles": [
       {
         "make": "Volkswagen",
@@ -20017,7 +20017,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 8 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-fuel-filter.png",
     "compatibleVehicles": [
       {
         "make": "Nissan",
@@ -20086,7 +20086,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 3 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-fuel-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chery",
@@ -20161,7 +20161,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 6 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-fuel-filter.png",
     "compatibleVehicles": [
       {
         "make": "Hyundai",
@@ -20242,7 +20242,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 12 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-fuel-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -20329,7 +20329,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 1 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-fuel-filter.png",
     "compatibleVehicles": [
       {
         "make": "Suzuki",
@@ -20404,7 +20404,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 3 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Hyundai",
@@ -20479,7 +20479,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 6 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -20548,7 +20548,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 4 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Great Wall",
@@ -20629,7 +20629,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 10 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -20710,7 +20710,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 11 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Great Wall",
@@ -20791,7 +20791,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 6 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Great Wall",
@@ -20860,7 +20860,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 3 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Volkswagen",
@@ -20929,7 +20929,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 3 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Nissan",
@@ -20998,7 +20998,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 4 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -21067,7 +21067,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 6 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -21136,7 +21136,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 10 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -21217,7 +21217,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 3 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Toyota",
@@ -21304,7 +21304,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 3 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-fuel-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -21373,7 +21373,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 5 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-fuel-filter.png",
     "compatibleVehicles": [
       {
         "make": "Toyota",
@@ -21448,7 +21448,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 6 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-fuel-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -21517,7 +21517,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 6 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-fuel-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -21586,7 +21586,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 3 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -21655,7 +21655,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-air-filter.png",
     "compatibleVehicles": [
       {
         "make": "Hyundai",
@@ -21730,7 +21730,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 1 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-air-filter.png",
     "compatibleVehicles": [
       {
         "make": "Kia",
@@ -21805,7 +21805,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-air-filter.png",
     "compatibleVehicles": [
       {
         "make": "Suzuki",
@@ -21880,7 +21880,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 1 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-air-filter.png",
     "compatibleVehicles": [
       {
         "make": "Kia",
@@ -21949,7 +21949,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 6 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-air-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -22018,7 +22018,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-air-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -22087,7 +22087,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 1 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-air-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -22162,7 +22162,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 3 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-air-filter.png",
     "compatibleVehicles": [
       {
         "make": "Zotye",
@@ -22231,7 +22231,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-air-filter.png",
     "compatibleVehicles": [
       {
         "make": "Dongfeng",
@@ -22300,7 +22300,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-air-filter.png",
     "compatibleVehicles": [
       {
         "make": "Renault",
@@ -22369,7 +22369,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-air-filter.png",
     "compatibleVehicles": [
       {
         "make": "Renault",
@@ -22438,7 +22438,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-air-filter.png",
     "compatibleVehicles": [
       {
         "make": "Ford",
@@ -22513,7 +22513,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 3 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-air-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -22582,7 +22582,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-air-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -22651,7 +22651,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-air-filter.png",
     "compatibleVehicles": [
       {
         "make": "Kia",
@@ -22726,7 +22726,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 5 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-air-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -22795,7 +22795,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 6 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-air-filter.png",
     "compatibleVehicles": [
       {
         "make": "Great Wall",
@@ -22864,7 +22864,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 3 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-air-filter.png",
     "compatibleVehicles": [
       {
         "make": "Great Wall",
@@ -22933,7 +22933,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-air-filter.png",
     "compatibleVehicles": [
       {
         "make": "Nissan",
@@ -23002,7 +23002,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 3 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-air-filter.png",
     "compatibleVehicles": [
       {
         "make": "Ford",
@@ -23077,7 +23077,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 6 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-air-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -23146,7 +23146,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 7 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-air-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -23215,7 +23215,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-air-filter.png",
     "compatibleVehicles": [
       {
         "make": "Hyundai",
@@ -23290,7 +23290,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 1 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-air-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -23371,7 +23371,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 3 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-air-filter.png",
     "compatibleVehicles": [
       {
         "make": "Hyundai",
@@ -23446,7 +23446,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 3 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-air-filter.png",
     "compatibleVehicles": [
       {
         "make": "Great Wall",
@@ -23515,7 +23515,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-air-filter.png",
     "compatibleVehicles": [
       {
         "make": "Kia",
@@ -23584,7 +23584,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-air-filter.png",
     "compatibleVehicles": [
       {
         "make": "Nissan",
@@ -23653,7 +23653,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-air-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -23734,7 +23734,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 1 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-air-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -23803,7 +23803,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 1 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-air-filter.png",
     "compatibleVehicles": [
       {
         "make": "Nissan",
@@ -23872,7 +23872,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 3 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-air-filter.png",
     "compatibleVehicles": [
       {
         "make": "Volkswagen",
@@ -23941,7 +23941,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-air-filter.png",
     "compatibleVehicles": [
       {
         "make": "Toyota",
@@ -24028,7 +24028,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-air-filter.png",
     "compatibleVehicles": [
       {
         "make": "Kia",
@@ -24097,7 +24097,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 1 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-air-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -24166,7 +24166,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 3 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-air-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -24235,7 +24235,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-air-filter.png",
     "compatibleVehicles": [
       {
         "make": "Ford",
@@ -24310,7 +24310,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 3 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-air-filter.png",
     "compatibleVehicles": [
       {
         "make": "Suzuki",
@@ -24385,7 +24385,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-air-filter.png",
     "compatibleVehicles": [
       {
         "make": "Nissan",
@@ -24460,7 +24460,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 3 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-air-filter.png",
     "compatibleVehicles": [
       {
         "make": "Suzuki",
@@ -24535,7 +24535,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 4 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-air-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -24616,7 +24616,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 1 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-air-filter.png",
     "compatibleVehicles": [
       {
         "make": "Suzuki",
@@ -24691,7 +24691,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-air-filter.png",
     "compatibleVehicles": [
       {
         "make": "Suzuki",
@@ -24766,7 +24766,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 1 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-air-filter.png",
     "compatibleVehicles": [
       {
         "make": "Hyundai",
@@ -24841,7 +24841,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-air-filter.png",
     "compatibleVehicles": [
       {
         "make": "Renault",
@@ -24910,7 +24910,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 6 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-air-filter.png",
     "compatibleVehicles": [
       {
         "make": "Kia",
@@ -24985,7 +24985,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 4 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-air-filter.png",
     "compatibleVehicles": [
       {
         "make": "Great Wall",
@@ -25054,7 +25054,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 3 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-air-filter.png",
     "compatibleVehicles": [
       {
         "make": "Great Wall",
@@ -25123,7 +25123,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 3 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-air-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chery",
@@ -25192,7 +25192,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-air-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chery",
@@ -25261,7 +25261,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 5 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-air-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -25330,7 +25330,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-air-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -25411,7 +25411,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 3 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-air-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -25492,7 +25492,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 6 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-air-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -25573,7 +25573,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 3 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-air-filter.png",
     "compatibleVehicles": [
       {
         "make": "Volkswagen",
@@ -25642,7 +25642,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-air-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -25711,7 +25711,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 4 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-air-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -25780,7 +25780,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-air-filter.png",
     "compatibleVehicles": [
       {
         "make": "Renault",
@@ -25849,7 +25849,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-air-filter.png",
     "compatibleVehicles": [
       {
         "make": "Kia",
@@ -25930,7 +25930,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 1 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-air-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -25999,7 +25999,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 1 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-air-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -26080,7 +26080,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 3 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-cabin-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chery",
@@ -26149,7 +26149,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 3 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-cabin-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -26230,7 +26230,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 3 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-cabin-filter.png",
     "compatibleVehicles": [
       {
         "make": "Zotye",
@@ -26299,7 +26299,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 6 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-cabin-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -26380,7 +26380,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 3 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-cabin-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -26461,7 +26461,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-cabin-filter.png",
     "compatibleVehicles": [
       {
         "make": "Suzuki",
@@ -26536,7 +26536,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 5 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-cabin-filter.png",
     "compatibleVehicles": [
       {
         "make": "Suzuki",
@@ -26611,7 +26611,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-cabin-filter.png",
     "compatibleVehicles": [
       {
         "make": "Ford",
@@ -26686,7 +26686,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 6 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-cabin-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -26761,7 +26761,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 3 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-cabin-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -26836,7 +26836,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 3 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-cabin-filter.png",
     "compatibleVehicles": [
       {
         "make": "Nissan",
@@ -26911,7 +26911,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-cabin-filter.png",
     "compatibleVehicles": [
       {
         "make": "Hyundai",
@@ -26986,7 +26986,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-cabin-filter.png",
     "compatibleVehicles": [
       {
         "make": "Kia",
@@ -27055,7 +27055,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-cabin-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -27136,7 +27136,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 1 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-cabin-filter.png",
     "compatibleVehicles": [
       {
         "make": "Kia",
@@ -27211,7 +27211,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 3 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-cabin-filter.png",
     "compatibleVehicles": [
       {
         "make": "Kia",
@@ -27292,7 +27292,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 3 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-cabin-filter.png",
     "compatibleVehicles": [
       {
         "make": "Great Wall",
@@ -27361,7 +27361,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-cabin-filter.png",
     "compatibleVehicles": [
       {
         "make": "Jetour",
@@ -27430,7 +27430,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 6 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-cabin-filter.png",
     "compatibleVehicles": [
       {
         "make": "Great Wall",
@@ -27499,7 +27499,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 1 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-cabin-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -27574,7 +27574,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 4 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-cabin-filter.png",
     "compatibleVehicles": [
       {
         "make": "Great Wall",
@@ -27643,7 +27643,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 5 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-cabin-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -27718,7 +27718,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-cabin-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -27789,7 +27789,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 3 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-cabin-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -27858,7 +27858,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 4 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-cabin-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -27927,7 +27927,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-fuel-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -27996,7 +27996,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 6 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-fuel-filter.png",
     "compatibleVehicles": [
       {
         "make": "Great Wall",
@@ -28065,7 +28065,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 8 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-fuel-filter.png",
     "compatibleVehicles": [
       {
         "make": "Great Wall",
@@ -28134,7 +28134,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 5 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-fuel-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -28203,7 +28203,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 3 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-fuel-filter.png",
     "compatibleVehicles": [
       {
         "make": "Ford",
@@ -28278,7 +28278,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-fuel-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -28359,7 +28359,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 1 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-fuel-filter.png",
     "compatibleVehicles": [
       {
         "make": "Kia",
@@ -28434,7 +28434,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 1 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-fuel-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -28515,7 +28515,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 6 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-fuel-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -28596,7 +28596,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 8 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-fuel-filter.png",
     "compatibleVehicles": [
       {
         "make": "Hyundai",
@@ -28671,7 +28671,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 6 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-fuel-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -28752,7 +28752,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 3 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-fuel-filter.png",
     "compatibleVehicles": [
       {
         "make": "Ford",
@@ -28833,7 +28833,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 3 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-fuel-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -28914,7 +28914,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 4 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-fuel-filter.png",
     "compatibleVehicles": [
       {
         "make": "Great Wall",
@@ -28989,7 +28989,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-fuel-filter.png",
     "compatibleVehicles": [
       {
         "make": "Nissan",
@@ -29058,7 +29058,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 5 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-fuel-filter.png",
     "compatibleVehicles": [
       {
         "make": "Suzuki",
@@ -29133,7 +29133,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 3 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-fuel-filter.png",
     "compatibleVehicles": [
       {
         "make": "Toyota",
@@ -29208,7 +29208,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 6 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-fuel-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -29283,7 +29283,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 4 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-fuel-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -29364,7 +29364,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 4 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-fuel-filter.png",
     "compatibleVehicles": [
       {
         "make": "JAC",
@@ -29433,7 +29433,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 6 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-fuel-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -29502,7 +29502,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-fuel-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -29583,7 +29583,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 5 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-fuel-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -29652,7 +29652,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-fuel-filter.png",
     "compatibleVehicles": [
       {
         "make": "Ford",
@@ -29727,7 +29727,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 3 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-fuel-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -29808,7 +29808,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 3 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-fuel-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -29877,7 +29877,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 4 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-fuel-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -29946,7 +29946,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 8 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-fuel-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -30021,7 +30021,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-fuel-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -30102,7 +30102,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 3 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-fuel-filter.png",
     "compatibleVehicles": [
       {
         "make": "Hino",
@@ -30171,7 +30171,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 3 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-fuel-filter.png",
     "compatibleVehicles": [
       {
         "make": "Hino",
@@ -30240,7 +30240,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 3 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-fuel-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -30321,7 +30321,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-fuel-filter.png",
     "compatibleVehicles": [
       {
         "make": "Dongfeng",
@@ -30390,7 +30390,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 3 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-fuel-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -30459,7 +30459,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 3 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Ford",
@@ -30534,7 +30534,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 1 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -30603,7 +30603,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 4 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Volkswagen",
@@ -30672,7 +30672,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 6 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Hino",
@@ -30741,7 +30741,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 3 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Hino",
@@ -30810,7 +30810,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Hino",
@@ -30879,7 +30879,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 3 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Hino",
@@ -30948,7 +30948,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 5 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -31017,7 +31017,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 5 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -31086,7 +31086,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 6 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Great Wall",
@@ -31155,7 +31155,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 1 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Toyota",
@@ -31236,7 +31236,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 7 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -31305,7 +31305,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 11 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "JAC",
@@ -31374,7 +31374,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -31455,7 +31455,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 6 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -31530,7 +31530,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -31611,7 +31611,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 8 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -31692,7 +31692,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 6 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -31773,7 +31773,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 9 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Kia",
@@ -31860,7 +31860,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 3 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-air-filter.png",
     "compatibleVehicles": [
       {
         "make": "Jetour",
@@ -31929,7 +31929,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 4 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -31998,7 +31998,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 1 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -32079,7 +32079,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 4 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Renault",
@@ -32148,7 +32148,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 12 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Suzuki",
@@ -32223,7 +32223,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 3 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Zotye",
@@ -32292,7 +32292,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 4 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Ford",
@@ -32367,7 +32367,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 6 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -32448,7 +32448,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 5 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -32517,7 +32517,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 9 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -32586,7 +32586,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 3 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -32667,7 +32667,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 10 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Nissan",
@@ -32736,7 +32736,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 9 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -32817,7 +32817,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 4 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -32898,7 +32898,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 6 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -32979,7 +32979,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 4 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Toyota",
@@ -33054,7 +33054,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -33135,7 +33135,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 4 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Ford",
@@ -33210,7 +33210,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 5 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -33279,7 +33279,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 3 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -33348,7 +33348,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 6 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -33429,7 +33429,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -33510,7 +33510,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 3 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Volkswagen",
@@ -33579,7 +33579,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 1 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Nissan",
@@ -33648,7 +33648,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 3 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Great Wall",
@@ -33717,7 +33717,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-air-filter.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -33799,7 +33799,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 8 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/battery-ns60.jpg",
+    "imageUrl": "/images/products/baterias-ecuador-fe.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -33881,7 +33881,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 7 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/battery-ns60.jpg",
+    "imageUrl": "/images/products/baterias-ecuador-fe.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -33963,7 +33963,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 4 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/battery-ns60.jpg",
+    "imageUrl": "/images/products/baterias-ecuador-fe.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -34045,7 +34045,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 1 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/battery-ns60.jpg",
+    "imageUrl": "/images/products/baterias-ecuador-fe.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -34127,7 +34127,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/battery-ns60.jpg",
+    "imageUrl": "/images/products/baterias-ecuador-fe.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -34209,7 +34209,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 7 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/battery-ns60.jpg",
+    "imageUrl": "/images/products/baterias-ecuador-fe.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -34291,7 +34291,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 6 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/battery-ns60.jpg",
+    "imageUrl": "/images/products/baterias-ecuador-fe.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -34367,7 +34367,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 59 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -34431,7 +34431,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 22 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/10270.03.008.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -34497,7 +34497,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 10 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/10270.03.017.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -34566,7 +34566,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 9 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/coolant-oat.jpg",
+    "imageUrl": "/images/products/102EC-502.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -34651,7 +34651,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 10 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/coolant-oat.jpg",
+    "imageUrl": "/images/products/102EC-502LT.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -34738,7 +34738,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 17 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/coolant-oat.jpg",
+    "imageUrl": "/images/products/102EC-503.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -34805,7 +34805,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 26 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/coolant-oat.jpg",
+    "imageUrl": "/images/products/102EC-503LT.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -34869,7 +34869,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 8 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/102LG990EVP.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -34933,7 +34933,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 6 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/102SS822.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -34999,7 +34999,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 3 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Vehículos de Trabajo Pesado",
@@ -35071,7 +35071,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 12 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Vehículos de Trabajo Pesado",
@@ -35143,7 +35143,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 3 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Vehículos de Trabajo Pesado",
@@ -35213,7 +35213,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 6 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Vehículos de Trabajo Pesado",
@@ -35285,7 +35285,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 4 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Camionetas 4x4 y Flotas Costa",
@@ -35357,7 +35357,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 5 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Camionetas 4x4 y Flotas Costa",
@@ -35427,7 +35427,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -35491,7 +35491,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 3 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/1213027CH.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -35555,7 +35555,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 9 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/1213027CT.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -35619,7 +35619,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 8 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/1213027FR.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -35683,7 +35683,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/1213027PT.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -35747,7 +35747,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 6 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/1213027SP.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -35811,7 +35811,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 3 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/1214020.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -35875,7 +35875,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/bosch-s4-battery.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -35939,7 +35939,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 3 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/bosch-s4-battery.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -36003,7 +36003,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/bosch-s4-battery.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -36067,7 +36067,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/bosch-s4-battery.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -36131,7 +36131,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/bosch-s4-battery.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -36195,7 +36195,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/bosch-s4-battery.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -36259,7 +36259,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/bosch-s4-battery.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -36323,7 +36323,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/bosch-s4-battery.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -36387,7 +36387,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/bosch-s4-battery.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -36451,7 +36451,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/bosch-s4-battery.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -36515,7 +36515,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/bosch-s4-battery.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -36579,7 +36579,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 4 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/bosch-s4-battery.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -36643,7 +36643,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 4 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/bosch-s4-battery.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -36707,7 +36707,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 4 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/bosch-s4-battery.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -36771,7 +36771,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/bosch-s4-battery.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -36835,7 +36835,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 1 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/bosch-s4-battery.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -36899,7 +36899,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 1 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/bosch-s4-battery.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -36963,7 +36963,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/bosch-s4-battery.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -37027,7 +37027,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 4 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/bosch-s4-battery.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -37091,7 +37091,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/bosch-s4-battery.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -37155,7 +37155,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/bosch-s4-battery.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -37219,7 +37219,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 10 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/bosch-s4-battery.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -37283,7 +37283,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 10 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/bosch-s4-battery.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -37347,7 +37347,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 10 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/bosch-s4-battery.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -37411,7 +37411,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 6 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/122APC06.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -37475,7 +37475,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 6 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -37539,7 +37539,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 29 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -37605,7 +37605,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 1 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/1243044.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -37676,7 +37676,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 20 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN7501-1.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -37771,7 +37771,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 4 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/012MN7501-1.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -37864,7 +37864,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 7 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/brake-pads.jpg",
+    "imageUrl": "/images/products/ate-brake-fluid.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -37951,7 +37951,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 9 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/brake-pads.jpg",
+    "imageUrl": "/images/products/ate-brake-fluid.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -38036,7 +38036,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 3 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/brake-pads.jpg",
+    "imageUrl": "/images/products/ate-brake-fluid.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -38121,7 +38121,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 10 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/brake-pads.jpg",
+    "imageUrl": "/images/products/ate-brake-fluid.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -38205,7 +38205,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -38271,7 +38271,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 1 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Camionetas 4x4 y Flotas Costa",
@@ -38346,7 +38346,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 4 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/coolant-oat.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -38410,7 +38410,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 8 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/15170.03.025.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -38474,7 +38474,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 12 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/15170.03.039.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -38538,7 +38538,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/1213027CH.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -38608,7 +38608,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 3 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/battery-ns60.jpg",
+    "imageUrl": "/images/products/bosch-s4-battery.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -38707,7 +38707,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 4 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Renault",
@@ -38778,7 +38778,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 6 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-15w40.jpg",
+    "imageUrl": "/images/products/AROIL AMBAR 0368BF00002.png",
     "compatibleVehicles": [
       {
         "make": "Sector Camaronero Pedernales",
@@ -38855,7 +38855,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 1 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-15w40.jpg",
+    "imageUrl": "/images/products/0368AR00030.png",
     "compatibleVehicles": [
       {
         "make": "Sector Camaronero Pedernales",
@@ -38925,7 +38925,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 1075 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/advance-oil-filter.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",
@@ -38995,7 +38995,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 71 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/battery-ns60.jpg",
+    "imageUrl": "/images/products/baterias-ecuador-fe.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -39076,7 +39076,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/filter-oil.jpg",
+    "imageUrl": "/images/products/advance-air-filter.png",
     "compatibleVehicles": [
       {
         "make": "JAC",
@@ -39147,7 +39147,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 1 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-15w40.jpg",
+    "imageUrl": "/images/products/012MN7501-1.png",
     "compatibleVehicles": [
       {
         "make": "Sector Camaronero Pedernales",
@@ -39224,7 +39224,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 1 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-15w40.jpg",
+    "imageUrl": "/images/products/012MN7501-1.png",
     "compatibleVehicles": [
       {
         "make": "Sector Camaronero Pedernales",
@@ -39296,7 +39296,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Stock Pedernales: 2 uds",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/oil-5w30.jpg",
+    "imageUrl": "/images/products/MN2501-20.png",
     "compatibleVehicles": [
       {
         "make": "Parque Automotor Ecuatoriano",

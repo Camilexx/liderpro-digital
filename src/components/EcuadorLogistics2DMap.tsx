@@ -4,83 +4,36 @@ import React, { useState, useId } from "react";
 import {
   Truck,
   ShieldCheck,
-  Send
+  Send,
+  Navigation,
+  Compass,
+  MapPin
 } from "lucide-react";
 import { buildWhatsAppLink } from "@/lib/whatsapp";
 import { trackEvent } from "@/lib/analytics";
+import {
+  ECUADOR_PROVINCES,
+  ECUADOR_MAP_CONFIG,
+  HUB_NODE,
+  DESTINATION_NODES,
+  MapCityNode,
+  ProvincePath,
+  RegionType
+} from "@/data/ecuadorMapData";
 
-type RegionFilter = "todas" | "costa" | "sierra" | "oriente" | "insular";
-
-interface CityNode {
-  id: string;
-  name: string;
-  province: string;
-  region: "costa" | "sierra" | "oriente" | "insular";
-  x: number;
-  y: number;
-  transitTime: "24h" | "24-48h" | "48h";
-  transportType: string;
-  popularProducts: string;
-  isHub?: boolean;
-}
-
-// Exact geographic locations on an 800x680 2D coordinate grid
-const HUB_NODE: CityNode = {
-  id: "pedernales",
-  name: "Pedernales",
-  province: "Manabí",
-  region: "costa",
-  x: 200,
-  y: 187,
-  transitTime: "24h",
-  transportType: "Bodega Matriz y Centro de Despacho",
-  popularProducts: "Acopio y despacho nacional mayorista y minorista",
-  isHub: true
-};
-
-const DESTINATION_NODES: CityNode[] = [
-  // COSTA
-  { id: "quito", name: "Quito", province: "Pichincha", region: "sierra", x: 376, y: 209, transitTime: "24h", transportType: "Courier & Encomienda Directa", popularProducts: "Lubricantes sintéticos Mannol/Motul, baterías Bosch, filtros" },
-  { id: "santo-domingo", name: "Santo Domingo", province: "Sto. Domingo", region: "costa", x: 298, y: 216, transitTime: "24h", transportType: "Encomienda Interprovincial Directa", popularProducts: "Aceites diésel 15W40, baterías pesadas, filtros" },
-  { id: "manta", name: "Manta", province: "Manabí", region: "costa", x: 126, y: 278, transitTime: "24h", transportType: "Transporte Intercantonal Directo", popularProducts: "Aceites marinos, canecas 20L, baterías" },
-  { id: "portoviejo", name: "Portoviejo", province: "Manabí", region: "costa", x: 156, y: 287, transitTime: "24h", transportType: "Transporte Intercantonal Directo", popularProducts: "Lubricantes 20W50, filtros de aceite y aire" },
-  { id: "esmeraldas", name: "Esmeraldas", province: "Esmeraldas", region: "costa", x: 243, y: 107, transitTime: "24h", transportType: "Encomienda Directa Costa Norte", popularProducts: "Lubricantes de motor, baterías, refrigerantes" },
-  { id: "guayaquil", name: "Guayaquil", province: "Guayas", region: "costa", x: 217, y: 388, transitTime: "24h", transportType: "Courier Express & Encomienda", popularProducts: "Canecas de aceite, baterías selladas, aditivos" },
-  { id: "quevedo", name: "Quevedo", province: "Los Ríos", region: "costa", x: 266, y: 285, transitTime: "24h", transportType: "Encomienda Directa Central", popularProducts: "Aceites agrícolas, 15W40, baterías heavy-duty" },
-  { id: "babahoyo", name: "Babahoyo", province: "Los Ríos", region: "costa", x: 258, y: 355, transitTime: "24h", transportType: "Encomienda Interprovincial", popularProducts: "Lubricantes de camión y camioneta, baterías" },
-  { id: "salinas", name: "Salinas", province: "Santa Elena", region: "costa", x: 94, y: 390, transitTime: "24-48h", transportType: "Courier & Encomienda", popularProducts: "Aceites sintéticos, filtros y refrigerantes" },
-  { id: "machala", name: "Machala", province: "El Oro", region: "costa", x: 210, y: 485, transitTime: "24-48h", transportType: "Transporte de Carga Pesada", popularProducts: "Lubricantes camaroneros, canecas, baterías Grupo 31" },
-  
-  // SIERRA
-  { id: "latacunga", name: "Latacunga", province: "Cotopaxi", region: "sierra", x: 360, y: 277, transitTime: "24-48h", transportType: "Encomienda Directa Sierra", popularProducts: "Aceites para altura, refrigerantes 50/50" },
-  { id: "ambato", name: "Ambato", province: "Tungurahua", region: "sierra", x: 358, y: 304, transitTime: "24-48h", transportType: "Encomienda Interprovincial", popularProducts: "Filtros de aceite/aire, baterías, lubricantes" },
-  { id: "riobamba", name: "Riobamba", province: "Chimborazo", region: "sierra", x: 356, y: 343, transitTime: "24-48h", transportType: "Encomienda Directa", popularProducts: "Aceites pesados, baterías Ecuador 24/27" },
-  { id: "cuenca", name: "Cuenca", province: "Azuay", region: "sierra", x: 317, y: 453, transitTime: "24-48h", transportType: "Courier Express & Encomienda", popularProducts: "Mannol sintético, baterías Bosch, bujías NGK" },
-  { id: "loja", name: "Loja", province: "Loja", region: "sierra", x: 294, y: 552, transitTime: "48h", transportType: "Transporte Interprovincial Sur", popularProducts: "Lubricantes multigrado, baterías, filtros" },
-  { id: "ibarra", name: "Ibarra", province: "Imbabura", region: "sierra", x: 414, y: 162, transitTime: "24-48h", transportType: "Encomienda Directa Norte", popularProducts: "Aceites de motor, baterías, aditivos" },
-  { id: "tulcan", name: "Tulcán", province: "Carchi", region: "sierra", x: 459, y: 121, transitTime: "48h", transportType: "Encomienda Interprovincial Frontera", popularProducts: "Lubricantes pesados, anticongelantes, filtros" },
-  
-  // ORIENTE / AMAZONIA
-  { id: "lago-agrio", name: "Lago Agrio", province: "Sucumbíos", region: "oriente", x: 552, y: 186, transitTime: "48h", transportType: "Transporte Carga Nororiente", popularProducts: "Aceites diésel CI-4, canecas, baterías pesadas" },
-  { id: "el-coca", name: "El Coca", province: "Orellana", region: "oriente", x: 540, y: 235, transitTime: "48h", transportType: "Transporte de Carga Petrolera", popularProducts: "Lubricantes industriales y petroleros, filtros" },
-  { id: "puyo", name: "Puyo", province: "Pastaza", region: "oriente", x: 428, y: 326, transitTime: "48h", transportType: "Encomienda Interprovincial", popularProducts: "Aceites 4T moto, lubricantes pesados, baterías" },
-  { id: "tena", name: "Tena", province: "Napo", region: "oriente", x: 449, y: 282, transitTime: "48h", transportType: "Encomienda Directa", popularProducts: "Lubricantes de trabajo y filtros de aire" },
-  { id: "macas", name: "Macas", province: "Morona Santiago", region: "oriente", x: 416, y: 400, transitTime: "48h", transportType: "Transporte Interprovincial", popularProducts: "Aceites de motor, baterías y filtros" },
-  { id: "zamora", name: "Zamora", province: "Zamora Chinchipe", region: "oriente", x: 322, y: 558, transitTime: "48h", transportType: "Transporte Suroriental", popularProducts: "Lubricantes para maquinaria y baterías" },
-  
-  // INSULAR
-  { id: "galapagos", name: "Galápagos", province: "Galápagos", region: "insular", x: 80, y: 100, transitTime: "48h", transportType: "Courier Aéreo / Carga Autorizada", popularProducts: "Filtros livianos, bujías y aditivos permitidos" }
-];
+type RegionFilter = "todas" | RegionType;
 
 export default function EcuadorLogistics2DMap() {
-  const [selectedCity, setSelectedCity] = useState<CityNode>(DESTINATION_NODES[0]);
+  const [selectedCity, setSelectedCity] = useState<MapCityNode>(DESTINATION_NODES[0]); // Default: Quito
   const [activeRegion, setActiveRegion] = useState<RegionFilter>("todas");
-  const [hoveredNode, setHoveredNode] = useState<CityNode | null>(null);
+  const [hoveredNode, setHoveredNode] = useState<MapCityNode | null>(null);
+  const [hoveredProvince, setHoveredProvince] = useState<ProvincePath | null>(null);
 
   const rawId = useId();
   const uid = rawId.replace(/:/g, "");
   const gridPatternId = `grid-pattern-2d-${uid}`;
   const routeGradientId = `route-gradient-2d-${uid}`;
+  const oceanGradId = `ocean-grad-2d-${uid}`;
 
   const visibleNodes = DESTINATION_NODES.filter((n) => {
     if (activeRegion === "todas") return true;
@@ -89,14 +42,49 @@ export default function EcuadorLogistics2DMap() {
 
   const activeDisplayNode = hoveredNode || selectedCity;
 
-  // Calculates a clean curved 2D vector arc
+  // Calculates a high-precision curved 2D vector arc
   const createCurvedArc = (x1: number, y1: number, x2: number, y2: number) => {
     const dx = x2 - x1;
     const dy = y2 - y1;
-    const cx = x1 + dx * 0.5 - dy * 0.18;
-    const cy = y1 + dy * 0.5 - Math.abs(dx) * 0.15;
+    // Elegant slight curvature towards the north-west
+    const cx = x1 + dx * 0.5 - dy * 0.14;
+    const cy = y1 + dy * 0.5 - Math.abs(dx) * 0.12;
     return `M ${x1} ${y1} Q ${cx} ${cy} ${x2} ${y2}`;
   };
+
+  // Color palette by region
+  const getProvinceColors = (region: RegionType, isHighlighted: boolean, isDimmed: boolean) => {
+    if (isDimmed) {
+      return {
+        fill: "#061A3A",
+        stroke: "rgba(148, 163, 184, 0.2)",
+        strokeWidth: 0.8,
+        opacity: 0.25
+      };
+    }
+
+    if (isHighlighted) {
+      return {
+        fill: region === "costa" ? "#1E40AF" : region === "sierra" ? "#B45309" : region === "oriente" ? "#047857" : "#0891B2",
+        stroke: "#FFC500",
+        strokeWidth: 2.2,
+        opacity: 1
+      };
+    }
+
+    switch (region) {
+      case "costa":
+        return { fill: "#0F3870", stroke: "#38BDF8", strokeWidth: 1.2, opacity: 0.95 };
+      case "sierra":
+        return { fill: "#78350F", stroke: "#F59E0B", strokeWidth: 1.2, opacity: 0.95 };
+      case "oriente":
+        return { fill: "#064E3B", stroke: "#10B981", strokeWidth: 1.2, opacity: 0.95 };
+      case "insular":
+        return { fill: "#0E7490", stroke: "#22D3EE", strokeWidth: 1.4, opacity: 0.95 };
+    }
+  };
+
+  const { galapagosInset, svgWidth, svgHeight, equatorY } = ECUADOR_MAP_CONFIG;
 
   return (
     <div className="w-full bg-[#061B40] text-white rounded-3xl border border-slate-700/70 shadow-2xl overflow-hidden relative">
@@ -108,8 +96,9 @@ export default function EcuadorLogistics2DMap() {
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
               Sede Matriz de Despacho Activa
             </span>
-            <span className="px-2.5 py-0.5 bg-amber-400/20 text-[#FFC500] border border-amber-400/40 rounded-full text-xs font-bold uppercase tracking-wider font-mono">
-              Vista Vectorial 2D Oficial
+            <span className="px-2.5 py-0.5 bg-amber-400/20 text-[#FFC500] border border-amber-400/40 rounded-full text-xs font-bold uppercase tracking-wider font-mono flex items-center gap-1">
+              <Navigation className="w-3 h-3 text-[#FFC500]" />
+              Cartografía Oficial de Cobertura
             </span>
           </div>
           <h3 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
@@ -123,15 +112,18 @@ export default function EcuadorLogistics2DMap() {
         {/* Region Filters (Pure 2D) */}
         <div className="flex flex-wrap items-center gap-1.5 bg-[#04122E] p-1.5 rounded-xl border border-slate-700 text-xs">
           {[
-            { id: "todas", label: "Todas (24)" },
+            { id: "todas", label: "Todas (24 Provincias)" },
             { id: "costa", label: "Costa (24h)" },
-            { id: "sierra", label: "Sierra" },
-            { id: "oriente", label: "Oriente" },
+            { id: "sierra", label: "Sierra (24-48h)" },
+            { id: "oriente", label: "Oriente (48h)" },
             { id: "insular", label: "Galápagos" },
           ].map((r) => (
             <button
               key={r.id}
-              onClick={() => setActiveRegion(r.id as RegionFilter)}
+              onClick={() => {
+                setActiveRegion(r.id as RegionFilter);
+                trackEvent("shipping_region_filter", { region: r.id });
+              }}
               className={`px-3 py-1.5 rounded-lg font-bold transition-all ${
                 activeRegion === r.id
                   ? "bg-[#FFC500] text-slate-950 shadow-sm"
@@ -144,170 +136,160 @@ export default function EcuadorLogistics2DMap() {
         </div>
       </div>
 
-      {/* Main Map Arena (Crisp 2D Vector Canvas) */}
-      <div className="relative min-h-[580px] sm:min-h-[660px] flex items-center justify-center p-3 sm:p-6 bg-[#04122E]">
+      {/* Main Map Arena (High-Precision 2D Vector Canvas) */}
+      <div className="relative min-h-[600px] sm:min-h-[700px] flex items-center justify-center p-2 sm:p-6 bg-[#04122E]">
         {/* Subtle Radial Lighting */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_70%_at_50%_45%,rgba(14,58,117,0.3),rgba(4,18,46,0.95))]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_75%_75%_at_48%_45%,rgba(14,58,117,0.35),rgba(4,18,46,0.98))]" />
 
-        {/* 2D Responsive SVG Wrapper (Zero tilt, pure horizontal planimetry) */}
-        <div className="w-full max-w-[880px] aspect-[800/660] relative">
-          <svg viewBox="0 0 800 660" className="w-full h-full drop-shadow-xl">
+        {/* 2D Responsive SVG Wrapper (Native Aspect Ratio 960/720) */}
+        <div className="w-full max-w-[960px] aspect-[960/720] relative">
+          <svg viewBox={`0 0 ${svgWidth} ${svgHeight}`} className="w-full h-full drop-shadow-2xl select-none">
             <defs>
               {/* Technical 2D Grid Pattern */}
               <pattern id={gridPatternId} width="40" height="40" patternUnits="userSpaceOnUse">
-                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.035)" strokeWidth="1" />
+                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.03)" strokeWidth="1" />
               </pattern>
-
-              {/* High-Contrast Corporate 2D Gradients */}
-              <linearGradient id="costa-2d-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#0F3870" />
-                <stop offset="100%" stopColor="#0A254D" />
-              </linearGradient>
-
-              <linearGradient id="sierra-2d-grad" x1="0%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" stopColor="#B45309" stopOpacity="0.85" />
-                <stop offset="100%" stopColor="#78350F" stopOpacity="0.85" />
-              </linearGradient>
-
-              <linearGradient id="oriente-2d-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stopColor="#047857" stopOpacity="0.85" />
-                <stop offset="100%" stopColor="#064E3B" stopOpacity="0.85" />
-              </linearGradient>
 
               {/* Glowing Vector Arc Gradient */}
               <linearGradient id={routeGradientId} x1="0%" y1="0%" x2="100%" y2="100%">
                 <stop offset="0%" stopColor="#FFC500" />
-                <stop offset="100%" stopColor="#38BDF8" />
+                <stop offset="50%" stopColor="#38BDF8" />
+                <stop offset="100%" stopColor="#0284C7" />
               </linearGradient>
+
+              {/* Ocean Subtle Radial Depth */}
+              <radialGradient id={oceanGradId} cx="25%" cy="35%" r="60%">
+                <stop offset="0%" stopColor="#0A224A" stopOpacity="0.4" />
+                <stop offset="100%" stopColor="#04122E" stopOpacity="0.9" />
+              </radialGradient>
             </defs>
 
-            {/* Background Grid */}
-            <rect width="800" height="660" fill={`url(#${gridPatternId})`} />
+            {/* Background Grid & Ocean */}
+            <rect width={svgWidth} height={svgHeight} fill={`url(#${oceanGradId})`} />
+            <rect width={svgWidth} height={svgHeight} fill={`url(#${gridPatternId})`} />
 
-            {/* Pacific Maritime Edge */}
-            <path
-              d="M 60 70 Q 150 50 330 75 Q 240 100 200 187 Q 150 250 120 278 Q 90 380 94 390 Q 160 430 188 440 Q 200 480 180 505 L 150 560 L 40 560 Z"
-              fill="rgba(56, 189, 248, 0.03)"
-              stroke="rgba(56, 189, 248, 0.15)"
-              strokeDasharray="4 4"
-            />
-
-            {/* ============================================================ */}
-            {/* GEOGRAPHIC PROFILE OF ECUADOR (COSTA, SIERRA, ORIENTE, GALÁPAGOS) */}
-            {/* ============================================================ */}
-
-            {/* Region: Oriente / Amazonía */}
-            <path
-              d="M 370 120 
-                 L 460 120 
-                 L 555 184 
-                 L 672 206 
-                 L 733 275 
-                 L 616 417 
-                 L 483 462 
-                 L 372 533 
-                 L 330 560 
-                 L 360 450 
-                 L 390 330 
-                 L 400 210 
-                 Z"
-              fill="url(#oriente-2d-grad)"
-              stroke="#059669"
-              strokeWidth="1.5"
-              className="transition-opacity duration-300"
-              style={{ opacity: activeRegion === "todas" || activeRegion === "oriente" ? 1 : 0.2 }}
-            />
-
-            {/* Region: Sierra / Cordillera Central */}
-            <path
-              d="M 460 120 
-                 L 370 120 
-                 L 320 180 
-                 L 290 220 
-                 L 260 285 
-                 L 255 355 
-                 L 270 420 
-                 L 290 550 
-                 L 330 560 
-                 L 372 533 
-                 L 360 450 
-                 L 390 330 
-                 L 400 210 
-                 Z"
-              fill="url(#sierra-2d-grad)"
-              stroke="#F59E0B"
-              strokeWidth="2"
-              className="transition-opacity duration-300"
-              style={{ opacity: activeRegion === "todas" || activeRegion === "sierra" ? 1 : 0.2 }}
-            />
-
-            {/* Region: Costa / Cuenca del Pacífico */}
-            <path
-              d="M 333 78 
-                 L 241 105 
-                 L 203 138 
-                 L 200 187 
-                 L 155 247 
-                 L 122 278 
-                 L 116 323 
-                 L 122 359 
-                 L 94 390 
-                 L 163 428 
-                 L 188 440 
-                 L 207 486 
-                 L 180 505 
-                 L 211 585 
-                 L 268 603 
-                 L 290 550 
-                 L 270 420 
-                 L 255 355 
-                 L 260 285 
-                 L 290 220 
-                 L 320 180 
-                 L 370 120 
-                 L 333 78 
-                 Z"
-              fill="url(#costa-2d-grad)"
-              stroke="#38BDF8"
-              strokeWidth="2.5"
-              className="transition-opacity duration-300"
-              style={{ opacity: activeRegion === "todas" || activeRegion === "costa" ? 1 : 0.2 }}
-            />
-
-            {/* Golfo de Guayaquil e Isla Puná */}
-            <ellipse cx="178" cy="450" rx="14" ry="9" fill="#0B2A59" stroke="#38BDF8" strokeWidth="1.2" />
-
-            {/* Inset Galápagos */}
-            <g
-              transform="translate(45, 50)"
-              className="transition-opacity duration-300"
-              style={{ opacity: activeRegion === "todas" || activeRegion === "insular" ? 1 : 0.2 }}
-            >
-              <rect x="0" y="0" width="130" height="92" rx="10" fill="#030E24" stroke="#38BDF8" strokeWidth="1.2" />
-              <text x="12" y="18" fill="#38BDF8" fontSize="8.5" fontWeight="900" letterSpacing="0.06em">
-                ARCHIPIÉLAGO GALÁPAGOS
+            {/* Pacific Maritime Label & Compass Rose */}
+            <g transform="translate(45, 630)" opacity="0.35">
+              <Compass className="w-8 h-8 text-sky-400" />
+              <text x="28" y="14" fill="#38BDF8" fontSize="10" fontWeight="900" letterSpacing="0.1em">
+                OCÉANO PACÍFICO
               </text>
-              <text x="12" y="30" fill="#94A3B8" fontSize="8">
+              <text x="28" y="24" fill="#94A3B8" fontSize="8" letterSpacing="0.05em">
+                Litoral Ecuatoriano • 24 Provincias
+              </text>
+            </g>
+
+            {/* Línea Equinoccial 0° 0' 0" (Latitud Cero - Pasa por Pedernales y norte de Quito) */}
+            <g opacity="0.45">
+              <line
+                x1="20"
+                y1={equatorY}
+                x2={svgWidth - 20}
+                y2={equatorY}
+                stroke="#FFC500"
+                strokeWidth="1"
+                strokeDasharray="6 6"
+              />
+              <text
+                x={svgWidth - 190}
+                y={equatorY - 6}
+                fill="#FFC500"
+                fontSize="8.5"
+                fontWeight="bold"
+                letterSpacing="0.06em"
+              >
+                LÍNEA EQUATORIAL 0°00&apos;00&quot;
+              </text>
+            </g>
+
+            {/* ============================================================ */}
+            {/* INSET BOX FOR GALÁPAGOS ARCHIPELAGO */}
+            {/* ============================================================ */}
+            <g
+              className="transition-opacity duration-300"
+              style={{
+                opacity: activeRegion === "todas" || activeRegion === "insular" ? 1 : 0.25
+              }}
+            >
+              <rect
+                x={galapagosInset.x}
+                y={galapagosInset.y}
+                width={galapagosInset.width}
+                height={galapagosInset.height}
+                rx="14"
+                fill="#051636"
+                stroke="#0284C7"
+                strokeWidth="1.5"
+                strokeDasharray="5 4"
+                filter="drop-shadow(0 4px 10px rgba(0,0,0,0.5))"
+              />
+              <rect
+                x={galapagosInset.x + 8}
+                y={galapagosInset.y + 8}
+                width={galapagosInset.width - 16}
+                height="22"
+                rx="6"
+                fill="#061B40"
+                stroke="rgba(56, 189, 248, 0.3)"
+                strokeWidth="1"
+              />
+              <text
+                x={galapagosInset.x + 16}
+                y={galapagosInset.y + 22}
+                fill="#38BDF8"
+                fontSize="9"
+                fontWeight="900"
+                letterSpacing="0.05em"
+              >
+                ARCHIPIÉLAGO DE GALÁPAGOS
+              </text>
+              <text
+                x={galapagosInset.x + 16}
+                y={galapagosInset.y + 40}
+                fill="#94A3B8"
+                fontSize="8"
+                fontWeight="bold"
+              >
                 Despacho Aéreo & Marítimo
               </text>
-              {/* Islands silhouettes: Isabela, Santa Cruz, San Cristóbal */}
-              <path d="M 32 45 Q 40 35 46 48 Q 44 68 37 75 Z" fill="#10B981" opacity="0.85" />
-              <circle cx="68" cy="55" r="7" fill="#10B981" opacity="0.9" />
-              <circle cx="90" cy="62" r="6" fill="#10B981" opacity="0.85" />
-            </g>
-
-            {/* Línea Equinoccial 0° 0' 0" */}
-            <g opacity="0.4">
-              <line x1="60" y1="187" x2="740" y2="187" stroke="#FFC500" strokeWidth="1" strokeDasharray="6 6" />
-              <text x="660" y="181" fill="#FFC500" fontSize="8.5" fontWeight="bold" letterSpacing="0.05em">
-                LÍNEA EQUATORIAL 0°00&apos;
-              </text>
             </g>
 
             {/* ============================================================ */}
-            {/* 2D ROUTE ARCS (CONNECTING PEDERNALES TO CITIES) */}
+            {/* OFFICIAL GEOGRAPHIC PROVINCES (24 PROVINCES OF ECUADOR) */}
             {/* ============================================================ */}
-            <g>
+            <g id="provinces-layer">
+              {ECUADOR_PROVINCES.map((prov) => {
+                const isRegionActive = activeRegion === "todas" || activeRegion === prov.region;
+                const isSelectedCityProv = activeDisplayNode.province.toLowerCase().includes(prov.name.toLowerCase()) ||
+                  prov.name.toLowerCase().includes(activeDisplayNode.province.toLowerCase());
+                const isHovered = hoveredProvince?.id === prov.id;
+                const isHighlighted = isSelectedCityProv || isHovered;
+
+                const styling = getProvinceColors(prov.region, isHighlighted, !isRegionActive);
+
+                return (
+                  <path
+                    key={`prov-${prov.id}`}
+                    id={`prov-${prov.id}`}
+                    d={prov.path}
+                    fill={styling.fill}
+                    stroke={styling.stroke}
+                    strokeWidth={styling.strokeWidth}
+                    opacity={styling.opacity}
+                    className="transition-all duration-300 cursor-pointer"
+                    onMouseEnter={() => setHoveredProvince(prov)}
+                    onMouseLeave={() => setHoveredProvince(null)}
+                  >
+                    <title>{prov.name} ({prov.region.toUpperCase()})</title>
+                  </path>
+                );
+              })}
+            </g>
+
+            {/* ============================================================ */}
+            {/* LOGISTICS ROUTE ARCS (CONNECTING PEDERNALES TO DESTINATIONS) */}
+            {/* ============================================================ */}
+            <g id="routes-layer">
               {visibleNodes.map((city) => {
                 const isSelected = activeDisplayNode.id === city.id;
                 const pathD = createCurvedArc(HUB_NODE.x, HUB_NODE.y, city.x, city.y);
@@ -318,8 +300,8 @@ export default function EcuadorLogistics2DMap() {
                     <path
                       d={pathD}
                       fill="none"
-                      stroke={isSelected ? "rgba(255, 197, 0, 0.5)" : "rgba(56, 189, 248, 0.15)"}
-                      strokeWidth={isSelected ? 4 : 1.5}
+                      stroke={isSelected ? "rgba(255, 197, 0, 0.45)" : "rgba(56, 189, 248, 0.12)"}
+                      strokeWidth={isSelected ? 4 : 1.2}
                       strokeLinecap="round"
                     />
 
@@ -328,11 +310,11 @@ export default function EcuadorLogistics2DMap() {
                       d={pathD}
                       fill="none"
                       stroke={isSelected ? "#FFC500" : "url(#route-gradient-2d)"}
-                      strokeWidth={isSelected ? 3 : 1.8}
-                      strokeDasharray="6 6"
+                      strokeWidth={isSelected ? 2.8 : 1.4}
+                      strokeDasharray={isSelected ? "8 6" : "4 8"}
                       strokeLinecap="round"
                       style={{
-                        animation: `dash ${city.transitTime === "24h" ? "2.5s" : "4s"} linear infinite`
+                        animation: `dash ${city.transitTime === "24h" ? "2.2s" : "3.6s"} linear infinite`
                       }}
                     />
                   </g>
@@ -341,9 +323,9 @@ export default function EcuadorLogistics2DMap() {
             </g>
 
             {/* ============================================================ */}
-            {/* DESTINATION NODES (CITIES) */}
+            {/* DESTINATION CITY NODES */}
             {/* ============================================================ */}
-            <g>
+            <g id="cities-layer">
               {visibleNodes.map((city) => {
                 const isSelected = activeDisplayNode.id === city.id;
 
@@ -361,7 +343,7 @@ export default function EcuadorLogistics2DMap() {
                     {/* Outer Target Hit Area */}
                     <circle cx={city.x} cy={city.y} r={18} fill="transparent" />
 
-                    {/* Outer Pulse Ring */}
+                    {/* Outer Pulse Ring When Selected */}
                     {isSelected && (
                       <circle
                         cx={city.x}
@@ -378,7 +360,7 @@ export default function EcuadorLogistics2DMap() {
                     <circle
                       cx={city.x}
                       cy={city.y}
-                      r={isSelected ? 6 : 4.5}
+                      r={isSelected ? 6 : 4}
                       fill={
                         isSelected
                           ? "#FFC500"
@@ -387,39 +369,98 @@ export default function EcuadorLogistics2DMap() {
                           : "#38BDF8"
                       }
                       stroke="#04122E"
-                      strokeWidth={2}
+                      strokeWidth={1.8}
                     />
 
-                    {/* City Label Badge */}
-                    <g transform={`translate(${city.x + 8}, ${city.y - 4})`}>
-                      <rect
-                        x="-2"
-                        y="-10"
-                        width={city.name.length * 6.5 + (isSelected ? 34 : 26)}
-                        height="16"
-                        rx="4"
-                        fill={isSelected ? "#0A2662" : "#061B40"}
-                        stroke={isSelected ? "#FFC500" : "rgba(255,255,255,0.2)"}
-                        strokeWidth={isSelected ? 1.5 : 0.8}
-                      />
-                      <text
-                        x="3"
-                        y="1"
-                        fill={isSelected ? "#FFFFFF" : "#E2E8F0"}
-                        fontSize="9"
-                        fontWeight={isSelected ? "900" : "bold"}
-                      >
-                        {city.name}
-                      </text>
-                      <text
-                        x={city.name.length * 6.5 + 5}
-                        y="1"
-                        fill={city.transitTime === "24h" ? "#34D399" : "#FFC500"}
-                        fontSize="8"
-                        fontWeight="900"
-                      >
-                        {city.transitTime}
-                      </text>
+                    {/* City Label Badge With Dynamic Positioning */}
+                    <g transform={`translate(${city.x + city.labelDx}, ${city.y + city.labelDy})`}>
+                      {city.labelAnchor === "middle" ? (
+                        <g>
+                          <rect
+                            x={-city.name.length * 4 - 18}
+                            y="-9"
+                            width={city.name.length * 8 + 36}
+                            height="18"
+                            rx="5"
+                            fill={isSelected ? "#0A2662" : "#061B40"}
+                            stroke={isSelected ? "#FFC500" : "rgba(255,255,255,0.22)"}
+                            strokeWidth={isSelected ? 1.5 : 0.8}
+                          />
+                          <text
+                            x="0"
+                            y="3"
+                            textAnchor="middle"
+                            fill={isSelected ? "#FFFFFF" : "#E2E8F0"}
+                            fontSize="9"
+                            fontWeight={isSelected ? "900" : "bold"}
+                          >
+                            {city.name} ({city.transitTime})
+                          </text>
+                        </g>
+                      ) : city.labelAnchor === "end" ? (
+                        <g>
+                          <rect
+                            x={-city.name.length * 6.5 - (isSelected ? 38 : 30)}
+                            y="-9"
+                            width={city.name.length * 6.5 + (isSelected ? 36 : 28)}
+                            height="17"
+                            rx="4"
+                            fill={isSelected ? "#0A2662" : "#061B40"}
+                            stroke={isSelected ? "#FFC500" : "rgba(255,255,255,0.22)"}
+                            strokeWidth={isSelected ? 1.5 : 0.8}
+                          />
+                          <text
+                            x={-city.name.length * 6.5 - (isSelected ? 34 : 26)}
+                            y="2"
+                            fill={city.transitTime === "24h" ? "#34D399" : "#FFC500"}
+                            fontSize="8"
+                            fontWeight="900"
+                          >
+                            {city.transitTime}
+                          </text>
+                          <text
+                            x="-6"
+                            y="2"
+                            textAnchor="end"
+                            fill={isSelected ? "#FFFFFF" : "#E2E8F0"}
+                            fontSize="9"
+                            fontWeight={isSelected ? "900" : "bold"}
+                          >
+                            {city.name}
+                          </text>
+                        </g>
+                      ) : (
+                        <g>
+                          <rect
+                            x="-2"
+                            y="-9"
+                            width={city.name.length * 6.5 + (isSelected ? 36 : 28)}
+                            height="17"
+                            rx="4"
+                            fill={isSelected ? "#0A2662" : "#061B40"}
+                            stroke={isSelected ? "#FFC500" : "rgba(255,255,255,0.22)"}
+                            strokeWidth={isSelected ? 1.5 : 0.8}
+                          />
+                          <text
+                            x="3"
+                            y="2"
+                            fill={isSelected ? "#FFFFFF" : "#E2E8F0"}
+                            fontSize="9"
+                            fontWeight={isSelected ? "900" : "bold"}
+                          >
+                            {city.name}
+                          </text>
+                          <text
+                            x={city.name.length * 6.5 + 5}
+                            y="2"
+                            fill={city.transitTime === "24h" ? "#34D399" : "#FFC500"}
+                            fontSize="8"
+                            fontWeight="900"
+                          >
+                            {city.transitTime}
+                          </text>
+                        </g>
+                      )}
                     </g>
                   </g>
                 );
@@ -431,19 +472,29 @@ export default function EcuadorLogistics2DMap() {
             {/* ============================================================ */}
             <g className="cursor-pointer" onClick={() => setSelectedCity(HUB_NODE)}>
               {/* Multi-tier radar rings */}
-              <circle cx={HUB_NODE.x} cy={HUB_NODE.y} r={32} fill="none" stroke="#10B981" strokeWidth="1" opacity="0.35" className="animate-ping" />
+              <circle cx={HUB_NODE.x} cy={HUB_NODE.y} r={34} fill="none" stroke="#10B981" strokeWidth="1" opacity="0.35" className="animate-ping" />
               <circle cx={HUB_NODE.x} cy={HUB_NODE.y} r={22} fill="none" stroke="#10B981" strokeWidth="1.5" opacity="0.6" />
               <circle cx={HUB_NODE.x} cy={HUB_NODE.y} r={12} fill="rgba(16, 185, 129, 0.25)" stroke="#10B981" strokeWidth="2" />
-              <circle cx={HUB_NODE.x} cy={HUB_NODE.y} r={6} fill="#FFC500" stroke="#04122E" strokeWidth="2" />
+              <circle cx={HUB_NODE.x} cy={HUB_NODE.y} r={6.5} fill="#FFC500" stroke="#04122E" strokeWidth="2.2" />
 
               {/* Hub Badge Floating Callout */}
-              <g transform={`translate(${HUB_NODE.x - 70}, ${HUB_NODE.y - 40})`}>
-                <rect x="0" y="0" width="145" height="26" rx="6" fill="#04122E" stroke="#10B981" strokeWidth="2" filter="drop-shadow(0 4px 6px rgba(0,0,0,0.5))" />
-                <circle cx="12" cy="13" r="4" fill="#10B981" className="animate-pulse" />
-                <text x="22" y="12" fill="#FFFFFF" fontSize="9" fontWeight="900">
+              <g transform={`translate(${HUB_NODE.x + HUB_NODE.labelDx}, ${HUB_NODE.y + HUB_NODE.labelDy})`}>
+                <rect
+                  x="0"
+                  y="0"
+                  width="156"
+                  height="28"
+                  rx="7"
+                  fill="#04122E"
+                  stroke="#10B981"
+                  strokeWidth="2"
+                  filter="drop-shadow(0 4px 10px rgba(0,0,0,0.6))"
+                />
+                <circle cx="13" cy="14" r="4.5" fill="#10B981" className="animate-pulse" />
+                <text x="24" y="13" fill="#FFFFFF" fontSize="9.5" fontWeight="900">
                   ★ HUB PEDERNALES
                 </text>
-                <text x="22" y="21" fill="#34D399" fontSize="7.5" fontWeight="bold">
+                <text x="24" y="22" fill="#34D399" fontSize="8" fontWeight="bold">
                   BODEGA MATRIZ NACIONAL
                 </text>
               </g>
@@ -452,10 +503,11 @@ export default function EcuadorLogistics2DMap() {
         </div>
 
         {/* Floating City Telemetry Card (Right Overlay) */}
-        <div className="absolute bottom-4 right-4 max-w-xs w-full bg-[#061B40]/95 backdrop-blur-md p-4 rounded-2xl border border-slate-700/80 shadow-2xl text-xs space-y-3">
+        <div className="absolute bottom-4 right-4 max-w-xs w-full bg-[#061B40]/95 backdrop-blur-md p-4 rounded-2xl border border-slate-700/80 shadow-2xl text-xs space-y-3 z-10">
           <div className="flex items-center justify-between border-b border-slate-700 pb-2">
             <div>
-              <span className="text-[10px] text-amber-400 font-bold uppercase tracking-wider block">
+              <span className="text-[10px] text-amber-400 font-bold uppercase tracking-wider block flex items-center gap-1">
+                <MapPin className="w-3 h-3 text-amber-400" />
                 Destino Seleccionado
               </span>
               <h4 className="text-base font-black text-white">
@@ -500,7 +552,7 @@ export default function EcuadorLogistics2DMap() {
           <a
             href={buildWhatsAppLink("shipping", {
               city: `${activeDisplayNode.name} (${activeDisplayNode.province})`,
-              details: `Hola LiderPro, deseo cotizar el despacho hacia ${activeDisplayNode.name} (${activeDisplayNode.province}) con tiempo estimado ${activeDisplayNode.transitTime}.`
+              details: `Hola LiderPro Pedernales, deseo cotizar el despacho hacia ${activeDisplayNode.name} (${activeDisplayNode.province}) con tiempo garantizado ${activeDisplayNode.transitTime}.`
             })}
             target="_blank"
             rel="noopener noreferrer"

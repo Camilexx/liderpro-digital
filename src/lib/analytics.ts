@@ -12,6 +12,7 @@ export type AnalyticsEventName =
   | "shipping_view"
   | "shipping_city_select"
   | "shipping_province_select"
+  | "shipping_region_filter"
   | "shipping_product_type_select"
   | "shipping_whatsapp_click"
   | "shipping_whatsapp_calc_click"

@@ -128,7 +128,7 @@ Evaluación de los 7 productos maestros en `src/data/products.ts`:
 ### Verificación Estática y de Código (VERIFIED):
 - **Motor de Enlaces WhatsApp (`src/lib/whatsapp.ts`):** 
   - Generación de URIs codificadas con `encodeURIComponent` verificada mediante inspección estática y pruebas unitarias de función.
-  - El parámetro de teléfono está centralizado sin excepción en `BUSINESS_CONFIG.whatsappMasterNumber = '593981881515'`.
+  - El parámetro de teléfono está centralizado sin excepción en `BUSINESS_CONFIG.whatsappMasterNumber = '593967489002'`.
   - Acción B2B en `/b2b` actualizada para emitir el mensaje específico con saludo institucional, solicitud de volumen y notas corporativas.
 - **Finder 2.0 (`src/components/VehicleFinder.tsx`):**
   - Cascada de estado en memoria React validada: Marca $\rightarrow$ Modelo $\rightarrow$ Año $\rightarrow$ Motor.

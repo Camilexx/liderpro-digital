@@ -78,7 +78,7 @@ const structuredData = {
       "description":
         "Distribuidor Autorizado Multimarca de lubricantes, baterías, filtros y repuestos automotrices con Sede Central y Bodega Matriz en Pedernales, Manabí, y cobertura logística a las 24 provincias del Ecuador.",
       "url": "https://liderpro-digital.vercel.app",
-      "telephone": "+593981881515",
+      "telephone": "+593967489002",
       "priceRange": "$$",
       "currenciesAccepted": "USD",
       "paymentAccepted": "Cash, Credit Card, Electronic Transfer, SRI Withholding",

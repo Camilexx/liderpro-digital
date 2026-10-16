@@ -31,7 +31,7 @@ export interface WhatsAppContext {
 }
 
 export function buildWhatsAppLink(action: WhatsAppActionType, context: WhatsAppContext = {}): string {
-  const phone = BUSINESS_CONFIG.whatsappMasterNumber || "593981881515";
+  const phone = BUSINESS_CONFIG.whatsappMasterNumber || "593967489002";
 
   let message = "";
 

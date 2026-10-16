@@ -44,7 +44,7 @@
 ## C. INFORMACIÓN COMERCIAL FALTANTE (CHECKLIST CLIENTE)
 Documentado en [docs/LIDERPRO_COMMERCIAL_DATA_REQUEST.md](file:///c:/Users/PC/Desktop/NEXUS/liderpro-digital/docs/LIDERPRO_COMMERCIAL_DATA_REQUEST.md):
 - Razón social definitiva para facturación formal.
-- Confirmación de si el número `+593 98 188 1515` es la línea final o se dividirá por asesores.
+- Confirmación de si el número `+593 96 748 9002` es la línea final o se dividirá por asesores.
 - Catálogo de SKUs con precios oficiales de venta al público (PVP) y por volumen.
 - Fotografía física real de productos en estudio neutro.
 - Homologación de tiempos y costos reales de couriers interprovinciales.

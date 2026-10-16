@@ -88,8 +88,8 @@ export const BUSINESS_CONFIG: BusinessConfig = {
       region: "Costa / Hub Nacional",
       role: "Centro principal de acopio multimarca, mostrador técnico minorista/mayorista, atención al sector camaronero y despacho diario interprovincial.",
       address: "Sede Central Pedernales, Manabí (Zona Comercial Automotriz)",
-      phone: "+593 98 188 1515",
-      whatsapp: "593981881515",
+      phone: "+593 96 748 9002",
+      whatsapp: "593967489002",
       hours: "Lunes a Sábado: 08:00 – 18:00",
       isStrategicHub: true,
       features: [
@@ -106,8 +106,8 @@ export const BUSINESS_CONFIG: BusinessConfig = {
       region: "Sierra & Enlace Interprovincial",
       role: "Ruta directa de recepción y distribución diaria para clientes, talleres y flotas en Quito, Santo Domingo, Manta, Guayaquil y Sierra centro.",
       address: "Conexión Directa Interprovincial y Courier Autorizado",
-      phone: "+593 98 188 1515",
-      whatsapp: "593981881515",
+      phone: "+593 96 748 9002",
+      whatsapp: "593967489002",
       hours: "Lunes a Sábado: 08:00 – 18:00",
       isStrategicHub: true,
       features: [
@@ -130,7 +130,7 @@ export const BUSINESS_CONFIG: BusinessConfig = {
       "Sector Productivo y Camaronero: Despacho de canecas, tambores y baterías Grupo 31 en ruta",
     ],
   },
-  whatsappMasterNumber: "593981881515",
+  whatsappMasterNumber: "593967489002",
   socialLinks: {
     instagram: "https://www.instagram.com/liderpropedernales?srtk=MWRqOWcxd2w4YXMyeg==",
     facebook: "https://www.facebook.com/share/1CHEkuMeis/",

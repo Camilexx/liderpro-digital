@@ -22,7 +22,7 @@ Para consolidar la plataforma comercial en su versión definitiva de producción
 ---
 
 ## 2. CANALES DE CONTACTO Y DISPONIBILIDAD
-- [ ] **Línea Maestra de WhatsApp:** Confirmar si el número `+593 98 188 1515` es la línea final o si se asignarán números divididos por zona/vendedor.
+- [ ] **Línea Maestra de WhatsApp:** Confirmar si el número `+593 96 748 9002` es la línea final o si se asignarán números divididos por zona/vendedor.
 - [ ] **Correo Corporativo Oficial:** E-mail de atención al cliente (ej. `ventas@liderpro.ec`).
 - [ ] **Horario de Asistencia:** Horas reales de respuesta de asesores (ej. Lunes a Viernes 08h00 - 18h00, Sábados 08h00 - 13h00).
 - [ ] **Validación Soporte 24/7:** ¿Existe guardia técnica 24/7 para emergencias nocturnas o debe promocionarse exclusivamente horario extendido? *(Actualmente en status: `PENDING_VERIFICATION`)*.

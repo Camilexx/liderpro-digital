@@ -15,7 +15,7 @@ La versión V9 de **LiderPro Digital** consolida la transición de un sitio web 
 1. **Bloqueo y Unificación de Verdad Comercial:**
    - Erradicación de todas las afirmaciones comerciales no respaldadas: *"compatibilidad garantizada"*, *"envío inmediato"*, *"despacho prioritario"* y *"24/7"*.
    - Reemplazo por expresiones sobrias de asesoría y validación previa antes de la compra.
-   - Centralización estricta del número de WhatsApp en una sola fuente de verdad: `+593 98 188 1515` (`BUSINESS_CONFIG.whatsappMasterNumber`).
+   - Centralización estricta del número de WhatsApp en una sola fuente de verdad: `+593 96 748 9002` (`BUSINESS_CONFIG.whatsappMasterNumber`).
 2. **Arquitectura de Intenciones y Embudo de Ingresos:**
    - Estructuración de 3 caminos principales en la Home Page: Auxilio guiado para batería, Buscador vehicular progresivo, y Asistencia guiada para usuarios que no conocen el número de parte (`/asesoria`).
    - Nueva ruta corporativa B2B (`/b2b`) para talleres mecánicos, flotas y distribuidores.
@@ -45,14 +45,14 @@ La versión V9 de **LiderPro Digital** consolida la transición de un sitio web 
 | **Stock de Aceite 5W-30** | "Disponible para envío inmediato" | "Disponible para despacho coordinado" | `src/data/products.ts` |
 | **Auxilio de Batería** | "Auxilio inmediato de batería" / "Despacho urgente" | "Orientación para batería" / "Diagnóstico guiado" | `src/app/page.tsx`, `EmergencyBanner.tsx` |
 | **Logística y Tiempos** | "Tiempo estimado: 24–48 h*" | "Tiempo estimado: Sujeto a destino y transportadora*" | `LocationsLogisticsSection.tsx`, `envios/page.tsx` |
-| **Canal de WhatsApp** | Placeholders dispersos (`593999999999`) | Unificado a `+593 98 188 1515` (`593981881515`) | `src/data/businessConfig.ts` |
+| **Canal de WhatsApp** | Placeholders dispersos (`593999999999`) | Unificado a `+593 96 748 9002` (`593967489002`) | `src/data/businessConfig.ts` |
 
 ---
 
 ## 4. MATRIZ DE CONTROL DE CAMBIOS V9 (P0 / P1 / P2 / P3)
 
 ### P0 — Bloqueantes Corregidos (Blockers)
-- ✅ **P0-1:** Desajuste de número de WhatsApp en la configuración de sedes resuelto. Todas las sedes y el número maestro apuntan ahora a `593981881515`.
+- ✅ **P0-1:** Desajuste de número de WhatsApp en la configuración de sedes resuelto. Todas las sedes y el número maestro apuntan ahora a `593967489002`.
 - ✅ **P0-2:** Remoción de afirmaciones de "compatibilidad garantizada" sin contrato de garantía explícito en Vehicle Finder y Filtros.
 - ✅ **P0-3:** Inclusión de las rutas huérfanas `/b2b` y `/asesoria` en `sitemap.xml` para correcta indexación por Googlebot.
 

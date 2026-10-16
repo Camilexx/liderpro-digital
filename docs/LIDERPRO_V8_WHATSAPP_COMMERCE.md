@@ -1,6 +1,6 @@
 # LIDERPRO DIGITAL — V8 WHATSAPP COMMERCE ENGINE
 **Module:** `src/lib/whatsapp.ts`  
-**Phone:** `+593 98 188 1515` (Ecuador Format: 593981881515)  
+**Phone:** `+593 96 748 9002` (Ecuador Format: 593967489002)  
 
 ---
 

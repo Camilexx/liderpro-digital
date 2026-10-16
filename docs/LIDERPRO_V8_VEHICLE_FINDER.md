@@ -53,6 +53,6 @@ Cuando un usuario selecciona una combinación de vehículo no registrada o la op
 
 Cada resultado compatible incluye un enlace que transporta los parámetros del vehículo en el saludo inicial:
 ```
-https://wa.me/593981881515?text=Hola%20LiderPro%2C%20estoy%20en%20Quito%20y%20busco%20la%20bater%C3%ADa%20para%20un%20Chevrolet%20Sail%202018%201.5L...
+https://wa.me/593967489002?text=Hola%20LiderPro%2C%20estoy%20en%20Quito%20y%20busco%20la%20bater%C3%ADa%20para%20un%20Chevrolet%20Sail%202018%201.5L...
 ```
 Esto elimina el tiempo de calificación del asesor de 10 minutos a menos de 30 segundos.

@@ -18,7 +18,7 @@ La versión **V9.1** representa el hito de validación forense, estabilización 
 A diferencia de fases previas de desarrollo expansivo, este Quality Gate no implementó rediseños cosméticos ni funciones superfluas. Se ejecutó una auditoría forense rigurosa y quirúrgica para verificar:
 1. **Disponibilidad y estabilidad de rutas:** 100% de las 24 rutas del `sitemap.xml` más endpoints de infraestructura (`/robots.txt`) devuelven `HTTP 200 OK` con renderizado SSR/SSG impecable en Edge Network.
 2. **Candado de Verdad Comercial (Commercial Truth Lock):** Erradicación total de falsas promesas o superlativos sin sustento (*"entrega inmediata"*, *"compatibilidad 100% garantizada por software"*, *"despacho prioritario"* sin horario).
-3. **Motor Comercial de WhatsApp Centralizado:** Unificación absoluta al número master verificado `+593 98 188 1515` (`593981881515`). Cero números de marcador de posición (`593999999999`) en el código.
+3. **Motor Comercial de WhatsApp Centralizado:** Unificación absoluta al número master verificado `+593 96 748 9002` (`593967489002`). Cero números de marcador de posición (`593999999999`) en el código.
 4. **Respeto a las realidades de medición:** Separación estricta entre métricas de laboratorio (Next.js bundle, TTFB de Edge) y datos de campo de usuarios reales (CrUX / RUM), eliminando afirmaciones artificiales de "100% Core Web Vitals".
 
 ---
@@ -34,7 +34,7 @@ A diferencia de fases previas de desarrollo expansivo, este Quality Gate no impl
 | **Runtime** | Node.js Serverless / Vercel Edge Cache |
 | **TypeScript Config** | Strict Mode Activo (`tsc --noEmit` exitoso) |
 | **CSS & Design Engine** | Tailwind CSS 3.4.1 + CSS Variables Tokens |
-| **Canal Maestro de Conversión** | WhatsApp Business (`wa.me/593981881515`) |
+| **Canal Maestro de Conversión** | WhatsApp Business (`wa.me/593967489002`) |
 
 ---
 
@@ -115,7 +115,7 @@ El buscador de vehículos (`VehicleFinder.tsx`) se validó en `/encuentra-tu-pro
 | :--- | :--- | :--- | :--- |
 | **Selección Secuencial Completa** | Chevrolet → Aveo Family → 2015 → 1.5L | Habilita paso a paso los selectores; desbloquea productos compatibles sugeridos. | **APROBADO**. El copy indica: *"Compatibilidad sugerida según ficha técnica. Un asesor verificará el código exacto antes de despachar."* |
 | **Reseteo de Búsqueda** | Clic en *"Limpiar búsqueda"* | Restablece los filtros al estado inicial sin recarga de página ni parpadeos. | **APROBADO**. Estado local limpio. |
-| **Generación de Lead WhatsApp** | Clic en *"Consultar compatibilidad de mi vehículo"* | Abre enlace `wa.me/593981881515` con el mensaje: `Hola LiderPro, deseo verificar repuestos para Chevrolet Aveo Family 2015 1.5L...` | **APROBADO**. Mensaje 100% pre-llenado con contexto exacto. |
+| **Generación de Lead WhatsApp** | Clic en *"Consultar compatibilidad de mi vehículo"* | Abre enlace `wa.me/593967489002` con el mensaje: `Hola LiderPro, deseo verificar repuestos para Chevrolet Aveo Family 2015 1.5L...` | **APROBADO**. Mensaje 100% pre-llenado con contexto exacto. |
 | **Vehículo No Enlistado** | Modelo especial o no frecuente | Opción de *"¿No encuentras tu modelo? Consultar por placa o chasis con un asesor"*. | **APROBADO**. Evita que el usuario abandone el flujo. |
 
 ---
@@ -124,18 +124,18 @@ El buscador de vehículos (`VehicleFinder.tsx`) se validó en `/encuentra-tu-pro
 
 ### Centralización Absoluta de Datos
 - **Archivo Fuente:** `src/config/businessConfig.ts`
-- **Variable Maestra:** `BUSINESS_CONFIG.whatsappMasterNumber = '593981881515'`
-- **Formato Visual:** `+593 98 188 1515`
+- **Variable Maestra:** `BUSINESS_CONFIG.whatsappMasterNumber = '593967489002'`
+- **Formato Visual:** `+593 96 748 9002`
 - **Placeholder Scan:** `grep -rn "593999999999"` arrojó **0 coincidencias** en todo el repositorio.
 
 ### Matriz de Enlaces Contextuales
 | Origen del Clic | Parámetro de Mensaje Generado | Formato de URL |
 | :--- | :--- | :--- |
-| **Botón Flotante Global** | Mensaje de consulta general sobre catálogo y asesoría | `https://wa.me/593981881515?text=Hola%20LiderPro...` |
-| **Header CTA ("Asesoría WhatsApp")** | Mensaje de atención rápida | `https://wa.me/593981881515?text=Hola%20LiderPro...` |
-| **Ficha de Batería DIN66** | `SKU: BAT-DIN66-660`, Nombre del producto y solicitud de verificación | `https://wa.me/593981881515?text=Hola%20LiderPro...bateria-liderpro-din66...` |
-| **Sección B2B / Flotas** | Solicitud de cotización corporativa con RUC | `https://wa.me/593981881515?text=Hola%20LiderPro...deseo%20cotizar%20para%20flota...` |
-| **Emergencia de Batería** | Auxilio por vehículo varado con modelo y ubicación | `https://wa.me/593981881515?text=Hola%20LiderPro...mi%20vehiculo%20no%20enciende...` |
+| **Botón Flotante Global** | Mensaje de consulta general sobre catálogo y asesoría | `https://wa.me/593967489002?text=Hola%20LiderPro...` |
+| **Header CTA ("Asesoría WhatsApp")** | Mensaje de atención rápida | `https://wa.me/593967489002?text=Hola%20LiderPro...` |
+| **Ficha de Batería DIN66** | `SKU: BAT-DIN66-660`, Nombre del producto y solicitud de verificación | `https://wa.me/593967489002?text=Hola%20LiderPro...bateria-liderpro-din66...` |
+| **Sección B2B / Flotas** | Solicitud de cotización corporativa con RUC | `https://wa.me/593967489002?text=Hola%20LiderPro...deseo%20cotizar%20para%20flota...` |
+| **Emergencia de Batería** | Auxilio por vehículo varado con modelo y ubicación | `https://wa.me/593967489002?text=Hola%20LiderPro...mi%20vehiculo%20no%20enciende...` |
 
 ---
 

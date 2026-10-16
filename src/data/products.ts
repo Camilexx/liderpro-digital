@@ -18773,7 +18773,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/spec-078AA-1531.png",
+    "imageUrl": "/images/products/filter-078AA-1531.png",
     "compatibleVehicles": [
       {
         "make": "Toyota",
@@ -18844,7 +18844,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/spec-078AA-3040.png",
+    "imageUrl": "/images/products/filter-078AA-3040.png",
     "compatibleVehicles": [
       {
         "make": "JAC",
@@ -20595,7 +20595,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/spec-080AA-10086.png",
+    "imageUrl": "/images/products/filter-080AA-10086.png",
     "compatibleVehicles": [
       {
         "make": "Hyundai",
@@ -20666,7 +20666,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/spec-080AA-10088.png",
+    "imageUrl": "/images/products/filter-080AA-10088.png",
     "compatibleVehicles": [
       {
         "make": "Kia",
@@ -20737,7 +20737,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/spec-080AA-10286.png",
+    "imageUrl": "/images/products/filter-080AA-10286.png",
     "compatibleVehicles": [
       {
         "make": "Suzuki",
@@ -20808,7 +20808,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/spec-080AA-10699.png",
+    "imageUrl": "/images/products/filter-080AA-10699.png",
     "compatibleVehicles": [
       {
         "make": "Kia",
@@ -20873,7 +20873,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/spec-080AA-10891.png",
+    "imageUrl": "/images/products/filter-080AA-10891.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -20938,7 +20938,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/spec-080AA-11071.png",
+    "imageUrl": "/images/products/filter-080AA-11071.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -21003,7 +21003,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/spec-080AA-11077.png",
+    "imageUrl": "/images/products/filter-080AA-11077.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -21074,7 +21074,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/spec-080AA-11085.png",
+    "imageUrl": "/images/products/filter-080AA-11085.png",
     "compatibleVehicles": [
       {
         "make": "Zotye",
@@ -21139,7 +21139,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/spec-080AA-11113.png",
+    "imageUrl": "/images/products/filter-080AA-11113.png",
     "compatibleVehicles": [
       {
         "make": "Dongfeng",
@@ -21204,7 +21204,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/spec-080AA-11652.png",
+    "imageUrl": "/images/products/filter-080AA-11652.png",
     "compatibleVehicles": [
       {
         "make": "Renault",
@@ -21269,7 +21269,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/spec-080AA-11654.png",
+    "imageUrl": "/images/products/filter-080AA-11654.png",
     "compatibleVehicles": [
       {
         "make": "Renault",
@@ -21334,7 +21334,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/spec-080AA-11674.png",
+    "imageUrl": "/images/products/filter-080AA-11674.png",
     "compatibleVehicles": [
       {
         "make": "Ford",
@@ -21405,7 +21405,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/spec-080AA-1380.png",
+    "imageUrl": "/images/products/filter-080AA-1380.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -21470,7 +21470,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/spec-080AA-1485.png",
+    "imageUrl": "/images/products/filter-080AA-1485.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -21535,7 +21535,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/spec-080AA-2070.png",
+    "imageUrl": "/images/products/filter-080AA-2070.png",
     "compatibleVehicles": [
       {
         "make": "Kia",
@@ -21606,7 +21606,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/spec-080AA-2217.png",
+    "imageUrl": "/images/products/filter-080AA-2217.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -21671,7 +21671,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/spec-080AA-25006.png",
+    "imageUrl": "/images/products/filter-080AA-25006.png",
     "compatibleVehicles": [
       {
         "make": "Great Wall",
@@ -21736,7 +21736,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/spec-080AA-25011.png",
+    "imageUrl": "/images/products/filter-080AA-25011.png",
     "compatibleVehicles": [
       {
         "make": "Great Wall",
@@ -21801,7 +21801,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/spec-080AA-25040.png",
+    "imageUrl": "/images/products/filter-080AA-25040.png",
     "compatibleVehicles": [
       {
         "make": "Nissan",
@@ -21866,7 +21866,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/spec-080AA-25128.png",
+    "imageUrl": "/images/products/filter-080AA-25128.png",
     "compatibleVehicles": [
       {
         "make": "Ford",
@@ -21937,7 +21937,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/spec-080AA-2659.png",
+    "imageUrl": "/images/products/filter-080AA-2659.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -22002,7 +22002,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/spec-080AA-2662.png",
+    "imageUrl": "/images/products/filter-080AA-2662.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -22067,7 +22067,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/spec-080AA-28115.png",
+    "imageUrl": "/images/products/filter-080AA-28115.png",
     "compatibleVehicles": [
       {
         "make": "Hyundai",
@@ -22138,7 +22138,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/spec-080AA-28130.png",
+    "imageUrl": "/images/products/filter-080AA-28130.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -22215,7 +22215,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/spec-080AA-3603.png",
+    "imageUrl": "/images/products/filter-080AA-3603.png",
     "compatibleVehicles": [
       {
         "make": "Hyundai",
@@ -22286,7 +22286,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/spec-080AA-38240.png",
+    "imageUrl": "/images/products/filter-080AA-38240.png",
     "compatibleVehicles": [
       {
         "make": "Great Wall",
@@ -22351,7 +22351,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/spec-080AA-4000.png",
+    "imageUrl": "/images/products/filter-080AA-4000.png",
     "compatibleVehicles": [
       {
         "make": "Kia",
@@ -22416,7 +22416,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/spec-080AA-4309.png",
+    "imageUrl": "/images/products/filter-080AA-4309.png",
     "compatibleVehicles": [
       {
         "make": "Nissan",
@@ -22481,7 +22481,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/spec-080AA-4939.png",
+    "imageUrl": "/images/products/filter-080AA-4939.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -22558,7 +22558,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/spec-080AA-51943.png",
+    "imageUrl": "/images/products/filter-080AA-51943.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -22623,7 +22623,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/spec-080AA-54661.png",
+    "imageUrl": "/images/products/filter-080AA-54661.png",
     "compatibleVehicles": [
       {
         "make": "Nissan",
@@ -22688,7 +22688,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/spec-080AA-5827.png",
+    "imageUrl": "/images/products/filter-080AA-5827.png",
     "compatibleVehicles": [
       {
         "make": "Volkswagen",
@@ -22753,7 +22753,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/spec-080AA-5903.png",
+    "imageUrl": "/images/products/filter-080AA-5903.png",
     "compatibleVehicles": [
       {
         "make": "Toyota",
@@ -22836,7 +22836,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/spec-080AA-6000.png",
+    "imageUrl": "/images/products/filter-080AA-6000.png",
     "compatibleVehicles": [
       {
         "make": "Kia",
@@ -22901,7 +22901,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/spec-080AA-6012.png",
+    "imageUrl": "/images/products/filter-080AA-6012.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -22966,7 +22966,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/spec-080AA-6127.png",
+    "imageUrl": "/images/products/filter-080AA-6127.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -23031,7 +23031,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/spec-080AA-6558.png",
+    "imageUrl": "/images/products/filter-080AA-6558.png",
     "compatibleVehicles": [
       {
         "make": "Ford",
@@ -23102,7 +23102,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/spec-080AA-6664.png",
+    "imageUrl": "/images/products/filter-080AA-6664.png",
     "compatibleVehicles": [
       {
         "make": "Suzuki",
@@ -23173,7 +23173,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/spec-080AA-6900.png",
+    "imageUrl": "/images/products/filter-080AA-6900.png",
     "compatibleVehicles": [
       {
         "make": "Nissan",
@@ -23244,7 +23244,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/spec-080AA-7617.png",
+    "imageUrl": "/images/products/filter-080AA-7617.png",
     "compatibleVehicles": [
       {
         "make": "Suzuki",
@@ -23315,7 +23315,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/spec-080AA-8067.png",
+    "imageUrl": "/images/products/filter-080AA-8067.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -23392,7 +23392,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/spec-080AA-8069.png",
+    "imageUrl": "/images/products/filter-080AA-8069.png",
     "compatibleVehicles": [
       {
         "make": "Suzuki",
@@ -23463,7 +23463,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/spec-080AA-8078.png",
+    "imageUrl": "/images/products/filter-080AA-8078.png",
     "compatibleVehicles": [
       {
         "make": "Suzuki",
@@ -23534,7 +23534,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/spec-080AA-8590.png",
+    "imageUrl": "/images/products/filter-080AA-8590.png",
     "compatibleVehicles": [
       {
         "make": "Hyundai",
@@ -23605,7 +23605,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/spec-080AA-8964.png",
+    "imageUrl": "/images/products/filter-080AA-8964.png",
     "compatibleVehicles": [
       {
         "make": "Renault",
@@ -23670,7 +23670,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/spec-080AA-9100.png",
+    "imageUrl": "/images/products/filter-080AA-9100.png",
     "compatibleVehicles": [
       {
         "make": "Kia",
@@ -23741,7 +23741,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/spec-080AA-9102.png",
+    "imageUrl": "/images/products/filter-080AA-9102.png",
     "compatibleVehicles": [
       {
         "make": "Great Wall",
@@ -23806,7 +23806,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/spec-080AA-9110.png",
+    "imageUrl": "/images/products/filter-080AA-9110.png",
     "compatibleVehicles": [
       {
         "make": "Great Wall",
@@ -23871,7 +23871,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/spec-080AA-9123.png",
+    "imageUrl": "/images/products/filter-080AA-9123.png",
     "compatibleVehicles": [
       {
         "make": "Chery",
@@ -23936,7 +23936,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/spec-080AA-9124.png",
+    "imageUrl": "/images/products/filter-080AA-9124.png",
     "compatibleVehicles": [
       {
         "make": "Chery",
@@ -24001,7 +24001,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/spec-080AA-9322.png",
+    "imageUrl": "/images/products/filter-080AA-9322.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -24066,7 +24066,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/spec-080AA-9392.png",
+    "imageUrl": "/images/products/filter-080AA-9392.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -24143,7 +24143,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/spec-080AA-9476.png",
+    "imageUrl": "/images/products/filter-080AA-9476.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -24220,7 +24220,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/spec-080AA-9632.png",
+    "imageUrl": "/images/products/filter-080AA-9632.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -24297,7 +24297,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/spec-080AA-9800.png",
+    "imageUrl": "/images/products/filter-080AA-9800.png",
     "compatibleVehicles": [
       {
         "make": "Volkswagen",
@@ -24362,7 +24362,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/spec-080AA-9856.png",
+    "imageUrl": "/images/products/filter-080AA-9856.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -24427,7 +24427,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/spec-080AA-9902.png",
+    "imageUrl": "/images/products/filter-080AA-9902.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -24492,7 +24492,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/spec-080AA-994.png",
+    "imageUrl": "/images/products/filter-080AA-994.png",
     "compatibleVehicles": [
       {
         "make": "Renault",
@@ -32001,7 +32001,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/spec-081AA-1132.png",
+    "imageUrl": "/images/products/filter-081AA-1132.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -37057,7 +37057,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho inmediato desde Hub Central Pedernales",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/spec-FILTRO_AIRE_080AA-3038.png",
+    "imageUrl": "/images/products/filter-FILTRO_AIRE_080AA-3038.png",
     "compatibleVehicles": [
       {
         "make": "JAC",

@@ -4,9 +4,28 @@ import { Layers, ShieldCheck, Truck, ArrowRight, Factory, Award } from "lucide-r
 import LubricantsExplorer from "@/components/LubricantsExplorer";
 
 export const metadata: Metadata = {
-  title: "Aceites y Lubricantes para Motor Multimarca | Sintéticos, Diésel y 4T | LiderPro",
+  title: "Aceites y Lubricantes para Motor Multimarca | Aroil, Mannol, Mobil, Motul y Valvoline",
   description:
-    "Catálogo oficial de 94 lubricantes automotrices e industriales: Aroil, Mannol Made in Germany, Mobil Delvac, Motul y Valvoline. Viscosidades 5W-30, 10W-30, 15W-40, 20W-50 y Super 40. Despacho nacional desde Pedernales.",
+    "Catálogo oficial de más de 100 lubricantes automotrices, agrícolas, marinos e industriales: Aroil, Mannol Made in Germany, Mobil Delvac, Motul 4T, Valvoline y Amalie. Viscosidades 5W-30, 10W-30, 10W-40, 15W-40, 20W-50, 80W-90 y ISO 68. Despacho nacional desde Pedernales.",
+  keywords: [
+    "aceite mannol ecuador",
+    "lubricantes aroil ecuador",
+    "mobil delvac 15w40 ecuador",
+    "motul 5000 7100 4t ecuador",
+    "valvoline 20w50 15w40 ecuador",
+    "aceite hidraulico iso 68 caneca",
+  ],
+  alternates: {
+    canonical: "/lubricantes",
+  },
+  openGraph: {
+    title: "Aceites y Lubricantes Certificados API / ACEA — LiderPro Ecuador",
+    description:
+      "Lubricantes sintéticos, semisintéticos, diésel pesado y transmisión en litros, galones, canecas de 20L y tambores. Despacho diario a todo el Ecuador.",
+    url: "https://liderpro-digital.vercel.app/lubricantes",
+    type: "website",
+    images: [{ url: "/images/products/01504MD04-15W40.png", width: 800, height: 800 }],
+  },
 };
 
 export default function LubricantsPage() {

@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import { PRODUCTS } from "@/data/products";
 import { buildWhatsAppLink } from "@/lib/whatsapp";
+import ProductCard from "@/components/ProductCard";
 
 interface ProductPageProps {
   params: Promise<{ slug: string }>;
@@ -31,11 +32,49 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: ProductPageProps): Promise<Metadata> {
   const { slug } = await params;
   const product = PRODUCTS.find((p) => p.slug === slug);
-  if (!product) return { title: "Producto no encontrado | LiderPro" };
+  if (!product) return { title: "Producto no encontrado | LiderPro Ecuador" };
+
+  const title = `${product.name} (${product.sku}) | ${product.brand} Oficial — LiderPro Ecuador`;
+  const description = `${product.shortSpec}. Distribuidor oficial ${product.brand} en Ecuador (SKU: ${product.sku}). ${product.warranty}. Despacho diario desde Bodega Matriz Pedernales a las 24 provincias con facturación SRI.`;
 
   return {
-    title: `${product.name} | LiderPro Ecuador`,
-    description: `${product.shortSpec}. Garantía: ${product.warranty}. Despacho nacional diario desde Bodega Matriz en Pedernales (Manabí) con facturación electrónica SRI.`,
+    title,
+    description,
+    keywords: [
+      product.name,
+      product.sku,
+      product.brand,
+      `${product.brand} Ecuador`,
+      `${product.category} ${product.brand}`,
+      `comprar ${product.name} ecuador`,
+      "repuestos automotrices ecuador",
+      "liderpro pedernales",
+    ],
+    alternates: {
+      canonical: `/productos/${product.slug}`,
+    },
+    openGraph: {
+      title,
+      description,
+      url: `https://liderpro-digital.vercel.app/productos/${product.slug}`,
+      siteName: "LiderPro Ecuador",
+      locale: "es_EC",
+      type: "website",
+      images: [
+        {
+          url: product.imageUrl,
+          width: 800,
+          height: 800,
+          alt: `${product.brand} - ${product.name} (SKU: ${product.sku})`,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [product.imageUrl],
+    },
   };
 }
 
@@ -47,26 +86,89 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
     notFound();
   }
 
+  const categoryRoutes: Record<string, { label: string; href: string }> = {
+    baterias: { label: "Baterías", href: "/baterias" },
+    lubricantes: { label: "Lubricantes", href: "/lubricantes" },
+    filtros: { label: "Filtros", href: "/filtros" },
+    refrigerantes: { label: "Refrigerantes", href: "/lubricantes" },
+    frenos: { label: "Líquidos de Freno", href: "/lubricantes" },
+    bujias: { label: "Bujías", href: "/productos" },
+    aditivos: { label: "Aditivos y Químicos", href: "/productos" },
+  };
+  const catInfo = categoryRoutes[product.category] || { label: "Catálogo", href: "/productos" };
+
+  const relatedProducts = PRODUCTS.filter(
+    (p) => p.category === product.category && p.sku !== product.sku
+  ).slice(0, 4);
+
   const productJsonLd = {
     "@context": "https://schema.org",
-    "@type": "Product",
-    "name": product.name,
-    "image": `https://liderpro-digital.vercel.app${product.imageUrl}`,
-    "description": product.description,
-    "sku": product.sku,
-    "brand": {
-      "@type": "Brand",
-      "name": product.brand,
-    },
-    "offers": {
-      "@type": "Offer",
-      "priceCurrency": "USD",
-      "availability": product.inStock ? "https://schema.org/InStock" : "https://schema.org/PreOrder",
-      "seller": {
-        "@type": "Organization",
-        "name": "LiderPro Ecuador",
+    "@graph": [
+      {
+        "@type": "Product",
+        "name": product.name,
+        "image": `https://liderpro-digital.vercel.app${product.imageUrl}`,
+        "description": product.description,
+        "sku": product.sku,
+        "mpn": product.sku,
+        "category": catInfo.label,
+        "brand": {
+          "@type": "Brand",
+          "name": product.brand,
+        },
+        "offers": {
+          "@type": "Offer",
+          "url": `https://liderpro-digital.vercel.app/productos/${product.slug}`,
+          "priceCurrency": "USD",
+          "itemCondition": "https://schema.org/NewCondition",
+          "availability": product.inStock
+            ? "https://schema.org/InStock"
+            : "https://schema.org/PreOrder",
+          "seller": {
+            "@type": "AutoPartsStore",
+            "name": "LiderPro Ecuador",
+          },
+        },
       },
-    },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Inicio",
+            "item": "https://liderpro-digital.vercel.app",
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": catInfo.label,
+            "item": `https://liderpro-digital.vercel.app${catInfo.href}`,
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": product.name,
+            "item": `https://liderpro-digital.vercel.app/productos/${product.slug}`,
+          },
+        ],
+      },
+      ...(product.faqs && product.faqs.length > 0
+        ? [
+            {
+              "@type": "FAQPage",
+              "mainEntity": product.faqs.map((f) => ({
+                "@type": "Question",
+                "name": f.question,
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": f.answer,
+                },
+              })),
+            },
+          ]
+        : []),
+    ],
   };
 
   return (
@@ -75,15 +177,26 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }}
       />
-      <div>
+      <nav aria-label="Breadcrumb" className="flex flex-wrap items-center justify-between gap-4">
         <Link
           href="/productos"
-          className="inline-flex items-center gap-2 text-xs font-bold text-slate-500 hover:text-slate-900 transition-colors"
+          className="inline-flex items-center gap-2 text-xs font-bold text-slate-500 hover:text-[#0A3B8C] transition-colors"
         >
           <ArrowLeft className="w-4 h-4" />
-          <span>Volver al catálogo</span>
+          <span>Volver al catálogo general</span>
         </Link>
-      </div>
+        <ol className="flex items-center gap-2 text-xs font-semibold text-slate-500">
+          <li>
+            <Link href="/" className="hover:text-[#0A3B8C] transition-colors">Inicio</Link>
+          </li>
+          <li>/</li>
+          <li>
+            <Link href={catInfo.href} className="hover:text-[#0A3B8C] transition-colors">{catInfo.label}</Link>
+          </li>
+          <li>/</li>
+          <li className="text-slate-900 font-bold truncate max-w-[220px] sm:max-w-[340px]">{product.sku}</li>
+        </ol>
+      </nav>
 
       {/* Main Product Showcase */}
       <div className="bg-white rounded-3xl border border-slate-200/90 p-6 sm:p-12 shadow-sm">
@@ -193,7 +306,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
           <div className="flex items-center gap-2 border-b border-slate-100 pb-3">
             <Wrench className="w-4 h-4 text-brand-primary" />
             <h3 className="text-base font-black text-slate-950">
-              Ficha Técnica y Stock Físico
+              Ficha Técnica y Certificación de Origen
             </h3>
           </div>
           <div className="space-y-2.5 text-xs">
@@ -276,6 +389,33 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
                   {faq.answer}
                 </p>
               </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Related Products for Internal Linking & Cross-Sell */}
+      {relatedProducts.length > 0 && (
+        <div className="space-y-6 pt-4">
+          <div className="flex items-center justify-between border-b border-slate-200 pb-4">
+            <div>
+              <span className="text-[11px] font-black uppercase tracking-widest text-[#0A3B8C] block">
+                Alternativas y Complementos Oficiales
+              </span>
+              <h2 className="text-xl sm:text-2xl font-black text-slate-950">
+                Productos Relacionados en {catInfo.label}
+              </h2>
+            </div>
+            <Link
+              href={catInfo.href}
+              className="text-xs font-black text-[#0A3B8C] hover:underline uppercase tracking-wider"
+            >
+              Ver toda la línea →
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {relatedProducts.map((rel) => (
+              <ProductCard key={rel.id} product={rel} />
             ))}
           </div>
         </div>

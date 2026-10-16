@@ -4,9 +4,27 @@ import FiltersExplorer from "@/components/FiltersExplorer";
 import { buildWhatsAppLink } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
-  title: "Filtros de Aceite, Combustible y Aire | Línea Advance Filters | LiderPro Ecuador",
+  title: "Filtros de Aceite, Combustible, Aire y Cabina | Advance Filters Oficial",
   description:
-    "Catálogo oficial de 193 filtros Advance Filters: aceite blindado, trampa diésel Common Rail, aire y cabina. Despacho nacional diario desde Bodega Matriz Pedernales (Manabí).",
+    "Catálogo oficial de 193 filtros Advance Filters en Ecuador: filtros de aceite blindados, separadores de agua diésel Common Rail, filtros de aire de motor y cabina A/C. Despacho nacional diario desde Bodega Matriz Pedernales.",
+  keywords: [
+    "filtros advance ecuador",
+    "filtro de aceite chevrolet aveo sail dmax",
+    "filtro de combustible diesel trampa de agua",
+    "filtro de aire toyota hilux kia sportage",
+    "distribuidor filtros automotrices ecuador",
+  ],
+  alternates: {
+    canonical: "/filtros",
+  },
+  openGraph: {
+    title: "Filtros Automotrices y Servicio Pesado Advance Filters — LiderPro Ecuador",
+    description:
+      "193 referencias en filtración de aceite, aire, cabina y combustible diésel con equivalencias OEM verificadas y despacho a las 24 provincias.",
+    url: "https://liderpro-digital.vercel.app/filtros",
+    type: "website",
+    images: [{ url: "/images/products/advance-oil-filter.png", width: 800, height: 800 }],
+  },
 };
 
 export default function FiltersPage() {

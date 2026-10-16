@@ -90,24 +90,17 @@ export default function ProductCard({ product }: ProductCardProps) {
       {/* Dispatch Status & CTA */}
       <div className="p-5 pt-3">
         <div className="mb-3.5 pb-2.5 border-b border-slate-100 space-y-1.5">
-          {product.realStock !== undefined ? (
-            <div className="flex items-center justify-between text-[11px] font-semibold text-slate-700 bg-slate-50 px-2.5 py-1 rounded-lg border border-slate-200/80">
-              <span className="flex items-center gap-1.5 text-emerald-700 font-bold">
-                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse shrink-0" />
-                <span>Stock Pedernales: {product.realStock} uds</span>
-              </span>
-              {product.dailySales ? (
-                <span className="text-[10px] text-amber-700 font-bold bg-amber-50 px-1.5 py-0.5 rounded border border-amber-200/60">
-                  Alta Rotación
-                </span>
-              ) : null}
-            </div>
-          ) : (
-            <div className="flex items-center gap-1.5 text-[11px] font-bold text-emerald-800 bg-emerald-50/90 px-2.5 py-1 rounded-lg border border-emerald-200/70">
+          <div className="flex items-center justify-between text-[11px] font-semibold text-slate-700 bg-slate-50 px-2.5 py-1 rounded-lg border border-slate-200/80">
+            <span className="flex items-center gap-1.5 text-emerald-700 font-bold">
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse shrink-0" />
-              <span className="truncate">{product.dispatchIndicator}</span>
-            </div>
-          )}
+              <span>Disponible en Bodega Pedernales</span>
+            </span>
+            {product.isBestSeller ? (
+              <span className="text-[10px] text-amber-700 font-bold bg-amber-50 px-1.5 py-0.5 rounded border border-amber-200/60">
+                Alta Demanda
+              </span>
+            ) : null}
+          </div>
 
           <div className="flex items-center justify-between text-[10.5px] text-slate-500 font-medium px-0.5">
             <span>{product.warranty}</span>

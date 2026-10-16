@@ -5,9 +5,27 @@ import EmergencyBanner from "@/components/EmergencyBanner";
 import { buildWhatsAppLink } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
-  title: "Baterías Automotrices Selladas | Baterías Ecuador & Bosch S4 | LiderPro",
+  title: "Baterías Automotrices Selladas 12V | Baterías Ecuador & Bosch S4",
   description:
-    "Distribuidor autorizado multimarca con 48 referencias de baterías selladas libres de mantenimiento: Baterías Ecuador y Bosch S4 Silver con garantía sellada de 12 a 18 meses. Despacho nacional desde Pedernales.",
+    "Distribuidor autorizado multimarca con 48 modelos de baterías selladas libres de mantenimiento: Baterías Ecuador Full Equipo y Bosch S4 PowerFrame con garantía oficial de 12 a 18 meses. Despacho nacional desde Bodega Matriz Pedernales.",
+  keywords: [
+    "baterias ecuador full equipo",
+    "baterias bosch s4 ecuador",
+    "bateria grupo 24 34 42 31 n150 n200",
+    "baterias para camiones y camaroneras ecuador",
+    "comprar bateria auto pedernales manabi",
+  ],
+  alternates: {
+    canonical: "/baterias",
+  },
+  openGraph: {
+    title: "Baterías Automotrices Selladas | Baterías Ecuador & Bosch S4 — LiderPro",
+    description:
+      "48 referencias de baterías automotrices y de servicio pesado con garantía oficial de fábrica y despacho seguro a las 24 provincias del Ecuador.",
+    url: "https://liderpro-digital.vercel.app/baterias",
+    type: "website",
+    images: [{ url: "/images/products/baterias-ecuador-fe.png", width: 800, height: 800 }],
+  },
 };
 
 export default function BatteriesPage() {

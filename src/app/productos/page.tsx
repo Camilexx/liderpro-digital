@@ -5,9 +5,26 @@ import { OFFICIAL_BRANDS } from "@/data/products";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Catálogo Multimarca Autorizado (500+ Productos) | Baterías, Aceites, Filtros | LiderPro",
+  title: "Catálogo Multimarca Autorizado (508 Productos) | Baterías, Aceites y Filtros",
   description:
-    "Catálogo oficial multimarca con más de 500 productos verificados en Bodega Pedernales: Baterías Ecuador, Bosch, Aroil, Mannol, Mobil, Motul, Advance Filters y ATE. Despacho a las 24 provincias.",
+    "Catálogo oficial multimarca con 508 productos verificados en Bodega Matriz Pedernales: Baterías Ecuador, Bosch, Aroil, Mannol, Mobil, Motul, Valvoline, Amalie, Advance Filters, NGK, Denso y ATE. Despacho diario a las 24 provincias del Ecuador.",
+  keywords: [
+    "catalogo repuestos automotrices ecuador",
+    "baterias ecuador precios",
+    "lubricantes mannol aroil mobil motul",
+    "filtros advance por mayor ecuador",
+    "distribuidora automotriz pedernales manabi",
+  ],
+  alternates: {
+    canonical: "/productos",
+  },
+  openGraph: {
+    title: "Catálogo Oficial Multimarca LiderPro Ecuador (508 Productos)",
+    description:
+      "508 productos originales en stock para despacho inmediato desde Pedernales a las 24 provincias: baterías, lubricantes, filtros, refrigerantes y bujías.",
+    url: "https://liderpro-digital.vercel.app/productos",
+    type: "website",
+  },
 };
 
 export default function ProductsPage() {

@@ -73,7 +73,7 @@ export default function CatalogExplorer() {
       }
 
       // Stock filter
-      if (onlyInStock && (!product.realStock || product.realStock <= 0)) {
+      if (onlyInStock && !product.inStock) {
         return false;
       }
 

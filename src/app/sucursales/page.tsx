@@ -4,9 +4,17 @@ import { MapPin, ShieldCheck } from "lucide-react";
 import { BUSINESS_CONFIG } from "@/data/businessConfig";
 
 export const metadata: Metadata = {
-  title: "Puntos de Atención en Pedernales y Quito | LiderPro Ecuador",
+  title: "Puntos de Atención en Pedernales y Quito | Sede Matriz y Cobertura",
   description:
-    "Presencia física en Pedernales (Manabí) y Quito (Pichincha). Atención directa, retiro de repuestos y logística de despacho nacional.",
+    "Presencia física en Pedernales (Manabí) y Quito (Pichincha). Atención directa en Bodega Matriz, retiro de repuestos y logística de despacho nacional a las 24 provincias.",
+  keywords: [
+    "liderpro pedernales direccion",
+    "repuestos automotrices pedernales manabi",
+    "baterias y lubricantes quito pedernales",
+  ],
+  alternates: {
+    canonical: "/sucursales",
+  },
 };
 
 export default function BranchesPage() {

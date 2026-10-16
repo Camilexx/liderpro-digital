@@ -15,9 +15,18 @@ import QuickDispatchAssistant from "@/components/QuickDispatchAssistant";
 import ShippingFAQAccordion from "@/components/ShippingFAQAccordion";
 
 export const metadata: Metadata = {
-  title: "Despacho Nacional desde Hub Pedernales | Envíos a las 24 Provincias | LiderPro Ecuador",
+  title: "Despacho Nacional desde Hub Pedernales | Envíos a las 24 Provincias",
   description:
     "Despacho diario a nivel nacional a las 24 provincias desde nuestra Sede Central en Pedernales por transporte interprovincial y courier según destino. Mapa 2D de rutas directas, tiempos de entrega de 24h a 48h, protocolo técnico de embalaje antiderrame y facturación electrónica SRI.",
+  keywords: [
+    "envios repuestos automotrices ecuador",
+    "despacho baterias lubricantes pedernales manabi",
+    "encomienda repuestos quito guayaquil manta",
+    "logistica automotriz 24 provincias ecuador",
+  ],
+  alternates: {
+    canonical: "/envios",
+  },
 };
 
 export default function ShippingPage() {

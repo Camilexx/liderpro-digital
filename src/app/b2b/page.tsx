@@ -20,9 +20,18 @@ import B2BQuoteCalculator from "@/components/B2BQuoteCalculator";
 import B2BFAQAccordion from "@/components/B2BFAQAccordion";
 
 export const metadata: Metadata = {
-  title: "Atención B2B y Precios Mayoristas para Talleres, Flotas y Camaroneras | LiderPro Ecuador",
+  title: "Atención B2B y Precios Mayoristas para Talleres, Flotas y Camaroneras",
   description:
     "Canal mayorista y corporativo desde Bodega Matriz en Pedernales (Manabí). Abastecimiento de canecas de 20L, tambores de 55 galones, baterías Grupo 31 y filtros por volumen con Facturación Electrónica SRI.",
+  keywords: [
+    "distribuidor mayorista lubricantes ecuador",
+    "precios por mayor filtros advance baterias ecuador",
+    "proveedores para camaroneras manabi esmeraldas",
+    "abastecimiento flotas pesadas ecuador",
+  ],
+  alternates: {
+    canonical: "/b2b",
+  },
 };
 
 const B2B_SECTORS_DATA = [

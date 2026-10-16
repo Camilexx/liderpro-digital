@@ -20,11 +20,11 @@ import {
   Bike,
   ShieldCheck,
   FileCheck2,
-  Star,
 } from "lucide-react";
 import ProductCard from "@/components/ProductCard";
 import EmergencyBanner from "@/components/EmergencyBanner";
 import LocationsLogisticsSection from "@/components/LocationsLogisticsSection";
+import TestimonialsSection from "@/components/TestimonialsSection";
 import FAQSection from "@/components/FAQSection";
 import { PRODUCTS, OFFICIAL_BRANDS, ApplicationType, Product } from "@/data/products";
 import { EDUCATIONAL_ARTICLES } from "@/data/articles";
@@ -758,72 +758,8 @@ export default function HomePage() {
       {/* 10: HUB LOGÍSTICO PEDERNALES — Despacho a 24 Provincias */}
       <LocationsLogisticsSection />
 
-      {/* 11: TESTIMONIOS & CASOS DE ÉXITO VERIFICADOS */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-slate-50 border border-slate-200/90 rounded-3xl p-6 sm:p-10 space-y-6">
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
-            <div>
-              <span className="text-xs font-bold uppercase tracking-wider text-brand-primary">
-                Respaldo Comprobado en Ecuador
-              </span>
-              <h2 className="text-2xl sm:text-3xl font-black text-slate-950 tracking-tight">
-                Lo que dicen talleres, flotas y clientes en el país
-              </h2>
-            </div>
-            <div className="flex items-center gap-1 text-amber-500 font-bold text-xs bg-amber-50 px-3 py-1 rounded-full border border-amber-200 self-start sm:self-auto">
-              <Star className="w-4 h-4 fill-amber-400 text-amber-400" />
-              <span>Calificación 4.9/5 en Atención y Despacho</span>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-white p-6 rounded-2xl border border-slate-200 space-y-3 shadow-2xs">
-              <div className="flex items-center gap-1 text-amber-400">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-amber-400" />
-                ))}
-              </div>
-              <p className="text-xs text-slate-700 leading-relaxed italic">
-                &ldquo;Trabajamos con LiderPro para las baterías Bosch y lubricantes sintéticos en nuestro taller. La guía de remisión llega de inmediato por WhatsApp y los paquetes sellados al día siguiente.&rdquo;
-              </p>
-              <div className="pt-2 border-t border-slate-100">
-                <span className="block text-xs font-black text-slate-950">Ing. Marcelo Moreira</span>
-                <span className="text-[11px] text-slate-500">Taller Multimarca • Portoviejo, Manabí</span>
-              </div>
-            </div>
-
-            <div className="bg-white p-6 rounded-2xl border border-slate-200 space-y-3 shadow-2xs">
-              <div className="flex items-center gap-1 text-amber-400">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-amber-400" />
-                ))}
-              </div>
-              <p className="text-xs text-slate-700 leading-relaxed italic">
-                &ldquo;Adquirimos canecas de Mobil Delvac 15W-40 y baterías Grupo 31 para nuestros camiones. Tienen el mejor precio directo mayorista y facturación electrónica inmediata.&rdquo;
-              </p>
-              <div className="pt-2 border-t border-slate-100">
-                <span className="block text-xs font-black text-slate-950">Carlos Zambrano</span>
-                <span className="text-[11px] text-slate-500">Transporte Pesado & Carga • Santo Domingo</span>
-              </div>
-            </div>
-
-            <div className="bg-white p-6 rounded-2xl border border-slate-200 space-y-3 shadow-2xs">
-              <div className="flex items-center gap-1 text-amber-400">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-amber-400" />
-                ))}
-              </div>
-              <p className="text-xs text-slate-700 leading-relaxed italic">
-                &ldquo;Para los motores de bombeo camaronero necesitábamos aceites hidráulicos ISO 68 y baterías de servicio pesado. El despacho desde Pedernales es puntual y confiable.&rdquo;
-              </p>
-              <div className="pt-2 border-t border-slate-100">
-                <span className="block text-xs font-black text-slate-950">Ing. Xavier Peña</span>
-                <span className="text-[11px] text-slate-500">Operaciones Camaroneras • Cojimíes / Pedernales</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* 11: TESTIMONIOS & CASOS DE ÉXITO VERIFICADOS (Rotatorio Animado Institucional) */}
+      <TestimonialsSection />
 
       {/* 12: GUIDES (Editorial selection) */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -143,6 +143,55 @@ export default function LocationsLogisticsSection() {
             </Link>
           </div>
         </div>
+
+        {/* Transit Times by Zone */}
+        <div className="mt-8 pt-6 border-t border-slate-200/80">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-xs">
+            <div className="p-3.5 bg-white rounded-2xl border border-slate-200/90 space-y-1 shadow-2xs">
+              <div className="flex items-center gap-2 font-black text-slate-950">
+                <span className="w-2 h-2 rounded-full bg-emerald-500 shrink-0" />
+                <span>Costa Norte & Manabí</span>
+              </div>
+              <p className="text-[11px] text-slate-600 leading-tight">Pedernales, Cojimíes, Jama, San Vicente, Chone, Manta, Portoviejo.</p>
+              <span className="inline-block text-[10px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200/60 mt-1">
+                Despacho Mismo Día / 24h
+              </span>
+            </div>
+
+            <div className="p-3.5 bg-white rounded-2xl border border-slate-200/90 space-y-1 shadow-2xs">
+              <div className="flex items-center gap-2 font-black text-slate-950">
+                <span className="w-2 h-2 rounded-full bg-blue-500 shrink-0" />
+                <span>Eje Troncal Nacional</span>
+              </div>
+              <p className="text-[11px] text-slate-600 leading-tight">Quito, Santo Domingo, Guayaquil, Quevedo, Esmeraldas.</p>
+              <span className="inline-block text-[10px] font-bold text-blue-700 bg-blue-50 px-2 py-0.5 rounded border border-blue-200/60 mt-1">
+                Entrega Express 24h
+              </span>
+            </div>
+
+            <div className="p-3.5 bg-white rounded-2xl border border-slate-200/90 space-y-1 shadow-2xs">
+              <div className="flex items-center gap-2 font-black text-slate-950">
+                <span className="w-2 h-2 rounded-full bg-amber-500 shrink-0" />
+                <span>Sierra Centro & Austro</span>
+              </div>
+              <p className="text-[11px] text-slate-600 leading-tight">Ambato, Latacunga, Riobamba, Cuenca, Loja, Ibarra.</p>
+              <span className="inline-block text-[10px] font-bold text-amber-800 bg-amber-50 px-2 py-0.5 rounded border border-amber-200/60 mt-1">
+                Tránsito 24h a 48h
+              </span>
+            </div>
+
+            <div className="p-3.5 bg-white rounded-2xl border border-slate-200/90 space-y-1 shadow-2xs">
+              <div className="flex items-center gap-2 font-black text-slate-950">
+                <span className="w-2 h-2 rounded-full bg-purple-500 shrink-0" />
+                <span>Sector Productivo & Flotas</span>
+              </div>
+              <p className="text-[11px] text-slate-600 leading-tight">Despacho en ruta de canecas 5GL, tambores 55GL y Baterías 31.</p>
+              <span className="inline-block text-[10px] font-bold text-purple-700 bg-purple-50 px-2 py-0.5 rounded border border-purple-200/60 mt-1">
+                Rutas Programadas
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

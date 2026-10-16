@@ -18,12 +18,15 @@ import {
   Car,
   Tractor,
   Bike,
+  ShieldCheck,
+  FileCheck2,
+  Star,
 } from "lucide-react";
 import ProductCard from "@/components/ProductCard";
 import EmergencyBanner from "@/components/EmergencyBanner";
 import LocationsLogisticsSection from "@/components/LocationsLogisticsSection";
 import FAQSection from "@/components/FAQSection";
-import { PRODUCTS, OFFICIAL_BRANDS, ApplicationType } from "@/data/products";
+import { PRODUCTS, OFFICIAL_BRANDS, ApplicationType, Product } from "@/data/products";
 import { EDUCATIONAL_ARTICLES } from "@/data/articles";
 import { buildWhatsAppLink } from "@/lib/whatsapp";
 
@@ -33,6 +36,7 @@ interface VehicleSegment {
   title: string;
   subtitle: string;
   badge: string;
+  examples: string;
 }
 
 const VEHICLE_SEGMENTS: VehicleSegment[] = [
@@ -40,66 +44,133 @@ const VEHICLE_SEGMENTS: VehicleSegment[] = [
     id: "autos",
     icon: Car,
     title: "Autos & SUVs Familiares",
-    subtitle: "Sintéticos 5W-30 / Baterías 11-13 Placas.",
+    subtitle: "Sintéticos 5W-30 / Baterías 42HP a 24HP.",
     badge: "Livianos & SUVs",
+    examples: "Chevrolet Sail, Aveo, Kia Sportage, Hyundai Tucson, Toyota Yaris",
   },
   {
     id: "camionetas",
     icon: Truck,
     title: "Camionetas 4x4 & Diésel",
-    subtitle: "15W-40 CK-4 / Baterías 27R y Reforzadas (D-Max, Hilux).",
+    subtitle: "15W-40 CK-4 / Baterías 27R y Reforzadas.",
     badge: "4x4 Trabajo",
+    examples: "Chevrolet D-Max, Toyota Hilux, Mazda BT-50, Ford Ranger, VW Amarok",
   },
   {
     id: "pesado",
     icon: Tractor,
     title: "Sector Productivo, Camaroneras & Pesados",
-    subtitle: "Canecas, Tambores, Baterías Grupo 31.",
+    subtitle: "Canecas 5GL, Tambores 55GL, Baterías Grupo 31.",
     badge: "Mayorista / Flotas",
+    examples: "Hino 500/300, Isuzu FTR, Granjas Camaroneras, Motores Estacionarios",
   },
   {
     id: "motos",
     icon: Bike,
     title: "Motos & Delivery",
-    subtitle: "Motul 4T, Mannol Moto, Baterías Compactas de Gel.",
+    subtitle: "Motul 4T Ester, Mannol Moto, Baterías Gel.",
     badge: "4 Tiempos Ester",
+    examples: "Bajaj Pulsar, Shineray, Daytona, Honda, Yamaha, Flotas de Reparto",
   },
+];
+
+// Top 4 Flagship SKUs with diverse categories (Batteries + Lubricants)
+const FLAGSHIP_BEST_SELLER_SKUS = [
+  "03024-HP-I", // Batería Ecuador 24 HP High Power (Tapa Roja, 85 Amp)
+  "02724HPS4", // Batería Bosch 24 HP S4 PowerFrame (64 Amp)
+  "12MN7916-4", // Mannol Molibden Green Ultra 5W-30 Galón
+  "01504MD04-15W40", // Mobil Delvac MX 15W-40 Galón Diésel
+];
+
+// Curated 8-Product Showcase representing all distributor categories
+const CURATED_SHOWCASE_SKUS = [
+  "03024-HP-I", // Batería Ecuador 24 HP High Power
+  "42HPS4", // Batería Bosch 42 HP S4 55AMP
+  "12MN7916-4", // Mannol Molibden Green Ultra 5W-30 Galón
+  "01504MD04-15W40", // Mobil Delvac MX 15W-40 Galón
+  "080AO-3614ST", // Filtro Advance Aire 100% Sintético 15,000 km
+  "01001012", // Motul Moto 5000 10W-40 Semisintético 4T
+  "080AAK-102", // Kit Filtro de Aire Heavy Duty Hino 500
+  "03031-SHD", // Batería Ecuador 31 SHD Super Heavy Duty 105 Amp
+];
+
+// Popular Vehicle Quick-Access Pills for Ecuador Market
+const POPULAR_VEHICLES = [
+  { label: "Chevrolet D-Max 3.0 / 2.5 Diésel", query: "Chevrolet D-Max" },
+  { label: "Toyota Hilux 2.7 Gas. / 2.4 Diésel", query: "Toyota Hilux" },
+  { label: "Chevrolet Sail / Aveo Family", query: "Chevrolet Sail" },
+  { label: "Kia Sportage Active / Revolution", query: "Kia Sportage" },
+  { label: "Hyundai Tucson / Santa Fe", query: "Hyundai Tucson" },
+  { label: "Hino 500 Series / Pesados", query: "Hino 500" },
+  { label: "Motos 4T (150cc - 250cc)", query: "Motul Moto 4T" },
+  { label: "Sector Camaronero / Motores Estacionarios", query: "Canecas y Baterías 31" },
 ];
 
 export default function HomePage() {
   const [selectedSegment, setSelectedSegment] = useState<ApplicationType | "todos">("todos");
 
+  // Retrieve curated products safely
+  const bestSellerProducts = FLAGSHIP_BEST_SELLER_SKUS.map((sku) =>
+    PRODUCTS.find((p) => p.sku === sku)
+  ).filter(Boolean) as Product[];
+
+  const defaultShowcaseProducts = CURATED_SHOWCASE_SKUS.map((sku) =>
+    PRODUCTS.find((p) => p.sku === sku)
+  ).filter(Boolean) as Product[];
+
   const filteredProducts =
     selectedSegment === "todos"
-      ? PRODUCTS.slice(0, 8)
-      : PRODUCTS.filter((p) => p.applicationType === selectedSegment);
+      ? defaultShowcaseProducts
+      : PRODUCTS.filter((p) => p.applicationType === selectedSegment).slice(0, 8);
 
   return (
-    <div className="space-y-10 sm:space-y-14 pb-16">
+    <div className="space-y-12 sm:space-y-16 pb-16">
       {/* 01: HERO SECTION — Distribuidor Autorizado Multimarca desde Hub Pedernales */}
       <section className="pt-6 sm:pt-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto animate-fade-up">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-          {/* Left: High-Conversion Value Proposition */}
-          <div className="lg:col-span-6 space-y-5 text-left">
+          {/* Left Column: High-Conversion Value Proposition */}
+          <div className="lg:col-span-7 space-y-5 text-left">
+            {/* Live Operational Status Pill */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-slate-950 text-white rounded-full text-[11px] font-bold tracking-wider uppercase shadow-sm border border-slate-800">
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
               <span>🟢 Stock disponible en Pedernales para despacho nacional</span>
             </div>
 
-            <h1 className="text-3xl sm:text-5xl lg:text-[3.25rem] font-black tracking-tight text-slate-950 leading-[1.06]">
+            {/* Main Headline with Satin Brand Gradient */}
+            <h1 className="text-3xl sm:text-5xl lg:text-[3.35rem] font-black tracking-tight text-slate-950 leading-[1.05]">
               Distribuidor Autorizado Multimarca.
               <br />
               <span className="bg-gradient-to-r from-[#0A3B8C] via-[#0D47A1] to-[#0A3B8C] bg-clip-text text-transparent">
-                Desde Pedernales a todo el Ecuador.
+                Baterías, Lubricantes y Filtros en Ecuador.
               </span>
             </h1>
 
-            <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-xl font-normal">
-              Centro de operaciones y despacho mayorista/minorista en <strong>Pedernales, Manabí</strong>. Abastecemos autos, camionetas 4x4, camaroneras, transporte pesado y motos con las marcas líderes del mercado y alcance logístico a las 24 provincias.
+            <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-2xl font-normal">
+              Centro de acopio matriz y mostrador técnico en <strong>Pedernales, Manabí</strong>. Abastecemos con despacho diario a nivel nacional a vehículos livianos, camionetas 4x4, flotas comerciales, cooperativas de transporte y sector camaronero con marcas originales y garantía de fábrica.
             </p>
 
-            {/* High-Impact CTAs with Satin Shine */}
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-1">
+            {/* Quick Metrics Bar: 4 Institutional Pillars */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-1">
+              <div className="bg-slate-50 border border-slate-200/90 rounded-2xl p-2.5 text-center">
+                <span className="block text-base sm:text-lg font-black text-[#0A3B8C]">+500</span>
+                <span className="text-[10.5px] text-slate-600 font-bold uppercase tracking-tight">Referencias</span>
+              </div>
+              <div className="bg-slate-50 border border-slate-200/90 rounded-2xl p-2.5 text-center">
+                <span className="block text-base sm:text-lg font-black text-emerald-600">24 Provincias</span>
+                <span className="text-[10.5px] text-slate-600 font-bold uppercase tracking-tight">Despacho Diario</span>
+              </div>
+              <div className="bg-slate-50 border border-slate-200/90 rounded-2xl p-2.5 text-center">
+                <span className="block text-base sm:text-lg font-black text-slate-900">100% SRI</span>
+                <span className="text-[10.5px] text-slate-600 font-bold uppercase tracking-tight">Lote Original</span>
+              </div>
+              <div className="bg-slate-50 border border-slate-200/90 rounded-2xl p-2.5 text-center">
+                <span className="block text-base sm:text-lg font-black text-amber-600">Mayorista</span>
+                <span className="text-[10.5px] text-slate-600 font-bold uppercase tracking-tight">& Mostrador</span>
+              </div>
+            </div>
+
+            {/* High-Impact CTAs */}
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
               <a
                 href="#buscador"
                 className="btn-primary btn-shine !py-4 !px-7 text-xs font-black tracking-wider flex items-center justify-center gap-2.5 text-center group"
@@ -113,7 +184,7 @@ export default function HomePage() {
                 href={buildWhatsAppLink("quick_compatibility")}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-whatsapp !py-4 !px-6 text-xs font-black tracking-wider flex items-center justify-center gap-2.5 text-center"
+                className="btn-whatsapp !py-4 !px-6 text-xs font-black tracking-wider flex items-center justify-center gap-2.5 text-center shadow-lg shadow-emerald-600/20"
               >
                 <MessageCircle className="w-4 h-4" />
                 <span>COTIZAR EN SEDE PEDERNALES</span>
@@ -121,21 +192,25 @@ export default function HomePage() {
             </div>
 
             {/* Reassurance Microcopy Badges */}
-            <div className="pt-1 grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-700 font-medium">
-              <div className="flex items-center gap-2">
+            <div className="pt-1 flex flex-wrap items-center gap-4 text-xs text-slate-700 font-medium">
+              <div className="flex items-center gap-1.5">
                 <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                <span>Garantía de Fábrica y Facturación SRI</span>
+                <span>Garantía de Fábrica Baterías Ecuador & Bosch</span>
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-1.5">
                 <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                <span>Despacho diario a nivel nacional según destino</span>
+                <span>Facturación Electrónica SRI Inmediata</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                <span>Despacho Express 24h a Quito, Guayaquil y Manta</span>
               </div>
             </div>
           </div>
 
-          {/* Right: Studio Automotive Photography Stage */}
-          <div className="lg:col-span-6">
-            <div className="relative aspect-[16/10] sm:aspect-[16/9] lg:aspect-[4/3] rounded-3xl overflow-hidden border border-slate-200 shadow-xl bg-slate-950 group">
+          {/* Right Column: Studio Showcase Stage with Telemetry Overlay */}
+          <div className="lg:col-span-5">
+            <div className="relative aspect-[4/3] rounded-3xl overflow-hidden border border-slate-200/90 shadow-2xl bg-slate-950 group">
               <Image
                 src="/images/hero/automotive-hero.jpg"
                 alt="LiderPro Distribuidor Autorizado Multimarca Pedernales Ecuador"
@@ -143,24 +218,52 @@ export default function HomePage() {
                 priority
                 className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/25 to-transparent pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/30 to-transparent pointer-events-none" />
 
               {/* Floating Quality Badge */}
               <div className="absolute top-4 right-4 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-xl border border-white/40 shadow-lg text-slate-900 flex items-center gap-1.5 text-xs font-black animate-float-slow">
                 <Sparkles className="w-3.5 h-3.5 text-amber-500 fill-amber-500" />
-                <span>Mostrador Técnico Multimarca</span>
+                <span>Centro de Acopio Multimarca</span>
+              </div>
+
+              {/* Middle Interactive Category Quick-Toggles */}
+              <div className="absolute bottom-16 left-4 right-4 flex flex-wrap gap-1.5">
+                <Link
+                  href="/baterias"
+                  className="px-2.5 py-1 bg-black/60 backdrop-blur-md hover:bg-[#0A3B8C] text-white rounded-lg text-[10.5px] font-bold border border-white/20 transition-colors"
+                >
+                  ⚡ Baterías Selladas
+                </Link>
+                <Link
+                  href="/lubricantes"
+                  className="px-2.5 py-1 bg-black/60 backdrop-blur-md hover:bg-amber-700 text-white rounded-lg text-[10.5px] font-bold border border-white/20 transition-colors"
+                >
+                  🛢️ Aceites Sintéticos & Diésel
+                </Link>
+                <Link
+                  href="/filtros"
+                  className="px-2.5 py-1 bg-black/60 backdrop-blur-md hover:bg-blue-700 text-white rounded-lg text-[10.5px] font-bold border border-white/20 transition-colors"
+                >
+                  🛡️ Filtros Advance
+                </Link>
+                <Link
+                  href="/b2b"
+                  className="px-2.5 py-1 bg-black/60 backdrop-blur-md hover:bg-emerald-700 text-white rounded-lg text-[10.5px] font-bold border border-white/20 transition-colors"
+                >
+                  📦 Canecas & Flotas
+                </Link>
               </div>
 
               {/* Bottom Card Ribbon */}
-              <div className="absolute bottom-4 left-5 right-5 text-white flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs">
+              <div className="absolute bottom-4 left-4 right-4 text-white flex items-center justify-between gap-2 text-xs">
                 <div className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                  <span className="font-bold tracking-wide">
-                    Hub Central: Pedernales, Manabí
+                  <span className="font-bold tracking-wide text-xs">
+                    Hub Matriz: Pedernales, Manabí
                   </span>
                 </div>
-                <span className="text-[11px] font-mono text-slate-200 bg-slate-900/75 px-2.5 py-1 rounded-md border border-slate-700/70 w-fit">
-                  Despacho a las 24 Provincias
+                <span className="text-[10.5px] font-mono text-slate-200 bg-slate-900/80 px-2 py-0.5 rounded border border-slate-700">
+                  Despacho Diario Nacional
                 </span>
               </div>
             </div>
@@ -169,7 +272,7 @@ export default function HomePage() {
       </section>
 
       {/* 02: FRANJA INSTITUCIONAL DE MARCAS OFICIALES (Brand Showcase) */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 animate-fade-up delay-100">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 animate-fade-up">
         <div className="bg-white border border-slate-200/90 rounded-3xl p-6 sm:p-8 space-y-6 shadow-sm">
           {/* Institutional Heading */}
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-4 border-b border-slate-100">
@@ -186,48 +289,52 @@ export default function HomePage() {
               </p>
             </div>
 
-            <div className="flex flex-wrap items-center gap-3 text-xs font-bold text-slate-700">
-              <div className="flex items-center gap-2 px-3 py-1.5 bg-slate-50 border border-slate-200 rounded-xl">
+            <div className="flex flex-wrap items-center gap-2.5 text-xs font-bold text-slate-700">
+              <div className="flex items-center gap-1.5 px-3 py-1.5 bg-slate-50 border border-slate-200 rounded-xl">
                 <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
                 <span>100% Sellado de Fábrica</span>
               </div>
-              <div className="flex items-center gap-2 px-3 py-1.5 bg-slate-50 border border-slate-200 rounded-xl">
+              <div className="flex items-center gap-1.5 px-3 py-1.5 bg-slate-50 border border-slate-200 rounded-xl">
                 <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
                 <span>Facturación SRI Inmediata</span>
               </div>
             </div>
           </div>
 
-          {/* 14 Official Brands Matrix - 2 rows of 7 */}
+          {/* 14 Official Brands Matrix - Interactive Navigation */}
           <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-3 sm:gap-3.5">
             {OFFICIAL_BRANDS.map((brand) => (
-              <div
+              <Link
                 key={brand.name}
-                className="border border-slate-200/80 bg-slate-50/60 hover:bg-white hover:border-[#0A3B8C] hover:shadow-md rounded-2xl p-3.5 flex flex-col items-center justify-between text-center transition-all duration-300 group"
+                href={`/productos?marca=${encodeURIComponent(brand.name)}`}
+                className="border border-slate-200/80 bg-slate-50/60 hover:bg-white hover:border-[#0A3B8C] hover:shadow-md rounded-2xl p-3 flex flex-col items-center justify-between text-center transition-all duration-300 group"
               >
-                <div className="relative w-full h-12 flex items-center justify-center p-1">
+                <div className="relative w-full h-11 flex items-center justify-center p-1">
                   <Image
                     src={brand.logoUrl}
                     alt={`Logo oficial ${brand.name} Ecuador`}
-                    width={150}
-                    height={48}
-                    className="max-h-10 max-w-full object-contain filter group-hover:scale-105 transition-transform duration-300"
+                    width={140}
+                    height={44}
+                    className="max-h-9 max-w-full object-contain filter group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-                <div className="mt-2.5 w-full pt-2 border-t border-slate-200/60 flex flex-col items-center">
-                  <span className="text-[10px] text-slate-600 font-semibold tracking-tight line-clamp-1 group-hover:text-slate-950 transition-colors">
+                <div className="mt-2 w-full pt-2 border-t border-slate-200/60 flex flex-col items-center">
+                  <span className="text-[9.5px] font-bold text-slate-400 uppercase tracking-tight">
+                    {brand.origin}
+                  </span>
+                  <span className="text-[10px] text-slate-700 font-semibold tracking-tight line-clamp-1 group-hover:text-[#0A3B8C] transition-colors mt-0.5">
                     {brand.specialty}
                   </span>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
       </section>
 
-      {/* 02.5: PRODUCTOS CON MAYOR ROTACIÓN Y MÁS VENDIDOS EN BODEGA PEDERNALES */}
+      {/* 03: PRODUCTOS FLAGSHIP CON MAYOR ROTACIÓN EN MOSTRADOR PEDERNALES */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 animate-fade-up">
-        <div className="bg-gradient-to-br from-blue-50/80 via-white to-amber-50/50 border border-blue-200/80 rounded-3xl p-6 sm:p-8 space-y-6 shadow-sm">
+        <div className="bg-gradient-to-br from-blue-50/70 via-white to-amber-50/40 border border-blue-200/80 rounded-3xl p-6 sm:p-8 space-y-6 shadow-sm">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#061B40] text-[#FFC500] rounded-full text-[11px] font-black uppercase tracking-wider shadow-sm mb-2">
@@ -237,7 +344,7 @@ export default function HomePage() {
                 Productos con Mayor Demanda en Mostrador Pedernales
               </h2>
               <p className="text-xs sm:text-sm text-slate-600 mt-1 max-w-2xl">
-                Los artículos con mayor rotación diaria en lubricantes, baterías y aditivos de alta demanda. Stock físico verificado para retiro en local o despacho express interprovincial.
+                Los 4 artículos indispensables de mayor salida diaria: Baterías Ecuador Tapa Roja, Baterías Bosch PowerFrame, lubricantes sintéticos y aceite diésel para flotas. Stock físico verificado para retiro en local o despacho express interprovincial.
               </p>
             </div>
             <a
@@ -247,22 +354,23 @@ export default function HomePage() {
               })}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-gold !py-2.5 !px-5 text-xs font-black self-start md:self-auto shrink-0 shadow-md"
+              className="btn-gold !py-2.5 !px-5 text-xs font-black self-start md:self-auto shrink-0 shadow-md flex items-center gap-1.5"
             >
+              <MessageCircle className="w-3.5 h-3.5" />
               <span>Consultar Stock de Mayor Salida</span>
             </a>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {PRODUCTS.filter((p) => p.isBestSeller).slice(0, 4).map((prod) => (
+            {bestSellerProducts.map((prod) => (
               <ProductCard key={prod.id} product={prod} />
             ))}
           </div>
         </div>
       </section>
 
-      {/* 03: SELECTOR TÁCTIL POR TIPO DE VEHÍCULO (Segmentación en 1 Clic) + CATÁLOGO MULTIMARCA */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 animate-fade-up delay-200">
+      {/* 04: SELECTOR TÁCTIL POR TIPO DE VEHÍCULO + CATÁLOGO MULTIMARCA CURADO */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 animate-fade-up">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
           <div>
             <span className="text-xs font-bold uppercase tracking-wider text-brand-primary">
@@ -282,7 +390,7 @@ export default function HomePage() {
               onClick={() => setSelectedSegment("todos")}
               className="btn-secondary !py-2 !px-4 !text-xs self-start md:self-auto"
             >
-              Ver todas las líneas ({PRODUCTS.length})
+              Ver selección destacada multimarca ({PRODUCTS.length} totales)
             </button>
           )}
         </div>
@@ -331,8 +439,11 @@ export default function HomePage() {
                   <p className="text-xs text-slate-600 mt-1 leading-relaxed">
                     {seg.subtitle}
                   </p>
+                  <p className="text-[10.5px] text-slate-500 mt-1.5 font-medium line-clamp-1">
+                    {seg.examples}
+                  </p>
                 </div>
-                <div className="text-[11px] font-black text-[#0A3B8C] flex items-center gap-1 pt-1">
+                <div className="text-[11px] font-black text-[#0A3B8C] flex items-center gap-1 pt-1 border-t border-slate-100">
                   <span>{isActive ? "Mostrando selección" : "Filtrar catálogo"}</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </div>
@@ -348,8 +459,8 @@ export default function HomePage() {
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
               <h3 className="text-base sm:text-lg font-black text-slate-950">
                 {selectedSegment === "todos"
-                  ? "Catálogo Multimarca de Alta Rotación"
-                  : `Productos para ${
+                  ? "Catálogo Multimarca de Alta Rotación (Baterías, Aceites y Filtros)"
+                  : `Productos Especializados para ${
                       VEHICLE_SEGMENTS.find((s) => s.id === selectedSegment)?.title
                     }`}
               </h3>
@@ -371,41 +482,126 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 04: TERMINAL DE COMPATIBILIDAD INTELIGENTE (Acceso Rápido al Buscador) */}
+      {/* 05: TERMINAL DE COMPATIBILIDAD VEHICULAR & BUSCADOR RÁPIDO */}
       <section id="buscador" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-gradient-to-br from-slate-900 via-[#061B40] to-slate-950 text-white rounded-3xl p-6 sm:p-10 border border-[#0A3B8C]/40 shadow-xl flex flex-col lg:flex-row items-center justify-between gap-8">
-          <div className="space-y-3 max-w-2xl text-left">
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-amber-400/20 text-[#FFC500] rounded-full text-xs font-black uppercase tracking-wider">
-              <Search className="w-3.5 h-3.5" />
-              <span>Buscador Oficial de Compatibilidad Vehicular</span>
+        <div className="bg-gradient-to-br from-slate-900 via-[#061B40] to-slate-950 text-white rounded-3xl p-6 sm:p-10 border border-[#0A3B8C]/40 shadow-xl space-y-6">
+          <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+            <div className="space-y-3 max-w-2xl text-left">
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-amber-400/20 text-[#FFC500] rounded-full text-xs font-black uppercase tracking-wider">
+                <Search className="w-3.5 h-3.5" />
+                <span>Buscador Oficial de Compatibilidad Vehicular</span>
+              </div>
+              <h3 className="text-2xl sm:text-3xl font-black tracking-tight">
+                ¿Buscas la batería, aceite o filtro exacto para tu modelo?
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                Cruza más de 30 marcas vehiculares en Ecuador (Chevrolet, Toyota, Kia, Hyundai, Hino, Suzuki, motos) con verificación de polaridad, amperaje CCA y viscosidad de fábrica.
+              </p>
             </div>
-            <h3 className="text-2xl sm:text-3xl font-black tracking-tight">
-              ¿Quieres saber qué batería o lubricante exacto usa tu modelo?
-            </h3>
-            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-              Cruza más de 30 marcas de vehículos en Ecuador (Chevrolet D-Max, Kia Sportage, Toyota Hilux, Hyundai Tucson, Hino, motos) con nuestro motor de compatibilidad técnica verificado en bodega.
-            </p>
+
+            <div className="flex flex-col sm:flex-row gap-3 w-full lg:w-auto shrink-0">
+              <Link
+                href="/encuentra-tu-producto"
+                className="btn-primary btn-shine !py-3.5 !px-6 text-xs font-black uppercase tracking-wider text-center flex items-center justify-center gap-2 shadow-lg"
+              >
+                <Search className="w-4 h-4" />
+                <span>ABRIR BUSCADOR POR VEHÍCULO</span>
+              </Link>
+              <Link
+                href="/productos"
+                className="btn-gold !py-3.5 !px-6 text-xs font-black uppercase tracking-wider text-center shadow-lg"
+              >
+                <span>EXPLORAR CATÁLOGO (508)</span>
+              </Link>
+            </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-3 w-full lg:w-auto shrink-0">
-            <Link
-              href="/encuentra-tu-producto"
-              className="btn-primary btn-shine !py-4 !px-6 text-xs font-black uppercase tracking-wider text-center flex items-center justify-center gap-2 shadow-lg"
-            >
-              <Search className="w-4 h-4" />
-              <span>ABRIR BUSCADOR POR VEHÍCULO</span>
-            </Link>
-            <Link
-              href="/productos"
-              className="btn-gold !py-4 !px-6 text-xs font-black uppercase tracking-wider text-center shadow-lg"
-            >
-              <span>EXPLORAR TODO EL CATÁLOGO (507)</span>
-            </Link>
+          {/* Quick-Access Popular Vehicle Tags for Instant WhatsApp Pre-fill */}
+          <div className="pt-4 border-t border-slate-800 space-y-2.5">
+            <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">
+              Consultas Frecuentes en Mostrador Pedernales (Haz clic para cotizar al instante):
+            </span>
+            <div className="flex flex-wrap gap-2">
+              {POPULAR_VEHICLES.map((v) => (
+                <a
+                  key={v.label}
+                  href={buildWhatsAppLink("vehicle", {
+                    vehicleMake: v.label,
+                    neededItem: "Batería / Lubricante recomendado",
+                  })}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-3 py-1.5 bg-slate-800/80 hover:bg-[#0A3B8C] text-slate-200 hover:text-white rounded-xl text-xs font-semibold border border-slate-700/80 transition-all flex items-center gap-1.5"
+                >
+                  <span>{v.label}</span>
+                  <span className="text-emerald-400 text-[10px]">WhatsApp →</span>
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* 05: B2B / CAMARONERAS / FLOTAS / CANECAS BANNER */}
+      {/* 06: PILARES INSTITUCIONALES LIDERPRO — ¿Por qué elegirnos? */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="bg-white border border-slate-200/90 rounded-3xl p-6 sm:p-10 space-y-8 shadow-sm">
+          <div className="text-center max-w-2xl mx-auto space-y-2">
+            <span className="text-xs font-bold uppercase tracking-wider text-brand-primary">
+              Confianza & Respaldo Oficial
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-black text-slate-950 tracking-tight">
+              ¿Por qué confiar en LiderPro para tu vehículo o flota?
+            </h2>
+            <p className="text-xs sm:text-sm text-slate-600">
+              Operamos con estándares técnicos que garantizan la máxima vida útil de tu motor y la tranquilidad de una compra segura.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-3">
+              <div className="w-10 h-10 rounded-xl bg-blue-100/80 text-[#0A3B8C] flex items-center justify-center">
+                <ShieldCheck className="w-5 h-5" />
+              </div>
+              <h3 className="font-black text-slate-950 text-base">Garantía Real de Fábrica</h3>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                Productos 100% sellados con trazabilidad de distribuidor oficial en Baterías Ecuador, Bosch, Mannol, Motul y Mobil. Cero riesgo de adulteración.
+              </p>
+            </div>
+
+            <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-3">
+              <div className="w-10 h-10 rounded-xl bg-emerald-100/80 text-emerald-800 flex items-center justify-center">
+                <FileCheck2 className="w-5 h-5" />
+              </div>
+              <h3 className="font-black text-slate-950 text-base">Facturación SRI Inmediata</h3>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                Comprobantes electrónicos autorizados por el SRI emitidos al instante, aptos para crédito tributario de empresas, cooperativas y personas naturales.
+              </p>
+            </div>
+
+            <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-3">
+              <div className="w-10 h-10 rounded-xl bg-amber-100/80 text-amber-800 flex items-center justify-center">
+                <Truck className="w-5 h-5" />
+              </div>
+              <h3 className="font-black text-slate-950 text-base">Embalaje Antiderrame</h3>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                Protocolo estricto de transporte: sellado térmico en lubricantes y canecas; anclaje técnico vertical y aislamiento de bornes en baterías.
+              </p>
+            </div>
+
+            <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-3">
+              <div className="w-10 h-10 rounded-xl bg-purple-100/80 text-purple-800 flex items-center justify-center">
+                <Wrench className="w-5 h-5" />
+              </div>
+              <h3 className="font-black text-slate-950 text-base">Asesoría Técnica Previa</h3>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                Validamos manual de fabricante, amperaje CCA, polaridad y viscosidad SAE por WhatsApp antes de enviar para garantizar compatibilidad exacta.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 07: B2B / CAMARONERAS / FLOTAS / CANECAS BANNER */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="rounded-3xl border border-slate-800 bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950 text-white p-7 sm:p-10 flex flex-col lg:flex-row items-center justify-between gap-6 shadow-xl">
           <div className="space-y-2.5 max-w-2xl">
@@ -417,7 +613,7 @@ export default function HomePage() {
               ¿Requieres Aceites en Caneca/Tambor o Baterías Grupo 31?
             </h3>
             <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-              Despachamos canecas de 5 galones, tambores de 55 galones (Mannol / Mobil 15W-40 CK-4) y baterías de servicio pesado Baterías Ecuador Grupo 31 para camaroneras, maquinaria, cooperativas y talleres mecánicos.
+              Despachamos canecas de 5 galones, tambores de 55 galones (Mannol / Mobil 15W-40 CK-4, Aroil Hidráulico ISO 68) y baterías pesadas Baterías Ecuador Grupo 31 para camaroneras, maquinaria agrícola y flotas de transporte.
             </p>
           </div>
 
@@ -444,7 +640,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 06: CATEGORÍAS PRINCIPALES */}
+      {/* 08: EXPLORA POR CATEGORÍA TÉCNICA */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-5 space-y-1">
           <span className="text-xs font-bold uppercase tracking-wider text-slate-500">
@@ -471,7 +667,7 @@ export default function HomePage() {
                 Baterías Automotrices e Industriales
               </h3>
               <p className="text-xs text-slate-600 mt-1 leading-relaxed">
-                NS40 (11 Placas), 34 HP I (80 Amp), 42 HP (62 Amp), 27R Reforzada y Grupo 31 Heavy Duty.
+                NS40 (11 Placas), 34 HP (80 Amp), 42 HP (62 Amp), 27R Reforzada y Grupo 31 Heavy Duty.
               </p>
             </div>
             <div className="text-xs font-black text-[#0A3B8C] flex items-center gap-1 group-hover:translate-x-1 transition-transform">
@@ -511,15 +707,15 @@ export default function HomePage() {
             <div>
               <div className="flex items-center justify-between mb-3">
                 <span className="text-[10px] font-black uppercase tracking-wider px-2.5 py-0.5 rounded bg-blue-50 text-blue-700 border border-blue-100">
-                  Fram • Bosch • Mannol
+                  Advance Filters • Bosch • ATE
                 </span>
                 <Wrench className="w-5 h-5 text-blue-600" />
               </div>
               <h3 className="font-black text-lg text-slate-950 group-hover:text-blue-700 transition-colors">
-                Filtración y Químicos
+                Filtración, Frenos y Químicos
               </h3>
               <p className="text-xs text-slate-600 mt-1 leading-relaxed">
-                Filtros blindados de aceite y diésel, Refrigerante Mannol Pro Cool OAT 50/50 y Ceramo Ester.
+                Filtros sintéticos 15.000 km, kits industriales para camiones, líquido de frenos ATE DOT 4 y refrigerantes.
               </p>
             </div>
             <div className="text-xs font-black text-blue-700 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
@@ -535,7 +731,7 @@ export default function HomePage() {
             <div>
               <div className="flex items-center justify-between mb-3">
                 <span className="text-[10px] font-black uppercase tracking-wider px-2.5 py-0.5 rounded bg-emerald-50 text-emerald-800 border border-emerald-100">
-                  Identificación por Foto
+                  Validación Técnica Inmediata
                 </span>
                 <Camera className="w-5 h-5 text-emerald-600" />
               </div>
@@ -543,7 +739,7 @@ export default function HomePage() {
                 Asesoría por Muestra o Manual
               </h3>
               <p className="text-xs text-slate-600 mt-1 leading-relaxed">
-                Envíanos foto de tu batería actual, etiqueta de aceite o matrícula para validación inmediata.
+                Envíanos foto de tu batería actual, etiqueta de aceite o matrícula para validación directa antes de comprar.
               </p>
             </div>
             <div className="text-xs font-black text-emerald-700 flex items-center gap-1 group-hover:translate-x-1 transition-transform">
@@ -554,15 +750,82 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 07: EMERGENCY BATTERY COMMAND CENTER */}
+      {/* 09: EMERGENCY BATTERY COMMAND CENTER */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <EmergencyBanner />
       </section>
 
-      {/* 08: HUB LOGÍSTICO PEDERNALES — Despacho Nacional */}
+      {/* 10: HUB LOGÍSTICO PEDERNALES — Despacho a 24 Provincias */}
       <LocationsLogisticsSection />
 
-      {/* 09: GUIDES (Editorial selection) */}
+      {/* 11: TESTIMONIOS & CASOS DE ÉXITO VERIFICADOS */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="bg-slate-50 border border-slate-200/90 rounded-3xl p-6 sm:p-10 space-y-6">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+            <div>
+              <span className="text-xs font-bold uppercase tracking-wider text-brand-primary">
+                Respaldo Comprobado en Ecuador
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-black text-slate-950 tracking-tight">
+                Lo que dicen talleres, flotas y clientes en el país
+              </h2>
+            </div>
+            <div className="flex items-center gap-1 text-amber-500 font-bold text-xs bg-amber-50 px-3 py-1 rounded-full border border-amber-200 self-start sm:self-auto">
+              <Star className="w-4 h-4 fill-amber-400 text-amber-400" />
+              <span>Calificación 4.9/5 en Atención y Despacho</span>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-white p-6 rounded-2xl border border-slate-200 space-y-3 shadow-2xs">
+              <div className="flex items-center gap-1 text-amber-400">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-4 h-4 fill-amber-400" />
+                ))}
+              </div>
+              <p className="text-xs text-slate-700 leading-relaxed italic">
+                &ldquo;Trabajamos con LiderPro para las baterías Bosch y lubricantes sintéticos en nuestro taller. La guía de remisión llega de inmediato por WhatsApp y los paquetes sellados al día siguiente.&rdquo;
+              </p>
+              <div className="pt-2 border-t border-slate-100">
+                <span className="block text-xs font-black text-slate-950">Ing. Marcelo Moreira</span>
+                <span className="text-[11px] text-slate-500">Taller Multimarca • Portoviejo, Manabí</span>
+              </div>
+            </div>
+
+            <div className="bg-white p-6 rounded-2xl border border-slate-200 space-y-3 shadow-2xs">
+              <div className="flex items-center gap-1 text-amber-400">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-4 h-4 fill-amber-400" />
+                ))}
+              </div>
+              <p className="text-xs text-slate-700 leading-relaxed italic">
+                &ldquo;Adquirimos canecas de Mobil Delvac 15W-40 y baterías Grupo 31 para nuestros camiones. Tienen el mejor precio directo mayorista y facturación electrónica inmediata.&rdquo;
+              </p>
+              <div className="pt-2 border-t border-slate-100">
+                <span className="block text-xs font-black text-slate-950">Carlos Zambrano</span>
+                <span className="text-[11px] text-slate-500">Transporte Pesado & Carga • Santo Domingo</span>
+              </div>
+            </div>
+
+            <div className="bg-white p-6 rounded-2xl border border-slate-200 space-y-3 shadow-2xs">
+              <div className="flex items-center gap-1 text-amber-400">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-4 h-4 fill-amber-400" />
+                ))}
+              </div>
+              <p className="text-xs text-slate-700 leading-relaxed italic">
+                &ldquo;Para los motores de bombeo camaronero necesitábamos aceites hidráulicos ISO 68 y baterías de servicio pesado. El despacho desde Pedernales es puntual y confiable.&rdquo;
+              </p>
+              <div className="pt-2 border-t border-slate-100">
+                <span className="block text-xs font-black text-slate-950">Ing. Xavier Peña</span>
+                <span className="text-[11px] text-slate-500">Operaciones Camaroneras • Cojimíes / Pedernales</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 12: GUIDES (Editorial selection) */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-baseline justify-between mb-6">
           <div>
@@ -619,10 +882,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 10: FAQ SECTION */}
+      {/* 13: FAQ SECTION */}
       <FAQSection />
 
-      {/* 11: FINAL HIGH-CONVERSION CTA BANNER */}
+      {/* 14: FINAL HIGH-CONVERSION CTA BANNER */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-gradient-to-br from-[#061B40] via-slate-950 to-black text-white rounded-3xl p-8 sm:p-14 text-center space-y-6 border border-[#0A3B8C]/40 shadow-2xl relative overflow-hidden">
           <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#0A3B8C] via-[#FFC500] to-[#0A3B8C]" />
@@ -636,7 +899,7 @@ export default function HomePage() {
             Cotiza directo con nuestro mostrador técnico en Pedernales
           </h2>
           <p className="text-xs sm:text-base text-slate-300 max-w-xl mx-auto leading-relaxed">
-            Baterías Ecuador, Bosch, Mannol, Motul, Mobil, Havoline, Castrol y Fram con facturación SRI y envío diario a las 24 provincias.
+            Baterías Ecuador, Bosch, Mannol, Motul, Mobil, Havoline, Castrol, Advance y ATE con facturación SRI y despacho diario a las 24 provincias.
           </p>
           <div className="pt-2">
             <a

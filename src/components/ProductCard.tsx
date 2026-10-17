@@ -29,7 +29,7 @@ export default function ProductCard({ product, priority = false }: ProductCardPr
     <div className="card-interactive overflow-hidden flex flex-col justify-between group">
       <div>
         {/* Product Image Stage */}
-        <div className="relative aspect-[4/3] bg-gradient-to-b from-slate-50/90 to-slate-100/50 p-6 flex items-center justify-center border-b border-slate-100 overflow-hidden">
+        <div className="relative aspect-[4/3] min-h-[210px] sm:min-h-[190px] bg-gradient-to-b from-slate-50/90 to-slate-100/40 p-2 sm:p-3 flex items-center justify-center border-b border-slate-100 overflow-hidden">
           {!imgError ? (
             <Image
               src={product.imageUrl}
@@ -39,7 +39,7 @@ export default function ProductCard({ product, priority = false }: ProductCardPr
               loading={priority ? undefined : "lazy"}
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
               onError={() => setImgError(true)}
-              className="object-contain p-4 group-hover:scale-105 transition-transform duration-500 ease-out"
+              className="object-contain p-1 sm:p-1.5 group-hover:scale-105 transition-transform duration-500 ease-out"
             />
           ) : (
             <div className="flex flex-col items-center justify-center text-slate-400 gap-1.5 p-4 text-center">

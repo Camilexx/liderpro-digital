@@ -495,39 +495,57 @@ export default function VehicleFinder({
                 {matchedProducts.map((prod) => (
                   <div
                     key={prod.id}
-                    className="card-interactive p-5 bg-slate-50/50 flex flex-col sm:flex-row items-center gap-4 justify-between"
+                    className="card-interactive p-4 sm:p-5 bg-white flex flex-col sm:flex-row items-center sm:items-stretch gap-4 justify-between border border-slate-200/90 hover:border-[#0A3B8C]/40 shadow-xs hover:shadow-card transition-all"
                   >
-                    <div className="w-20 h-20 relative shrink-0 bg-white rounded-lg border border-slate-200 p-2">
+                    {/* Generous Product Image Stage - Prominent on Mobile & Crisp on Desktop */}
+                    <div className="w-full sm:w-36 h-52 sm:h-36 relative shrink-0 bg-gradient-to-b from-slate-50 to-white rounded-2xl border border-slate-100 p-2 flex items-center justify-center overflow-hidden">
                       <Image
                         src={prod.imageUrl}
                         alt={prod.name}
                         fill
-                        sizes="80px"
+                        sizes="(max-width: 640px) 100vw, 150px"
                         loading="lazy"
-                        className="object-contain p-1"
+                        className="object-contain p-2 hover:scale-105 transition-transform duration-300"
                       />
-                    </div>
-
-                    <div className="space-y-1 flex-grow text-center sm:text-left">
-                      <div className="flex items-center justify-center sm:justify-start gap-2">
-                        <span className="text-[10px] font-black uppercase tracking-wider px-2 py-0.5 bg-slate-900 text-white rounded">
-                          {prod.brand}
+                      {/* Floating Category/Brand Badge */}
+                      <span className="absolute top-2.5 left-2.5 px-2 py-0.5 bg-[#061B40] text-white text-[9.5px] font-black uppercase tracking-wider rounded-md shadow-xs">
+                        {prod.brand}
+                      </span>
+                      {(prod.volume || prod.plates) && (
+                        <span className="absolute top-2.5 right-2.5 px-2 py-0.5 bg-white/95 text-slate-800 border border-slate-200/80 text-[9.5px] font-bold rounded-md shadow-2xs">
+                          {prod.volume || prod.plates}
                         </span>
-                        {(prod.volume || prod.plates) && (
-                          <span className="text-[10px] font-bold text-slate-600">
-                            {prod.volume || prod.plates}
-                          </span>
-                        )}
-                      </div>
-                      <h4 className="font-black text-slate-950 text-sm">
-                        {prod.name}
-                      </h4>
-                      <p className="text-xs text-slate-600 font-medium">
-                        {prod.shortSpec}
-                      </p>
+                      )}
                     </div>
 
-                    <div className="flex flex-col gap-2 shrink-0 w-full sm:w-auto">
+                    <div className="space-y-1.5 flex-grow text-center sm:text-left flex flex-col justify-between py-1 w-full sm:w-auto">
+                      <div>
+                        <div className="flex items-center justify-center sm:justify-start gap-2 mb-1">
+                          <span className="text-[10.5px] font-bold text-[#0A3B8C] uppercase tracking-wider">
+                            {prod.category}
+                          </span>
+                          <span className="text-[10px] font-mono text-slate-400 bg-slate-100 px-1.5 py-0.5 rounded">
+                            SKU: {prod.sku}
+                          </span>
+                        </div>
+                        <h4 className="font-black text-slate-950 text-base leading-snug hover:text-[#0A3B8C] transition-colors">
+                          <Link href={`/productos/${prod.slug}`}>
+                            {prod.name}
+                          </Link>
+                        </h4>
+                        <p className="text-xs text-slate-600 font-normal leading-relaxed mt-1 line-clamp-2">
+                          {prod.shortSpec}
+                        </p>
+                      </div>
+
+                      {/* Stock availability */}
+                      <div className="pt-2 flex items-center justify-center sm:justify-start gap-1.5 text-[11px] text-emerald-700 font-semibold">
+                        <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse shrink-0" />
+                        <span>Disponible en Bodega Pedernales</span>
+                      </div>
+                    </div>
+
+                    <div className="flex flex-col gap-2 shrink-0 w-full sm:w-36 justify-center">
                       <a
                         href={buildWhatsAppLink("product", {
                           brand: prod.brand,
@@ -541,14 +559,14 @@ export default function VehicleFinder({
                         })}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="px-4 py-2 btn-whatsapp text-white text-xs font-bold rounded-lg text-center flex items-center justify-center gap-1.5 shadow-sm"
+                        className="btn-whatsapp !w-full !py-3 sm:!py-2.5 !text-xs !font-black !uppercase !tracking-wider flex items-center justify-center gap-1.5 shadow-sm active:scale-[0.98]"
                       >
                         <MessageCircle className="w-3.5 h-3.5" />
                         <span>Cotizar</span>
                       </a>
                       <Link
                         href={`/productos/${prod.slug}`}
-                        className="px-3 py-1.5 text-slate-600 hover:text-slate-950 text-xs font-semibold text-center"
+                        className="px-3 py-1 text-slate-500 hover:text-slate-900 text-xs font-semibold text-center hover:underline"
                       >
                         Ver ficha
                       </Link>

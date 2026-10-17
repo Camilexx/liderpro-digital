@@ -57,7 +57,7 @@ export default function LocationsLogisticsSection() {
               <div className="text-xs text-slate-600 space-y-1.5 border-t border-slate-100 pt-3">
                 <p><strong>Operación:</strong> Venta de mostrador, despacho a camaroneras y bodega mayorista.</p>
                 <p><strong>Horario:</strong> {pedernales.hours}</p>
-                <p><strong>Facturación:</strong> Comprobantes electrónicos SRI al instante.</p>
+                <p><strong>Facturación:</strong> Facturación electrónica autorizada por el SRI.</p>
               </div>
             </div>
 
@@ -114,7 +114,7 @@ export default function LocationsLogisticsSection() {
                   <PackageCheck className="w-3.5 h-3.5" />
                   Seguridad de Carga
                 </span>
-                <span className="text-[10px] text-slate-400 font-mono">Cero Riesgo</span>
+                <span className="text-[10px] text-slate-400 font-mono">Embalaje Seguro</span>
               </div>
               <h3 className="text-xl font-black text-slate-950 mb-2">
                 Protocolo Antiderrame y Anclaje

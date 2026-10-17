@@ -572,7 +572,7 @@ export default function HomePage() {
               </div>
               <h3 className="font-black text-slate-950 text-base">Garantía Real de Fábrica</h3>
               <p className="text-xs text-slate-600 leading-relaxed">
-                Productos 100% sellados con trazabilidad de distribuidor oficial en Baterías Ecuador, Bosch, Mannol, Motul y Mobil. Cero riesgo de adulteración.
+                Productos sellados con trazabilidad y garantía de procedencia en marcas como Baterías Ecuador, Bosch, Mannol, Motul y Mobil.
               </p>
             </div>
 
@@ -580,9 +580,9 @@ export default function HomePage() {
               <div className="w-10 h-10 rounded-xl bg-emerald-100/80 text-emerald-800 flex items-center justify-center">
                 <FileCheck2 className="w-5 h-5" />
               </div>
-              <h3 className="font-black text-slate-950 text-base">Facturación SRI Inmediata</h3>
+              <h3 className="font-black text-slate-950 text-base">Facturación Electrónica SRI</h3>
               <p className="text-xs text-slate-600 leading-relaxed">
-                Comprobantes electrónicos autorizados por el SRI emitidos al instante, aptos para crédito tributario de empresas, cooperativas y personas naturales.
+                Comprobantes electrónicos autorizados por el SRI, válidos para deducción de gastos y crédito tributario de empresas y personas naturales.
               </p>
             </div>
 

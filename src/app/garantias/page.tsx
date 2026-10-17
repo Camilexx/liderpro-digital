@@ -76,8 +76,8 @@ const STEPS_TO_CLAIM = [
   },
   {
     step: "03",
-    title: "Resolución Inmediata",
-    desc: "Si se confirma fallo interno de fábrica, se procede al reemplazo inmediato por una unidad nueva bajo los términos de la marca fabricante.",
+    title: "Gestión Ágil de Reemplazo",
+    desc: "Si la evaluación técnica confirma defecto interno de fabricación dentro del periodo de cobertura, se gestiona el reemplazo del producto bajo las políticas del fabricante.",
   },
 ];
 
@@ -93,7 +93,7 @@ export default function GarantiasPage() {
         <div className="max-w-7xl mx-auto space-y-6 relative z-10">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-emerald-500/15 border border-emerald-500/30 rounded-full text-xs font-bold text-emerald-400 uppercase tracking-wider">
             <ShieldCheck className="w-4 h-4" />
-            <span>RESPALDO OFICIAL DE FÁBRICA — CERO RIESGO</span>
+            <span>RESPALDO TÉCNICO Y PÓLIZA DE FÁBRICA</span>
           </div>
 
           <h1 className="text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight max-w-4xl">
@@ -101,7 +101,7 @@ export default function GarantiasPage() {
           </h1>
 
           <p className="text-base sm:text-lg text-slate-300 max-w-3xl leading-relaxed">
-            En LiderPro distribuimos exclusivamente repuestos 100% legítimos provenientes de importadores y fabricantes autorizados en Ecuador. Todas nuestras baterías cuentan con 12 meses de garantía real y soporte técnico directo en nuestro Hub Central de Pedernales.
+            En LiderPro comercializamos repuestos y acumuladores con respaldo directo de fabricantes autorizados en Ecuador. Nuestras baterías automotrices cuentan con 12 meses de garantía contra defectos de manufactura y soporte técnico en nuestro Hub Central de Pedernales.
           </p>
 
           <div className="pt-2 flex flex-wrap gap-4">

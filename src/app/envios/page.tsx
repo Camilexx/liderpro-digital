@@ -47,9 +47,9 @@ export default function ShippingPage() {
             </div>
 
             <div className="text-[11px] font-mono text-slate-400 flex items-center gap-2">
-              <span>LAT: 0.07° N • LON: -80.05° W</span>
+              <span>SEDE CENTRAL PEDERNALES</span>
               <span className="text-slate-600">|</span>
-              <span className="text-[#FFC500] font-bold">ZONA COMERCIAL PEDERNALES, MANABÍ</span>
+              <span className="text-[#FFC500] font-bold">MANABÍ, ECUADOR</span>
             </div>
           </div>
 

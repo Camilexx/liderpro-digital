@@ -92,12 +92,6 @@ const structuredData = {
         "postalCode": "131001",
         "addressCountry": "EC",
       },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 0.0716,
-        "longitude": -80.0525,
-      },
-      "hasMap": "https://maps.google.com/?q=Pedernales,Manabi,Ecuador",
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",

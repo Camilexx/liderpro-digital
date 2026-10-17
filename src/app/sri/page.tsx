@@ -37,7 +37,7 @@ export default function SriPage() {
         <div className="max-w-7xl mx-auto space-y-6 relative z-10">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-emerald-500/15 border border-emerald-500/30 rounded-full text-xs font-bold text-emerald-400 uppercase tracking-wider">
             <ShieldCheck className="w-4 h-4" />
-            <span>CUMPLIMIENTO TRIBUTARIO NACIONAL • 100% REGULADO</span>
+            <span>CUMPLIMIENTO TRIBUTARIO Y FACTURACIÓN ELECTRÓNICA SRI</span>
           </div>
 
           <h1 className="text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight max-w-4xl">
@@ -218,7 +218,7 @@ export default function SriPage() {
               <div className="space-y-1">
                 <h4 className="font-bold text-xs text-slate-900">Validez para Garantías</h4>
                 <p className="text-[11px] text-slate-600 leading-relaxed">
-                  La factura electrónica es el documento oficial irrefutable para la activación de garantías de fábrica de 12 meses.
+                  La factura electrónica es el documento oficial que certifica tu compra y respalda la activación de garantías de fábrica.
                 </p>
               </div>
             </div>

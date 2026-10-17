@@ -105,10 +105,10 @@ const INDUSTRIAL_FORMATS = [
   {
     title: "Tambores Industriales de 55 Galones (208L)",
     subtitle: "Máxima economía para camaroneras y complejos industriales",
-    description: "Suministro a granel con el menor costo por litro del mercado para empresas que operan motores estacionarios continuos.",
+    description: "Suministro a granel con precios preferenciales por volumen para empresas que operan motores estacionarios continuos o flotas.",
     popularBrands: "Mobil Delvac MX 15W40, Mannol TS-4, Castrol CRB Turbomax",
     icon: Container,
-    badge: "Ahorro Máximo por Litro"
+    badge: "Eficiencia por Volumen"
   },
   {
     title: "Baterías Grupo 31 & Cargas Pesadas",

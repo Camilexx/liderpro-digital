@@ -90,7 +90,7 @@ export default function FAQHubClient() {
               No encontramos preguntas que coincidan con "{searchQuery}".
             </p>
             <p className="text-xs text-slate-500">
-              Escríbenos directamente y nuestro equipo técnico te responderá al instante.
+              Escríbenos directamente y nuestro equipo técnico te responderá a la brevedad.
             </p>
             <a
               href={whatsappUrl}
@@ -145,7 +145,7 @@ export default function FAQHubClient() {
             ¿Tienes una pregunta específica o requerimiento especial?
           </h3>
           <p className="text-xs sm:text-sm text-slate-300 max-w-xl">
-            Nuestros especialistas en repuestos automotrices te atienden directamente por WhatsApp sin contestadores automáticos.
+            Nuestros especialistas en repuestos automotrices te atienden directamente por WhatsApp con asesoría técnica personalizada.
           </p>
         </div>
 

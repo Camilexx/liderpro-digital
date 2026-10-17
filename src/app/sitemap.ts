@@ -19,6 +19,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/guias",
     "/contacto",
     "/emergencia-bateria",
+    "/garantias",
+    "/sri",
+    "/preguntas-frecuentes",
+    "/terminos",
+    "/privacidad",
   ].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date().toISOString(),

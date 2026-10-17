@@ -30,9 +30,9 @@ export default function Footer() {
   return (
     <footer className="bg-[#061B40] text-slate-300 border-t border-[#0A3B8C]/40 text-xs">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Brand & Official Logo */}
-          <div className="md:col-span-2 space-y-4">
+          <div className="lg:col-span-2 space-y-4">
             <div className="inline-block">
               <Image
                 src="/images/logo-white.png"
@@ -104,7 +104,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/lubricantes" className="hover:text-[#FFC500] transition-colors">
-                  Lubricantes Mannol, Motul, Mobil, Aroil
+                  Lubricantes Mannol, Motul, Mobil
                 </Link>
               </li>
               <li>
@@ -125,7 +125,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Sedes */}
+          {/* Sedes y Despachos */}
           <div className="space-y-3">
             <h5 className="font-bold text-white uppercase tracking-wider text-[11px] flex items-center gap-1.5">
               <span className="w-1.5 h-1.5 rounded-full bg-[#FFC500]"></span>
@@ -144,7 +144,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/envios" className="hover:text-[#FFC500] transition-colors">
-                  Rutas Interprovinciales (24 Provincias)
+                  Rutas Nacionales (24 Provincias)
                 </Link>
               </li>
               <li>
@@ -159,14 +159,52 @@ export default function Footer() {
               </li>
             </ul>
           </div>
+
+          {/* Confianza & Cumplimiento Legal SRI */}
+          <div className="space-y-3">
+            <h5 className="font-bold text-white uppercase tracking-wider text-[11px] flex items-center gap-1.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#FFC500]"></span>
+              Confianza & Legal SRI
+            </h5>
+            <ul className="space-y-2 text-[11px]">
+              <li>
+                <Link href="/garantias" className="hover:text-[#FFC500] transition-colors">
+                  🛡️ Garantías Oficiales (12 Meses)
+                </Link>
+              </li>
+              <li>
+                <Link href="/sri" className="hover:text-[#FFC500] transition-colors">
+                  📄 Facturación Electrónica SRI
+                </Link>
+              </li>
+              <li>
+                <Link href="/preguntas-frecuentes" className="hover:text-[#FFC500] transition-colors">
+                  ❓ Preguntas Frecuentes (FAQ)
+                </Link>
+              </li>
+              <li>
+                <Link href="/terminos" className="hover:text-[#FFC500] transition-colors">
+                  ⚖️ Términos y Condiciones
+                </Link>
+              </li>
+              <li>
+                <Link href="/privacidad" className="hover:text-[#FFC500] transition-colors">
+                  🔒 Privacidad de Datos (LOPDP)
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
 
         {/* Bottom */}
-        <div className="mt-12 pt-6 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-slate-400">
+        <div className="mt-12 pt-6 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-400">
           <p>© {new Date().getFullYear()} LiderPro Ecuador. Distribuidor Autorizado Multimarca. Todos los derechos reservados.</p>
-          <div className="flex gap-4">
-            <Link href="/sucursales" className="hover:text-[#FFC500]">Sedes</Link>
-            <Link href="/envios" className="hover:text-[#FFC500]">Despacho Nacional</Link>
+          <div className="flex flex-wrap gap-x-4 gap-y-1">
+            <Link href="/garantias" className="hover:text-[#FFC500]">Garantías</Link>
+            <Link href="/sri" className="hover:text-[#FFC500]">Facturación SRI</Link>
+            <Link href="/preguntas-frecuentes" className="hover:text-[#FFC500]">FAQ</Link>
+            <Link href="/terminos" className="hover:text-[#FFC500]">Términos</Link>
+            <Link href="/privacidad" className="hover:text-[#FFC500]">Privacidad</Link>
             <Link href="/contacto" className="hover:text-[#FFC500]">Contacto</Link>
           </div>
         </div>

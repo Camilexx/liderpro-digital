@@ -76,15 +76,17 @@ const structuredData = {
       "name": "LiderPro Ecuador",
       "alternateName": "LiderPro Productos Automotrices",
       "description":
-        "Distribuidor Autorizado Multimarca de lubricantes, baterías, filtros y repuestos automotrices con Sede Central y Bodega Matriz en Pedernales, Manabí, y cobertura logística a las 24 provincias del Ecuador.",
+        "Distribuidor Autorizado Multimarca de lubricantes, baterías, filtros y repuestos automotrices con Sede Central y Bodega Matriz en Pedernales, Manabí, y cobertura logística a las 24 provincias del Ecuador con facturación electrónica SRI.",
       "url": "https://liderpro-digital.vercel.app",
+      "logo": "https://liderpro-digital.vercel.app/images/logo.png",
+      "image": "https://liderpro-digital.vercel.app/images/hero/automotive-hero.jpg",
       "telephone": "+593967489002",
       "priceRange": "$$",
       "currenciesAccepted": "USD",
       "paymentAccepted": "Cash, Credit Card, Electronic Transfer, SRI Withholding",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Zona Comercial Automotriz",
+        "streetAddress": "Zona Comercial Automotriz, Vía Principal",
         "addressLocality": "Pedernales",
         "addressRegion": "Manabí",
         "postalCode": "131001",
@@ -92,9 +94,10 @@ const structuredData = {
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": 0.07,
-        "longitude": -80.05,
+        "latitude": 0.0716,
+        "longitude": -80.0525,
       },
+      "hasMap": "https://maps.google.com/?q=Pedernales,Manabi,Ecuador",
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
@@ -102,6 +105,23 @@ const structuredData = {
           "opens": "08:00",
           "closes": "18:00",
         },
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+593967489002",
+        "contactType": "sales and technical support",
+        "areaServed": "EC",
+        "availableLanguage": "Spanish",
+      },
+      "knowsAbout": [
+        "Baterías Ecuador",
+        "Baterías Bosch S4 y S5",
+        "Lubricantes Mannol Alemania",
+        "Mobil Delvac 15W40",
+        "Motul Motos 4T",
+        "Filtros Advance Automotrices e Industriales",
+        "Flotas Pesadas y Sector Camaronero",
+        "Facturación Electrónica SRI",
       ],
       "areaServed": {
         "@type": "Country",
@@ -125,6 +145,10 @@ const structuredData = {
   ],
 };
 
+import { QuoteBasketProvider } from "@/context/QuoteBasketContext";
+import QuoteBasketDrawer from "@/components/QuoteBasketDrawer";
+import MobileBottomBar from "@/components/MobileBottomBar";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -138,12 +162,16 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </head>
-      <body className="min-h-screen flex flex-col bg-slate-50 text-slate-900 antialiased selection:bg-brand-primary selection:text-white relative">
-        <AnnouncementBar />
-        <Header />
-        <main className="flex-grow">{children}</main>
-        <Footer />
-        <FloatingWhatsApp />
+      <body className="min-h-screen flex flex-col bg-slate-50 text-slate-900 antialiased selection:bg-brand-primary selection:text-white relative pb-16 lg:pb-0">
+        <QuoteBasketProvider>
+          <AnnouncementBar />
+          <Header />
+          <main className="flex-grow">{children}</main>
+          <Footer />
+          <QuoteBasketDrawer />
+          <FloatingWhatsApp />
+          <MobileBottomBar />
+        </QuoteBasketProvider>
       </body>
     </html>
   );

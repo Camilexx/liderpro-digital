@@ -3,10 +3,11 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { MessageCircle, Package } from "lucide-react";
+import { MessageCircle, Package, Plus, Check, ShoppingBag } from "lucide-react";
 import { Product } from "@/data/products";
 import { buildWhatsAppLink } from "@/lib/whatsapp";
 import { trackEvent } from "@/lib/analytics";
+import { useQuoteBasket } from "@/context/QuoteBasketContext";
 
 interface ProductCardProps {
   product: Product;
@@ -15,7 +16,10 @@ interface ProductCardProps {
 
 export default function ProductCard({ product, priority = false }: ProductCardProps) {
   const [imgError, setImgError] = useState(false);
+  const [justAdded, setJustAdded] = useState(false);
+  const { addItem, items } = useQuoteBasket();
   const presentation = product.volume || product.plates;
+  const inBasket = items.find((it) => it.product.sku === product.sku);
 
   const handleWhatsApp = () => {
     trackEvent("whatsapp_product", {
@@ -23,6 +27,14 @@ export default function ProductCard({ product, priority = false }: ProductCardPr
       brand: product.brand,
       name: product.name,
     });
+  };
+
+  const handleAddToBasket = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    addItem(product, 1);
+    setJustAdded(true);
+    setTimeout(() => setJustAdded(false), 1800);
   };
 
   return (
@@ -110,7 +122,7 @@ export default function ProductCard({ product, priority = false }: ProductCardPr
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-2">
+        <div className="grid grid-cols-2 gap-2 mb-2">
           <a
             href={buildWhatsAppLink("product", {
               brand: product.brand,
@@ -121,19 +133,48 @@ export default function ProductCard({ product, priority = false }: ProductCardPr
             target="_blank"
             rel="noopener noreferrer"
             onClick={handleWhatsApp}
-            className="btn-whatsapp !py-2.5 !px-3 !text-xs font-black uppercase tracking-wider rounded-xl flex items-center justify-center gap-1.5"
+            className="btn-whatsapp !py-2.5 !px-2.5 !text-[11px] font-black uppercase tracking-wider rounded-xl flex items-center justify-center gap-1.5"
           >
             <MessageCircle className="w-3.5 h-3.5" />
-            <span>Cotizar</span>
+            <span>WhatsApp</span>
           </a>
 
           <Link
             href={`/productos/${product.slug}`}
-            className="btn-secondary !py-2.5 !px-3 !text-xs font-bold text-center flex items-center justify-center hover:border-[#0A3B8C] hover:text-[#0A3B8C]"
+            className="btn-secondary !py-2.5 !px-2.5 !text-[11px] font-bold text-center flex items-center justify-center hover:border-[#0A3B8C] hover:text-[#0A3B8C]"
           >
             Ver Ficha
           </Link>
         </div>
+
+        <button
+          type="button"
+          onClick={handleAddToBasket}
+          className={`w-full py-2 px-2.5 text-[10.5px] font-black uppercase tracking-wider rounded-xl flex items-center justify-center gap-1.5 transition-all cursor-pointer ${
+            justAdded
+              ? "bg-emerald-600 text-white shadow-xs"
+              : inBasket
+              ? "bg-[#061B40] text-[#FFC500] hover:bg-[#0A3B8C] border border-[#FFC500]/40"
+              : "bg-slate-100 hover:bg-[#061B40] text-slate-700 hover:text-white border border-slate-200/90"
+          }`}
+        >
+          {justAdded ? (
+            <>
+              <Check className="w-3.5 h-3.5 text-white" />
+              <span>✓ Añadido a Cotización</span>
+            </>
+          ) : inBasket ? (
+            <>
+              <ShoppingBag className="w-3.5 h-3.5 text-[#FFC500]" />
+              <span>En tu lista ({inBasket.quantity}) • Añadir +</span>
+            </>
+          ) : (
+            <>
+              <Plus className="w-3.5 h-3.5 text-[#0A3B8C] group-hover:text-[#FFC500]" />
+              <span>+ Añadir a Cotización</span>
+            </>
+          )}
+        </button>
       </div>
     </div>
   );

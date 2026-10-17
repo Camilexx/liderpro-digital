@@ -3,10 +3,11 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { MessageCircle, Menu, X, Search } from "lucide-react";
+import { MessageCircle, Menu, X, Search, ShoppingBag } from "lucide-react";
 import { buildWhatsAppLink } from "@/lib/whatsapp";
 import { trackEvent } from "@/lib/analytics";
 import { BUSINESS_CONFIG } from "@/data/businessConfig";
+import { useQuoteBasket } from "@/context/QuoteBasketContext";
 
 function InstagramIcon({ className = "w-4 h-4" }: { className?: string }) {
   return (
@@ -34,6 +35,7 @@ function TikTokIcon({ className = "w-4 h-4" }: { className?: string }) {
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { totalItems, setIsOpen } = useQuoteBasket();
 
   const handleWhatsAppClick = () => {
     trackEvent("whatsapp_click", { location: "header_nav" });
@@ -104,8 +106,20 @@ export default function Header() {
             </Link>
           </nav>
 
-          {/* Right Action: Asesor WhatsApp (Oficial Verde Esmeralda) - Asesoría Activa removed */}
-          <div className="hidden sm:flex items-center gap-3 shrink-0">
+          {/* Right Action: Asesor WhatsApp + Cotización */}
+          <div className="hidden sm:flex items-center gap-2.5 shrink-0">
+            {totalItems > 0 && (
+              <button
+                type="button"
+                onClick={() => setIsOpen(true)}
+                className="relative flex items-center gap-2 px-3.5 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-[#FFC500] font-black text-xs border border-white/15 transition-all cursor-pointer active:scale-95"
+                title="Ver lista de cotización"
+              >
+                <ShoppingBag className="w-4 h-4 text-[#FFC500]" />
+                <span>Cotización ({totalItems})</span>
+              </button>
+            )}
+
             <a
               href={buildWhatsAppLink("general_quote")}
               target="_blank"
@@ -120,6 +134,20 @@ export default function Header() {
 
           {/* Mobile menu trigger */}
           <div className="flex lg:hidden items-center gap-2">
+            {totalItems > 0 && (
+              <button
+                type="button"
+                onClick={() => setIsOpen(true)}
+                className="relative p-2.5 bg-[#0A3B8C] text-[#FFC500] rounded-xl shadow-sm font-bold border border-[#FFC500]/40"
+                aria-label="Ver cotización"
+              >
+                <ShoppingBag className="w-4 h-4" />
+                <span className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-[#FFC500] text-slate-950 font-black text-[9px] flex items-center justify-center">
+                  {totalItems}
+                </span>
+              </button>
+            )}
+
             <a
               href={buildWhatsAppLink("general_quote")}
               target="_blank"

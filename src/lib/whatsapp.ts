@@ -10,6 +10,8 @@ export type WhatsAppActionType =
   | "shipping"
   | "branch"
   | "b2b"
+  | "warranty"
+  | "billing"
   | "unknown_need";
 
 export interface WhatsAppContext {
@@ -26,12 +28,25 @@ export interface WhatsAppContext {
   issueDescription?: string;
   city?: string;
   details?: string;
+  text?: string;
   locationChoice?: "pedernales" | "quito" | "nacional";
   b2bNotes?: string;
 }
 
+export function buildDirectWhatsAppLink(
+  customText: string,
+  phone: string = BUSINESS_CONFIG.whatsappMasterNumber || "593967489002"
+): string {
+  const encoded = encodeURIComponent(customText);
+  return `https://wa.me/${phone}?text=${encoded}`;
+}
+
 export function buildWhatsAppLink(action: WhatsAppActionType, context: WhatsAppContext = {}): string {
   const phone = BUSINESS_CONFIG.whatsappMasterNumber || "593967489002";
+
+  if (context.text) {
+    return `https://wa.me/${phone}?text=${encodeURIComponent(context.text)}`;
+  }
 
   let message = "";
 
@@ -120,6 +135,20 @@ export function buildWhatsAppLink(action: WhatsAppActionType, context: WhatsAppC
           ? "Punto de Enlace Quito"
           : "Sede Central Pedernales (Manabí)";
       message = `Hola LiderPro Pedernales, deseo coordinar atención directa o retiro de pedido en ${branchName}.`;
+      break;
+    }
+
+    case "warranty": {
+      message =
+        context.details ||
+        "Hola LiderPro Pedernales, requiero asesoría técnica sobre la garantía de un producto o diagnóstico de batería.";
+      break;
+    }
+
+    case "billing": {
+      message =
+        context.details ||
+        "Hola LiderPro Pedernales, requiero información sobre facturación electrónica con RUC / retenciones SRI.";
       break;
     }
 

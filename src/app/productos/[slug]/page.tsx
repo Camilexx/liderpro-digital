@@ -5,7 +5,6 @@ import Image from "next/image";
 import {
   ShieldCheck,
   Truck,
-  MessageCircle,
   ArrowLeft,
   MapPin,
   Check,
@@ -13,8 +12,8 @@ import {
   Wrench,
 } from "lucide-react";
 import { PRODUCTS } from "@/data/products";
-import { buildWhatsAppLink } from "@/lib/whatsapp";
 import ProductCard from "@/components/ProductCard";
+import ProductDetailActions from "@/components/ProductDetailActions";
 
 interface ProductPageProps {
   params: Promise<{ slug: string }>;
@@ -24,7 +23,12 @@ export const dynamicParams = true;
 
 export async function generateStaticParams() {
   // Prerender the top 60 highest-demand products at build time for speed, render remainder on-demand
-  return PRODUCTS.slice(0, 60).map((product) => ({
+  const sorted = [...PRODUCTS].sort((a, b) => {
+    if (a.isBestSeller && !b.isBestSeller) return -1;
+    if (!a.isBestSeller && b.isBestSeller) return 1;
+    return 0;
+  });
+  return sorted.slice(0, 60).map((product) => ({
     slug: product.slug,
   }));
 }
@@ -266,20 +270,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
                 <span>{product.dispatchIndicator}</span>
               </div>
 
-              <a
-                href={buildWhatsAppLink("product", {
-                  brand: product.brand,
-                  productName: product.name,
-                  presentation: product.volume || product.plates,
-                  sku: product.sku,
-                })}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full h-14 btn-whatsapp font-black text-xs sm:text-sm uppercase tracking-wider rounded-xl flex items-center justify-center gap-2.5 transition-all active:scale-95 shadow-lg"
-              >
-                <MessageCircle className="w-5 h-5" />
-                <span>COTIZAR EN SEDE PEDERNALES POR WHATSAPP</span>
-              </a>
+              <ProductDetailActions product={product} />
 
               <div className="bg-slate-50 border border-slate-200/80 rounded-xl p-3.5 space-y-2 text-xs text-slate-600">
                 <div className="flex items-center gap-2">

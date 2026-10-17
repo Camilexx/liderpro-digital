@@ -76,4 +76,52 @@ export const EDUCATIONAL_ARTICLES: EducationalArticle[] = [
     metaDescription:
       "Especificaciones de batería para Chevrolet Sail en Ecuador: NS60L, amperios, CCA y consejos de instalación segura.",
   },
+  {
+    slug: "que-bateria-necesita-chevrolet-dmax-toyota-hilux",
+    title: "¿Qué batería necesita una camioneta Chevrolet D-Max o Toyota Hilux?",
+    subtitle: "Especificaciones exactas de amperaje, CCA y polaridad para camionetas diésel en Costa y Sierra.",
+    category: "baterias",
+    readTime: "4 min de lectura",
+    problem:
+      "Instalar una batería estándar de auto liviano (Grupo 24 o 42) en una camioneta diésel de alta compresión provoca arranques lentos en frío, sobrecalentamiento de bornes y sulfatación prematura de placas.",
+    explanation:
+      "Los motores diésel de la Chevrolet D-Max (4JJ1/RZ4E) y Toyota Hilux (1KD/2GD/1GD) requieren una corriente de arranque en frío mínima de 650 a 850 CCA (Cold Cranking Amps) debido a su relación de compresión de hasta 16:1. El tamaño BCI de equipo original es Grupo 27 / 27R o Grupo 34 con capacidad de 85Ah a 95Ah (gama High Power o Super Heavy Duty). Una batería subdimensionada fallará rápidamente bajo el esfuerzo de arranque en mañanas frías de la Sierra o jornadas de trabajo pesado en el agro costero.",
+    solution:
+      "En LiderPro equipamos Baterías Ecuador High Power Grupo 27/34 (95Ah) o Bosch S4 / S5 High Power con aleación de plata y rejillas PowerFrame. Incluimos comprobación computarizada del alternador y bornes en nuestro Hub Pedernales y despacho asegurado a nivel nacional.",
+    recommendedCategory: "baterias",
+    metaDescription:
+      "Especificaciones de batería para Chevrolet D-Max y Toyota Hilux en Ecuador: Grupo BCI 27, CCA requerido, amperios hora y recomendaciones de fábrica.",
+  },
+  {
+    slug: "refrigerante-verde-rojo-azul-diferencias",
+    title: "Refrigerante Verde, Rojo o Azul: ¿Cuáles son las diferencias reales?",
+    subtitle: "Por qué el color no siempre define la química y cómo la mezcla incorrecta corroe radiadores y bombas de agua.",
+    category: "mantenimiento",
+    readTime: "5 min de lectura",
+    problem:
+      "Rellenar el depósito con agua común de la llave o mezclar refrigerantes de diferentes colores crea sedimentos gelatinosos que obstruyen el termostato y pican la culata de aluminio del motor.",
+    explanation:
+      "El color es solo un tinte comercial elegido por cada fabricante. Lo fundamental es la química del paquete de aditivos: los refrigerantes tradicionales verdes suelen ser de tecnología inorgánica (IAT, vida útil de 1 a 2 años o 40,000 km), mientras que los rojos, rosados o violetas utilizan ácidos orgánicos de larga duración (OAT / Si-OAT como Mannol AF12+ o Motul Inugel, vida útil hasta 5 años o 250,000 km). Si mezclas IAT con OAT, los inhibidores de corrosión reaccionan entre sí y se neutralizan, acelerando la cavitación térmica en climas cálidos.",
+    solution:
+      "Usa siempre refrigerante prediluido 50/50 con agua desmineralizada de grado automotriz o concentrado diluido con agua destilada. En LiderPro suministramos refrigerantes orgánicos certificados Mannol AF12+ Longlife y Motul en formatos de cuarto, galón y caneca.",
+    recommendedCategory: "lubricantes",
+    metaDescription:
+      "Guía técnica sobre diferencias entre refrigerantes verdes, rojos y azules en Ecuador: tecnología IAT vs OAT, prevención de corrosión y selección correcta.",
+  },
+  {
+    slug: "mantenimiento-flotas-pesadas-camaroneras-ecuador",
+    title: "Mantenimiento Preventivo para Flotas Pesadas y Sector Camaronero",
+    subtitle: "Protocolo técnico de lubricación diésel, filtración de alta eficiencia y baterías en ambientes salinos de operación 24/7.",
+    category: "mantenimiento",
+    readTime: "6 min de lectura",
+    problem:
+      "En piscinas camaroneras y flotas de transporte pesado de Manabí y Guayas, la brisa marina, el polvo salino y jornadas continuas de bombeo de 18 horas degradan aceites y bornes eléctricos al doble de velocidad.",
+    explanation:
+      "Los motores estacionarios de bombas de agua (John Deere, Cummins, Perkins) y camiones de carga (Hino, Isuzu, Freightliner) sufren corrosión galvánica y acumulación de agua por condensación en el diésel. Requieren aceites de alto TBN (Total Base Number) para neutralizar los compuestos ácidos del azufre, filtros de combustible con separador coalescente de agua (Advance / Donaldson) y baterías Super Heavy Duty (Grupo 31 de 1000 CA o N150) con anclaje antivibración.",
+    solution:
+      "LiderPro ofrece suministro corporativo B2B programado con canecas de 20L y tambores de 55 galones de Mobil Delvac, Mannol y Castrol, filtros de alta retención de micras y baterías Baterías Ecuador 31 SHD con garantía de fábrica y facturación electrónica autorizada por el SRI.",
+    recommendedCategory: "b2b",
+    metaDescription:
+      "Plan de mantenimiento preventivo para flotas diésel y camaroneras en Ecuador: lubricación con alto TBN, filtros separadores y baterías de alto rendimiento.",
+  },
 ];

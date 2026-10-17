@@ -338,40 +338,40 @@ export default function TestimonialsSection() {
           </div>
 
           {/* Institutional KPI Strip */}
-          <div className="flex flex-wrap sm:flex-nowrap items-center gap-3">
-            <div className="flex items-center gap-2 bg-white px-4 py-2.5 rounded-2xl border border-slate-200/90 shadow-2xs">
+          <div className="grid grid-cols-3 sm:flex sm:flex-nowrap items-center gap-2 sm:gap-3 w-full lg:w-auto">
+            <div className="flex flex-col sm:flex-row items-center sm:items-center gap-1.5 sm:gap-2 bg-white p-2.5 sm:px-4 sm:py-2.5 rounded-2xl border border-slate-200/90 shadow-2xs text-center sm:text-left">
               <div className="flex items-center text-amber-500">
-                <Star className="w-5 h-5 fill-amber-400 text-amber-400" />
+                <Star className="w-4 h-4 sm:w-5 sm:h-5 fill-amber-400 text-amber-400" />
               </div>
               <div>
-                <div className="flex items-center gap-1">
-                  <span className="text-base font-black text-slate-950 leading-none">4.9</span>
-                  <span className="text-xs font-bold text-slate-400">/ 5.0</span>
+                <div className="flex items-center justify-center sm:justify-start gap-0.5 sm:gap-1">
+                  <span className="text-sm sm:text-base font-black text-slate-950 leading-none">4.9</span>
+                  <span className="text-[10px] sm:text-xs font-bold text-slate-400">/ 5.0</span>
                 </div>
-                <span className="text-[10px] uppercase font-bold text-slate-500 tracking-wider">
-                  Calificación Nacional
+                <span className="text-[8.5px] sm:text-[10px] uppercase font-bold text-slate-500 tracking-wider block">
+                  Calificación
                 </span>
               </div>
             </div>
 
-            <div className="flex items-center gap-2 bg-white px-4 py-2.5 rounded-2xl border border-slate-200/90 shadow-2xs">
-              <div className="w-8 h-8 rounded-xl bg-blue-50 text-blue-700 flex items-center justify-center font-black text-xs">
+            <div className="flex flex-col sm:flex-row items-center sm:items-center gap-1.5 sm:gap-2 bg-white p-2.5 sm:px-4 sm:py-2.5 rounded-2xl border border-slate-200/90 shadow-2xs text-center sm:text-left">
+              <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-xl bg-blue-50 text-blue-700 flex items-center justify-center font-black text-xs">
                 24
               </div>
               <div>
-                <span className="text-base font-black text-slate-950 leading-none block">Provincias</span>
-                <span className="text-[10px] uppercase font-bold text-slate-500 tracking-wider">
-                  Cobertura y Despacho
+                <span className="text-sm sm:text-base font-black text-slate-950 leading-none block">Provincias</span>
+                <span className="text-[8.5px] sm:text-[10px] uppercase font-bold text-slate-500 tracking-wider block">
+                  Cobertura
                 </span>
               </div>
             </div>
 
-            <div className="flex items-center gap-2 bg-emerald-50 px-4 py-2.5 rounded-2xl border border-emerald-200/80 shadow-2xs">
-              <CheckCircle2 className="w-5 h-5 text-emerald-600 flex-shrink-0" />
+            <div className="flex flex-col sm:flex-row items-center sm:items-center gap-1.5 sm:gap-2 bg-emerald-50 p-2.5 sm:px-4 sm:py-2.5 rounded-2xl border border-emerald-200/80 shadow-2xs text-center sm:text-left">
+              <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-600 flex-shrink-0" />
               <div>
-                <span className="text-xs font-black text-emerald-950 leading-none block">Factura SRI</span>
-                <span className="text-[10px] font-bold text-emerald-700 tracking-wider">
-                  100% Desglose Legal
+                <span className="text-xs sm:text-xs font-black text-emerald-950 leading-none block">Factura SRI</span>
+                <span className="text-[8.5px] sm:text-[10px] font-bold text-emerald-700 tracking-wider block">
+                  100% Legal
                 </span>
               </div>
             </div>
@@ -381,14 +381,14 @@ export default function TestimonialsSection() {
         {/* 2. Filter Pills + Rotator Controls */}
         <div className="relative z-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           {/* Sector Category Pills */}
-          <div className="flex flex-wrap items-center gap-2">
+          <div className="flex items-center gap-2 overflow-x-auto pb-1 max-w-full no-scrollbar sm:flex-wrap w-full sm:w-auto">
             {CATEGORIES.map((cat) => {
               const isActive = activeCategory === cat.id;
               return (
                 <button
                   key={cat.id}
                   onClick={() => handleCategoryChange(cat.id as TestimonialCategory)}
-                  className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all duration-200 flex items-center gap-1.5 ${
+                  className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all duration-200 flex items-center gap-1.5 shrink-0 ${
                     isActive
                       ? "bg-[#0A3B8C] text-white shadow-sm shadow-[#0A3B8C]/30 ring-2 ring-[#0A3B8C]/20"
                       : "bg-white text-slate-600 hover:text-slate-900 border border-slate-200 hover:border-slate-300"
@@ -416,7 +416,7 @@ export default function TestimonialsSection() {
             <button
               onClick={() => setIsPaused((prev) => !prev)}
               aria-label={isPaused ? "Reanudar rotación automática" : "Pausar rotación automática"}
-              className="w-8 h-8 rounded-xl bg-white border border-slate-200 text-slate-600 hover:text-slate-900 flex items-center justify-center transition-all hover:border-slate-300 shadow-2xs"
+              className="w-9 h-9 sm:w-8.5 sm:h-8.5 rounded-xl bg-white border border-slate-200 text-slate-600 hover:text-slate-900 flex items-center justify-center transition-all hover:border-slate-300 shadow-2xs active:scale-95 touch-manipulation"
               title={isPaused ? "Reanudar reproducción automática" : "Pausar rotación automática"}
             >
               {isPaused ? <Play className="w-3.5 h-3.5 fill-current" /> : <Pause className="w-3.5 h-3.5 fill-current" />}
@@ -426,7 +426,7 @@ export default function TestimonialsSection() {
               onClick={handlePrev}
               disabled={filteredTestimonials.length <= itemsPerPage}
               aria-label="Testimonio anterior"
-              className="w-8 h-8 rounded-xl bg-white border border-slate-200 text-slate-700 hover:text-slate-950 disabled:opacity-40 disabled:cursor-not-allowed flex items-center justify-center transition-all hover:border-slate-300 shadow-2xs hover:-translate-x-0.5"
+              className="w-9 h-9 sm:w-8.5 sm:h-8.5 rounded-xl bg-white border border-slate-200 text-slate-700 hover:text-slate-950 disabled:opacity-40 disabled:cursor-not-allowed flex items-center justify-center transition-all hover:border-slate-300 shadow-2xs hover:-translate-x-0.5 active:scale-95 touch-manipulation"
             >
               <ChevronLeft className="w-4 h-4" />
             </button>
@@ -435,7 +435,7 @@ export default function TestimonialsSection() {
               onClick={handleNext}
               disabled={filteredTestimonials.length <= itemsPerPage}
               aria-label="Siguiente testimonio"
-              className="w-8 h-8 rounded-xl bg-white border border-slate-200 text-slate-700 hover:text-slate-950 disabled:opacity-40 disabled:cursor-not-allowed flex items-center justify-center transition-all hover:border-slate-300 shadow-2xs hover:translate-x-0.5"
+              className="w-9 h-9 sm:w-8.5 sm:h-8.5 rounded-xl bg-white border border-slate-200 text-slate-700 hover:text-slate-950 disabled:opacity-40 disabled:cursor-not-allowed flex items-center justify-center transition-all hover:border-slate-300 shadow-2xs hover:translate-x-0.5 active:scale-95 touch-manipulation"
             >
               <ChevronRight className="w-4 h-4" />
             </button>

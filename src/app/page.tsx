@@ -216,6 +216,7 @@ export default function HomePage() {
                 alt="LiderPro Distribuidor Autorizado Multimarca Pedernales Ecuador"
                 fill
                 priority
+                sizes="(max-width: 1024px) 100vw, 42vw"
                 className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/30 to-transparent pointer-events-none" />
@@ -315,6 +316,7 @@ export default function HomePage() {
                     alt={`Logo oficial ${brand.name} Ecuador`}
                     width={140}
                     height={44}
+                    loading="lazy"
                     className="max-h-9 max-w-full object-contain filter group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
@@ -362,8 +364,8 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {bestSellerProducts.map((prod) => (
-              <ProductCard key={prod.id} product={prod} />
+            {bestSellerProducts.map((prod, idx) => (
+              <ProductCard key={prod.id} product={prod} priority={idx < 2} />
             ))}
           </div>
         </div>
@@ -531,7 +533,7 @@ export default function HomePage() {
                   })}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-3 py-1.5 bg-slate-800/80 hover:bg-[#0A3B8C] text-slate-200 hover:text-white rounded-xl text-xs font-semibold border border-slate-700/80 transition-all flex items-center gap-1.5"
+                  className="px-3.5 py-2 bg-slate-800/90 hover:bg-[#0A3B8C] active:bg-[#0A3B8C] text-slate-200 hover:text-white rounded-xl text-xs font-semibold border border-slate-700/80 transition-all flex items-center gap-1.5 active:scale-95 touch-manipulation shadow-xs"
                 >
                   <span>{v.label}</span>
                   <span className="text-emerald-400 text-[10px]">WhatsApp →</span>

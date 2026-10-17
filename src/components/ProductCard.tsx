@@ -10,9 +10,10 @@ import { trackEvent } from "@/lib/analytics";
 
 interface ProductCardProps {
   product: Product;
+  priority?: boolean;
 }
 
-export default function ProductCard({ product }: ProductCardProps) {
+export default function ProductCard({ product, priority = false }: ProductCardProps) {
   const [imgError, setImgError] = useState(false);
   const presentation = product.volume || product.plates;
 
@@ -34,8 +35,9 @@ export default function ProductCard({ product }: ProductCardProps) {
               src={product.imageUrl}
               alt={`${product.brand} - ${product.name}`}
               fill
-              loading="lazy"
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+              priority={priority}
+              loading={priority ? undefined : "lazy"}
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
               onError={() => setImgError(true)}
               className="object-contain p-4 group-hover:scale-105 transition-transform duration-500 ease-out"
             />

@@ -125,9 +125,9 @@ export default function EmergencyBanner() {
             target="_blank"
             rel="noopener noreferrer"
             onClick={handleEmergencyClick}
-            className="btn-gold !w-full !h-13 !text-xs !font-black !tracking-wider flex items-center justify-center gap-2.5 mt-2 animate-pulse-glow-gold"
+            className="btn-gold !w-full !min-h-[52px] !py-3.5 !px-4 !text-xs !font-black !tracking-wider flex items-center justify-center gap-2.5 mt-2 animate-pulse-glow-gold active:scale-[0.98] text-center leading-snug"
           >
-            <MessageCircle className="w-4 h-4 text-slate-950" />
+            <MessageCircle className="w-4 h-4 text-slate-950 shrink-0" />
             <span className="text-slate-950">CONSULTAR ASISTENCIA DE BATERÍA POR WHATSAPP</span>
           </a>
         </div>

@@ -502,6 +502,8 @@ export default function VehicleFinder({
                         src={prod.imageUrl}
                         alt={prod.name}
                         fill
+                        sizes="80px"
+                        loading="lazy"
                         className="object-contain p-1"
                       />
                     </div>

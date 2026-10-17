@@ -121,7 +121,13 @@ export default function HomePage() {
   const filteredProducts =
     selectedSegment === "todos"
       ? defaultShowcaseProducts
-      : PRODUCTS.filter((p) => p.applicationType === selectedSegment).slice(0, 8);
+      : PRODUCTS.filter((p) => p.applicationType === selectedSegment)
+          .sort((a, b) => {
+            if (a.isBestSeller && !b.isBestSeller) return -1;
+            if (!a.isBestSeller && b.isBestSeller) return 1;
+            return a.name.localeCompare(b.name);
+          })
+          .slice(0, 8);
 
   return (
     <div className="space-y-12 sm:space-y-16 pb-16">

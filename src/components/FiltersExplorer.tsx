@@ -73,6 +73,10 @@ export default function FiltersExplorer() {
       }
 
       return true;
+    }).sort((a, b) => {
+      if (a.isBestSeller && !b.isBestSeller) return -1;
+      if (!a.isBestSeller && b.isBestSeller) return 1;
+      return a.name.localeCompare(b.name);
     });
   }, [allFilters, activeTab, searchQuery]);
 

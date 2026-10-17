@@ -100,6 +100,10 @@ export default function LubricantsExplorer() {
       }
 
       return true;
+    }).sort((a, b) => {
+      if (a.isBestSeller && !b.isBestSeller) return -1;
+      if (!a.isBestSeller && b.isBestSeller) return 1;
+      return a.name.localeCompare(b.name);
     });
   }, [allLubricants, activeTab, selectedBrand, selectedVolume, searchQuery]);
 

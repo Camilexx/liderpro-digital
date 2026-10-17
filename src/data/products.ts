@@ -497,7 +497,7 @@ export const PRODUCTS: Product[] = [
     "name": "MANNOL REFRIGERANTE AZUL VIDA UTIL 3 AÑOS AG 11 CAN 20/1 LT",
     "brand": "Mannol",
     "category": "refrigerantes",
-    "applicationType": "autos",
+    "applicationType": "pesado",
     "volume": "Caneca 20 Litros",
     "shortSpec": "Refrigerante Anticongelante Mannol • Caneca 20 Litros • Protección anticorrosiva",
     "specifications": {
@@ -710,7 +710,7 @@ export const PRODUCTS: Product[] = [
     "name": "MANNOL REFRIGERANTE ROJO VIDA UTIL 5 AÑOS AF12+ CAN 20/1 LT",
     "brand": "Mannol",
     "category": "refrigerantes",
-    "applicationType": "autos",
+    "applicationType": "pesado",
     "volume": "Caneca 20 Litros",
     "shortSpec": "Refrigerante Anticongelante Mannol • Caneca 20 Litros • Protección anticorrosiva",
     "specifications": {
@@ -1790,7 +1790,7 @@ export const PRODUCTS: Product[] = [
     "name": "MANNOL TS-5 UHPD 10W40 CAN 20/1 LT",
     "brand": "Mannol",
     "category": "lubricantes",
-    "applicationType": "autos",
+    "applicationType": "pesado",
     "volume": "Caneca 20 Litros",
     "shortSpec": "Lubricante Motor Mannol • Caneca 20 Litros • Protección contra fricción y desgaste",
     "specifications": {
@@ -3251,14 +3251,14 @@ export const PRODUCTS: Product[] = [
     "slug": "012mn7814-1-mannol-cj-x-20-und-4takt-motorbike-10w50-20-1-lt",
     "name": "MANNOL CJ X 20 UND 4TAKT MOTORBIKE 10W50 20/1 LT",
     "brand": "Mannol",
-    "category": "aditivos",
+    "category": "lubricantes",
     "applicationType": "motos",
     "volume": "Envase 1 Litro",
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN7814-1 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN7814-1",
       "Marca": "Mannol",
-      "Categoría": "Aditivos",
+      "Categoría": "Lubricantes",
       "Ubicación": "Bodega Pedernales (Manabí)",
       "Disponibilidad": "Disponible para Despacho Inmediato",
       "Presentación / Volumen": "Envase 1 Litro"
@@ -3266,7 +3266,7 @@ export const PRODUCTS: Product[] = [
     "fullSpecs": {
       "Código SKU": "012MN7814-1",
       "Marca Oficial": "Mannol",
-      "Categoría Técnica": "Aditivos",
+      "Categoría Técnica": "Lubricantes",
       "Stock Físico Verificado": "Disponible en Bodega Matriz Pedernales (Despacho Inmediato)",
       "Despacho Logístico": "Despacho inmediato desde Hub Central Pedernales a las 24 provincias del Ecuador",
       "Certificación de Origen": "Lote Oficial Verificado con Facturación Electrónica SRI"
@@ -3314,7 +3314,7 @@ export const PRODUCTS: Product[] = [
     "name": "MANNOL POWERBIKE 15W50 12/1 LT METÁLICO (7832)",
     "brand": "Mannol",
     "category": "lubricantes",
-    "applicationType": "autos",
+    "applicationType": "motos",
     "volume": "Envase 1 Litro",
     "shortSpec": "Lubricante Motor Mannol • Envase 1 Litro • Protección contra fricción y desgaste",
     "specifications": {
@@ -3510,14 +3510,14 @@ export const PRODUCTS: Product[] = [
     "slug": "012mn7904-1-mannol-diesel-turbo-5w40-12-1-lt",
     "name": "MANNOL DIESEL TURBO 5W40 12/1 LT",
     "brand": "Mannol",
-    "category": "aditivos",
+    "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Envase 1 Litro",
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN7904-1 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN7904-1",
       "Marca": "Mannol",
-      "Categoría": "Aditivos",
+      "Categoría": "Lubricantes",
       "Ubicación": "Bodega Pedernales (Manabí)",
       "Disponibilidad": "Disponible para Despacho Inmediato",
       "Presentación / Volumen": "Envase 1 Litro"
@@ -3525,7 +3525,7 @@ export const PRODUCTS: Product[] = [
     "fullSpecs": {
       "Código SKU": "012MN7904-1",
       "Marca Oficial": "Mannol",
-      "Categoría Técnica": "Aditivos",
+      "Categoría Técnica": "Lubricantes",
       "Stock Físico Verificado": "Disponible en Bodega Matriz Pedernales (Despacho Inmediato)",
       "Despacho Logístico": "Despacho inmediato desde Hub Central Pedernales a las 24 provincias del Ecuador",
       "Certificación de Origen": "Lote Oficial Verificado con Facturación Electrónica SRI"
@@ -3572,14 +3572,14 @@ export const PRODUCTS: Product[] = [
     "slug": "012mn7904-5-mannol-diesel-turbo-5w40-4-5lt",
     "name": "MANNOL DIESEL TURBO 5W40 4/5LT",
     "brand": "Mannol",
-    "category": "aditivos",
+    "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Garrafa 5 Litros",
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN7904-5 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN7904-5",
       "Marca": "Mannol",
-      "Categoría": "Aditivos",
+      "Categoría": "Lubricantes",
       "Ubicación": "Bodega Pedernales (Manabí)",
       "Disponibilidad": "Disponible para Despacho Inmediato",
       "Presentación / Volumen": "Garrafa 5 Litros"
@@ -3587,7 +3587,7 @@ export const PRODUCTS: Product[] = [
     "fullSpecs": {
       "Código SKU": "012MN7904-5",
       "Marca Oficial": "Mannol",
-      "Categoría Técnica": "Aditivos",
+      "Categoría Técnica": "Lubricantes",
       "Stock Físico Verificado": "Disponible en Bodega Matriz Pedernales (Despacho Inmediato)",
       "Despacho Logístico": "Despacho inmediato desde Hub Central Pedernales a las 24 provincias del Ecuador",
       "Certificación de Origen": "Lote Oficial Verificado con Facturación Electrónica SRI"
@@ -4626,14 +4626,14 @@ export const PRODUCTS: Product[] = [
     "slug": "012mn8101-1a-mannol-fwd-75w85-gl4-12-1-lt",
     "name": "MANNOL FWD 75W85 GL4 12/1 LT",
     "brand": "Mannol",
-    "category": "aditivos",
+    "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Envase 1 Litro",
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN8101-1A • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN8101-1A",
       "Marca": "Mannol",
-      "Categoría": "Aditivos",
+      "Categoría": "Lubricantes",
       "Ubicación": "Bodega Pedernales (Manabí)",
       "Disponibilidad": "Disponible para Despacho Inmediato",
       "Presentación / Volumen": "Envase 1 Litro"
@@ -4641,7 +4641,7 @@ export const PRODUCTS: Product[] = [
     "fullSpecs": {
       "Código SKU": "012MN8101-1A",
       "Marca Oficial": "Mannol",
-      "Categoría Técnica": "Aditivos",
+      "Categoría Técnica": "Lubricantes",
       "Stock Físico Verificado": "Disponible en Bodega Matriz Pedernales (Despacho Inmediato)",
       "Despacho Logístico": "Despacho inmediato desde Hub Central Pedernales a las 24 provincias del Ecuador",
       "Certificación de Origen": "Lote Oficial Verificado con Facturación Electrónica SRI"
@@ -4688,14 +4688,14 @@ export const PRODUCTS: Product[] = [
     "slug": "012mn8101-4-mannol-fwd-75w85-gl4-4-1-gl",
     "name": "MANNOL FWD 75W85 GL4 4/1 GL",
     "brand": "Mannol",
-    "category": "aditivos",
+    "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Galón (3.785 L)",
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN8101-4 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN8101-4",
       "Marca": "Mannol",
-      "Categoría": "Aditivos",
+      "Categoría": "Lubricantes",
       "Ubicación": "Bodega Pedernales (Manabí)",
       "Disponibilidad": "Disponible para Despacho Inmediato",
       "Presentación / Volumen": "Galón (3.785 L)"
@@ -4703,7 +4703,7 @@ export const PRODUCTS: Product[] = [
     "fullSpecs": {
       "Código SKU": "012MN8101-4",
       "Marca Oficial": "Mannol",
-      "Categoría Técnica": "Aditivos",
+      "Categoría Técnica": "Lubricantes",
       "Stock Físico Verificado": "Disponible en Bodega Matriz Pedernales (Despacho Inmediato)",
       "Despacho Logístico": "Despacho inmediato desde Hub Central Pedernales a las 24 provincias del Ecuador",
       "Certificación de Origen": "Lote Oficial Verificado con Facturación Electrónica SRI"
@@ -4751,7 +4751,7 @@ export const PRODUCTS: Product[] = [
     "name": "MANNOL HYPOID LSD 85W140 GL5 LS (DESLIZAMIENTO LIMITADO) CAN 20/1 LT",
     "brand": "Mannol",
     "category": "lubricantes",
-    "applicationType": "autos",
+    "applicationType": "pesado",
     "volume": "Caneca 20 Litros",
     "shortSpec": "Lubricante Motor Mannol • Caneca 20 Litros • Protección contra fricción y desgaste",
     "specifications": {
@@ -5091,7 +5091,7 @@ export const PRODUCTS: Product[] = [
     "name": "MANNOL UNIVERSAL GETRIEBEOEL 80W90 GL4 CAN 20/1 LT",
     "brand": "Mannol",
     "category": "lubricantes",
-    "applicationType": "autos",
+    "applicationType": "pesado",
     "volume": "Caneca 20 Litros",
     "shortSpec": "Lubricante Motor Mannol • Caneca 20 Litros • Protección contra fricción y desgaste",
     "specifications": {
@@ -5430,14 +5430,14 @@ export const PRODUCTS: Product[] = [
     "slug": "012mn8115-1-mannol-o-e-m-mtf-3-75w-12-1-lt-metalico",
     "name": "MANNOL O.E.M MTF-3 75W 12/1 LT METALICO",
     "brand": "Mannol",
-    "category": "aditivos",
+    "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Envase 1 Litro",
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN8115-1 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN8115-1",
       "Marca": "Mannol",
-      "Categoría": "Aditivos",
+      "Categoría": "Lubricantes",
       "Ubicación": "Bodega Pedernales (Manabí)",
       "Disponibilidad": "Disponible para Despacho Inmediato",
       "Presentación / Volumen": "Envase 1 Litro"
@@ -5445,7 +5445,7 @@ export const PRODUCTS: Product[] = [
     "fullSpecs": {
       "Código SKU": "012MN8115-1",
       "Marca Oficial": "Mannol",
-      "Categoría Técnica": "Aditivos",
+      "Categoría Técnica": "Lubricantes",
       "Stock Físico Verificado": "Disponible en Bodega Matriz Pedernales (Despacho Inmediato)",
       "Despacho Logístico": "Despacho inmediato desde Hub Central Pedernales a las 24 provincias del Ecuador",
       "Certificación de Origen": "Lote Oficial Verificado con Facturación Electrónica SRI"
@@ -5492,20 +5492,20 @@ export const PRODUCTS: Product[] = [
     "slug": "012mn8116-mannol-grasa-lc-2-alta-temperatura-18-kg",
     "name": "MANNOL GRASA LC-2 ALTA TEMPERATURA 18 KG",
     "brand": "Mannol",
-    "category": "aditivos",
-    "applicationType": "autos",
+    "category": "lubricantes",
+    "applicationType": "pesado",
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN8116 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN8116",
       "Marca": "Mannol",
-      "Categoría": "Aditivos",
+      "Categoría": "Lubricantes",
       "Ubicación": "Bodega Pedernales (Manabí)",
       "Disponibilidad": "Disponible para Despacho Inmediato"
     },
     "fullSpecs": {
       "Código SKU": "012MN8116",
       "Marca Oficial": "Mannol",
-      "Categoría Técnica": "Aditivos",
+      "Categoría Técnica": "Lubricantes",
       "Stock Físico Verificado": "Disponible en Bodega Matriz Pedernales (Despacho Inmediato)",
       "Despacho Logístico": "Despacho inmediato desde Hub Central Pedernales a las 24 provincias del Ecuador",
       "Certificación de Origen": "Lote Oficial Verificado con Facturación Electrónica SRI"
@@ -5612,14 +5612,14 @@ export const PRODUCTS: Product[] = [
     "slug": "012mn8202-1-mannol-dct-fluid-cajas-doble-embrague-12-1-lt",
     "name": "MANNOL DCT FLUID CAJAS DOBLE EMBRAGUE 12/1 LT",
     "brand": "Mannol",
-    "category": "aditivos",
+    "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Envase 1 Litro",
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN8202-1 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN8202-1",
       "Marca": "Mannol",
-      "Categoría": "Aditivos",
+      "Categoría": "Lubricantes",
       "Ubicación": "Bodega Pedernales (Manabí)",
       "Disponibilidad": "Disponible para Despacho Inmediato",
       "Presentación / Volumen": "Envase 1 Litro"
@@ -5627,7 +5627,7 @@ export const PRODUCTS: Product[] = [
     "fullSpecs": {
       "Código SKU": "012MN8202-1",
       "Marca Oficial": "Mannol",
-      "Categoría Técnica": "Aditivos",
+      "Categoría Técnica": "Lubricantes",
       "Stock Físico Verificado": "Disponible en Bodega Matriz Pedernales (Despacho Inmediato)",
       "Despacho Logístico": "Despacho inmediato desde Hub Central Pedernales a las 24 provincias del Ecuador",
       "Certificación de Origen": "Lote Oficial Verificado con Facturación Electrónica SRI"
@@ -5820,14 +5820,14 @@ export const PRODUCTS: Product[] = [
     "slug": "012mn8220-1-mannol-cvt-nissan-ns-3-12-1-lt",
     "name": "MANNOL CVT NISSAN NS-3 12/1 LT",
     "brand": "Mannol",
-    "category": "aditivos",
+    "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Envase 1 Litro",
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN8220-1 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "012MN8220-1",
       "Marca": "Mannol",
-      "Categoría": "Aditivos",
+      "Categoría": "Lubricantes",
       "Ubicación": "Bodega Pedernales (Manabí)",
       "Disponibilidad": "Disponible para Despacho Inmediato",
       "Presentación / Volumen": "Envase 1 Litro"
@@ -5835,7 +5835,7 @@ export const PRODUCTS: Product[] = [
     "fullSpecs": {
       "Código SKU": "012MN8220-1",
       "Marca Oficial": "Mannol",
-      "Categoría Técnica": "Aditivos",
+      "Categoría Técnica": "Lubricantes",
       "Stock Físico Verificado": "Disponible en Bodega Matriz Pedernales (Despacho Inmediato)",
       "Despacho Logístico": "Despacho inmediato desde Hub Central Pedernales a las 24 provincias del Ecuador",
       "Certificación de Origen": "Lote Oficial Verificado con Facturación Electrónica SRI"
@@ -5956,7 +5956,7 @@ export const PRODUCTS: Product[] = [
     "name": "MANNOL MOTOR FLUSH PROFESSIONAL + ESTER 450 ML",
     "brand": "Mannol",
     "category": "aditivos",
-    "applicationType": "motos",
+    "applicationType": "autos",
     "volume": "450 ML",
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN9009-045 • Rendimiento y protección automotriz profesional",
     "specifications": {
@@ -6832,7 +6832,7 @@ export const PRODUCTS: Product[] = [
     "name": "MANNOL MOTOR FLUSH 350 ML",
     "brand": "Mannol",
     "category": "aditivos",
-    "applicationType": "motos",
+    "applicationType": "autos",
     "volume": "350 ML",
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN9900 • Rendimiento y protección automotriz profesional",
     "specifications": {
@@ -7323,14 +7323,14 @@ export const PRODUCTS: Product[] = [
     "slug": "012mn9929-045-mannol-ester-additive-tratamiento-de-aceite-450-ml",
     "name": "MANNOL ESTER ADDITIVE / TRATAMIENTO DE ACEITE 450 ML",
     "brand": "Mannol",
-    "category": "lubricantes",
+    "category": "aditivos",
     "applicationType": "autos",
     "volume": "450 ML",
-    "shortSpec": "Lubricante Motor Mannol • 450 ML • Protección contra fricción y desgaste",
+    "shortSpec": "Aditivo y Tratamiento Mannol • 450 ML • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "012MN9929-045",
       "Marca": "Mannol",
-      "Categoría": "Lubricantes",
+      "Categoría": "Aditivos",
       "Ubicación": "Bodega Pedernales (Manabí)",
       "Disponibilidad": "Disponible para Despacho Inmediato",
       "Presentación / Volumen": "450 ML"
@@ -7338,7 +7338,7 @@ export const PRODUCTS: Product[] = [
     "fullSpecs": {
       "Código SKU": "012MN9929-045",
       "Marca Oficial": "Mannol",
-      "Categoría Técnica": "Lubricantes",
+      "Categoría Técnica": "Aditivos",
       "Stock Físico Verificado": "Disponible en Bodega Matriz Pedernales (Despacho Inmediato)",
       "Despacho Logístico": "Despacho inmediato desde Hub Central Pedernales a las 24 provincias del Ecuador",
       "Base Lubricante": "Bases Grupo II / Grupo III Sintéticas de alta pureza",
@@ -7396,14 +7396,14 @@ export const PRODUCTS: Product[] = [
     "slug": "012mn9929-1-mannol-ester-additive-tratamiento-de-aceite-1lt",
     "name": "MANNOL ESTER ADDITIVE / TRATAMIENTO DE ACEITE 1LT",
     "brand": "Mannol",
-    "category": "lubricantes",
+    "category": "aditivos",
     "applicationType": "autos",
     "volume": "1 LT",
-    "shortSpec": "Lubricante Motor Mannol • 1 LT • Protección contra fricción y desgaste",
+    "shortSpec": "Aditivo y Tratamiento Mannol • 1 LT • Protección contra fricción y desgaste",
     "specifications": {
       "Código de Artículo": "012MN9929-1",
       "Marca": "Mannol",
-      "Categoría": "Lubricantes",
+      "Categoría": "Aditivos",
       "Ubicación": "Bodega Pedernales (Manabí)",
       "Disponibilidad": "Disponible para Despacho Inmediato",
       "Presentación / Volumen": "1 LT"
@@ -7411,7 +7411,7 @@ export const PRODUCTS: Product[] = [
     "fullSpecs": {
       "Código SKU": "012MN9929-1",
       "Marca Oficial": "Mannol",
-      "Categoría Técnica": "Lubricantes",
+      "Categoría Técnica": "Aditivos",
       "Stock Físico Verificado": "Disponible en Bodega Matriz Pedernales (Despacho Inmediato)",
       "Despacho Logístico": "Despacho inmediato desde Hub Central Pedernales a las 24 provincias del Ecuador",
       "Base Lubricante": "Bases Grupo II / Grupo III Sintéticas de alta pureza",
@@ -7718,7 +7718,7 @@ export const PRODUCTS: Product[] = [
     "name": "MANNOL MOTOR LIFE EXTENDER / REPARADOR 450ML (CJ X 24 UND)",
     "brand": "Mannol",
     "category": "aditivos",
-    "applicationType": "motos",
+    "applicationType": "autos",
     "volume": "450 ML",
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN9943 • Rendimiento y protección automotriz profesional",
     "specifications": {
@@ -8462,7 +8462,7 @@ export const PRODUCTS: Product[] = [
     "name": "MANNOL LIMPIADOR EXTERNO DE MOTOR SPRAY 500 ML",
     "brand": "Mannol",
     "category": "aditivos",
-    "applicationType": "motos",
+    "applicationType": "autos",
     "volume": "500 ML",
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN9973 • Rendimiento y protección automotriz profesional",
     "specifications": {
@@ -8710,7 +8710,7 @@ export const PRODUCTS: Product[] = [
     "name": "MANNOL ADITIVO MOTOR DR. 350 ML",
     "brand": "Mannol",
     "category": "aditivos",
-    "applicationType": "motos",
+    "applicationType": "autos",
     "volume": "350 ML",
     "shortSpec": "Químico / Aditivo Mannol • SKU 012MN9990 • Rendimiento y protección automotriz profesional",
     "specifications": {
@@ -10752,7 +10752,7 @@ export const PRODUCTS: Product[] = [
     "name": "BATERIA BOSCH 34 HP S4 70AMP 603432",
     "brand": "Bosch",
     "category": "baterias",
-    "applicationType": "autos",
+    "applicationType": "camionetas",
     "plates": "70 Amperios (CCA Certificado)",
     "shortSpec": "Batería Automotriz Bosch • 70 Amperios (CCA Certificado) • Arranque en frío CCA verificado",
     "specifications": {
@@ -12054,7 +12054,7 @@ export const PRODUCTS: Product[] = [
     "name": "BATERIA ECUADOR 31 SHD SUPER HEAVY DUTY 105 AMP",
     "brand": "Baterías Ecuador",
     "category": "baterias",
-    "applicationType": "autos",
+    "applicationType": "pesado",
     "plates": "105 Amperios (CCA Certificado)",
     "shortSpec": "Batería Automotriz Baterías Ecuador • 105 Amperios (CCA Certificado) • Arranque en frío CCA verificado",
     "specifications": {
@@ -12138,7 +12138,7 @@ export const PRODUCTS: Product[] = [
     "name": "BATERIA ECUADOR 34 FE FULL EQUIPO 65 AMP",
     "brand": "Baterías Ecuador",
     "category": "baterias",
-    "applicationType": "autos",
+    "applicationType": "camionetas",
     "plates": "65 Amperios (CCA Certificado)",
     "shortSpec": "Batería Automotriz Baterías Ecuador • 65 Amperios (CCA Certificado) • Arranque en frío CCA verificado",
     "specifications": {
@@ -12234,7 +12234,7 @@ export const PRODUCTS: Product[] = [
     "name": "BATERIA ECUADOR 34 FE I FULL EQUIPO 65 AMP",
     "brand": "Baterías Ecuador",
     "category": "baterias",
-    "applicationType": "autos",
+    "applicationType": "camionetas",
     "plates": "65 Amperios (CCA Certificado)",
     "shortSpec": "Batería Automotriz Baterías Ecuador • 65 Amperios (CCA Certificado) • Arranque en frío CCA verificado",
     "specifications": {
@@ -12330,7 +12330,7 @@ export const PRODUCTS: Product[] = [
     "name": "BATERIA ECUADOR 34 HP HIGH POWER 80 AMP",
     "brand": "Baterías Ecuador",
     "category": "baterias",
-    "applicationType": "autos",
+    "applicationType": "camionetas",
     "plates": "80 Amperios (CCA Certificado)",
     "shortSpec": "Batería Automotriz Baterías Ecuador • 80 Amperios (CCA Certificado) • Arranque en frío CCA verificado",
     "specifications": {
@@ -12426,7 +12426,7 @@ export const PRODUCTS: Product[] = [
     "name": "BATERIA ECUADOR 34 HP I HIGH POWER 80 AMP",
     "brand": "Baterías Ecuador",
     "category": "baterias",
-    "applicationType": "autos",
+    "applicationType": "camionetas",
     "plates": "80 Amperios (CCA Certificado)",
     "shortSpec": "Batería Automotriz Baterías Ecuador • 80 Amperios (CCA Certificado) • Arranque en frío CCA verificado",
     "specifications": {
@@ -13032,7 +13032,7 @@ export const PRODUCTS: Product[] = [
     "name": "BATERIA ECUADOR 65 HP HIGH POWER 65 AMP",
     "brand": "Baterías Ecuador",
     "category": "baterias",
-    "applicationType": "autos",
+    "applicationType": "camionetas",
     "plates": "65 Amperios (CCA Certificado)",
     "shortSpec": "Batería Automotriz Baterías Ecuador • 65 Amperios (CCA Certificado) • Arranque en frío CCA verificado",
     "specifications": {
@@ -14861,7 +14861,7 @@ export const PRODUCTS: Product[] = [
     "name": "AROIL 25W60 CF CAN 5GL.",
     "brand": "Aroil",
     "category": "lubricantes",
-    "applicationType": "autos",
+    "applicationType": "pesado",
     "volume": "5 GL",
     "shortSpec": "Lubricante Motor Aroil • 5 GL • Protección contra fricción y desgaste",
     "specifications": {
@@ -14933,14 +14933,14 @@ export const PRODUCTS: Product[] = [
     "slug": "0368ar10016-aroil-diesel-40-cf-caneca-5-1-gl",
     "name": "AROIL DIESEL 40 CF CANECA 5/1 GL",
     "brand": "Aroil",
-    "category": "aditivos",
-    "applicationType": "autos",
+    "category": "lubricantes",
+    "applicationType": "pesado",
     "volume": "Galón (3.785 L)",
     "shortSpec": "Químico / Aditivo Aroil • SKU 0368AR10016 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "0368AR10016",
       "Marca": "Aroil",
-      "Categoría": "Aditivos",
+      "Categoría": "Lubricantes",
       "Ubicación": "Bodega Pedernales (Manabí)",
       "Disponibilidad": "Disponible para Despacho Inmediato",
       "Presentación / Volumen": "Galón (3.785 L)"
@@ -14948,7 +14948,7 @@ export const PRODUCTS: Product[] = [
     "fullSpecs": {
       "Código SKU": "0368AR10016",
       "Marca Oficial": "Aroil",
-      "Categoría Técnica": "Aditivos",
+      "Categoría Técnica": "Lubricantes",
       "Stock Físico Verificado": "Disponible en Bodega Matriz Pedernales (Despacho Inmediato)",
       "Despacho Logístico": "Despacho inmediato desde Hub Central Pedernales a las 24 provincias del Ecuador",
       "Certificación de Origen": "Lote Oficial Verificado con Facturación Electrónica SRI"
@@ -15183,14 +15183,14 @@ export const PRODUCTS: Product[] = [
     "slug": "0368ar20011-aroil-motor-2t-tc-12-1-lt",
     "name": "AROIL MOTOR 2T TC 12/1 LT",
     "brand": "Aroil",
-    "category": "aditivos",
+    "category": "lubricantes",
     "applicationType": "motos",
     "volume": "Envase 1 Litro",
     "shortSpec": "Químico / Aditivo Aroil • SKU 0368AR20011 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "0368AR20011",
       "Marca": "Aroil",
-      "Categoría": "Aditivos",
+      "Categoría": "Lubricantes",
       "Ubicación": "Bodega Pedernales (Manabí)",
       "Disponibilidad": "Disponible para Despacho Inmediato",
       "Presentación / Volumen": "Envase 1 Litro"
@@ -15198,7 +15198,7 @@ export const PRODUCTS: Product[] = [
     "fullSpecs": {
       "Código SKU": "0368AR20011",
       "Marca Oficial": "Aroil",
-      "Categoría Técnica": "Aditivos",
+      "Categoría Técnica": "Lubricantes",
       "Stock Físico Verificado": "Disponible en Bodega Matriz Pedernales (Despacho Inmediato)",
       "Despacho Logístico": "Despacho inmediato desde Hub Central Pedernales a las 24 provincias del Ecuador",
       "Certificación de Origen": "Lote Oficial Verificado con Facturación Electrónica SRI"
@@ -15342,14 +15342,14 @@ export const PRODUCTS: Product[] = [
     "slug": "0368ar40001-aroil-75w85-gl-5-6-1-gl",
     "name": "AROIL 75W85 GL-5 6/1 GL",
     "brand": "Aroil",
-    "category": "aditivos",
+    "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Galón (3.785 L)",
     "shortSpec": "Químico / Aditivo Aroil • SKU 0368AR40001 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "0368AR40001",
       "Marca": "Aroil",
-      "Categoría": "Aditivos",
+      "Categoría": "Lubricantes",
       "Ubicación": "Bodega Pedernales (Manabí)",
       "Disponibilidad": "Disponible para Despacho Inmediato",
       "Presentación / Volumen": "Galón (3.785 L)"
@@ -15357,7 +15357,7 @@ export const PRODUCTS: Product[] = [
     "fullSpecs": {
       "Código SKU": "0368AR40001",
       "Marca Oficial": "Aroil",
-      "Categoría Técnica": "Aditivos",
+      "Categoría Técnica": "Lubricantes",
       "Stock Físico Verificado": "Disponible en Bodega Matriz Pedernales (Despacho Inmediato)",
       "Despacho Logístico": "Despacho inmediato desde Hub Central Pedernales a las 24 provincias del Ecuador",
       "Certificación de Origen": "Lote Oficial Verificado con Facturación Electrónica SRI"
@@ -15490,7 +15490,7 @@ export const PRODUCTS: Product[] = [
     "name": "AROIL 80W90 GL-5 CAN 5GL",
     "brand": "Aroil",
     "category": "lubricantes",
-    "applicationType": "autos",
+    "applicationType": "pesado",
     "volume": "90 GL",
     "shortSpec": "Lubricante Motor Aroil • 90 GL • Protección contra fricción y desgaste",
     "specifications": {
@@ -15660,7 +15660,7 @@ export const PRODUCTS: Product[] = [
     "name": "AROIL 85W140 GL- CAN 5GL",
     "brand": "Aroil",
     "category": "lubricantes",
-    "applicationType": "autos",
+    "applicationType": "pesado",
     "volume": "140 GL",
     "shortSpec": "Lubricante Motor Aroil • 140 GL • Protección contra fricción y desgaste",
     "specifications": {
@@ -15744,14 +15744,14 @@ export const PRODUCTS: Product[] = [
     "slug": "0368ar40013-aroil-90-gl-4-6-1-gl",
     "name": "AROIL 90 GL-4 6/1 GL",
     "brand": "Aroil",
-    "category": "aditivos",
+    "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Galón (3.785 L)",
     "shortSpec": "Químico / Aditivo Aroil • SKU 0368AR40013 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "0368AR40013",
       "Marca": "Aroil",
-      "Categoría": "Aditivos",
+      "Categoría": "Lubricantes",
       "Ubicación": "Bodega Pedernales (Manabí)",
       "Disponibilidad": "Disponible para Despacho Inmediato",
       "Presentación / Volumen": "Galón (3.785 L)"
@@ -15759,7 +15759,7 @@ export const PRODUCTS: Product[] = [
     "fullSpecs": {
       "Código SKU": "0368AR40013",
       "Marca Oficial": "Aroil",
-      "Categoría Técnica": "Aditivos",
+      "Categoría Técnica": "Lubricantes",
       "Stock Físico Verificado": "Disponible en Bodega Matriz Pedernales (Despacho Inmediato)",
       "Despacho Logístico": "Despacho inmediato desde Hub Central Pedernales a las 24 provincias del Ecuador",
       "Certificación de Origen": "Lote Oficial Verificado con Facturación Electrónica SRI"
@@ -15806,14 +15806,14 @@ export const PRODUCTS: Product[] = [
     "slug": "0368ar40014-aroil-90-gl-4-can-5gl",
     "name": "AROIL 90 GL-4 CAN 5GL",
     "brand": "Aroil",
-    "category": "aditivos",
-    "applicationType": "autos",
+    "category": "lubricantes",
+    "applicationType": "pesado",
     "volume": "90 GL",
     "shortSpec": "Químico / Aditivo Aroil • SKU 0368AR40014 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "0368AR40014",
       "Marca": "Aroil",
-      "Categoría": "Aditivos",
+      "Categoría": "Lubricantes",
       "Ubicación": "Bodega Pedernales (Manabí)",
       "Disponibilidad": "Disponible para Despacho Inmediato",
       "Presentación / Volumen": "90 GL"
@@ -15821,7 +15821,7 @@ export const PRODUCTS: Product[] = [
     "fullSpecs": {
       "Código SKU": "0368AR40014",
       "Marca Oficial": "Aroil",
-      "Categoría Técnica": "Aditivos",
+      "Categoría Técnica": "Lubricantes",
       "Stock Físico Verificado": "Disponible en Bodega Matriz Pedernales (Despacho Inmediato)",
       "Despacho Logístico": "Despacho inmediato desde Hub Central Pedernales a las 24 provincias del Ecuador",
       "Certificación de Origen": "Lote Oficial Verificado con Facturación Electrónica SRI"
@@ -15868,14 +15868,14 @@ export const PRODUCTS: Product[] = [
     "slug": "0368ar40017-aroil-140-gl-4-6-1-gl",
     "name": "AROIL 140 GL-4 6/1 GL",
     "brand": "Aroil",
-    "category": "aditivos",
+    "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Galón (3.785 L)",
     "shortSpec": "Químico / Aditivo Aroil • SKU 0368AR40017 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "0368AR40017",
       "Marca": "Aroil",
-      "Categoría": "Aditivos",
+      "Categoría": "Lubricantes",
       "Ubicación": "Bodega Pedernales (Manabí)",
       "Disponibilidad": "Disponible para Despacho Inmediato",
       "Presentación / Volumen": "Galón (3.785 L)"
@@ -15883,7 +15883,7 @@ export const PRODUCTS: Product[] = [
     "fullSpecs": {
       "Código SKU": "0368AR40017",
       "Marca Oficial": "Aroil",
-      "Categoría Técnica": "Aditivos",
+      "Categoría Técnica": "Lubricantes",
       "Stock Físico Verificado": "Disponible en Bodega Matriz Pedernales (Despacho Inmediato)",
       "Despacho Logístico": "Despacho inmediato desde Hub Central Pedernales a las 24 provincias del Ecuador",
       "Certificación de Origen": "Lote Oficial Verificado con Facturación Electrónica SRI"
@@ -15930,14 +15930,14 @@ export const PRODUCTS: Product[] = [
     "slug": "0368ar40018-aroil-140-gl-4-can-5-gl",
     "name": "AROIL 140 GL-4 CAN 5 GL",
     "brand": "Aroil",
-    "category": "aditivos",
-    "applicationType": "autos",
+    "category": "lubricantes",
+    "applicationType": "pesado",
     "volume": "140 GL",
     "shortSpec": "Químico / Aditivo Aroil • SKU 0368AR40018 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "0368AR40018",
       "Marca": "Aroil",
-      "Categoría": "Aditivos",
+      "Categoría": "Lubricantes",
       "Ubicación": "Bodega Pedernales (Manabí)",
       "Disponibilidad": "Disponible para Despacho Inmediato",
       "Presentación / Volumen": "140 GL"
@@ -15945,7 +15945,7 @@ export const PRODUCTS: Product[] = [
     "fullSpecs": {
       "Código SKU": "0368AR40018",
       "Marca Oficial": "Aroil",
-      "Categoría Técnica": "Aditivos",
+      "Categoría Técnica": "Lubricantes",
       "Stock Físico Verificado": "Disponible en Bodega Matriz Pedernales (Despacho Inmediato)",
       "Despacho Logístico": "Despacho inmediato desde Hub Central Pedernales a las 24 provincias del Ecuador",
       "Certificación de Origen": "Lote Oficial Verificado con Facturación Electrónica SRI"
@@ -15992,14 +15992,14 @@ export const PRODUCTS: Product[] = [
     "slug": "0368ar40038-aroil-75w85-gl-5-12-1-lt",
     "name": "AROIL 75W85 GL-5 12/1 LT",
     "brand": "Aroil",
-    "category": "aditivos",
+    "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Envase 1 Litro",
     "shortSpec": "Químico / Aditivo Aroil • SKU 0368AR40038 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "0368AR40038",
       "Marca": "Aroil",
-      "Categoría": "Aditivos",
+      "Categoría": "Lubricantes",
       "Ubicación": "Bodega Pedernales (Manabí)",
       "Disponibilidad": "Disponible para Despacho Inmediato",
       "Presentación / Volumen": "Envase 1 Litro"
@@ -16007,7 +16007,7 @@ export const PRODUCTS: Product[] = [
     "fullSpecs": {
       "Código SKU": "0368AR40038",
       "Marca Oficial": "Aroil",
-      "Categoría Técnica": "Aditivos",
+      "Categoría Técnica": "Lubricantes",
       "Stock Físico Verificado": "Disponible en Bodega Matriz Pedernales (Despacho Inmediato)",
       "Despacho Logístico": "Despacho inmediato desde Hub Central Pedernales a las 24 provincias del Ecuador",
       "Certificación de Origen": "Lote Oficial Verificado con Facturación Electrónica SRI"
@@ -16224,14 +16224,14 @@ export const PRODUCTS: Product[] = [
     "slug": "0368ar40041-aroil-90-gl-4-12-1-lt",
     "name": "AROIL 90 GL-4 12/1 LT",
     "brand": "Aroil",
-    "category": "aditivos",
+    "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Envase 1 Litro",
     "shortSpec": "Químico / Aditivo Aroil • SKU 0368AR40041 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "0368AR40041",
       "Marca": "Aroil",
-      "Categoría": "Aditivos",
+      "Categoría": "Lubricantes",
       "Ubicación": "Bodega Pedernales (Manabí)",
       "Disponibilidad": "Disponible para Despacho Inmediato",
       "Presentación / Volumen": "Envase 1 Litro"
@@ -16239,7 +16239,7 @@ export const PRODUCTS: Product[] = [
     "fullSpecs": {
       "Código SKU": "0368AR40041",
       "Marca Oficial": "Aroil",
-      "Categoría Técnica": "Aditivos",
+      "Categoría Técnica": "Lubricantes",
       "Stock Físico Verificado": "Disponible en Bodega Matriz Pedernales (Despacho Inmediato)",
       "Despacho Logístico": "Despacho inmediato desde Hub Central Pedernales a las 24 provincias del Ecuador",
       "Certificación de Origen": "Lote Oficial Verificado con Facturación Electrónica SRI"
@@ -16286,14 +16286,14 @@ export const PRODUCTS: Product[] = [
     "slug": "0368ar40042-aroil-140-gl-4-12-1-lt",
     "name": "AROIL 140 GL-4 12/1 LT",
     "brand": "Aroil",
-    "category": "aditivos",
+    "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Envase 1 Litro",
     "shortSpec": "Químico / Aditivo Aroil • SKU 0368AR40042 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "0368AR40042",
       "Marca": "Aroil",
-      "Categoría": "Aditivos",
+      "Categoría": "Lubricantes",
       "Ubicación": "Bodega Pedernales (Manabí)",
       "Disponibilidad": "Disponible para Despacho Inmediato",
       "Presentación / Volumen": "Envase 1 Litro"
@@ -16301,7 +16301,7 @@ export const PRODUCTS: Product[] = [
     "fullSpecs": {
       "Código SKU": "0368AR40042",
       "Marca Oficial": "Aroil",
-      "Categoría Técnica": "Aditivos",
+      "Categoría Técnica": "Lubricantes",
       "Stock Físico Verificado": "Disponible en Bodega Matriz Pedernales (Despacho Inmediato)",
       "Despacho Logístico": "Despacho inmediato desde Hub Central Pedernales a las 24 provincias del Ecuador",
       "Certificación de Origen": "Lote Oficial Verificado con Facturación Electrónica SRI"
@@ -16495,7 +16495,7 @@ export const PRODUCTS: Product[] = [
     "name": "AROIL TRACFLUID 10W30 CAN 5 GL",
     "brand": "Aroil",
     "category": "lubricantes",
-    "applicationType": "autos",
+    "applicationType": "pesado",
     "volume": "30 CAN",
     "shortSpec": "Lubricante Motor Aroil • 30 CAN • Protección contra fricción y desgaste",
     "specifications": {
@@ -16585,20 +16585,20 @@ export const PRODUCTS: Product[] = [
     "slug": "0368ar90004-aroil-grasa-chassis-2-roja-caneca-16x1-kg",
     "name": "AROIL GRASA CHASSIS 2 ROJA CANECA 16X1 KG",
     "brand": "Aroil",
-    "category": "aditivos",
-    "applicationType": "autos",
+    "category": "lubricantes",
+    "applicationType": "pesado",
     "shortSpec": "Químico / Aditivo Aroil • SKU 0368AR90004 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "0368AR90004",
       "Marca": "Aroil",
-      "Categoría": "Aditivos",
+      "Categoría": "Lubricantes",
       "Ubicación": "Bodega Pedernales (Manabí)",
       "Disponibilidad": "Disponible para Despacho Inmediato"
     },
     "fullSpecs": {
       "Código SKU": "0368AR90004",
       "Marca Oficial": "Aroil",
-      "Categoría Técnica": "Aditivos",
+      "Categoría Técnica": "Lubricantes",
       "Stock Físico Verificado": "Disponible en Bodega Matriz Pedernales (Despacho Inmediato)",
       "Despacho Logístico": "Despacho inmediato desde Hub Central Pedernales a las 24 provincias del Ecuador",
       "Certificación de Origen": "Lote Oficial Verificado con Facturación Electrónica SRI"
@@ -16645,20 +16645,20 @@ export const PRODUCTS: Product[] = [
     "slug": "036ar90000-aroil-grasa-chassis-2-azul-caneca-16-kg",
     "name": "AROIL GRASA CHASSIS 2 AZUL CANECA 16 KG",
     "brand": "Aroil",
-    "category": "aditivos",
-    "applicationType": "autos",
+    "category": "lubricantes",
+    "applicationType": "pesado",
     "shortSpec": "Químico / Aditivo Aroil • SKU 036AR90000 • Rendimiento y protección automotriz profesional",
     "specifications": {
       "Código de Artículo": "036AR90000",
       "Marca": "Aroil",
-      "Categoría": "Aditivos",
+      "Categoría": "Lubricantes",
       "Ubicación": "Bodega Pedernales (Manabí)",
       "Disponibilidad": "Disponible para Despacho Inmediato"
     },
     "fullSpecs": {
       "Código SKU": "036AR90000",
       "Marca Oficial": "Aroil",
-      "Categoría Técnica": "Aditivos",
+      "Categoría Técnica": "Lubricantes",
       "Stock Físico Verificado": "Disponible en Bodega Matriz Pedernales (Despacho Inmediato)",
       "Despacho Logístico": "Despacho inmediato desde Hub Central Pedernales a las 24 provincias del Ecuador",
       "Certificación de Origen": "Lote Oficial Verificado con Facturación Electrónica SRI"
@@ -17825,7 +17825,7 @@ export const PRODUCTS: Product[] = [
     "name": "BUJIA NGK DATSUN/TOYOTA/ISUZU/MAZDA 13/16 T. CALIENTE / W16EP-U DENSO / IW16 IRIDIO",
     "brand": "NGK",
     "category": "bujias",
-    "applicationType": "pesado",
+    "applicationType": "autos",
     "shortSpec": "Bujía de Encendido NGK • SKU 043BP5ES • Combustión eficiente y encendido inmediato",
     "specifications": {
       "Código de Artículo": "043BP5ES",
@@ -18476,7 +18476,7 @@ export const PRODUCTS: Product[] = [
     "name": "BUJIA NGK TOYOTA HI-LUX 2.7 20 BRASILEÑA / K20HR-U11 DENSO / IKH20 IRIDIO",
     "brand": "NGK",
     "category": "bujias",
-    "applicationType": "autos",
+    "applicationType": "camionetas",
     "shortSpec": "Bujía de Encendido NGK • SKU 043LFR6C-11 • Combustión eficiente y encendido inmediato",
     "specifications": {
       "Código de Artículo": "043LFR6C-11",
@@ -19079,7 +19079,7 @@ export const PRODUCTS: Product[] = [
     "name": "FILTRO COMBUSTIBLE VW GOLF, JETTA, SK OCTAVIA - CHERY TIGGO 2, FULLWIN 2012, \"ADVANCE\"",
     "brand": "Advance",
     "category": "filtros",
-    "applicationType": "pesado",
+    "applicationType": "autos",
     "shortSpec": "Filtro Automotriz Original Advance • SKU 078AFP-079 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "078AFP-079",
@@ -19150,7 +19150,7 @@ export const PRODUCTS: Product[] = [
     "name": "FILTRO COMBUSTIBLE GREAT WALL HAVAL H5/WINGLE 2.0/HY TUCSON DIESEL/JINBEI/MAHINDRA/ZX AUTO G ADVANCE",
     "brand": "Advance",
     "category": "filtros",
-    "applicationType": "pesado",
+    "applicationType": "camionetas",
     "shortSpec": "Filtro Automotriz Original Advance • SKU 078AFP-179 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "078AFP-179",
@@ -19310,7 +19310,7 @@ export const PRODUCTS: Product[] = [
     "name": "FILTRO COMBUSTIBLE CH GRAN VITARA 3-5 PTAS MZ 323 (MF-5982 PREM FLP368 RED 15410-65D00 \"ADVANCE\"",
     "brand": "Advance",
     "category": "filtros",
-    "applicationType": "pesado",
+    "applicationType": "autos",
     "shortSpec": "Filtro Automotriz Original Advance • SKU 078AFP-523 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "078AFP-523",
@@ -19748,7 +19748,7 @@ export const PRODUCTS: Product[] = [
     "name": "FILTRO ACEITE CH LUV 2.5 DIESEL/GREAT WALL/HAVAL H5 2.5/WINGLE 2.8/CAMION JACK (PH7325) \"ADVANCE\"",
     "brand": "Advance",
     "category": "filtros",
-    "applicationType": "pesado",
+    "applicationType": "camionetas",
     "shortSpec": "Filtro Automotriz Original Advance • SKU 078AO-2863 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "078AO-2863",
@@ -19878,7 +19878,7 @@ export const PRODUCTS: Product[] = [
     "name": "FILTRO ACEITE NS NAVARA, JEEP. LAND ROVER. LADA, DODGE, FIAT ANTIGUOS (PH-43) \"ADVANCE\"",
     "brand": "Advance",
     "category": "filtros",
-    "applicationType": "autos",
+    "applicationType": "camionetas",
     "shortSpec": "Filtro Automotriz Original Advance • SKU 078AO-2879 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "078AO-2879",
@@ -20298,7 +20298,7 @@ export const PRODUCTS: Product[] = [
     "name": "FILTRO COMBUSTIBLE TY HILUX 2.7 DIESEL HIACE 3.0 (ELEMENTO) \"ADVANCE\"",
     "brand": "Advance",
     "category": "filtros",
-    "applicationType": "pesado",
+    "applicationType": "camionetas",
     "shortSpec": "Filtro Automotriz Original Advance • SKU 079AFE-268 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "079AFE-268",
@@ -20369,7 +20369,7 @@ export const PRODUCTS: Product[] = [
     "name": "FILTRO COMBUSTIBLE CH DMAX 3.0 DIESEL- DMAX 2.5 TURBO KIT FILTROS \"ADVANCE\"",
     "brand": "Advance",
     "category": "filtros",
-    "applicationType": "pesado",
+    "applicationType": "camionetas",
     "shortSpec": "Filtro Automotriz Original Advance • SKU 079AFK-001 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "079AFK-001",
@@ -20434,7 +20434,7 @@ export const PRODUCTS: Product[] = [
     "name": "FILTRO COMBUSTIBLE CH DMAX 3.0 DIESEL /-13 TRAMPA DE AGUA \"ADVANCE\"",
     "brand": "Advance",
     "category": "filtros",
-    "applicationType": "pesado",
+    "applicationType": "camionetas",
     "shortSpec": "Filtro Automotriz Original Advance • SKU 079AFP-1511 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "079AFP-1511",
@@ -23284,7 +23284,7 @@ export const PRODUCTS: Product[] = [
     "name": "FILTRO AIRE CH RODEO 3.2, TROOPER 3.2, LUV 2.2, 2.3, 3.2 \"ADVANCE\"",
     "brand": "Advance",
     "category": "filtros",
-    "applicationType": "autos",
+    "applicationType": "camionetas",
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AA-8067 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AA-8067",
@@ -24668,7 +24668,7 @@ export const PRODUCTS: Product[] = [
     "name": "FILTRO ADVANCE AIRE FULL SERVICE KIT AA-60360 + AA-70360 JAC HFC1160 HFC1130 HFC1134 - AAK-122",
     "brand": "Advance",
     "category": "filtros",
-    "applicationType": "autos",
+    "applicationType": "pesado",
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AAK-122 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AAK-122",
@@ -26360,7 +26360,7 @@ export const PRODUCTS: Product[] = [
     "name": "FILTRO CABINA CH TRAIL BLAZER 2.8 LTZ 17- COLORADO - AC-65340 \"ADVANCE\"",
     "brand": "Advance",
     "category": "filtros",
-    "applicationType": "autos",
+    "applicationType": "camionetas",
     "volume": "2.8 LT",
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AC-65340 • Retención micrométrica certificada",
     "specifications": {
@@ -26557,7 +26557,7 @@ export const PRODUCTS: Product[] = [
     "name": "FILTRO COMBUSTIBLE GREAT WALL POER 2.0 DIESEL 4D20M (ELEMENTO) \"ADVANCE \"",
     "brand": "Advance",
     "category": "filtros",
-    "applicationType": "pesado",
+    "applicationType": "camionetas",
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AFE-295-1 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AFE-295-1",
@@ -26622,7 +26622,7 @@ export const PRODUCTS: Product[] = [
     "name": "FILTRO COMBUSTIBLE GREAT WALL POER 2.0 DIESEL 4D20M 2DA GENERACION LONG LIFE FILTER \"ADVANCE\"",
     "brand": "Advance",
     "category": "filtros",
-    "applicationType": "pesado",
+    "applicationType": "camionetas",
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AFE-296-1 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AFE-296-1",
@@ -26687,7 +26687,7 @@ export const PRODUCTS: Product[] = [
     "name": "FILTRO ADVANCE COMBUSTIBLE CHEVROLET D-MAX 2.0T DIESEL 2025 CJ X 20 - AFE- 297",
     "brand": "Advance",
     "category": "filtros",
-    "applicationType": "pesado",
+    "applicationType": "camionetas",
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AFE-297 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AFE-297",
@@ -26752,7 +26752,7 @@ export const PRODUCTS: Product[] = [
     "name": "FILTRO COMBUSTIBLE FD RANGER 3.2 TDCI, RANGER COURIER XL 2.2L, NEW BT-50 II 3.2 \"ADVANCE\"",
     "brand": "Advance",
     "category": "filtros",
-    "applicationType": "pesado",
+    "applicationType": "camionetas",
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AFE-385 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AFE-385",
@@ -26823,7 +26823,7 @@ export const PRODUCTS: Product[] = [
     "name": "FILTRO COMBUSTIBLE SUMERGIBLE HY GETZ, MATRIX, SANTA FE 2002 \"ADVANCE\"",
     "brand": "Advance",
     "category": "filtros",
-    "applicationType": "pesado",
+    "applicationType": "autos",
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AFI-9303 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AFI-9303",
@@ -26900,7 +26900,7 @@ export const PRODUCTS: Product[] = [
     "name": "FILTRO COMBUSTIBLE SUMERGIBLE KIA RIO XCITE, NEW ACCENT (MF-48737) \"ADVANCE\"",
     "brand": "Advance",
     "category": "filtros",
-    "applicationType": "pesado",
+    "applicationType": "autos",
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AFI-9307 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AFI-9307",
@@ -26971,7 +26971,7 @@ export const PRODUCTS: Product[] = [
     "name": "FILTRO COMBUSTIBLE CH TRAIL BLAZER 2.8 12 ELEMENTO KIT DE FILTROS DIESEL \"ADVANCE\"",
     "brand": "Advance",
     "category": "filtros",
-    "applicationType": "pesado",
+    "applicationType": "camionetas",
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AFK-002 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AFK-002",
@@ -27048,7 +27048,7 @@ export const PRODUCTS: Product[] = [
     "name": "FILTRO COMBUSTIBLE MT L200 SPORTERO DIESEL LUKAS CAV926 NUEVA FOTON CS Y CS2 \"ADVANCE\"",
     "brand": "Advance",
     "category": "filtros",
-    "applicationType": "pesado",
+    "applicationType": "camionetas",
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AFP-023 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AFP-023",
@@ -27196,7 +27196,7 @@ export const PRODUCTS: Product[] = [
     "name": "FILTRO COMBUSTIBLE RN CLIO TWINGO MEGANE SCENIC PEUGEOT 206 BERLINGO \"ADVANCE\"",
     "brand": "Advance",
     "category": "filtros",
-    "applicationType": "pesado",
+    "applicationType": "autos",
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AFP-072 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AFP-072",
@@ -27273,7 +27273,7 @@ export const PRODUCTS: Product[] = [
     "name": "FILTRO COMBUSTIBLE MZ BT50 CRDI, BT-50 TDI / MT MONTERO SPORT / NS FRONTIER T \"ADVANCE\"",
     "brand": "Advance",
     "category": "filtros",
-    "applicationType": "pesado",
+    "applicationType": "camionetas",
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AFP-083 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AFP-083",
@@ -27427,7 +27427,7 @@ export const PRODUCTS: Product[] = [
     "name": "FILTRO COMBUSTIBLE GREAT WALL WINGLE 2.0-2.8 JAC T6 2.8 FOTON IVECO MAHINDRA \"ADVANCE\"",
     "brand": "Advance",
     "category": "filtros",
-    "applicationType": "pesado",
+    "applicationType": "camionetas",
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AFP-140 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AFP-140",
@@ -27563,7 +27563,7 @@ export const PRODUCTS: Product[] = [
     "name": "FILTRO COMBUSTIBLE CH VITARA AFP-203 \"ADVANCE\"  (MF-94925)",
     "brand": "Advance",
     "category": "filtros",
-    "applicationType": "pesado",
+    "applicationType": "autos",
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AFP-203 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AFP-203",
@@ -27634,7 +27634,7 @@ export const PRODUCTS: Product[] = [
     "name": "FILTRO COMBUSTIBLE TY HILUX 2.7 GAS (PUNTA A PUNTA SIN BASE) \"ADVANCE\" (MF-64951) (MF-41570)",
     "brand": "Advance",
     "category": "filtros",
-    "applicationType": "pesado",
+    "applicationType": "camionetas",
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AFP-31120 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AFP-31120",
@@ -27918,7 +27918,7 @@ export const PRODUCTS: Product[] = [
     "name": "FILTRO COMBUSTIBLE CH CORSA 1.4-1.6-1.8/DMAX 2.4-3.5/ZAFIRA/M4/GREAT WALL C30 \"ADVANCE\"",
     "brand": "Advance",
     "category": "filtros",
-    "applicationType": "pesado",
+    "applicationType": "autos",
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AFP-555 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AFP-555",
@@ -28060,7 +28060,7 @@ export const PRODUCTS: Product[] = [
     "name": "FILTRO COMBUSTIBLE CH CHEVYTAXI LANOS SPARK MATIZ AVEO OPTRA \"ADVANCE\"",
     "brand": "Advance",
     "category": "filtros",
-    "applicationType": "pesado",
+    "applicationType": "autos",
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AFP-573 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AFP-573",
@@ -28125,7 +28125,7 @@ export const PRODUCTS: Product[] = [
     "name": "FILTRO COMBUSTIBLE MZ BT50 GASOLINA, 2200 INY FD RANGER 2.2, 2.6 2008 (RED JE45-20-490A \"ADVANCE\"",
     "brand": "Advance",
     "category": "filtros",
-    "applicationType": "pesado",
+    "applicationType": "camionetas",
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AFP-704 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AFP-704",
@@ -28196,7 +28196,7 @@ export const PRODUCTS: Product[] = [
     "name": "FILTRO COMBUSTIBLE CH TRAIL BLAZER 5.3L ANTIGUA GASOLINA (MF-6397) - AFP-874 \"ADVANCE\"",
     "brand": "Advance",
     "category": "filtros",
-    "applicationType": "pesado",
+    "applicationType": "camionetas",
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AFP-874 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AFP-874",
@@ -28273,7 +28273,7 @@ export const PRODUCTS: Product[] = [
     "name": "FILTRO COMBUSTIBLE CH SAIL 1.4L 12-18 \"ADVANCE\"",
     "brand": "Advance",
     "category": "filtros",
-    "applicationType": "pesado",
+    "applicationType": "autos",
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AFP-876 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AFP-876",
@@ -28338,7 +28338,7 @@ export const PRODUCTS: Product[] = [
     "name": "FILTRO COMBUSTIBLE CH SAIL 1.5 2018, CAVALIER 2019 (MF-72809 PREM FLP482 RED 90872178 \"ADVANCE\"",
     "brand": "Advance",
     "category": "filtros",
-    "applicationType": "pesado",
+    "applicationType": "autos",
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AFP-877 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AFP-877",
@@ -28403,7 +28403,7 @@ export const PRODUCTS: Product[] = [
     "name": "FILTRO COMBUSTIBLE CH LUV, TROOPER, RODEO, PEUGEOT 306, WINGLE 2.4 2.2L FI N200 \"ADVANCE\"",
     "brand": "Advance",
     "category": "filtros",
-    "applicationType": "pesado",
+    "applicationType": "camionetas",
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AFP-974 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AFP-974",
@@ -28474,7 +28474,7 @@ export const PRODUCTS: Product[] = [
     "name": "FILTRO COMBUSTIBLE CAMC H08 440, 380, CABEZAL 300, 14M3 MOTOR CUMMINS ISM380, FOTON AUMARK \"ADVANCE\"",
     "brand": "Advance",
     "category": "filtros",
-    "applicationType": "motos",
+    "applicationType": "pesado",
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AFS-1212 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AFS-1212",
@@ -28758,7 +28758,7 @@ export const PRODUCTS: Product[] = [
     "name": "FILTRO COMBUSTIBLE RICH 6 2.5CC DIESEL 20 -  (SEPARADOR) \"ADVANCE\"",
     "brand": "Advance",
     "category": "filtros",
-    "applicationType": "pesado",
+    "applicationType": "camionetas",
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AFS-194-1 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AFS-194-1",
@@ -29024,7 +29024,7 @@ export const PRODUCTS: Product[] = [
     "name": "FILTRO ACEITE VW TIGUAN 2.0 /07- AMAROK GAS. PASSAT 1.8 /07- AUDI 2.0 CON ROSCA MACHO \"ADVANCE\"",
     "brand": "Advance",
     "category": "filtros",
-    "applicationType": "autos",
+    "applicationType": "camionetas",
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AO-10600 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AO-10600",
@@ -29414,7 +29414,7 @@ export const PRODUCTS: Product[] = [
     "name": "FILTRO ACEITE ISZ NPR NKR 98-MOTOR 4B  \"ADVANCE\"",
     "brand": "Advance",
     "category": "filtros",
-    "applicationType": "motos",
+    "applicationType": "pesado",
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AO-1522 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AO-1522",
@@ -30278,7 +30278,7 @@ export const PRODUCTS: Product[] = [
     "name": "FILTRO ACEITE CH TRAILBLAZER-SILVERADO 2000-CHEYENNE 2000 (PLB3675) \"ADVANCE\" PH-59 PH3429A",
     "brand": "Advance",
     "category": "filtros",
-    "applicationType": "autos",
+    "applicationType": "camionetas",
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AO-3675 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AO-3675",
@@ -31118,7 +31118,7 @@ export const PRODUCTS: Product[] = [
     "name": "FILTRO ADVANCE ACEITE (PH49A,LF667,C-5510,LFP3191, PSL417)OIL FILTER CATERPILLAR, MACK, SCANIA, VOLV",
     "brand": "Advance",
     "category": "filtros",
-    "applicationType": "autos",
+    "applicationType": "pesado",
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AO-667-1 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AO-667-1",
@@ -31491,7 +31491,7 @@ export const PRODUCTS: Product[] = [
     "name": "FILTRO ADVANCE ACEITE ELEMENTO (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) CHEVROLET TRAILBLAZER 2.8",
     "brand": "Advance",
     "category": "filtros",
-    "applicationType": "autos",
+    "applicationType": "camionetas",
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AOE-11724ST • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AOE-11724ST",
@@ -31698,7 +31698,7 @@ export const PRODUCTS: Product[] = [
     "name": "FILTRO ADVANCE ACEITE ELEMENTOJAC HFC 1140 7.8L, HFC 1160 7.8L, HFC 1180 7.8L - AOE9229/1",
     "brand": "Advance",
     "category": "filtros",
-    "applicationType": "autos",
+    "applicationType": "pesado",
     "shortSpec": "Filtro Automotriz Original Advance • SKU 080AOE-9229-1 • Retención micrométrica certificada",
     "specifications": {
       "Código de Artículo": "080AOE-9229-1",
@@ -32860,6 +32860,7 @@ export const PRODUCTS: Product[] = [
     "brand": "Abro",
     "category": "refrigerantes",
     "applicationType": "autos",
+    "volume": "Cuarto (946 ml)",
     "shortSpec": "Refrigerante Anticongelante Abro • Líquido Listo para Usar • Protección anticorrosiva",
     "specifications": {
       "Código de Artículo": "102EC-502LT",
@@ -33006,6 +33007,7 @@ export const PRODUCTS: Product[] = [
     "brand": "Abro",
     "category": "refrigerantes",
     "applicationType": "autos",
+    "volume": "Cuarto (946 ml)",
     "shortSpec": "Refrigerante Anticongelante Abro • Líquido Listo para Usar • Protección anticorrosiva",
     "specifications": {
       "Código de Artículo": "102EC-503LT",
@@ -35879,7 +35881,7 @@ export const PRODUCTS: Product[] = [
     "brand": "ATE",
     "category": "frenos",
     "applicationType": "autos",
-    "volume": "3 LITRO",
+    "volume": "Envase 1 Litro",
     "shortSpec": "Líquido de Frenos ATE Original • Alto punto de ebullición seco y húmedo",
     "specifications": {
       "Código de Artículo": "141ATE-G3",
@@ -35887,7 +35889,7 @@ export const PRODUCTS: Product[] = [
       "Categoría": "Frenos",
       "Ubicación": "Bodega Pedernales (Manabí)",
       "Disponibilidad": "Disponible para Despacho Inmediato",
-      "Presentación / Volumen": "3 LITRO"
+      "Presentación / Volumen": "Envase 1 Litro"
     },
     "fullSpecs": {
       "Código SKU": "141ATE-G3",
@@ -35962,7 +35964,7 @@ export const PRODUCTS: Product[] = [
     "brand": "ATE",
     "category": "frenos",
     "applicationType": "autos",
-    "volume": "4 LITRO",
+    "volume": "Envase 1 Litro",
     "shortSpec": "Líquido de Frenos ATE Original • Alto punto de ebullición seco y húmedo",
     "specifications": {
       "Código de Artículo": "141ATE-G4",
@@ -35970,7 +35972,7 @@ export const PRODUCTS: Product[] = [
       "Categoría": "Frenos",
       "Ubicación": "Bodega Pedernales (Manabí)",
       "Disponibilidad": "Disponible para Despacho Inmediato",
-      "Presentación / Volumen": "4 LITRO"
+      "Presentación / Volumen": "Envase 1 Litro"
     },
     "fullSpecs": {
       "Código SKU": "141ATE-G4",
@@ -36045,6 +36047,7 @@ export const PRODUCTS: Product[] = [
     "brand": "ATE",
     "category": "frenos",
     "applicationType": "autos",
+    "volume": "Envase 500 ml",
     "shortSpec": "Líquido de Frenos ATE Original • Alto punto de ebullición seco y húmedo",
     "specifications": {
       "Código de Artículo": "141ATE-M4",
@@ -36126,6 +36129,7 @@ export const PRODUCTS: Product[] = [
     "brand": "ATE",
     "category": "frenos",
     "applicationType": "autos",
+    "volume": "Pinta (250 ml)",
     "shortSpec": "Líquido de Frenos ATE Original • Alto punto de ebullición seco y húmedo",
     "specifications": {
       "Código de Artículo": "141ATE-P3",
@@ -36336,7 +36340,7 @@ export const PRODUCTS: Product[] = [
     "name": "ACDELCO REFRIGERANTE 50/50 GL",
     "brand": "ACDelco",
     "category": "refrigerantes",
-    "applicationType": "autos",
+    "applicationType": "pesado",
     "volume": "50 GL",
     "shortSpec": "Refrigerante Anticongelante ACDelco • 50 GL • Protección anticorrosiva",
     "specifications": {
@@ -37091,7 +37095,7 @@ export const PRODUCTS: Product[] = [
     "name": "MANNOL HYDRO HV ISO 32 LONGLIFE CAN 20/1 LT",
     "brand": "Mannol",
     "category": "lubricantes",
-    "applicationType": "autos",
+    "applicationType": "pesado",
     "volume": "Caneca 20 Litros",
     "shortSpec": "Lubricante Motor Mannol • Caneca 20 Litros • Protección contra fricción y desgaste",
     "specifications": {
@@ -37237,7 +37241,7 @@ export const PRODUCTS: Product[] = [
     "name": "MANNOL MULTIFARM STOU 10W-30 CAN 20/1 LT",
     "brand": "Mannol",
     "category": "lubricantes",
-    "applicationType": "autos",
+    "applicationType": "pesado",
     "volume": "Caneca 20 Litros",
     "shortSpec": "Químico / Aditivo Mannol • SKU MN2501-20 • Rendimiento y protección automotriz profesional",
     "specifications": {

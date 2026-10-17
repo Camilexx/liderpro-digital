@@ -7,13 +7,15 @@ import { PRODUCTS } from "@/data/products";
 
 const ITEMS_PER_PAGE = 24;
 
+type SortOption = "destacados" | "nombre-asc" | "nombre-desc" | "marca";
+
 const CATEGORIES: { id: string; label: string; icon: string }[] = [
   { id: "todas", label: "Todas las categorías", icon: "📦" },
   { id: "baterias", label: "Baterías (48)", icon: "🔋" },
-  { id: "lubricantes", label: "Aceites & Lubricantes (94)", icon: "🛢️" },
+  { id: "lubricantes", label: "Aceites & Lubricantes (119)", icon: "🛢️" },
   { id: "filtros", label: "Filtros (193)", icon: "⚙️" },
   { id: "refrigerantes", label: "Refrigerantes (15)", icon: "❄️" },
-  { id: "aditivos", label: "Aditivos & Químicos (134)", icon: "🧪" },
+  { id: "aditivos", label: "Aditivos & Químicos (109)", icon: "🧪" },
   { id: "bujias", label: "Bujías (20)", icon: "⚡" },
   { id: "frenos", label: "Líquidos de Freno (4)", icon: "🛑" },
 ];
@@ -23,6 +25,7 @@ export default function CatalogExplorer() {
   const [selectedCategory, setSelectedCategory] = useState<string>("todas");
   const [selectedBrand, setSelectedBrand] = useState<string>("todas");
   const [selectedApp, setSelectedApp] = useState<string>("todos");
+  const [sortBy, setSortBy] = useState<SortOption>("destacados");
   const [onlyInStock, setOnlyInStock] = useState<boolean>(false);
   const [onlyBestSeller, setOnlyBestSeller] = useState<boolean>(false);
   const [currentPage, setCurrentPage] = useState<number>(1);
@@ -40,7 +43,7 @@ export default function CatalogExplorer() {
   const filteredProducts = useMemo(() => {
     const query = searchTerm.toLowerCase().trim();
 
-    return PRODUCTS.filter((product) => {
+    const list = PRODUCTS.filter((product) => {
       // Search term filter (matches name, SKU, brand, shortSpec)
       if (query) {
         const matchName = product.name.toLowerCase().includes(query);
@@ -79,7 +82,27 @@ export default function CatalogExplorer() {
 
       return true;
     });
-  }, [searchTerm, selectedCategory, selectedBrand, selectedApp, onlyInStock, onlyBestSeller]);
+
+    // Institutional sorting
+    return list.sort((a, b) => {
+      if (sortBy === "destacados") {
+        if (a.isBestSeller && !b.isBestSeller) return -1;
+        if (!a.isBestSeller && b.isBestSeller) return 1;
+        return a.name.localeCompare(b.name);
+      }
+      if (sortBy === "nombre-asc") {
+        return a.name.localeCompare(b.name);
+      }
+      if (sortBy === "nombre-desc") {
+        return b.name.localeCompare(a.name);
+      }
+      if (sortBy === "marca") {
+        const brandComp = a.brand.localeCompare(b.brand);
+        return brandComp !== 0 ? brandComp : a.name.localeCompare(b.name);
+      }
+      return 0;
+    });
+  }, [searchTerm, selectedCategory, selectedBrand, selectedApp, onlyInStock, onlyBestSeller, sortBy]);
 
   // Pagination calculation
   const totalPages = Math.ceil(filteredProducts.length / ITEMS_PER_PAGE) || 1;
@@ -93,6 +116,7 @@ export default function CatalogExplorer() {
     setSelectedCategory("todas");
     setSelectedBrand("todas");
     setSelectedApp("todos");
+    setSortBy("destacados");
     setOnlyInStock(false);
     setOnlyBestSeller(false);
     setCurrentPage(1);
@@ -109,7 +133,7 @@ export default function CatalogExplorer() {
       <div className="bg-white rounded-3xl border border-slate-200/90 p-5 sm:p-7 shadow-sm space-y-6">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-4 items-center">
           {/* Main Instant Search Input */}
-          <div className="md:col-span-6 relative">
+          <div className="md:col-span-5 relative">
             <Search className="w-5 h-5 text-slate-400 absolute left-4 top-1/2 -translate-y-1/2" />
             <input
               type="text"
@@ -133,7 +157,7 @@ export default function CatalogExplorer() {
           </div>
 
           {/* Brand Selector Dropdown */}
-          <div className="md:col-span-3">
+          <div className="md:col-span-2">
             <select
               value={selectedBrand}
               onChange={(e) => {
@@ -142,7 +166,7 @@ export default function CatalogExplorer() {
               }}
               className="w-full px-3.5 py-3.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-bold text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#0A3B8C] focus:bg-white transition-all cursor-pointer"
             >
-              <option value="todas">Todas las marcas ({availableBrands.length})</option>
+              <option value="todas">Marcas ({availableBrands.length})</option>
               {availableBrands.map((b) => (
                 <option key={b} value={b}>
                   {b}
@@ -152,7 +176,7 @@ export default function CatalogExplorer() {
           </div>
 
           {/* Segment Selector Dropdown */}
-          <div className="md:col-span-3">
+          <div className="md:col-span-2">
             <select
               value={selectedApp}
               onChange={(e) => {
@@ -161,11 +185,28 @@ export default function CatalogExplorer() {
               }}
               className="w-full px-3.5 py-3.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-bold text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#0A3B8C] focus:bg-white transition-all cursor-pointer"
             >
-              <option value="todos">Todos los segmentos</option>
-              <option value="autos">Autos & SUVs Livianos</option>
+              <option value="todos">Segmentos</option>
+              <option value="autos">Autos & Sedanes</option>
               <option value="camionetas">Camionetas 4x4 & Diésel</option>
-              <option value="pesado">Pesado & Flotas / Camaroneras</option>
-              <option value="motos">Motos 4 Tiempos</option>
+              <option value="pesado">Pesado & Flotas</option>
+              <option value="motos">Motos 4T</option>
+            </select>
+          </div>
+
+          {/* Institutional Sort Dropdown */}
+          <div className="md:col-span-3">
+            <select
+              value={sortBy}
+              onChange={(e) => {
+                setSortBy(e.target.value as SortOption);
+                setCurrentPage(1);
+              }}
+              className="w-full px-3.5 py-3.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-bold text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#0A3B8C] focus:bg-white transition-all cursor-pointer"
+            >
+              <option value="destacados">⭐ Más vendidos primero</option>
+              <option value="nombre-asc">🔤 Nombre: A a la Z</option>
+              <option value="nombre-desc">🔤 Nombre: Z a la A</option>
+              <option value="marca">🏷️ Agrupar por Marca</option>
             </select>
           </div>
         </div>

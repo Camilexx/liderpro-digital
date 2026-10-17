@@ -136,7 +136,11 @@ export default function VehicleFinder({
 
   if (hasSearched) {
     if (activeSegment) {
-      matchedProducts = PRODUCTS.filter((p) => p.applicationType === activeSegment);
+      matchedProducts = PRODUCTS.filter((p) => p.applicationType === activeSegment).sort((a, b) => {
+        if (a.isBestSeller && !b.isBestSeller) return -1;
+        if (!a.isBestSeller && b.isBestSeller) return 1;
+        return a.name.localeCompare(b.name);
+      });
       isExactMatch = matchedProducts.length > 0;
       const segObj = SEGMENT_PRESETS.find((s) => s.id === activeSegment);
       matchLabel = segObj ? `Segmento activo: ${segObj.title}` : "Productos recomendados";

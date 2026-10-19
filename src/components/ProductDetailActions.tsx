@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { MessageCircle, Plus, Check, ShoppingBag } from "lucide-react";
-import { Product } from "@/data/products";
+import { Product, ProductVariant } from "@/data/products";
 import { buildWhatsAppLink } from "@/lib/whatsapp";
 import { useQuoteBasket } from "@/context/QuoteBasketContext";
 import { trackEvent } from "@/lib/analytics";
@@ -13,22 +13,38 @@ interface ProductDetailActionsProps {
 
 export default function ProductDetailActions({ product }: ProductDetailActionsProps) {
   const { addItem, setIsOpen, items } = useQuoteBasket();
+  const [selectedVariant, setSelectedVariant] = useState<ProductVariant | null>(
+    product.variants && product.variants.length > 0 ? product.variants[0] : null
+  );
   const [justAdded, setJustAdded] = useState(false);
   const [quantity, setQuantity] = useState(1);
 
-  const presentation = product.volume || product.plates;
-  const inBasketItem = items.find((it) => it.product.sku === product.sku);
+  const activeSku = selectedVariant ? selectedVariant.sku : product.sku;
+  const activeName = selectedVariant ? selectedVariant.name : product.name;
+  const presentation = selectedVariant
+    ? selectedVariant.presentation
+    : (product.volume || product.plates || undefined);
+  const inBasketItem = items.find((it) => it.product.sku === activeSku);
 
   const handleWhatsApp = () => {
     trackEvent("whatsapp_product_detail", {
-      sku: product.sku,
+      sku: activeSku,
       brand: product.brand,
-      name: product.name,
+      name: activeName,
     });
   };
 
   const handleAddToBasket = () => {
-    addItem(product, quantity);
+    const productToAdd: Product = selectedVariant
+      ? {
+          ...product,
+          sku: selectedVariant.sku,
+          name: selectedVariant.name,
+          volume: selectedVariant.presentation,
+          imageUrl: selectedVariant.imageUrl,
+        }
+      : product;
+    addItem(productToAdd, quantity);
     setJustAdded(true);
     setTimeout(() => {
       setJustAdded(false);
@@ -37,13 +53,47 @@ export default function ProductDetailActions({ product }: ProductDetailActionsPr
 
   return (
     <div className="space-y-3 pt-2">
+      {/* Interactive Variant Presentation Switcher on Detail Page */}
+      {product.variants && product.variants.length > 1 && (
+        <div className="bg-slate-50 border border-slate-200/90 rounded-2xl p-3.5 mb-2 space-y-2.5">
+          <div className="flex items-center justify-between text-xs font-black text-slate-800">
+            <span>Seleccionar Tamaño / Presentación:</span>
+            <span className="text-[#0A3B8C] font-mono font-bold bg-blue-50 px-2 py-0.5 rounded border border-blue-100">
+              SKU: {activeSku}
+            </span>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+            {product.variants.map((v) => {
+              const isSelected = activeSku === v.sku;
+              return (
+                <button
+                  key={v.sku}
+                  type="button"
+                  onClick={() => setSelectedVariant(v)}
+                  className={`py-2 px-2.5 rounded-xl text-xs font-bold text-center transition-all cursor-pointer border ${
+                    isSelected
+                      ? "bg-[#0A3B8C] text-white border-[#0A3B8C] shadow-sm font-black ring-2 ring-[#0A3B8C]/20"
+                      : "bg-white hover:bg-slate-100 text-slate-700 border-slate-200"
+                  }`}
+                >
+                  <div>{v.presentation}</div>
+                  <div className={`text-[10px] font-medium ${isSelected ? "text-blue-100" : "text-slate-400"}`}>
+                    {v.stock > 0 ? `${v.stock} en stock` : "Bajo pedido"}
+                  </div>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      )}
+
       {/* Primary WhatsApp Direct CTA */}
       <a
         href={buildWhatsAppLink("product", {
           brand: product.brand,
-          productName: product.name,
-          presentation: presentation,
-          sku: product.sku,
+          productName: activeName,
+          presentation: presentation || undefined,
+          sku: activeSku,
         })}
         target="_blank"
         rel="noopener noreferrer"

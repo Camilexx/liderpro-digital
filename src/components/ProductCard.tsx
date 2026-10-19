@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { MessageCircle, Package, Plus, Check, ShoppingBag } from "lucide-react";
-import { Product } from "@/data/products";
+import { Product, ProductVariant } from "@/data/products";
 import { buildWhatsAppLink } from "@/lib/whatsapp";
 import { trackEvent } from "@/lib/analytics";
 import { useQuoteBasket } from "@/context/QuoteBasketContext";
@@ -15,24 +15,41 @@ interface ProductCardProps {
 }
 
 export default function ProductCard({ product, priority = false }: ProductCardProps) {
+  const [selectedVariant, setSelectedVariant] = useState<ProductVariant | null>(
+    product.variants && product.variants.length > 0 ? product.variants[0] : null
+  );
   const [imgError, setImgError] = useState(false);
   const [justAdded, setJustAdded] = useState(false);
   const { addItem, items } = useQuoteBasket();
-  const presentation = product.volume || product.plates;
-  const inBasket = items.find((it) => it.product.sku === product.sku);
+
+  const activeSku = selectedVariant ? selectedVariant.sku : product.sku;
+  const activeImage = selectedVariant?.imageUrl || product.imageUrl;
+  const presentation = selectedVariant
+    ? selectedVariant.presentation
+    : (product.volume || product.plates || undefined);
+  const inBasket = items.find((it) => it.product.sku === activeSku);
 
   const handleWhatsApp = () => {
     trackEvent("whatsapp_product", {
-      sku: product.sku,
+      sku: activeSku,
       brand: product.brand,
-      name: product.name,
+      name: selectedVariant ? selectedVariant.name : product.name,
     });
   };
 
   const handleAddToBasket = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
-    addItem(product, 1);
+    const productToAdd: Product = selectedVariant
+      ? {
+          ...product,
+          sku: selectedVariant.sku,
+          name: selectedVariant.name,
+          volume: selectedVariant.presentation,
+          imageUrl: selectedVariant.imageUrl,
+        }
+      : product;
+    addItem(productToAdd, 1);
     setJustAdded(true);
     setTimeout(() => setJustAdded(false), 1800);
   };
@@ -44,7 +61,7 @@ export default function ProductCard({ product, priority = false }: ProductCardPr
         <div className="relative aspect-[4/3] min-h-[210px] sm:min-h-[190px] bg-gradient-to-b from-slate-50/90 to-slate-100/40 p-2 sm:p-3 flex items-center justify-center border-b border-slate-100 overflow-hidden">
           {!imgError ? (
             <Image
-              src={product.imageUrl}
+              src={activeImage}
               alt={`${product.brand} - ${product.name}`}
               fill
               priority={priority}
@@ -85,7 +102,7 @@ export default function ProductCard({ product, priority = false }: ProductCardPr
           <div className="flex items-center justify-between text-[10.5px] font-bold uppercase tracking-wider">
             <span className="text-[#0A3B8C] font-black">{product.category}</span>
             <span className="font-mono text-slate-500 text-[10px] bg-slate-100 px-1.5 py-0.5 rounded">
-              SKU: {product.sku}
+              SKU: {activeSku}
             </span>
           </div>
 
@@ -98,6 +115,37 @@ export default function ProductCard({ product, priority = false }: ProductCardPr
           <p className="text-xs text-slate-600 line-clamp-2 leading-relaxed">
             {product.shortSpec}
           </p>
+
+          {/* Interactive Variant Size Selector */}
+          {product.variants && product.variants.length > 1 && (
+            <div className="pt-2 pb-1 border-t border-slate-100 flex flex-wrap gap-1.5 items-center">
+              <span className="text-[9.5px] font-black text-slate-400 uppercase tracking-wider mr-0.5">
+                Tamaño:
+              </span>
+              {product.variants.map((v) => {
+                const isSelected = activeSku === v.sku;
+                return (
+                  <button
+                    key={v.sku}
+                    type="button"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      setSelectedVariant(v);
+                      setImgError(false);
+                    }}
+                    className={`px-2 py-0.5 rounded-md text-[10px] font-extrabold transition-all cursor-pointer border ${
+                      isSelected
+                        ? "bg-[#0A3B8C] text-white border-[#0A3B8C] shadow-2xs scale-102"
+                        : "bg-slate-50 hover:bg-slate-100 text-slate-700 border-slate-200"
+                    }`}
+                  >
+                    {v.presentation}
+                  </button>
+                );
+              })}
+            </div>
+          )}
         </div>
       </div>
 
@@ -126,9 +174,9 @@ export default function ProductCard({ product, priority = false }: ProductCardPr
           <a
             href={buildWhatsAppLink("product", {
               brand: product.brand,
-              productName: product.name,
-              presentation: presentation,
-              sku: product.sku,
+              productName: selectedVariant ? selectedVariant.name : product.name,
+              presentation: presentation || undefined,
+              sku: activeSku,
             })}
             target="_blank"
             rel="noopener noreferrer"

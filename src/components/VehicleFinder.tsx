@@ -554,7 +554,7 @@ export default function VehicleFinder({
                         href={buildWhatsAppLink("product", {
                           brand: prod.brand,
                           productName: prod.name,
-                          presentation: prod.volume || prod.plates,
+                          presentation: (prod.volume || prod.plates) || undefined,
                           sku: prod.sku,
                           vehicleMake: selectedMake,
                           vehicleModel: selectedModel,

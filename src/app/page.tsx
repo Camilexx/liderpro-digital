@@ -134,9 +134,9 @@ export default function HomePage() {
     <div className="space-y-12 sm:space-y-16 pb-16">
       {/* 01: HERO SECTION — Distribuidor Autorizado Multimarca desde Hub Pedernales */}
       <section className="pt-6 sm:pt-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto animate-fade-up">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
           {/* Left Column: High-Conversion Value Proposition */}
-          <div className="lg:col-span-7 space-y-5 text-left">
+          <div className="lg:col-span-6 space-y-5 text-left">
             {/* Live Operational Status Pill */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-slate-950 text-white rounded-full text-[11px] font-bold tracking-wider uppercase shadow-sm border border-slate-800">
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
@@ -144,7 +144,7 @@ export default function HomePage() {
             </div>
 
             {/* Main Headline with Satin Brand Gradient */}
-            <h1 className="text-3xl sm:text-5xl lg:text-[3.35rem] font-black tracking-tight text-slate-950 leading-[1.05]">
+            <h1 className="text-3xl sm:text-4xl lg:text-[3rem] font-black tracking-tight text-slate-950 leading-[1.08]">
               Distribuidor Autorizado Multimarca.
               <br />
               <span className="bg-gradient-to-r from-[#0A3B8C] via-[#0D47A1] to-[#0A3B8C] bg-clip-text text-transparent">
@@ -152,7 +152,7 @@ export default function HomePage() {
               </span>
             </h1>
 
-            <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-2xl font-normal">
+            <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
               Centro de acopio matriz y mostrador técnico en <strong>Pedernales, Manabí</strong>. Abastecemos con despacho diario a nivel nacional a vehículos livianos, camionetas 4x4, flotas comerciales, cooperativas de transporte y sector camaronero con marcas originales y garantía de fábrica.
             </p>
 
@@ -177,10 +177,10 @@ export default function HomePage() {
             </div>
 
             {/* High-Impact CTAs */}
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-1">
               <a
                 href="#buscador"
-                className="btn-primary btn-shine !py-4 !px-7 text-xs font-black tracking-wider flex items-center justify-center gap-2.5 text-center group"
+                className="btn-primary btn-shine !py-3.5 !px-6 text-xs font-black tracking-wider flex items-center justify-center gap-2.5 text-center group"
               >
                 <Search className="w-4 h-4" />
                 <span>BUSCAR POR MI VEHÍCULO</span>
@@ -191,7 +191,7 @@ export default function HomePage() {
                 href={buildWhatsAppLink("quick_compatibility")}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-whatsapp !py-4 !px-6 text-xs font-black tracking-wider flex items-center justify-center gap-2.5 text-center shadow-lg shadow-emerald-600/20"
+                className="btn-whatsapp !py-3.5 !px-6 text-xs font-black tracking-wider flex items-center justify-center gap-2.5 text-center shadow-lg shadow-emerald-600/20"
               >
                 <MessageCircle className="w-4 h-4" />
                 <span>COTIZAR EN SEDE PEDERNALES</span>
@@ -199,7 +199,7 @@ export default function HomePage() {
             </div>
 
             {/* Reassurance Microcopy Badges */}
-            <div className="pt-1 flex flex-wrap items-center gap-4 text-xs text-slate-700 font-medium">
+            <div className="pt-1 flex flex-wrap items-center gap-3 text-xs text-slate-700 font-medium">
               <div className="flex items-center gap-1.5">
                 <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
                 <span>Garantía de Fábrica Baterías Ecuador & Bosch</span>
@@ -210,75 +210,73 @@ export default function HomePage() {
               </div>
               <div className="flex items-center gap-1.5">
                 <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                <span>Despacho Express 24h a Quito, Guayaquil y Manta</span>
+                <span>Despacho Express 24h a Nivel Nacional</span>
               </div>
             </div>
           </div>
 
-          {/* Right Column: Studio Showcase Stage featuring Real Local in Pedernales */}
-          <div className="lg:col-span-5">
-            <div className="relative aspect-[4/3.2] sm:aspect-[4/3] lg:aspect-[1024/837] rounded-3xl overflow-hidden border-2 border-slate-200/90 shadow-2xl bg-slate-950 group">
+          {/* Right Column: Full-Protagonism Physical Store Showcase (Clean & Unblocked) */}
+          <div className="lg:col-span-6 space-y-3">
+            <div className="relative aspect-[1024/837] rounded-3xl overflow-hidden border-2 border-slate-200/90 shadow-2xl bg-slate-950 group">
               <Image
                 src="/images/hero/local-pedernales.jpg"
                 alt="Sede Central y Local Comercial LiderPro en Pedernales Manabí - Distribuidor Multimarca"
                 fill
                 priority
-                sizes="(max-width: 1024px) 100vw, 42vw"
-                className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover object-center group-hover:scale-[1.03] transition-transform duration-700 ease-out"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/25 to-slate-950/30 pointer-events-none" />
 
-              {/* Floating Live Badge Top Left */}
-              <div className="absolute top-3.5 left-3.5 bg-slate-950/90 backdrop-blur-md px-3 py-1.5 rounded-xl border border-white/20 shadow-xl text-white flex items-center gap-2 text-xs font-bold animate-fade-in">
-                <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
-                <span className="tracking-wide">Sede Matriz • Pedernales</span>
+              {/* Minimal Top Sky Badges (Only in sky area, zero overlap on store) */}
+              <div className="absolute top-3 left-3 bg-slate-950/80 backdrop-blur-md px-3 py-1 rounded-full border border-white/20 shadow-lg text-white flex items-center gap-2 text-[11px] font-bold">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                <span>Sede Matriz Física • Pedernales, Manabí</span>
               </div>
 
-              {/* Floating Quality Badge Top Right */}
-              <div className="absolute top-3.5 right-3.5 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-xl border border-white/40 shadow-xl text-slate-950 flex items-center gap-1.5 text-xs font-black animate-float-slow">
+              <div className="absolute top-3 right-3 bg-white/95 backdrop-blur-md px-3 py-1 rounded-full border border-white/40 shadow-lg text-slate-950 flex items-center gap-1.5 text-[11px] font-black">
                 <Sparkles className="w-3.5 h-3.5 text-amber-500 fill-amber-500" />
                 <span>Punto de Venta & Bodega</span>
               </div>
+            </div>
 
-              {/* Middle Interactive Category Quick-Toggles */}
-              <div className="absolute bottom-16 left-3.5 right-3.5 flex flex-wrap gap-1.5">
+            {/* Information & Quick Access Strip (Placed OUTSIDE image to ensure 100% photo visibility) */}
+            <div className="bg-white border border-slate-200/90 rounded-2xl p-3 shadow-sm space-y-2.5">
+              <div className="flex items-center justify-between text-xs text-slate-700 px-1">
+                <div className="flex items-center gap-2 font-bold text-slate-900">
+                  <MapPin className="w-4 h-4 text-emerald-600 shrink-0" />
+                  <span>Mostrador Comercial & Bodega Pedernales</span>
+                </div>
+                <span className="text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-200">
+                  📦 Stock Físico en Percha
+                </span>
+              </div>
+
+              {/* Clean Quick Category Pills */}
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-1.5">
                 <Link
                   href="/baterias"
-                  className="px-2.5 py-1 bg-black/65 backdrop-blur-md hover:bg-[#0A3B8C] text-white rounded-lg text-[10.5px] font-bold border border-white/25 transition-colors shadow-sm"
+                  className="px-2.5 py-2 bg-slate-50 hover:bg-[#0A3B8C] hover:text-white text-slate-800 rounded-xl text-center text-xs font-bold border border-slate-200 transition-colors flex items-center justify-center gap-1.5"
                 >
-                  ⚡ Baterías Selladas
+                  <span>⚡ Baterías</span>
                 </Link>
                 <Link
                   href="/lubricantes"
-                  className="px-2.5 py-1 bg-black/65 backdrop-blur-md hover:bg-amber-700 text-white rounded-lg text-[10.5px] font-bold border border-white/25 transition-colors shadow-sm"
+                  className="px-2.5 py-2 bg-slate-50 hover:bg-amber-600 hover:text-white text-slate-800 rounded-xl text-center text-xs font-bold border border-slate-200 transition-colors flex items-center justify-center gap-1.5"
                 >
-                  🛢️ Aceites Sintéticos & Diésel
+                  <span>🛢️ Lubricantes</span>
                 </Link>
                 <Link
                   href="/filtros"
-                  className="px-2.5 py-1 bg-black/65 backdrop-blur-md hover:bg-blue-700 text-white rounded-lg text-[10.5px] font-bold border border-white/25 transition-colors shadow-sm"
+                  className="px-2.5 py-2 bg-slate-50 hover:bg-blue-600 hover:text-white text-slate-800 rounded-xl text-center text-xs font-bold border border-slate-200 transition-colors flex items-center justify-center gap-1.5"
                 >
-                  🛡️ Filtros Advance
+                  <span>🛡️ Filtros</span>
                 </Link>
                 <Link
                   href="/b2b"
-                  className="px-2.5 py-1 bg-black/65 backdrop-blur-md hover:bg-emerald-700 text-white rounded-lg text-[10.5px] font-bold border border-white/25 transition-colors shadow-sm"
+                  className="px-2.5 py-2 bg-slate-50 hover:bg-emerald-600 hover:text-white text-slate-800 rounded-xl text-center text-xs font-bold border border-slate-200 transition-colors flex items-center justify-center gap-1.5"
                 >
-                  📦 Canecas & Flotas
+                  <span>📦 Flotas / B2B</span>
                 </Link>
-              </div>
-
-              {/* Bottom Card Ribbon */}
-              <div className="absolute bottom-3 left-3 right-3 text-white flex items-center justify-between gap-2 text-xs bg-slate-950/85 backdrop-blur-md p-2.5 rounded-2xl border border-white/15 shadow-xl">
-                <div className="flex items-center gap-2 min-w-0">
-                  <MapPin className="w-4 h-4 text-emerald-400 shrink-0" />
-                  <span className="font-bold tracking-wide text-xs truncate">
-                    Local Comercial & Bodega Pedernales, Manabí
-                  </span>
-                </div>
-                <span className="text-[10.5px] font-mono text-emerald-300 font-bold bg-emerald-950/80 px-2.5 py-1 rounded-lg border border-emerald-500/30 shrink-0">
-                  Despacho Nacional 24h
-                </span>
               </div>
             </div>
           </div>

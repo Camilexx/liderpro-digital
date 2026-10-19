@@ -77,8 +77,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-078AA-1531",
     "sku": "078AA-1531",
-    "slug": "advance-filtro-aire-ty-hilux-2-7l-fi-16-21-hilux-078aa-1531",
-    "name": "FILTRO AIRE TY HILUX 2.7L FI 16-21 HILUX 2.4L DI 16-21, FORTUNER 2.7L FI 16-21 ADVANCE",
+    "slug": "advance-advance-filtro-aire-ty-hilux-2-7l-fi-16-078aa-1531",
+    "name": "ADVANCE FILTRO AIRE TY HILUX 2.7L FI 16-21 HILUX 2.4L DI 16-21, FORTUNER 2.7L FI 16-21 ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "camionetas",
@@ -97,7 +97,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Camionetas",
       "Disponibilidad": "4 unid. listas para entrega"
     },
-    "description": "FILTRO AIRE TY HILUX 2.7L FI 16-21 HILUX 2.4L DI 16-21, FORTUNER 2.7L FI 16-21 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO AIRE TY HILUX 2.7L FI 16-21 HILUX 2.4L DI 16-21, FORTUNER 2.7L FI 16-21 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -139,8 +139,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-078AA-3040",
     "sku": "078AA-3040",
-    "slug": "advance-filtro-aire-jac-pick-up-t6-2-0-17-19-ga-078aa-3040",
-    "name": "FILTRO AIRE JAC PICK UP T6 2.0 17- 19 GASOLINA (PREM AIP1068 XTRAG AP-164) ADVANCE",
+    "slug": "advance-advance-filtro-aire-jac-pick-up-t6-2-0-1-078aa-3040",
+    "name": "ADVANCE FILTRO AIRE JAC PICK UP T6 2.0 17- 19 GASOLINA (PREM AIP1068 XTRAG AP-164) ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "camionetas",
@@ -159,7 +159,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Camionetas",
       "Disponibilidad": "3 unid. listas para entrega"
     },
-    "description": "FILTRO AIRE JAC PICK UP T6 2.0 17- 19 GASOLINA (PREM AIP1068 XTRAG AP-164) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO AIRE JAC PICK UP T6 2.0 17- 19 GASOLINA (PREM AIP1068 XTRAG AP-164) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -196,8 +196,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AA-10086",
     "sku": "080AA-10086",
-    "slug": "advance-filtro-aire-hy-tucson-2-0l-04-10-kia-sp-080aa-10086",
-    "name": "FILTRO AIRE HY TUCSON 2.0L 04-10, KIA SPORTAGE ADVANCE",
+    "slug": "advance-advance-filtro-aire-hy-tucson-2-0l-04-10-080aa-10086",
+    "name": "ADVANCE FILTRO AIRE HY TUCSON 2.0L 04-10, KIA SPORTAGE ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -216,7 +216,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "2 unid. listas para entrega"
     },
-    "description": "FILTRO AIRE HY TUCSON 2.0L 04-10, KIA SPORTAGE ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO AIRE HY TUCSON 2.0L 04-10, KIA SPORTAGE ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -258,8 +258,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AA-10088",
     "sku": "080AA-10088",
-    "slug": "advance-filtro-aire-hy-accent-1-4-1-6-rio-xcite-080aa-10088",
-    "name": "FILTRO AIRE HY ACCENT 1.4-1.6 RIO XCITE (XTRAG AP-111 RED 28113-1G000) ADVANCE",
+    "slug": "advance-advance-filtro-aire-hy-accent-1-4-1-6-ri-080aa-10088",
+    "name": "ADVANCE FILTRO AIRE HY ACCENT 1.4-1.6 RIO XCITE (XTRAG AP-111 RED 28113-1G000) ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -278,7 +278,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "1 unid. listas para entrega"
     },
-    "description": "FILTRO AIRE HY ACCENT 1.4-1.6 RIO XCITE (XTRAG AP-111 RED 28113-1G000) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO AIRE HY ACCENT 1.4-1.6 RIO XCITE (XTRAG AP-111 RED 28113-1G000) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -320,8 +320,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AA-10286",
     "sku": "080AA-10286",
-    "slug": "advance-filtro-aire-sz-gran-vitara-sz-2-0-2-7-ad-080aa-10286",
-    "name": "FILTRO AIRE SZ GRAN VITARA SZ 2.0 2.7 ADVANCE",
+    "slug": "advance-advance-filtro-aire-sz-gran-vitara-sz-2-080aa-10286",
+    "name": "ADVANCE FILTRO AIRE SZ GRAN VITARA SZ 2.0 2.7 ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -340,7 +340,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "2 unid. listas para entrega"
     },
-    "description": "FILTRO AIRE SZ GRAN VITARA SZ 2.0 2.7 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO AIRE SZ GRAN VITARA SZ 2.0 2.7 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -387,8 +387,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AA-10699",
     "sku": "080AA-10699",
-    "slug": "advance-filtro-aire-kia-soul-12-soluto-xcite-v-080aa-10699",
-    "name": "FILTRO AIRE KIA SOUL /12- SOLUTO/XCITE/VERNA /20- ADVANCE",
+    "slug": "advance-advance-filtro-aire-kia-soul-12-soluto-080aa-10699",
+    "name": "ADVANCE FILTRO AIRE KIA SOUL /12- SOLUTO/XCITE/VERNA /20- ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -407,7 +407,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "1 unid. listas para entrega"
     },
-    "description": "FILTRO AIRE KIA SOUL /12- SOLUTO/XCITE/VERNA /20- ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO AIRE KIA SOUL /12- SOLUTO/XCITE/VERNA /20- ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -449,8 +449,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AA-10891",
     "sku": "080AA-10891",
-    "slug": "advance-filtro-aire-ch-joy-aa-10891-advance-080aa-10891",
-    "name": "FILTRO AIRE CH JOY - AA- 10891 ADVANCE",
+    "slug": "advance-advance-filtro-aire-ch-joy-aa-10891-a-080aa-10891",
+    "name": "ADVANCE FILTRO AIRE CH JOY - AA- 10891 ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -469,7 +469,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "6 unid. listas para entrega"
     },
-    "description": "FILTRO AIRE CH JOY - AA- 10891 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO AIRE CH JOY - AA- 10891 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -506,8 +506,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AA-11071",
     "sku": "080AA-11071",
-    "slug": "advance-filtro-aire-ch-spark-gt-2011-beat-pr-080aa-11071",
-    "name": "FILTRO AIRE CH SPARK GT 2011, BEAT - (PREM AIP777 MIL MK-92369, RED 96827723) ADVANCE",
+    "slug": "advance-advance-filtro-aire-ch-spark-gt-2011-be-080aa-11071",
+    "name": "ADVANCE FILTRO AIRE CH SPARK GT 2011, BEAT - (PREM AIP777 MIL MK-92369, RED 96827723) ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -526,7 +526,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "2 unid. listas para entrega"
     },
-    "description": "FILTRO AIRE CH SPARK GT 2011, BEAT - (PREM AIP777 MIL MK-92369, RED 96827723) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO AIRE CH SPARK GT 2011, BEAT - (PREM AIP777 MIL MK-92369, RED 96827723) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -563,8 +563,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AA-11077",
     "sku": "080AA-11077",
-    "slug": "advance-filtro-aire-ch-luv-dmax-2-4-gas-trailbl-080aa-11077",
-    "name": "FILTRO AIRE CH LUV DMAX 2.4 GAS. TRAILBLAZER /15- (CILINDRICO) ADVANCE",
+    "slug": "advance-advance-filtro-aire-ch-luv-dmax-2-4-gas-080aa-11077",
+    "name": "ADVANCE FILTRO AIRE CH LUV DMAX 2.4 GAS. TRAILBLAZER /15- (CILINDRICO) ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "camionetas",
@@ -583,7 +583,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Camionetas",
       "Disponibilidad": "1 unid. listas para entrega"
     },
-    "description": "FILTRO AIRE CH LUV DMAX 2.4 GAS. TRAILBLAZER /15- (CILINDRICO) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO AIRE CH LUV DMAX 2.4 GAS. TRAILBLAZER /15- (CILINDRICO) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -625,8 +625,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AA-11085",
     "sku": "080AA-11085",
-    "slug": "advance-filtro-aire-zotye-t600-advance-080aa-11085",
-    "name": "FILTRO AIRE ZOTYE T600 ADVANCE",
+    "slug": "advance-advance-filtro-aire-zotye-t600-advance-080aa-11085",
+    "name": "ADVANCE FILTRO AIRE ZOTYE T600 ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "camionetas",
@@ -645,7 +645,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Camionetas",
       "Disponibilidad": "3 unid. listas para entrega"
     },
-    "description": "FILTRO AIRE ZOTYE T600 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO AIRE ZOTYE T600 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -687,8 +687,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AA-11113",
     "sku": "080AA-11113",
-    "slug": "advance-filtro-aire-dongfeng-rich-6-2020-aa-11-080aa-11113",
-    "name": "FILTRO AIRE DONGFENG RICH 6 2020 - AA-11113 ADVANCE",
+    "slug": "advance-advance-filtro-aire-dongfeng-rich-6-2020-080aa-11113",
+    "name": "ADVANCE FILTRO AIRE DONGFENG RICH 6 2020 - AA-11113 ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -707,7 +707,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "2 unid. listas para entrega"
     },
-    "description": "FILTRO AIRE DONGFENG RICH 6 2020 - AA-11113 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO AIRE DONGFENG RICH 6 2020 - AA-11113 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -744,8 +744,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AA-11652",
     "sku": "080AA-11652",
-    "slug": "advance-filtro-aire-rn-logan-ii-1-4-1-6-14-16-080aa-11652",
-    "name": "FILTRO AIRE RN LOGAN II 1.4, 1.6 (14-16) 2019, SANDERO 1.4 1.6 (14-16), 165469466R ADVANCE",
+    "slug": "advance-advance-filtro-aire-rn-logan-ii-1-4-1-6-080aa-11652",
+    "name": "ADVANCE FILTRO AIRE RN LOGAN II 1.4, 1.6 (14-16) 2019, SANDERO 1.4 1.6 (14-16), 165469466R ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -764,7 +764,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "2 unid. listas para entrega"
     },
-    "description": "FILTRO AIRE RN LOGAN II 1.4, 1.6 (14-16) 2019, SANDERO 1.4 1.6 (14-16), 165469466R ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO AIRE RN LOGAN II 1.4, 1.6 (14-16) 2019, SANDERO 1.4 1.6 (14-16), 165469466R ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -801,8 +801,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AA-11654",
     "sku": "080AA-11654",
-    "slug": "advance-filtro-aire-rn-logan-1-6-16-sandero-st-080aa-11654",
-    "name": "FILTRO AIRE RN LOGAN 1.6 /16- SANDERO STEPWAY 1.6 /16- DUSTER 1.6-2.0 /16- ADVANCE PANELADO 165460",
+    "slug": "advance-advance-filtro-aire-rn-logan-1-6-16-sa-080aa-11654",
+    "name": "ADVANCE FILTRO AIRE RN LOGAN 1.6 /16- SANDERO STEPWAY 1.6 /16- DUSTER 1.6-2.0 /16- ADVANCE PANELADO 165460",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -821,7 +821,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "2 unid. listas para entrega"
     },
-    "description": "FILTRO AIRE RN LOGAN 1.6 /16- SANDERO STEPWAY 1.6 /16- DUSTER 1.6-2.0 /16- ADVANCE PANELADO 165460 con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO AIRE RN LOGAN 1.6 /16- SANDERO STEPWAY 1.6 /16- DUSTER 1.6-2.0 /16- ADVANCE PANELADO 165460 con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -858,8 +858,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AA-11674",
     "sku": "080AA-11674",
-    "slug": "advance-filtro-aire-fd-ranger-nueva-2-5-mz-bt50-080aa-11674",
-    "name": "FILTRO AIRE FD RANGER NUEVA 2.5 MZ BT50 NUEVA (RED AIP892 XTRAG SR-2072 RED 1WA013Z40) (CIL) ADVANCE",
+    "slug": "advance-advance-filtro-aire-fd-ranger-nueva-2-5-080aa-11674",
+    "name": "ADVANCE FILTRO AIRE FD RANGER NUEVA 2.5 MZ BT50 NUEVA (RED AIP892 XTRAG SR-2072 RED 1WA013Z40) (CIL) ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "camionetas",
@@ -878,7 +878,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Camionetas",
       "Disponibilidad": "2 unid. listas para entrega"
     },
-    "description": "FILTRO AIRE FD RANGER NUEVA 2.5 MZ BT50 NUEVA (RED AIP892 XTRAG SR-2072 RED 1WA013Z40) (CIL) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO AIRE FD RANGER NUEVA 2.5 MZ BT50 NUEVA (RED AIP892 XTRAG SR-2072 RED 1WA013Z40) (CIL) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -915,8 +915,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AA-1380",
     "sku": "080AA-1380",
-    "slug": "advance-filtro-aire-ch-cruze-1-8-10-16-ch-orl-080aa-1380",
-    "name": "FILTRO AIRE CH CRUZE 1.8 /10-16 / CH ORLANDO ADVANCE",
+    "slug": "advance-advance-filtro-aire-ch-cruze-1-8-10-16-080aa-1380",
+    "name": "ADVANCE FILTRO AIRE CH CRUZE 1.8 /10-16 / CH ORLANDO ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -935,7 +935,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "3 unid. listas para entrega"
     },
-    "description": "FILTRO AIRE CH CRUZE 1.8 /10-16 / CH ORLANDO ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO AIRE CH CRUZE 1.8 /10-16 / CH ORLANDO ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -972,8 +972,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AA-1485",
     "sku": "080AA-1485",
-    "slug": "advance-filtro-aire-ch-spark-moderno-2006-07-pa-080aa-1485",
-    "name": "FILTRO AIRE CH SPARK MODERNO 2006-07 (PANEL) (MK-91485) ADVANCE",
+    "slug": "advance-advance-filtro-aire-ch-spark-moderno-200-080aa-1485",
+    "name": "ADVANCE FILTRO AIRE CH SPARK MODERNO 2006-07 (PANEL) (MK-91485) ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -992,7 +992,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "2 unid. listas para entrega"
     },
-    "description": "FILTRO AIRE CH SPARK MODERNO 2006-07 (PANEL) (MK-91485) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO AIRE CH SPARK MODERNO 2006-07 (PANEL) (MK-91485) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -1029,8 +1029,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AA-2070",
     "sku": "080AA-2070",
-    "slug": "advance-filtro-aire-hy-accent-rb-kia-rio-prem-a-080aa-2070",
-    "name": "FILTRO AIRE HY ACCENT RB KIA RIO (PREM AIP837 RED 28113-1R100) ADVANCE",
+    "slug": "advance-advance-filtro-aire-hy-accent-rb-kia-rio-080aa-2070",
+    "name": "ADVANCE FILTRO AIRE HY ACCENT RB KIA RIO (PREM AIP837 RED 28113-1R100) ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -1049,7 +1049,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "2 unid. listas para entrega"
     },
-    "description": "FILTRO AIRE HY ACCENT RB KIA RIO (PREM AIP837 RED 28113-1R100) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO AIRE HY ACCENT RB KIA RIO (PREM AIP837 RED 28113-1R100) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -1091,8 +1091,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AA-2217",
     "sku": "080AA-2217",
-    "slug": "advance-filtro-aire-ch-sail-advance-080aa-2217",
-    "name": "FILTRO AIRE CH SAIL ADVANCE",
+    "slug": "advance-advance-filtro-aire-ch-sail-advance-080aa-2217",
+    "name": "ADVANCE FILTRO AIRE CH SAIL ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -1111,7 +1111,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "5 unid. listas para entrega"
     },
-    "description": "FILTRO AIRE CH SAIL ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO AIRE CH SAIL ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -1148,8 +1148,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AA-25006",
     "sku": "080AA-25006",
-    "slug": "advance-filtro-aire-great-wall-poer-2-0t-diesel-080aa-25006",
-    "name": "FILTRO AIRE GREAT WALL POER 2.0T DIESEL 2022 - AA-25006 ADVANCE",
+    "slug": "advance-advance-filtro-aire-great-wall-poer-2-0t-080aa-25006",
+    "name": "ADVANCE FILTRO AIRE GREAT WALL POER 2.0T DIESEL 2022 - AA-25006 ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -1168,7 +1168,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "6 unid. listas para entrega"
     },
-    "description": "FILTRO AIRE GREAT WALL POER 2.0T DIESEL 2022 - AA-25006 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO AIRE GREAT WALL POER 2.0T DIESEL 2022 - AA-25006 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -1205,8 +1205,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AA-25011",
     "sku": "080AA-25011",
-    "slug": "advance-filtro-advance-aire-tank-300-2-0t-500-2-080aa-25011",
-    "name": "FILTRO ADVANCE AIRE TANK 300 2.0T, 500 2.0T - AA- 25011",
+    "slug": "advance-advance-filtro-advance-aire-tank-300-2-0-080aa-25011",
+    "name": "ADVANCE FILTRO ADVANCE AIRE TANK 300 2.0T, 500 2.0T - AA- 25011",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -1225,7 +1225,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "3 unid. listas para entrega"
     },
-    "description": "FILTRO ADVANCE AIRE TANK 300 2.0T, 500 2.0T - AA- 25011 con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO ADVANCE AIRE TANK 300 2.0T, 500 2.0T - AA- 25011 con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -1262,8 +1262,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AA-25040",
     "sku": "080AA-25040",
-    "slug": "advance-filtro-aire-ns-x-trail-14-qashqai-2-0-080aa-25040",
-    "name": "FILTRO AIRE NS X-TRAIL /14 QASHQAI 2.0 /15- RN KOLEOS ADVANCE",
+    "slug": "advance-advance-filtro-aire-ns-x-trail-14-qashq-080aa-25040",
+    "name": "ADVANCE FILTRO AIRE NS X-TRAIL /14 QASHQAI 2.0 /15- RN KOLEOS ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -1282,7 +1282,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "2 unid. listas para entrega"
     },
-    "description": "FILTRO AIRE NS X-TRAIL /14 QASHQAI 2.0 /15- RN KOLEOS ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO AIRE NS X-TRAIL /14 QASHQAI 2.0 /15- RN KOLEOS ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -1319,8 +1319,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AA-25128",
     "sku": "080AA-25128",
-    "slug": "advance-filtro-aire-mz-bt50-2-5-turbo-diesel-b25-080aa-25128",
-    "name": "FILTRO AIRE MZ BT50 2.5 TURBO DIESEL B2500 GALANT GAS 2000 DIESEL 4X2 (MIL MK-9021) ADVANCE",
+    "slug": "advance-advance-filtro-aire-mz-bt50-2-5-turbo-di-080aa-25128",
+    "name": "ADVANCE FILTRO AIRE MZ BT50 2.5 TURBO DIESEL B2500 GALANT GAS 2000 DIESEL 4X2 (MIL MK-9021) ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "camionetas",
@@ -1339,7 +1339,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Camionetas",
       "Disponibilidad": "3 unid. listas para entrega"
     },
-    "description": "FILTRO AIRE MZ BT50 2.5 TURBO DIESEL B2500 GALANT GAS 2000 DIESEL 4X2 (MIL MK-9021) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO AIRE MZ BT50 2.5 TURBO DIESEL B2500 GALANT GAS 2000 DIESEL 4X2 (MIL MK-9021) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -1376,8 +1376,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AA-2659",
     "sku": "080AA-2659",
-    "slug": "advance-filtro-aire-ch-luv-dmax-3-0-14-panelad-080aa-2659",
-    "name": "FILTRO AIRE CH LUV DMAX 3.0 /14- PANELADO ADVANCE",
+    "slug": "advance-advance-filtro-aire-ch-luv-dmax-3-0-14-080aa-2659",
+    "name": "ADVANCE FILTRO AIRE CH LUV DMAX 3.0 /14- PANELADO ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "camionetas",
@@ -1396,7 +1396,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Camionetas",
       "Disponibilidad": "6 unid. listas para entrega"
     },
-    "description": "FILTRO AIRE CH LUV DMAX 3.0 /14- PANELADO ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO AIRE CH LUV DMAX 3.0 /14- PANELADO ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -1438,8 +1438,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AA-2662",
     "sku": "080AA-2662",
-    "slug": "advance-filtro-advance-aire-chevrolet-d-max-2-0t-080aa-2662",
-    "name": "FILTRO ADVANCE AIRE CHEVROLET D-MAX 2.0T DIESEL 2025 CJ X 24 - AA-2662",
+    "slug": "advance-advance-filtro-advance-aire-chevrolet-d-080aa-2662",
+    "name": "ADVANCE FILTRO ADVANCE AIRE CHEVROLET D-MAX 2.0T DIESEL 2025 CJ X 24 - AA-2662",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "camionetas",
@@ -1458,7 +1458,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Camionetas",
       "Disponibilidad": "7 unid. listas para entrega"
     },
-    "description": "FILTRO ADVANCE AIRE CHEVROLET D-MAX 2.0T DIESEL 2025 CJ X 24 - AA-2662 con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO ADVANCE AIRE CHEVROLET D-MAX 2.0T DIESEL 2025 CJ X 24 - AA-2662 con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -1495,8 +1495,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AA-28115",
     "sku": "080AA-28115",
-    "slug": "advance-filtro-aire-hy-tucson-all-new-2-0-santa-080aa-28115",
-    "name": "FILTRO AIRE HY TUCSON ALL NEW 2.0 SANTA FE 2.5 SONATA 2.0 KIA SORENTO 3.5 ADVANCE",
+    "slug": "advance-advance-filtro-aire-hy-tucson-all-new-2-080aa-28115",
+    "name": "ADVANCE FILTRO AIRE HY TUCSON ALL NEW 2.0 SANTA FE 2.5 SONATA 2.0 KIA SORENTO 3.5 ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -1515,7 +1515,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "2 unid. listas para entrega"
     },
-    "description": "FILTRO AIRE HY TUCSON ALL NEW 2.0 SANTA FE 2.5 SONATA 2.0 KIA SORENTO 3.5 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO AIRE HY TUCSON ALL NEW 2.0 SANTA FE 2.5 SONATA 2.0 KIA SORENTO 3.5 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -1557,8 +1557,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AA-28130",
     "sku": "080AA-28130",
-    "slug": "advance-filtro-aire-hy-bus-county-hd65-hd72-080aa-28130",
-    "name": "FILTRO AIRE HY BUS COUNTY, HD65, HD72 , HD78 SELLO RADIAL (CILINDRICO) ADVANCE (MK-94190)",
+    "slug": "advance-advance-filtro-aire-hy-bus-county-hd65-080aa-28130",
+    "name": "ADVANCE FILTRO AIRE HY BUS COUNTY, HD65, HD72 , HD78 SELLO RADIAL (CILINDRICO) ADVANCE (MK-94190)",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -1577,7 +1577,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "1 unid. listas para entrega"
     },
-    "description": "FILTRO AIRE HY BUS COUNTY, HD65, HD72 , HD78 SELLO RADIAL (CILINDRICO) ADVANCE (MK-94190) con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO AIRE HY BUS COUNTY, HD65, HD72 , HD78 SELLO RADIAL (CILINDRICO) ADVANCE (MK-94190) con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -1614,8 +1614,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AA-3603",
     "sku": "080AA-3603",
-    "slug": "advance-filtro-aire-kia-grand-pregio-2006-2012-080aa-3603",
-    "name": "FILTRO AIRE KIA GRAND PREGIO 2006-2012 (CILINDRICO) ADVANCE",
+    "slug": "advance-advance-filtro-aire-kia-grand-pregio-200-080aa-3603",
+    "name": "ADVANCE FILTRO AIRE KIA GRAND PREGIO 2006-2012 (CILINDRICO) ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -1634,7 +1634,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "3 unid. listas para entrega"
     },
-    "description": "FILTRO AIRE KIA GRAND PREGIO 2006-2012 (CILINDRICO) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO AIRE KIA GRAND PREGIO 2006-2012 (CILINDRICO) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -1671,8 +1671,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AA-38240",
     "sku": "080AA-38240",
-    "slug": "advance-filtro-aire-great-wall-wingle-5-2-0-dies-080aa-38240",
-    "name": "FILTRO AIRE GREAT WALL WINGLE 5 2.0 DIESEL 19, WINGLE 7 ADVANCE",
+    "slug": "advance-advance-filtro-aire-great-wall-wingle-5-080aa-38240",
+    "name": "ADVANCE FILTRO AIRE GREAT WALL WINGLE 5 2.0 DIESEL 19, WINGLE 7 ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "camionetas",
@@ -1691,7 +1691,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Camionetas",
       "Disponibilidad": "3 unid. listas para entrega"
     },
-    "description": "FILTRO AIRE GREAT WALL WINGLE 5 2.0 DIESEL 19, WINGLE 7 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO AIRE GREAT WALL WINGLE 5 2.0 DIESEL 19, WINGLE 7 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -1728,8 +1728,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AA-4000",
     "sku": "080AA-4000",
-    "slug": "advance-filtro-aire-kia-picanto-r-10-17-28113-080aa-4000",
-    "name": "FILTRO AIRE KIA PICANTO R /10-17 (28113-1Y100) ADVANCE",
+    "slug": "advance-advance-filtro-aire-kia-picanto-r-10-17-080aa-4000",
+    "name": "ADVANCE FILTRO AIRE KIA PICANTO R /10-17 (28113-1Y100) ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -1748,7 +1748,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "2 unid. listas para entrega"
     },
-    "description": "FILTRO AIRE KIA PICANTO R /10-17 (28113-1Y100) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO AIRE KIA PICANTO R /10-17 (28113-1Y100) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -1785,8 +1785,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AA-4309",
     "sku": "080AA-4309",
-    "slug": "advance-filtro-aire-ns-sentra-b-15-almera-murano-080aa-4309",
-    "name": "FILTRO AIRE NS SENTRA B-15 ALMERA MURANO PATHFINDER 3.0/CH SCROSS (16546-0Z000) ADVANCE",
+    "slug": "advance-advance-filtro-aire-ns-sentra-b-15-almer-080aa-4309",
+    "name": "ADVANCE FILTRO AIRE NS SENTRA B-15 ALMERA MURANO PATHFINDER 3.0/CH SCROSS (16546-0Z000) ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -1805,7 +1805,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "2 unid. listas para entrega"
     },
-    "description": "FILTRO AIRE NS SENTRA B-15 ALMERA MURANO PATHFINDER 3.0/CH SCROSS (16546-0Z000) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO AIRE NS SENTRA B-15 ALMERA MURANO PATHFINDER 3.0/CH SCROSS (16546-0Z000) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -1842,8 +1842,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AA-4939",
     "sku": "080AA-4939",
-    "slug": "advance-filtro-aire-ch-rodeo-2-6-redondo-advan-080aa-4939",
-    "name": "FILTRO AIRE CH RODEO 2.6 (REDONDO) ADVANCE",
+    "slug": "advance-advance-filtro-aire-ch-rodeo-2-6-redond-080aa-4939",
+    "name": "ADVANCE FILTRO AIRE CH RODEO 2.6 (REDONDO) ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -1862,7 +1862,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "2 unid. listas para entrega"
     },
-    "description": "FILTRO AIRE CH RODEO 2.6 (REDONDO) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO AIRE CH RODEO 2.6 (REDONDO) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -1899,8 +1899,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AA-51943",
     "sku": "080AA-51943",
-    "slug": "advance-filtro-aire-ch-luv-dmax-2-4-dmax-3-5-gas-080aa-51943",
-    "name": "FILTRO AIRE CH LUV DMAX 2.4 DMAX 3.5 GASOLINA / MT L200 ADVANCE",
+    "slug": "advance-advance-filtro-aire-ch-luv-dmax-2-4-dmax-080aa-51943",
+    "name": "ADVANCE FILTRO AIRE CH LUV DMAX 2.4 DMAX 3.5 GASOLINA / MT L200 ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "camionetas",
@@ -1919,7 +1919,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Camionetas",
       "Disponibilidad": "1 unid. listas para entrega"
     },
-    "description": "FILTRO AIRE CH LUV DMAX 2.4 DMAX 3.5 GASOLINA / MT L200 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO AIRE CH LUV DMAX 2.4 DMAX 3.5 GASOLINA / MT L200 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -1961,8 +1961,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AA-54661",
     "sku": "080AA-54661",
-    "slug": "advance-filtro-advance-aire-nissan-x-trail-e-pow-080aa-54661",
-    "name": "FILTRO ADVANCE AIRE NISSAN X-TRAIL E-POWER 1.5 VC TURBO(E-4ORCE T33) QASHQAI 1.3T CAJA X 24 - AA- 54",
+    "slug": "advance-advance-filtro-advance-aire-nissan-x-tra-080aa-54661",
+    "name": "ADVANCE FILTRO ADVANCE AIRE NISSAN X-TRAIL E-POWER 1.5 VC TURBO(E-4ORCE T33) QASHQAI 1.3T CAJA X 24 - AA- 54",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -1981,7 +1981,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "1 unid. listas para entrega"
     },
-    "description": "FILTRO ADVANCE AIRE NISSAN X-TRAIL E-POWER 1.5 VC TURBO(E-4ORCE T33) QASHQAI 1.3T CAJA X 24 - AA- 54 con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO ADVANCE AIRE NISSAN X-TRAIL E-POWER 1.5 VC TURBO(E-4ORCE T33) QASHQAI 1.3T CAJA X 24 - AA- 54 con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -2018,8 +2018,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AA-5827",
     "sku": "080AA-5827",
-    "slug": "advance-filtro-aire-vw-golf-jetta-sk-octavia-aud-080aa-5827",
-    "name": "FILTRO AIRE VW GOLF JETTA SK OCTAVIA AUDI A3 1.8T - AA-5827 ADVANCE (MK-5827)",
+    "slug": "advance-advance-filtro-aire-vw-golf-jetta-sk-oct-080aa-5827",
+    "name": "ADVANCE FILTRO AIRE VW GOLF JETTA SK OCTAVIA AUDI A3 1.8T - AA-5827 ADVANCE (MK-5827)",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -2038,7 +2038,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "3 unid. listas para entrega"
     },
-    "description": "FILTRO AIRE VW GOLF JETTA SK OCTAVIA AUDI A3 1.8T - AA-5827 ADVANCE (MK-5827) con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO AIRE VW GOLF JETTA SK OCTAVIA AUDI A3 1.8T - AA-5827 ADVANCE (MK-5827) con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -2080,8 +2080,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AA-5903",
     "sku": "080AA-5903",
-    "slug": "advance-filtro-aire-mz-bt50-ty-hilux-2-5-2-7-0-080aa-5903",
-    "name": "FILTRO AIRE MZ BT50 TY HILUX 2.5-2.7 /-09 / FORTUNERJAC 2.8 (CILINDRICO) ADVANCE",
+    "slug": "advance-advance-filtro-aire-mz-bt50-ty-hilux-2-5-080aa-5903",
+    "name": "ADVANCE FILTRO AIRE MZ BT50 TY HILUX 2.5-2.7 /-09 / FORTUNERJAC 2.8 (CILINDRICO) ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "camionetas",
@@ -2100,7 +2100,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Camionetas",
       "Disponibilidad": "2 unid. listas para entrega"
     },
-    "description": "FILTRO AIRE MZ BT50 TY HILUX 2.5-2.7 /-09 / FORTUNERJAC 2.8 (CILINDRICO) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO AIRE MZ BT50 TY HILUX 2.5-2.7 /-09 / FORTUNERJAC 2.8 (CILINDRICO) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -2147,8 +2147,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AA-6000",
     "sku": "080AA-6000",
-    "slug": "advance-filtro-aire-kia-picanto-new-2017-red-28-080aa-6000",
-    "name": "FILTRO AIRE KIA PICANTO NEW 2017 (RED 28113-G6000 XTRAGUARD CA-G6000) ADVANCE",
+    "slug": "advance-advance-filtro-aire-kia-picanto-new-2017-080aa-6000",
+    "name": "ADVANCE FILTRO AIRE KIA PICANTO NEW 2017 (RED 28113-G6000 XTRAGUARD CA-G6000) ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -2167,7 +2167,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "2 unid. listas para entrega"
     },
-    "description": "FILTRO AIRE KIA PICANTO NEW 2017 (RED 28113-G6000 XTRAGUARD CA-G6000) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO AIRE KIA PICANTO NEW 2017 (RED 28113-G6000 XTRAGUARD CA-G6000) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -2204,8 +2204,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AA-6012",
     "sku": "080AA-6012",
-    "slug": "advance-filtro-aire-isuzu-npr-3-9-turbo-nhr-nkr-080aa-6012",
-    "name": "FILTRO AIRE ISUZU NPR 3,9 TURBO NHR NKR 8941560520 (CILINDRICO) ADVANCE (MK-5070)",
+    "slug": "advance-advance-filtro-aire-isuzu-npr-3-9-turbo-080aa-6012",
+    "name": "ADVANCE FILTRO AIRE ISUZU NPR 3,9 TURBO NHR NKR 8941560520 (CILINDRICO) ADVANCE (MK-5070)",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "pesado",
@@ -2224,7 +2224,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Pesado",
       "Disponibilidad": "1 unid. listas para entrega"
     },
-    "description": "FILTRO AIRE ISUZU NPR 3,9 TURBO NHR NKR 8941560520 (CILINDRICO) ADVANCE (MK-5070) con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO AIRE ISUZU NPR 3,9 TURBO NHR NKR 8941560520 (CILINDRICO) ADVANCE (MK-5070) con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -2271,8 +2271,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AA-6127",
     "sku": "080AA-6127",
-    "slug": "advance-filtro-aire-ch-d-max-2-5-3-5-tdi-aa-612-080aa-6127",
-    "name": "FILTRO AIRE CH D-MAX 2.5 3.5 TDI (AA-6127/SR-550/AIP682/8-97147860910) (CILINDRICO) ADVANCE",
+    "slug": "advance-advance-filtro-aire-ch-d-max-2-5-3-5-tdi-080aa-6127",
+    "name": "ADVANCE FILTRO AIRE CH D-MAX 2.5 3.5 TDI (AA-6127/SR-550/AIP682/8-97147860910) (CILINDRICO) ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "camionetas",
@@ -2291,7 +2291,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Camionetas",
       "Disponibilidad": "3 unid. listas para entrega"
     },
-    "description": "FILTRO AIRE CH D-MAX 2.5 3.5 TDI (AA-6127/SR-550/AIP682/8-97147860910) (CILINDRICO) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO AIRE CH D-MAX 2.5 3.5 TDI (AA-6127/SR-550/AIP682/8-97147860910) (CILINDRICO) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -2328,8 +2328,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AA-6558",
     "sku": "080AA-6558",
-    "slug": "advance-filtro-aire-mz-bt-50-gasolina-2200-iny-f-080aa-6558",
-    "name": "FILTRO AIRE MZ BT-50 GASOLINA 2200 INY FD RANGER 2.2 2.6 2008 ADVANCE",
+    "slug": "advance-advance-filtro-aire-mz-bt-50-gasolina-22-080aa-6558",
+    "name": "ADVANCE FILTRO AIRE MZ BT-50 GASOLINA 2200 INY FD RANGER 2.2 2.6 2008 ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "camionetas",
@@ -2348,7 +2348,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Camionetas",
       "Disponibilidad": "2 unid. listas para entrega"
     },
-    "description": "FILTRO AIRE MZ BT-50 GASOLINA 2200 INY FD RANGER 2.2 2.6 2008 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO AIRE MZ BT-50 GASOLINA 2200 INY FD RANGER 2.2 2.6 2008 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -2385,8 +2385,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AA-6664",
     "sku": "080AA-6664",
-    "slug": "advance-filtro-aire-ch-vitara-1-6-97-01-cuadra-080aa-6664",
-    "name": "FILTRO AIRE CH VITARA 1.6 /97-01 (CUADRADO) ADVANCE",
+    "slug": "advance-advance-filtro-aire-ch-vitara-1-6-97-01-080aa-6664",
+    "name": "ADVANCE FILTRO AIRE CH VITARA 1.6 /97-01 (CUADRADO) ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -2405,7 +2405,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "3 unid. listas para entrega"
     },
-    "description": "FILTRO AIRE CH VITARA 1.6 /97-01 (CUADRADO) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO AIRE CH VITARA 1.6 /97-01 (CUADRADO) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -2442,8 +2442,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AA-6900",
     "sku": "080AA-6900",
-    "slug": "advance-filtro-aire-ns-sentra-b14-rn-duster-adva-080aa-6900",
-    "name": "FILTRO AIRE NS SENTRA B14 RN DUSTER ADVANCE (PREM AIP515 XTRAG AP-103 RED 16546-73C10)",
+    "slug": "advance-advance-filtro-aire-ns-sentra-b14-rn-dus-080aa-6900",
+    "name": "ADVANCE FILTRO AIRE NS SENTRA B14 RN DUSTER ADVANCE (PREM AIP515 XTRAG AP-103 RED 16546-73C10)",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -2462,7 +2462,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "2 unid. listas para entrega"
     },
-    "description": "FILTRO AIRE NS SENTRA B14 RN DUSTER ADVANCE (PREM AIP515 XTRAG AP-103 RED 16546-73C10) con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO AIRE NS SENTRA B14 RN DUSTER ADVANCE (PREM AIP515 XTRAG AP-103 RED 16546-73C10) con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -2499,8 +2499,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AA-7617",
     "sku": "080AA-7617",
-    "slug": "advance-filtro-aire-ch-vitara-spts-iny-advance-080aa-7617",
-    "name": "FILTRO AIRE CH VITARA SPTS INY ADVANCE",
+    "slug": "advance-advance-filtro-aire-ch-vitara-spts-iny-a-080aa-7617",
+    "name": "ADVANCE FILTRO AIRE CH VITARA SPTS INY ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -2519,7 +2519,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "3 unid. listas para entrega"
     },
-    "description": "FILTRO AIRE CH VITARA SPTS INY ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO AIRE CH VITARA SPTS INY ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -2556,8 +2556,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AA-8067",
     "sku": "080AA-8067",
-    "slug": "advance-filtro-aire-ch-rodeo-3-2-trooper-3-2-l-080aa-8067",
-    "name": "FILTRO AIRE CH RODEO 3.2, TROOPER 3.2, LUV 2.2, 2.3, 3.2 ADVANCE",
+    "slug": "advance-advance-filtro-aire-ch-rodeo-3-2-troope-080aa-8067",
+    "name": "ADVANCE FILTRO AIRE CH RODEO 3.2, TROOPER 3.2, LUV 2.2, 2.3, 3.2 ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -2576,7 +2576,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "4 unid. listas para entrega"
     },
-    "description": "FILTRO AIRE CH RODEO 3.2, TROOPER 3.2, LUV 2.2, 2.3, 3.2 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO AIRE CH RODEO 3.2, TROOPER 3.2, LUV 2.2, 2.3, 3.2 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -2613,8 +2613,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AA-8069",
     "sku": "080AA-8069",
-    "slug": "advance-filtro-aire-ch-gran-vitara-3ptas-prem-ai-080aa-8069",
-    "name": "FILTRO AIRE CH GRAN VITARA 3PTAS(PREM AIP513 XTRAG WA-8069 RED 25311970) ADVANCE",
+    "slug": "advance-advance-filtro-aire-ch-gran-vitara-3ptas-080aa-8069",
+    "name": "ADVANCE FILTRO AIRE CH GRAN VITARA 3PTAS(PREM AIP513 XTRAG WA-8069 RED 25311970) ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -2633,7 +2633,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "1 unid. listas para entrega"
     },
-    "description": "FILTRO AIRE CH GRAN VITARA 3PTAS(PREM AIP513 XTRAG WA-8069 RED 25311970) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO AIRE CH GRAN VITARA 3PTAS(PREM AIP513 XTRAG WA-8069 RED 25311970) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -2675,8 +2675,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AA-8078",
     "sku": "080AA-8078",
-    "slug": "advance-filtro-aire-sz-gran-vitara-sz-2-4-78k00-080aa-8078",
-    "name": "FILTRO AIRE SZ GRAN VITARA SZ 2.4 78K00 ADVANCE",
+    "slug": "advance-advance-filtro-aire-sz-gran-vitara-sz-2-080aa-8078",
+    "name": "ADVANCE FILTRO AIRE SZ GRAN VITARA SZ 2.4 78K00 ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -2695,7 +2695,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "2 unid. listas para entrega"
     },
-    "description": "FILTRO AIRE SZ GRAN VITARA SZ 2.4 78K00 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO AIRE SZ GRAN VITARA SZ 2.4 78K00 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -2742,8 +2742,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AA-8590",
     "sku": "080AA-8590",
-    "slug": "advance-filtro-aire-hy-tucson-ix-kia-sportage-r-080aa-8590",
-    "name": "FILTRO AIRE HY TUCSON IX KIA SPORTAGE R 11-12 CRETA - (MK-29766 PREM AIP767 ADVANCE",
+    "slug": "advance-advance-filtro-aire-hy-tucson-ix-kia-spo-080aa-8590",
+    "name": "ADVANCE FILTRO AIRE HY TUCSON IX KIA SPORTAGE R 11-12 CRETA - (MK-29766 PREM AIP767 ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -2762,7 +2762,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "1 unid. listas para entrega"
     },
-    "description": "FILTRO AIRE HY TUCSON IX KIA SPORTAGE R 11-12 CRETA - (MK-29766 PREM AIP767 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO AIRE HY TUCSON IX KIA SPORTAGE R 11-12 CRETA - (MK-29766 PREM AIP767 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -2804,8 +2804,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AA-8964",
     "sku": "080AA-8964",
-    "slug": "advance-filtro-aire-rn-logan-sandero-duster-mega-080aa-8964",
-    "name": "FILTRO AIRE RN LOGAN/SANDERO/DUSTER/MEGANE ADVANCE C1858/1",
+    "slug": "advance-advance-filtro-aire-rn-logan-sandero-dus-080aa-8964",
+    "name": "ADVANCE FILTRO AIRE RN LOGAN/SANDERO/DUSTER/MEGANE ADVANCE C1858/1",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -2824,7 +2824,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "2 unid. listas para entrega"
     },
-    "description": "FILTRO AIRE RN LOGAN/SANDERO/DUSTER/MEGANE ADVANCE C1858/1 con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO AIRE RN LOGAN/SANDERO/DUSTER/MEGANE ADVANCE C1858/1 con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -2861,8 +2861,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AA-9100",
     "sku": "080AA-9100",
-    "slug": "advance-filtro-aire-kia-rio-x-line-18-gt-limite-080aa-9100",
-    "name": "FILTRO AIRE KIA RIO X LINE /18 GT LIMITED SPORT ADVANCE",
+    "slug": "advance-advance-filtro-aire-kia-rio-x-line-18-g-080aa-9100",
+    "name": "ADVANCE FILTRO AIRE KIA RIO X LINE /18 GT LIMITED SPORT ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -2881,7 +2881,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "6 unid. listas para entrega"
     },
-    "description": "FILTRO AIRE KIA RIO X LINE /18 GT LIMITED SPORT ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO AIRE KIA RIO X LINE /18 GT LIMITED SPORT ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -2916,37 +2916,37 @@ export const PRODUCTS: Product[] = [
     "isBestSeller": false
   },
   {
-    "id": "prod-080AA-38240",
-    "sku": "080AA-38240",
-    "slug": "advance-filtro-aire-great-wall-wingle-22-advanc-080aa-38240",
-    "name": "FILTRO AIRE GREAT WALL WINGLE /22 ADVANCE",
+    "id": "prod-080AA-9102",
+    "sku": "080AA-9102",
+    "slug": "advance-advance-filtro-aire-great-wall-wingle-2-080aa-9102",
+    "name": "ADVANCE FILTRO AIRE GREAT WALL WINGLE /22 ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "camionetas",
     "volume": null,
-    "shortSpec": "Producto original ADVANCE. Código OEM / Referencia: 080AA-38240. Stock disponible en Pedernales.",
+    "shortSpec": "Producto original ADVANCE. Código OEM / Referencia: 080AA-9102. Stock disponible en Pedernales.",
     "specifications": {
-      "Código / SKU": "080AA-38240",
+      "Código / SKU": "080AA-9102",
       "Marca": "ADVANCE",
       "Tipo": "Filtro Automotriz",
-      "Stock Actual": "3 unidades",
+      "Stock Actual": "4 unidades",
       "Bodega": "Pedernales Matriz"
     },
     "fullSpecs": {
-      "Referencia Comercial": "080AA-38240",
+      "Referencia Comercial": "080AA-9102",
       "Fabricante": "ADVANCE",
       "Aplicación": "Camionetas",
-      "Disponibilidad": "3 unid. listas para entrega"
+      "Disponibilidad": "4 unid. listas para entrega"
     },
-    "description": "FILTRO AIRE GREAT WALL WINGLE /22 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO AIRE GREAT WALL WINGLE /22 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
     "inStock": true,
-    "stockStatusText": "3 unidades en Bodega Pedernales",
+    "stockStatusText": "4 unidades en Bodega Pedernales",
     "dispatchIndicator": "Despacho Inmediato",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/080AA-38240.png",
+    "imageUrl": "/images/products/080AA-9102.png",
     "compatibleVehicles": [
       {
         "make": "Great Wall",
@@ -2962,12 +2962,12 @@ export const PRODUCTS: Product[] = [
     ],
     "faqs": [
       {
-        "question": "¿Este producto 080AA-38240 es compatible con mi vehículo?",
+        "question": "¿Este producto 080AA-9102 es compatible con mi vehículo?",
         "answer": "Nuestros asesores técnicos en Pedernales validan la compatibilidad exacta con tu número de chasis o modelo por WhatsApp antes del envío."
       },
       {
         "question": "¿Tienen stock para retiro inmediato en tienda física?",
-        "answer": "Sí, disponemos de 3 unidades en nuestro local matriz de Pedernales listo para entrega inmediata."
+        "answer": "Sí, disponemos de 4 unidades en nuestro local matriz de Pedernales listo para entrega inmediata."
       }
     ],
     "isBestSeller": false
@@ -2975,8 +2975,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AA-9110",
     "sku": "080AA-9110",
-    "slug": "advance-filtro-aire-zx-auto-grand-tiger-wingle-a-080aa-9110",
-    "name": "FILTRO AIRE ZX AUTO-GRAND TIGER-WINGLE ADVANCE A38010 1109101-K08-A1",
+    "slug": "advance-advance-filtro-aire-zx-auto-grand-tiger-080aa-9110",
+    "name": "ADVANCE FILTRO AIRE ZX AUTO-GRAND TIGER-WINGLE ADVANCE A38010 1109101-K08-A1",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "camionetas",
@@ -2995,7 +2995,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Camionetas",
       "Disponibilidad": "3 unid. listas para entrega"
     },
-    "description": "FILTRO AIRE ZX AUTO-GRAND TIGER-WINGLE ADVANCE A38010 1109101-K08-A1 con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO AIRE ZX AUTO-GRAND TIGER-WINGLE ADVANCE A38010 1109101-K08-A1 con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -3032,8 +3032,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AA-9123",
     "sku": "080AA-9123",
-    "slug": "advance-filtro-aire-chery-tiggo-2-pro-1-5l-aa-080aa-9123",
-    "name": "FILTRO AIRE CHERY TIGGO 2 PRO 1.5L - AA-9123 ADVANCE",
+    "slug": "advance-advance-filtro-aire-chery-tiggo-2-pro-1-080aa-9123",
+    "name": "ADVANCE FILTRO AIRE CHERY TIGGO 2 PRO 1.5L - AA-9123 ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -3052,7 +3052,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "3 unid. listas para entrega"
     },
-    "description": "FILTRO AIRE CHERY TIGGO 2 PRO 1.5L - AA-9123 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO AIRE CHERY TIGGO 2 PRO 1.5L - AA-9123 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -3089,8 +3089,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AA-9124",
     "sku": "080AA-9124",
-    "slug": "advance-filtro-aire-chery-arrizo-5-1-5-aa-912-080aa-9124",
-    "name": "FILTRO AIRE CHERY ARRIZO 5 1.5 - AA- 9124 ADVANCE",
+    "slug": "advance-advance-filtro-aire-chery-arrizo-5-1-5-080aa-9124",
+    "name": "ADVANCE FILTRO AIRE CHERY ARRIZO 5 1.5 - AA- 9124 ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -3109,7 +3109,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "2 unid. listas para entrega"
     },
-    "description": "FILTRO AIRE CHERY ARRIZO 5 1.5 - AA- 9124 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO AIRE CHERY ARRIZO 5 1.5 - AA- 9124 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -3146,8 +3146,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AA-9322",
     "sku": "080AA-9322",
-    "slug": "advance-filtro-aire-ch-sail-1-5l-17-21-aa-9322-080aa-9322",
-    "name": "FILTRO AIRE CH SAIL 1.5L 17-21 (AA-9322, AIP1018, AP143, 90799322) ADVANCE",
+    "slug": "advance-advance-filtro-aire-ch-sail-1-5l-17-21-080aa-9322",
+    "name": "ADVANCE FILTRO AIRE CH SAIL 1.5L 17-21 (AA-9322, AIP1018, AP143, 90799322) ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -3166,7 +3166,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "5 unid. listas para entrega"
     },
-    "description": "FILTRO AIRE CH SAIL 1.5L 17-21 (AA-9322, AIP1018, AP143, 90799322) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO AIRE CH SAIL 1.5L 17-21 (AA-9322, AIP1018, AP143, 90799322) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -3203,8 +3203,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AA-9392",
     "sku": "080AA-9392",
-    "slug": "advance-filtro-aire-kia-cerato-1-6-05-09-hy-elan-080aa-9392",
-    "name": "FILTRO AIRE KIA CERATO 1.6 05-09 HY ELANTRA 1.6 00-06 CUUPE TIBURON 02-08 - AA9392 ADVANCE",
+    "slug": "advance-advance-filtro-aire-kia-cerato-1-6-05-09-080aa-9392",
+    "name": "ADVANCE FILTRO AIRE KIA CERATO 1.6 05-09 HY ELANTRA 1.6 00-06 CUUPE TIBURON 02-08 - AA9392 ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -3223,7 +3223,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "2 unid. listas para entrega"
     },
-    "description": "FILTRO AIRE KIA CERATO 1.6 05-09 HY ELANTRA 1.6 00-06 CUUPE TIBURON 02-08 - AA9392 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO AIRE KIA CERATO 1.6 05-09 HY ELANTRA 1.6 00-06 CUUPE TIBURON 02-08 - AA9392 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -3260,8 +3260,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AA-9476",
     "sku": "080AA-9476",
-    "slug": "advance-filtro-advance-aire-chevrolet-cavalier-2-080aa-9476",
-    "name": "FILTRO ADVANCE AIRE CHEVROLET CAVALIER 2019 CJ X 24 - AA-9476",
+    "slug": "advance-advance-filtro-advance-aire-chevrolet-ca-080aa-9476",
+    "name": "ADVANCE FILTRO ADVANCE AIRE CHEVROLET CAVALIER 2019 CJ X 24 - AA-9476",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -3280,7 +3280,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "3 unid. listas para entrega"
     },
-    "description": "FILTRO ADVANCE AIRE CHEVROLET CAVALIER 2019 CJ X 24 - AA-9476 con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO ADVANCE AIRE CHEVROLET CAVALIER 2019 CJ X 24 - AA-9476 con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -3317,8 +3317,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AA-9632",
     "sku": "080AA-9632",
-    "slug": "advance-filtro-aire-hy-getz-1-3-2002-advance-mk-080aa-9632",
-    "name": "FILTRO AIRE HY GETZ 1.3 2002 ADVANCE (MK-24086)",
+    "slug": "advance-advance-filtro-aire-hy-getz-1-3-2002-adv-080aa-9632",
+    "name": "ADVANCE FILTRO AIRE HY GETZ 1.3 2002 ADVANCE (MK-24086)",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -3337,7 +3337,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "6 unid. listas para entrega"
     },
-    "description": "FILTRO AIRE HY GETZ 1.3 2002 ADVANCE (MK-24086) con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO AIRE HY GETZ 1.3 2002 ADVANCE (MK-24086) con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -3374,8 +3374,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AA-9800",
     "sku": "080AA-9800",
-    "slug": "advance-filtro-aire-vw-jetta-iv-2-0-11-sk-octa-080aa-9800",
-    "name": "FILTRO AIRE VW JETTA IV 2.0 /11, SK OCTAVIA 1.4 -2.0 FSI /07 (CILINDRICO) ADVANCE",
+    "slug": "advance-advance-filtro-aire-vw-jetta-iv-2-0-11-080aa-9800",
+    "name": "ADVANCE FILTRO AIRE VW JETTA IV 2.0 /11, SK OCTAVIA 1.4 -2.0 FSI /07 (CILINDRICO) ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -3394,7 +3394,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "3 unid. listas para entrega"
     },
-    "description": "FILTRO AIRE VW JETTA IV 2.0 /11, SK OCTAVIA 1.4 -2.0 FSI /07 (CILINDRICO) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO AIRE VW JETTA IV 2.0 /11, SK OCTAVIA 1.4 -2.0 FSI /07 (CILINDRICO) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -3431,8 +3431,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AA-9856",
     "sku": "080AA-9856",
-    "slug": "advance-filtro-aire-isuzu-npr-11-19-nhr-reward-1-080aa-9856",
-    "name": "FILTRO AIRE ISUZU NPR 11-19 NHR REWARD 11-18 NMR 11-14 NQR 11-18 NLR 11-18 JAC HFC1035 (CIL) ADVANCE",
+    "slug": "advance-advance-filtro-aire-isuzu-npr-11-19-nhr-080aa-9856",
+    "name": "ADVANCE FILTRO AIRE ISUZU NPR 11-19 NHR REWARD 11-18 NMR 11-14 NQR 11-18 NLR 11-18 JAC HFC1035 (CIL) ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "pesado",
@@ -3451,7 +3451,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Pesado",
       "Disponibilidad": "2 unid. listas para entrega"
     },
-    "description": "FILTRO AIRE ISUZU NPR 11-19 NHR REWARD 11-18 NMR 11-14 NQR 11-18 NLR 11-18 JAC HFC1035 (CIL) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO AIRE ISUZU NPR 11-19 NHR REWARD 11-18 NMR 11-14 NQR 11-18 NLR 11-18 JAC HFC1035 (CIL) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -3503,8 +3503,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AA-9902",
     "sku": "080AA-9902",
-    "slug": "advance-filtro-aire-ch-aveo-chy-taxi-advance-080aa-9902",
-    "name": "FILTRO AIRE CH AVEO CHY TAXI ADVANCE",
+    "slug": "advance-advance-filtro-aire-ch-aveo-chy-taxi-adv-080aa-9902",
+    "name": "ADVANCE FILTRO AIRE CH AVEO CHY TAXI ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -3523,7 +3523,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "4 unid. listas para entrega"
     },
-    "description": "FILTRO AIRE CH AVEO CHY TAXI ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO AIRE CH AVEO CHY TAXI ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -3560,8 +3560,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AA-994",
     "sku": "080AA-994",
-    "slug": "advance-filtro-aire-rn-logan-sandero-aa-994-a-080aa-994",
-    "name": "FILTRO AIRE RN LOGAN, SANDERO - AA-994 ADVANCE (MK-9074)",
+    "slug": "advance-advance-filtro-aire-rn-logan-sandero-080aa-994",
+    "name": "ADVANCE FILTRO AIRE RN LOGAN, SANDERO - AA-994 ADVANCE (MK-9074)",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -3580,7 +3580,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "2 unid. listas para entrega"
     },
-    "description": "FILTRO AIRE RN LOGAN, SANDERO - AA-994 ADVANCE (MK-9074) con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO AIRE RN LOGAN, SANDERO - AA-994 ADVANCE (MK-9074) con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -3617,8 +3617,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-081AA-1132",
     "sku": "081AA-1132",
-    "slug": "advance-filtro-aire-kia-cerato-13-hy-elantra-1-081aa-1132",
-    "name": "FILTRO AIRE KIA CERATO /13- HY ELANTRA 1.6 /07-11 I30 1.6 /09-10 KOUP 2.0 /10-17 ADVANCE",
+    "slug": "advance-advance-filtro-aire-kia-cerato-13-hy-e-081aa-1132",
+    "name": "ADVANCE FILTRO AIRE KIA CERATO /13- HY ELANTRA 1.6 /07-11 I30 1.6 /09-10 KOUP 2.0 /10-17 ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -3637,7 +3637,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "2 unid. listas para entrega"
     },
-    "description": "FILTRO AIRE KIA CERATO /13- HY ELANTRA 1.6 /07-11 I30 1.6 /09-10 KOUP 2.0 /10-17 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO AIRE KIA CERATO /13- HY ELANTRA 1.6 /07-11 I30 1.6 /09-10 KOUP 2.0 /10-17 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -3674,8 +3674,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-FILTRO_AIRE_080AA-3038",
     "sku": "FILTRO AIRE 080AA-3038",
-    "slug": "advance-filtro-advance-aire-jac-t9-2-0-2025-aa-filtro-aire-080aa-3038",
-    "name": "FILTRO ADVANCE AIRE JAC T9 2.0 2025 - AA-3038",
+    "slug": "advance-advance-filtro-advance-aire-jac-t9-2-0-2-filtro-aire-080aa-3038",
+    "name": "ADVANCE FILTRO ADVANCE AIRE JAC T9 2.0 2025 - AA-3038",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -3694,7 +3694,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "2 unid. listas para entrega"
     },
-    "description": "FILTRO ADVANCE AIRE JAC T9 2.0 2025 - AA-3038 con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO ADVANCE AIRE JAC T9 2.0 2025 - AA-3038 con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -3731,8 +3731,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-078AO-10127",
     "sku": "078AO-10127",
-    "slug": "advance-filtro-aceite-kia-pregio-h-100-terracan-078ao-10127",
-    "name": "FILTRO ACEITE KIA PREGIO H 100 TERRACAN CARNIVAL DIESEL K2700 H-350 ADVANCE",
+    "slug": "advance-advance-filtro-aceite-kia-pregio-h-100-t-078ao-10127",
+    "name": "ADVANCE FILTRO ACEITE KIA PREGIO H 100 TERRACAN CARNIVAL DIESEL K2700 H-350 ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -3751,7 +3751,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "3 unid. listas para entrega"
     },
-    "description": "FILTRO ACEITE KIA PREGIO H 100 TERRACAN CARNIVAL DIESEL K2700 H-350 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO ACEITE KIA PREGIO H 100 TERRACAN CARNIVAL DIESEL K2700 H-350 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -3793,8 +3793,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-078AO-1539",
     "sku": "078AO-1539",
-    "slug": "advance-filtro-aceite-ch-d-max-3-0-02-16-d-max-2-078ao-1539",
-    "name": "FILTRO ACEITE CH D-MAX 3.0 02-16 D-MAX 2.5 02-12, FD ESCAPE 2.0 01-04 ADVANCE",
+    "slug": "advance-advance-filtro-aceite-ch-d-max-3-0-02-16-078ao-1539",
+    "name": "ADVANCE FILTRO ACEITE CH D-MAX 3.0 02-16 D-MAX 2.5 02-12, FD ESCAPE 2.0 01-04 ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "camionetas",
@@ -3813,7 +3813,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Camionetas",
       "Disponibilidad": "6 unid. listas para entrega"
     },
-    "description": "FILTRO ACEITE CH D-MAX 3.0 02-16 D-MAX 2.5 02-12, FD ESCAPE 2.0 01-04 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO ACEITE CH D-MAX 3.0 02-16 D-MAX 2.5 02-12, FD ESCAPE 2.0 01-04 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -3855,8 +3855,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-078AO-2",
     "sku": "078AO-2",
-    "slug": "advance-filtro-aceite-fd-f150-escape-explorer-v8-078ao-2",
-    "name": "FILTRO ACEITE FD F150-ESCAPE-EXPLORER V8 INY. WINGLE DIESEL 2.0 (PH-820) ADVANCE",
+    "slug": "advance-advance-filtro-aceite-fd-f150-escape-exp-078ao-2",
+    "name": "ADVANCE FILTRO ACEITE FD F150-ESCAPE-EXPLORER V8 INY. WINGLE DIESEL 2.0 (PH-820) ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "camionetas",
@@ -3875,7 +3875,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Camionetas",
       "Disponibilidad": "4 unid. listas para entrega"
     },
-    "description": "FILTRO ACEITE FD F150-ESCAPE-EXPLORER V8 INY. WINGLE DIESEL 2.0 (PH-820) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO ACEITE FD F150-ESCAPE-EXPLORER V8 INY. WINGLE DIESEL 2.0 (PH-820) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -3927,8 +3927,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-078AO-2841",
     "sku": "078AO-2841",
-    "slug": "advance-filtro-aceite-ch-sail-van-n200-n300-spar-078ao-2841",
-    "name": "FILTRO ACEITE CH SAIL/VAN N200-N300/SPARK GT/BEAT PREMIER (10000KM) (SH4444) ADVANCE",
+    "slug": "advance-advance-filtro-aceite-ch-sail-van-n200-n-078ao-2841",
+    "name": "ADVANCE FILTRO ACEITE CH SAIL/VAN N200-N300/SPARK GT/BEAT PREMIER (10000KM) (SH4444) ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -3947,7 +3947,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "10 unid. listas para entrega"
     },
-    "description": "FILTRO ACEITE CH SAIL/VAN N200-N300/SPARK GT/BEAT PREMIER (10000KM) (SH4444) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO ACEITE CH SAIL/VAN N200-N300/SPARK GT/BEAT PREMIER (10000KM) (SH4444) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -3989,8 +3989,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-078AO-2849",
     "sku": "078AO-2849",
-    "slug": "advance-filtro-aceite-mz-1-6-2-0-2-2-2-6-bt50-ga-078ao-2849",
-    "name": "FILTRO ACEITE MZ 1.6-2.0-2.2-2.6/BT50 GAS/FD COURIER 2.0-2.2 WINGLE 5 GAS ADVANCE",
+    "slug": "advance-advance-filtro-aceite-mz-1-6-2-0-2-2-2-6-078ao-2849",
+    "name": "ADVANCE FILTRO ACEITE MZ 1.6-2.0-2.2-2.6/BT50 GAS/FD COURIER 2.0-2.2 WINGLE 5 GAS ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "camionetas",
@@ -4009,7 +4009,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Camionetas",
       "Disponibilidad": "11 unid. listas para entrega"
     },
-    "description": "FILTRO ACEITE MZ 1.6-2.0-2.2-2.6/BT50 GAS/FD COURIER 2.0-2.2 WINGLE 5 GAS ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO ACEITE MZ 1.6-2.0-2.2-2.6/BT50 GAS/FD COURIER 2.0-2.2 WINGLE 5 GAS ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -4051,8 +4051,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-078AO-2863",
     "sku": "078AO-2863",
-    "slug": "advance-filtro-aceite-ch-luv-2-5-diesel-great-wa-078ao-2863",
-    "name": "FILTRO ACEITE CH LUV 2.5 DIESEL/GREAT WALL/HAVAL H5 2.5/WINGLE 2.8/CAMION JACK (PH7325) ADVANCE",
+    "slug": "advance-advance-filtro-aceite-ch-luv-2-5-diesel-078ao-2863",
+    "name": "ADVANCE FILTRO ACEITE CH LUV 2.5 DIESEL/GREAT WALL/HAVAL H5 2.5/WINGLE 2.8/CAMION JACK (PH7325) ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "pesado",
@@ -4071,7 +4071,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Pesado",
       "Disponibilidad": "6 unid. listas para entrega"
     },
-    "description": "FILTRO ACEITE CH LUV 2.5 DIESEL/GREAT WALL/HAVAL H5 2.5/WINGLE 2.8/CAMION JACK (PH7325) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO ACEITE CH LUV 2.5 DIESEL/GREAT WALL/HAVAL H5 2.5/WINGLE 2.8/CAMION JACK (PH7325) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -4118,8 +4118,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-078AO-2870",
     "sku": "078AO-2870",
-    "slug": "advance-filtro-aceite-mercedes-190-sk-fabia-i-fe-078ao-2870",
-    "name": "FILTRO ACEITE MERCEDES 190 SK FABIA I FELICIA SUPER B VW CROSSFOX GOL GOLF POLO ADVANCE",
+    "slug": "advance-advance-filtro-aceite-mercedes-190-sk-fa-078ao-2870",
+    "name": "ADVANCE FILTRO ACEITE MERCEDES 190 SK FABIA I FELICIA SUPER B VW CROSSFOX GOL GOLF POLO ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -4138,7 +4138,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "3 unid. listas para entrega"
     },
-    "description": "FILTRO ACEITE MERCEDES 190 SK FABIA I FELICIA SUPER B VW CROSSFOX GOL GOLF POLO ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO ACEITE MERCEDES 190 SK FABIA I FELICIA SUPER B VW CROSSFOX GOL GOLF POLO ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -4175,8 +4175,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-078AO-2879",
     "sku": "078AO-2879",
-    "slug": "advance-filtro-aceite-ns-navara-jeep-land-rove-078ao-2879",
-    "name": "FILTRO ACEITE NS NAVARA, JEEP. LAND ROVER. LADA, DODGE, FIAT ANTIGUOS (PH-43) ADVANCE",
+    "slug": "advance-advance-filtro-aceite-ns-navara-jeep-l-078ao-2879",
+    "name": "ADVANCE FILTRO ACEITE NS NAVARA, JEEP. LAND ROVER. LADA, DODGE, FIAT ANTIGUOS (PH-43) ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -4195,7 +4195,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "3 unid. listas para entrega"
     },
-    "description": "FILTRO ACEITE NS NAVARA, JEEP. LAND ROVER. LADA, DODGE, FIAT ANTIGUOS (PH-43) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO ACEITE NS NAVARA, JEEP. LAND ROVER. LADA, DODGE, FIAT ANTIGUOS (PH-43) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -4232,8 +4232,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-078AO-4967",
     "sku": "078AO-4967",
-    "slug": "advance-filtro-aceite-ch-spark-life-1-0l-06-19-t-078ao-4967",
-    "name": "FILTRO ACEITE CH SPARK LIFE 1.0L 06-19/TY RAV 4/CHANGAN ALSVIN 1.5L ADVANCE",
+    "slug": "advance-advance-filtro-aceite-ch-spark-life-1-0l-078ao-4967",
+    "name": "ADVANCE FILTRO ACEITE CH SPARK LIFE 1.0L 06-19/TY RAV 4/CHANGAN ALSVIN 1.5L ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -4252,7 +4252,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "4 unid. listas para entrega"
     },
-    "description": "FILTRO ACEITE CH SPARK LIFE 1.0L 06-19/TY RAV 4/CHANGAN ALSVIN 1.5L ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO ACEITE CH SPARK LIFE 1.0L 06-19/TY RAV 4/CHANGAN ALSVIN 1.5L ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -4289,8 +4289,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-078AO-50710",
     "sku": "078AO-50710",
-    "slug": "advance-filtro-aceite-ch-luv-d-max-14-advance-078ao-50710",
-    "name": "FILTRO ACEITE CH LUV D-MAX /14- ADVANCE",
+    "slug": "advance-advance-filtro-aceite-ch-luv-d-max-14-078ao-50710",
+    "name": "ADVANCE FILTRO ACEITE CH LUV D-MAX /14- ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "camionetas",
@@ -4309,7 +4309,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Camionetas",
       "Disponibilidad": "6 unid. listas para entrega"
     },
-    "description": "FILTRO ACEITE CH LUV D-MAX /14- ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO ACEITE CH LUV D-MAX /14- ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -4351,8 +4351,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-078AO-7317",
     "sku": "078AO-7317",
-    "slug": "advance-filtro-aceite-fiat-palio-fiorino-civic-a-078ao-7317",
-    "name": "FILTRO ACEITE FIAT PALIO FIORINO CIVIC ACCORD KIA I10 CERATO (PH2867) ADVANCE",
+    "slug": "advance-advance-filtro-aceite-fiat-palio-fiorino-078ao-7317",
+    "name": "ADVANCE FILTRO ACEITE FIAT PALIO FIORINO CIVIC ACCORD KIA I10 CERATO (PH2867) ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -4371,7 +4371,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "10 unid. listas para entrega"
     },
-    "description": "FILTRO ACEITE FIAT PALIO FIORINO CIVIC ACCORD KIA I10 CERATO (PH2867) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO ACEITE FIAT PALIO FIORINO CIVIC ACCORD KIA I10 CERATO (PH2867) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -4408,8 +4408,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-078AO-8",
     "sku": "078AO-8",
-    "slug": "advance-filtro-aceite-fd-dodge-ty-stout-hilux-la-078ao-8",
-    "name": "FILTRO ACEITE FD/DODGE/TY STOUT/HILUX/LAND CRUISER/MZ BT50 DIESEL PH-8 ADVANCE",
+    "slug": "advance-advance-filtro-aceite-fd-dodge-ty-stout-078ao-8",
+    "name": "ADVANCE FILTRO ACEITE FD/DODGE/TY STOUT/HILUX/LAND CRUISER/MZ BT50 DIESEL PH-8 ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "camionetas",
@@ -4428,7 +4428,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Camionetas",
       "Disponibilidad": "3 unid. listas para entrega"
     },
-    "description": "FILTRO ACEITE FD/DODGE/TY STOUT/HILUX/LAND CRUISER/MZ BT50 DIESEL PH-8 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO ACEITE FD/DODGE/TY STOUT/HILUX/LAND CRUISER/MZ BT50 DIESEL PH-8 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -4470,8 +4470,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-079AOE-10246",
     "sku": "079AOE-10246",
-    "slug": "advance-filtro-aceite-ch-cruze-1-8l-tracker-1-079aoe-10246",
-    "name": "FILTRO ACEITE CH CRUZE 1.8L / TRACKER 1.8L 16V 13-19 / (ELEMENTO) ADVANCE",
+    "slug": "advance-advance-filtro-aceite-ch-cruze-1-8l-tr-079aoe-10246",
+    "name": "ADVANCE FILTRO ACEITE CH CRUZE 1.8L / TRACKER 1.8L 16V 13-19 / (ELEMENTO) ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -4490,7 +4490,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "3 unid. listas para entrega"
     },
-    "description": "FILTRO ACEITE CH CRUZE 1.8L / TRACKER 1.8L 16V 13-19 / (ELEMENTO) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO ACEITE CH CRUZE 1.8L / TRACKER 1.8L 16V 13-19 / (ELEMENTO) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -4527,8 +4527,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AO-1",
     "sku": "080AO-1",
-    "slug": "advance-filtro-aceite-mz-bt-50-diesel-advance-080ao-1",
-    "name": "FILTRO ACEITE MZ BT-50 DIESEL ADVANCE",
+    "slug": "advance-advance-filtro-aceite-mz-bt-50-diesel-ad-080ao-1",
+    "name": "ADVANCE FILTRO ACEITE MZ BT-50 DIESEL ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "camionetas",
@@ -4547,7 +4547,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Camionetas",
       "Disponibilidad": "3 unid. listas para entrega"
     },
-    "description": "FILTRO ACEITE MZ BT-50 DIESEL ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO ACEITE MZ BT-50 DIESEL ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -4584,8 +4584,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AO-1051",
     "sku": "080AO-1051",
-    "slug": "advance-filtro-advance-aceite-chevrolet-d-max-2-080ao-1051",
-    "name": "FILTRO ADVANCE ACEITE CHEVROLET D-MAX 2.0T DIESEL 2025 - AO-1051 24.00 UNIDAD 5,00",
+    "slug": "advance-advance-filtro-advance-aceite-chevrolet-080ao-1051",
+    "name": "ADVANCE FILTRO ADVANCE ACEITE CHEVROLET D-MAX 2.0T DIESEL 2025 - AO-1051 24.00 UNIDAD 5,00",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "camionetas",
@@ -4604,7 +4604,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Camionetas",
       "Disponibilidad": "1 unid. listas para entrega"
     },
-    "description": "FILTRO ADVANCE ACEITE CHEVROLET D-MAX 2.0T DIESEL 2025 - AO-1051 24.00 UNIDAD 5,00 con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO ADVANCE ACEITE CHEVROLET D-MAX 2.0T DIESEL 2025 - AO-1051 24.00 UNIDAD 5,00 con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -4641,8 +4641,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AO-10600",
     "sku": "080AO-10600",
-    "slug": "advance-filtro-aceite-vw-tiguan-2-0-07-amarok-080ao-10600",
-    "name": "FILTRO ACEITE VW TIGUAN 2.0 /07- AMAROK GAS. PASSAT 1.8 /07- AUDI 2.0 CON ROSCA MACHO ADVANCE",
+    "slug": "advance-advance-filtro-aceite-vw-tiguan-2-0-07-080ao-10600",
+    "name": "ADVANCE FILTRO ACEITE VW TIGUAN 2.0 /07- AMAROK GAS. PASSAT 1.8 /07- AUDI 2.0 CON ROSCA MACHO ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -4661,7 +4661,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "4 unid. listas para entrega"
     },
-    "description": "FILTRO ACEITE VW TIGUAN 2.0 /07- AMAROK GAS. PASSAT 1.8 /07- AUDI 2.0 CON ROSCA MACHO ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO ACEITE VW TIGUAN 2.0 /07- AMAROK GAS. PASSAT 1.8 /07- AUDI 2.0 CON ROSCA MACHO ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -4698,8 +4698,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AO-1302",
     "sku": "080AO-1302",
-    "slug": "advance-filtro-aceite-mt-canter-fuso-hino-fb-fc-080ao-1302",
-    "name": "FILTRO ACEITE MT CANTER/FUSO/HINO FB-FC/HD 55/HD 65 C161 ADVANCE",
+    "slug": "advance-advance-filtro-aceite-mt-canter-fuso-hin-080ao-1302",
+    "name": "ADVANCE FILTRO ACEITE MT CANTER/FUSO/HINO FB-FC/HD 55/HD 65 C161 ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "pesado",
@@ -4718,7 +4718,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Pesado",
       "Disponibilidad": "6 unid. listas para entrega"
     },
-    "description": "FILTRO ACEITE MT CANTER/FUSO/HINO FB-FC/HD 55/HD 65 C161 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO ACEITE MT CANTER/FUSO/HINO FB-FC/HD 55/HD 65 C161 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -4755,8 +4755,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AO-1314",
     "sku": "080AO-1314",
-    "slug": "advance-filtro-aceite-hino-fb1817-fd2220-fd232-080ao-1314",
-    "name": "FILTRO ACEITE HINO FB1817, FD2220, FD2320, FE3020, SG3320, SG3325 (ADVANCE)",
+    "slug": "advance-advance-filtro-aceite-hino-fb1817-fd222-080ao-1314",
+    "name": "ADVANCE FILTRO ACEITE HINO FB1817, FD2220, FD2320, FE3020, SG3320, SG3325 (ADVANCE)",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "pesado",
@@ -4775,7 +4775,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Pesado",
       "Disponibilidad": "3 unid. listas para entrega"
     },
-    "description": "FILTRO ACEITE HINO FB1817, FD2220, FD2320, FE3020, SG3320, SG3325 (ADVANCE) con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO ACEITE HINO FB1817, FD2220, FD2320, FE3020, SG3320, SG3325 (ADVANCE) con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -4812,8 +4812,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AO-1318",
     "sku": "080AO-1318",
-    "slug": "advance-filtro-aceite-hino-dutro-09-advance-080ao-1318",
-    "name": "FILTRO ACEITE HINO DUTRO /09 ADVANCE",
+    "slug": "advance-advance-filtro-aceite-hino-dutro-09-adv-080ao-1318",
+    "name": "ADVANCE FILTRO ACEITE HINO DUTRO /09 ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "pesado",
@@ -4832,7 +4832,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Pesado",
       "Disponibilidad": "2 unid. listas para entrega"
     },
-    "description": "FILTRO ACEITE HINO DUTRO /09 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO ACEITE HINO DUTRO /09 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -4869,8 +4869,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AO-1321",
     "sku": "080AO-1321",
-    "slug": "advance-filtro-aceite-hino-300-dutro-07-12-300-e-080ao-1321",
-    "name": "FILTRO ACEITE HINO 300 DUTRO 07-12 300 EURO DUTRO 512 616 616DC 716 816 ADVANCE",
+    "slug": "advance-advance-filtro-aceite-hino-300-dutro-07-080ao-1321",
+    "name": "ADVANCE FILTRO ACEITE HINO 300 DUTRO 07-12 300 EURO DUTRO 512 616 616DC 716 816 ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "pesado",
@@ -4889,7 +4889,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Pesado",
       "Disponibilidad": "3 unid. listas para entrega"
     },
-    "description": "FILTRO ACEITE HINO 300 DUTRO 07-12 300 EURO DUTRO 512 616 616DC 716 816 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO ACEITE HINO 300 DUTRO 07-12 300 EURO DUTRO 512 616 616DC 716 816 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -4926,8 +4926,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AO-1513",
     "sku": "080AO-1513",
-    "slug": "advance-filtro-aceite-iz-ftr-fsr-fvr-98-99-sak-080ao-1513",
-    "name": "FILTRO ACEITE IZ FTR FSR FVR 98/99 ( SAKURA C1513 / HARD 8-94396-375-4) ADVANCE",
+    "slug": "advance-advance-filtro-aceite-iz-ftr-fsr-fvr-98-080ao-1513",
+    "name": "ADVANCE FILTRO ACEITE IZ FTR FSR FVR 98/99 ( SAKURA C1513 / HARD 8-94396-375-4) ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "pesado",
@@ -4946,7 +4946,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Pesado",
       "Disponibilidad": "5 unid. listas para entrega"
     },
-    "description": "FILTRO ACEITE IZ FTR FSR FVR 98/99 ( SAKURA C1513 / HARD 8-94396-375-4) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO ACEITE IZ FTR FSR FVR 98/99 ( SAKURA C1513 / HARD 8-94396-375-4) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -4983,8 +4983,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AO-1522",
     "sku": "080AO-1522",
-    "slug": "advance-filtro-aceite-isz-npr-nkr-98-motor-4b-ad-080ao-1522",
-    "name": "FILTRO ACEITE ISZ NPR NKR 98-MOTOR 4B ADVANCE",
+    "slug": "advance-advance-filtro-aceite-isz-npr-nkr-98-mot-080ao-1522",
+    "name": "ADVANCE FILTRO ACEITE ISZ NPR NKR 98-MOTOR 4B ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "motos",
@@ -5003,7 +5003,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Motos",
       "Disponibilidad": "5 unid. listas para entrega"
     },
-    "description": "FILTRO ACEITE ISZ NPR NKR 98-MOTOR 4B ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO ACEITE ISZ NPR NKR 98-MOTOR 4B ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -5045,8 +5045,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AO-2801",
     "sku": "080AO-2801",
-    "slug": "advance-filtro-aceite-great-wall-wingle-2-8-dies-080ao-2801",
-    "name": "FILTRO ACEITE GREAT WALL WINGLE 2.8 DIESEL MAHINDRA PICK UP SCORPIO JAC HFC 1040K M20 1.5 ADVANCE",
+    "slug": "advance-advance-filtro-aceite-great-wall-wingle-080ao-2801",
+    "name": "ADVANCE FILTRO ACEITE GREAT WALL WINGLE 2.8 DIESEL MAHINDRA PICK UP SCORPIO JAC HFC 1040K M20 1.5 ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "camionetas",
@@ -5065,7 +5065,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Camionetas",
       "Disponibilidad": "6 unid. listas para entrega"
     },
-    "description": "FILTRO ACEITE GREAT WALL WINGLE 2.8 DIESEL MAHINDRA PICK UP SCORPIO JAC HFC 1040K M20 1.5 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO ACEITE GREAT WALL WINGLE 2.8 DIESEL MAHINDRA PICK UP SCORPIO JAC HFC 1040K M20 1.5 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -5107,8 +5107,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AO-2825",
     "sku": "080AO-2825",
-    "slug": "advance-filtro-aceite-dt1-2-1-5-ns-sentra-92-98-080ao-2825",
-    "name": "FILTRO ACEITE DT1.2-1.5 NS SENTRA /92-98 TY /68-84 HILUX STOUT NS DATSUN ADVANCE",
+    "slug": "advance-advance-filtro-aceite-dt1-2-1-5-ns-sentr-080ao-2825",
+    "name": "ADVANCE FILTRO ACEITE DT1.2-1.5 NS SENTRA /92-98 TY /68-84 HILUX STOUT NS DATSUN ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "camionetas",
@@ -5127,7 +5127,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Camionetas",
       "Disponibilidad": "1 unid. listas para entrega"
     },
-    "description": "FILTRO ACEITE DT1.2-1.5 NS SENTRA /92-98 TY /68-84 HILUX STOUT NS DATSUN ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO ACEITE DT1.2-1.5 NS SENTRA /92-98 TY /68-84 HILUX STOUT NS DATSUN ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -5164,8 +5164,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AO-2841ST",
     "sku": "080AO-2841ST",
-    "slug": "advance-filtro-advance-aceite-medio-filtrante-1-080ao-2841st",
-    "name": "FILTRO ADVANCE ACEITE (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) CHEVROLE CAVALIER, GROOVE, SAIL, N2",
+    "slug": "advance-advance-filtro-advance-aceite-medio-fil-080ao-2841st",
+    "name": "ADVANCE FILTRO ADVANCE ACEITE (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) CHEVROLE CAVALIER, GROOVE, SAIL, N2",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -5184,7 +5184,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "7 unid. listas para entrega"
     },
-    "description": "FILTRO ADVANCE ACEITE (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) CHEVROLE CAVALIER, GROOVE, SAIL, N2 con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO ADVANCE ACEITE (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) CHEVROLE CAVALIER, GROOVE, SAIL, N2 con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -5221,8 +5221,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AO-2849ST",
     "sku": "080AO-2849ST",
-    "slug": "advance-filtro-advance-aceite-medio-filtrante-1-080ao-2849st",
-    "name": "FILTRO ADVANCE ACEITE (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) JAC T8 MAZDA 1.6 1.8 B2000 - 1.600",
+    "slug": "advance-advance-filtro-advance-aceite-medio-fil-080ao-2849st",
+    "name": "ADVANCE FILTRO ADVANCE ACEITE (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) JAC T8 MAZDA 1.6 1.8 B2000 - 1.600",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -5241,7 +5241,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "11 unid. listas para entrega"
     },
-    "description": "FILTRO ADVANCE ACEITE (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) JAC T8 MAZDA 1.6 1.8 B2000 - 1.600 con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO ADVANCE ACEITE (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) JAC T8 MAZDA 1.6 1.8 B2000 - 1.600 con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -5278,8 +5278,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AO-2870ST",
     "sku": "080AO-2870ST",
-    "slug": "advance-filtro-advance-aceite-medio-filtrante-1-080ao-2870st",
-    "name": "FILTRO ADVANCE ACEITE (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) AUDI, SKODA, VOLKSWAGEN (DOBLE VALV",
+    "slug": "advance-advance-filtro-advance-aceite-medio-fil-080ao-2870st",
+    "name": "ADVANCE FILTRO ADVANCE ACEITE (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) AUDI, SKODA, VOLKSWAGEN (DOBLE VALV",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -5298,7 +5298,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "2 unid. listas para entrega"
     },
-    "description": "FILTRO ADVANCE ACEITE (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) AUDI, SKODA, VOLKSWAGEN (DOBLE VALV con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO ADVANCE ACEITE (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) AUDI, SKODA, VOLKSWAGEN (DOBLE VALV con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -5335,8 +5335,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AO-3387",
     "sku": "080AO-3387",
-    "slug": "advance-filtro-aceite-ch-aveo-corsa-optra-luv-2-080ao-3387",
-    "name": "FILTRO ACEITE CH AVEO/CORSA/OPTRA/LUV 2.2-2.4/DMAX (PH-2862) ADVANCE",
+    "slug": "advance-advance-filtro-aceite-ch-aveo-corsa-optr-080ao-3387",
+    "name": "ADVANCE FILTRO ACEITE CH AVEO/CORSA/OPTRA/LUV 2.2-2.4/DMAX (PH-2862) ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "camionetas",
@@ -5355,7 +5355,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Camionetas",
       "Disponibilidad": "6 unid. listas para entrega"
     },
-    "description": "FILTRO ACEITE CH AVEO/CORSA/OPTRA/LUV 2.2-2.4/DMAX (PH-2862) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO ACEITE CH AVEO/CORSA/OPTRA/LUV 2.2-2.4/DMAX (PH-2862) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -5402,8 +5402,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AO-3387ST",
     "sku": "080AO-3387ST",
-    "slug": "advance-filtro-advance-aceite-medio-filtrante-1-080ao-3387st",
-    "name": "FILTRO ADVANCE ACEITE (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) CHEVROLET, DAEWOO, FIAT - AO-3387ST",
+    "slug": "advance-advance-filtro-advance-aceite-medio-fil-080ao-3387st",
+    "name": "ADVANCE FILTRO ADVANCE ACEITE (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) CHEVROLET, DAEWOO, FIAT - AO-3387ST",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -5422,7 +5422,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "2 unid. listas para entrega"
     },
-    "description": "FILTRO ADVANCE ACEITE (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) CHEVROLET, DAEWOO, FIAT - AO-3387ST con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO ADVANCE ACEITE (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) CHEVROLET, DAEWOO, FIAT - AO-3387ST con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -5459,8 +5459,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AO-3593",
     "sku": "080AO-3593",
-    "slug": "advance-filtro-aceite-ch-luv-3-2-dmax-3-5-hy-kia-080ao-3593",
-    "name": "FILTRO ACEITE CH LUV 3.2/DMAX 3.5/HY/KIA/TUCSON/SPORTAGE/GREAT WALL/TROOPER ADVANCE",
+    "slug": "advance-advance-filtro-aceite-ch-luv-3-2-dmax-3-080ao-3593",
+    "name": "ADVANCE FILTRO ACEITE CH LUV 3.2/DMAX 3.5/HY/KIA/TUCSON/SPORTAGE/GREAT WALL/TROOPER ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "camionetas",
@@ -5479,7 +5479,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Camionetas",
       "Disponibilidad": "8 unid. listas para entrega"
     },
-    "description": "FILTRO ACEITE CH LUV 3.2/DMAX 3.5/HY/KIA/TUCSON/SPORTAGE/GREAT WALL/TROOPER ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO ACEITE CH LUV 3.2/DMAX 3.5/HY/KIA/TUCSON/SPORTAGE/GREAT WALL/TROOPER ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -5531,8 +5531,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AO-3593ST",
     "sku": "080AO-3593ST",
-    "slug": "advance-filtro-advance-aceite-medio-filtrante-1-080ao-3593st",
-    "name": "FILTRO ADVANCE ACEITE (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) CHEVROLET, GREAT WALL, HYUNDAI, KIA",
+    "slug": "advance-advance-filtro-advance-aceite-medio-fil-080ao-3593st",
+    "name": "ADVANCE FILTRO ADVANCE ACEITE (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) CHEVROLET, GREAT WALL, HYUNDAI, KIA",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -5551,7 +5551,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "6 unid. listas para entrega"
     },
-    "description": "FILTRO ADVANCE ACEITE (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) CHEVROLET, GREAT WALL, HYUNDAI, KIA con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO ADVANCE ACEITE (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) CHEVROLET, GREAT WALL, HYUNDAI, KIA con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -5588,8 +5588,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AO-3614",
     "sku": "080AO-3614",
-    "slug": "advance-filtro-aceite-ch-forsa-i-ii-grand-vitara-080ao-3614",
-    "name": "FILTRO ACEITE CH FORSA I-II/GRAND VITARA/JINMY/VITARA/DAIHATSU TERIOS 1.3 (PH966B) ADVANCE",
+    "slug": "advance-advance-filtro-aceite-ch-forsa-i-ii-gran-080ao-3614",
+    "name": "ADVANCE FILTRO ACEITE CH FORSA I-II/GRAND VITARA/JINMY/VITARA/DAIHATSU TERIOS 1.3 (PH966B) ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -5608,7 +5608,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "9 unid. listas para entrega"
     },
-    "description": "FILTRO ACEITE CH FORSA I-II/GRAND VITARA/JINMY/VITARA/DAIHATSU TERIOS 1.3 (PH966B) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO ACEITE CH FORSA I-II/GRAND VITARA/JINMY/VITARA/DAIHATSU TERIOS 1.3 (PH966B) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -5650,8 +5650,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AO-3614ST",
     "sku": "080AO-3614ST",
-    "slug": "advance-filtro-advance-aire-medio-filtrante-100-080ao-3614st",
-    "name": "FILTRO ADVANCE AIRE MEDIO FILTRANTE 100 SINTETICO 15000 KM. CHERY CHEVROLET DONGFENG FAW FORD JETOUR",
+    "slug": "advance-advance-filtro-advance-aire-medio-filtra-080ao-3614st",
+    "name": "ADVANCE FILTRO ADVANCE AIRE MEDIO FILTRANTE 100 SINTETICO 15000 KM. CHERY CHEVROLET DONGFENG FAW FORD JETOUR",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -5670,7 +5670,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "3 unid. listas para entrega"
     },
-    "description": "FILTRO ADVANCE AIRE MEDIO FILTRANTE 100 SINTETICO 15000 KM. CHERY CHEVROLET DONGFENG FAW FORD JETOUR con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO ADVANCE AIRE MEDIO FILTRANTE 100 SINTETICO 15000 KM. CHERY CHEVROLET DONGFENG FAW FORD JETOUR con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -5707,8 +5707,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AO-3675",
     "sku": "080AO-3675",
-    "slug": "advance-filtro-aceite-ch-trailblazer-silverado-2-080ao-3675",
-    "name": "FILTRO ACEITE CH TRAILBLAZER-SILVERADO 2000-CHEYENNE 2000 (PLB3675) ADVANCE PH-59 PH3429A",
+    "slug": "advance-advance-filtro-aceite-ch-trailblazer-sil-080ao-3675",
+    "name": "ADVANCE FILTRO ACEITE CH TRAILBLAZER-SILVERADO 2000-CHEYENNE 2000 (PLB3675) ADVANCE PH-59 PH3429A",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -5727,7 +5727,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "4 unid. listas para entrega"
     },
-    "description": "FILTRO ACEITE CH TRAILBLAZER-SILVERADO 2000-CHEYENNE 2000 (PLB3675) ADVANCE PH-59 PH3429A con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO ACEITE CH TRAILBLAZER-SILVERADO 2000-CHEYENNE 2000 (PLB3675) ADVANCE PH-59 PH3429A con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -5764,8 +5764,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AO-3830",
     "sku": "080AO-3830",
-    "slug": "advance-filtro-advance-aceite-mitsubishi-canter-080ao-3830",
-    "name": "FILTRO ADVANCE ACEITE MITSUBISHI CANTER, HYUNDAI HD55, HD65, HD72, HD78 DOBLE FILTRACION C- 5816 CAJ",
+    "slug": "advance-advance-filtro-advance-aceite-mitsubishi-080ao-3830",
+    "name": "ADVANCE FILTRO ADVANCE ACEITE MITSUBISHI CANTER, HYUNDAI HD55, HD65, HD72, HD78 DOBLE FILTRACION C- 5816 CAJ",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -5784,7 +5784,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "1 unid. listas para entrega"
     },
-    "description": "FILTRO ADVANCE ACEITE MITSUBISHI CANTER, HYUNDAI HD55, HD65, HD72, HD78 DOBLE FILTRACION C- 5816 CAJ con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO ADVANCE ACEITE MITSUBISHI CANTER, HYUNDAI HD55, HD65, HD72, HD78 DOBLE FILTRACION C- 5816 CAJ con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -5821,8 +5821,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AO-3985",
     "sku": "080AO-3985",
-    "slug": "advance-filtro-aceite-rn-clio-scenic-megane-loga-080ao-3985",
-    "name": "FILTRO ACEITE RN CLIO/SCENIC/MEGANE/LOGAN/TWINGO CON TUERCA ADVANCE",
+    "slug": "advance-advance-filtro-aceite-rn-clio-scenic-meg-080ao-3985",
+    "name": "ADVANCE FILTRO ACEITE RN CLIO/SCENIC/MEGANE/LOGAN/TWINGO CON TUERCA ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -5841,7 +5841,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "4 unid. listas para entrega"
     },
-    "description": "FILTRO ACEITE RN CLIO/SCENIC/MEGANE/LOGAN/TWINGO CON TUERCA ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO ACEITE RN CLIO/SCENIC/MEGANE/LOGAN/TWINGO CON TUERCA ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -5878,8 +5878,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AO-4386ST",
     "sku": "080AO-4386ST",
-    "slug": "advance-filtro-advance-aceite-medio-filtrante-1-080ao-4386st",
-    "name": "FILTRO ADVANCE ACEITE (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) SUZUKI GRAND VITARA SZ, NEXT, TOYOT",
+    "slug": "advance-advance-filtro-advance-aceite-medio-fil-080ao-4386st",
+    "name": "ADVANCE FILTRO ADVANCE ACEITE (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) SUZUKI GRAND VITARA SZ, NEXT, TOYOT",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -5898,7 +5898,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "12 unid. listas para entrega"
     },
-    "description": "FILTRO ADVANCE ACEITE (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) SUZUKI GRAND VITARA SZ, NEXT, TOYOT con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO ADVANCE ACEITE (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) SUZUKI GRAND VITARA SZ, NEXT, TOYOT con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -5940,8 +5940,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AO-4952",
     "sku": "080AO-4952",
-    "slug": "advance-filtro-advance-aceite-mg-zotye-t600-1-5-080ao-4952",
-    "name": "FILTRO ADVANCE ACEITE MG, ZOTYE T600 1.5, CHEVROLET TAHOE, SILVERADO, TRAIL BLAZER EXT - AO-4952",
+    "slug": "advance-advance-filtro-advance-aceite-mg-zotye-080ao-4952",
+    "name": "ADVANCE FILTRO ADVANCE ACEITE MG, ZOTYE T600 1.5, CHEVROLET TAHOE, SILVERADO, TRAIL BLAZER EXT - AO-4952",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "camionetas",
@@ -5960,7 +5960,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Camionetas",
       "Disponibilidad": "3 unid. listas para entrega"
     },
-    "description": "FILTRO ADVANCE ACEITE MG, ZOTYE T600 1.5, CHEVROLET TAHOE, SILVERADO, TRAIL BLAZER EXT - AO-4952 con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO ADVANCE ACEITE MG, ZOTYE T600 1.5, CHEVROLET TAHOE, SILVERADO, TRAIL BLAZER EXT - AO-4952 con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -6002,8 +6002,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AO-500-1",
     "sku": "080AO-500-1",
-    "slug": "advance-filtro-advance-aceite-ford-edge-explore-080ao-500-1",
-    "name": "FILTRO ADVANCE ACEITE FORD EDGE, EXPLORER, EXPEDITION, F-150 CAJA X 40 - AO-500/1",
+    "slug": "advance-advance-filtro-advance-aceite-ford-edge-080ao-500-1",
+    "name": "ADVANCE FILTRO ADVANCE ACEITE FORD EDGE, EXPLORER, EXPEDITION, F-150 CAJA X 40 - AO-500/1",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -6022,7 +6022,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "4 unid. listas para entrega"
     },
-    "description": "FILTRO ADVANCE ACEITE FORD EDGE, EXPLORER, EXPEDITION, F-150 CAJA X 40 - AO-500/1 con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO ADVANCE ACEITE FORD EDGE, EXPLORER, EXPEDITION, F-150 CAJA X 40 - AO-500/1 con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -6059,8 +6059,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AO-500ST",
     "sku": "080AO-500ST",
-    "slug": "advance-filtro-advance-aceite-medio-filtrante-1-080ao-500st",
-    "name": "FILTRO ADVANCE ACEITE (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) CHEVROLET, FORD, JMC, JAC - AO-500S",
+    "slug": "advance-advance-filtro-advance-aceite-medio-fil-080ao-500st",
+    "name": "ADVANCE FILTRO ADVANCE ACEITE (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) CHEVROLET, FORD, JMC, JAC - AO-500S",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -6079,7 +6079,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "6 unid. listas para entrega"
     },
-    "description": "FILTRO ADVANCE ACEITE (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) CHEVROLET, FORD, JMC, JAC - AO-500S con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO ADVANCE ACEITE (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) CHEVROLET, FORD, JMC, JAC - AO-500S con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -6116,8 +6116,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AO-50710-1",
     "sku": "080AO-50710-1",
-    "slug": "advance-filtro-advance-aceite-chevrolet-dmax-201-080ao-50710-1",
-    "name": "FILTRO ADVANCE ACEITE CHEVROLET DMAX 2014 CAJA X 40- AO-50710/1",
+    "slug": "advance-advance-filtro-advance-aceite-chevrolet-080ao-50710-1",
+    "name": "ADVANCE FILTRO ADVANCE ACEITE CHEVROLET DMAX 2014 CAJA X 40- AO-50710/1",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "camionetas",
@@ -6136,7 +6136,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Camionetas",
       "Disponibilidad": "5 unid. listas para entrega"
     },
-    "description": "FILTRO ADVANCE ACEITE CHEVROLET DMAX 2014 CAJA X 40- AO-50710/1 con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO ADVANCE ACEITE CHEVROLET DMAX 2014 CAJA X 40- AO-50710/1 con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -6173,8 +6173,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AO-5190",
     "sku": "080AO-5190",
-    "slug": "advance-filtro-aceite-ch-nhr-nkr-m26x1-5-dual-080ao-5190",
-    "name": "FILTRO ACEITE CH NHR, NKR M26X1,5 DUAL (8-94360427-1) ADVANCE",
+    "slug": "advance-advance-filtro-aceite-ch-nhr-nkr-m26x1-080ao-5190",
+    "name": "ADVANCE FILTRO ACEITE CH NHR, NKR M26X1,5 DUAL (8-94360427-1) ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "pesado",
@@ -6193,7 +6193,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Pesado",
       "Disponibilidad": "9 unid. listas para entrega"
     },
-    "description": "FILTRO ACEITE CH NHR, NKR M26X1,5 DUAL (8-94360427-1) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO ACEITE CH NHR, NKR M26X1,5 DUAL (8-94360427-1) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -6230,8 +6230,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AO-6102",
     "sku": "080AO-6102",
-    "slug": "advance-filtro-advance-aceite-ud-trucks-fd6t-c-080ao-6102",
-    "name": "FILTRO ADVANCE ACEITE UD TRUCKS FD6T (C-270, C12.00 6102, UJ1034, SC270) - AO-6100",
+    "slug": "advance-advance-filtro-advance-aceite-ud-trucks-080ao-6102",
+    "name": "ADVANCE FILTRO ADVANCE ACEITE UD TRUCKS FD6T (C-270, C12.00 6102, UJ1034, SC270) - AO-6100",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -6250,7 +6250,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "3 unid. listas para entrega"
     },
-    "description": "FILTRO ADVANCE ACEITE UD TRUCKS FD6T (C-270, C12.00 6102, UJ1034, SC270) - AO-6100 con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO ADVANCE ACEITE UD TRUCKS FD6T (C-270, C12.00 6102, UJ1034, SC270) - AO-6100 con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -6287,8 +6287,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AO-6607",
     "sku": "080AO-6607",
-    "slug": "advance-filtro-aceite-fiat-uno-fire-1-3-honda-ac-080ao-6607",
-    "name": "FILTRO ACEITE FIAT UNO FIRE 1.3 HONDA ACCORD 2.3 ATOS PRIME 1.1 KIA CERATO FORTE 1.6 TIIDA ADVANCE",
+    "slug": "advance-advance-filtro-aceite-fiat-uno-fire-1-3-080ao-6607",
+    "name": "ADVANCE FILTRO ACEITE FIAT UNO FIRE 1.3 HONDA ACCORD 2.3 ATOS PRIME 1.1 KIA CERATO FORTE 1.6 TIIDA ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -6307,7 +6307,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "10 unid. listas para entrega"
     },
-    "description": "FILTRO ACEITE FIAT UNO FIRE 1.3 HONDA ACCORD 2.3 ATOS PRIME 1.1 KIA CERATO FORTE 1.6 TIIDA ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO ACEITE FIAT UNO FIRE 1.3 HONDA ACCORD 2.3 ATOS PRIME 1.1 KIA CERATO FORTE 1.6 TIIDA ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -6344,8 +6344,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AO-6607ST",
     "sku": "080AO-6607ST",
-    "slug": "advance-filtro-advance-aceite-medio-filtrante-1-080ao-6607st",
-    "name": "FILTRO ADVANCE ACEITE (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) HYUNDAI, KIA, FOTON, GREAT WALL, HA",
+    "slug": "advance-advance-filtro-advance-aceite-medio-fil-080ao-6607st",
+    "name": "ADVANCE FILTRO ADVANCE ACEITE (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) HYUNDAI, KIA, FOTON, GREAT WALL, HA",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -6364,7 +6364,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "9 unid. listas para entrega"
     },
-    "description": "FILTRO ADVANCE ACEITE (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) HYUNDAI, KIA, FOTON, GREAT WALL, HA con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO ADVANCE ACEITE (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) HYUNDAI, KIA, FOTON, GREAT WALL, HA con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -6401,8 +6401,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AO-667-1",
     "sku": "080AO-667-1",
-    "slug": "advance-filtro-advance-aceite-ph49a-lf667-c-551-080ao-667-1",
-    "name": "FILTRO ADVANCE ACEITE (PH49A,LF667,C-5510,LFP3191, PSL417)OIL FILTER CATERPILLAR, MACK, SCANIA, VOLV",
+    "slug": "advance-advance-filtro-advance-aceite-ph49a-lf6-080ao-667-1",
+    "name": "ADVANCE FILTRO ADVANCE ACEITE (PH49A,LF667,C-5510,LFP3191, PSL417)OIL FILTER CATERPILLAR, MACK, SCANIA, VOLV",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "pesado",
@@ -6421,7 +6421,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Pesado",
       "Disponibilidad": "4 unid. listas para entrega"
     },
-    "description": "FILTRO ADVANCE ACEITE (PH49A,LF667,C-5510,LFP3191, PSL417)OIL FILTER CATERPILLAR, MACK, SCANIA, VOLV con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO ADVANCE ACEITE (PH49A,LF667,C-5510,LFP3191, PSL417)OIL FILTER CATERPILLAR, MACK, SCANIA, VOLV con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -6458,8 +6458,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AO-7317ST",
     "sku": "080AO-7317ST",
-    "slug": "advance-filtro-advance-aceite-medio-filtrante-1-080ao-7317st",
-    "name": "FILTRO ADVANCE ACEITE (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) GREAT WALL,HYUNDAI, KIA, MITSUBISHI",
+    "slug": "advance-advance-filtro-advance-aceite-medio-fil-080ao-7317st",
+    "name": "ADVANCE FILTRO ADVANCE ACEITE (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) GREAT WALL,HYUNDAI, KIA, MITSUBISHI",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -6478,7 +6478,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "6 unid. listas para entrega"
     },
-    "description": "FILTRO ADVANCE ACEITE (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) GREAT WALL,HYUNDAI, KIA, MITSUBISHI con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO ADVANCE ACEITE (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) GREAT WALL,HYUNDAI, KIA, MITSUBISHI con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -6515,8 +6515,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AO-9566",
     "sku": "080AO-9566",
-    "slug": "advance-filtro-aceite-ty-hilux-2-7-fortuner-2-7-080ao-9566",
-    "name": "FILTRO ACEITE TY HILUX 2.7 FORTUNER 2.7 ADVANCE (ML-20004)",
+    "slug": "advance-advance-filtro-aceite-ty-hilux-2-7-fortu-080ao-9566",
+    "name": "ADVANCE FILTRO ACEITE TY HILUX 2.7 FORTUNER 2.7 ADVANCE (ML-20004)",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "camionetas",
@@ -6535,7 +6535,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Camionetas",
       "Disponibilidad": "4 unid. listas para entrega"
     },
-    "description": "FILTRO ACEITE TY HILUX 2.7 FORTUNER 2.7 ADVANCE (ML-20004) con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO ACEITE TY HILUX 2.7 FORTUNER 2.7 ADVANCE (ML-20004) con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -6577,8 +6577,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AO-9617",
     "sku": "080AO-9617",
-    "slug": "advance-filtro-aceite-dongfeng-df-140-dfm-210-fd-080ao-9617",
-    "name": "FILTRO ACEITE DONGFENG DF 140 DFM 210 FD CARGO 815E (ML-55081) C-5713 LF645 HPH-9617/ ADVANCE",
+    "slug": "advance-advance-filtro-aceite-dongfeng-df-140-df-080ao-9617",
+    "name": "ADVANCE FILTRO ACEITE DONGFENG DF 140 DFM 210 FD CARGO 815E (ML-55081) C-5713 LF645 HPH-9617/ ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -6597,7 +6597,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "2 unid. listas para entrega"
     },
-    "description": "FILTRO ACEITE DONGFENG DF 140 DFM 210 FD CARGO 815E (ML-55081) C-5713 LF645 HPH-9617/ ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO ACEITE DONGFENG DF 140 DFM 210 FD CARGO 815E (ML-55081) C-5713 LF645 HPH-9617/ ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -6634,8 +6634,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AOE-11651ST",
     "sku": "080AOE-11651ST",
-    "slug": "advance-filtro-advance-aceite-elemento-medio-fi-080aoe-11651st",
-    "name": "FILTRO ADVANCE ACEITE ELEMENTO (MEDIO FILTRANTE 100% SINTETICO 15.000 KM.) FORD RANGER, MAZDA BT50 E",
+    "slug": "advance-advance-filtro-advance-aceite-elemento-080aoe-11651st",
+    "name": "ADVANCE FILTRO ADVANCE ACEITE ELEMENTO (MEDIO FILTRANTE 100% SINTETICO 15.000 KM.) FORD RANGER, MAZDA BT50 E",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "camionetas",
@@ -6654,7 +6654,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Camionetas",
       "Disponibilidad": "4 unid. listas para entrega"
     },
-    "description": "FILTRO ADVANCE ACEITE ELEMENTO (MEDIO FILTRANTE 100% SINTETICO 15.000 KM.) FORD RANGER, MAZDA BT50 E con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO ADVANCE ACEITE ELEMENTO (MEDIO FILTRANTE 100% SINTETICO 15.000 KM.) FORD RANGER, MAZDA BT50 E con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -6691,8 +6691,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AOE-11724ST",
     "sku": "080AOE-11724ST",
-    "slug": "advance-filtro-advance-aceite-elemento-medio-fi-080aoe-11724st",
-    "name": "FILTRO ADVANCE ACEITE ELEMENTO (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) CHEVROLET TRAILBLAZER 2.8",
+    "slug": "advance-advance-filtro-advance-aceite-elemento-080aoe-11724st",
+    "name": "ADVANCE FILTRO ADVANCE ACEITE ELEMENTO (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) CHEVROLET TRAILBLAZER 2.8",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -6711,7 +6711,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "5 unid. listas para entrega"
     },
-    "description": "FILTRO ADVANCE ACEITE ELEMENTO (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) CHEVROLET TRAILBLAZER 2.8 con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO ADVANCE ACEITE ELEMENTO (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) CHEVROLET TRAILBLAZER 2.8 con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -6748,8 +6748,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AOE-1501",
     "sku": "080AOE-1501",
-    "slug": "advance-filtro-aceite-isuzu-npr-nml-2-nmr-eleme-080aoe-1501",
-    "name": "FILTRO ACEITE ISUZU NPR NML 2 NMR (ELEMENTO) ADVANCE",
+    "slug": "advance-advance-filtro-aceite-isuzu-npr-nml-2-nm-080aoe-1501",
+    "name": "ADVANCE FILTRO ACEITE ISUZU NPR NML 2 NMR (ELEMENTO) ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "pesado",
@@ -6768,7 +6768,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Pesado",
       "Disponibilidad": "3 unid. listas para entrega"
     },
-    "description": "FILTRO ACEITE ISUZU NPR NML 2 NMR (ELEMENTO) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO ACEITE ISUZU NPR NML 2 NMR (ELEMENTO) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -6810,8 +6810,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AOE-486ST",
     "sku": "080AOE-486ST",
-    "slug": "advance-filtro-advance-aceite-elemento-medio-fi-080aoe-486st",
-    "name": "FILTRO ADVANCE ACEITE ELEMENTO (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) HAVAL ALL NEW H6 2.0T 2022",
+    "slug": "advance-advance-filtro-advance-aceite-elemento-080aoe-486st",
+    "name": "ADVANCE FILTRO ADVANCE ACEITE ELEMENTO (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) HAVAL ALL NEW H6 2.0T 2022",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -6830,7 +6830,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "6 unid. listas para entrega"
     },
-    "description": "FILTRO ADVANCE ACEITE ELEMENTO (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) HAVAL ALL NEW H6 2.0T 2022 con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO ADVANCE ACEITE ELEMENTO (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) HAVAL ALL NEW H6 2.0T 2022 con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -6867,8 +6867,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AOE-9229-1",
     "sku": "080AOE-9229-1",
-    "slug": "advance-filtro-advance-aceite-elementojac-hfc-11-080aoe-9229-1",
-    "name": "FILTRO ADVANCE ACEITE ELEMENTOJAC HFC 1140 7.8L, HFC 1160 7.8L, HFC 1180 7.8L - AOE9229/1",
+    "slug": "advance-advance-filtro-advance-aceite-elementoja-080aoe-9229-1",
+    "name": "ADVANCE FILTRO ADVANCE ACEITE ELEMENTOJAC HFC 1140 7.8L, HFC 1160 7.8L, HFC 1180 7.8L - AOE9229/1",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -6887,7 +6887,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "2 unid. listas para entrega"
     },
-    "description": "FILTRO ADVANCE ACEITE ELEMENTOJAC HFC 1140 7.8L, HFC 1160 7.8L, HFC 1180 7.8L - AOE9229/1 con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO ADVANCE ACEITE ELEMENTOJAC HFC 1140 7.8L, HFC 1160 7.8L, HFC 1180 7.8L - AOE9229/1 con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -6924,8 +6924,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AOE-9496ST",
     "sku": "080AOE-9496ST",
-    "slug": "advance-filtro-advance-aceite-elemento-medio-fi-080aoe-9496st",
-    "name": "FILTRO ADVANCE ACEITE ELEMENTO (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) VOLKSWAGEN BORA, JETTA, SK",
+    "slug": "advance-advance-filtro-advance-aceite-elemento-080aoe-9496st",
+    "name": "ADVANCE FILTRO ADVANCE ACEITE ELEMENTO (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) VOLKSWAGEN BORA, JETTA, SK",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -6944,7 +6944,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "3 unid. listas para entrega"
     },
-    "description": "FILTRO ADVANCE ACEITE ELEMENTO (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) VOLKSWAGEN BORA, JETTA, SK con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO ADVANCE ACEITE ELEMENTO (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) VOLKSWAGEN BORA, JETTA, SK con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -6986,8 +6986,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AOE-9540",
     "sku": "080AOE-9540",
-    "slug": "advance-filtro-aceite-ns-urvan-diesel-ns-fronti-080aoe-9540",
-    "name": "FILTRO ACEITE NS URVAN DIESEL, NS FRONTIER (ELEMENTO) ADVANCE",
+    "slug": "advance-advance-filtro-aceite-ns-urvan-diesel-n-080aoe-9540",
+    "name": "ADVANCE FILTRO ACEITE NS URVAN DIESEL, NS FRONTIER (ELEMENTO) ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -7006,7 +7006,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "1 unid. listas para entrega"
     },
-    "description": "FILTRO ACEITE NS URVAN DIESEL, NS FRONTIER (ELEMENTO) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO ACEITE NS URVAN DIESEL, NS FRONTIER (ELEMENTO) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -7043,8 +7043,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AOE-9974ST",
     "sku": "080AOE-9974ST",
-    "slug": "advance-filtro-advance-aceite-elemento-medio-fi-080aoe-9974st",
-    "name": "FILTRO ADVANCE ACEITE ELEMENTO (MEDIO FILTRANTE 100% SINTETICO 15.000 KM.) GREAT WALL POER 2.0T DIES",
+    "slug": "advance-advance-filtro-advance-aceite-elemento-080aoe-9974st",
+    "name": "ADVANCE FILTRO ADVANCE ACEITE ELEMENTO (MEDIO FILTRANTE 100% SINTETICO 15.000 KM.) GREAT WALL POER 2.0T DIES",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -7063,7 +7063,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "3 unid. listas para entrega"
     },
-    "description": "FILTRO ADVANCE ACEITE ELEMENTO (MEDIO FILTRANTE 100% SINTETICO 15.000 KM.) GREAT WALL POER 2.0T DIES con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO ADVANCE ACEITE ELEMENTO (MEDIO FILTRANTE 100% SINTETICO 15.000 KM.) GREAT WALL POER 2.0T DIES con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -7100,8 +7100,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-AO-3985ST",
     "sku": "AO-3985ST",
-    "slug": "advance-filtro-advance-aceite-sandero-stepway-ss-ao-3985st",
-    "name": "FILTRO ADVANCE ACEITE SANDERO STEPWAY;SSANGYONG TIVOLI 1.6 CON TUERCA - AO-3985ST",
+    "slug": "advance-advance-filtro-advance-aceite-sandero-st-ao-3985st",
+    "name": "ADVANCE FILTRO ADVANCE ACEITE SANDERO STEPWAY;SSANGYONG TIVOLI 1.6 CON TUERCA - AO-3985ST",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -7120,7 +7120,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "4 unid. listas para entrega"
     },
-    "description": "FILTRO ADVANCE ACEITE SANDERO STEPWAY;SSANGYONG TIVOLI 1.6 CON TUERCA - AO-3985ST con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO ADVANCE ACEITE SANDERO STEPWAY;SSANGYONG TIVOLI 1.6 CON TUERCA - AO-3985ST con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -7157,8 +7157,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-078AC-1401",
     "sku": "078AC-1401",
-    "slug": "advance-filtro-cabina-ch-gran-vitara-1-6-2-0-03-078ac-1401",
-    "name": "FILTRO CABINA CH GRAN VITARA 1.6-2.0 /03-15 ADVANCE",
+    "slug": "advance-advance-filtro-cabina-ch-gran-vitara-1-6-078ac-1401",
+    "name": "ADVANCE FILTRO CABINA CH GRAN VITARA 1.6-2.0 /03-15 ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -7177,7 +7177,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "4 unid. listas para entrega"
     },
-    "description": "FILTRO CABINA CH GRAN VITARA 1.6-2.0 /03-15 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO CABINA CH GRAN VITARA 1.6-2.0 /03-15 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -7219,8 +7219,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-078AC-30020",
     "sku": "078AC-30020",
-    "slug": "advance-filtro-cabina-vw-bora-jetta-tiguan-sk-fa-078ac-30020",
-    "name": "FILTRO CABINA VW BORA JETTA TIGUAN SK FABIA 1.AC-30020,2 1.4 16V 1.4 8V SUPERB OCTAVIA ADVANCE",
+    "slug": "advance-advance-filtro-cabina-vw-bora-jetta-tigu-078ac-30020",
+    "name": "ADVANCE FILTRO CABINA VW BORA JETTA TIGUAN SK FABIA 1.AC-30020,2 1.4 16V 1.4 8V SUPERB OCTAVIA ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -7239,7 +7239,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "3 unid. listas para entrega"
     },
-    "description": "FILTRO CABINA VW BORA JETTA TIGUAN SK FABIA 1.AC-30020,2 1.4 16V 1.4 8V SUPERB OCTAVIA ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO CABINA VW BORA JETTA TIGUAN SK FABIA 1.AC-30020,2 1.4 16V 1.4 8V SUPERB OCTAVIA ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -7281,8 +7281,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AC-_4418",
     "sku": "080AC- 4418",
-    "slug": "advance-filtro-cabina-chery-tiggo-2-pro-1-5-2023-080ac-4418",
-    "name": "FILTRO CABINA CHERY TIGGO 2 PRO 1.5 2023 ADVANCE",
+    "slug": "advance-advance-filtro-cabina-chery-tiggo-2-pro-080ac-4418",
+    "name": "ADVANCE FILTRO CABINA CHERY TIGGO 2 PRO 1.5 2023 ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -7301,7 +7301,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "3 unid. listas para entrega"
     },
-    "description": "FILTRO CABINA CHERY TIGGO 2 PRO 1.5 2023 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO CABINA CHERY TIGGO 2 PRO 1.5 2023 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -7338,8 +7338,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AC-10245-2",
     "sku": "080AC-10245-2",
-    "slug": "advance-filtro-cabina-hy-getz-2-componentes-080ac-10245-2",
-    "name": "FILTRO CABINA HY GETZ (2 COMPONENTES) - AC-10245- 2 ADVANCE",
+    "slug": "advance-advance-filtro-cabina-hy-getz-2-compone-080ac-10245-2",
+    "name": "ADVANCE FILTRO CABINA HY GETZ (2 COMPONENTES) - AC-10245- 2 ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -7358,7 +7358,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "3 unid. listas para entrega"
     },
-    "description": "FILTRO CABINA HY GETZ (2 COMPONENTES) - AC-10245- 2 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO CABINA HY GETZ (2 COMPONENTES) - AC-10245- 2 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -7395,8 +7395,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AC-11105",
     "sku": "080AC-11105",
-    "slug": "advance-filtro-advance-cabina-zotye-t600-ac-11-080ac-11105",
-    "name": "FILTRO ADVANCE CABINA ZOTYE T600 - AC-11105",
+    "slug": "advance-advance-filtro-advance-cabina-zotye-t600-080ac-11105",
+    "name": "ADVANCE FILTRO ADVANCE CABINA ZOTYE T600 - AC-11105",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "camionetas",
@@ -7415,7 +7415,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Camionetas",
       "Disponibilidad": "3 unid. listas para entrega"
     },
-    "description": "FILTRO ADVANCE CABINA ZOTYE T600 - AC-11105 con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO ADVANCE CABINA ZOTYE T600 - AC-11105 con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -7457,8 +7457,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AC-1114",
     "sku": "080AC-1114",
-    "slug": "advance-filtro-cabina-ty-yaris-corolla-highlande-080ac-1114",
-    "name": "FILTRO CABINA TY YARIS-COROLLA-HIGHLANDER ADVANCE",
+    "slug": "advance-advance-filtro-cabina-ty-yaris-corolla-h-080ac-1114",
+    "name": "ADVANCE FILTRO CABINA TY YARIS-COROLLA-HIGHLANDER ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -7477,7 +7477,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "6 unid. listas para entrega"
     },
-    "description": "FILTRO CABINA TY YARIS-COROLLA-HIGHLANDER ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO CABINA TY YARIS-COROLLA-HIGHLANDER ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -7519,8 +7519,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AC-12775",
     "sku": "080AC-12775",
-    "slug": "advance-filtro-advance-cabina-subaru-forester-2-080ac-12775",
-    "name": "FILTRO ADVANCE CABINA SUBARU FORESTER 2.0L, WRX 2.T - AC-12775",
+    "slug": "advance-advance-filtro-advance-cabina-subaru-for-080ac-12775",
+    "name": "ADVANCE FILTRO ADVANCE CABINA SUBARU FORESTER 2.0L, WRX 2.T - AC-12775",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -7539,7 +7539,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "3 unid. listas para entrega"
     },
-    "description": "FILTRO ADVANCE CABINA SUBARU FORESTER 2.0L, WRX 2.T - AC-12775 con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO ADVANCE CABINA SUBARU FORESTER 2.0L, WRX 2.T - AC-12775 con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -7576,8 +7576,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AC-14050",
     "sku": "080AC-14050",
-    "slug": "advance-filtro-cabina-ch-gran-vitara-sz-xtrag-a-080ac-14050",
-    "name": "FILTRO CABINA CH GRAN VITARA SZ (XTRAG AC-108 RED 95861-64J00) ADVANCE",
+    "slug": "advance-advance-filtro-cabina-ch-gran-vitara-sz-080ac-14050",
+    "name": "ADVANCE FILTRO CABINA CH GRAN VITARA SZ (XTRAG AC-108 RED 95861-64J00) ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -7596,7 +7596,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "2 unid. listas para entrega"
     },
-    "description": "FILTRO CABINA CH GRAN VITARA SZ (XTRAG AC-108 RED 95861-64J00) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO CABINA CH GRAN VITARA SZ (XTRAG AC-108 RED 95861-64J00) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -7643,8 +7643,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AC-14051",
     "sku": "080AC-14051",
-    "slug": "advance-filtro-cabina-ch-grand-vitara-sz-next-2-080ac-14051",
-    "name": "FILTRO CABINA CH GRAND VITARA SZ NEXT 2.0, 2.4 /15-19 MARCO DE PLASTICO ADVANCE",
+    "slug": "advance-advance-filtro-cabina-ch-grand-vitara-sz-080ac-14051",
+    "name": "ADVANCE FILTRO CABINA CH GRAND VITARA SZ NEXT 2.0, 2.4 /15-19 MARCO DE PLASTICO ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -7663,7 +7663,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "5 unid. listas para entrega"
     },
-    "description": "FILTRO CABINA CH GRAND VITARA SZ NEXT 2.0, 2.4 /15-19 MARCO DE PLASTICO ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO CABINA CH GRAND VITARA SZ NEXT 2.0, 2.4 /15-19 MARCO DE PLASTICO ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -7705,8 +7705,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AC-17140",
     "sku": "080AC-17140",
-    "slug": "advance-filtro-cabina-fd-ranger-mz-bt50-2015-adv-080ac-17140",
-    "name": "FILTRO CABINA FD RANGER MZ BT50 2015 ADVANCE",
+    "slug": "advance-advance-filtro-cabina-fd-ranger-mz-bt50-080ac-17140",
+    "name": "ADVANCE FILTRO CABINA FD RANGER MZ BT50 2015 ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "camionetas",
@@ -7725,7 +7725,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Camionetas",
       "Disponibilidad": "2 unid. listas para entrega"
     },
-    "description": "FILTRO CABINA FD RANGER MZ BT50 2015 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO CABINA FD RANGER MZ BT50 2015 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -7762,8 +7762,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AC-18120",
     "sku": "080AC-18120",
-    "slug": "advance-filtro-cabina-ch-luv-dmax-3-0-14-x-trai-080ac-18120",
-    "name": "FILTRO CABINA CH LUV DMAX 3.0 /14 X-TRAIL CLASSIC L200 ASX OUTLANDER ADVANCE",
+    "slug": "advance-advance-filtro-cabina-ch-luv-dmax-3-0-1-080ac-18120",
+    "name": "ADVANCE FILTRO CABINA CH LUV DMAX 3.0 /14 X-TRAIL CLASSIC L200 ASX OUTLANDER ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "camionetas",
@@ -7782,7 +7782,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Camionetas",
       "Disponibilidad": "6 unid. listas para entrega"
     },
-    "description": "FILTRO CABINA CH LUV DMAX 3.0 /14 X-TRAIL CLASSIC L200 ASX OUTLANDER ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO CABINA CH LUV DMAX 3.0 /14 X-TRAIL CLASSIC L200 ASX OUTLANDER ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -7824,8 +7824,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AC-22010",
     "sku": "080AC-22010",
-    "slug": "advance-filtro-cabina-ch-dmax-diesel-2-5-3-0-05-080ac-22010",
-    "name": "FILTRO CABINA CH DMAX DIESEL 2.5-3.0 /05 VERSA /17-18 - AC22010 ADVANCE",
+    "slug": "advance-advance-filtro-cabina-ch-dmax-diesel-2-5-080ac-22010",
+    "name": "ADVANCE FILTRO CABINA CH DMAX DIESEL 2.5-3.0 /05 VERSA /17-18 - AC22010 ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "camionetas",
@@ -7844,7 +7844,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Camionetas",
       "Disponibilidad": "3 unid. listas para entrega"
     },
-    "description": "FILTRO CABINA CH DMAX DIESEL 2.5-3.0 /05 VERSA /17-18 - AC22010 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO CABINA CH DMAX DIESEL 2.5-3.0 /05 VERSA /17-18 - AC22010 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -7881,8 +7881,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AC-25091",
     "sku": "080AC-25091",
-    "slug": "advance-filtro-cabina-ns-frontier-np300-2-5-2019-080ac-25091",
-    "name": "FILTRO CABINA NS FRONTIER NP300 2,5 2019, DONGFENG RICH 6 - AC-25091 ADVANCE",
+    "slug": "advance-advance-filtro-cabina-ns-frontier-np300-080ac-25091",
+    "name": "ADVANCE FILTRO CABINA NS FRONTIER NP300 2,5 2019, DONGFENG RICH 6 - AC-25091 ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -7901,7 +7901,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "3 unid. listas para entrega"
     },
-    "description": "FILTRO CABINA NS FRONTIER NP300 2,5 2019, DONGFENG RICH 6 - AC-25091 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO CABINA NS FRONTIER NP300 2,5 2019, DONGFENG RICH 6 - AC-25091 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -7938,8 +7938,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AC-2807",
     "sku": "080AC-2807",
-    "slug": "advance-filtro-cabina-hy-tucson-ix-2-0-kia-cera-080ac-2807",
-    "name": "FILTRO CABINA HY TUCSON IX 2.0/ KIA CERATO 1.6/16- SPORTAGE ACTIVE /12- CERATO 97133-2E200 ADVANCE",
+    "slug": "advance-advance-filtro-cabina-hy-tucson-ix-2-0-080ac-2807",
+    "name": "ADVANCE FILTRO CABINA HY TUCSON IX 2.0/ KIA CERATO 1.6/16- SPORTAGE ACTIVE /12- CERATO 97133-2E200 ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -7958,7 +7958,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "2 unid. listas para entrega"
     },
-    "description": "FILTRO CABINA HY TUCSON IX 2.0/ KIA CERATO 1.6/16- SPORTAGE ACTIVE /12- CERATO 97133-2E200 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO CABINA HY TUCSON IX 2.0/ KIA CERATO 1.6/16- SPORTAGE ACTIVE /12- CERATO 97133-2E200 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -8000,8 +8000,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AC-2808",
     "sku": "080AC-2808",
-    "slug": "advance-filtro-cabina-hy-i10-grand-i10-kia-pican-080ac-2808",
-    "name": "FILTRO CABINA HY I10 GRAND I10 KIA PICANTO CH SPARK ADVANCE (MC-94242)",
+    "slug": "advance-advance-filtro-cabina-hy-i10-grand-i10-k-080ac-2808",
+    "name": "ADVANCE FILTRO CABINA HY I10 GRAND I10 KIA PICANTO CH SPARK ADVANCE (MC-94242)",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -8020,7 +8020,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "2 unid. listas para entrega"
     },
-    "description": "FILTRO CABINA HY I10 GRAND I10 KIA PICANTO CH SPARK ADVANCE (MC-94242) con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO CABINA HY I10 GRAND I10 KIA PICANTO CH SPARK ADVANCE (MC-94242) con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -8057,8 +8057,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AC-28151",
     "sku": "080AC-28151",
-    "slug": "advance-filtro-cabina-hy-santa-fe-2-7-2006-2001-080ac-28151",
-    "name": "FILTRO CABINA HY SANTA FE 2.7 2006-2001, 2.4 09-12 - AC-28110 ADVANCE",
+    "slug": "advance-advance-filtro-cabina-hy-santa-fe-2-7-20-080ac-28151",
+    "name": "ADVANCE FILTRO CABINA HY SANTA FE 2.7 2006-2001, 2.4 09-12 - AC-28110 ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -8077,7 +8077,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "2 unid. listas para entrega"
     },
-    "description": "FILTRO CABINA HY SANTA FE 2.7 2006-2001, 2.4 09-12 - AC-28110 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO CABINA HY SANTA FE 2.7 2006-2001, 2.4 09-12 - AC-28110 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -8114,8 +8114,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AC-28160",
     "sku": "080AC-28160",
-    "slug": "advance-filtro-cabina-hy-accent-iii-1-4-1-6-200-080ac-28160",
-    "name": "FILTRO CABINA HY ACCENT III 1.4, 1.6 2005-2010 - AC-28160 ADVANCE",
+    "slug": "advance-advance-filtro-cabina-hy-accent-iii-1-4-080ac-28160",
+    "name": "ADVANCE FILTRO CABINA HY ACCENT III 1.4, 1.6 2005-2010 - AC-28160 ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -8134,7 +8134,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "1 unid. listas para entrega"
     },
-    "description": "FILTRO CABINA HY ACCENT III 1.4, 1.6 2005-2010 - AC-28160 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO CABINA HY ACCENT III 1.4, 1.6 2005-2010 - AC-28160 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -8171,8 +8171,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AC-28261",
     "sku": "080AC-28261",
-    "slug": "advance-filtro-cabina-kia-rio-x-line-gt-selto-080ac-28261",
-    "name": "FILTRO CABINA KIA RIO X LINE, GT , SELTOS 2020 - CRETA 2022 AC-28261 ADVANCE",
+    "slug": "advance-advance-filtro-cabina-kia-rio-x-line-gt-080ac-28261",
+    "name": "ADVANCE FILTRO CABINA KIA RIO X LINE, GT , SELTOS 2020 - CRETA 2022 AC-28261 ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -8191,7 +8191,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "3 unid. listas para entrega"
     },
-    "description": "FILTRO CABINA KIA RIO X LINE, GT , SELTOS 2020 - CRETA 2022 AC-28261 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO CABINA KIA RIO X LINE, GT , SELTOS 2020 - CRETA 2022 AC-28261 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -8228,8 +8228,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AC-4403-2",
     "sku": "080AC-4403-2",
-    "slug": "advance-filtro-cabina-great-wall-wingle-7-20-ad-080ac-4403-2",
-    "name": "FILTRO CABINA GREAT WALL WINGLE 7/20- ADVANCE",
+    "slug": "advance-advance-filtro-cabina-great-wall-wingle-080ac-4403-2",
+    "name": "ADVANCE FILTRO CABINA GREAT WALL WINGLE 7/20- ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "camionetas",
@@ -8248,7 +8248,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Camionetas",
       "Disponibilidad": "3 unid. listas para entrega"
     },
-    "description": "FILTRO CABINA GREAT WALL WINGLE 7/20- ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO CABINA GREAT WALL WINGLE 7/20- ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -8285,8 +8285,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AC-4408",
     "sku": "080AC-4408",
-    "slug": "advance-filtro-cabina-jetour-x70-1-5t-x70-coupe-080ac-4408",
-    "name": "FILTRO CABINA JETOUR X70 1.5T, X70 COUPE 1.6T - AC-4408 ADVANCE",
+    "slug": "advance-advance-filtro-cabina-jetour-x70-1-5t-x-080ac-4408",
+    "name": "ADVANCE FILTRO CABINA JETOUR X70 1.5T, X70 COUPE 1.6T - AC-4408 ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -8305,7 +8305,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "2 unid. listas para entrega"
     },
-    "description": "FILTRO CABINA JETOUR X70 1.5T, X70 COUPE 1.6T - AC-4408 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO CABINA JETOUR X70 1.5T, X70 COUPE 1.6T - AC-4408 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -8342,8 +8342,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AC-4412",
     "sku": "080AC-4412",
-    "slug": "advance-filtro-cabina-great-wall-poer-2-0-gasoli-080ac-4412",
-    "name": "FILTRO CABINA GREAT WALL POER 2.0 GASOLINA DIESEL - AC- 4412 ADVANCE",
+    "slug": "advance-advance-filtro-cabina-great-wall-poer-2-080ac-4412",
+    "name": "ADVANCE FILTRO CABINA GREAT WALL POER 2.0 GASOLINA DIESEL - AC- 4412 ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -8362,7 +8362,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "6 unid. listas para entrega"
     },
-    "description": "FILTRO CABINA GREAT WALL POER 2.0 GASOLINA DIESEL - AC- 4412 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO CABINA GREAT WALL POER 2.0 GASOLINA DIESEL - AC- 4412 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -8399,8 +8399,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AC-4426",
     "sku": "080AC-4426",
-    "slug": "advance-filtro-advance-cabina-ac-18120-mg-5-1-080ac-4426",
-    "name": "FILTRO ADVANCE CABINA (AC-18120) MG 5 1.5, CHEVROLET LUV D-MAX 3.0 2014, X-TRAIL CLASSIC, L200, ASX,",
+    "slug": "advance-advance-filtro-advance-cabina-ac-18120-080ac-4426",
+    "name": "ADVANCE FILTRO ADVANCE CABINA (AC-18120) MG 5 1.5, CHEVROLET LUV D-MAX 3.0 2014, X-TRAIL CLASSIC, L200, ASX,",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "camionetas",
@@ -8419,7 +8419,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Camionetas",
       "Disponibilidad": "1 unid. listas para entrega"
     },
-    "description": "FILTRO ADVANCE CABINA (AC-18120) MG 5 1.5, CHEVROLET LUV D-MAX 3.0 2014, X-TRAIL CLASSIC, L200, ASX, con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO ADVANCE CABINA (AC-18120) MG 5 1.5, CHEVROLET LUV D-MAX 3.0 2014, X-TRAIL CLASSIC, L200, ASX, con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -8461,8 +8461,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AC-49030",
     "sku": "080AC-49030",
-    "slug": "advance-filtro-cabina-great-wall-wingle-2-2-2-4-080ac-49030",
-    "name": "FILTRO CABINA GREAT WALL WINGLE 2.2 2.4 2.8 10- ADVANCE",
+    "slug": "advance-advance-filtro-cabina-great-wall-wingle-080ac-49030",
+    "name": "ADVANCE FILTRO CABINA GREAT WALL WINGLE 2.2 2.4 2.8 10- ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "camionetas",
@@ -8481,7 +8481,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Camionetas",
       "Disponibilidad": "4 unid. listas para entrega"
     },
-    "description": "FILTRO CABINA GREAT WALL WINGLE 2.2 2.4 2.8 10- ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO CABINA GREAT WALL WINGLE 2.2 2.4 2.8 10- ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -8518,8 +8518,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AC-65210",
     "sku": "080AC-65210",
-    "slug": "advance-filtro-cabina-ch-orlando-cruze-spark-gt-080ac-65210",
-    "name": "FILTRO CABINA CH ORLANDO CRUZE SPARK GT TRACKER CAVALIER - AC-65210 ADVANCE",
+    "slug": "advance-advance-filtro-cabina-ch-orlando-cruze-s-080ac-65210",
+    "name": "ADVANCE FILTRO CABINA CH ORLANDO CRUZE SPARK GT TRACKER CAVALIER - AC-65210 ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -8538,7 +8538,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "5 unid. listas para entrega"
     },
-    "description": "FILTRO CABINA CH ORLANDO CRUZE SPARK GT TRACKER CAVALIER - AC-65210 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO CABINA CH ORLANDO CRUZE SPARK GT TRACKER CAVALIER - AC-65210 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -8575,8 +8575,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AC-65220",
     "sku": "080AC-65220",
-    "slug": "advance-filtro-cabina-ch-spark-gt-2017-beat-acti-080ac-65220",
-    "name": "FILTRO CABINA CH SPARK GT 2017 BEAT ACTIVE 2019 ADVANCE",
+    "slug": "advance-advance-filtro-cabina-ch-spark-gt-2017-b-080ac-65220",
+    "name": "ADVANCE FILTRO CABINA CH SPARK GT 2017 BEAT ACTIVE 2019 ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -8595,7 +8595,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "2 unid. listas para entrega"
     },
-    "description": "FILTRO CABINA CH SPARK GT 2017 BEAT ACTIVE 2019 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO CABINA CH SPARK GT 2017 BEAT ACTIVE 2019 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -8632,8 +8632,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AC-65340",
     "sku": "080AC-65340",
-    "slug": "advance-filtro-cabina-ch-trail-blazer-2-8-ltz-17-080ac-65340",
-    "name": "FILTRO CABINA CH TRAIL BLAZER 2.8 LTZ 17- COLORADO - AC-65340 ADVANCE",
+    "slug": "advance-advance-filtro-cabina-ch-trail-blazer-2-080ac-65340",
+    "name": "ADVANCE FILTRO CABINA CH TRAIL BLAZER 2.8 LTZ 17- COLORADO - AC-65340 ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -8652,7 +8652,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "3 unid. listas para entrega"
     },
-    "description": "FILTRO CABINA CH TRAIL BLAZER 2.8 LTZ 17- COLORADO - AC-65340 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO CABINA CH TRAIL BLAZER 2.8 LTZ 17- COLORADO - AC-65340 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -8689,8 +8689,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AC-9858",
     "sku": "080AC-9858",
-    "slug": "advance-filtro-cabina-ch-sail-advance-080ac-9858",
-    "name": "FILTRO CABINA CH SAIL ADVANCE",
+    "slug": "advance-advance-filtro-cabina-ch-sail-advance-080ac-9858",
+    "name": "ADVANCE FILTRO CABINA CH SAIL ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -8709,7 +8709,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "4 unid. listas para entrega"
     },
-    "description": "FILTRO CABINA CH SAIL ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO CABINA CH SAIL ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -8746,8 +8746,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-078AFP-012",
     "sku": "078AFP-012",
-    "slug": "advance-filtro-combustible-universal-advance-078afp-012",
-    "name": "FILTRO COMBUSTIBLE UNIVERSAL ADVANCE",
+    "slug": "advance-advance-filtro-combustible-universal-adv-078afp-012",
+    "name": "ADVANCE FILTRO COMBUSTIBLE UNIVERSAL ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -8766,7 +8766,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "8 unid. listas para entrega"
     },
-    "description": "FILTRO COMBUSTIBLE UNIVERSAL ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO COMBUSTIBLE UNIVERSAL ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -8803,8 +8803,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-078AFP-079",
     "sku": "078AFP-079",
-    "slug": "advance-filtro-combustible-vw-golf-jetta-sk-oc-078afp-079",
-    "name": "FILTRO COMBUSTIBLE VW GOLF, JETTA, SK OCTAVIA - CHERY TIGGO 2, FULLWIN 2012, ADVANCE",
+    "slug": "advance-advance-filtro-combustible-vw-golf-jett-078afp-079",
+    "name": "ADVANCE FILTRO COMBUSTIBLE VW GOLF, JETTA, SK OCTAVIA - CHERY TIGGO 2, FULLWIN 2012, ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -8823,7 +8823,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "3 unid. listas para entrega"
     },
-    "description": "FILTRO COMBUSTIBLE VW GOLF, JETTA, SK OCTAVIA - CHERY TIGGO 2, FULLWIN 2012, ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO COMBUSTIBLE VW GOLF, JETTA, SK OCTAVIA - CHERY TIGGO 2, FULLWIN 2012, ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -8870,8 +8870,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-078AFP-179",
     "sku": "078AFP-179",
-    "slug": "advance-filtro-combustible-great-wall-haval-h5-w-078afp-179",
-    "name": "FILTRO COMBUSTIBLE GREAT WALL HAVAL H5/WINGLE 2.0/HY TUCSON DIESEL/JINBEI/MAHINDRA/ZX AUTO G ADVANCE",
+    "slug": "advance-advance-filtro-combustible-great-wall-ha-078afp-179",
+    "name": "ADVANCE FILTRO COMBUSTIBLE GREAT WALL HAVAL H5/WINGLE 2.0/HY TUCSON DIESEL/JINBEI/MAHINDRA/ZX AUTO G ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "camionetas",
@@ -8890,7 +8890,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Camionetas",
       "Disponibilidad": "6 unid. listas para entrega"
     },
-    "description": "FILTRO COMBUSTIBLE GREAT WALL HAVAL H5/WINGLE 2.0/HY TUCSON DIESEL/JINBEI/MAHINDRA/ZX AUTO G ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO COMBUSTIBLE GREAT WALL HAVAL H5/WINGLE 2.0/HY TUCSON DIESEL/JINBEI/MAHINDRA/ZX AUTO G ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -8937,8 +8937,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-078AFP-5138",
     "sku": "078AFP-5138",
-    "slug": "advance-filtro-combustible-ch-nhr-npr-d-max2-5-078afp-5138",
-    "name": "FILTRO COMBUSTIBLE CH NHR, NPR, D-MAX2.5-3.0, GREAT WALL WINGLE DIESEL 2.0,2.8/ HINO GD GH ADVANCE",
+    "slug": "advance-advance-filtro-combustible-ch-nhr-npr-078afp-5138",
+    "name": "ADVANCE FILTRO COMBUSTIBLE CH NHR, NPR, D-MAX2.5-3.0, GREAT WALL WINGLE DIESEL 2.0,2.8/ HINO GD GH ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "pesado",
@@ -8957,7 +8957,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Pesado",
       "Disponibilidad": "12 unid. listas para entrega"
     },
-    "description": "FILTRO COMBUSTIBLE CH NHR, NPR, D-MAX2.5-3.0, GREAT WALL WINGLE DIESEL 2.0,2.8/ HINO GD GH ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO COMBUSTIBLE CH NHR, NPR, D-MAX2.5-3.0, GREAT WALL WINGLE DIESEL 2.0,2.8/ HINO GD GH ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -9014,8 +9014,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-078AFP-523",
     "sku": "078AFP-523",
-    "slug": "advance-filtro-combustible-ch-gran-vitara-3-5-pt-078afp-523",
-    "name": "FILTRO COMBUSTIBLE CH GRAN VITARA 3-5 PTAS MZ 323 (MF-5982 PREM FLP368 RED 15410-65D00 ADVANCE",
+    "slug": "advance-advance-filtro-combustible-ch-gran-vitar-078afp-523",
+    "name": "ADVANCE FILTRO COMBUSTIBLE CH GRAN VITARA 3-5 PTAS MZ 323 (MF-5982 PREM FLP368 RED 15410-65D00 ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -9034,7 +9034,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "1 unid. listas para entrega"
     },
-    "description": "FILTRO COMBUSTIBLE CH GRAN VITARA 3-5 PTAS MZ 323 (MF-5982 PREM FLP368 RED 15410-65D00 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO COMBUSTIBLE CH GRAN VITARA 3-5 PTAS MZ 323 (MF-5982 PREM FLP368 RED 15410-65D00 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -9076,8 +9076,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-079AFE-1509",
     "sku": "079AFE-1509",
-    "slug": "advance-filtro-combustible-ch-nmr-ftr-fvr-nqr-np-079afe-1509",
-    "name": "FILTRO COMBUSTIBLE CH NMR-FTR-FVR-NQR-NPR(2014) (ELEMENTO) ADVANCE",
+    "slug": "advance-advance-filtro-combustible-ch-nmr-ftr-fv-079afe-1509",
+    "name": "ADVANCE FILTRO COMBUSTIBLE CH NMR-FTR-FVR-NQR-NPR(2014) (ELEMENTO) ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "pesado",
@@ -9096,7 +9096,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Pesado",
       "Disponibilidad": "3 unid. listas para entrega"
     },
-    "description": "FILTRO COMBUSTIBLE CH NMR-FTR-FVR-NQR-NPR(2014) (ELEMENTO) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO COMBUSTIBLE CH NMR-FTR-FVR-NQR-NPR(2014) (ELEMENTO) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -9138,8 +9138,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-079AFE-268",
     "sku": "079AFE-268",
-    "slug": "advance-filtro-combustible-ty-hilux-2-7-diesel-h-079afe-268",
-    "name": "FILTRO COMBUSTIBLE TY HILUX 2.7 DIESEL HIACE 3.0 (ELEMENTO) ADVANCE",
+    "slug": "advance-advance-filtro-combustible-ty-hilux-2-7-079afe-268",
+    "name": "ADVANCE FILTRO COMBUSTIBLE TY HILUX 2.7 DIESEL HIACE 3.0 (ELEMENTO) ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "camionetas",
@@ -9158,7 +9158,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Camionetas",
       "Disponibilidad": "5 unid. listas para entrega"
     },
-    "description": "FILTRO COMBUSTIBLE TY HILUX 2.7 DIESEL HIACE 3.0 (ELEMENTO) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO COMBUSTIBLE TY HILUX 2.7 DIESEL HIACE 3.0 (ELEMENTO) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -9195,8 +9195,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-079AFP-1511",
     "sku": "079AFP-1511",
-    "slug": "advance-filtro-combustible-ch-dmax-3-0-diesel-079afp-1511",
-    "name": "FILTRO COMBUSTIBLE CH DMAX 3.0 DIESEL /-13 TRAMPA DE AGUA ADVANCE",
+    "slug": "advance-advance-filtro-combustible-ch-dmax-3-0-d-079afp-1511",
+    "name": "ADVANCE FILTRO COMBUSTIBLE CH DMAX 3.0 DIESEL /-13 TRAMPA DE AGUA ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "camionetas",
@@ -9215,7 +9215,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Camionetas",
       "Disponibilidad": "6 unid. listas para entrega"
     },
-    "description": "FILTRO COMBUSTIBLE CH DMAX 3.0 DIESEL /-13 TRAMPA DE AGUA ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO COMBUSTIBLE CH DMAX 3.0 DIESEL /-13 TRAMPA DE AGUA ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -9252,8 +9252,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AFE-15130",
     "sku": "080AFE-15130",
-    "slug": "advance-filtro-combustible-isuzu-frr-fsr-ftr-fvr-080afe-15130",
-    "name": "FILTRO COMBUSTIBLE ISUZU FRR FSR FTR FVR - SERIES FORWARD 11- 19 MT134S 17-18 SEC. (ELEM) ADVANCE",
+    "slug": "advance-advance-filtro-combustible-isuzu-frr-fsr-080afe-15130",
+    "name": "ADVANCE FILTRO COMBUSTIBLE ISUZU FRR FSR FTR FVR - SERIES FORWARD 11- 19 MT134S 17-18 SEC. (ELEM) ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "pesado",
@@ -9272,7 +9272,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Pesado",
       "Disponibilidad": "2 unid. listas para entrega"
     },
-    "description": "FILTRO COMBUSTIBLE ISUZU FRR FSR FTR FVR - SERIES FORWARD 11- 19 MT134S 17-18 SEC. (ELEM) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO COMBUSTIBLE ISUZU FRR FSR FTR FVR - SERIES FORWARD 11- 19 MT134S 17-18 SEC. (ELEM) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -9314,8 +9314,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AFE-295-1",
     "sku": "080AFE-295-1",
-    "slug": "advance-filtro-combustible-great-wall-poer-2-0-d-080afe-295-1",
-    "name": "FILTRO COMBUSTIBLE GREAT WALL POER 2.0 DIESEL 4D20M (ELEMENTO) ADVANCE",
+    "slug": "advance-advance-filtro-combustible-great-wall-po-080afe-295-1",
+    "name": "ADVANCE FILTRO COMBUSTIBLE GREAT WALL POER 2.0 DIESEL 4D20M (ELEMENTO) ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -9334,7 +9334,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "6 unid. listas para entrega"
     },
-    "description": "FILTRO COMBUSTIBLE GREAT WALL POER 2.0 DIESEL 4D20M (ELEMENTO) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO COMBUSTIBLE GREAT WALL POER 2.0 DIESEL 4D20M (ELEMENTO) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -9371,8 +9371,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AFE-296-1",
     "sku": "080AFE-296-1",
-    "slug": "advance-filtro-combustible-great-wall-poer-2-0-d-080afe-296-1",
-    "name": "FILTRO COMBUSTIBLE GREAT WALL POER 2.0 DIESEL 4D20M 2DA GENERACION LONG LIFE FILTER ADVANCE",
+    "slug": "advance-advance-filtro-combustible-great-wall-po-080afe-296-1",
+    "name": "ADVANCE FILTRO COMBUSTIBLE GREAT WALL POER 2.0 DIESEL 4D20M 2DA GENERACION LONG LIFE FILTER ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -9391,7 +9391,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "8 unid. listas para entrega"
     },
-    "description": "FILTRO COMBUSTIBLE GREAT WALL POER 2.0 DIESEL 4D20M 2DA GENERACION LONG LIFE FILTER ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO COMBUSTIBLE GREAT WALL POER 2.0 DIESEL 4D20M 2DA GENERACION LONG LIFE FILTER ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -9428,8 +9428,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AFE-297",
     "sku": "080AFE-297",
-    "slug": "advance-filtro-advance-combustible-chevrolet-d-m-080afe-297",
-    "name": "FILTRO ADVANCE COMBUSTIBLE CHEVROLET D-MAX 2.0T DIESEL 2025 CJ X 20 - AFE- 297",
+    "slug": "advance-advance-filtro-advance-combustible-chevr-080afe-297",
+    "name": "ADVANCE FILTRO ADVANCE COMBUSTIBLE CHEVROLET D-MAX 2.0T DIESEL 2025 CJ X 20 - AFE- 297",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "camionetas",
@@ -9448,7 +9448,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Camionetas",
       "Disponibilidad": "5 unid. listas para entrega"
     },
-    "description": "FILTRO ADVANCE COMBUSTIBLE CHEVROLET D-MAX 2.0T DIESEL 2025 CJ X 20 - AFE- 297 con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO ADVANCE COMBUSTIBLE CHEVROLET D-MAX 2.0T DIESEL 2025 CJ X 20 - AFE- 297 con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -9485,8 +9485,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AFE-385",
     "sku": "080AFE-385",
-    "slug": "advance-filtro-combustible-fd-ranger-3-2-tdci-r-080afe-385",
-    "name": "FILTRO COMBUSTIBLE FD RANGER 3.2 TDCI, RANGER COURIER XL 2.2L, NEW BT-50 II 3.2 ADVANCE",
+    "slug": "advance-advance-filtro-combustible-fd-ranger-3-2-080afe-385",
+    "name": "ADVANCE FILTRO COMBUSTIBLE FD RANGER 3.2 TDCI, RANGER COURIER XL 2.2L, NEW BT-50 II 3.2 ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "camionetas",
@@ -9505,7 +9505,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Camionetas",
       "Disponibilidad": "3 unid. listas para entrega"
     },
-    "description": "FILTRO COMBUSTIBLE FD RANGER 3.2 TDCI, RANGER COURIER XL 2.2L, NEW BT-50 II 3.2 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO COMBUSTIBLE FD RANGER 3.2 TDCI, RANGER COURIER XL 2.2L, NEW BT-50 II 3.2 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -9542,8 +9542,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AFI-9303",
     "sku": "080AFI-9303",
-    "slug": "advance-filtro-combustible-sumergible-hy-getz-m-080afi-9303",
-    "name": "FILTRO COMBUSTIBLE SUMERGIBLE HY GETZ, MATRIX, SANTA FE 2002 ADVANCE",
+    "slug": "advance-advance-filtro-combustible-sumergible-hy-080afi-9303",
+    "name": "ADVANCE FILTRO COMBUSTIBLE SUMERGIBLE HY GETZ, MATRIX, SANTA FE 2002 ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -9562,7 +9562,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "2 unid. listas para entrega"
     },
-    "description": "FILTRO COMBUSTIBLE SUMERGIBLE HY GETZ, MATRIX, SANTA FE 2002 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO COMBUSTIBLE SUMERGIBLE HY GETZ, MATRIX, SANTA FE 2002 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -9604,8 +9604,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AFI-9307",
     "sku": "080AFI-9307",
-    "slug": "advance-filtro-combustible-sumergible-kia-rio-xc-080afi-9307",
-    "name": "FILTRO COMBUSTIBLE SUMERGIBLE KIA RIO XCITE, NEW ACCENT (MF-48737) ADVANCE",
+    "slug": "advance-advance-filtro-combustible-sumergible-ki-080afi-9307",
+    "name": "ADVANCE FILTRO COMBUSTIBLE SUMERGIBLE KIA RIO XCITE, NEW ACCENT (MF-48737) ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -9624,7 +9624,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "1 unid. listas para entrega"
     },
-    "description": "FILTRO COMBUSTIBLE SUMERGIBLE KIA RIO XCITE, NEW ACCENT (MF-48737) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO COMBUSTIBLE SUMERGIBLE KIA RIO XCITE, NEW ACCENT (MF-48737) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -9666,8 +9666,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AFP-023",
     "sku": "080AFP-023",
-    "slug": "advance-filtro-combustible-mt-l200-sportero-dies-080afp-023",
-    "name": "FILTRO COMBUSTIBLE MT L200 SPORTERO DIESEL LUKAS CAV926 NUEVA FOTON CS Y CS2 ADVANCE",
+    "slug": "advance-advance-filtro-combustible-mt-l200-sport-080afp-023",
+    "name": "ADVANCE FILTRO COMBUSTIBLE MT L200 SPORTERO DIESEL LUKAS CAV926 NUEVA FOTON CS Y CS2 ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -9686,7 +9686,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "6 unid. listas para entrega"
     },
-    "description": "FILTRO COMBUSTIBLE MT L200 SPORTERO DIESEL LUKAS CAV926 NUEVA FOTON CS Y CS2 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO COMBUSTIBLE MT L200 SPORTERO DIESEL LUKAS CAV926 NUEVA FOTON CS Y CS2 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -9723,8 +9723,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AFP-046",
     "sku": "080AFP-046",
-    "slug": "advance-filtro-combustible-kia-pregio-besta-ca-080afp-046",
-    "name": "FILTRO COMBUSTIBLE KIA PREGIO, BESTA, CARENS, H100 TERRACAN DIESEL CH NLR ADVANCE (MF-4886)",
+    "slug": "advance-advance-filtro-combustible-kia-pregio-b-080afp-046",
+    "name": "ADVANCE FILTRO COMBUSTIBLE KIA PREGIO, BESTA, CARENS, H100 TERRACAN DIESEL CH NLR ADVANCE (MF-4886)",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -9743,7 +9743,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "8 unid. listas para entrega"
     },
-    "description": "FILTRO COMBUSTIBLE KIA PREGIO, BESTA, CARENS, H100 TERRACAN DIESEL CH NLR ADVANCE (MF-4886) con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO COMBUSTIBLE KIA PREGIO, BESTA, CARENS, H100 TERRACAN DIESEL CH NLR ADVANCE (MF-4886) con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -9785,8 +9785,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AFP-072",
     "sku": "080AFP-072",
-    "slug": "advance-filtro-combustible-rn-clio-twingo-megane-080afp-072",
-    "name": "FILTRO COMBUSTIBLE RN CLIO TWINGO MEGANE SCENIC PEUGEOT 206 BERLINGO ADVANCE",
+    "slug": "advance-advance-filtro-combustible-rn-clio-twing-080afp-072",
+    "name": "ADVANCE FILTRO COMBUSTIBLE RN CLIO TWINGO MEGANE SCENIC PEUGEOT 206 BERLINGO ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -9805,7 +9805,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "6 unid. listas para entrega"
     },
-    "description": "FILTRO COMBUSTIBLE RN CLIO TWINGO MEGANE SCENIC PEUGEOT 206 BERLINGO ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO COMBUSTIBLE RN CLIO TWINGO MEGANE SCENIC PEUGEOT 206 BERLINGO ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -9842,8 +9842,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AFP-083",
     "sku": "080AFP-083",
-    "slug": "advance-filtro-combustible-mz-bt50-crdi-bt-50-t-080afp-083",
-    "name": "FILTRO COMBUSTIBLE MZ BT50 CRDI, BT-50 TDI / MT MONTERO SPORT / NS FRONTIER T ADVANCE",
+    "slug": "advance-advance-filtro-combustible-mz-bt50-crdi-080afp-083",
+    "name": "ADVANCE FILTRO COMBUSTIBLE MZ BT50 CRDI, BT-50 TDI / MT MONTERO SPORT / NS FRONTIER T ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "camionetas",
@@ -9862,7 +9862,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Camionetas",
       "Disponibilidad": "3 unid. listas para entrega"
     },
-    "description": "FILTRO COMBUSTIBLE MZ BT50 CRDI, BT-50 TDI / MT MONTERO SPORT / NS FRONTIER T ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO COMBUSTIBLE MZ BT50 CRDI, BT-50 TDI / MT MONTERO SPORT / NS FRONTIER T ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -9904,8 +9904,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AFP-1020",
     "sku": "080AFP-1020",
-    "slug": "advance-filtro-combustible-mt-canter-3-5-interc-080afp-1020",
-    "name": "FILTRO COMBUSTIBLE MT CANTER 3.5- INTERCOOOLER HD HY HD72 (SAM SFC352 PREM FLP3 ADVANCE",
+    "slug": "advance-advance-filtro-combustible-mt-canter-3-5-080afp-1020",
+    "name": "ADVANCE FILTRO COMBUSTIBLE MT CANTER 3.5- INTERCOOOLER HD HY HD72 (SAM SFC352 PREM FLP3 ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -9924,7 +9924,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "3 unid. listas para entrega"
     },
-    "description": "FILTRO COMBUSTIBLE MT CANTER 3.5- INTERCOOOLER HD HY HD72 (SAM SFC352 PREM FLP3 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO COMBUSTIBLE MT CANTER 3.5- INTERCOOOLER HD HY HD72 (SAM SFC352 PREM FLP3 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -9961,8 +9961,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AFP-140",
     "sku": "080AFP-140",
-    "slug": "advance-filtro-combustible-great-wall-wingle-2-0-080afp-140",
-    "name": "FILTRO COMBUSTIBLE GREAT WALL WINGLE 2.0-2.8 JAC T6 2.8 FOTON IVECO MAHINDRA ADVANCE",
+    "slug": "advance-advance-filtro-combustible-great-wall-wi-080afp-140",
+    "name": "ADVANCE FILTRO COMBUSTIBLE GREAT WALL WINGLE 2.0-2.8 JAC T6 2.8 FOTON IVECO MAHINDRA ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "camionetas",
@@ -9981,7 +9981,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Camionetas",
       "Disponibilidad": "4 unid. listas para entrega"
     },
-    "description": "FILTRO COMBUSTIBLE GREAT WALL WINGLE 2.0-2.8 JAC T6 2.8 FOTON IVECO MAHINDRA ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO COMBUSTIBLE GREAT WALL WINGLE 2.0-2.8 JAC T6 2.8 FOTON IVECO MAHINDRA ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -10023,8 +10023,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AFP-202",
     "sku": "080AFP-202",
-    "slug": "advance-filtro-combustible-ns-2400-4x4-sentra-in-080afp-202",
-    "name": "FILTRO COMBUSTIBLE NS 2400 4X4 SENTRA INY CURVO (10Y00) ADVANCE",
+    "slug": "advance-advance-filtro-combustible-ns-2400-4x4-s-080afp-202",
+    "name": "ADVANCE FILTRO COMBUSTIBLE NS 2400 4X4 SENTRA INY CURVO (10Y00) ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -10043,7 +10043,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "2 unid. listas para entrega"
     },
-    "description": "FILTRO COMBUSTIBLE NS 2400 4X4 SENTRA INY CURVO (10Y00) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO COMBUSTIBLE NS 2400 4X4 SENTRA INY CURVO (10Y00) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -10080,8 +10080,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AFP-203",
     "sku": "080AFP-203",
-    "slug": "advance-filtro-combustible-ch-vitara-afp-203-adv-080afp-203",
-    "name": "FILTRO COMBUSTIBLE CH VITARA AFP-203 ADVANCE (MF-94925)",
+    "slug": "advance-advance-filtro-combustible-ch-vitara-afp-080afp-203",
+    "name": "ADVANCE FILTRO COMBUSTIBLE CH VITARA AFP-203 ADVANCE (MF-94925)",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -10100,7 +10100,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "5 unid. listas para entrega"
     },
-    "description": "FILTRO COMBUSTIBLE CH VITARA AFP-203 ADVANCE (MF-94925) con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO COMBUSTIBLE CH VITARA AFP-203 ADVANCE (MF-94925) con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -10137,8 +10137,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AFP-31120",
     "sku": "080AFP-31120",
-    "slug": "advance-filtro-combustible-ty-hilux-2-7-gas-pun-080afp-31120",
-    "name": "FILTRO COMBUSTIBLE TY HILUX 2.7 GAS (PUNTA A PUNTA SIN BASE) ADVANCE (MF-64951) (MF-41570)",
+    "slug": "advance-advance-filtro-combustible-ty-hilux-2-7-080afp-31120",
+    "name": "ADVANCE FILTRO COMBUSTIBLE TY HILUX 2.7 GAS (PUNTA A PUNTA SIN BASE) ADVANCE (MF-64951) (MF-41570)",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "camionetas",
@@ -10157,7 +10157,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Camionetas",
       "Disponibilidad": "3 unid. listas para entrega"
     },
-    "description": "FILTRO COMBUSTIBLE TY HILUX 2.7 GAS (PUNTA A PUNTA SIN BASE) ADVANCE (MF-64951) (MF-41570) con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO COMBUSTIBLE TY HILUX 2.7 GAS (PUNTA A PUNTA SIN BASE) ADVANCE (MF-64951) (MF-41570) con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -10194,8 +10194,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AFP-3627",
     "sku": "080AFP-3627",
-    "slug": "advance-filtro-combustible-ch-nhr-npr-d-max-dies-080afp-3627",
-    "name": "FILTRO COMBUSTIBLE CH NHR NPR D-MAX DIES DAIHATSU DELTA ADVANCE",
+    "slug": "advance-advance-filtro-combustible-ch-nhr-npr-d-080afp-3627",
+    "name": "ADVANCE FILTRO COMBUSTIBLE CH NHR NPR D-MAX DIES DAIHATSU DELTA ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "pesado",
@@ -10214,7 +10214,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Pesado",
       "Disponibilidad": "6 unid. listas para entrega"
     },
-    "description": "FILTRO COMBUSTIBLE CH NHR NPR D-MAX DIES DAIHATSU DELTA ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO COMBUSTIBLE CH NHR NPR D-MAX DIES DAIHATSU DELTA ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -10261,8 +10261,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AFP-4102",
     "sku": "080AFP-4102",
-    "slug": "advance-filtro-combustible-foton-aumark-dongfeng-080afp-4102",
-    "name": "FILTRO COMBUSTIBLE FOTON AUMARK DONGFENG FC5704 FC5504 FP586F FF42000 FF5018 ADVANCE (MF-4102)",
+    "slug": "advance-advance-filtro-combustible-foton-aumark-080afp-4102",
+    "name": "ADVANCE FILTRO COMBUSTIBLE FOTON AUMARK DONGFENG FC5704 FC5504 FP586F FF42000 FF5018 ADVANCE (MF-4102)",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -10281,7 +10281,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "4 unid. listas para entrega"
     },
-    "description": "FILTRO COMBUSTIBLE FOTON AUMARK DONGFENG FC5704 FC5504 FP586F FF42000 FF5018 ADVANCE (MF-4102) con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO COMBUSTIBLE FOTON AUMARK DONGFENG FC5704 FC5504 FP586F FF42000 FF5018 ADVANCE (MF-4102) con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -10318,8 +10318,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AFP-4183",
     "sku": "080AFP-4183",
-    "slug": "advance-filtro-combustible-jac-t6-diesel-vlv-ma-080afp-4183",
-    "name": "FILTRO COMBUSTIBLE JAC T6 DIESEL, VLV,MAN,CASE, ROVER,/NEW HOLLAND,LINDNER,FIAT ADVANCE",
+    "slug": "advance-advance-filtro-combustible-jac-t6-diesel-080afp-4183",
+    "name": "ADVANCE FILTRO COMBUSTIBLE JAC T6 DIESEL, VLV,MAN,CASE, ROVER,/NEW HOLLAND,LINDNER,FIAT ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "camionetas",
@@ -10338,7 +10338,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Camionetas",
       "Disponibilidad": "4 unid. listas para entrega"
     },
-    "description": "FILTRO COMBUSTIBLE JAC T6 DIESEL, VLV,MAN,CASE, ROVER,/NEW HOLLAND,LINDNER,FIAT ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO COMBUSTIBLE JAC T6 DIESEL, VLV,MAN,CASE, ROVER,/NEW HOLLAND,LINDNER,FIAT ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -10375,8 +10375,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AFP-555",
     "sku": "080AFP-555",
-    "slug": "advance-filtro-combustible-ch-corsa-1-4-1-6-1-8-080afp-555",
-    "name": "FILTRO COMBUSTIBLE CH CORSA 1.4-1.6-1.8/DMAX 2.4-3.5/ZAFIRA/M4/GREAT WALL C30 ADVANCE",
+    "slug": "advance-advance-filtro-combustible-ch-corsa-1-4-080afp-555",
+    "name": "ADVANCE FILTRO COMBUSTIBLE CH CORSA 1.4-1.6-1.8/DMAX 2.4-3.5/ZAFIRA/M4/GREAT WALL C30 ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "camionetas",
@@ -10395,7 +10395,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Camionetas",
       "Disponibilidad": "6 unid. listas para entrega"
     },
-    "description": "FILTRO COMBUSTIBLE CH CORSA 1.4-1.6-1.8/DMAX 2.4-3.5/ZAFIRA/M4/GREAT WALL C30 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO COMBUSTIBLE CH CORSA 1.4-1.6-1.8/DMAX 2.4-3.5/ZAFIRA/M4/GREAT WALL C30 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -10432,8 +10432,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AFP-5612",
     "sku": "080AFP-5612",
-    "slug": "advance-filtro-advance-combustible-filter-daf-f-080afp-5612",
-    "name": "FILTRO ADVANCE COMBUSTIBLE FILTER DAF, FOTON, JAC (FC-5725, SFF2241, PSC75, LFF5485) - AFP-5612",
+    "slug": "advance-advance-filtro-advance-combustible-filte-080afp-5612",
+    "name": "ADVANCE FILTRO ADVANCE COMBUSTIBLE FILTER DAF, FOTON, JAC (FC-5725, SFF2241, PSC75, LFF5485) - AFP-5612",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -10452,7 +10452,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "2 unid. listas para entrega"
     },
-    "description": "FILTRO ADVANCE COMBUSTIBLE FILTER DAF, FOTON, JAC (FC-5725, SFF2241, PSC75, LFF5485) - AFP-5612 con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO ADVANCE COMBUSTIBLE FILTER DAF, FOTON, JAC (FC-5725, SFF2241, PSC75, LFF5485) - AFP-5612 con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -10489,8 +10489,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AFP-573",
     "sku": "080AFP-573",
-    "slug": "advance-filtro-combustible-ch-chevytaxi-lanos-sp-080afp-573",
-    "name": "FILTRO COMBUSTIBLE CH CHEVYTAXI LANOS SPARK MATIZ AVEO OPTRA ADVANCE",
+    "slug": "advance-advance-filtro-combustible-ch-chevytaxi-080afp-573",
+    "name": "ADVANCE FILTRO COMBUSTIBLE CH CHEVYTAXI LANOS SPARK MATIZ AVEO OPTRA ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -10509,7 +10509,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "5 unid. listas para entrega"
     },
-    "description": "FILTRO COMBUSTIBLE CH CHEVYTAXI LANOS SPARK MATIZ AVEO OPTRA ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO COMBUSTIBLE CH CHEVYTAXI LANOS SPARK MATIZ AVEO OPTRA ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -10551,8 +10551,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AFP-704",
     "sku": "080AFP-704",
-    "slug": "advance-filtro-combustible-mz-bt50-gasolina-220-080afp-704",
-    "name": "FILTRO COMBUSTIBLE MZ BT50 GASOLINA, 2200 INY FD RANGER 2.2, 2.6 2008 (RED JE45-20-490A ADVANCE",
+    "slug": "advance-advance-filtro-combustible-mz-bt50-gasol-080afp-704",
+    "name": "ADVANCE FILTRO COMBUSTIBLE MZ BT50 GASOLINA, 2200 INY FD RANGER 2.2, 2.6 2008 (RED JE45-20-490A ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "camionetas",
@@ -10571,7 +10571,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Camionetas",
       "Disponibilidad": "2 unid. listas para entrega"
     },
-    "description": "FILTRO COMBUSTIBLE MZ BT50 GASOLINA, 2200 INY FD RANGER 2.2, 2.6 2008 (RED JE45-20-490A ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO COMBUSTIBLE MZ BT50 GASOLINA, 2200 INY FD RANGER 2.2, 2.6 2008 (RED JE45-20-490A ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -10608,8 +10608,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AFP-874",
     "sku": "080AFP-874",
-    "slug": "advance-filtro-combustible-ch-trail-blazer-5-3l-080afp-874",
-    "name": "FILTRO COMBUSTIBLE CH TRAIL BLAZER 5.3L ANTIGUA GASOLINA (MF-6397) - AFP-874 ADVANCE",
+    "slug": "advance-advance-filtro-combustible-ch-trail-blaz-080afp-874",
+    "name": "ADVANCE FILTRO COMBUSTIBLE CH TRAIL BLAZER 5.3L ANTIGUA GASOLINA (MF-6397) - AFP-874 ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -10628,7 +10628,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "3 unid. listas para entrega"
     },
-    "description": "FILTRO COMBUSTIBLE CH TRAIL BLAZER 5.3L ANTIGUA GASOLINA (MF-6397) - AFP-874 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO COMBUSTIBLE CH TRAIL BLAZER 5.3L ANTIGUA GASOLINA (MF-6397) - AFP-874 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -10665,8 +10665,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AFP-876",
     "sku": "080AFP-876",
-    "slug": "advance-filtro-combustible-ch-sail-1-4l-12-18-ad-080afp-876",
-    "name": "FILTRO COMBUSTIBLE CH SAIL 1.4L 12-18 ADVANCE",
+    "slug": "advance-advance-filtro-combustible-ch-sail-1-4l-080afp-876",
+    "name": "ADVANCE FILTRO COMBUSTIBLE CH SAIL 1.4L 12-18 ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -10685,7 +10685,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "3 unid. listas para entrega"
     },
-    "description": "FILTRO COMBUSTIBLE CH SAIL 1.4L 12-18 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO COMBUSTIBLE CH SAIL 1.4L 12-18 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -10722,8 +10722,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AFP-877",
     "sku": "080AFP-877",
-    "slug": "advance-filtro-combustible-ch-sail-1-5-2018-cav-080afp-877",
-    "name": "FILTRO COMBUSTIBLE CH SAIL 1.5 2018, CAVALIER 2019 (MF-72809 PREM FLP482 RED 90872178 ADVANCE",
+    "slug": "advance-advance-filtro-combustible-ch-sail-1-5-2-080afp-877",
+    "name": "ADVANCE FILTRO COMBUSTIBLE CH SAIL 1.5 2018, CAVALIER 2019 (MF-72809 PREM FLP482 RED 90872178 ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -10742,7 +10742,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "4 unid. listas para entrega"
     },
-    "description": "FILTRO COMBUSTIBLE CH SAIL 1.5 2018, CAVALIER 2019 (MF-72809 PREM FLP482 RED 90872178 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO COMBUSTIBLE CH SAIL 1.5 2018, CAVALIER 2019 (MF-72809 PREM FLP482 RED 90872178 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -10779,8 +10779,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AFP-974",
     "sku": "080AFP-974",
-    "slug": "advance-filtro-combustible-ch-luv-trooper-rode-080afp-974",
-    "name": "FILTRO COMBUSTIBLE CH LUV, TROOPER, RODEO, PEUGEOT 306, WINGLE 2.4 2.2L FI N200 ADVANCE",
+    "slug": "advance-advance-filtro-combustible-ch-luv-troop-080afp-974",
+    "name": "ADVANCE FILTRO COMBUSTIBLE CH LUV, TROOPER, RODEO, PEUGEOT 306, WINGLE 2.4 2.2L FI N200 ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "camionetas",
@@ -10799,7 +10799,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Camionetas",
       "Disponibilidad": "8 unid. listas para entrega"
     },
-    "description": "FILTRO COMBUSTIBLE CH LUV, TROOPER, RODEO, PEUGEOT 306, WINGLE 2.4 2.2L FI N200 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO COMBUSTIBLE CH LUV, TROOPER, RODEO, PEUGEOT 306, WINGLE 2.4 2.2L FI N200 ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -10841,8 +10841,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AFS-1212",
     "sku": "080AFS-1212",
-    "slug": "advance-filtro-combustible-camc-h08-440-380-ca-080afs-1212",
-    "name": "FILTRO COMBUSTIBLE CAMC H08 440, 380, CABEZAL 300, 14M3 MOTOR CUMMINS ISM380, FOTON AUMARK ADVANCE",
+    "slug": "advance-advance-filtro-combustible-camc-h08-440-080afs-1212",
+    "name": "ADVANCE FILTRO COMBUSTIBLE CAMC H08 440, 380, CABEZAL 300, 14M3 MOTOR CUMMINS ISM380, FOTON AUMARK ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "motos",
@@ -10861,7 +10861,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Motos",
       "Disponibilidad": "2 unid. listas para entrega"
     },
-    "description": "FILTRO COMBUSTIBLE CAMC H08 440, 380, CABEZAL 300, 14M3 MOTOR CUMMINS ISM380, FOTON AUMARK ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO COMBUSTIBLE CAMC H08 440, 380, CABEZAL 300, 14M3 MOTOR CUMMINS ISM380, FOTON AUMARK ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -10898,8 +10898,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AFS-127-1",
     "sku": "080AFS-127-1",
-    "slug": "advance-filtro-combustible-vw-17210-mb-1721-hi-080afs-127-1",
-    "name": "FILTRO COMBUSTIBLE VW 17210, MB 1721, HINO GD, GH, FC CON VALVULA (SEPARADOR) ADVANCE",
+    "slug": "advance-advance-filtro-combustible-vw-17210-mb-080afs-127-1",
+    "name": "ADVANCE FILTRO COMBUSTIBLE VW 17210, MB 1721, HINO GD, GH, FC CON VALVULA (SEPARADOR) ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "pesado",
@@ -10918,7 +10918,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Pesado",
       "Disponibilidad": "3 unid. listas para entrega"
     },
-    "description": "FILTRO COMBUSTIBLE VW 17210, MB 1721, HINO GD, GH, FC CON VALVULA (SEPARADOR) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO COMBUSTIBLE VW 17210, MB 1721, HINO GD, GH, FC CON VALVULA (SEPARADOR) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -10955,8 +10955,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AFS-1306",
     "sku": "080AFS-1306",
-    "slug": "advance-filtro-combustible-hino-gd-fuel-r60t-080afs-1306",
-    "name": "FILTRO COMBUSTIBLE HINO GD FUEL/ R60T ( SEPARADOR) ADVANCE",
+    "slug": "advance-advance-filtro-combustible-hino-gd-fuel-080afs-1306",
+    "name": "ADVANCE FILTRO COMBUSTIBLE HINO GD FUEL/ R60T ( SEPARADOR) ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "pesado",
@@ -10975,7 +10975,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Pesado",
       "Disponibilidad": "3 unid. listas para entrega"
     },
-    "description": "FILTRO COMBUSTIBLE HINO GD FUEL/ R60T ( SEPARADOR) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO COMBUSTIBLE HINO GD FUEL/ R60T ( SEPARADOR) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -11012,8 +11012,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AFS-193",
     "sku": "080AFS-193",
-    "slug": "advance-filtro-combustible-dongfeng-captain-e-51-080afs-193",
-    "name": "FILTRO COMBUSTIBLE DONGFENG CAPTAIN E-513, E-613 (FSP0120) (SEPARADOR) ADVANCE",
+    "slug": "advance-advance-filtro-combustible-dongfeng-capt-080afs-193",
+    "name": "ADVANCE FILTRO COMBUSTIBLE DONGFENG CAPTAIN E-513, E-613 (FSP0120) (SEPARADOR) ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -11032,7 +11032,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "3 unid. listas para entrega"
     },
-    "description": "FILTRO COMBUSTIBLE DONGFENG CAPTAIN E-513, E-613 (FSP0120) (SEPARADOR) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO COMBUSTIBLE DONGFENG CAPTAIN E-513, E-613 (FSP0120) (SEPARADOR) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -11069,8 +11069,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AFS-194-1",
     "sku": "080AFS-194-1",
-    "slug": "advance-filtro-combustible-rich-6-2-5cc-diesel-2-080afs-194-1",
-    "name": "FILTRO COMBUSTIBLE RICH 6 2.5CC DIESEL 20 - (SEPARADOR) ADVANCE",
+    "slug": "advance-advance-filtro-combustible-rich-6-2-5cc-080afs-194-1",
+    "name": "ADVANCE FILTRO COMBUSTIBLE RICH 6 2.5CC DIESEL 20 - (SEPARADOR) ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "autos",
@@ -11089,7 +11089,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "2 unid. listas para entrega"
     },
-    "description": "FILTRO COMBUSTIBLE RICH 6 2.5CC DIESEL 20 - (SEPARADOR) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO COMBUSTIBLE RICH 6 2.5CC DIESEL 20 - (SEPARADOR) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -11126,8 +11126,8 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-080AFS-7912",
     "sku": "080AFS-7912",
-    "slug": "advance-filtro-combustible-isuzu-nkr-nmr-npr-nqr-080afs-7912",
-    "name": "FILTRO COMBUSTIBLE ISUZU NKR NMR NPR NQR MERCEDEZ SERIES REWARD /11 (SEPARADOR) ADVANCE",
+    "slug": "advance-advance-filtro-combustible-isuzu-nkr-nmr-080afs-7912",
+    "name": "ADVANCE FILTRO COMBUSTIBLE ISUZU NKR NMR NPR NQR MERCEDEZ SERIES REWARD /11 (SEPARADOR) ADVANCE",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "pesado",
@@ -11146,7 +11146,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Pesado",
       "Disponibilidad": "3 unid. listas para entrega"
     },
-    "description": "FILTRO COMBUSTIBLE ISUZU NKR NMR NPR NQR MERCEDEZ SERIES REWARD /11 (SEPARADOR) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "ADVANCE FILTRO COMBUSTIBLE ISUZU NKR NMR NPR NQR MERCEDEZ SERIES REWARD /11 (SEPARADOR) ADVANCE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -11194,7 +11194,7 @@ export const PRODUCTS: Product[] = [
     "category": "refrigerantes",
     "applicationType": "autos",
     "volume": "1 Litro",
-    "shortSpec": "Línea oficial MANNOL. Disponible en 3 presentaciones con stock en Bodega Pedernales.",
+    "shortSpec": "Línea oficial MANNOL. Disponible en 3 presentaciones (1 Litro, Bidón (5 Litros), Caneca (20 Litros)) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "MANNOL",
       "Presentaciones": "1 Litro, Bidón (5 Litros), Caneca (20 Litros)",
@@ -11279,7 +11279,7 @@ export const PRODUCTS: Product[] = [
     "category": "refrigerantes",
     "applicationType": "autos",
     "volume": "1 Litro",
-    "shortSpec": "Línea oficial MANNOL. Disponible en 3 presentaciones con stock en Bodega Pedernales.",
+    "shortSpec": "Línea oficial MANNOL. Disponible en 3 presentaciones (1 Litro, Bidón (5 Litros), Caneca (20 Litros)) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "MANNOL",
       "Presentaciones": "1 Litro, Bidón (5 Litros), Caneca (20 Litros)",
@@ -11364,7 +11364,7 @@ export const PRODUCTS: Product[] = [
     "category": "refrigerantes",
     "applicationType": "autos",
     "volume": "1 Litro",
-    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones con stock en Bodega Pedernales.",
+    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones (1 Litro, Bidón (5 Litros)) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "MANNOL",
       "Presentaciones": "1 Litro, Bidón (5 Litros)",
@@ -11432,28 +11432,28 @@ export const PRODUCTS: Product[] = [
     "isBestSeller": true
   },
   {
-    "id": "prod-012MN4016-5",
-    "sku": "012MN4016-5",
-    "slug": "mannol-mannol-refrigerante-naranja-vida-util-5-a-os-012mn4016-5",
+    "id": "prod-012MN4016-1",
+    "sku": "012MN4016-1",
+    "slug": "mannol-mannol-refrigerante-naranja-vida-util-5-a-os-012mn4016-1",
     "name": "MANNOL REFRIGERANTE NARANJA VIDA UTIL 5 AÑOS",
     "brand": "MANNOL",
     "category": "refrigerantes",
     "applicationType": "autos",
-    "volume": "Bidón (5 Litros)",
-    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones con stock en Bodega Pedernales.",
+    "volume": "1 Litro",
+    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones (1 Litro, Bidón (5 Litros)) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "MANNOL",
-      "Presentaciones": "Bidón (5 Litros), Caneca (20 Litros)",
+      "Presentaciones": "1 Litro, Bidón (5 Litros)",
       "Stock Total": "22 unidades",
       "Origen": "Distribución Matriz LiderPro"
     },
     "fullSpecs": {
       "Categoría": "Refrigerantes",
       "Línea": "MANNOL Automotive",
-      "Presentaciones Disponibles": "Bidón (5 Litros), Caneca (20 Litros)",
+      "Presentaciones Disponibles": "1 Litro, Bidón (5 Litros)",
       "Garantía": "Garantía Oficial de Fábrica y LiderPro"
     },
-    "description": "MANNOL REFRIGERANTE NARANJA VIDA UTIL 5 AÑOS distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (Bidón (5 Litros), Caneca (20 Litros)) para talleres y flotas en Manabí y a nivel nacional.",
+    "description": "MANNOL REFRIGERANTE NARANJA VIDA UTIL 5 AÑOS distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, Bidón (5 Litros)) para talleres y flotas en Manabí y a nivel nacional.",
     "priceNote": "Consultar precio mayorista o unitario vía WhatsApp con factura SRI",
     "warranty": "Garantía oficial de autenticidad",
     "commercialStatus": "VERIFIED",
@@ -11461,8 +11461,17 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "22 unidades disponibles en Bodega Pedernales",
     "dispatchIndicator": "Despacho Inmediato",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/012MN4016-5.png",
+    "imageUrl": "/images/products/012MN4016-1.png",
     "variants": [
+      {
+        "sku": "012MN4016-1",
+        "name": "MANNOL CJ X 20 LT REFRIGERANTE NARANJA DEXCOOLANT 50/50 VIDA UTIL 5 AÑOS 20/1 LT",
+        "presentation": "1 Litro",
+        "volume": "1.0L",
+        "stock": 17,
+        "imageUrl": "/images/products/012MN4016-1.png",
+        "barcode": "4036021141169"
+      },
       {
         "sku": "012MN4016-5",
         "name": "MANNOL REFRIGERANTE NARANJA DEXCOOLANT 50/50 VIDA UTIL 5 AÑOS 4/5LT",
@@ -11471,15 +11480,6 @@ export const PRODUCTS: Product[] = [
         "stock": 5,
         "imageUrl": "/images/products/012MN4016-5.png",
         "barcode": "4036021541167"
-      },
-      {
-        "sku": "012MN4016-1",
-        "name": "MANNOL CJ X 20 LT REFRIGERANTE NARANJA DEXCOOLANT 50/50 VIDA UTIL 5 AÑOS 20/1 LT",
-        "presentation": "Caneca (20 Litros)",
-        "volume": "20.0L",
-        "stock": 17,
-        "imageUrl": "/images/products/012MN4016-1.png",
-        "barcode": "4036021141169"
       }
     ],
     "compatibleVehicles": [
@@ -11498,7 +11498,7 @@ export const PRODUCTS: Product[] = [
     "faqs": [
       {
         "question": "¿Qué presentaciones de MANNOL REFRIGERANTE NARANJA VIDA UTIL 5 AÑOS tienen en stock?",
-        "answer": "Disponemos de 2 presentaciones oficiales: Bidón (5 Litros), Caneca (20 Litros). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
+        "answer": "Disponemos de 2 presentaciones oficiales: 1 Litro, Bidón (5 Litros). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
       },
       {
         "question": "¿Realizan envíos a otras ciudades del país?",
@@ -11508,28 +11508,28 @@ export const PRODUCTS: Product[] = [
     "isBestSeller": true
   },
   {
-    "id": "prod-012MN7104-10A",
-    "sku": "012MN7104-10A",
-    "slug": "mannol-mannol-ts-4-shpd-15w40-extra-012mn7104-10a",
+    "id": "prod-012MN7104-1",
+    "sku": "012MN7104-1",
+    "slug": "mannol-mannol-ts-4-shpd-15w40-extra-012mn7104-1",
     "name": "MANNOL TS-4 SHPD 15W40 EXTRA",
     "brand": "MANNOL",
     "category": "lubricantes",
     "applicationType": "autos",
-    "volume": "Presentación Estándar",
-    "shortSpec": "Línea oficial MANNOL. Disponible en 4 presentaciones con stock en Bodega Pedernales.",
+    "volume": "1 Litro",
+    "shortSpec": "Línea oficial MANNOL. Disponible en 4 presentaciones (1 Litro, Bidón (5 Litros), Caneca (10 Litros), Caneca (20 Litros)) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "MANNOL",
-      "Presentaciones": "Presentación Estándar, Presentación Estándar, Bidón (5 Litros), Caneca (20 Litros)",
+      "Presentaciones": "1 Litro, Bidón (5 Litros), Caneca (10 Litros), Caneca (20 Litros)",
       "Stock Total": "34 unidades",
       "Origen": "Distribución Matriz LiderPro"
     },
     "fullSpecs": {
       "Categoría": "Lubricantes",
       "Línea": "MANNOL Automotive",
-      "Presentaciones Disponibles": "Presentación Estándar, Presentación Estándar, Bidón (5 Litros), Caneca (20 Litros)",
+      "Presentaciones Disponibles": "1 Litro, Bidón (5 Litros), Caneca (10 Litros), Caneca (20 Litros)",
       "Garantía": "Garantía Oficial de Fábrica y LiderPro"
     },
-    "description": "MANNOL TS-4 SHPD 15W40 EXTRA distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (Presentación Estándar, Presentación Estándar, Bidón (5 Litros), Caneca (20 Litros)) para talleres y flotas en Manabí y a nivel nacional.",
+    "description": "MANNOL TS-4 SHPD 15W40 EXTRA distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, Bidón (5 Litros), Caneca (10 Litros), Caneca (20 Litros)) para talleres y flotas en Manabí y a nivel nacional.",
     "priceNote": "Consultar precio mayorista o unitario vía WhatsApp con factura SRI",
     "warranty": "Garantía oficial de autenticidad",
     "commercialStatus": "VERIFIED",
@@ -11537,25 +11537,16 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "34 unidades disponibles en Bodega Pedernales",
     "dispatchIndicator": "Despacho Inmediato",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/012MN7104-10A.png",
+    "imageUrl": "/images/products/012MN7104-1.png",
     "variants": [
       {
-        "sku": "012MN7104-10A",
-        "name": "MANNOL TS-4 SHPD 15W40 EXTRA CAN 10 LT",
-        "presentation": "Presentación Estándar",
+        "sku": "012MN7104-1",
+        "name": "MANNOL TS-4 SHPD 15W40 EXTRA 20/1 LT",
+        "presentation": "1 Litro",
         "volume": "1.0L",
-        "stock": 2,
-        "imageUrl": "/images/products/012MN7104-10A.png",
-        "barcode": "4036021146713"
-      },
-      {
-        "sku": "012MN7104-20A",
-        "name": "MANNOL TS-4 SHPD 15W40 EXTRA 20/1 CAN",
-        "presentation": "Presentación Estándar",
-        "volume": "1.0L",
-        "stock": 8,
-        "imageUrl": "/images/products/012MN7104-20A.png",
-        "barcode": "4036021166445"
+        "stock": 16,
+        "imageUrl": "/images/products/012MN7104-1.png",
+        "barcode": "4036021106755"
       },
       {
         "sku": "012MN7104-5A",
@@ -11567,13 +11558,22 @@ export const PRODUCTS: Product[] = [
         "barcode": "4036021256757"
       },
       {
-        "sku": "012MN7104-1",
-        "name": "MANNOL TS-4 SHPD 15W40 EXTRA 20/1 LT",
+        "sku": "012MN7104-10A",
+        "name": "MANNOL TS-4 SHPD 15W40 EXTRA CAN 10 LT",
+        "presentation": "Caneca (10 Litros)",
+        "volume": "10.0L",
+        "stock": 2,
+        "imageUrl": "/images/products/012MN7104-10A.png",
+        "barcode": "4036021146713"
+      },
+      {
+        "sku": "012MN7104-20A",
+        "name": "MANNOL TS-4 SHPD 15W40 EXTRA 20/1 CAN",
         "presentation": "Caneca (20 Litros)",
         "volume": "20.0L",
-        "stock": 16,
-        "imageUrl": "/images/products/012MN7104-1.png",
-        "barcode": "4036021106755"
+        "stock": 8,
+        "imageUrl": "/images/products/012MN7104-20A.png",
+        "barcode": "4036021166445"
       }
     ],
     "compatibleVehicles": [
@@ -11592,7 +11592,7 @@ export const PRODUCTS: Product[] = [
     "faqs": [
       {
         "question": "¿Qué presentaciones de MANNOL TS-4 SHPD 15W40 EXTRA tienen en stock?",
-        "answer": "Disponemos de 4 presentaciones oficiales: Presentación Estándar, Presentación Estándar, Bidón (5 Litros), Caneca (20 Litros). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
+        "answer": "Disponemos de 4 presentaciones oficiales: 1 Litro, Bidón (5 Litros), Caneca (10 Litros), Caneca (20 Litros). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
       },
       {
         "question": "¿Realizan envíos a otras ciudades del país?",
@@ -11610,7 +11610,7 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "1 Litro",
-    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones con stock en Bodega Pedernales.",
+    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones (1 Litro, 1 Galón (3.78L)) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "MANNOL",
       "Presentaciones": "1 Litro, 1 Galón (3.78L)",
@@ -11686,7 +11686,7 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "1 Litro",
-    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones con stock en Bodega Pedernales.",
+    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones (1 Litro, 1 Galón (3.78L)) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "MANNOL",
       "Presentaciones": "1 Litro, 1 Galón (3.78L)",
@@ -11754,28 +11754,28 @@ export const PRODUCTS: Product[] = [
     "isBestSeller": true
   },
   {
-    "id": "prod-012MN7512-4A",
-    "sku": "012MN7512-4A",
-    "slug": "mannol-mannol-cj-x-20-lt-special-plus-10w30-012mn7512-4a",
-    "name": "MANNOL CJ X 20 LT SPECIAL PLUS 10W30",
+    "id": "prod-012MN7512-1A",
+    "sku": "012MN7512-1A",
+    "slug": "mannol-mannol-special-plus-10w30-012mn7512-1a",
+    "name": "MANNOL SPECIAL PLUS 10W30",
     "brand": "MANNOL",
     "category": "lubricantes",
     "applicationType": "autos",
-    "volume": "1 Galón (3.78L)",
-    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones con stock en Bodega Pedernales.",
+    "volume": "1 Litro",
+    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones (1 Litro, 1 Galón (3.78L)) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "MANNOL",
-      "Presentaciones": "1 Galón (3.78L), Caneca (20 Litros)",
+      "Presentaciones": "1 Litro, 1 Galón (3.78L)",
       "Stock Total": "18 unidades",
       "Origen": "Distribución Matriz LiderPro"
     },
     "fullSpecs": {
       "Categoría": "Lubricantes",
       "Línea": "MANNOL Automotive",
-      "Presentaciones Disponibles": "1 Galón (3.78L), Caneca (20 Litros)",
+      "Presentaciones Disponibles": "1 Litro, 1 Galón (3.78L)",
       "Garantía": "Garantía Oficial de Fábrica y LiderPro"
     },
-    "description": "MANNOL CJ X 20 LT SPECIAL PLUS 10W30 distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Galón (3.78L), Caneca (20 Litros)) para talleres y flotas en Manabí y a nivel nacional.",
+    "description": "MANNOL SPECIAL PLUS 10W30 distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Galón (3.78L)) para talleres y flotas en Manabí y a nivel nacional.",
     "priceNote": "Consultar precio mayorista o unitario vía WhatsApp con factura SRI",
     "warranty": "Garantía oficial de autenticidad",
     "commercialStatus": "VERIFIED",
@@ -11783,8 +11783,17 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "18 unidades disponibles en Bodega Pedernales",
     "dispatchIndicator": "Despacho Inmediato",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/012MN7512-4A.png",
+    "imageUrl": "/images/products/012MN7512-1A.png",
     "variants": [
+      {
+        "sku": "012MN7512-1A",
+        "name": "MANNOL CJ X 20 LT SPECIAL PLUS 10W30 20/1  LT",
+        "presentation": "1 Litro",
+        "volume": "1.0L",
+        "stock": 8,
+        "imageUrl": "/images/products/012MN7512-1A.png",
+        "barcode": "4036021102108"
+      },
       {
         "sku": "012MN7512-4A",
         "name": "MANNOL SPECIAL PLUS 10W30 4/1 GL",
@@ -11793,15 +11802,6 @@ export const PRODUCTS: Product[] = [
         "stock": 10,
         "imageUrl": "/images/products/012MN7512-4A.png",
         "barcode": "4036021402109"
-      },
-      {
-        "sku": "012MN7512-1A",
-        "name": "MANNOL CJ X 20 LT SPECIAL PLUS 10W30 20/1  LT",
-        "presentation": "Caneca (20 Litros)",
-        "volume": "20.0L",
-        "stock": 8,
-        "imageUrl": "/images/products/012MN7512-1A.png",
-        "barcode": "4036021102108"
       }
     ],
     "compatibleVehicles": [
@@ -11819,8 +11819,8 @@ export const PRODUCTS: Product[] = [
     ],
     "faqs": [
       {
-        "question": "¿Qué presentaciones de MANNOL CJ X 20 LT SPECIAL PLUS 10W30 tienen en stock?",
-        "answer": "Disponemos de 2 presentaciones oficiales: 1 Galón (3.78L), Caneca (20 Litros). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
+        "question": "¿Qué presentaciones de MANNOL SPECIAL PLUS 10W30 tienen en stock?",
+        "answer": "Disponemos de 2 presentaciones oficiales: 1 Litro, 1 Galón (3.78L). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
       },
       {
         "question": "¿Realizan envíos a otras ciudades del país?",
@@ -11828,63 +11828,6 @@ export const PRODUCTS: Product[] = [
       }
     ],
     "isBestSeller": true
-  },
-  {
-    "id": "prod-012MN7701-1",
-    "sku": "012MN7701-1",
-    "slug": "mannol-mannol-chevrolet-opel-o-e-m-5w30-012mn7701-1",
-    "name": "MANNOL CHEVROLET OPEL O.E.M 5W30",
-    "brand": "MANNOL",
-    "category": "lubricantes",
-    "applicationType": "autos",
-    "volume": "1 Litro",
-    "shortSpec": "Producto original MANNOL. Código OEM / Referencia: 012MN7701-1. Stock disponible en Pedernales.",
-    "specifications": {
-      "Código / SKU": "012MN7701-1",
-      "Marca": "MANNOL",
-      "Tipo": "Producto Automotriz",
-      "Stock Actual": "1 unidades",
-      "Bodega": "Pedernales Matriz"
-    },
-    "fullSpecs": {
-      "Referencia Comercial": "012MN7701-1",
-      "Fabricante": "MANNOL",
-      "Aplicación": "Autos",
-      "Disponibilidad": "1 unid. listas para entrega"
-    },
-    "description": "MANNOL CHEVROLET OPEL O.E.M 5W30 con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
-    "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
-    "warranty": "Garantía oficial de fábrica",
-    "commercialStatus": "VERIFIED",
-    "inStock": true,
-    "stockStatusText": "1 unidades en Bodega Pedernales",
-    "dispatchIndicator": "Despacho Inmediato",
-    "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/012MN7701-1.png",
-    "compatibleVehicles": [
-      {
-        "make": "Multimarca",
-        "model": "Vehículos y Flotas",
-        "yearRange": "Consulte según especificación"
-      }
-    ],
-    "features": [
-      "Calidad OEM garantizada por MANNOL",
-      "Construcción de alta resistencia y durabilidad",
-      "Entrega inmediata en Pedernales y envíos a todo Ecuador",
-      "Factura comercial autorizada por el SRI"
-    ],
-    "faqs": [
-      {
-        "question": "¿Este producto 012MN7701-1 es compatible con mi vehículo?",
-        "answer": "Nuestros asesores técnicos en Pedernales validan la compatibilidad exacta con tu número de chasis o modelo por WhatsApp antes del envío."
-      },
-      {
-        "question": "¿Tienen stock para retiro inmediato en tienda física?",
-        "answer": "Sí, disponemos de 1 unidades en nuestro local matriz de Pedernales listo para entrega inmediata."
-      }
-    ],
-    "isBestSeller": false
   },
   {
     "id": "prod-012MN7709-1",
@@ -11895,7 +11838,7 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "1 Litro",
-    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones con stock en Bodega Pedernales.",
+    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones (1 Litro, 1 Galón (3.78L)) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "MANNOL",
       "Presentaciones": "1 Litro, 1 Galón (3.78L)",
@@ -11971,7 +11914,7 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "1 Litro",
-    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones con stock en Bodega Pedernales.",
+    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones (1 Litro, 1 Galón (3.78L)) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "MANNOL",
       "Presentaciones": "1 Litro, 1 Galón (3.78L)",
@@ -12047,7 +11990,7 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "1 Litro",
-    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones con stock en Bodega Pedernales.",
+    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones (1 Litro, 1 Galón (3.78L)) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "MANNOL",
       "Presentaciones": "1 Litro, 1 Galón (3.78L)",
@@ -12117,75 +12060,56 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-012MN7812-1",
     "sku": "012MN7812-1",
-    "slug": "mannol-mannol-cj-x-20-lt-4takt-motorbike-10w40-012mn7812-1",
-    "name": "MANNOL CJ X 20 LT 4TAKT MOTORBIKE 10W40",
+    "slug": "mannol-mannol-4takt-motorbike-10w40-012mn7812-1",
+    "name": "MANNOL 4TAKT MOTORBIKE 10W40",
     "brand": "MANNOL",
     "category": "lubricantes",
     "applicationType": "motos",
-    "volume": "Caneca (20 Litros)",
-    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones con stock en Bodega Pedernales.",
+    "volume": "1 Litro",
+    "shortSpec": "Producto original MANNOL. Código OEM / Referencia: 012MN7812-1. Stock disponible en Pedernales.",
     "specifications": {
+      "Código / SKU": "012MN7812-1",
       "Marca": "MANNOL",
-      "Presentaciones": "Caneca (20 Litros), Caneca (20 Litros)",
-      "Stock Total": "42 unidades",
-      "Origen": "Distribución Matriz LiderPro"
+      "Tipo": "Producto Automotriz",
+      "Stock Actual": "23 unidades",
+      "Bodega": "Pedernales Matriz"
     },
     "fullSpecs": {
-      "Categoría": "Lubricantes",
-      "Línea": "MANNOL Automotive",
-      "Presentaciones Disponibles": "Caneca (20 Litros), Caneca (20 Litros)",
-      "Garantía": "Garantía Oficial de Fábrica y LiderPro"
+      "Referencia Comercial": "012MN7812-1",
+      "Fabricante": "MANNOL",
+      "Aplicación": "Motos",
+      "Disponibilidad": "23 unid. listas para entrega"
     },
-    "description": "MANNOL CJ X 20 LT 4TAKT MOTORBIKE 10W40 distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (Caneca (20 Litros), Caneca (20 Litros)) para talleres y flotas en Manabí y a nivel nacional.",
-    "priceNote": "Consultar precio mayorista o unitario vía WhatsApp con factura SRI",
-    "warranty": "Garantía oficial de autenticidad",
+    "description": "MANNOL 4TAKT MOTORBIKE 10W40 con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
+    "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
     "inStock": true,
-    "stockStatusText": "42 unidades disponibles en Bodega Pedernales",
+    "stockStatusText": "23 unidades en Bodega Pedernales",
     "dispatchIndicator": "Despacho Inmediato",
     "primaryOriginRecommendation": "Pedernales",
     "imageUrl": "/images/products/012MN7812-1.png",
-    "variants": [
-      {
-        "sku": "012MN7812-1",
-        "name": "MANNOL CJ X 20 LT 4TAKT MOTORBIKE 10W40 20/1 LT (7812)",
-        "presentation": "Caneca (20 Litros)",
-        "volume": "20.0L",
-        "stock": 23,
-        "imageUrl": "/images/products/012MN7812-1.png",
-        "barcode": "4036021102429"
-      },
-      {
-        "sku": "012MN7814-1",
-        "name": "MANNOL CJ X 20 UND 4TAKT MOTORBIKE 10W50 20/1 LT",
-        "presentation": "Caneca (20 Litros)",
-        "volume": "20.0L",
-        "stock": 19,
-        "imageUrl": "/images/products/012MN7814-1.png",
-        "barcode": "4036021102122"
-      }
-    ],
     "compatibleVehicles": [
       {
-        "make": "Universal",
-        "model": "Línea Multimarca y Talleres",
-        "yearRange": "Todos los años"
+        "make": "Multimarca",
+        "model": "Vehículos y Flotas",
+        "yearRange": "Consulte según especificación"
       }
     ],
     "features": [
-      "Presentación intercambiable en 2 tamaños unificados",
-      "Fórmula certificada de máxima pureza y durabilidad",
-      "Despacho verificado desde Bodega Matriz Pedernales",
-      "Facturación electrónica autorizada por el SRI"
+      "Calidad OEM garantizada por MANNOL",
+      "Construcción de alta resistencia y durabilidad",
+      "Entrega inmediata en Pedernales y envíos a todo Ecuador",
+      "Factura comercial autorizada por el SRI"
     ],
     "faqs": [
       {
-        "question": "¿Qué presentaciones de MANNOL CJ X 20 LT 4TAKT MOTORBIKE 10W40 tienen en stock?",
-        "answer": "Disponemos de 2 presentaciones oficiales: Caneca (20 Litros), Caneca (20 Litros). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
+        "question": "¿Este producto 012MN7812-1 es compatible con mi vehículo?",
+        "answer": "Nuestros asesores técnicos en Pedernales validan la compatibilidad exacta con tu número de chasis o modelo por WhatsApp antes del envío."
       },
       {
-        "question": "¿Realizan envíos a otras ciudades del país?",
-        "answer": "Sí, realizamos despachos diarios desde Pedernales a las 24 provincias del Ecuador mediante cooperativas y transporte de carga seguro."
+        "question": "¿Tienen stock para retiro inmediato en tienda física?",
+        "answer": "Sí, disponemos de 23 unidades en nuestro local matriz de Pedernales listo para entrega inmediata."
       }
     ],
     "isBestSeller": true
@@ -12193,12 +12117,12 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-012MN7814-1",
     "sku": "012MN7814-1",
-    "slug": "mannol-mannol-cj-x-20-und-4takt-motorbike-10w50-012mn7814-1",
-    "name": "MANNOL CJ X 20 UND 4TAKT MOTORBIKE 10W50",
+    "slug": "mannol-mannol-4takt-motorbike-10w50-012mn7814-1",
+    "name": "MANNOL 4TAKT MOTORBIKE 10W50",
     "brand": "MANNOL",
     "category": "lubricantes",
     "applicationType": "motos",
-    "volume": "Caneca (20 Litros)",
+    "volume": "1 Litro",
     "shortSpec": "Producto original MANNOL. Código OEM / Referencia: 012MN7814-1. Stock disponible en Pedernales.",
     "specifications": {
       "Código / SKU": "012MN7814-1",
@@ -12213,7 +12137,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Motos",
       "Disponibilidad": "19 unid. listas para entrega"
     },
-    "description": "MANNOL CJ X 20 UND 4TAKT MOTORBIKE 10W50 con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "MANNOL 4TAKT MOTORBIKE 10W50 con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -12313,7 +12237,7 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "1 Litro",
-    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones con stock en Bodega Pedernales.",
+    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones (1 Litro, Bidón (5 Litros)) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "MANNOL",
       "Presentaciones": "1 Litro, Bidón (5 Litros)",
@@ -12389,7 +12313,7 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "1 Litro",
-    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones con stock en Bodega Pedernales.",
+    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones (1 Litro, 1 Galón (3.78L)) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "MANNOL",
       "Presentaciones": "1 Litro, 1 Galón (3.78L)",
@@ -12465,7 +12389,7 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "1 Litro",
-    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones con stock en Bodega Pedernales.",
+    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones (1 Litro, Bidón (5 Litros)) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "MANNOL",
       "Presentaciones": "1 Litro, Bidón (5 Litros)",
@@ -12541,7 +12465,7 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "1 Litro",
-    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones con stock en Bodega Pedernales.",
+    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones (1 Litro, 1 Galón (3.78L)) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "MANNOL",
       "Presentaciones": "1 Litro, 1 Galón (3.78L)",
@@ -12617,7 +12541,7 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "1 Litro",
-    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones con stock en Bodega Pedernales.",
+    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones (1 Litro, 1 Galón (3.78L)) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "MANNOL",
       "Presentaciones": "1 Litro, 1 Galón (3.78L)",
@@ -12692,21 +12616,21 @@ export const PRODUCTS: Product[] = [
     "brand": "MANNOL",
     "category": "lubricantes",
     "applicationType": "autos",
-    "volume": "Caneca (5 Galones / 19L)",
-    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones con stock en Bodega Pedernales.",
+    "volume": "1 Litro",
+    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones (1 Litro, 1 Galón (3.78L)) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "MANNOL",
-      "Presentaciones": "Caneca (5 Galones / 19L), Caneca (5 Galones / 19L)",
+      "Presentaciones": "1 Litro, 1 Galón (3.78L)",
       "Stock Total": "22 unidades",
       "Origen": "Distribución Matriz LiderPro"
     },
     "fullSpecs": {
       "Categoría": "Lubricantes",
       "Línea": "MANNOL Automotive",
-      "Presentaciones Disponibles": "Caneca (5 Galones / 19L), Caneca (5 Galones / 19L)",
+      "Presentaciones Disponibles": "1 Litro, 1 Galón (3.78L)",
       "Garantía": "Garantía Oficial de Fábrica y LiderPro"
     },
-    "description": "MANNOL FWD 75W85 GL4 distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (Caneca (5 Galones / 19L), Caneca (5 Galones / 19L)) para talleres y flotas en Manabí y a nivel nacional.",
+    "description": "MANNOL FWD 75W85 GL4 distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Galón (3.78L)) para talleres y flotas en Manabí y a nivel nacional.",
     "priceNote": "Consultar precio mayorista o unitario vía WhatsApp con factura SRI",
     "warranty": "Garantía oficial de autenticidad",
     "commercialStatus": "VERIFIED",
@@ -12719,8 +12643,8 @@ export const PRODUCTS: Product[] = [
       {
         "sku": "012MN8101-1A",
         "name": "MANNOL FWD 75W85 GL4 12/1 LT",
-        "presentation": "Caneca (5 Galones / 19L)",
-        "volume": "19.0L",
+        "presentation": "1 Litro",
+        "volume": "1.0L",
         "stock": 18,
         "imageUrl": "/images/products/012MN8101-1A.png",
         "barcode": "4036021104362"
@@ -12728,8 +12652,8 @@ export const PRODUCTS: Product[] = [
       {
         "sku": "012MN8101-4",
         "name": "MANNOL FWD 75W85 GL4 4/1 GL",
-        "presentation": "Caneca (5 Galones / 19L)",
-        "volume": "19.0L",
+        "presentation": "1 Galón (3.78L)",
+        "volume": "3.78L",
         "stock": 4,
         "imageUrl": "/images/products/012MN8101-4.png",
         "barcode": "4036021404363"
@@ -12751,7 +12675,7 @@ export const PRODUCTS: Product[] = [
     "faqs": [
       {
         "question": "¿Qué presentaciones de MANNOL FWD 75W85 GL4 tienen en stock?",
-        "answer": "Disponemos de 2 presentaciones oficiales: Caneca (5 Galones / 19L), Caneca (5 Galones / 19L). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
+        "answer": "Disponemos de 2 presentaciones oficiales: 1 Litro, 1 Galón (3.78L). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
       },
       {
         "question": "¿Realizan envíos a otras ciudades del país?",
@@ -12769,7 +12693,7 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "1 Galón (3.78L)",
-    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones con stock en Bodega Pedernales.",
+    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones (1 Galón (3.78L), Caneca (20 Litros)) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "MANNOL",
       "Presentaciones": "1 Galón (3.78L), Caneca (20 Litros)",
@@ -12845,7 +12769,7 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "1 Litro",
-    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones con stock en Bodega Pedernales.",
+    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones (1 Litro, 1 Galón (3.78L)) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "MANNOL",
       "Presentaciones": "1 Litro, 1 Galón (3.78L)",
@@ -12921,7 +12845,7 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "1 Galón (3.78L)",
-    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones con stock en Bodega Pedernales.",
+    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones (1 Galón (3.78L), Caneca (20 Litros)) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "MANNOL",
       "Presentaciones": "1 Galón (3.78L), Caneca (20 Litros)",
@@ -12997,7 +12921,7 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "1 Litro",
-    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones con stock en Bodega Pedernales.",
+    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones (1 Litro, 1 Galón (3.78L)) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "MANNOL",
       "Presentaciones": "1 Litro, 1 Galón (3.78L)",
@@ -13187,145 +13111,107 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "1 Litro",
-    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones con stock en Bodega Pedernales.",
+    "shortSpec": "Producto original MANNOL. Código OEM / Referencia: 012MN8206-1. Stock disponible en Pedernales.",
     "specifications": {
+      "Código / SKU": "012MN8206-1",
       "Marca": "MANNOL",
-      "Presentaciones": "1 Litro, 1 Litro",
-      "Stock Total": "39 unidades",
-      "Origen": "Distribución Matriz LiderPro"
+      "Tipo": "Producto Automotriz",
+      "Stock Actual": "19 unidades",
+      "Bodega": "Pedernales Matriz"
     },
     "fullSpecs": {
-      "Categoría": "Lubricantes",
-      "Línea": "MANNOL Automotive",
-      "Presentaciones Disponibles": "1 Litro, 1 Litro",
-      "Garantía": "Garantía Oficial de Fábrica y LiderPro"
+      "Referencia Comercial": "012MN8206-1",
+      "Fabricante": "MANNOL",
+      "Aplicación": "Autos",
+      "Disponibilidad": "19 unid. listas para entrega"
     },
-    "description": "MANNOL ATF DEXRON III distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Litro) para talleres y flotas en Manabí y a nivel nacional.",
-    "priceNote": "Consultar precio mayorista o unitario vía WhatsApp con factura SRI",
-    "warranty": "Garantía oficial de autenticidad",
+    "description": "MANNOL ATF DEXRON III con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
+    "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
     "inStock": true,
-    "stockStatusText": "39 unidades disponibles en Bodega Pedernales",
+    "stockStatusText": "19 unidades en Bodega Pedernales",
     "dispatchIndicator": "Despacho Inmediato",
     "primaryOriginRecommendation": "Pedernales",
     "imageUrl": "/images/products/012MN8206-1.png",
-    "variants": [
-      {
-        "sku": "012MN8206-1",
-        "name": "MANNOL ATF DEXRON III 12/1 LT",
-        "presentation": "1 Litro",
-        "volume": "1.0L",
-        "stock": 19,
-        "imageUrl": "/images/products/012MN8206-1.png",
-        "barcode": "4036021101071"
-      },
-      {
-        "sku": "012MN8207-1",
-        "name": "MANNOL ATF DEXRON VI 12/1 LT",
-        "presentation": "1 Litro",
-        "volume": "1.0L",
-        "stock": 20,
-        "imageUrl": "/images/products/012MN8207-1.png",
-        "barcode": "4036021101057"
-      }
-    ],
     "compatibleVehicles": [
       {
-        "make": "Universal",
-        "model": "Línea Multimarca y Talleres",
-        "yearRange": "Todos los años"
+        "make": "Multimarca",
+        "model": "Vehículos y Flotas",
+        "yearRange": "Consulte según especificación"
       }
     ],
     "features": [
-      "Presentación intercambiable en 2 tamaños unificados",
-      "Fórmula certificada de máxima pureza y durabilidad",
-      "Despacho verificado desde Bodega Matriz Pedernales",
-      "Facturación electrónica autorizada por el SRI"
+      "Calidad OEM garantizada por MANNOL",
+      "Construcción de alta resistencia y durabilidad",
+      "Entrega inmediata en Pedernales y envíos a todo Ecuador",
+      "Factura comercial autorizada por el SRI"
     ],
     "faqs": [
       {
-        "question": "¿Qué presentaciones de MANNOL ATF DEXRON III tienen en stock?",
-        "answer": "Disponemos de 2 presentaciones oficiales: 1 Litro, 1 Litro. Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
+        "question": "¿Este producto 012MN8206-1 es compatible con mi vehículo?",
+        "answer": "Nuestros asesores técnicos en Pedernales validan la compatibilidad exacta con tu número de chasis o modelo por WhatsApp antes del envío."
       },
       {
-        "question": "¿Realizan envíos a otras ciudades del país?",
-        "answer": "Sí, realizamos despachos diarios desde Pedernales a las 24 provincias del Ecuador mediante cooperativas y transporte de carga seguro."
+        "question": "¿Tienen stock para retiro inmediato en tienda física?",
+        "answer": "Sí, disponemos de 19 unidades en nuestro local matriz de Pedernales listo para entrega inmediata."
       }
     ],
     "isBestSeller": true
   },
   {
-    "id": "prod-012MN8206-1",
-    "sku": "012MN8206-1",
-    "slug": "mannol-mannol-atf-dexron-vi-012mn8206-1",
+    "id": "prod-012MN8207-1",
+    "sku": "012MN8207-1",
+    "slug": "mannol-mannol-atf-dexron-vi-012mn8207-1",
     "name": "MANNOL ATF DEXRON VI",
     "brand": "MANNOL",
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "1 Litro",
-    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones con stock en Bodega Pedernales.",
+    "shortSpec": "Producto original MANNOL. Código OEM / Referencia: 012MN8207-1. Stock disponible en Pedernales.",
     "specifications": {
+      "Código / SKU": "012MN8207-1",
       "Marca": "MANNOL",
-      "Presentaciones": "1 Litro, 1 Litro",
-      "Stock Total": "39 unidades",
-      "Origen": "Distribución Matriz LiderPro"
+      "Tipo": "Producto Automotriz",
+      "Stock Actual": "20 unidades",
+      "Bodega": "Pedernales Matriz"
     },
     "fullSpecs": {
-      "Categoría": "Lubricantes",
-      "Línea": "MANNOL Automotive",
-      "Presentaciones Disponibles": "1 Litro, 1 Litro",
-      "Garantía": "Garantía Oficial de Fábrica y LiderPro"
+      "Referencia Comercial": "012MN8207-1",
+      "Fabricante": "MANNOL",
+      "Aplicación": "Autos",
+      "Disponibilidad": "20 unid. listas para entrega"
     },
-    "description": "MANNOL ATF DEXRON VI distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Litro) para talleres y flotas en Manabí y a nivel nacional.",
-    "priceNote": "Consultar precio mayorista o unitario vía WhatsApp con factura SRI",
-    "warranty": "Garantía oficial de autenticidad",
+    "description": "MANNOL ATF DEXRON VI con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
+    "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
     "inStock": true,
-    "stockStatusText": "39 unidades disponibles en Bodega Pedernales",
+    "stockStatusText": "20 unidades en Bodega Pedernales",
     "dispatchIndicator": "Despacho Inmediato",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/012MN8206-1.png",
-    "variants": [
-      {
-        "sku": "012MN8206-1",
-        "name": "MANNOL ATF DEXRON III 12/1 LT",
-        "presentation": "1 Litro",
-        "volume": "1.0L",
-        "stock": 19,
-        "imageUrl": "/images/products/012MN8206-1.png",
-        "barcode": "4036021101071"
-      },
-      {
-        "sku": "012MN8207-1",
-        "name": "MANNOL ATF DEXRON VI 12/1 LT",
-        "presentation": "1 Litro",
-        "volume": "1.0L",
-        "stock": 20,
-        "imageUrl": "/images/products/012MN8207-1.png",
-        "barcode": "4036021101057"
-      }
-    ],
+    "imageUrl": "/images/products/012MN8207-1.png",
     "compatibleVehicles": [
       {
-        "make": "Universal",
-        "model": "Línea Multimarca y Talleres",
-        "yearRange": "Todos los años"
+        "make": "Multimarca",
+        "model": "Vehículos y Flotas",
+        "yearRange": "Consulte según especificación"
       }
     ],
     "features": [
-      "Presentación intercambiable en 2 tamaños unificados",
-      "Fórmula certificada de máxima pureza y durabilidad",
-      "Despacho verificado desde Bodega Matriz Pedernales",
-      "Facturación electrónica autorizada por el SRI"
+      "Calidad OEM garantizada por MANNOL",
+      "Construcción de alta resistencia y durabilidad",
+      "Entrega inmediata en Pedernales y envíos a todo Ecuador",
+      "Factura comercial autorizada por el SRI"
     ],
     "faqs": [
       {
-        "question": "¿Qué presentaciones de MANNOL ATF DEXRON VI tienen en stock?",
-        "answer": "Disponemos de 2 presentaciones oficiales: 1 Litro, 1 Litro. Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
+        "question": "¿Este producto 012MN8207-1 es compatible con mi vehículo?",
+        "answer": "Nuestros asesores técnicos en Pedernales validan la compatibilidad exacta con tu número de chasis o modelo por WhatsApp antes del envío."
       },
       {
-        "question": "¿Realizan envíos a otras ciudades del país?",
-        "answer": "Sí, realizamos despachos diarios desde Pedernales a las 24 provincias del Ecuador mediante cooperativas y transporte de carga seguro."
+        "question": "¿Tienen stock para retiro inmediato en tienda física?",
+        "answer": "Sí, disponemos de 20 unidades en nuestro local matriz de Pedernales listo para entrega inmediata."
       }
     ],
     "isBestSeller": true
@@ -13445,86 +13331,58 @@ export const PRODUCTS: Product[] = [
     "isBestSeller": true
   },
   {
-    "id": "prod-012MN2203-20",
-    "sku": "012MN2203-20",
-    "slug": "mannol-mannol-hydro-hv-iso-32-longlife-012mn2203-20",
+    "id": "prod-MN2201-20",
+    "sku": "MN2201-20",
+    "slug": "mannol-mannol-hydro-hv-iso-32-longlife-mn2201-20",
     "name": "MANNOL HYDRO HV ISO 32 LONGLIFE",
     "brand": "MANNOL",
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "Caneca (20 Litros)",
-    "shortSpec": "Línea oficial MANNOL. Disponible en 3 presentaciones con stock en Bodega Pedernales.",
+    "shortSpec": "Producto original MANNOL. Código OEM / Referencia: MN2201-20. Stock disponible en Pedernales.",
     "specifications": {
+      "Código / SKU": "MN2201-20",
       "Marca": "MANNOL",
-      "Presentaciones": "Caneca (20 Litros), Caneca (20 Litros), Caneca (20 Litros)",
-      "Stock Total": "3 unidades",
-      "Origen": "Distribución Matriz LiderPro"
+      "Tipo": "Producto Automotriz",
+      "Stock Actual": "1 unidades",
+      "Bodega": "Pedernales Matriz"
     },
     "fullSpecs": {
-      "Categoría": "Lubricantes",
-      "Línea": "MANNOL Automotive",
-      "Presentaciones Disponibles": "Caneca (20 Litros), Caneca (20 Litros), Caneca (20 Litros)",
-      "Garantía": "Garantía Oficial de Fábrica y LiderPro"
+      "Referencia Comercial": "MN2201-20",
+      "Fabricante": "MANNOL",
+      "Aplicación": "Autos",
+      "Disponibilidad": "1 unid. listas para entrega"
     },
-    "description": "MANNOL HYDRO HV ISO 32 LONGLIFE distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (Caneca (20 Litros), Caneca (20 Litros), Caneca (20 Litros)) para talleres y flotas en Manabí y a nivel nacional.",
-    "priceNote": "Consultar precio mayorista o unitario vía WhatsApp con factura SRI",
-    "warranty": "Garantía oficial de autenticidad",
+    "description": "MANNOL HYDRO HV ISO 32 LONGLIFE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
+    "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
     "inStock": true,
-    "stockStatusText": "3 unidades disponibles en Bodega Pedernales",
+    "stockStatusText": "1 unidades en Bodega Pedernales",
     "dispatchIndicator": "Despacho Inmediato",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/012MN2203-20.png",
-    "variants": [
-      {
-        "sku": "012MN2203-20",
-        "name": "MANNOL HYDRO HV ISO 68 CAN 20/1 LT",
-        "presentation": "Caneca (20 Litros)",
-        "volume": "20.0L",
-        "stock": 1,
-        "imageUrl": "/images/products/012MN2203-20.png",
-        "barcode": "0"
-      },
-      {
-        "sku": "MN2201-20",
-        "name": "MANNOL HYDRO HV ISO 32 LONGLIFE CAN 20/1 LT",
-        "presentation": "Caneca (20 Litros)",
-        "volume": "20.0L",
-        "stock": 1,
-        "imageUrl": "/images/products/MN2201-20.png",
-        "barcode": "0"
-      },
-      {
-        "sku": "MN2202-20",
-        "name": "MANNOL HYDRO HV ISO 46 LONGLIFE CAN 20/1 LT",
-        "presentation": "Caneca (20 Litros)",
-        "volume": "20.0L",
-        "stock": 1,
-        "imageUrl": "/images/products/MN2202-20.png",
-        "barcode": "0"
-      }
-    ],
+    "imageUrl": "/images/products/MN2201-20.png",
     "compatibleVehicles": [
       {
-        "make": "Universal",
-        "model": "Línea Multimarca y Talleres",
-        "yearRange": "Todos los años"
+        "make": "Multimarca",
+        "model": "Vehículos y Flotas",
+        "yearRange": "Consulte según especificación"
       }
     ],
     "features": [
-      "Presentación intercambiable en 3 tamaños unificados",
-      "Fórmula certificada de máxima pureza y durabilidad",
-      "Despacho verificado desde Bodega Matriz Pedernales",
-      "Facturación electrónica autorizada por el SRI"
+      "Calidad OEM garantizada por MANNOL",
+      "Construcción de alta resistencia y durabilidad",
+      "Entrega inmediata en Pedernales y envíos a todo Ecuador",
+      "Factura comercial autorizada por el SRI"
     ],
     "faqs": [
       {
-        "question": "¿Qué presentaciones de MANNOL HYDRO HV ISO 32 LONGLIFE tienen en stock?",
-        "answer": "Disponemos de 3 presentaciones oficiales: Caneca (20 Litros), Caneca (20 Litros), Caneca (20 Litros). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
+        "question": "¿Este producto MN2201-20 es compatible con mi vehículo?",
+        "answer": "Nuestros asesores técnicos en Pedernales validan la compatibilidad exacta con tu número de chasis o modelo por WhatsApp antes del envío."
       },
       {
-        "question": "¿Realizan envíos a otras ciudades del país?",
-        "answer": "Sí, realizamos despachos diarios desde Pedernales a las 24 provincias del Ecuador mediante cooperativas y transporte de carga seguro."
+        "question": "¿Tienen stock para retiro inmediato en tienda física?",
+        "answer": "Sí, disponemos de 1 unidades en nuestro local matriz de Pedernales listo para entrega inmediata."
       }
     ],
     "isBestSeller": false
@@ -13644,46 +13502,37 @@ export const PRODUCTS: Product[] = [
     "isBestSeller": false
   },
   {
-    "id": "prod-015MD-51300",
-    "sku": "015MD-51300",
-    "slug": "mobil-mobil-delvac-mx-15w40-015md-51300",
+    "id": "prod-015MD12-15W40",
+    "sku": "015MD12-15W40",
+    "slug": "mobil-mobil-delvac-mx-15w40-015md12-15w40",
     "name": "MOBIL DELVAC MX 15W40",
     "brand": "MOBIL",
     "category": "lubricantes",
     "applicationType": "autos",
-    "volume": "Presentación Estándar",
-    "shortSpec": "Línea oficial MOBIL. Disponible en 6 presentaciones con stock en Bodega Pedernales.",
+    "volume": "1 Litro",
+    "shortSpec": "Línea oficial MOBIL. Disponible en 4 presentaciones (1 Litro, 1 Galón (3.78L), Media Caneca (2.5 Gal), Caneca (5 Galones / 19L)) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "MOBIL",
-      "Presentaciones": "Presentación Estándar, 1 Litro, 1 Galón (3.78L), Media Caneca (2.5 Gal), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L)",
-      "Stock Total": "29 unidades",
+      "Presentaciones": "1 Litro, 1 Galón (3.78L), Media Caneca (2.5 Gal), Caneca (5 Galones / 19L)",
+      "Stock Total": "26 unidades",
       "Origen": "Distribución Matriz LiderPro"
     },
     "fullSpecs": {
       "Categoría": "Lubricantes",
       "Línea": "MOBIL Automotive",
-      "Presentaciones Disponibles": "Presentación Estándar, 1 Litro, 1 Galón (3.78L), Media Caneca (2.5 Gal), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L)",
+      "Presentaciones Disponibles": "1 Litro, 1 Galón (3.78L), Media Caneca (2.5 Gal), Caneca (5 Galones / 19L)",
       "Garantía": "Garantía Oficial de Fábrica y LiderPro"
     },
-    "description": "MOBIL DELVAC MX 15W40 distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (Presentación Estándar, 1 Litro, 1 Galón (3.78L), Media Caneca (2.5 Gal), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L)) para talleres y flotas en Manabí y a nivel nacional.",
+    "description": "MOBIL DELVAC MX 15W40 distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Galón (3.78L), Media Caneca (2.5 Gal), Caneca (5 Galones / 19L)) para talleres y flotas en Manabí y a nivel nacional.",
     "priceNote": "Consultar precio mayorista o unitario vía WhatsApp con factura SRI",
     "warranty": "Garantía oficial de autenticidad",
     "commercialStatus": "VERIFIED",
     "inStock": true,
-    "stockStatusText": "29 unidades disponibles en Bodega Pedernales",
+    "stockStatusText": "26 unidades disponibles en Bodega Pedernales",
     "dispatchIndicator": "Despacho Inmediato",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/015MD-51300.png",
+    "imageUrl": "/images/products/015MD12-15W40.png",
     "variants": [
-      {
-        "sku": "015MD-51300",
-        "name": "MOBIL DELVAC 1300 SUP 15W40 CAN 5/1",
-        "presentation": "Presentación Estándar",
-        "volume": "1.0L",
-        "stock": 1,
-        "imageUrl": "/images/products/015MD-51300.png",
-        "barcode": "7751673002398"
-      },
       {
         "sku": "015MD12-15W40",
         "name": "MOBIL DELVAC MX 15W40 12/1",
@@ -13712,15 +13561,6 @@ export const PRODUCTS: Product[] = [
         "barcode": "7751673002428"
       },
       {
-        "sku": "015MD-513002.5",
-        "name": "MOBIL DELVAC 1300 SUP 15W40 CAN 2.5/1 GL",
-        "presentation": "Caneca (5 Galones / 19L)",
-        "volume": "19.0L",
-        "stock": 2,
-        "imageUrl": "/images/products/015MD-513002_5.png",
-        "barcode": "7751673002381"
-      },
-      {
         "sku": "015MD5-15W40",
         "name": "MOBIL DELVAC MX 15W40 CANECA 5GL",
         "presentation": "Caneca (5 Galones / 19L)",
@@ -13738,7 +13578,7 @@ export const PRODUCTS: Product[] = [
       }
     ],
     "features": [
-      "Presentación intercambiable en 6 tamaños unificados",
+      "Presentación intercambiable en 4 tamaños unificados",
       "Fórmula certificada de máxima pureza y durabilidad",
       "Despacho verificado desde Bodega Matriz Pedernales",
       "Facturación electrónica autorizada por el SRI"
@@ -13746,7 +13586,7 @@ export const PRODUCTS: Product[] = [
     "faqs": [
       {
         "question": "¿Qué presentaciones de MOBIL DELVAC MX 15W40 tienen en stock?",
-        "answer": "Disponemos de 6 presentaciones oficiales: Presentación Estándar, 1 Litro, 1 Galón (3.78L), Media Caneca (2.5 Gal), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
+        "answer": "Disponemos de 4 presentaciones oficiales: 1 Litro, 1 Galón (3.78L), Media Caneca (2.5 Gal), Caneca (5 Galones / 19L). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
       },
       {
         "question": "¿Realizan envíos a otras ciudades del país?",
@@ -13756,28 +13596,28 @@ export const PRODUCTS: Product[] = [
     "isBestSeller": true
   },
   {
-    "id": "prod-015MD-51300",
-    "sku": "015MD-51300",
-    "slug": "mobil-mobil-delvac-1300-sup-15w40-015md-51300",
+    "id": "prod-015MD-513002_5",
+    "sku": "015MD-513002.5",
+    "slug": "mobil-mobil-delvac-1300-sup-15w40-015md-513002-5",
     "name": "MOBIL DELVAC 1300 SUP 15W40",
     "brand": "MOBIL",
     "category": "lubricantes",
     "applicationType": "autos",
-    "volume": "Presentación Estándar",
-    "shortSpec": "Línea oficial MOBIL. Disponible en 2 presentaciones con stock en Bodega Pedernales.",
+    "volume": "Media Caneca (2.5 Gal)",
+    "shortSpec": "Línea oficial MOBIL. Disponible en 2 presentaciones (Media Caneca (2.5 Gal), Caneca (5 Galones / 19L)) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "MOBIL",
-      "Presentaciones": "Presentación Estándar, Caneca (5 Galones / 19L)",
+      "Presentaciones": "Media Caneca (2.5 Gal), Caneca (5 Galones / 19L)",
       "Stock Total": "3 unidades",
       "Origen": "Distribución Matriz LiderPro"
     },
     "fullSpecs": {
       "Categoría": "Lubricantes",
       "Línea": "MOBIL Automotive",
-      "Presentaciones Disponibles": "Presentación Estándar, Caneca (5 Galones / 19L)",
+      "Presentaciones Disponibles": "Media Caneca (2.5 Gal), Caneca (5 Galones / 19L)",
       "Garantía": "Garantía Oficial de Fábrica y LiderPro"
     },
-    "description": "MOBIL DELVAC 1300 SUP 15W40 distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (Presentación Estándar, Caneca (5 Galones / 19L)) para talleres y flotas en Manabí y a nivel nacional.",
+    "description": "MOBIL DELVAC 1300 SUP 15W40 distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (Media Caneca (2.5 Gal), Caneca (5 Galones / 19L)) para talleres y flotas en Manabí y a nivel nacional.",
     "priceNote": "Consultar precio mayorista o unitario vía WhatsApp con factura SRI",
     "warranty": "Garantía oficial de autenticidad",
     "commercialStatus": "VERIFIED",
@@ -13785,25 +13625,25 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "3 unidades disponibles en Bodega Pedernales",
     "dispatchIndicator": "Despacho Inmediato",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/015MD-51300.png",
+    "imageUrl": "/images/products/015MD-513002_5.png",
     "variants": [
-      {
-        "sku": "015MD-51300",
-        "name": "MOBIL DELVAC 1300 SUP 15W40 CAN 5/1",
-        "presentation": "Presentación Estándar",
-        "volume": "1.0L",
-        "stock": 1,
-        "imageUrl": "/images/products/015MD-51300.png",
-        "barcode": "7751673002398"
-      },
       {
         "sku": "015MD-513002.5",
         "name": "MOBIL DELVAC 1300 SUP 15W40 CAN 2.5/1 GL",
-        "presentation": "Caneca (5 Galones / 19L)",
-        "volume": "19.0L",
+        "presentation": "Media Caneca (2.5 Gal)",
+        "volume": "9.5L",
         "stock": 2,
         "imageUrl": "/images/products/015MD-513002_5.png",
         "barcode": "7751673002381"
+      },
+      {
+        "sku": "015MD-51300",
+        "name": "MOBIL DELVAC 1300 SUP 15W40 CAN 5/1",
+        "presentation": "Caneca (5 Galones / 19L)",
+        "volume": "19.0L",
+        "stock": 1,
+        "imageUrl": "/images/products/015MD-51300.png",
+        "barcode": "7751673002398"
       }
     ],
     "compatibleVehicles": [
@@ -13822,7 +13662,7 @@ export const PRODUCTS: Product[] = [
     "faqs": [
       {
         "question": "¿Qué presentaciones de MOBIL DELVAC 1300 SUP 15W40 tienen en stock?",
-        "answer": "Disponemos de 2 presentaciones oficiales: Presentación Estándar, Caneca (5 Galones / 19L). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
+        "answer": "Disponemos de 2 presentaciones oficiales: Media Caneca (2.5 Gal), Caneca (5 Galones / 19L). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
       },
       {
         "question": "¿Realizan envíos a otras ciudades del país?",
@@ -13840,7 +13680,7 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "1 Litro",
-    "shortSpec": "Línea oficial MOBIL. Disponible en 2 presentaciones con stock en Bodega Pedernales.",
+    "shortSpec": "Línea oficial MOBIL. Disponible en 2 presentaciones (1 Litro, 1 Galón (3.78L)) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "MOBIL",
       "Presentaciones": "1 Litro, 1 Galón (3.78L)",
@@ -13916,7 +13756,7 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "1 Litro",
-    "shortSpec": "Línea oficial MOBIL. Disponible en 2 presentaciones con stock en Bodega Pedernales.",
+    "shortSpec": "Línea oficial MOBIL. Disponible en 2 presentaciones (1 Litro, 1 Galón (3.78L)) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "MOBIL",
       "Presentaciones": "1 Litro, 1 Galón (3.78L)",
@@ -13992,7 +13832,7 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "1 Litro",
-    "shortSpec": "Línea oficial AROIL. Disponible en 2 presentaciones con stock en Bodega Pedernales.",
+    "shortSpec": "Línea oficial AROIL. Disponible en 2 presentaciones (1 Litro, 1 Galón (3.78L)) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "AROIL",
       "Presentaciones": "1 Litro, 1 Galón (3.78L)",
@@ -14068,7 +13908,7 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "1 Litro",
-    "shortSpec": "Línea oficial AROIL. Disponible en 2 presentaciones con stock en Bodega Pedernales.",
+    "shortSpec": "Línea oficial AROIL. Disponible en 2 presentaciones (1 Litro, 1 Galón (3.78L)) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "AROIL",
       "Presentaciones": "1 Litro, 1 Galón (3.78L)",
@@ -14136,55 +13976,37 @@ export const PRODUCTS: Product[] = [
     "isBestSeller": true
   },
   {
-    "id": "prod-0368AR00030",
-    "sku": "0368AR00030",
-    "slug": "aroil-aroil-super-40-sl-cf-0368ar00030",
+    "id": "prod-0368AR00032",
+    "sku": "0368AR00032",
+    "slug": "aroil-aroil-super-40-sl-cf-0368ar00032",
     "name": "AROIL SUPER 40 SL/CF",
     "brand": "AROIL",
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "1 Litro",
-    "shortSpec": "Línea oficial AROIL. Disponible en 38 presentaciones con stock en Bodega Pedernales.",
+    "shortSpec": "Línea oficial AROIL. Disponible en 2 presentaciones (1 Litro, 1 Galón (3.78L)) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "AROIL",
-      "Presentaciones": "1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Galón (3.78L), 1 Galón (3.78L), 1 Galón (3.78L), 1 Galón (3.78L), 1 Galón (3.78L), 1 Galón (3.78L), 1 Galón (3.78L), 1 Galón (3.78L), 1 Galón (3.78L), Caneca (16-18 kg), Caneca (16-18 kg), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L)",
-      "Stock Total": "304 unidades",
+      "Presentaciones": "1 Litro, 1 Galón (3.78L)",
+      "Stock Total": "33 unidades",
       "Origen": "Distribución Matriz LiderPro"
     },
     "fullSpecs": {
       "Categoría": "Lubricantes",
       "Línea": "AROIL Automotive",
-      "Presentaciones Disponibles": "1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Galón (3.78L), 1 Galón (3.78L), 1 Galón (3.78L), 1 Galón (3.78L), 1 Galón (3.78L), 1 Galón (3.78L), 1 Galón (3.78L), 1 Galón (3.78L), 1 Galón (3.78L), Caneca (16-18 kg), Caneca (16-18 kg), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L)",
+      "Presentaciones Disponibles": "1 Litro, 1 Galón (3.78L)",
       "Garantía": "Garantía Oficial de Fábrica y LiderPro"
     },
-    "description": "AROIL SUPER 40 SL/CF distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Galón (3.78L), 1 Galón (3.78L), 1 Galón (3.78L), 1 Galón (3.78L), 1 Galón (3.78L), 1 Galón (3.78L), 1 Galón (3.78L), 1 Galón (3.78L), 1 Galón (3.78L), Caneca (16-18 kg), Caneca (16-18 kg), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L)) para talleres y flotas en Manabí y a nivel nacional.",
+    "description": "AROIL SUPER 40 SL/CF distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Galón (3.78L)) para talleres y flotas en Manabí y a nivel nacional.",
     "priceNote": "Consultar precio mayorista o unitario vía WhatsApp con factura SRI",
     "warranty": "Garantía oficial de autenticidad",
     "commercialStatus": "VERIFIED",
     "inStock": true,
-    "stockStatusText": "304 unidades disponibles en Bodega Pedernales",
+    "stockStatusText": "33 unidades disponibles en Bodega Pedernales",
     "dispatchIndicator": "Despacho Inmediato",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/0368AR00030.png",
+    "imageUrl": "/images/products/0368AR00032.png",
     "variants": [
-      {
-        "sku": "0368AR00030",
-        "name": "AROIL RACING 10W30 SN 12/1 LT",
-        "presentation": "1 Litro",
-        "volume": "1.0L",
-        "stock": 22,
-        "imageUrl": "/images/products/0368AR00030.png",
-        "barcode": "0"
-      },
-      {
-        "sku": "0368AR00031",
-        "name": "AROIL RACING 20W50 SN 12/1 LT",
-        "presentation": "1 Litro",
-        "volume": "1.0L",
-        "stock": 11,
-        "imageUrl": "/images/products/0368AR00031.png",
-        "barcode": "0"
-      },
       {
         "sku": "0368AR00032",
         "name": "AROIL SUPER 40 SL/CF 12/1 LT",
@@ -14195,318 +14017,12 @@ export const PRODUCTS: Product[] = [
         "barcode": "0"
       },
       {
-        "sku": "0368AR10031",
-        "name": "AROIL 15W40 CI-4 12/1 LT",
-        "presentation": "1 Litro",
-        "volume": "1.0L",
-        "stock": 16,
-        "imageUrl": "/images/products/0368AR10031.png",
-        "barcode": "0"
-      },
-      {
-        "sku": "0368AR10032",
-        "name": "AROIL 25W60 CF 12/1 LT",
-        "presentation": "1 Litro",
-        "volume": "1.0L",
-        "stock": 12,
-        "imageUrl": "/images/products/0368AR10032.png",
-        "barcode": ""
-      },
-      {
-        "sku": "0368AR20011",
-        "name": "AROIL MOTOR 2T TC 12/1 LT",
-        "presentation": "1 Litro",
-        "volume": "1.0L",
-        "stock": 10,
-        "imageUrl": "/images/products/0368AR20011.png",
-        "barcode": "0"
-      },
-      {
-        "sku": "0368AR30003",
-        "name": "AROIL 4T 20W50 SL JASO MA2 12/1 LT",
-        "presentation": "1 Litro",
-        "volume": "1.0L",
-        "stock": 8,
-        "imageUrl": "/images/products/0368AR30003.png",
-        "barcode": "0"
-      },
-      {
-        "sku": "0368AR40039",
-        "name": "AROIL 80W90 GL-5 12/1 LT",
-        "presentation": "1 Litro",
-        "volume": "1.0L",
-        "stock": 10,
-        "imageUrl": "/images/products/0368AR40039.png",
-        "barcode": "0"
-      },
-      {
-        "sku": "0368AR40040",
-        "name": "AROIL 85W140 GL-5 12/1 LT",
-        "presentation": "1 Litro",
-        "volume": "1.0L",
-        "stock": 10,
-        "imageUrl": "/images/products/0368AR40040.png",
-        "barcode": ""
-      },
-      {
-        "sku": "0368AR40041",
-        "name": "AROIL 90 GL-4 12/1 LT",
-        "presentation": "1 Litro",
-        "volume": "1.0L",
-        "stock": 12,
-        "imageUrl": "/images/products/0368AR40041.png",
-        "barcode": "0"
-      },
-      {
-        "sku": "0368AR40042",
-        "name": "AROIL 140 GL-4 12/1 LT",
-        "presentation": "1 Litro",
-        "volume": "1.0L",
-        "stock": 10,
-        "imageUrl": "/images/products/0368AR40042.png",
-        "barcode": "0"
-      },
-      {
-        "sku": "0368AR40045",
-        "name": "AROIL ATF DIII 12/1 LT",
-        "presentation": "1 Litro",
-        "volume": "1.0L",
-        "stock": 43,
-        "imageUrl": "/images/products/0368AR40045.png",
-        "barcode": ""
-      },
-      {
-        "sku": "0368AR00001",
-        "name": "AROIL RACING 10W30 SN 6/1 GL",
-        "presentation": "1 Galón (3.78L)",
-        "volume": "3.78L",
-        "stock": 5,
-        "imageUrl": "/images/products/0368AR00001.png",
-        "barcode": "0"
-      },
-      {
-        "sku": "0368AR00005",
-        "name": "AROIL RACING 20W50 SN 6/1 GL",
-        "presentation": "1 Galón (3.78L)",
-        "volume": "3.78L",
-        "stock": 4,
-        "imageUrl": "/images/products/0368AR00005.png",
-        "barcode": "0"
-      },
-      {
         "sku": "0368AR00009",
         "name": "AROIL SUPER 40 SL/CF 6/1 GL.",
         "presentation": "1 Galón (3.78L)",
         "volume": "3.78L",
         "stock": 2,
         "imageUrl": "/images/products/0368AR00009.png",
-        "barcode": "0"
-      },
-      {
-        "sku": "0368AR10001",
-        "name": "AROIL 15W40 CI-4 6/1 GL",
-        "presentation": "1 Galón (3.78L)",
-        "volume": "3.78L",
-        "stock": 5,
-        "imageUrl": "/images/products/0368AR10001.png",
-        "barcode": ""
-      },
-      {
-        "sku": "0368AR10008",
-        "name": "AROIL 25W60 CF 6/1 GL",
-        "presentation": "1 Galón (3.78L)",
-        "volume": "3.78L",
-        "stock": 12,
-        "imageUrl": "/images/products/0368AR10008.png",
-        "barcode": ""
-      },
-      {
-        "sku": "0368AR40005",
-        "name": "AROIL 80W90 GL-5 6/1 GL",
-        "presentation": "1 Galón (3.78L)",
-        "volume": "3.78L",
-        "stock": 1,
-        "imageUrl": "/images/products/0368AR40005.png",
-        "barcode": ""
-      },
-      {
-        "sku": "0368AR40009",
-        "name": "AROIL 85W140 GL-5 6/1 GL",
-        "presentation": "1 Galón (3.78L)",
-        "volume": "3.78L",
-        "stock": 5,
-        "imageUrl": "/images/products/0368AR40009.png",
-        "barcode": ""
-      },
-      {
-        "sku": "0368AR40013",
-        "name": "AROIL 90 GL-4 6/1 GL",
-        "presentation": "1 Galón (3.78L)",
-        "volume": "3.78L",
-        "stock": 4,
-        "imageUrl": "/images/products/0368AR40013.png",
-        "barcode": "0"
-      },
-      {
-        "sku": "0368AR40017",
-        "name": "AROIL 140 GL-4 6/1 GL",
-        "presentation": "1 Galón (3.78L)",
-        "volume": "3.78L",
-        "stock": 6,
-        "imageUrl": "/images/products/0368AR40017.png",
-        "barcode": ""
-      },
-      {
-        "sku": "0368AR90004",
-        "name": "AROIL GRASA CHASSIS 2 ROJA CANECA 16X1 KG",
-        "presentation": "Caneca (16-18 kg)",
-        "volume": "18.0L",
-        "stock": 1,
-        "imageUrl": "/images/products/0368AR90004.png",
-        "barcode": "0"
-      },
-      {
-        "sku": "036AR90000",
-        "name": "AROIL GRASA CHASSIS 2 AZUL CANECA 16 KG",
-        "presentation": "Caneca (16-18 kg)",
-        "volume": "18.0L",
-        "stock": 1,
-        "imageUrl": "/images/products/036AR90000.png",
-        "barcode": ""
-      },
-      {
-        "sku": "0368AR10002",
-        "name": "AROIL 15W40 CI-4 MEDIA CANECA 2.5 GL",
-        "presentation": "Caneca (5 Galones / 19L)",
-        "volume": "19.0L",
-        "stock": 2,
-        "imageUrl": "/images/products/0368AR10002.png",
-        "barcode": "0"
-      },
-      {
-        "sku": "0368AR10003",
-        "name": "AROIL 15W40 CI-4 BLD CAN 5 GL",
-        "presentation": "Caneca (5 Galones / 19L)",
-        "volume": "19.0L",
-        "stock": 2,
-        "imageUrl": "/images/products/0368AR10003.png",
-        "barcode": "0"
-      },
-      {
-        "sku": "0368AR10009",
-        "name": "AROIL 25W60 CF CAN 2.5 GL",
-        "presentation": "Caneca (5 Galones / 19L)",
-        "volume": "19.0L",
-        "stock": 1,
-        "imageUrl": "/images/products/0368AR10009.png",
-        "barcode": "0"
-      },
-      {
-        "sku": "0368AR10010",
-        "name": "AROIL 25W60 CF CAN 5GL.",
-        "presentation": "Caneca (5 Galones / 19L)",
-        "volume": "19.0L",
-        "stock": 8,
-        "imageUrl": "/images/products/0368AR10010.png",
-        "barcode": "0"
-      },
-      {
-        "sku": "0368AR10016",
-        "name": "AROIL DIESEL 40 CF CANECA 5/1 GL",
-        "presentation": "Caneca (5 Galones / 19L)",
-        "volume": "19.0L",
-        "stock": 16,
-        "imageUrl": "/images/products/0368AR10016.png",
-        "barcode": "0"
-      },
-      {
-        "sku": "0368AR40001",
-        "name": "AROIL 75W85 GL-5 6/1 GL",
-        "presentation": "Caneca (5 Galones / 19L)",
-        "volume": "19.0L",
-        "stock": 5,
-        "imageUrl": "/images/products/0368AR40001.png",
-        "barcode": "0"
-      },
-      {
-        "sku": "0368AR40006",
-        "name": "AROIL 80W90 GL-5 CAN 5GL",
-        "presentation": "Caneca (5 Galones / 19L)",
-        "volume": "19.0L",
-        "stock": 3,
-        "imageUrl": "/images/products/0368AR40006.png",
-        "barcode": "0"
-      },
-      {
-        "sku": "0368AR40010",
-        "name": "AROIL 85W140 GL- CAN 5GL",
-        "presentation": "Caneca (5 Galones / 19L)",
-        "volume": "19.0L",
-        "stock": 2,
-        "imageUrl": "/images/products/0368AR40010.png",
-        "barcode": "0"
-      },
-      {
-        "sku": "0368AR40014",
-        "name": "AROIL 90 GL-4 CAN 5GL",
-        "presentation": "Caneca (5 Galones / 19L)",
-        "volume": "19.0L",
-        "stock": 2,
-        "imageUrl": "/images/products/0368AR40014.png",
-        "barcode": "0"
-      },
-      {
-        "sku": "0368AR40018",
-        "name": "AROIL 140 GL-4 CAN 5 GL",
-        "presentation": "Caneca (5 Galones / 19L)",
-        "volume": "19.0L",
-        "stock": 2,
-        "imageUrl": "/images/products/0368AR40018.png",
-        "barcode": ""
-      },
-      {
-        "sku": "0368AR40038",
-        "name": "AROIL 75W85 GL-5 12/1 LT",
-        "presentation": "Caneca (5 Galones / 19L)",
-        "volume": "19.0L",
-        "stock": 10,
-        "imageUrl": "/images/products/0368AR40038.png",
-        "barcode": "0"
-      },
-      {
-        "sku": "0368AR50006",
-        "name": "AROIL AW ISO 68 ROJO CAN 5 GL",
-        "presentation": "Caneca (5 Galones / 19L)",
-        "volume": "19.0L",
-        "stock": 1,
-        "imageUrl": "/images/products/0368AR50006.png",
-        "barcode": "0"
-      },
-      {
-        "sku": "0368AR60026",
-        "name": "AROIL TRACFLUID 10W30 CAN 5 GL",
-        "presentation": "Caneca (5 Galones / 19L)",
-        "volume": "19.0L",
-        "stock": 2,
-        "imageUrl": "/images/products/0368AR60026.png",
-        "barcode": "0"
-      },
-      {
-        "sku": "AROIL AMBAR 0368BF00002",
-        "name": "AROIL ISO 68 AMBAR BLD CAN 5 GL",
-        "presentation": "Caneca (5 Galones / 19L)",
-        "volume": "19.0L",
-        "stock": 6,
-        "imageUrl": "/images/products/AROIL_AMBAR_0368BF00002.png",
-        "barcode": "0"
-      },
-      {
-        "sku": "AROIL ROJO 0368BF00004",
-        "name": "AROIL ISO 68 ROJO CAN 5 GL",
-        "presentation": "Caneca (5 Galones / 19L)",
-        "volume": "19.0L",
-        "stock": 1,
-        "imageUrl": "/images/products/AROIL_ROJO_0368BF00004.png",
         "barcode": "0"
       }
     ],
@@ -14518,7 +14034,7 @@ export const PRODUCTS: Product[] = [
       }
     ],
     "features": [
-      "Presentación intercambiable en 38 tamaños unificados",
+      "Presentación intercambiable en 2 tamaños unificados",
       "Fórmula certificada de máxima pureza y durabilidad",
       "Despacho verificado desde Bodega Matriz Pedernales",
       "Facturación electrónica autorizada por el SRI"
@@ -14526,7 +14042,7 @@ export const PRODUCTS: Product[] = [
     "faqs": [
       {
         "question": "¿Qué presentaciones de AROIL SUPER 40 SL/CF tienen en stock?",
-        "answer": "Disponemos de 38 presentaciones oficiales: 1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Galón (3.78L), 1 Galón (3.78L), 1 Galón (3.78L), 1 Galón (3.78L), 1 Galón (3.78L), 1 Galón (3.78L), 1 Galón (3.78L), 1 Galón (3.78L), 1 Galón (3.78L), Caneca (16-18 kg), Caneca (16-18 kg), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
+        "answer": "Disponemos de 2 presentaciones oficiales: 1 Litro, 1 Galón (3.78L). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
       },
       {
         "question": "¿Realizan envíos a otras ciudades del país?",
@@ -14544,20 +14060,20 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "1 Litro",
-    "shortSpec": "Línea oficial AROIL. Disponible en 4 presentaciones con stock en Bodega Pedernales.",
+    "shortSpec": "Línea oficial AROIL. Disponible en 4 presentaciones (1 Litro, 1 Galón (3.78L), Media Caneca (2.5 Gal), Caneca (5 Galones / 19L)) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "AROIL",
-      "Presentaciones": "1 Litro, 1 Galón (3.78L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L)",
+      "Presentaciones": "1 Litro, 1 Galón (3.78L), Media Caneca (2.5 Gal), Caneca (5 Galones / 19L)",
       "Stock Total": "25 unidades",
       "Origen": "Distribución Matriz LiderPro"
     },
     "fullSpecs": {
       "Categoría": "Lubricantes",
       "Línea": "AROIL Automotive",
-      "Presentaciones Disponibles": "1 Litro, 1 Galón (3.78L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L)",
+      "Presentaciones Disponibles": "1 Litro, 1 Galón (3.78L), Media Caneca (2.5 Gal), Caneca (5 Galones / 19L)",
       "Garantía": "Garantía Oficial de Fábrica y LiderPro"
     },
-    "description": "AROIL 15W40 CI-4 distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Galón (3.78L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L)) para talleres y flotas en Manabí y a nivel nacional.",
+    "description": "AROIL 15W40 CI-4 distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Galón (3.78L), Media Caneca (2.5 Gal), Caneca (5 Galones / 19L)) para talleres y flotas en Manabí y a nivel nacional.",
     "priceNote": "Consultar precio mayorista o unitario vía WhatsApp con factura SRI",
     "warranty": "Garantía oficial de autenticidad",
     "commercialStatus": "VERIFIED",
@@ -14588,8 +14104,8 @@ export const PRODUCTS: Product[] = [
       {
         "sku": "0368AR10002",
         "name": "AROIL 15W40 CI-4 MEDIA CANECA 2.5 GL",
-        "presentation": "Caneca (5 Galones / 19L)",
-        "volume": "19.0L",
+        "presentation": "Media Caneca (2.5 Gal)",
+        "volume": "9.5L",
         "stock": 2,
         "imageUrl": "/images/products/0368AR10002.png",
         "barcode": "0"
@@ -14620,7 +14136,7 @@ export const PRODUCTS: Product[] = [
     "faqs": [
       {
         "question": "¿Qué presentaciones de AROIL 15W40 CI-4 tienen en stock?",
-        "answer": "Disponemos de 4 presentaciones oficiales: 1 Litro, 1 Galón (3.78L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
+        "answer": "Disponemos de 4 presentaciones oficiales: 1 Litro, 1 Galón (3.78L), Media Caneca (2.5 Gal), Caneca (5 Galones / 19L). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
       },
       {
         "question": "¿Realizan envíos a otras ciudades del país?",
@@ -14638,20 +14154,20 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "1 Litro",
-    "shortSpec": "Línea oficial AROIL. Disponible en 4 presentaciones con stock en Bodega Pedernales.",
+    "shortSpec": "Línea oficial AROIL. Disponible en 4 presentaciones (1 Litro, 1 Galón (3.78L), Media Caneca (2.5 Gal), Caneca (5 Galones / 19L)) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "AROIL",
-      "Presentaciones": "1 Litro, 1 Galón (3.78L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L)",
+      "Presentaciones": "1 Litro, 1 Galón (3.78L), Media Caneca (2.5 Gal), Caneca (5 Galones / 19L)",
       "Stock Total": "33 unidades",
       "Origen": "Distribución Matriz LiderPro"
     },
     "fullSpecs": {
       "Categoría": "Lubricantes",
       "Línea": "AROIL Automotive",
-      "Presentaciones Disponibles": "1 Litro, 1 Galón (3.78L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L)",
+      "Presentaciones Disponibles": "1 Litro, 1 Galón (3.78L), Media Caneca (2.5 Gal), Caneca (5 Galones / 19L)",
       "Garantía": "Garantía Oficial de Fábrica y LiderPro"
     },
-    "description": "AROIL 25W60 CF distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Galón (3.78L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L)) para talleres y flotas en Manabí y a nivel nacional.",
+    "description": "AROIL 25W60 CF distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Galón (3.78L), Media Caneca (2.5 Gal), Caneca (5 Galones / 19L)) para talleres y flotas en Manabí y a nivel nacional.",
     "priceNote": "Consultar precio mayorista o unitario vía WhatsApp con factura SRI",
     "warranty": "Garantía oficial de autenticidad",
     "commercialStatus": "VERIFIED",
@@ -14682,8 +14198,8 @@ export const PRODUCTS: Product[] = [
       {
         "sku": "0368AR10009",
         "name": "AROIL 25W60 CF CAN 2.5 GL",
-        "presentation": "Caneca (5 Galones / 19L)",
-        "volume": "19.0L",
+        "presentation": "Media Caneca (2.5 Gal)",
+        "volume": "9.5L",
         "stock": 1,
         "imageUrl": "/images/products/0368AR10009.png",
         "barcode": "0"
@@ -14714,7 +14230,7 @@ export const PRODUCTS: Product[] = [
     "faqs": [
       {
         "question": "¿Qué presentaciones de AROIL 25W60 CF tienen en stock?",
-        "answer": "Disponemos de 4 presentaciones oficiales: 1 Litro, 1 Galón (3.78L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
+        "answer": "Disponemos de 4 presentaciones oficiales: 1 Litro, 1 Galón (3.78L), Media Caneca (2.5 Gal), Caneca (5 Galones / 19L). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
       },
       {
         "question": "¿Realizan envíos a otras ciudades del país?",
@@ -14838,28 +14354,28 @@ export const PRODUCTS: Product[] = [
     "isBestSeller": false
   },
   {
-    "id": "prod-0368AR40001",
-    "sku": "0368AR40001",
-    "slug": "aroil-aroil-75w85-gl-5-0368ar40001",
+    "id": "prod-0368AR40038",
+    "sku": "0368AR40038",
+    "slug": "aroil-aroil-75w85-gl-5-0368ar40038",
     "name": "AROIL 75W85 GL-5",
     "brand": "AROIL",
     "category": "lubricantes",
     "applicationType": "autos",
-    "volume": "Caneca (5 Galones / 19L)",
-    "shortSpec": "Línea oficial AROIL. Disponible en 2 presentaciones con stock en Bodega Pedernales.",
+    "volume": "1 Litro",
+    "shortSpec": "Línea oficial AROIL. Disponible en 2 presentaciones (1 Litro, 1 Galón (3.78L)) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "AROIL",
-      "Presentaciones": "Caneca (5 Galones / 19L), Caneca (5 Galones / 19L)",
+      "Presentaciones": "1 Litro, 1 Galón (3.78L)",
       "Stock Total": "15 unidades",
       "Origen": "Distribución Matriz LiderPro"
     },
     "fullSpecs": {
       "Categoría": "Lubricantes",
       "Línea": "AROIL Automotive",
-      "Presentaciones Disponibles": "Caneca (5 Galones / 19L), Caneca (5 Galones / 19L)",
+      "Presentaciones Disponibles": "1 Litro, 1 Galón (3.78L)",
       "Garantía": "Garantía Oficial de Fábrica y LiderPro"
     },
-    "description": "AROIL 75W85 GL-5 distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (Caneca (5 Galones / 19L), Caneca (5 Galones / 19L)) para talleres y flotas en Manabí y a nivel nacional.",
+    "description": "AROIL 75W85 GL-5 distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Galón (3.78L)) para talleres y flotas en Manabí y a nivel nacional.",
     "priceNote": "Consultar precio mayorista o unitario vía WhatsApp con factura SRI",
     "warranty": "Garantía oficial de autenticidad",
     "commercialStatus": "VERIFIED",
@@ -14867,24 +14383,24 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "15 unidades disponibles en Bodega Pedernales",
     "dispatchIndicator": "Despacho Inmediato",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/0368AR40001.png",
+    "imageUrl": "/images/products/0368AR40038.png",
     "variants": [
-      {
-        "sku": "0368AR40001",
-        "name": "AROIL 75W85 GL-5 6/1 GL",
-        "presentation": "Caneca (5 Galones / 19L)",
-        "volume": "19.0L",
-        "stock": 5,
-        "imageUrl": "/images/products/0368AR40001.png",
-        "barcode": "0"
-      },
       {
         "sku": "0368AR40038",
         "name": "AROIL 75W85 GL-5 12/1 LT",
-        "presentation": "Caneca (5 Galones / 19L)",
-        "volume": "19.0L",
+        "presentation": "1 Litro",
+        "volume": "1.0L",
         "stock": 10,
         "imageUrl": "/images/products/0368AR40038.png",
+        "barcode": "0"
+      },
+      {
+        "sku": "0368AR40001",
+        "name": "AROIL 75W85 GL-5 6/1 GL",
+        "presentation": "1 Galón (3.78L)",
+        "volume": "3.78L",
+        "stock": 5,
+        "imageUrl": "/images/products/0368AR40001.png",
         "barcode": "0"
       }
     ],
@@ -14904,7 +14420,7 @@ export const PRODUCTS: Product[] = [
     "faqs": [
       {
         "question": "¿Qué presentaciones de AROIL 75W85 GL-5 tienen en stock?",
-        "answer": "Disponemos de 2 presentaciones oficiales: Caneca (5 Galones / 19L), Caneca (5 Galones / 19L). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
+        "answer": "Disponemos de 2 presentaciones oficiales: 1 Litro, 1 Galón (3.78L). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
       },
       {
         "question": "¿Realizan envíos a otras ciudades del país?",
@@ -14922,7 +14438,7 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "1 Litro",
-    "shortSpec": "Línea oficial AROIL. Disponible en 3 presentaciones con stock en Bodega Pedernales.",
+    "shortSpec": "Línea oficial AROIL. Disponible en 3 presentaciones (1 Litro, 1 Galón (3.78L), Caneca (5 Galones / 19L)) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "AROIL",
       "Presentaciones": "1 Litro, 1 Galón (3.78L), Caneca (5 Galones / 19L)",
@@ -15007,7 +14523,7 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "1 Litro",
-    "shortSpec": "Línea oficial AROIL. Disponible en 3 presentaciones con stock en Bodega Pedernales.",
+    "shortSpec": "Línea oficial AROIL. Disponible en 3 presentaciones (1 Litro, 1 Galón (3.78L), Caneca (5 Galones / 19L)) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "AROIL",
       "Presentaciones": "1 Litro, 1 Galón (3.78L), Caneca (5 Galones / 19L)",
@@ -15084,118 +14600,37 @@ export const PRODUCTS: Product[] = [
     "isBestSeller": true
   },
   {
-    "id": "prod-0368AR00030",
-    "sku": "0368AR00030",
-    "slug": "aroil-aroil-90-gl-4-0368ar00030",
+    "id": "prod-0368AR40041",
+    "sku": "0368AR40041",
+    "slug": "aroil-aroil-90-gl-4-0368ar40041",
     "name": "AROIL 90 GL-4",
     "brand": "AROIL",
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "1 Litro",
-    "shortSpec": "Línea oficial AROIL. Disponible en 38 presentaciones con stock en Bodega Pedernales.",
+    "shortSpec": "Línea oficial AROIL. Disponible en 3 presentaciones (1 Litro, 1 Galón (3.78L), Caneca (5 Galones / 19L)) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "AROIL",
-      "Presentaciones": "1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Galón (3.78L), 1 Galón (3.78L), 1 Galón (3.78L), 1 Galón (3.78L), 1 Galón (3.78L), 1 Galón (3.78L), 1 Galón (3.78L), 1 Galón (3.78L), 1 Galón (3.78L), Caneca (16-18 kg), Caneca (16-18 kg), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L)",
-      "Stock Total": "304 unidades",
+      "Presentaciones": "1 Litro, 1 Galón (3.78L), Caneca (5 Galones / 19L)",
+      "Stock Total": "18 unidades",
       "Origen": "Distribución Matriz LiderPro"
     },
     "fullSpecs": {
       "Categoría": "Lubricantes",
       "Línea": "AROIL Automotive",
-      "Presentaciones Disponibles": "1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Galón (3.78L), 1 Galón (3.78L), 1 Galón (3.78L), 1 Galón (3.78L), 1 Galón (3.78L), 1 Galón (3.78L), 1 Galón (3.78L), 1 Galón (3.78L), 1 Galón (3.78L), Caneca (16-18 kg), Caneca (16-18 kg), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L)",
+      "Presentaciones Disponibles": "1 Litro, 1 Galón (3.78L), Caneca (5 Galones / 19L)",
       "Garantía": "Garantía Oficial de Fábrica y LiderPro"
     },
-    "description": "AROIL 90 GL-4 distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Galón (3.78L), 1 Galón (3.78L), 1 Galón (3.78L), 1 Galón (3.78L), 1 Galón (3.78L), 1 Galón (3.78L), 1 Galón (3.78L), 1 Galón (3.78L), 1 Galón (3.78L), Caneca (16-18 kg), Caneca (16-18 kg), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L)) para talleres y flotas en Manabí y a nivel nacional.",
+    "description": "AROIL 90 GL-4 distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Galón (3.78L), Caneca (5 Galones / 19L)) para talleres y flotas en Manabí y a nivel nacional.",
     "priceNote": "Consultar precio mayorista o unitario vía WhatsApp con factura SRI",
     "warranty": "Garantía oficial de autenticidad",
     "commercialStatus": "VERIFIED",
     "inStock": true,
-    "stockStatusText": "304 unidades disponibles en Bodega Pedernales",
+    "stockStatusText": "18 unidades disponibles en Bodega Pedernales",
     "dispatchIndicator": "Despacho Inmediato",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/0368AR00030.png",
+    "imageUrl": "/images/products/0368AR40041.png",
     "variants": [
-      {
-        "sku": "0368AR00030",
-        "name": "AROIL RACING 10W30 SN 12/1 LT",
-        "presentation": "1 Litro",
-        "volume": "1.0L",
-        "stock": 22,
-        "imageUrl": "/images/products/0368AR00030.png",
-        "barcode": "0"
-      },
-      {
-        "sku": "0368AR00031",
-        "name": "AROIL RACING 20W50 SN 12/1 LT",
-        "presentation": "1 Litro",
-        "volume": "1.0L",
-        "stock": 11,
-        "imageUrl": "/images/products/0368AR00031.png",
-        "barcode": "0"
-      },
-      {
-        "sku": "0368AR00032",
-        "name": "AROIL SUPER 40 SL/CF 12/1 LT",
-        "presentation": "1 Litro",
-        "volume": "1.0L",
-        "stock": 31,
-        "imageUrl": "/images/products/0368AR00032.png",
-        "barcode": "0"
-      },
-      {
-        "sku": "0368AR10031",
-        "name": "AROIL 15W40 CI-4 12/1 LT",
-        "presentation": "1 Litro",
-        "volume": "1.0L",
-        "stock": 16,
-        "imageUrl": "/images/products/0368AR10031.png",
-        "barcode": "0"
-      },
-      {
-        "sku": "0368AR10032",
-        "name": "AROIL 25W60 CF 12/1 LT",
-        "presentation": "1 Litro",
-        "volume": "1.0L",
-        "stock": 12,
-        "imageUrl": "/images/products/0368AR10032.png",
-        "barcode": ""
-      },
-      {
-        "sku": "0368AR20011",
-        "name": "AROIL MOTOR 2T TC 12/1 LT",
-        "presentation": "1 Litro",
-        "volume": "1.0L",
-        "stock": 10,
-        "imageUrl": "/images/products/0368AR20011.png",
-        "barcode": "0"
-      },
-      {
-        "sku": "0368AR30003",
-        "name": "AROIL 4T 20W50 SL JASO MA2 12/1 LT",
-        "presentation": "1 Litro",
-        "volume": "1.0L",
-        "stock": 8,
-        "imageUrl": "/images/products/0368AR30003.png",
-        "barcode": "0"
-      },
-      {
-        "sku": "0368AR40039",
-        "name": "AROIL 80W90 GL-5 12/1 LT",
-        "presentation": "1 Litro",
-        "volume": "1.0L",
-        "stock": 10,
-        "imageUrl": "/images/products/0368AR40039.png",
-        "barcode": "0"
-      },
-      {
-        "sku": "0368AR40040",
-        "name": "AROIL 85W140 GL-5 12/1 LT",
-        "presentation": "1 Litro",
-        "volume": "1.0L",
-        "stock": 10,
-        "imageUrl": "/images/products/0368AR40040.png",
-        "barcode": ""
-      },
       {
         "sku": "0368AR40041",
         "name": "AROIL 90 GL-4 12/1 LT",
@@ -15204,87 +14639,6 @@ export const PRODUCTS: Product[] = [
         "stock": 12,
         "imageUrl": "/images/products/0368AR40041.png",
         "barcode": "0"
-      },
-      {
-        "sku": "0368AR40042",
-        "name": "AROIL 140 GL-4 12/1 LT",
-        "presentation": "1 Litro",
-        "volume": "1.0L",
-        "stock": 10,
-        "imageUrl": "/images/products/0368AR40042.png",
-        "barcode": "0"
-      },
-      {
-        "sku": "0368AR40045",
-        "name": "AROIL ATF DIII 12/1 LT",
-        "presentation": "1 Litro",
-        "volume": "1.0L",
-        "stock": 43,
-        "imageUrl": "/images/products/0368AR40045.png",
-        "barcode": ""
-      },
-      {
-        "sku": "0368AR00001",
-        "name": "AROIL RACING 10W30 SN 6/1 GL",
-        "presentation": "1 Galón (3.78L)",
-        "volume": "3.78L",
-        "stock": 5,
-        "imageUrl": "/images/products/0368AR00001.png",
-        "barcode": "0"
-      },
-      {
-        "sku": "0368AR00005",
-        "name": "AROIL RACING 20W50 SN 6/1 GL",
-        "presentation": "1 Galón (3.78L)",
-        "volume": "3.78L",
-        "stock": 4,
-        "imageUrl": "/images/products/0368AR00005.png",
-        "barcode": "0"
-      },
-      {
-        "sku": "0368AR00009",
-        "name": "AROIL SUPER 40 SL/CF 6/1 GL.",
-        "presentation": "1 Galón (3.78L)",
-        "volume": "3.78L",
-        "stock": 2,
-        "imageUrl": "/images/products/0368AR00009.png",
-        "barcode": "0"
-      },
-      {
-        "sku": "0368AR10001",
-        "name": "AROIL 15W40 CI-4 6/1 GL",
-        "presentation": "1 Galón (3.78L)",
-        "volume": "3.78L",
-        "stock": 5,
-        "imageUrl": "/images/products/0368AR10001.png",
-        "barcode": ""
-      },
-      {
-        "sku": "0368AR10008",
-        "name": "AROIL 25W60 CF 6/1 GL",
-        "presentation": "1 Galón (3.78L)",
-        "volume": "3.78L",
-        "stock": 12,
-        "imageUrl": "/images/products/0368AR10008.png",
-        "barcode": ""
-      },
-      {
-        "sku": "0368AR40005",
-        "name": "AROIL 80W90 GL-5 6/1 GL",
-        "presentation": "1 Galón (3.78L)",
-        "volume": "3.78L",
-        "stock": 1,
-        "imageUrl": "/images/products/0368AR40005.png",
-        "barcode": ""
-      },
-      {
-        "sku": "0368AR40009",
-        "name": "AROIL 85W140 GL-5 6/1 GL",
-        "presentation": "1 Galón (3.78L)",
-        "volume": "3.78L",
-        "stock": 5,
-        "imageUrl": "/images/products/0368AR40009.png",
-        "barcode": ""
       },
       {
         "sku": "0368AR40013",
@@ -15296,165 +14650,12 @@ export const PRODUCTS: Product[] = [
         "barcode": "0"
       },
       {
-        "sku": "0368AR40017",
-        "name": "AROIL 140 GL-4 6/1 GL",
-        "presentation": "1 Galón (3.78L)",
-        "volume": "3.78L",
-        "stock": 6,
-        "imageUrl": "/images/products/0368AR40017.png",
-        "barcode": ""
-      },
-      {
-        "sku": "0368AR90004",
-        "name": "AROIL GRASA CHASSIS 2 ROJA CANECA 16X1 KG",
-        "presentation": "Caneca (16-18 kg)",
-        "volume": "18.0L",
-        "stock": 1,
-        "imageUrl": "/images/products/0368AR90004.png",
-        "barcode": "0"
-      },
-      {
-        "sku": "036AR90000",
-        "name": "AROIL GRASA CHASSIS 2 AZUL CANECA 16 KG",
-        "presentation": "Caneca (16-18 kg)",
-        "volume": "18.0L",
-        "stock": 1,
-        "imageUrl": "/images/products/036AR90000.png",
-        "barcode": ""
-      },
-      {
-        "sku": "0368AR10002",
-        "name": "AROIL 15W40 CI-4 MEDIA CANECA 2.5 GL",
-        "presentation": "Caneca (5 Galones / 19L)",
-        "volume": "19.0L",
-        "stock": 2,
-        "imageUrl": "/images/products/0368AR10002.png",
-        "barcode": "0"
-      },
-      {
-        "sku": "0368AR10003",
-        "name": "AROIL 15W40 CI-4 BLD CAN 5 GL",
-        "presentation": "Caneca (5 Galones / 19L)",
-        "volume": "19.0L",
-        "stock": 2,
-        "imageUrl": "/images/products/0368AR10003.png",
-        "barcode": "0"
-      },
-      {
-        "sku": "0368AR10009",
-        "name": "AROIL 25W60 CF CAN 2.5 GL",
-        "presentation": "Caneca (5 Galones / 19L)",
-        "volume": "19.0L",
-        "stock": 1,
-        "imageUrl": "/images/products/0368AR10009.png",
-        "barcode": "0"
-      },
-      {
-        "sku": "0368AR10010",
-        "name": "AROIL 25W60 CF CAN 5GL.",
-        "presentation": "Caneca (5 Galones / 19L)",
-        "volume": "19.0L",
-        "stock": 8,
-        "imageUrl": "/images/products/0368AR10010.png",
-        "barcode": "0"
-      },
-      {
-        "sku": "0368AR10016",
-        "name": "AROIL DIESEL 40 CF CANECA 5/1 GL",
-        "presentation": "Caneca (5 Galones / 19L)",
-        "volume": "19.0L",
-        "stock": 16,
-        "imageUrl": "/images/products/0368AR10016.png",
-        "barcode": "0"
-      },
-      {
-        "sku": "0368AR40001",
-        "name": "AROIL 75W85 GL-5 6/1 GL",
-        "presentation": "Caneca (5 Galones / 19L)",
-        "volume": "19.0L",
-        "stock": 5,
-        "imageUrl": "/images/products/0368AR40001.png",
-        "barcode": "0"
-      },
-      {
-        "sku": "0368AR40006",
-        "name": "AROIL 80W90 GL-5 CAN 5GL",
-        "presentation": "Caneca (5 Galones / 19L)",
-        "volume": "19.0L",
-        "stock": 3,
-        "imageUrl": "/images/products/0368AR40006.png",
-        "barcode": "0"
-      },
-      {
-        "sku": "0368AR40010",
-        "name": "AROIL 85W140 GL- CAN 5GL",
-        "presentation": "Caneca (5 Galones / 19L)",
-        "volume": "19.0L",
-        "stock": 2,
-        "imageUrl": "/images/products/0368AR40010.png",
-        "barcode": "0"
-      },
-      {
         "sku": "0368AR40014",
         "name": "AROIL 90 GL-4 CAN 5GL",
         "presentation": "Caneca (5 Galones / 19L)",
         "volume": "19.0L",
         "stock": 2,
         "imageUrl": "/images/products/0368AR40014.png",
-        "barcode": "0"
-      },
-      {
-        "sku": "0368AR40018",
-        "name": "AROIL 140 GL-4 CAN 5 GL",
-        "presentation": "Caneca (5 Galones / 19L)",
-        "volume": "19.0L",
-        "stock": 2,
-        "imageUrl": "/images/products/0368AR40018.png",
-        "barcode": ""
-      },
-      {
-        "sku": "0368AR40038",
-        "name": "AROIL 75W85 GL-5 12/1 LT",
-        "presentation": "Caneca (5 Galones / 19L)",
-        "volume": "19.0L",
-        "stock": 10,
-        "imageUrl": "/images/products/0368AR40038.png",
-        "barcode": "0"
-      },
-      {
-        "sku": "0368AR50006",
-        "name": "AROIL AW ISO 68 ROJO CAN 5 GL",
-        "presentation": "Caneca (5 Galones / 19L)",
-        "volume": "19.0L",
-        "stock": 1,
-        "imageUrl": "/images/products/0368AR50006.png",
-        "barcode": "0"
-      },
-      {
-        "sku": "0368AR60026",
-        "name": "AROIL TRACFLUID 10W30 CAN 5 GL",
-        "presentation": "Caneca (5 Galones / 19L)",
-        "volume": "19.0L",
-        "stock": 2,
-        "imageUrl": "/images/products/0368AR60026.png",
-        "barcode": "0"
-      },
-      {
-        "sku": "AROIL AMBAR 0368BF00002",
-        "name": "AROIL ISO 68 AMBAR BLD CAN 5 GL",
-        "presentation": "Caneca (5 Galones / 19L)",
-        "volume": "19.0L",
-        "stock": 6,
-        "imageUrl": "/images/products/AROIL_AMBAR_0368BF00002.png",
-        "barcode": "0"
-      },
-      {
-        "sku": "AROIL ROJO 0368BF00004",
-        "name": "AROIL ISO 68 ROJO CAN 5 GL",
-        "presentation": "Caneca (5 Galones / 19L)",
-        "volume": "19.0L",
-        "stock": 1,
-        "imageUrl": "/images/products/AROIL_ROJO_0368BF00004.png",
         "barcode": "0"
       }
     ],
@@ -15466,7 +14667,7 @@ export const PRODUCTS: Product[] = [
       }
     ],
     "features": [
-      "Presentación intercambiable en 38 tamaños unificados",
+      "Presentación intercambiable en 3 tamaños unificados",
       "Fórmula certificada de máxima pureza y durabilidad",
       "Despacho verificado desde Bodega Matriz Pedernales",
       "Facturación electrónica autorizada por el SRI"
@@ -15474,7 +14675,7 @@ export const PRODUCTS: Product[] = [
     "faqs": [
       {
         "question": "¿Qué presentaciones de AROIL 90 GL-4 tienen en stock?",
-        "answer": "Disponemos de 38 presentaciones oficiales: 1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Litro, 1 Galón (3.78L), 1 Galón (3.78L), 1 Galón (3.78L), 1 Galón (3.78L), 1 Galón (3.78L), 1 Galón (3.78L), 1 Galón (3.78L), 1 Galón (3.78L), 1 Galón (3.78L), Caneca (16-18 kg), Caneca (16-18 kg), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
+        "answer": "Disponemos de 3 presentaciones oficiales: 1 Litro, 1 Galón (3.78L), Caneca (5 Galones / 19L). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
       },
       {
         "question": "¿Realizan envíos a otras ciudades del país?",
@@ -15484,46 +14685,37 @@ export const PRODUCTS: Product[] = [
     "isBestSeller": true
   },
   {
-    "id": "prod-0368AR40040",
-    "sku": "0368AR40040",
-    "slug": "aroil-aroil-140-gl-4-0368ar40040",
+    "id": "prod-0368AR40042",
+    "sku": "0368AR40042",
+    "slug": "aroil-aroil-140-gl-4-0368ar40042",
     "name": "AROIL 140 GL-4",
     "brand": "AROIL",
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "1 Litro",
-    "shortSpec": "Línea oficial AROIL. Disponible en 6 presentaciones con stock en Bodega Pedernales.",
+    "shortSpec": "Línea oficial AROIL. Disponible en 3 presentaciones (1 Litro, 1 Galón (3.78L), Caneca (5 Galones / 19L)) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "AROIL",
-      "Presentaciones": "1 Litro, 1 Litro, 1 Galón (3.78L), 1 Galón (3.78L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L)",
-      "Stock Total": "35 unidades",
+      "Presentaciones": "1 Litro, 1 Galón (3.78L), Caneca (5 Galones / 19L)",
+      "Stock Total": "18 unidades",
       "Origen": "Distribución Matriz LiderPro"
     },
     "fullSpecs": {
       "Categoría": "Lubricantes",
       "Línea": "AROIL Automotive",
-      "Presentaciones Disponibles": "1 Litro, 1 Litro, 1 Galón (3.78L), 1 Galón (3.78L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L)",
+      "Presentaciones Disponibles": "1 Litro, 1 Galón (3.78L), Caneca (5 Galones / 19L)",
       "Garantía": "Garantía Oficial de Fábrica y LiderPro"
     },
-    "description": "AROIL 140 GL-4 distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Litro, 1 Galón (3.78L), 1 Galón (3.78L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L)) para talleres y flotas en Manabí y a nivel nacional.",
+    "description": "AROIL 140 GL-4 distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Galón (3.78L), Caneca (5 Galones / 19L)) para talleres y flotas en Manabí y a nivel nacional.",
     "priceNote": "Consultar precio mayorista o unitario vía WhatsApp con factura SRI",
     "warranty": "Garantía oficial de autenticidad",
     "commercialStatus": "VERIFIED",
     "inStock": true,
-    "stockStatusText": "35 unidades disponibles en Bodega Pedernales",
+    "stockStatusText": "18 unidades disponibles en Bodega Pedernales",
     "dispatchIndicator": "Despacho Inmediato",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/0368AR40040.png",
+    "imageUrl": "/images/products/0368AR40042.png",
     "variants": [
-      {
-        "sku": "0368AR40040",
-        "name": "AROIL 85W140 GL-5 12/1 LT",
-        "presentation": "1 Litro",
-        "volume": "1.0L",
-        "stock": 10,
-        "imageUrl": "/images/products/0368AR40040.png",
-        "barcode": ""
-      },
       {
         "sku": "0368AR40042",
         "name": "AROIL 140 GL-4 12/1 LT",
@@ -15534,15 +14726,6 @@ export const PRODUCTS: Product[] = [
         "barcode": "0"
       },
       {
-        "sku": "0368AR40009",
-        "name": "AROIL 85W140 GL-5 6/1 GL",
-        "presentation": "1 Galón (3.78L)",
-        "volume": "3.78L",
-        "stock": 5,
-        "imageUrl": "/images/products/0368AR40009.png",
-        "barcode": ""
-      },
-      {
         "sku": "0368AR40017",
         "name": "AROIL 140 GL-4 6/1 GL",
         "presentation": "1 Galón (3.78L)",
@@ -15550,15 +14733,6 @@ export const PRODUCTS: Product[] = [
         "stock": 6,
         "imageUrl": "/images/products/0368AR40017.png",
         "barcode": ""
-      },
-      {
-        "sku": "0368AR40010",
-        "name": "AROIL 85W140 GL- CAN 5GL",
-        "presentation": "Caneca (5 Galones / 19L)",
-        "volume": "19.0L",
-        "stock": 2,
-        "imageUrl": "/images/products/0368AR40010.png",
-        "barcode": "0"
       },
       {
         "sku": "0368AR40018",
@@ -15578,7 +14752,7 @@ export const PRODUCTS: Product[] = [
       }
     ],
     "features": [
-      "Presentación intercambiable en 6 tamaños unificados",
+      "Presentación intercambiable en 3 tamaños unificados",
       "Fórmula certificada de máxima pureza y durabilidad",
       "Despacho verificado desde Bodega Matriz Pedernales",
       "Facturación electrónica autorizada por el SRI"
@@ -15586,7 +14760,7 @@ export const PRODUCTS: Product[] = [
     "faqs": [
       {
         "question": "¿Qué presentaciones de AROIL 140 GL-4 tienen en stock?",
-        "answer": "Disponemos de 6 presentaciones oficiales: 1 Litro, 1 Litro, 1 Galón (3.78L), 1 Galón (3.78L), Caneca (5 Galones / 19L), Caneca (5 Galones / 19L). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
+        "answer": "Disponemos de 3 presentaciones oficiales: 1 Litro, 1 Galón (3.78L), Caneca (5 Galones / 19L). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
       },
       {
         "question": "¿Realizan envíos a otras ciudades del país?",
@@ -15718,7 +14892,7 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "1 Litro",
-    "shortSpec": "Línea oficial AMALIE. Disponible en 2 presentaciones con stock en Bodega Pedernales.",
+    "shortSpec": "Línea oficial AMALIE. Disponible en 2 presentaciones (1 Litro, 1 Galón (3.78L)) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "AMALIE",
       "Presentaciones": "1 Litro, 1 Galón (3.78L)",
@@ -15788,13 +14962,13 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-016AM-75696-56",
     "sku": "016AM-75696-56",
-    "slug": "amalie-amalie-20w50-synt-blend-sn-12-1-lt-016am-75696-56",
-    "name": "AMALIE 20W50 SYNT BLEND SN 12/1 LT",
+    "slug": "amalie-amalie-20w50-synt-blend-sn-016am-75696-56",
+    "name": "AMALIE 20W50 SYNT BLEND SN",
     "brand": "AMALIE",
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "1 Litro",
-    "shortSpec": "Línea oficial AMALIE. Disponible en 2 presentaciones con stock en Bodega Pedernales.",
+    "shortSpec": "Línea oficial AMALIE. Disponible en 2 presentaciones (1 Litro, 1 Galón (3.78L)) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "AMALIE",
       "Presentaciones": "1 Litro, 1 Galón (3.78L)",
@@ -15807,7 +14981,7 @@ export const PRODUCTS: Product[] = [
       "Presentaciones Disponibles": "1 Litro, 1 Galón (3.78L)",
       "Garantía": "Garantía Oficial de Fábrica y LiderPro"
     },
-    "description": "AMALIE 20W50 SYNT BLEND SN 12/1 LT distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Galón (3.78L)) para talleres y flotas en Manabí y a nivel nacional.",
+    "description": "AMALIE 20W50 SYNT BLEND SN distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Galón (3.78L)) para talleres y flotas en Manabí y a nivel nacional.",
     "priceNote": "Consultar precio mayorista o unitario vía WhatsApp con factura SRI",
     "warranty": "Garantía oficial de autenticidad",
     "commercialStatus": "VERIFIED",
@@ -15851,7 +15025,7 @@ export const PRODUCTS: Product[] = [
     ],
     "faqs": [
       {
-        "question": "¿Qué presentaciones de AMALIE 20W50 SYNT BLEND SN 12/1 LT tienen en stock?",
+        "question": "¿Qué presentaciones de AMALIE 20W50 SYNT BLEND SN tienen en stock?",
         "answer": "Disponemos de 2 presentaciones oficiales: 1 Litro, 1 Galón (3.78L). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
       },
       {
@@ -15864,78 +15038,59 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-01001012",
     "sku": "01001012",
-    "slug": "motul-motul-moto-5000-10w40-semisintetico-ambar-01001012",
+    "slug": "motul-motul-moto-5000-10w40-semisintetico-amba-01001012",
     "name": "MOTUL MOTO 5000 10W40 SEMISINTETICO AMBAR",
     "brand": "MOTUL",
     "category": "lubricantes",
     "applicationType": "motos",
     "volume": "1 Litro",
-    "shortSpec": "Línea oficial MOTUL. Disponible en 2 presentaciones con stock en Bodega Pedernales.",
+    "shortSpec": "Producto original MOTUL. Código OEM / Referencia: 01001012. Stock disponible en Pedernales.",
     "specifications": {
+      "Código / SKU": "01001012",
       "Marca": "MOTUL",
-      "Presentaciones": "1 Litro, 1 Litro",
-      "Stock Total": "19 unidades",
-      "Origen": "Distribución Matriz LiderPro"
+      "Tipo": "Producto Automotriz",
+      "Stock Actual": "8 unidades",
+      "Bodega": "Pedernales Matriz"
     },
     "fullSpecs": {
-      "Categoría": "Lubricantes",
-      "Línea": "MOTUL Automotive",
-      "Presentaciones Disponibles": "1 Litro, 1 Litro",
-      "Garantía": "Garantía Oficial de Fábrica y LiderPro"
+      "Referencia Comercial": "01001012",
+      "Fabricante": "MOTUL",
+      "Aplicación": "Motos",
+      "Disponibilidad": "8 unid. listas para entrega"
     },
-    "description": "MOTUL MOTO 5000 10W40 SEMISINTETICO AMBAR distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Litro) para talleres y flotas en Manabí y a nivel nacional.",
-    "priceNote": "Consultar precio mayorista o unitario vía WhatsApp con factura SRI",
-    "warranty": "Garantía oficial de autenticidad",
+    "description": "MOTUL MOTO 5000 10W40 SEMISINTETICO AMBAR con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
+    "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
     "inStock": true,
-    "stockStatusText": "19 unidades disponibles en Bodega Pedernales",
+    "stockStatusText": "8 unidades en Bodega Pedernales",
     "dispatchIndicator": "Despacho Inmediato",
     "primaryOriginRecommendation": "Pedernales",
     "imageUrl": "/images/products/01001012.png",
-    "variants": [
-      {
-        "sku": "01001012",
-        "name": "MOTUL MOTO 5000 10W40 SEMISINTETICO AMBAR 12/1 LT",
-        "presentation": "1 Litro",
-        "volume": "1.0L",
-        "stock": 8,
-        "imageUrl": "/images/products/01001012.png",
-        "barcode": "0"
-      },
-      {
-        "sku": "01099362",
-        "name": "MOTUL MOTO 5000 20W50 SEMI SINTETICO 12/1 LT",
-        "presentation": "1 Litro",
-        "volume": "1.0L",
-        "stock": 11,
-        "imageUrl": "/images/products/01099362.png",
-        "barcode": "0"
-      }
-    ],
     "compatibleVehicles": [
       {
-        "make": "Universal",
-        "model": "Línea Multimarca y Talleres",
-        "yearRange": "Todos los años"
+        "make": "Multimarca",
+        "model": "Vehículos y Flotas",
+        "yearRange": "Consulte según especificación"
       }
     ],
     "features": [
-      "Presentación intercambiable en 2 tamaños unificados",
-      "Fórmula certificada de máxima pureza y durabilidad",
-      "Despacho verificado desde Bodega Matriz Pedernales",
-      "Facturación electrónica autorizada por el SRI"
+      "Calidad OEM garantizada por MOTUL",
+      "Construcción de alta resistencia y durabilidad",
+      "Entrega inmediata en Pedernales y envíos a todo Ecuador",
+      "Factura comercial autorizada por el SRI"
     ],
     "faqs": [
       {
-        "question": "¿Qué presentaciones de MOTUL MOTO 5000 10W40 SEMISINTETICO AMBAR tienen en stock?",
-        "answer": "Disponemos de 2 presentaciones oficiales: 1 Litro, 1 Litro. Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
+        "question": "¿Este producto 01001012 es compatible con mi vehículo?",
+        "answer": "Nuestros asesores técnicos en Pedernales validan la compatibilidad exacta con tu número de chasis o modelo por WhatsApp antes del envío."
       },
       {
-        "question": "¿Realizan envíos a otras ciudades del país?",
-        "answer": "Sí, realizamos despachos diarios desde Pedernales a las 24 provincias del Ecuador mediante cooperativas y transporte de carga seguro."
+        "question": "¿Tienen stock para retiro inmediato en tienda física?",
+        "answer": "Sí, disponemos de 8 unidades en nuestro local matriz de Pedernales listo para entrega inmediata."
       }
     ],
-    "isBestSeller": true
+    "isBestSeller": false
   },
   {
     "id": "prod-01098960",
@@ -15997,12 +15152,12 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-038LUB-D1540-0025",
     "sku": "038LUB-D1540-0025",
-    "slug": "valvoline-valvodiesel-sae-15w40-api-ch4-038lub-d1540-0025",
-    "name": "VALVODIESEL SAE 15W40 API CH4",
+    "slug": "valvoline-valvoline-valvodiesel-sae-15w40-api-ch4-038lub-d1540-0025",
+    "name": "VALVOLINE VALVODIESEL SAE 15W40 API CH4",
     "brand": "VALVOLINE",
     "category": "lubricantes",
     "applicationType": "pesado",
-    "volume": "1 Galón (3.78L)",
+    "volume": "1 Litro",
     "shortSpec": "Producto original VALVOLINE. Código OEM / Referencia: 038LUB-D1540-0025. Stock disponible en Pedernales.",
     "specifications": {
       "Código / SKU": "038LUB-D1540-0025",
@@ -16017,7 +15172,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Pesado",
       "Disponibilidad": "9 unid. listas para entrega"
     },
-    "description": "VALVODIESEL SAE 15W40 API CH4 con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "VALVOLINE VALVODIESEL SAE 15W40 API CH4 con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -16060,25 +15215,25 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "pesado",
     "volume": "1 Litro",
-    "shortSpec": "Línea oficial VALVOLINE. Disponible en 2 presentaciones con stock en Bodega Pedernales.",
+    "shortSpec": "Línea oficial VALVOLINE. Disponible en 2 presentaciones (1 Litro, 1 Galón (3.78L)) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "VALVOLINE",
-      "Presentaciones": "1 Litro, 1 Litro",
-      "Stock Total": "16 unidades",
+      "Presentaciones": "1 Litro, 1 Galón (3.78L)",
+      "Stock Total": "10 unidades",
       "Origen": "Distribución Matriz LiderPro"
     },
     "fullSpecs": {
       "Categoría": "Lubricantes",
       "Línea": "VALVOLINE Automotive",
-      "Presentaciones Disponibles": "1 Litro, 1 Litro",
+      "Presentaciones Disponibles": "1 Litro, 1 Galón (3.78L)",
       "Garantía": "Garantía Oficial de Fábrica y LiderPro"
     },
-    "description": "VALVOLINE CLASSIC SAE 20W50 SP distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Litro) para talleres y flotas en Manabí y a nivel nacional.",
+    "description": "VALVOLINE CLASSIC SAE 20W50 SP distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Galón (3.78L)) para talleres y flotas en Manabí y a nivel nacional.",
     "priceNote": "Consultar precio mayorista o unitario vía WhatsApp con factura SRI",
     "warranty": "Garantía oficial de autenticidad",
     "commercialStatus": "VERIFIED",
     "inStock": true,
-    "stockStatusText": "16 unidades disponibles en Bodega Pedernales",
+    "stockStatusText": "10 unidades disponibles en Bodega Pedernales",
     "dispatchIndicator": "Despacho Inmediato",
     "primaryOriginRecommendation": "Pedernales",
     "imageUrl": "/images/products/038LUB-PC2050-0025.png",
@@ -16093,13 +15248,13 @@ export const PRODUCTS: Product[] = [
         "barcode": ""
       },
       {
-        "sku": "038LUBC1030-0025",
-        "name": "VALVOLINE CAJA LITRO 12/1 LT LITRO SAE 10W30 CLASSIC API SP",
-        "presentation": "1 Litro",
-        "volume": "1.0L",
-        "stock": 7,
-        "imageUrl": "/images/products/038LUBC1030-0025.png",
-        "barcode": "0"
+        "sku": "038LUB-PC2050-0100",
+        "name": "VALVOLINE  20W50 CLASSIC SP 3/1 GL",
+        "presentation": "1 Galón (3.78L)",
+        "volume": "3.78L",
+        "stock": 1,
+        "imageUrl": "/images/products/038LUB-PC2050-0100.png",
+        "barcode": ""
       }
     ],
     "compatibleVehicles": [
@@ -16118,163 +15273,125 @@ export const PRODUCTS: Product[] = [
     "faqs": [
       {
         "question": "¿Qué presentaciones de VALVOLINE CLASSIC SAE 20W50 SP tienen en stock?",
-        "answer": "Disponemos de 2 presentaciones oficiales: 1 Litro, 1 Litro. Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
+        "answer": "Disponemos de 2 presentaciones oficiales: 1 Litro, 1 Galón (3.78L). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
       },
       {
         "question": "¿Realizan envíos a otras ciudades del país?",
         "answer": "Sí, realizamos despachos diarios desde Pedernales a las 24 provincias del Ecuador mediante cooperativas y transporte de carga seguro."
       }
     ],
-    "isBestSeller": true
+    "isBestSeller": false
   },
   {
     "id": "prod-012MN6145",
     "sku": "012MN6145",
-    "slug": "mannol-mannol-limpiador-protector-uv3-cockpit-care-apple-012mn6145",
+    "slug": "mannol-mannol-limpiador-protector-uv3-cockpit-c-012mn6145",
     "name": "MANNOL LIMPIADOR PROTECTOR UV3 COCKPIT CARE APPLE",
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "Presentación Estándar",
-    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones con stock en Bodega Pedernales.",
+    "shortSpec": "Producto original MANNOL. Código OEM / Referencia: 012MN6145. Stock disponible en Pedernales.",
     "specifications": {
+      "Código / SKU": "012MN6145",
       "Marca": "MANNOL",
-      "Presentaciones": "Presentación Estándar, Presentación Estándar",
-      "Stock Total": "27 unidades",
-      "Origen": "Distribución Matriz LiderPro"
+      "Tipo": "Producto Automotriz",
+      "Stock Actual": "12 unidades",
+      "Bodega": "Pedernales Matriz"
     },
     "fullSpecs": {
-      "Categoría": "Aditivos",
-      "Línea": "MANNOL Automotive",
-      "Presentaciones Disponibles": "Presentación Estándar, Presentación Estándar",
-      "Garantía": "Garantía Oficial de Fábrica y LiderPro"
+      "Referencia Comercial": "012MN6145",
+      "Fabricante": "MANNOL",
+      "Aplicación": "Autos",
+      "Disponibilidad": "12 unid. listas para entrega"
     },
-    "description": "MANNOL LIMPIADOR PROTECTOR UV3 COCKPIT CARE APPLE distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (Presentación Estándar, Presentación Estándar) para talleres y flotas en Manabí y a nivel nacional.",
-    "priceNote": "Consultar precio mayorista o unitario vía WhatsApp con factura SRI",
-    "warranty": "Garantía oficial de autenticidad",
+    "description": "MANNOL LIMPIADOR PROTECTOR UV3 COCKPIT CARE APPLE con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
+    "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
     "inStock": true,
-    "stockStatusText": "27 unidades disponibles en Bodega Pedernales",
+    "stockStatusText": "12 unidades en Bodega Pedernales",
     "dispatchIndicator": "Despacho Inmediato",
     "primaryOriginRecommendation": "Pedernales",
     "imageUrl": "/images/products/012MN6145.png",
-    "variants": [
-      {
-        "sku": "012MN6145",
-        "name": "MANNOL LIMPIADOR PROTECTOR UV3 COCKPIT CARE APPLE",
-        "presentation": "Presentación Estándar",
-        "volume": "1.0L",
-        "stock": 12,
-        "imageUrl": "/images/products/012MN6145.png",
-        "barcode": "4036021996776"
-      },
-      {
-        "sku": "012MN6149",
-        "name": "MANNOL LIMPIADOR PROTECTOR UV3 COCKPIT CARE VAINILLA (CJ X 24 UND)",
-        "presentation": "Presentación Estándar",
-        "volume": "1.0L",
-        "stock": 15,
-        "imageUrl": "/images/products/012MN6149.png",
-        "barcode": "4036021996783"
-      }
-    ],
     "compatibleVehicles": [
       {
-        "make": "Universal",
-        "model": "Línea Multimarca y Talleres",
-        "yearRange": "Todos los años"
+        "make": "Multimarca",
+        "model": "Vehículos y Flotas",
+        "yearRange": "Consulte según especificación"
       }
     ],
     "features": [
-      "Presentación intercambiable en 2 tamaños unificados",
-      "Fórmula certificada de máxima pureza y durabilidad",
-      "Despacho verificado desde Bodega Matriz Pedernales",
-      "Facturación electrónica autorizada por el SRI"
+      "Calidad OEM garantizada por MANNOL",
+      "Construcción de alta resistencia y durabilidad",
+      "Entrega inmediata en Pedernales y envíos a todo Ecuador",
+      "Factura comercial autorizada por el SRI"
     ],
     "faqs": [
       {
-        "question": "¿Qué presentaciones de MANNOL LIMPIADOR PROTECTOR UV3 COCKPIT CARE APPLE tienen en stock?",
-        "answer": "Disponemos de 2 presentaciones oficiales: Presentación Estándar, Presentación Estándar. Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
+        "question": "¿Este producto 012MN6145 es compatible con mi vehículo?",
+        "answer": "Nuestros asesores técnicos en Pedernales validan la compatibilidad exacta con tu número de chasis o modelo por WhatsApp antes del envío."
       },
       {
-        "question": "¿Realizan envíos a otras ciudades del país?",
-        "answer": "Sí, realizamos despachos diarios desde Pedernales a las 24 provincias del Ecuador mediante cooperativas y transporte de carga seguro."
+        "question": "¿Tienen stock para retiro inmediato en tienda física?",
+        "answer": "Sí, disponemos de 12 unidades en nuestro local matriz de Pedernales listo para entrega inmediata."
       }
     ],
     "isBestSeller": true
   },
   {
-    "id": "prod-012MN6145",
-    "sku": "012MN6145",
-    "slug": "mannol-mannol-limpiador-protector-uv3-cockpit-care-vainilla-012mn6145",
+    "id": "prod-012MN6149",
+    "sku": "012MN6149",
+    "slug": "mannol-mannol-limpiador-protector-uv3-cockpit-c-012mn6149",
     "name": "MANNOL LIMPIADOR PROTECTOR UV3 COCKPIT CARE VAINILLA",
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "Presentación Estándar",
-    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones con stock en Bodega Pedernales.",
+    "shortSpec": "Producto original MANNOL. Código OEM / Referencia: 012MN6149. Stock disponible en Pedernales.",
     "specifications": {
+      "Código / SKU": "012MN6149",
       "Marca": "MANNOL",
-      "Presentaciones": "Presentación Estándar, Presentación Estándar",
-      "Stock Total": "27 unidades",
-      "Origen": "Distribución Matriz LiderPro"
+      "Tipo": "Producto Automotriz",
+      "Stock Actual": "15 unidades",
+      "Bodega": "Pedernales Matriz"
     },
     "fullSpecs": {
-      "Categoría": "Aditivos",
-      "Línea": "MANNOL Automotive",
-      "Presentaciones Disponibles": "Presentación Estándar, Presentación Estándar",
-      "Garantía": "Garantía Oficial de Fábrica y LiderPro"
+      "Referencia Comercial": "012MN6149",
+      "Fabricante": "MANNOL",
+      "Aplicación": "Autos",
+      "Disponibilidad": "15 unid. listas para entrega"
     },
-    "description": "MANNOL LIMPIADOR PROTECTOR UV3 COCKPIT CARE VAINILLA distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (Presentación Estándar, Presentación Estándar) para talleres y flotas en Manabí y a nivel nacional.",
-    "priceNote": "Consultar precio mayorista o unitario vía WhatsApp con factura SRI",
-    "warranty": "Garantía oficial de autenticidad",
+    "description": "MANNOL LIMPIADOR PROTECTOR UV3 COCKPIT CARE VAINILLA con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
+    "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
     "inStock": true,
-    "stockStatusText": "27 unidades disponibles en Bodega Pedernales",
+    "stockStatusText": "15 unidades en Bodega Pedernales",
     "dispatchIndicator": "Despacho Inmediato",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/012MN6145.png",
-    "variants": [
-      {
-        "sku": "012MN6145",
-        "name": "MANNOL LIMPIADOR PROTECTOR UV3 COCKPIT CARE APPLE",
-        "presentation": "Presentación Estándar",
-        "volume": "1.0L",
-        "stock": 12,
-        "imageUrl": "/images/products/012MN6145.png",
-        "barcode": "4036021996776"
-      },
-      {
-        "sku": "012MN6149",
-        "name": "MANNOL LIMPIADOR PROTECTOR UV3 COCKPIT CARE VAINILLA (CJ X 24 UND)",
-        "presentation": "Presentación Estándar",
-        "volume": "1.0L",
-        "stock": 15,
-        "imageUrl": "/images/products/012MN6149.png",
-        "barcode": "4036021996783"
-      }
-    ],
+    "imageUrl": "/images/products/012MN6149.png",
     "compatibleVehicles": [
       {
-        "make": "Universal",
-        "model": "Línea Multimarca y Talleres",
-        "yearRange": "Todos los años"
+        "make": "Multimarca",
+        "model": "Vehículos y Flotas",
+        "yearRange": "Consulte según especificación"
       }
     ],
     "features": [
-      "Presentación intercambiable en 2 tamaños unificados",
-      "Fórmula certificada de máxima pureza y durabilidad",
-      "Despacho verificado desde Bodega Matriz Pedernales",
-      "Facturación electrónica autorizada por el SRI"
+      "Calidad OEM garantizada por MANNOL",
+      "Construcción de alta resistencia y durabilidad",
+      "Entrega inmediata en Pedernales y envíos a todo Ecuador",
+      "Factura comercial autorizada por el SRI"
     ],
     "faqs": [
       {
-        "question": "¿Qué presentaciones de MANNOL LIMPIADOR PROTECTOR UV3 COCKPIT CARE VAINILLA tienen en stock?",
-        "answer": "Disponemos de 2 presentaciones oficiales: Presentación Estándar, Presentación Estándar. Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
+        "question": "¿Este producto 012MN6149 es compatible con mi vehículo?",
+        "answer": "Nuestros asesores técnicos en Pedernales validan la compatibilidad exacta con tu número de chasis o modelo por WhatsApp antes del envío."
       },
       {
-        "question": "¿Realizan envíos a otras ciudades del país?",
-        "answer": "Sí, realizamos despachos diarios desde Pedernales a las 24 provincias del Ecuador mediante cooperativas y transporte de carga seguro."
+        "question": "¿Tienen stock para retiro inmediato en tienda física?",
+        "answer": "Sí, disponemos de 15 unidades en nuestro local matriz de Pedernales listo para entrega inmediata."
       }
     ],
     "isBestSeller": true
@@ -16459,25 +15576,25 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "Tarrina 800 g",
-    "shortSpec": "Línea oficial MANNOL. Disponible en 5 presentaciones con stock en Bodega Pedernales.",
+    "shortSpec": "Línea oficial MANNOL. Disponible en 3 presentaciones (Tarrina 800 g, Tarrina 4.5 kg, Caneca (16-18 kg)) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "MANNOL",
-      "Presentaciones": "Tarrina 800 g, Presentación Estándar, Presentación Estándar, Tarrina 4.5 kg, Caneca (16-18 kg)",
-      "Stock Total": "38 unidades",
+      "Presentaciones": "Tarrina 800 g, Tarrina 4.5 kg, Caneca (16-18 kg)",
+      "Stock Total": "3 unidades",
       "Origen": "Distribución Matriz LiderPro"
     },
     "fullSpecs": {
       "Categoría": "Aditivos",
       "Línea": "MANNOL Automotive",
-      "Presentaciones Disponibles": "Tarrina 800 g, Presentación Estándar, Presentación Estándar, Tarrina 4.5 kg, Caneca (16-18 kg)",
+      "Presentaciones Disponibles": "Tarrina 800 g, Tarrina 4.5 kg, Caneca (16-18 kg)",
       "Garantía": "Garantía Oficial de Fábrica y LiderPro"
     },
-    "description": "MANNOL GRASA LC-2 ALTA TEMPERATURA 4.5 KG distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (Tarrina 800 g, Presentación Estándar, Presentación Estándar, Tarrina 4.5 kg, Caneca (16-18 kg)) para talleres y flotas en Manabí y a nivel nacional.",
+    "description": "MANNOL GRASA LC-2 ALTA TEMPERATURA 4.5 KG distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (Tarrina 800 g, Tarrina 4.5 kg, Caneca (16-18 kg)) para talleres y flotas en Manabí y a nivel nacional.",
     "priceNote": "Consultar precio mayorista o unitario vía WhatsApp con factura SRI",
     "warranty": "Garantía oficial de autenticidad",
     "commercialStatus": "VERIFIED",
     "inStock": true,
-    "stockStatusText": "38 unidades disponibles en Bodega Pedernales",
+    "stockStatusText": "3 unidades disponibles en Bodega Pedernales",
     "dispatchIndicator": "Despacho Inmediato",
     "primaryOriginRecommendation": "Pedernales",
     "imageUrl": "/images/products/012MN8029-08.png",
@@ -16490,24 +15607,6 @@ export const PRODUCTS: Product[] = [
         "stock": 1,
         "imageUrl": "/images/products/012MN8029-08.png",
         "barcode": "0"
-      },
-      {
-        "sku": "012MN8029-023",
-        "name": "MANNOL GRASA ALTA TEMP LC-2 230GR (CJ X 24 UND)",
-        "presentation": "Presentación Estándar",
-        "volume": "1.0L",
-        "stock": 12,
-        "imageUrl": "/images/products/012MN8029-023.png",
-        "barcode": ""
-      },
-      {
-        "sku": "012MN8029-04",
-        "name": "MANNOL GRASA ALTA TEMP LC-2 400GR (COD. ANTERIOR 8104) (CJ X 24 UND)",
-        "presentation": "Presentación Estándar",
-        "volume": "1.0L",
-        "stock": 23,
-        "imageUrl": "/images/products/012MN8029-04.png",
-        "barcode": ""
       },
       {
         "sku": "012MN8029",
@@ -16536,7 +15635,7 @@ export const PRODUCTS: Product[] = [
       }
     ],
     "features": [
-      "Presentación intercambiable en 5 tamaños unificados",
+      "Presentación intercambiable en 3 tamaños unificados",
       "Fórmula certificada de máxima pureza y durabilidad",
       "Despacho verificado desde Bodega Matriz Pedernales",
       "Facturación electrónica autorizada por el SRI"
@@ -16544,14 +15643,14 @@ export const PRODUCTS: Product[] = [
     "faqs": [
       {
         "question": "¿Qué presentaciones de MANNOL GRASA LC-2 ALTA TEMPERATURA 4.5 KG tienen en stock?",
-        "answer": "Disponemos de 5 presentaciones oficiales: Tarrina 800 g, Presentación Estándar, Presentación Estándar, Tarrina 4.5 kg, Caneca (16-18 kg). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
+        "answer": "Disponemos de 3 presentaciones oficiales: Tarrina 800 g, Tarrina 4.5 kg, Caneca (16-18 kg). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
       },
       {
         "question": "¿Realizan envíos a otras ciudades del país?",
         "answer": "Sí, realizamos despachos diarios desde Pedernales a las 24 provincias del Ecuador mediante cooperativas y transporte de carga seguro."
       }
     ],
-    "isBestSeller": true
+    "isBestSeller": false
   },
   {
     "id": "prod-012MN8121",
@@ -16561,7 +15660,7 @@ export const PRODUCTS: Product[] = [
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": "Presentación Estándar",
+    "volume": "Envase 450 ml",
     "shortSpec": "Producto original MANNOL. Código OEM / Referencia: 012MN8121. Stock disponible en Pedernales.",
     "specifications": {
       "Código / SKU": "012MN8121",
@@ -17302,7 +16401,7 @@ export const PRODUCTS: Product[] = [
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": "Spray 200 ml",
+    "volume": "Presentación Estándar",
     "shortSpec": "Producto original MANNOL. Código OEM / Referencia: 012MN9897. Stock disponible en Pedernales.",
     "specifications": {
       "Código / SKU": "012MN9897",
@@ -17411,78 +16510,59 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-012MN9902-01",
     "sku": "012MN9902-01",
-    "slug": "mannol-mannol-aditivo-caja-autom-tica-100ml-para-4-litros-012mn9902-01",
+    "slug": "mannol-mannol-aditivo-caja-autom-tica-100ml-par-012mn9902-01",
     "name": "MANNOL ADITIVO CAJA AUTOMÁTICA 100ML PARA 4 LITROS",
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "1 Litro",
-    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones con stock en Bodega Pedernales.",
+    "shortSpec": "Producto original MANNOL. Código OEM / Referencia: 012MN9902-01. Stock disponible en Pedernales.",
     "specifications": {
+      "Código / SKU": "012MN9902-01",
       "Marca": "MANNOL",
-      "Presentaciones": "1 Litro, 1 Litro",
-      "Stock Total": "16 unidades",
-      "Origen": "Distribución Matriz LiderPro"
+      "Tipo": "Producto Automotriz",
+      "Stock Actual": "6 unidades",
+      "Bodega": "Pedernales Matriz"
     },
     "fullSpecs": {
-      "Categoría": "Aditivos",
-      "Línea": "MANNOL Automotive",
-      "Presentaciones Disponibles": "1 Litro, 1 Litro",
-      "Garantía": "Garantía Oficial de Fábrica y LiderPro"
+      "Referencia Comercial": "012MN9902-01",
+      "Fabricante": "MANNOL",
+      "Aplicación": "Autos",
+      "Disponibilidad": "6 unid. listas para entrega"
     },
-    "description": "MANNOL ADITIVO CAJA AUTOMÁTICA 100ML PARA 4 LITROS distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Litro) para talleres y flotas en Manabí y a nivel nacional.",
-    "priceNote": "Consultar precio mayorista o unitario vía WhatsApp con factura SRI",
-    "warranty": "Garantía oficial de autenticidad",
+    "description": "MANNOL ADITIVO CAJA AUTOMÁTICA 100ML PARA 4 LITROS con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
+    "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
     "inStock": true,
-    "stockStatusText": "16 unidades disponibles en Bodega Pedernales",
+    "stockStatusText": "6 unidades en Bodega Pedernales",
     "dispatchIndicator": "Despacho Inmediato",
     "primaryOriginRecommendation": "Pedernales",
     "imageUrl": "/images/products/012MN9902-01.png",
-    "variants": [
-      {
-        "sku": "012MN9902-01",
-        "name": "MANNOL ADITIVO CAJA AUTOMÁTICA 100ML PARA 4 LITROS",
-        "presentation": "1 Litro",
-        "volume": "1.0L",
-        "stock": 6,
-        "imageUrl": "/images/products/012MN9902-01.png",
-        "barcode": "4036021955575"
-      },
-      {
-        "sku": "012MN9903-01",
-        "name": "MANNOL ADITIVO CAJA MANUAL 100ML PARA 4 LITROS",
-        "presentation": "1 Litro",
-        "volume": "1.0L",
-        "stock": 10,
-        "imageUrl": "/images/products/012MN9903-01.png",
-        "barcode": "4036021955414"
-      }
-    ],
     "compatibleVehicles": [
       {
-        "make": "Universal",
-        "model": "Línea Multimarca y Talleres",
-        "yearRange": "Todos los años"
+        "make": "Multimarca",
+        "model": "Vehículos y Flotas",
+        "yearRange": "Consulte según especificación"
       }
     ],
     "features": [
-      "Presentación intercambiable en 2 tamaños unificados",
-      "Fórmula certificada de máxima pureza y durabilidad",
-      "Despacho verificado desde Bodega Matriz Pedernales",
-      "Facturación electrónica autorizada por el SRI"
+      "Calidad OEM garantizada por MANNOL",
+      "Construcción de alta resistencia y durabilidad",
+      "Entrega inmediata en Pedernales y envíos a todo Ecuador",
+      "Factura comercial autorizada por el SRI"
     ],
     "faqs": [
       {
-        "question": "¿Qué presentaciones de MANNOL ADITIVO CAJA AUTOMÁTICA 100ML PARA 4 LITROS tienen en stock?",
-        "answer": "Disponemos de 2 presentaciones oficiales: 1 Litro, 1 Litro. Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
+        "question": "¿Este producto 012MN9902-01 es compatible con mi vehículo?",
+        "answer": "Nuestros asesores técnicos en Pedernales validan la compatibilidad exacta con tu número de chasis o modelo por WhatsApp antes del envío."
       },
       {
-        "question": "¿Realizan envíos a otras ciudades del país?",
-        "answer": "Sí, realizamos despachos diarios desde Pedernales a las 24 provincias del Ecuador mediante cooperativas y transporte de carga seguro."
+        "question": "¿Tienen stock para retiro inmediato en tienda física?",
+        "answer": "Sí, disponemos de 6 unidades en nuestro local matriz de Pedernales listo para entrega inmediata."
       }
     ],
-    "isBestSeller": true
+    "isBestSeller": false
   },
   {
     "id": "prod-012MN9906",
@@ -17545,7 +16625,7 @@ export const PRODUCTS: Product[] = [
     "id": "prod-012MN9909",
     "sku": "012MN9909",
     "slug": "mannol-mannol-tratamiento-anticorrosion-anticor-012mn9909",
-    "name": "MANNOL TRATAMIENTO ANTICORROSION ANTICOR 1L (CJ X 12 UND)",
+    "name": "MANNOL TRATAMIENTO ANTICORROSION ANTICOR 1L ()",
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "autos",
@@ -17564,7 +16644,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "6 unid. listas para entrega"
     },
-    "description": "MANNOL TRATAMIENTO ANTICORROSION ANTICOR 1L (CJ X 12 UND) con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "MANNOL TRATAMIENTO ANTICORROSION ANTICOR 1L () con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -17659,7 +16739,7 @@ export const PRODUCTS: Product[] = [
     "id": "prod-012MN9923-025",
     "sku": "012MN9923-025",
     "slug": "mannol-mannol-aditivo-sellador-fuga-direcci-n-h-012mn9923-025",
-    "name": "MANNOL ADITIVO SELLADOR FUGA DIRECCIÓN HIDRÁULICA 250 ML (CJ X 50 UND)",
+    "name": "MANNOL ADITIVO SELLADOR FUGA DIRECCIÓN HIDRÁULICA 250 ML ()",
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "autos",
@@ -17678,7 +16758,7 @@ export const PRODUCTS: Product[] = [
       "Aplicación": "Autos",
       "Disponibilidad": "12 unid. listas para entrega"
     },
-    "description": "MANNOL ADITIVO SELLADOR FUGA DIRECCIÓN HIDRÁULICA 250 ML (CJ X 50 UND) con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "description": "MANNOL ADITIVO SELLADOR FUGA DIRECCIÓN HIDRÁULICA 250 ML () con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
     "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
     "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
@@ -17770,64 +16850,37 @@ export const PRODUCTS: Product[] = [
     "isBestSeller": false
   },
   {
-    "id": "prod-012MN9930-01",
-    "sku": "012MN9930-01",
-    "slug": "mannol-mannol-ester-additive-tratamiento-de-aceite-450-ml-y-1lt-012mn9930-01",
+    "id": "prod-012MN9929-045",
+    "sku": "012MN9929-045",
+    "slug": "mannol-mannol-ester-additive-tratamiento-de-aceite-450-ml-y-1lt-012mn9929-045",
     "name": "MANNOL ESTER ADDITIVE / TRATAMIENTO DE ACEITE 450 ML Y 1LT",
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": "Envase 100 ml",
-    "shortSpec": "Línea oficial MANNOL. Disponible en 5 presentaciones con stock en Bodega Pedernales.",
+    "volume": "Envase 450 ml",
+    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones (Envase 450 ml, 1 Litro) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "MANNOL",
-      "Presentaciones": "Envase 100 ml, Envase 250 ml, Envase 250 ml, Envase 450 ml, 1 Litro",
-      "Stock Total": "45 unidades",
+      "Presentaciones": "Envase 450 ml, 1 Litro",
+      "Stock Total": "18 unidades",
       "Origen": "Distribución Matriz LiderPro"
     },
     "fullSpecs": {
       "Categoría": "Aditivos",
       "Línea": "MANNOL Automotive",
-      "Presentaciones Disponibles": "Envase 100 ml, Envase 250 ml, Envase 250 ml, Envase 450 ml, 1 Litro",
+      "Presentaciones Disponibles": "Envase 450 ml, 1 Litro",
       "Garantía": "Garantía Oficial de Fábrica y LiderPro"
     },
-    "description": "MANNOL ESTER ADDITIVE / TRATAMIENTO DE ACEITE 450 ML Y 1LT distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (Envase 100 ml, Envase 250 ml, Envase 250 ml, Envase 450 ml, 1 Litro) para talleres y flotas en Manabí y a nivel nacional.",
+    "description": "MANNOL ESTER ADDITIVE / TRATAMIENTO DE ACEITE 450 ML Y 1LT distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (Envase 450 ml, 1 Litro) para talleres y flotas en Manabí y a nivel nacional.",
     "priceNote": "Consultar precio mayorista o unitario vía WhatsApp con factura SRI",
     "warranty": "Garantía oficial de autenticidad",
     "commercialStatus": "VERIFIED",
     "inStock": true,
-    "stockStatusText": "45 unidades disponibles en Bodega Pedernales",
+    "stockStatusText": "18 unidades disponibles en Bodega Pedernales",
     "dispatchIndicator": "Despacho Inmediato",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/012MN9930-01.png",
+    "imageUrl": "/images/products/012MN9929-045.png",
     "variants": [
-      {
-        "sku": "012MN9930-01",
-        "name": "MANNOL DIESEL ESTER ADDITIVE 100ML",
-        "presentation": "Envase 100 ml",
-        "volume": "100ml",
-        "stock": 5,
-        "imageUrl": "/images/products/012MN9930-01.png",
-        "barcode": "4036021299303"
-      },
-      {
-        "sku": "012MN9930-025",
-        "name": "MANNOL DIESEL ESTER ADDITIVE 250ML",
-        "presentation": "Envase 250 ml",
-        "volume": "250ml",
-        "stock": 10,
-        "imageUrl": "/images/products/012MN9930-025.png",
-        "barcode": "4036021199313"
-      },
-      {
-        "sku": "012MN9950-025",
-        "name": "MANNOL BENZIN ESTER ADDITIVE PLÁSTICO 250ML",
-        "presentation": "Envase 250 ml",
-        "volume": "250ml",
-        "stock": 12,
-        "imageUrl": "/images/products/012MN9950-025.png",
-        "barcode": "4036021993515"
-      },
       {
         "sku": "012MN9929-045",
         "name": "MANNOL ESTER ADDITIVE / TRATAMIENTO DE ACEITE 450 ML",
@@ -17855,7 +16908,7 @@ export const PRODUCTS: Product[] = [
       }
     ],
     "features": [
-      "Presentación intercambiable en 5 tamaños unificados",
+      "Presentación intercambiable en 2 tamaños unificados",
       "Fórmula certificada de máxima pureza y durabilidad",
       "Despacho verificado desde Bodega Matriz Pedernales",
       "Facturación electrónica autorizada por el SRI"
@@ -17863,7 +16916,7 @@ export const PRODUCTS: Product[] = [
     "faqs": [
       {
         "question": "¿Qué presentaciones de MANNOL ESTER ADDITIVE / TRATAMIENTO DE ACEITE 450 ML Y 1LT tienen en stock?",
-        "answer": "Disponemos de 5 presentaciones oficiales: Envase 100 ml, Envase 250 ml, Envase 250 ml, Envase 450 ml, 1 Litro. Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
+        "answer": "Disponemos de 2 presentaciones oficiales: Envase 450 ml, 1 Litro. Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
       },
       {
         "question": "¿Realizan envíos a otras ciudades del país?",
@@ -17881,7 +16934,7 @@ export const PRODUCTS: Product[] = [
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "Envase 100 ml",
-    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones con stock en Bodega Pedernales.",
+    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones (Envase 100 ml, Envase 250 ml) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "MANNOL",
       "Presentaciones": "Envase 100 ml, Envase 250 ml",
@@ -18578,154 +17631,116 @@ export const PRODUCTS: Product[] = [
   {
     "id": "prod-012MN9966-025",
     "sku": "012MN9966-025",
-    "slug": "mannol-mannol-sellador-de-fugas-para-radiador-250ml-012mn9966-025",
+    "slug": "mannol-mannol-sellador-de-fugas-para-radiador-2-012mn9966-025",
     "name": "MANNOL SELLADOR DE FUGAS PARA RADIADOR 250ML",
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "Envase 250 ml",
-    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones con stock en Bodega Pedernales.",
+    "shortSpec": "Producto original MANNOL. Código OEM / Referencia: 012MN9966-025. Stock disponible en Pedernales.",
     "specifications": {
+      "Código / SKU": "012MN9966-025",
       "Marca": "MANNOL",
-      "Presentaciones": "Envase 250 ml, Envase 250 ml",
-      "Stock Total": "14 unidades",
-      "Origen": "Distribución Matriz LiderPro"
+      "Tipo": "Producto Automotriz",
+      "Stock Actual": "9 unidades",
+      "Bodega": "Pedernales Matriz"
     },
     "fullSpecs": {
-      "Categoría": "Aditivos",
-      "Línea": "MANNOL Automotive",
-      "Presentaciones Disponibles": "Envase 250 ml, Envase 250 ml",
-      "Garantía": "Garantía Oficial de Fábrica y LiderPro"
+      "Referencia Comercial": "012MN9966-025",
+      "Fabricante": "MANNOL",
+      "Aplicación": "Autos",
+      "Disponibilidad": "9 unid. listas para entrega"
     },
-    "description": "MANNOL SELLADOR DE FUGAS PARA RADIADOR 250ML distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (Envase 250 ml, Envase 250 ml) para talleres y flotas en Manabí y a nivel nacional.",
-    "priceNote": "Consultar precio mayorista o unitario vía WhatsApp con factura SRI",
-    "warranty": "Garantía oficial de autenticidad",
+    "description": "MANNOL SELLADOR DE FUGAS PARA RADIADOR 250ML con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
+    "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
     "inStock": true,
-    "stockStatusText": "14 unidades disponibles en Bodega Pedernales",
+    "stockStatusText": "9 unidades en Bodega Pedernales",
     "dispatchIndicator": "Despacho Inmediato",
     "primaryOriginRecommendation": "Pedernales",
     "imageUrl": "/images/products/012MN9966-025.png",
-    "variants": [
-      {
-        "sku": "012MN9966-025",
-        "name": "MANNOL SELLADOR DE FUGAS PARA RADIADOR 250ML (CJ X 50 UND)",
-        "presentation": "Envase 250 ml",
-        "volume": "250ml",
-        "stock": 9,
-        "imageUrl": "/images/products/012MN9966-025.png",
-        "barcode": "4036021894171"
-      },
-      {
-        "sku": "012MN9968-025",
-        "name": "MANNOL SELLADOR DE FUGAS CAJA DE CAMBIOS 250ML",
-        "presentation": "Envase 250 ml",
-        "volume": "250ml",
-        "stock": 5,
-        "imageUrl": "/images/products/012MN9968-025.png",
-        "barcode": "4036021992327"
-      }
-    ],
     "compatibleVehicles": [
       {
-        "make": "Universal",
-        "model": "Línea Multimarca y Talleres",
-        "yearRange": "Todos los años"
+        "make": "Multimarca",
+        "model": "Vehículos y Flotas",
+        "yearRange": "Consulte según especificación"
       }
     ],
     "features": [
-      "Presentación intercambiable en 2 tamaños unificados",
-      "Fórmula certificada de máxima pureza y durabilidad",
-      "Despacho verificado desde Bodega Matriz Pedernales",
-      "Facturación electrónica autorizada por el SRI"
+      "Calidad OEM garantizada por MANNOL",
+      "Construcción de alta resistencia y durabilidad",
+      "Entrega inmediata en Pedernales y envíos a todo Ecuador",
+      "Factura comercial autorizada por el SRI"
     ],
     "faqs": [
       {
-        "question": "¿Qué presentaciones de MANNOL SELLADOR DE FUGAS PARA RADIADOR 250ML tienen en stock?",
-        "answer": "Disponemos de 2 presentaciones oficiales: Envase 250 ml, Envase 250 ml. Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
+        "question": "¿Este producto 012MN9966-025 es compatible con mi vehículo?",
+        "answer": "Nuestros asesores técnicos en Pedernales validan la compatibilidad exacta con tu número de chasis o modelo por WhatsApp antes del envío."
       },
       {
-        "question": "¿Realizan envíos a otras ciudades del país?",
-        "answer": "Sí, realizamos despachos diarios desde Pedernales a las 24 provincias del Ecuador mediante cooperativas y transporte de carga seguro."
+        "question": "¿Tienen stock para retiro inmediato en tienda física?",
+        "answer": "Sí, disponemos de 9 unidades en nuestro local matriz de Pedernales listo para entrega inmediata."
       }
     ],
     "isBestSeller": true
   },
   {
-    "id": "prod-012MN9966-025",
-    "sku": "012MN9966-025",
-    "slug": "mannol-mannol-sellador-de-fugas-caja-de-cambios-250ml-012mn9966-025",
+    "id": "prod-012MN9968-025",
+    "sku": "012MN9968-025",
+    "slug": "mannol-mannol-sellador-de-fugas-caja-de-cambios-012mn9968-025",
     "name": "MANNOL SELLADOR DE FUGAS CAJA DE CAMBIOS 250ML",
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "Envase 250 ml",
-    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones con stock en Bodega Pedernales.",
+    "shortSpec": "Producto original MANNOL. Código OEM / Referencia: 012MN9968-025. Stock disponible en Pedernales.",
     "specifications": {
+      "Código / SKU": "012MN9968-025",
       "Marca": "MANNOL",
-      "Presentaciones": "Envase 250 ml, Envase 250 ml",
-      "Stock Total": "14 unidades",
-      "Origen": "Distribución Matriz LiderPro"
+      "Tipo": "Producto Automotriz",
+      "Stock Actual": "5 unidades",
+      "Bodega": "Pedernales Matriz"
     },
     "fullSpecs": {
-      "Categoría": "Aditivos",
-      "Línea": "MANNOL Automotive",
-      "Presentaciones Disponibles": "Envase 250 ml, Envase 250 ml",
-      "Garantía": "Garantía Oficial de Fábrica y LiderPro"
+      "Referencia Comercial": "012MN9968-025",
+      "Fabricante": "MANNOL",
+      "Aplicación": "Autos",
+      "Disponibilidad": "5 unid. listas para entrega"
     },
-    "description": "MANNOL SELLADOR DE FUGAS CAJA DE CAMBIOS 250ML distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (Envase 250 ml, Envase 250 ml) para talleres y flotas en Manabí y a nivel nacional.",
-    "priceNote": "Consultar precio mayorista o unitario vía WhatsApp con factura SRI",
-    "warranty": "Garantía oficial de autenticidad",
+    "description": "MANNOL SELLADOR DE FUGAS CAJA DE CAMBIOS 250ML con especificaciones de equipo original. Garantía de rendimiento, filtración de alta precisión y máxima protección mecánica. Facturación electrónica SRI y despacho diario.",
+    "priceNote": "Cotización inmediata por WhatsApp con factura SRI",
+    "warranty": "Garantía oficial de fábrica",
     "commercialStatus": "VERIFIED",
     "inStock": true,
-    "stockStatusText": "14 unidades disponibles en Bodega Pedernales",
+    "stockStatusText": "5 unidades en Bodega Pedernales",
     "dispatchIndicator": "Despacho Inmediato",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/012MN9966-025.png",
-    "variants": [
-      {
-        "sku": "012MN9966-025",
-        "name": "MANNOL SELLADOR DE FUGAS PARA RADIADOR 250ML (CJ X 50 UND)",
-        "presentation": "Envase 250 ml",
-        "volume": "250ml",
-        "stock": 9,
-        "imageUrl": "/images/products/012MN9966-025.png",
-        "barcode": "4036021894171"
-      },
-      {
-        "sku": "012MN9968-025",
-        "name": "MANNOL SELLADOR DE FUGAS CAJA DE CAMBIOS 250ML",
-        "presentation": "Envase 250 ml",
-        "volume": "250ml",
-        "stock": 5,
-        "imageUrl": "/images/products/012MN9968-025.png",
-        "barcode": "4036021992327"
-      }
-    ],
+    "imageUrl": "/images/products/012MN9968-025.png",
     "compatibleVehicles": [
       {
-        "make": "Universal",
-        "model": "Línea Multimarca y Talleres",
-        "yearRange": "Todos los años"
+        "make": "Multimarca",
+        "model": "Vehículos y Flotas",
+        "yearRange": "Consulte según especificación"
       }
     ],
     "features": [
-      "Presentación intercambiable en 2 tamaños unificados",
-      "Fórmula certificada de máxima pureza y durabilidad",
-      "Despacho verificado desde Bodega Matriz Pedernales",
-      "Facturación electrónica autorizada por el SRI"
+      "Calidad OEM garantizada por MANNOL",
+      "Construcción de alta resistencia y durabilidad",
+      "Entrega inmediata en Pedernales y envíos a todo Ecuador",
+      "Factura comercial autorizada por el SRI"
     ],
     "faqs": [
       {
-        "question": "¿Qué presentaciones de MANNOL SELLADOR DE FUGAS CAJA DE CAMBIOS 250ML tienen en stock?",
-        "answer": "Disponemos de 2 presentaciones oficiales: Envase 250 ml, Envase 250 ml. Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
+        "question": "¿Este producto 012MN9968-025 es compatible con mi vehículo?",
+        "answer": "Nuestros asesores técnicos en Pedernales validan la compatibilidad exacta con tu número de chasis o modelo por WhatsApp antes del envío."
       },
       {
-        "question": "¿Realizan envíos a otras ciudades del país?",
-        "answer": "Sí, realizamos despachos diarios desde Pedernales a las 24 provincias del Ecuador mediante cooperativas y transporte de carga seguro."
+        "question": "¿Tienen stock para retiro inmediato en tienda física?",
+        "answer": "Sí, disponemos de 5 unidades en nuestro local matriz de Pedernales listo para entrega inmediata."
       }
     ],
-    "isBestSeller": true
+    "isBestSeller": false
   },
   {
     "id": "prod-012MN9971",
@@ -18899,82 +17914,6 @@ export const PRODUCTS: Product[] = [
     "isBestSeller": false
   },
   {
-    "id": "prod-012MN9980",
-    "sku": "012MN9980",
-    "slug": "mannol-mannol-limpia-inyectores-gasolina-300-ml-012mn9980",
-    "name": "MANNOL LIMPIA INYECTORES GASOLINA 300 ML",
-    "brand": "MANNOL",
-    "category": "aditivos",
-    "applicationType": "autos",
-    "volume": "Envase 300 ml",
-    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones con stock en Bodega Pedernales.",
-    "specifications": {
-      "Marca": "MANNOL",
-      "Presentaciones": "Envase 300 ml, Envase 300 ml",
-      "Stock Total": "23 unidades",
-      "Origen": "Distribución Matriz LiderPro"
-    },
-    "fullSpecs": {
-      "Categoría": "Aditivos",
-      "Línea": "MANNOL Automotive",
-      "Presentaciones Disponibles": "Envase 300 ml, Envase 300 ml",
-      "Garantía": "Garantía Oficial de Fábrica y LiderPro"
-    },
-    "description": "MANNOL LIMPIA INYECTORES GASOLINA 300 ML distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (Envase 300 ml, Envase 300 ml) para talleres y flotas en Manabí y a nivel nacional.",
-    "priceNote": "Consultar precio mayorista o unitario vía WhatsApp con factura SRI",
-    "warranty": "Garantía oficial de autenticidad",
-    "commercialStatus": "VERIFIED",
-    "inStock": true,
-    "stockStatusText": "23 unidades disponibles en Bodega Pedernales",
-    "dispatchIndicator": "Despacho Inmediato",
-    "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/012MN9980.png",
-    "variants": [
-      {
-        "sku": "012MN9980",
-        "name": "MANNOL LIMPIADOR INYECTORES DIESEL 300 ML",
-        "presentation": "Envase 300 ml",
-        "volume": "300ml",
-        "stock": 11,
-        "imageUrl": "/images/products/012MN9980.png",
-        "barcode": "4036021896939"
-      },
-      {
-        "sku": "012MN9981",
-        "name": "MANNOL LIMPIA INYECTORES GASOLINA 300 ML",
-        "presentation": "Envase 300 ml",
-        "volume": "300ml",
-        "stock": 12,
-        "imageUrl": "/images/products/012MN9981.png",
-        "barcode": "4036021894638"
-      }
-    ],
-    "compatibleVehicles": [
-      {
-        "make": "Universal",
-        "model": "Línea Multimarca y Talleres",
-        "yearRange": "Todos los años"
-      }
-    ],
-    "features": [
-      "Presentación intercambiable en 2 tamaños unificados",
-      "Fórmula certificada de máxima pureza y durabilidad",
-      "Despacho verificado desde Bodega Matriz Pedernales",
-      "Facturación electrónica autorizada por el SRI"
-    ],
-    "faqs": [
-      {
-        "question": "¿Qué presentaciones de MANNOL LIMPIA INYECTORES GASOLINA 300 ML tienen en stock?",
-        "answer": "Disponemos de 2 presentaciones oficiales: Envase 300 ml, Envase 300 ml. Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
-      },
-      {
-        "question": "¿Realizan envíos a otras ciudades del país?",
-        "answer": "Sí, realizamos despachos diarios desde Pedernales a las 24 provincias del Ecuador mediante cooperativas y transporte de carga seguro."
-      }
-    ],
-    "isBestSeller": true
-  },
-  {
     "id": "prod-012MN9990",
     "sku": "012MN9990",
     "slug": "mannol-mannol-aditivo-motor-dr-350-ml-012mn9990",
@@ -19097,7 +18036,7 @@ export const PRODUCTS: Product[] = [
     "category": "refrigerantes",
     "applicationType": "autos",
     "volume": "1 Cuarto (946 ml)",
-    "shortSpec": "Línea oficial ABRO. Disponible en 2 presentaciones con stock en Bodega Pedernales.",
+    "shortSpec": "Línea oficial ABRO. Disponible en 2 presentaciones (1 Cuarto (946 ml), 1 Galón (3.78L)) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "ABRO",
       "Presentaciones": "1 Cuarto (946 ml), 1 Galón (3.78L)",
@@ -19173,7 +18112,7 @@ export const PRODUCTS: Product[] = [
     "category": "refrigerantes",
     "applicationType": "autos",
     "volume": "1 Cuarto (946 ml)",
-    "shortSpec": "Línea oficial ABRO. Disponible en 2 presentaciones con stock en Bodega Pedernales.",
+    "shortSpec": "Línea oficial ABRO. Disponible en 2 presentaciones (1 Cuarto (946 ml), 1 Galón (3.78L)) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "ABRO",
       "Presentaciones": "1 Cuarto (946 ml), 1 Galón (3.78L)",
@@ -22034,405 +20973,6 @@ export const PRODUCTS: Product[] = [
     "isBestSeller": true
   },
   {
-    "id": "bat-098TBDN",
-    "sku": "098TBDN",
-    "slug": "bater-as-ecuador-terminal-bateria-borne-delgado-negativo-098tbdn",
-    "name": "TERMINAL BATERIA BORNE DELGADO NEGATIVO",
-    "brand": "BATERÍAS ECUADOR",
-    "category": "baterias",
-    "applicationType": "autos",
-    "plates": "12V Alta Potencia",
-    "shortSpec": "TERMINAL BATERIA BORNE DELGADO NEGATIVO con tecnología de libre mantenimiento. 12V Alta Potencia, arranque confiable en frío.",
-    "specifications": {
-      "Marca": "BATERÍAS ECUADOR",
-      "Capacidad / Potencia": "12V Alta Potencia",
-      "Garantía": "Garantía Nacional 15 a 18 meses",
-      "Tipo de Borne": "Estándar Automotriz (Izquierdo / Derecho según código)",
-      "Stock": "8 unidades en Pedernales"
-    },
-    "fullSpecs": {
-      "Línea": "High Power Selección Oficial",
-      "Tecnología": "Placas Reforzadas Heavy Duty",
-      "Garantía Certificada": "Garantía Nacional 15 a 18 meses",
-      "Origen": "Distribución Autorizada LiderPro"
-    },
-    "description": "TERMINAL BATERIA BORNE DELGADO NEGATIVO disponible en LiderPro Pedernales con instalación y diagnóstico computarizado sin costo. Producto 100% original con sello de garantía y respaldo técnico directo.",
-    "priceNote": "Precio preferencial entregando batería usada (Plan Eco-Valor SRI)",
-    "warranty": "Garantía Nacional 15 a 18 meses",
-    "commercialStatus": "VERIFIED",
-    "inStock": true,
-    "stockStatusText": "8 unidades disponibles en Bodega Pedernales",
-    "dispatchIndicator": "Entrega & Instalación Inmediata",
-    "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/baterias-ecuador-real.png",
-    "compatibleVehicles": [
-      {
-        "make": "Línea Nacional",
-        "model": "Autos, Camionetas y Flotas según amperaje",
-        "yearRange": "12V"
-      }
-    ],
-    "features": [
-      "Diseño profesional institucional según modelo real en tienda",
-      "Garantía oficial Garantía Nacional 15 a 18 meses",
-      "Diagnóstico y prueba de alternador sin costo en local",
-      "Facturación electrónica autorizada por el SRI"
-    ],
-    "faqs": [
-      {
-        "question": "¿Reciben mi batería vieja como parte de pago?",
-        "answer": "Sí, aplicamos el descuento Eco-Valor entregando tu batería usada para reciclaje ecológico certificado."
-      },
-      {
-        "question": "¿La instalación tiene costo adicional?",
-        "answer": "La instalación, revisión del alternador y bornes es completamente gratuita en nuestro local de Pedernales."
-      }
-    ],
-    "isBestSeller": true
-  },
-  {
-    "id": "bat-098TBDP",
-    "sku": "098TBDP",
-    "slug": "bater-as-ecuador-terminal-bateria-borne-delgado-positivo-098tbdp",
-    "name": "TERMINAL BATERIA BORNE DELGADO POSITIVO",
-    "brand": "BATERÍAS ECUADOR",
-    "category": "baterias",
-    "applicationType": "autos",
-    "plates": "12V Alta Potencia",
-    "shortSpec": "TERMINAL BATERIA BORNE DELGADO POSITIVO con tecnología de libre mantenimiento. 12V Alta Potencia, arranque confiable en frío.",
-    "specifications": {
-      "Marca": "BATERÍAS ECUADOR",
-      "Capacidad / Potencia": "12V Alta Potencia",
-      "Garantía": "Garantía Nacional 15 a 18 meses",
-      "Tipo de Borne": "Estándar Automotriz (Izquierdo / Derecho según código)",
-      "Stock": "7 unidades en Pedernales"
-    },
-    "fullSpecs": {
-      "Línea": "High Power Selección Oficial",
-      "Tecnología": "Placas Reforzadas Heavy Duty",
-      "Garantía Certificada": "Garantía Nacional 15 a 18 meses",
-      "Origen": "Distribución Autorizada LiderPro"
-    },
-    "description": "TERMINAL BATERIA BORNE DELGADO POSITIVO disponible en LiderPro Pedernales con instalación y diagnóstico computarizado sin costo. Producto 100% original con sello de garantía y respaldo técnico directo.",
-    "priceNote": "Precio preferencial entregando batería usada (Plan Eco-Valor SRI)",
-    "warranty": "Garantía Nacional 15 a 18 meses",
-    "commercialStatus": "VERIFIED",
-    "inStock": true,
-    "stockStatusText": "7 unidades disponibles en Bodega Pedernales",
-    "dispatchIndicator": "Entrega & Instalación Inmediata",
-    "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/baterias-ecuador-real.png",
-    "compatibleVehicles": [
-      {
-        "make": "Línea Nacional",
-        "model": "Autos, Camionetas y Flotas según amperaje",
-        "yearRange": "12V"
-      }
-    ],
-    "features": [
-      "Diseño profesional institucional según modelo real en tienda",
-      "Garantía oficial Garantía Nacional 15 a 18 meses",
-      "Diagnóstico y prueba de alternador sin costo en local",
-      "Facturación electrónica autorizada por el SRI"
-    ],
-    "faqs": [
-      {
-        "question": "¿Reciben mi batería vieja como parte de pago?",
-        "answer": "Sí, aplicamos el descuento Eco-Valor entregando tu batería usada para reciclaje ecológico certificado."
-      },
-      {
-        "question": "¿La instalación tiene costo adicional?",
-        "answer": "La instalación, revisión del alternador y bornes es completamente gratuita en nuestro local de Pedernales."
-      }
-    ],
-    "isBestSeller": true
-  },
-  {
-    "id": "bat-098TBG-IN",
-    "sku": "098TBG-IN",
-    "slug": "bater-as-ecuador-terminal-bateria-tipo-original-con-capuchon-borne-grueso-par-098tbg-in",
-    "name": "TERMINAL BATERIA TIPO ORIGINAL CON CAPUCHON BORNE GRUESO (PAR)",
-    "brand": "BATERÍAS ECUADOR",
-    "category": "baterias",
-    "applicationType": "autos",
-    "plates": "12V Alta Potencia",
-    "shortSpec": "TERMINAL BATERIA TIPO ORIGINAL CON CAPUCHON BORNE GRUESO (PAR) con tecnología de libre mantenimiento. 12V Alta Potencia, arranque confiable en frío.",
-    "specifications": {
-      "Marca": "BATERÍAS ECUADOR",
-      "Capacidad / Potencia": "12V Alta Potencia",
-      "Garantía": "Garantía Nacional 15 a 18 meses",
-      "Tipo de Borne": "Estándar Automotriz (Izquierdo / Derecho según código)",
-      "Stock": "4 unidades en Pedernales"
-    },
-    "fullSpecs": {
-      "Línea": "High Power Selección Oficial",
-      "Tecnología": "Placas Reforzadas Heavy Duty",
-      "Garantía Certificada": "Garantía Nacional 15 a 18 meses",
-      "Origen": "Distribución Autorizada LiderPro"
-    },
-    "description": "TERMINAL BATERIA TIPO ORIGINAL CON CAPUCHON BORNE GRUESO (PAR) disponible en LiderPro Pedernales con instalación y diagnóstico computarizado sin costo. Producto 100% original con sello de garantía y respaldo técnico directo.",
-    "priceNote": "Precio preferencial entregando batería usada (Plan Eco-Valor SRI)",
-    "warranty": "Garantía Nacional 15 a 18 meses",
-    "commercialStatus": "VERIFIED",
-    "inStock": true,
-    "stockStatusText": "4 unidades disponibles en Bodega Pedernales",
-    "dispatchIndicator": "Entrega & Instalación Inmediata",
-    "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/baterias-ecuador-real.png",
-    "compatibleVehicles": [
-      {
-        "make": "Línea Nacional",
-        "model": "Autos, Camionetas y Flotas según amperaje",
-        "yearRange": "12V"
-      }
-    ],
-    "features": [
-      "Diseño profesional institucional según modelo real en tienda",
-      "Garantía oficial Garantía Nacional 15 a 18 meses",
-      "Diagnóstico y prueba de alternador sin costo en local",
-      "Facturación electrónica autorizada por el SRI"
-    ],
-    "faqs": [
-      {
-        "question": "¿Reciben mi batería vieja como parte de pago?",
-        "answer": "Sí, aplicamos el descuento Eco-Valor entregando tu batería usada para reciclaje ecológico certificado."
-      },
-      {
-        "question": "¿La instalación tiene costo adicional?",
-        "answer": "La instalación, revisión del alternador y bornes es completamente gratuita en nuestro local de Pedernales."
-      }
-    ],
-    "isBestSeller": true
-  },
-  {
-    "id": "bat-098TBGN",
-    "sku": "098TBGN",
-    "slug": "bater-as-ecuador-terminal-bateria-borne-grueso-negativo-098tbgn",
-    "name": "TERMINAL BATERIA BORNE GRUESO NEGATIVO",
-    "brand": "BATERÍAS ECUADOR",
-    "category": "baterias",
-    "applicationType": "autos",
-    "plates": "12V Alta Potencia",
-    "shortSpec": "TERMINAL BATERIA BORNE GRUESO NEGATIVO con tecnología de libre mantenimiento. 12V Alta Potencia, arranque confiable en frío.",
-    "specifications": {
-      "Marca": "BATERÍAS ECUADOR",
-      "Capacidad / Potencia": "12V Alta Potencia",
-      "Garantía": "Garantía Nacional 15 a 18 meses",
-      "Tipo de Borne": "Estándar Automotriz (Izquierdo / Derecho según código)",
-      "Stock": "1 unidades en Pedernales"
-    },
-    "fullSpecs": {
-      "Línea": "High Power Selección Oficial",
-      "Tecnología": "Placas Reforzadas Heavy Duty",
-      "Garantía Certificada": "Garantía Nacional 15 a 18 meses",
-      "Origen": "Distribución Autorizada LiderPro"
-    },
-    "description": "TERMINAL BATERIA BORNE GRUESO NEGATIVO disponible en LiderPro Pedernales con instalación y diagnóstico computarizado sin costo. Producto 100% original con sello de garantía y respaldo técnico directo.",
-    "priceNote": "Precio preferencial entregando batería usada (Plan Eco-Valor SRI)",
-    "warranty": "Garantía Nacional 15 a 18 meses",
-    "commercialStatus": "VERIFIED",
-    "inStock": true,
-    "stockStatusText": "1 unidades disponibles en Bodega Pedernales",
-    "dispatchIndicator": "Entrega & Instalación Inmediata",
-    "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/baterias-ecuador-real.png",
-    "compatibleVehicles": [
-      {
-        "make": "Línea Nacional",
-        "model": "Autos, Camionetas y Flotas según amperaje",
-        "yearRange": "12V"
-      }
-    ],
-    "features": [
-      "Diseño profesional institucional según modelo real en tienda",
-      "Garantía oficial Garantía Nacional 15 a 18 meses",
-      "Diagnóstico y prueba de alternador sin costo en local",
-      "Facturación electrónica autorizada por el SRI"
-    ],
-    "faqs": [
-      {
-        "question": "¿Reciben mi batería vieja como parte de pago?",
-        "answer": "Sí, aplicamos el descuento Eco-Valor entregando tu batería usada para reciclaje ecológico certificado."
-      },
-      {
-        "question": "¿La instalación tiene costo adicional?",
-        "answer": "La instalación, revisión del alternador y bornes es completamente gratuita en nuestro local de Pedernales."
-      }
-    ],
-    "isBestSeller": false
-  },
-  {
-    "id": "bat-098TBGP",
-    "sku": "098TBGP",
-    "slug": "bater-as-ecuador-terminal-bateria-borne-grueso-positivo-098tbgp",
-    "name": "TERMINAL BATERIA BORNE GRUESO POSITIVO",
-    "brand": "BATERÍAS ECUADOR",
-    "category": "baterias",
-    "applicationType": "autos",
-    "plates": "12V Alta Potencia",
-    "shortSpec": "TERMINAL BATERIA BORNE GRUESO POSITIVO con tecnología de libre mantenimiento. 12V Alta Potencia, arranque confiable en frío.",
-    "specifications": {
-      "Marca": "BATERÍAS ECUADOR",
-      "Capacidad / Potencia": "12V Alta Potencia",
-      "Garantía": "Garantía Nacional 15 a 18 meses",
-      "Tipo de Borne": "Estándar Automotriz (Izquierdo / Derecho según código)",
-      "Stock": "2 unidades en Pedernales"
-    },
-    "fullSpecs": {
-      "Línea": "High Power Selección Oficial",
-      "Tecnología": "Placas Reforzadas Heavy Duty",
-      "Garantía Certificada": "Garantía Nacional 15 a 18 meses",
-      "Origen": "Distribución Autorizada LiderPro"
-    },
-    "description": "TERMINAL BATERIA BORNE GRUESO POSITIVO disponible en LiderPro Pedernales con instalación y diagnóstico computarizado sin costo. Producto 100% original con sello de garantía y respaldo técnico directo.",
-    "priceNote": "Precio preferencial entregando batería usada (Plan Eco-Valor SRI)",
-    "warranty": "Garantía Nacional 15 a 18 meses",
-    "commercialStatus": "VERIFIED",
-    "inStock": true,
-    "stockStatusText": "2 unidades disponibles en Bodega Pedernales",
-    "dispatchIndicator": "Entrega & Instalación Inmediata",
-    "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/baterias-ecuador-real.png",
-    "compatibleVehicles": [
-      {
-        "make": "Línea Nacional",
-        "model": "Autos, Camionetas y Flotas según amperaje",
-        "yearRange": "12V"
-      }
-    ],
-    "features": [
-      "Diseño profesional institucional según modelo real en tienda",
-      "Garantía oficial Garantía Nacional 15 a 18 meses",
-      "Diagnóstico y prueba de alternador sin costo en local",
-      "Facturación electrónica autorizada por el SRI"
-    ],
-    "faqs": [
-      {
-        "question": "¿Reciben mi batería vieja como parte de pago?",
-        "answer": "Sí, aplicamos el descuento Eco-Valor entregando tu batería usada para reciclaje ecológico certificado."
-      },
-      {
-        "question": "¿La instalación tiene costo adicional?",
-        "answer": "La instalación, revisión del alternador y bornes es completamente gratuita en nuestro local de Pedernales."
-      }
-    ],
-    "isBestSeller": true
-  },
-  {
-    "id": "bat-0995009R",
-    "sku": "0995009R",
-    "slug": "bater-as-ecuador-soporte-de-bateria-universal-rojo-varilla-larga-0995009r",
-    "name": "SOPORTE DE BATERIA UNIVERSAL ROJO VARILLA LARGA",
-    "brand": "BATERÍAS ECUADOR",
-    "category": "baterias",
-    "applicationType": "autos",
-    "plates": "12V Alta Potencia",
-    "shortSpec": "SOPORTE DE BATERIA UNIVERSAL ROJO VARILLA LARGA con tecnología de libre mantenimiento. 12V Alta Potencia, arranque confiable en frío.",
-    "specifications": {
-      "Marca": "BATERÍAS ECUADOR",
-      "Capacidad / Potencia": "12V Alta Potencia",
-      "Garantía": "Garantía Nacional 15 a 18 meses",
-      "Tipo de Borne": "Estándar Automotriz (Izquierdo / Derecho según código)",
-      "Stock": "7 unidades en Pedernales"
-    },
-    "fullSpecs": {
-      "Línea": "High Power Selección Oficial",
-      "Tecnología": "Placas Reforzadas Heavy Duty",
-      "Garantía Certificada": "Garantía Nacional 15 a 18 meses",
-      "Origen": "Distribución Autorizada LiderPro"
-    },
-    "description": "SOPORTE DE BATERIA UNIVERSAL ROJO VARILLA LARGA disponible en LiderPro Pedernales con instalación y diagnóstico computarizado sin costo. Producto 100% original con sello de garantía y respaldo técnico directo.",
-    "priceNote": "Precio preferencial entregando batería usada (Plan Eco-Valor SRI)",
-    "warranty": "Garantía Nacional 15 a 18 meses",
-    "commercialStatus": "VERIFIED",
-    "inStock": true,
-    "stockStatusText": "7 unidades disponibles en Bodega Pedernales",
-    "dispatchIndicator": "Entrega & Instalación Inmediata",
-    "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/baterias-ecuador-real.png",
-    "compatibleVehicles": [
-      {
-        "make": "Línea Nacional",
-        "model": "Autos, Camionetas y Flotas según amperaje",
-        "yearRange": "12V"
-      }
-    ],
-    "features": [
-      "Diseño profesional institucional según modelo real en tienda",
-      "Garantía oficial Garantía Nacional 15 a 18 meses",
-      "Diagnóstico y prueba de alternador sin costo en local",
-      "Facturación electrónica autorizada por el SRI"
-    ],
-    "faqs": [
-      {
-        "question": "¿Reciben mi batería vieja como parte de pago?",
-        "answer": "Sí, aplicamos el descuento Eco-Valor entregando tu batería usada para reciclaje ecológico certificado."
-      },
-      {
-        "question": "¿La instalación tiene costo adicional?",
-        "answer": "La instalación, revisión del alternador y bornes es completamente gratuita en nuestro local de Pedernales."
-      }
-    ],
-    "isBestSeller": true
-  },
-  {
-    "id": "bat-0995009VCU",
-    "sku": "0995009VCU",
-    "slug": "bater-as-ecuador-soporte-de-bateria-inferior-peque-o-universal-0995009vcu",
-    "name": "SOPORTE DE BATERIA INFERIOR PEQUEÑO UNIVERSAL",
-    "brand": "BATERÍAS ECUADOR",
-    "category": "baterias",
-    "applicationType": "autos",
-    "plates": "12V Alta Potencia",
-    "shortSpec": "SOPORTE DE BATERIA INFERIOR PEQUEÑO UNIVERSAL con tecnología de libre mantenimiento. 12V Alta Potencia, arranque confiable en frío.",
-    "specifications": {
-      "Marca": "BATERÍAS ECUADOR",
-      "Capacidad / Potencia": "12V Alta Potencia",
-      "Garantía": "Garantía Nacional 15 a 18 meses",
-      "Tipo de Borne": "Estándar Automotriz (Izquierdo / Derecho según código)",
-      "Stock": "6 unidades en Pedernales"
-    },
-    "fullSpecs": {
-      "Línea": "High Power Selección Oficial",
-      "Tecnología": "Placas Reforzadas Heavy Duty",
-      "Garantía Certificada": "Garantía Nacional 15 a 18 meses",
-      "Origen": "Distribución Autorizada LiderPro"
-    },
-    "description": "SOPORTE DE BATERIA INFERIOR PEQUEÑO UNIVERSAL disponible en LiderPro Pedernales con instalación y diagnóstico computarizado sin costo. Producto 100% original con sello de garantía y respaldo técnico directo.",
-    "priceNote": "Precio preferencial entregando batería usada (Plan Eco-Valor SRI)",
-    "warranty": "Garantía Nacional 15 a 18 meses",
-    "commercialStatus": "VERIFIED",
-    "inStock": true,
-    "stockStatusText": "6 unidades disponibles en Bodega Pedernales",
-    "dispatchIndicator": "Entrega & Instalación Inmediata",
-    "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/baterias-ecuador-real.png",
-    "compatibleVehicles": [
-      {
-        "make": "Línea Nacional",
-        "model": "Autos, Camionetas y Flotas según amperaje",
-        "yearRange": "12V"
-      }
-    ],
-    "features": [
-      "Diseño profesional institucional según modelo real en tienda",
-      "Garantía oficial Garantía Nacional 15 a 18 meses",
-      "Diagnóstico y prueba de alternador sin costo en local",
-      "Facturación electrónica autorizada por el SRI"
-    ],
-    "faqs": [
-      {
-        "question": "¿Reciben mi batería vieja como parte de pago?",
-        "answer": "Sí, aplicamos el descuento Eco-Valor entregando tu batería usada para reciclaje ecológico certificado."
-      },
-      {
-        "question": "¿La instalación tiene costo adicional?",
-        "answer": "La instalación, revisión del alternador y bornes es completamente gratuita en nuestro local de Pedernales."
-      }
-    ],
-    "isBestSeller": true
-  },
-  {
     "id": "bat-42HPS4",
     "sku": "42HPS4",
     "slug": "bosch-bater-a-bosch-42-hp-s4-55amp-604232-42hps4",
@@ -22474,63 +21014,6 @@ export const PRODUCTS: Product[] = [
     "features": [
       "Diseño profesional institucional según modelo real en tienda",
       "Garantía oficial 18 meses / 40.000 Km",
-      "Diagnóstico y prueba de alternador sin costo en local",
-      "Facturación electrónica autorizada por el SRI"
-    ],
-    "faqs": [
-      {
-        "question": "¿Reciben mi batería vieja como parte de pago?",
-        "answer": "Sí, aplicamos el descuento Eco-Valor entregando tu batería usada para reciclaje ecológico certificado."
-      },
-      {
-        "question": "¿La instalación tiene costo adicional?",
-        "answer": "La instalación, revisión del alternador y bornes es completamente gratuita en nuestro local de Pedernales."
-      }
-    ],
-    "isBestSeller": true
-  },
-  {
-    "id": "bat-ECOVLBAT",
-    "sku": "ECOVLBAT",
-    "slug": "bater-as-ecuador-ecovalor-venta-bateria-veh-culo-ecovlbat",
-    "name": "ECOVALOR (VENTA BATERIA VEHÍCULO)",
-    "brand": "BATERÍAS ECUADOR",
-    "category": "baterias",
-    "applicationType": "autos",
-    "plates": "12V Alta Potencia",
-    "shortSpec": "ECOVALOR (VENTA BATERIA VEHÍCULO) con tecnología de libre mantenimiento. 12V Alta Potencia, arranque confiable en frío.",
-    "specifications": {
-      "Marca": "BATERÍAS ECUADOR",
-      "Capacidad / Potencia": "12V Alta Potencia",
-      "Garantía": "Garantía Nacional 15 a 18 meses",
-      "Tipo de Borne": "Estándar Automotriz (Izquierdo / Derecho según código)",
-      "Stock": "71 unidades en Pedernales"
-    },
-    "fullSpecs": {
-      "Línea": "High Power Selección Oficial",
-      "Tecnología": "Placas Reforzadas Heavy Duty",
-      "Garantía Certificada": "Garantía Nacional 15 a 18 meses",
-      "Origen": "Distribución Autorizada LiderPro"
-    },
-    "description": "ECOVALOR (VENTA BATERIA VEHÍCULO) disponible en LiderPro Pedernales con instalación y diagnóstico computarizado sin costo. Producto 100% original con sello de garantía y respaldo técnico directo.",
-    "priceNote": "Precio preferencial entregando batería usada (Plan Eco-Valor SRI)",
-    "warranty": "Garantía Nacional 15 a 18 meses",
-    "commercialStatus": "VERIFIED",
-    "inStock": true,
-    "stockStatusText": "71 unidades disponibles en Bodega Pedernales",
-    "dispatchIndicator": "Entrega & Instalación Inmediata",
-    "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/baterias-ecuador-real.png",
-    "compatibleVehicles": [
-      {
-        "make": "Línea Nacional",
-        "model": "Autos, Camionetas y Flotas según amperaje",
-        "yearRange": "12V"
-      }
-    ],
-    "features": [
-      "Diseño profesional institucional según modelo real en tienda",
-      "Garantía oficial Garantía Nacional 15 a 18 meses",
       "Diagnóstico y prueba de alternador sin costo en local",
       "Facturación electrónica autorizada por el SRI"
     ],

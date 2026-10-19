@@ -11194,20 +11194,20 @@ export const PRODUCTS: Product[] = [
     "category": "refrigerantes",
     "applicationType": "autos",
     "volume": "1 Litro",
-    "shortSpec": "Línea oficial MANNOL. Disponible en 3 presentaciones (1 Litro, Bidón (5 Litros), Caneca (20 Litros)) con stock en Bodega Pedernales.",
+    "shortSpec": "Línea oficial MANNOL. Disponible en 3 presentaciones (1 Litro, Bidón 5L, Caneca 20L) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "MANNOL",
-      "Presentaciones": "1 Litro, Bidón (5 Litros), Caneca (20 Litros)",
+      "Presentaciones": "1 Litro, Bidón 5L, Caneca 20L",
       "Stock Total": "22 unidades",
       "Origen": "Distribución Matriz LiderPro"
     },
     "fullSpecs": {
       "Categoría": "Refrigerantes",
       "Línea": "MANNOL Automotive",
-      "Presentaciones Disponibles": "1 Litro, Bidón (5 Litros), Caneca (20 Litros)",
+      "Presentaciones Disponibles": "1 Litro, Bidón 5L, Caneca 20L",
       "Garantía": "Garantía Oficial de Fábrica y LiderPro"
     },
-    "description": "MANNOL REFRIGERANTE AZUL VIDA UTIL 3 AÑOS distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, Bidón (5 Litros), Caneca (20 Litros)) para talleres y flotas en Manabí y a nivel nacional.",
+    "description": "MANNOL REFRIGERANTE AZUL VIDA UTIL 3 AÑOS distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, Bidón 5L, Caneca 20L) para talleres y flotas en Manabí y a nivel nacional.",
     "priceNote": "Consultar precio mayorista o unitario vía WhatsApp con factura SRI",
     "warranty": "Garantía oficial de autenticidad",
     "commercialStatus": "VERIFIED",
@@ -11229,7 +11229,7 @@ export const PRODUCTS: Product[] = [
       {
         "sku": "012MN4011-5",
         "name": "MANNOL REFRIGERANTE AZUL VIDA UTIL 3 AÑOS AG 11 4/5LT",
-        "presentation": "Bidón (5 Litros)",
+        "presentation": "Bidón 5L",
         "volume": "5.0L",
         "stock": 3,
         "imageUrl": "/images/products/012MN4011-5.png",
@@ -11238,7 +11238,7 @@ export const PRODUCTS: Product[] = [
       {
         "sku": "012MN4011-20",
         "name": "MANNOL REFRIGERANTE AZUL VIDA UTIL 3 AÑOS AG 11 CAN 20/1 LT",
-        "presentation": "Caneca (20 Litros)",
+        "presentation": "Caneca 20L",
         "volume": "20.0L",
         "stock": 1,
         "imageUrl": "/images/products/012MN4011-20.png",
@@ -11261,7 +11261,7 @@ export const PRODUCTS: Product[] = [
     "faqs": [
       {
         "question": "¿Qué presentaciones de MANNOL REFRIGERANTE AZUL VIDA UTIL 3 AÑOS tienen en stock?",
-        "answer": "Disponemos de 3 presentaciones oficiales: 1 Litro, Bidón (5 Litros), Caneca (20 Litros). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
+        "answer": "Disponemos de 3 presentaciones oficiales: 1 Litro, Bidón 5L, Caneca 20L. Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
       },
       {
         "question": "¿Realizan envíos a otras ciudades del país?",
@@ -11279,20 +11279,20 @@ export const PRODUCTS: Product[] = [
     "category": "refrigerantes",
     "applicationType": "autos",
     "volume": "1 Litro",
-    "shortSpec": "Línea oficial MANNOL. Disponible en 3 presentaciones (1 Litro, Bidón (5 Litros), Caneca (20 Litros)) con stock en Bodega Pedernales.",
+    "shortSpec": "Línea oficial MANNOL. Disponible en 3 presentaciones (1 Litro, Bidón 5L, Caneca 20L) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "MANNOL",
-      "Presentaciones": "1 Litro, Bidón (5 Litros), Caneca (20 Litros)",
+      "Presentaciones": "1 Litro, Bidón 5L, Caneca 20L",
       "Stock Total": "23 unidades",
       "Origen": "Distribución Matriz LiderPro"
     },
     "fullSpecs": {
       "Categoría": "Refrigerantes",
       "Línea": "MANNOL Automotive",
-      "Presentaciones Disponibles": "1 Litro, Bidón (5 Litros), Caneca (20 Litros)",
+      "Presentaciones Disponibles": "1 Litro, Bidón 5L, Caneca 20L",
       "Garantía": "Garantía Oficial de Fábrica y LiderPro"
     },
-    "description": "MANNOL REFRIGERANTE ROJO VIDA UTIL 5 AÑOS distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, Bidón (5 Litros), Caneca (20 Litros)) para talleres y flotas en Manabí y a nivel nacional.",
+    "description": "MANNOL REFRIGERANTE ROJO VIDA UTIL 5 AÑOS distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, Bidón 5L, Caneca 20L) para talleres y flotas en Manabí y a nivel nacional.",
     "priceNote": "Consultar precio mayorista o unitario vía WhatsApp con factura SRI",
     "warranty": "Garantía oficial de autenticidad",
     "commercialStatus": "VERIFIED",
@@ -11314,7 +11314,7 @@ export const PRODUCTS: Product[] = [
       {
         "sku": "012MN4012-5",
         "name": "MANNOL REFRIGERANTE ROJO VIDA UTIL 5 AÑOS AF12+ 4/5LT",
-        "presentation": "Bidón (5 Litros)",
+        "presentation": "Bidón 5L",
         "volume": "5.0L",
         "stock": 5,
         "imageUrl": "/images/products/012MN4012-5.png",
@@ -11323,7 +11323,7 @@ export const PRODUCTS: Product[] = [
       {
         "sku": "012MN4012-20",
         "name": "MANNOL REFRIGERANTE ROJO VIDA UTIL 5 AÑOS AF12+ CAN 20/1 LT",
-        "presentation": "Caneca (20 Litros)",
+        "presentation": "Caneca 20L",
         "volume": "20.0L",
         "stock": 1,
         "imageUrl": "/images/products/012MN4012-20.png",
@@ -11346,7 +11346,7 @@ export const PRODUCTS: Product[] = [
     "faqs": [
       {
         "question": "¿Qué presentaciones de MANNOL REFRIGERANTE ROJO VIDA UTIL 5 AÑOS tienen en stock?",
-        "answer": "Disponemos de 3 presentaciones oficiales: 1 Litro, Bidón (5 Litros), Caneca (20 Litros). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
+        "answer": "Disponemos de 3 presentaciones oficiales: 1 Litro, Bidón 5L, Caneca 20L. Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
       },
       {
         "question": "¿Realizan envíos a otras ciudades del país?",
@@ -11364,20 +11364,20 @@ export const PRODUCTS: Product[] = [
     "category": "refrigerantes",
     "applicationType": "autos",
     "volume": "1 Litro",
-    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones (1 Litro, Bidón (5 Litros)) con stock en Bodega Pedernales.",
+    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones (1 Litro, Bidón 5L) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "MANNOL",
-      "Presentaciones": "1 Litro, Bidón (5 Litros)",
+      "Presentaciones": "1 Litro, Bidón 5L",
       "Stock Total": "24 unidades",
       "Origen": "Distribución Matriz LiderPro"
     },
     "fullSpecs": {
       "Categoría": "Refrigerantes",
       "Línea": "MANNOL Automotive",
-      "Presentaciones Disponibles": "1 Litro, Bidón (5 Litros)",
+      "Presentaciones Disponibles": "1 Litro, Bidón 5L",
       "Garantía": "Garantía Oficial de Fábrica y LiderPro"
     },
-    "description": "MANNOL REFRIGERANTE VERDE VIDA UTIL 3 AÑOS distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, Bidón (5 Litros)) para talleres y flotas en Manabí y a nivel nacional.",
+    "description": "MANNOL REFRIGERANTE VERDE VIDA UTIL 3 AÑOS distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, Bidón 5L) para talleres y flotas en Manabí y a nivel nacional.",
     "priceNote": "Consultar precio mayorista o unitario vía WhatsApp con factura SRI",
     "warranty": "Garantía oficial de autenticidad",
     "commercialStatus": "VERIFIED",
@@ -11399,7 +11399,7 @@ export const PRODUCTS: Product[] = [
       {
         "sku": "012MN4013-5",
         "name": "MANNOL REFRIGERANTE VERDE VIDA UTIL 3 AÑOS AG 13 4/5LT",
-        "presentation": "Bidón (5 Litros)",
+        "presentation": "Bidón 5L",
         "volume": "5.0L",
         "stock": 4,
         "imageUrl": "/images/products/012MN4013-5.png",
@@ -11422,7 +11422,7 @@ export const PRODUCTS: Product[] = [
     "faqs": [
       {
         "question": "¿Qué presentaciones de MANNOL REFRIGERANTE VERDE VIDA UTIL 3 AÑOS tienen en stock?",
-        "answer": "Disponemos de 2 presentaciones oficiales: 1 Litro, Bidón (5 Litros). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
+        "answer": "Disponemos de 2 presentaciones oficiales: 1 Litro, Bidón 5L. Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
       },
       {
         "question": "¿Realizan envíos a otras ciudades del país?",
@@ -11440,20 +11440,20 @@ export const PRODUCTS: Product[] = [
     "category": "refrigerantes",
     "applicationType": "autos",
     "volume": "1 Litro",
-    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones (1 Litro, Bidón (5 Litros)) con stock en Bodega Pedernales.",
+    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones (1 Litro, Bidón 5L) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "MANNOL",
-      "Presentaciones": "1 Litro, Bidón (5 Litros)",
+      "Presentaciones": "1 Litro, Bidón 5L",
       "Stock Total": "22 unidades",
       "Origen": "Distribución Matriz LiderPro"
     },
     "fullSpecs": {
       "Categoría": "Refrigerantes",
       "Línea": "MANNOL Automotive",
-      "Presentaciones Disponibles": "1 Litro, Bidón (5 Litros)",
+      "Presentaciones Disponibles": "1 Litro, Bidón 5L",
       "Garantía": "Garantía Oficial de Fábrica y LiderPro"
     },
-    "description": "MANNOL REFRIGERANTE NARANJA VIDA UTIL 5 AÑOS distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, Bidón (5 Litros)) para talleres y flotas en Manabí y a nivel nacional.",
+    "description": "MANNOL REFRIGERANTE NARANJA VIDA UTIL 5 AÑOS distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, Bidón 5L) para talleres y flotas en Manabí y a nivel nacional.",
     "priceNote": "Consultar precio mayorista o unitario vía WhatsApp con factura SRI",
     "warranty": "Garantía oficial de autenticidad",
     "commercialStatus": "VERIFIED",
@@ -11475,7 +11475,7 @@ export const PRODUCTS: Product[] = [
       {
         "sku": "012MN4016-5",
         "name": "MANNOL REFRIGERANTE NARANJA DEXCOOLANT 50/50 VIDA UTIL 5 AÑOS 4/5LT",
-        "presentation": "Bidón (5 Litros)",
+        "presentation": "Bidón 5L",
         "volume": "5.0L",
         "stock": 5,
         "imageUrl": "/images/products/012MN4016-5.png",
@@ -11498,7 +11498,7 @@ export const PRODUCTS: Product[] = [
     "faqs": [
       {
         "question": "¿Qué presentaciones de MANNOL REFRIGERANTE NARANJA VIDA UTIL 5 AÑOS tienen en stock?",
-        "answer": "Disponemos de 2 presentaciones oficiales: 1 Litro, Bidón (5 Litros). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
+        "answer": "Disponemos de 2 presentaciones oficiales: 1 Litro, Bidón 5L. Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
       },
       {
         "question": "¿Realizan envíos a otras ciudades del país?",
@@ -11516,25 +11516,25 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "1 Litro",
-    "shortSpec": "Línea oficial MANNOL. Disponible en 4 presentaciones (1 Litro, Bidón (5 Litros), Caneca (10 Litros), Caneca (20 Litros)) con stock en Bodega Pedernales.",
+    "shortSpec": "Línea oficial MANNOL. Disponible en 3 presentaciones (1 Litro, Bidón 5L, Caneca 20L) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "MANNOL",
-      "Presentaciones": "1 Litro, Bidón (5 Litros), Caneca (10 Litros), Caneca (20 Litros)",
-      "Stock Total": "34 unidades",
+      "Presentaciones": "1 Litro, Bidón 5L, Caneca 20L",
+      "Stock Total": "32 unidades",
       "Origen": "Distribución Matriz LiderPro"
     },
     "fullSpecs": {
       "Categoría": "Lubricantes",
       "Línea": "MANNOL Automotive",
-      "Presentaciones Disponibles": "1 Litro, Bidón (5 Litros), Caneca (10 Litros), Caneca (20 Litros)",
+      "Presentaciones Disponibles": "1 Litro, Bidón 5L, Caneca 20L",
       "Garantía": "Garantía Oficial de Fábrica y LiderPro"
     },
-    "description": "MANNOL TS-4 SHPD 15W40 EXTRA distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, Bidón (5 Litros), Caneca (10 Litros), Caneca (20 Litros)) para talleres y flotas en Manabí y a nivel nacional.",
+    "description": "MANNOL TS-4 SHPD 15W40 EXTRA distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, Bidón 5L, Caneca 20L) para talleres y flotas en Manabí y a nivel nacional.",
     "priceNote": "Consultar precio mayorista o unitario vía WhatsApp con factura SRI",
     "warranty": "Garantía oficial de autenticidad",
     "commercialStatus": "VERIFIED",
     "inStock": true,
-    "stockStatusText": "34 unidades disponibles en Bodega Pedernales",
+    "stockStatusText": "32 unidades disponibles en Bodega Pedernales",
     "dispatchIndicator": "Despacho Inmediato",
     "primaryOriginRecommendation": "Pedernales",
     "imageUrl": "/images/products/012MN7104-1.png",
@@ -11551,25 +11551,16 @@ export const PRODUCTS: Product[] = [
       {
         "sku": "012MN7104-5A",
         "name": "MANNOL TS-4 SHPD 15W40 EXTRA 4/5LT GL.",
-        "presentation": "Bidón (5 Litros)",
+        "presentation": "Bidón 5L",
         "volume": "5.0L",
         "stock": 8,
         "imageUrl": "/images/products/012MN7104-5A.png",
         "barcode": "4036021256757"
       },
       {
-        "sku": "012MN7104-10A",
-        "name": "MANNOL TS-4 SHPD 15W40 EXTRA CAN 10 LT",
-        "presentation": "Caneca (10 Litros)",
-        "volume": "10.0L",
-        "stock": 2,
-        "imageUrl": "/images/products/012MN7104-10A.png",
-        "barcode": "4036021146713"
-      },
-      {
         "sku": "012MN7104-20A",
         "name": "MANNOL TS-4 SHPD 15W40 EXTRA 20/1 CAN",
-        "presentation": "Caneca (20 Litros)",
+        "presentation": "Caneca 20L",
         "volume": "20.0L",
         "stock": 8,
         "imageUrl": "/images/products/012MN7104-20A.png",
@@ -11584,7 +11575,7 @@ export const PRODUCTS: Product[] = [
       }
     ],
     "features": [
-      "Presentación intercambiable en 4 tamaños unificados",
+      "Presentación intercambiable en 3 tamaños unificados",
       "Fórmula certificada de máxima pureza y durabilidad",
       "Despacho verificado desde Bodega Matriz Pedernales",
       "Facturación electrónica autorizada por el SRI"
@@ -11592,7 +11583,7 @@ export const PRODUCTS: Product[] = [
     "faqs": [
       {
         "question": "¿Qué presentaciones de MANNOL TS-4 SHPD 15W40 EXTRA tienen en stock?",
-        "answer": "Disponemos de 4 presentaciones oficiales: 1 Litro, Bidón (5 Litros), Caneca (10 Litros), Caneca (20 Litros). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
+        "answer": "Disponemos de 3 presentaciones oficiales: 1 Litro, Bidón 5L, Caneca 20L. Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
       },
       {
         "question": "¿Realizan envíos a otras ciudades del país?",
@@ -11610,20 +11601,20 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "1 Litro",
-    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones (1 Litro, 1 Galón (3.78L)) con stock en Bodega Pedernales.",
+    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones (1 Litro, 1 Galón) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "MANNOL",
-      "Presentaciones": "1 Litro, 1 Galón (3.78L)",
+      "Presentaciones": "1 Litro, 1 Galón",
       "Stock Total": "20 unidades",
       "Origen": "Distribución Matriz LiderPro"
     },
     "fullSpecs": {
       "Categoría": "Lubricantes",
       "Línea": "MANNOL Automotive",
-      "Presentaciones Disponibles": "1 Litro, 1 Galón (3.78L)",
+      "Presentaciones Disponibles": "1 Litro, 1 Galón",
       "Garantía": "Garantía Oficial de Fábrica y LiderPro"
     },
-    "description": "MANNOL SAFARI 20W50 distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Galón (3.78L)) para talleres y flotas en Manabí y a nivel nacional.",
+    "description": "MANNOL SAFARI 20W50 distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Galón) para talleres y flotas en Manabí y a nivel nacional.",
     "priceNote": "Consultar precio mayorista o unitario vía WhatsApp con factura SRI",
     "warranty": "Garantía oficial de autenticidad",
     "commercialStatus": "VERIFIED",
@@ -11645,7 +11636,7 @@ export const PRODUCTS: Product[] = [
       {
         "sku": "012MN7404-4A",
         "name": "MANNOL SAFARI 20W50 4/1 GL",
-        "presentation": "1 Galón (3.78L)",
+        "presentation": "1 Galón",
         "volume": "3.78L",
         "stock": 6,
         "imageUrl": "/images/products/012MN7404-4A.png",
@@ -11668,7 +11659,7 @@ export const PRODUCTS: Product[] = [
     "faqs": [
       {
         "question": "¿Qué presentaciones de MANNOL SAFARI 20W50 tienen en stock?",
-        "answer": "Disponemos de 2 presentaciones oficiales: 1 Litro, 1 Galón (3.78L). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
+        "answer": "Disponemos de 2 presentaciones oficiales: 1 Litro, 1 Galón. Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
       },
       {
         "question": "¿Realizan envíos a otras ciudades del país?",
@@ -11686,20 +11677,20 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "1 Litro",
-    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones (1 Litro, 1 Galón (3.78L)) con stock en Bodega Pedernales.",
+    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones (1 Litro, 1 Galón) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "MANNOL",
-      "Presentaciones": "1 Litro, 1 Galón (3.78L)",
+      "Presentaciones": "1 Litro, 1 Galón",
       "Stock Total": "25 unidades",
       "Origen": "Distribución Matriz LiderPro"
     },
     "fullSpecs": {
       "Categoría": "Lubricantes",
       "Línea": "MANNOL Automotive",
-      "Presentaciones Disponibles": "1 Litro, 1 Galón (3.78L)",
+      "Presentaciones Disponibles": "1 Litro, 1 Galón",
       "Garantía": "Garantía Oficial de Fábrica y LiderPro"
     },
-    "description": "MANNOL CLASSIC 10W40 distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Galón (3.78L)) para talleres y flotas en Manabí y a nivel nacional.",
+    "description": "MANNOL CLASSIC 10W40 distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Galón) para talleres y flotas en Manabí y a nivel nacional.",
     "priceNote": "Consultar precio mayorista o unitario vía WhatsApp con factura SRI",
     "warranty": "Garantía oficial de autenticidad",
     "commercialStatus": "VERIFIED",
@@ -11721,7 +11712,7 @@ export const PRODUCTS: Product[] = [
       {
         "sku": "012MN7501-4",
         "name": "MANNOL CLASSIC 10W40 4/1 GL METÁLICO",
-        "presentation": "1 Galón (3.78L)",
+        "presentation": "1 Galón",
         "volume": "3.78L",
         "stock": 6,
         "imageUrl": "/images/products/012MN7501-4.png",
@@ -11744,7 +11735,7 @@ export const PRODUCTS: Product[] = [
     "faqs": [
       {
         "question": "¿Qué presentaciones de MANNOL CLASSIC 10W40 tienen en stock?",
-        "answer": "Disponemos de 2 presentaciones oficiales: 1 Litro, 1 Galón (3.78L). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
+        "answer": "Disponemos de 2 presentaciones oficiales: 1 Litro, 1 Galón. Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
       },
       {
         "question": "¿Realizan envíos a otras ciudades del país?",
@@ -11762,20 +11753,20 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "1 Litro",
-    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones (1 Litro, 1 Galón (3.78L)) con stock en Bodega Pedernales.",
+    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones (1 Litro, 1 Galón) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "MANNOL",
-      "Presentaciones": "1 Litro, 1 Galón (3.78L)",
+      "Presentaciones": "1 Litro, 1 Galón",
       "Stock Total": "18 unidades",
       "Origen": "Distribución Matriz LiderPro"
     },
     "fullSpecs": {
       "Categoría": "Lubricantes",
       "Línea": "MANNOL Automotive",
-      "Presentaciones Disponibles": "1 Litro, 1 Galón (3.78L)",
+      "Presentaciones Disponibles": "1 Litro, 1 Galón",
       "Garantía": "Garantía Oficial de Fábrica y LiderPro"
     },
-    "description": "MANNOL SPECIAL PLUS 10W30 distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Galón (3.78L)) para talleres y flotas en Manabí y a nivel nacional.",
+    "description": "MANNOL SPECIAL PLUS 10W30 distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Galón) para talleres y flotas en Manabí y a nivel nacional.",
     "priceNote": "Consultar precio mayorista o unitario vía WhatsApp con factura SRI",
     "warranty": "Garantía oficial de autenticidad",
     "commercialStatus": "VERIFIED",
@@ -11797,7 +11788,7 @@ export const PRODUCTS: Product[] = [
       {
         "sku": "012MN7512-4A",
         "name": "MANNOL SPECIAL PLUS 10W30 4/1 GL",
-        "presentation": "1 Galón (3.78L)",
+        "presentation": "1 Galón",
         "volume": "3.78L",
         "stock": 10,
         "imageUrl": "/images/products/012MN7512-4A.png",
@@ -11820,7 +11811,7 @@ export const PRODUCTS: Product[] = [
     "faqs": [
       {
         "question": "¿Qué presentaciones de MANNOL SPECIAL PLUS 10W30 tienen en stock?",
-        "answer": "Disponemos de 2 presentaciones oficiales: 1 Litro, 1 Galón (3.78L). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
+        "answer": "Disponemos de 2 presentaciones oficiales: 1 Litro, 1 Galón. Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
       },
       {
         "question": "¿Realizan envíos a otras ciudades del país?",
@@ -11838,20 +11829,20 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "1 Litro",
-    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones (1 Litro, 1 Galón (3.78L)) con stock en Bodega Pedernales.",
+    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones (1 Litro, 1 Galón) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "MANNOL",
-      "Presentaciones": "1 Litro, 1 Galón (3.78L)",
+      "Presentaciones": "1 Litro, 1 Galón",
       "Stock Total": "24 unidades",
       "Origen": "Distribución Matriz LiderPro"
     },
     "fullSpecs": {
       "Categoría": "Lubricantes",
       "Línea": "MANNOL Automotive",
-      "Presentaciones Disponibles": "1 Litro, 1 Galón (3.78L)",
+      "Presentaciones Disponibles": "1 Litro, 1 Galón",
       "Garantía": "Garantía Oficial de Fábrica y LiderPro"
     },
-    "description": "MANNOL TOYOTA LEXUS O.E.M 5W30 METÁLICO distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Galón (3.78L)) para talleres y flotas en Manabí y a nivel nacional.",
+    "description": "MANNOL TOYOTA LEXUS O.E.M 5W30 METÁLICO distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Galón) para talleres y flotas en Manabí y a nivel nacional.",
     "priceNote": "Consultar precio mayorista o unitario vía WhatsApp con factura SRI",
     "warranty": "Garantía oficial de autenticidad",
     "commercialStatus": "VERIFIED",
@@ -11873,7 +11864,7 @@ export const PRODUCTS: Product[] = [
       {
         "sku": "012MN7709-4",
         "name": "MANNOL TOYOTA LEXUS O.E.M 5W30 4/1 GL METÁLICO",
-        "presentation": "1 Galón (3.78L)",
+        "presentation": "1 Galón",
         "volume": "3.78L",
         "stock": 4,
         "imageUrl": "/images/products/012MN7709-4.png",
@@ -11896,7 +11887,7 @@ export const PRODUCTS: Product[] = [
     "faqs": [
       {
         "question": "¿Qué presentaciones de MANNOL TOYOTA LEXUS O.E.M 5W30 METÁLICO tienen en stock?",
-        "answer": "Disponemos de 2 presentaciones oficiales: 1 Litro, 1 Galón (3.78L). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
+        "answer": "Disponemos de 2 presentaciones oficiales: 1 Litro, 1 Galón. Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
       },
       {
         "question": "¿Realizan envíos a otras ciudades del país?",
@@ -11914,20 +11905,20 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "1 Litro",
-    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones (1 Litro, 1 Galón (3.78L)) con stock en Bodega Pedernales.",
+    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones (1 Litro, 1 Galón) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "MANNOL",
-      "Presentaciones": "1 Litro, 1 Galón (3.78L)",
+      "Presentaciones": "1 Litro, 1 Galón",
       "Stock Total": "21 unidades",
       "Origen": "Distribución Matriz LiderPro"
     },
     "fullSpecs": {
       "Categoría": "Lubricantes",
       "Línea": "MANNOL Automotive",
-      "Presentaciones Disponibles": "1 Litro, 1 Galón (3.78L)",
+      "Presentaciones Disponibles": "1 Litro, 1 Galón",
       "Garantía": "Garantía Oficial de Fábrica y LiderPro"
     },
-    "description": "MANNOL HYUNDAI KIA O.E.M 5W30 METÁLICO distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Galón (3.78L)) para talleres y flotas en Manabí y a nivel nacional.",
+    "description": "MANNOL HYUNDAI KIA O.E.M 5W30 METÁLICO distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Galón) para talleres y flotas en Manabí y a nivel nacional.",
     "priceNote": "Consultar precio mayorista o unitario vía WhatsApp con factura SRI",
     "warranty": "Garantía oficial de autenticidad",
     "commercialStatus": "VERIFIED",
@@ -11949,7 +11940,7 @@ export const PRODUCTS: Product[] = [
       {
         "sku": "012MN7713-4",
         "name": "MANNOL HYUNDAI KIA O.E.M 5W30 4/1 GL. METÁLICO",
-        "presentation": "1 Galón (3.78L)",
+        "presentation": "1 Galón",
         "volume": "3.78L",
         "stock": 4,
         "imageUrl": "/images/products/012MN7713-4.png",
@@ -11972,7 +11963,7 @@ export const PRODUCTS: Product[] = [
     "faqs": [
       {
         "question": "¿Qué presentaciones de MANNOL HYUNDAI KIA O.E.M 5W30 METÁLICO tienen en stock?",
-        "answer": "Disponemos de 2 presentaciones oficiales: 1 Litro, 1 Galón (3.78L). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
+        "answer": "Disponemos de 2 presentaciones oficiales: 1 Litro, 1 Galón. Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
       },
       {
         "question": "¿Realizan envíos a otras ciudades del país?",
@@ -11990,20 +11981,20 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "1 Litro",
-    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones (1 Litro, 1 Galón (3.78L)) con stock en Bodega Pedernales.",
+    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones (1 Litro, 1 Galón) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "MANNOL",
-      "Presentaciones": "1 Litro, 1 Galón (3.78L)",
+      "Presentaciones": "1 Litro, 1 Galón",
       "Stock Total": "10 unidades",
       "Origen": "Distribución Matriz LiderPro"
     },
     "fullSpecs": {
       "Categoría": "Lubricantes",
       "Línea": "MANNOL Automotive",
-      "Presentaciones Disponibles": "1 Litro, 1 Galón (3.78L)",
+      "Presentaciones Disponibles": "1 Litro, 1 Galón",
       "Garantía": "Garantía Oficial de Fábrica y LiderPro"
     },
-    "description": "MANNOL CERAMIC 5W30 distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Galón (3.78L)) para talleres y flotas en Manabí y a nivel nacional.",
+    "description": "MANNOL CERAMIC 5W30 distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Galón) para talleres y flotas en Manabí y a nivel nacional.",
     "priceNote": "Consultar precio mayorista o unitario vía WhatsApp con factura SRI",
     "warranty": "Garantía oficial de autenticidad",
     "commercialStatus": "VERIFIED",
@@ -12025,7 +12016,7 @@ export const PRODUCTS: Product[] = [
       {
         "sku": "012MN7720-4",
         "name": "MANNOL CERAMIC 5W30 4/1 GL",
-        "presentation": "1 Galón (3.78L)",
+        "presentation": "1 Galón",
         "volume": "3.78L",
         "stock": 4,
         "imageUrl": "/images/products/012MN7720-4.png",
@@ -12048,7 +12039,7 @@ export const PRODUCTS: Product[] = [
     "faqs": [
       {
         "question": "¿Qué presentaciones de MANNOL CERAMIC 5W30 tienen en stock?",
-        "answer": "Disponemos de 2 presentaciones oficiales: 1 Litro, 1 Galón (3.78L). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
+        "answer": "Disponemos de 2 presentaciones oficiales: 1 Litro, 1 Galón. Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
       },
       {
         "question": "¿Realizan envíos a otras ciudades del país?",
@@ -12237,20 +12228,20 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "1 Litro",
-    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones (1 Litro, Bidón (5 Litros)) con stock en Bodega Pedernales.",
+    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones (1 Litro, Bidón 5L) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "MANNOL",
-      "Presentaciones": "1 Litro, Bidón (5 Litros)",
+      "Presentaciones": "1 Litro, Bidón 5L",
       "Stock Total": "24 unidades",
       "Origen": "Distribución Matriz LiderPro"
     },
     "fullSpecs": {
       "Categoría": "Lubricantes",
       "Línea": "MANNOL Automotive",
-      "Presentaciones Disponibles": "1 Litro, Bidón (5 Litros)",
+      "Presentaciones Disponibles": "1 Litro, Bidón 5L",
       "Garantía": "Garantía Oficial de Fábrica y LiderPro"
     },
-    "description": "MANNOL DIESEL TURBO 5W40 distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, Bidón (5 Litros)) para talleres y flotas en Manabí y a nivel nacional.",
+    "description": "MANNOL DIESEL TURBO 5W40 distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, Bidón 5L) para talleres y flotas en Manabí y a nivel nacional.",
     "priceNote": "Consultar precio mayorista o unitario vía WhatsApp con factura SRI",
     "warranty": "Garantía oficial de autenticidad",
     "commercialStatus": "VERIFIED",
@@ -12272,7 +12263,7 @@ export const PRODUCTS: Product[] = [
       {
         "sku": "012MN7904-5",
         "name": "MANNOL DIESEL TURBO 5W40 4/5LT",
-        "presentation": "Bidón (5 Litros)",
+        "presentation": "Bidón 5L",
         "volume": "5.0L",
         "stock": 4,
         "imageUrl": "/images/products/012MN7904-5.png",
@@ -12295,7 +12286,7 @@ export const PRODUCTS: Product[] = [
     "faqs": [
       {
         "question": "¿Qué presentaciones de MANNOL DIESEL TURBO 5W40 tienen en stock?",
-        "answer": "Disponemos de 2 presentaciones oficiales: 1 Litro, Bidón (5 Litros). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
+        "answer": "Disponemos de 2 presentaciones oficiales: 1 Litro, Bidón 5L. Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
       },
       {
         "question": "¿Realizan envíos a otras ciudades del país?",
@@ -12313,20 +12304,20 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "1 Litro",
-    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones (1 Litro, 1 Galón (3.78L)) con stock en Bodega Pedernales.",
+    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones (1 Litro, 1 Galón) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "MANNOL",
-      "Presentaciones": "1 Litro, 1 Galón (3.78L)",
+      "Presentaciones": "1 Litro, 1 Galón",
       "Stock Total": "24 unidades",
       "Origen": "Distribución Matriz LiderPro"
     },
     "fullSpecs": {
       "Categoría": "Lubricantes",
       "Línea": "MANNOL Automotive",
-      "Presentaciones Disponibles": "1 Litro, 1 Galón (3.78L)",
+      "Presentaciones Disponibles": "1 Litro, 1 Galón",
       "Garantía": "Garantía Oficial de Fábrica y LiderPro"
     },
-    "description": "MANNOL ENERGY ULTRA JP 5W20 distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Galón (3.78L)) para talleres y flotas en Manabí y a nivel nacional.",
+    "description": "MANNOL ENERGY ULTRA JP 5W20 distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Galón) para talleres y flotas en Manabí y a nivel nacional.",
     "priceNote": "Consultar precio mayorista o unitario vía WhatsApp con factura SRI",
     "warranty": "Garantía oficial de autenticidad",
     "commercialStatus": "VERIFIED",
@@ -12348,7 +12339,7 @@ export const PRODUCTS: Product[] = [
       {
         "sku": "012MN7906-4A",
         "name": "MANNOL ENERGY ULTRA JP 5W20 4/1 GL",
-        "presentation": "1 Galón (3.78L)",
+        "presentation": "1 Galón",
         "volume": "3.78L",
         "stock": 4,
         "imageUrl": "/images/products/012MN7906-4A.png",
@@ -12371,7 +12362,7 @@ export const PRODUCTS: Product[] = [
     "faqs": [
       {
         "question": "¿Qué presentaciones de MANNOL ENERGY ULTRA JP 5W20 tienen en stock?",
-        "answer": "Disponemos de 2 presentaciones oficiales: 1 Litro, 1 Galón (3.78L). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
+        "answer": "Disponemos de 2 presentaciones oficiales: 1 Litro, 1 Galón. Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
       },
       {
         "question": "¿Realizan envíos a otras ciudades del país?",
@@ -12389,20 +12380,20 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "1 Litro",
-    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones (1 Litro, Bidón (5 Litros)) con stock en Bodega Pedernales.",
+    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones (1 Litro, Bidón 5L) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "MANNOL",
-      "Presentaciones": "1 Litro, Bidón (5 Litros)",
+      "Presentaciones": "1 Litro, Bidón 5L",
       "Stock Total": "10 unidades",
       "Origen": "Distribución Matriz LiderPro"
     },
     "fullSpecs": {
       "Categoría": "Lubricantes",
       "Línea": "MANNOL Automotive",
-      "Presentaciones Disponibles": "1 Litro, Bidón (5 Litros)",
+      "Presentaciones Disponibles": "1 Litro, Bidón 5L",
       "Garantía": "Garantía Oficial de Fábrica y LiderPro"
     },
-    "description": "MANNOL DIESEL TDI 5W30 distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, Bidón (5 Litros)) para talleres y flotas en Manabí y a nivel nacional.",
+    "description": "MANNOL DIESEL TDI 5W30 distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, Bidón 5L) para talleres y flotas en Manabí y a nivel nacional.",
     "priceNote": "Consultar precio mayorista o unitario vía WhatsApp con factura SRI",
     "warranty": "Garantía oficial de autenticidad",
     "commercialStatus": "VERIFIED",
@@ -12424,7 +12415,7 @@ export const PRODUCTS: Product[] = [
       {
         "sku": "012MN7909-5",
         "name": "MANNOL DIESEL TDI 5W30 4/5LT GL",
-        "presentation": "Bidón (5 Litros)",
+        "presentation": "Bidón 5L",
         "volume": "5.0L",
         "stock": 4,
         "imageUrl": "/images/products/012MN7909-5.png",
@@ -12447,7 +12438,7 @@ export const PRODUCTS: Product[] = [
     "faqs": [
       {
         "question": "¿Qué presentaciones de MANNOL DIESEL TDI 5W30 tienen en stock?",
-        "answer": "Disponemos de 2 presentaciones oficiales: 1 Litro, Bidón (5 Litros). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
+        "answer": "Disponemos de 2 presentaciones oficiales: 1 Litro, Bidón 5L. Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
       },
       {
         "question": "¿Realizan envíos a otras ciudades del país?",
@@ -12465,20 +12456,20 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "1 Litro",
-    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones (1 Litro, 1 Galón (3.78L)) con stock en Bodega Pedernales.",
+    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones (1 Litro, 1 Galón) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "MANNOL",
-      "Presentaciones": "1 Litro, 1 Galón (3.78L)",
+      "Presentaciones": "1 Litro, 1 Galón",
       "Stock Total": "27 unidades",
       "Origen": "Distribución Matriz LiderPro"
     },
     "fullSpecs": {
       "Categoría": "Lubricantes",
       "Línea": "MANNOL Automotive",
-      "Presentaciones Disponibles": "1 Litro, 1 Galón (3.78L)",
+      "Presentaciones Disponibles": "1 Litro, 1 Galón",
       "Garantía": "Garantía Oficial de Fábrica y LiderPro"
     },
-    "description": "MANNOL ENERGY FORMULA JP 5W30 METÁLICO distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Galón (3.78L)) para talleres y flotas en Manabí y a nivel nacional.",
+    "description": "MANNOL ENERGY FORMULA JP 5W30 METÁLICO distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Galón) para talleres y flotas en Manabí y a nivel nacional.",
     "priceNote": "Consultar precio mayorista o unitario vía WhatsApp con factura SRI",
     "warranty": "Garantía oficial de autenticidad",
     "commercialStatus": "VERIFIED",
@@ -12500,7 +12491,7 @@ export const PRODUCTS: Product[] = [
       {
         "sku": "012MN7914-4A",
         "name": "MANNOL ENERGY FORMULA JP 5W30 4/1 GL METÁLICO",
-        "presentation": "1 Galón (3.78L)",
+        "presentation": "1 Galón",
         "volume": "3.78L",
         "stock": 7,
         "imageUrl": "/images/products/012MN7914-4A.png",
@@ -12523,7 +12514,7 @@ export const PRODUCTS: Product[] = [
     "faqs": [
       {
         "question": "¿Qué presentaciones de MANNOL ENERGY FORMULA JP 5W30 METÁLICO tienen en stock?",
-        "answer": "Disponemos de 2 presentaciones oficiales: 1 Litro, 1 Galón (3.78L). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
+        "answer": "Disponemos de 2 presentaciones oficiales: 1 Litro, 1 Galón. Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
       },
       {
         "question": "¿Realizan envíos a otras ciudades del país?",
@@ -12541,20 +12532,20 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "1 Litro",
-    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones (1 Litro, 1 Galón (3.78L)) con stock en Bodega Pedernales.",
+    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones (1 Litro, 1 Galón) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "MANNOL",
-      "Presentaciones": "1 Litro, 1 Galón (3.78L)",
+      "Presentaciones": "1 Litro, 1 Galón",
       "Stock Total": "23 unidades",
       "Origen": "Distribución Matriz LiderPro"
     },
     "fullSpecs": {
       "Categoría": "Lubricantes",
       "Línea": "MANNOL Automotive",
-      "Presentaciones Disponibles": "1 Litro, 1 Galón (3.78L)",
+      "Presentaciones Disponibles": "1 Litro, 1 Galón",
       "Garantía": "Garantía Oficial de Fábrica y LiderPro"
     },
-    "description": "MANNOL FOR CHINESE CARS 5W30 distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Galón (3.78L)) para talleres y flotas en Manabí y a nivel nacional.",
+    "description": "MANNOL FOR CHINESE CARS 5W30 distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Galón) para talleres y flotas en Manabí y a nivel nacional.",
     "priceNote": "Consultar precio mayorista o unitario vía WhatsApp con factura SRI",
     "warranty": "Garantía oficial de autenticidad",
     "commercialStatus": "VERIFIED",
@@ -12576,7 +12567,7 @@ export const PRODUCTS: Product[] = [
       {
         "sku": "012MN7924-4",
         "name": "MANNOL FOR CHINESE CARS 5W30 4/1 GL",
-        "presentation": "1 Galón (3.78L)",
+        "presentation": "1 Galón",
         "volume": "3.78L",
         "stock": 3,
         "imageUrl": "/images/products/012MN7924-4.png",
@@ -12599,7 +12590,7 @@ export const PRODUCTS: Product[] = [
     "faqs": [
       {
         "question": "¿Qué presentaciones de MANNOL FOR CHINESE CARS 5W30 tienen en stock?",
-        "answer": "Disponemos de 2 presentaciones oficiales: 1 Litro, 1 Galón (3.78L). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
+        "answer": "Disponemos de 2 presentaciones oficiales: 1 Litro, 1 Galón. Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
       },
       {
         "question": "¿Realizan envíos a otras ciudades del país?",
@@ -12617,20 +12608,20 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "1 Litro",
-    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones (1 Litro, 1 Galón (3.78L)) con stock en Bodega Pedernales.",
+    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones (1 Litro, 1 Galón) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "MANNOL",
-      "Presentaciones": "1 Litro, 1 Galón (3.78L)",
+      "Presentaciones": "1 Litro, 1 Galón",
       "Stock Total": "22 unidades",
       "Origen": "Distribución Matriz LiderPro"
     },
     "fullSpecs": {
       "Categoría": "Lubricantes",
       "Línea": "MANNOL Automotive",
-      "Presentaciones Disponibles": "1 Litro, 1 Galón (3.78L)",
+      "Presentaciones Disponibles": "1 Litro, 1 Galón",
       "Garantía": "Garantía Oficial de Fábrica y LiderPro"
     },
-    "description": "MANNOL FWD 75W85 GL4 distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Galón (3.78L)) para talleres y flotas en Manabí y a nivel nacional.",
+    "description": "MANNOL FWD 75W85 GL4 distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Galón) para talleres y flotas en Manabí y a nivel nacional.",
     "priceNote": "Consultar precio mayorista o unitario vía WhatsApp con factura SRI",
     "warranty": "Garantía oficial de autenticidad",
     "commercialStatus": "VERIFIED",
@@ -12652,7 +12643,7 @@ export const PRODUCTS: Product[] = [
       {
         "sku": "012MN8101-4",
         "name": "MANNOL FWD 75W85 GL4 4/1 GL",
-        "presentation": "1 Galón (3.78L)",
+        "presentation": "1 Galón",
         "volume": "3.78L",
         "stock": 4,
         "imageUrl": "/images/products/012MN8101-4.png",
@@ -12675,7 +12666,7 @@ export const PRODUCTS: Product[] = [
     "faqs": [
       {
         "question": "¿Qué presentaciones de MANNOL FWD 75W85 GL4 tienen en stock?",
-        "answer": "Disponemos de 2 presentaciones oficiales: 1 Litro, 1 Galón (3.78L). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
+        "answer": "Disponemos de 2 presentaciones oficiales: 1 Litro, 1 Galón. Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
       },
       {
         "question": "¿Realizan envíos a otras ciudades del país?",
@@ -12692,21 +12683,21 @@ export const PRODUCTS: Product[] = [
     "brand": "MANNOL",
     "category": "lubricantes",
     "applicationType": "autos",
-    "volume": "1 Galón (3.78L)",
-    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones (1 Galón (3.78L), Caneca (20 Litros)) con stock en Bodega Pedernales.",
+    "volume": "1 Galón",
+    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones (1 Galón, Caneca 20L) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "MANNOL",
-      "Presentaciones": "1 Galón (3.78L), Caneca (20 Litros)",
+      "Presentaciones": "1 Galón, Caneca 20L",
       "Stock Total": "5 unidades",
       "Origen": "Distribución Matriz LiderPro"
     },
     "fullSpecs": {
       "Categoría": "Lubricantes",
       "Línea": "MANNOL Automotive",
-      "Presentaciones Disponibles": "1 Galón (3.78L), Caneca (20 Litros)",
+      "Presentaciones Disponibles": "1 Galón, Caneca 20L",
       "Garantía": "Garantía Oficial de Fábrica y LiderPro"
     },
-    "description": "MANNOL HYPOID LSD 85W140 GL5 LS (DESLIZAMIENTO LIMITADO) distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Galón (3.78L), Caneca (20 Litros)) para talleres y flotas en Manabí y a nivel nacional.",
+    "description": "MANNOL HYPOID LSD 85W140 GL5 LS (DESLIZAMIENTO LIMITADO) distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Galón, Caneca 20L) para talleres y flotas en Manabí y a nivel nacional.",
     "priceNote": "Consultar precio mayorista o unitario vía WhatsApp con factura SRI",
     "warranty": "Garantía oficial de autenticidad",
     "commercialStatus": "VERIFIED",
@@ -12719,7 +12710,7 @@ export const PRODUCTS: Product[] = [
       {
         "sku": "012MN8105-4",
         "name": "MANNOL HYPOID LSD 85W140 GL5 4/1 GL",
-        "presentation": "1 Galón (3.78L)",
+        "presentation": "1 Galón",
         "volume": "3.78L",
         "stock": 4,
         "imageUrl": "/images/products/012MN8105-4.png",
@@ -12728,7 +12719,7 @@ export const PRODUCTS: Product[] = [
       {
         "sku": "012MN8105-20",
         "name": "MANNOL HYPOID LSD 85W140 GL5 LS (DESLIZAMIENTO LIMITADO) CAN 20/1 LT",
-        "presentation": "Caneca (20 Litros)",
+        "presentation": "Caneca 20L",
         "volume": "20.0L",
         "stock": 1,
         "imageUrl": "/images/products/012MN8105-20.png",
@@ -12751,7 +12742,7 @@ export const PRODUCTS: Product[] = [
     "faqs": [
       {
         "question": "¿Qué presentaciones de MANNOL HYPOID LSD 85W140 GL5 LS (DESLIZAMIENTO LIMITADO) tienen en stock?",
-        "answer": "Disponemos de 2 presentaciones oficiales: 1 Galón (3.78L), Caneca (20 Litros). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
+        "answer": "Disponemos de 2 presentaciones oficiales: 1 Galón, Caneca 20L. Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
       },
       {
         "question": "¿Realizan envíos a otras ciudades del país?",
@@ -12769,20 +12760,20 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "1 Litro",
-    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones (1 Litro, 1 Galón (3.78L)) con stock en Bodega Pedernales.",
+    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones (1 Litro, 1 Galón) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "MANNOL",
-      "Presentaciones": "1 Litro, 1 Galón (3.78L)",
+      "Presentaciones": "1 Litro, 1 Galón",
       "Stock Total": "20 unidades",
       "Origen": "Distribución Matriz LiderPro"
     },
     "fullSpecs": {
       "Categoría": "Lubricantes",
       "Línea": "MANNOL Automotive",
-      "Presentaciones Disponibles": "1 Litro, 1 Galón (3.78L)",
+      "Presentaciones Disponibles": "1 Litro, 1 Galón",
       "Garantía": "Garantía Oficial de Fábrica y LiderPro"
     },
-    "description": "MANNOL HYPOID GETRIEBEOEL 80W90 GL4 GL5 LS (DESLIZAMIENTO LIMITADO) distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Galón (3.78L)) para talleres y flotas en Manabí y a nivel nacional.",
+    "description": "MANNOL HYPOID GETRIEBEOEL 80W90 GL4 GL5 LS (DESLIZAMIENTO LIMITADO) distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Galón) para talleres y flotas en Manabí y a nivel nacional.",
     "priceNote": "Consultar precio mayorista o unitario vía WhatsApp con factura SRI",
     "warranty": "Garantía oficial de autenticidad",
     "commercialStatus": "VERIFIED",
@@ -12804,7 +12795,7 @@ export const PRODUCTS: Product[] = [
       {
         "sku": "012MN8106-4",
         "name": "MANNOL HYPOID GETRIEBEOEL 80W90 GL4 GL5 LS (DESLIZAMIENTO LIMITADO) 4/1 GL",
-        "presentation": "1 Galón (3.78L)",
+        "presentation": "1 Galón",
         "volume": "3.78L",
         "stock": 2,
         "imageUrl": "/images/products/012MN8106-4.png",
@@ -12827,7 +12818,7 @@ export const PRODUCTS: Product[] = [
     "faqs": [
       {
         "question": "¿Qué presentaciones de MANNOL HYPOID GETRIEBEOEL 80W90 GL4 GL5 LS (DESLIZAMIENTO LIMITADO) tienen en stock?",
-        "answer": "Disponemos de 2 presentaciones oficiales: 1 Litro, 1 Galón (3.78L). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
+        "answer": "Disponemos de 2 presentaciones oficiales: 1 Litro, 1 Galón. Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
       },
       {
         "question": "¿Realizan envíos a otras ciudades del país?",
@@ -12844,21 +12835,21 @@ export const PRODUCTS: Product[] = [
     "brand": "MANNOL",
     "category": "lubricantes",
     "applicationType": "autos",
-    "volume": "1 Galón (3.78L)",
-    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones (1 Galón (3.78L), Caneca (20 Litros)) con stock en Bodega Pedernales.",
+    "volume": "1 Galón",
+    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones (1 Galón, Caneca 20L) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "MANNOL",
-      "Presentaciones": "1 Galón (3.78L), Caneca (20 Litros)",
+      "Presentaciones": "1 Galón, Caneca 20L",
       "Stock Total": "3 unidades",
       "Origen": "Distribución Matriz LiderPro"
     },
     "fullSpecs": {
       "Categoría": "Lubricantes",
       "Línea": "MANNOL Automotive",
-      "Presentaciones Disponibles": "1 Galón (3.78L), Caneca (20 Litros)",
+      "Presentaciones Disponibles": "1 Galón, Caneca 20L",
       "Garantía": "Garantía Oficial de Fábrica y LiderPro"
     },
-    "description": "MANNOL UNIVERSAL GETRIEBEOEL 80W90 GL4 distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Galón (3.78L), Caneca (20 Litros)) para talleres y flotas en Manabí y a nivel nacional.",
+    "description": "MANNOL UNIVERSAL GETRIEBEOEL 80W90 GL4 distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Galón, Caneca 20L) para talleres y flotas en Manabí y a nivel nacional.",
     "priceNote": "Consultar precio mayorista o unitario vía WhatsApp con factura SRI",
     "warranty": "Garantía oficial de autenticidad",
     "commercialStatus": "VERIFIED",
@@ -12871,7 +12862,7 @@ export const PRODUCTS: Product[] = [
       {
         "sku": "012MN8107-4",
         "name": "MANNOL UNIVERSAL GETRIEBEOEL 80W90 GL4 4/1 GL",
-        "presentation": "1 Galón (3.78L)",
+        "presentation": "1 Galón",
         "volume": "3.78L",
         "stock": 2,
         "imageUrl": "/images/products/012MN8107-4.png",
@@ -12880,7 +12871,7 @@ export const PRODUCTS: Product[] = [
       {
         "sku": "012MN8107-20",
         "name": "MANNOL UNIVERSAL GETRIEBEOEL 80W90 GL4 CAN 20/1 LT",
-        "presentation": "Caneca (20 Litros)",
+        "presentation": "Caneca 20L",
         "volume": "20.0L",
         "stock": 1,
         "imageUrl": "/images/products/012MN8107-20.png",
@@ -12903,7 +12894,7 @@ export const PRODUCTS: Product[] = [
     "faqs": [
       {
         "question": "¿Qué presentaciones de MANNOL UNIVERSAL GETRIEBEOEL 80W90 GL4 tienen en stock?",
-        "answer": "Disponemos de 2 presentaciones oficiales: 1 Galón (3.78L), Caneca (20 Litros). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
+        "answer": "Disponemos de 2 presentaciones oficiales: 1 Galón, Caneca 20L. Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
       },
       {
         "question": "¿Realizan envíos a otras ciudades del país?",
@@ -12921,20 +12912,20 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "1 Litro",
-    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones (1 Litro, 1 Galón (3.78L)) con stock en Bodega Pedernales.",
+    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones (1 Litro, 1 Galón) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "MANNOL",
-      "Presentaciones": "1 Litro, 1 Galón (3.78L)",
+      "Presentaciones": "1 Litro, 1 Galón",
       "Stock Total": "22 unidades",
       "Origen": "Distribución Matriz LiderPro"
     },
     "fullSpecs": {
       "Categoría": "Lubricantes",
       "Línea": "MANNOL Automotive",
-      "Presentaciones Disponibles": "1 Litro, 1 Galón (3.78L)",
+      "Presentaciones Disponibles": "1 Litro, 1 Galón",
       "Garantía": "Garantía Oficial de Fábrica y LiderPro"
     },
-    "description": "MANNOL TRANSM. BASIC PLUS 75W90 GL4 distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Galón (3.78L)) para talleres y flotas en Manabí y a nivel nacional.",
+    "description": "MANNOL TRANSM. BASIC PLUS 75W90 GL4 distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Galón) para talleres y flotas en Manabí y a nivel nacional.",
     "priceNote": "Consultar precio mayorista o unitario vía WhatsApp con factura SRI",
     "warranty": "Garantía oficial de autenticidad",
     "commercialStatus": "VERIFIED",
@@ -12956,7 +12947,7 @@ export const PRODUCTS: Product[] = [
       {
         "sku": "012MN8108-4",
         "name": "MANNOL TRANSM. BASIC PLUS 75W90 4/1 GL",
-        "presentation": "1 Galón (3.78L)",
+        "presentation": "1 Galón",
         "volume": "3.78L",
         "stock": 4,
         "imageUrl": "/images/products/012MN8108-4.png",
@@ -12979,7 +12970,7 @@ export const PRODUCTS: Product[] = [
     "faqs": [
       {
         "question": "¿Qué presentaciones de MANNOL TRANSM. BASIC PLUS 75W90 GL4 tienen en stock?",
-        "answer": "Disponemos de 2 presentaciones oficiales: 1 Litro, 1 Galón (3.78L). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
+        "answer": "Disponemos de 2 presentaciones oficiales: 1 Litro, 1 Galón. Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
       },
       {
         "question": "¿Realizan envíos a otras ciudades del país?",
@@ -13338,7 +13329,7 @@ export const PRODUCTS: Product[] = [
     "brand": "MANNOL",
     "category": "lubricantes",
     "applicationType": "autos",
-    "volume": "Caneca (20 Litros)",
+    "volume": "Caneca 20L",
     "shortSpec": "Producto original MANNOL. Código OEM / Referencia: MN2201-20. Stock disponible en Pedernales.",
     "specifications": {
       "Código / SKU": "MN2201-20",
@@ -13395,7 +13386,7 @@ export const PRODUCTS: Product[] = [
     "brand": "MANNOL",
     "category": "lubricantes",
     "applicationType": "autos",
-    "volume": "Caneca (20 Litros)",
+    "volume": "Caneca 20L",
     "shortSpec": "Producto original MANNOL. Código OEM / Referencia: MN2501-20. Stock disponible en Pedernales.",
     "specifications": {
       "Código / SKU": "MN2501-20",
@@ -13452,7 +13443,7 @@ export const PRODUCTS: Product[] = [
     "brand": "MANNOL",
     "category": "lubricantes",
     "applicationType": "autos",
-    "volume": "Caneca (20 Litros)",
+    "volume": "Caneca 20L",
     "shortSpec": "Producto original MANNOL. Código OEM / Referencia: 012MN7105-20. Stock disponible en Pedernales.",
     "specifications": {
       "Código / SKU": "012MN7105-20",
@@ -13510,25 +13501,25 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "1 Litro",
-    "shortSpec": "Línea oficial MOBIL. Disponible en 4 presentaciones (1 Litro, 1 Galón (3.78L), Media Caneca (2.5 Gal), Caneca (5 Galones / 19L)) con stock en Bodega Pedernales.",
+    "shortSpec": "Línea oficial MOBIL. Disponible en 3 presentaciones (1 Litro, 1 Galón, Caneca 5 GL) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "MOBIL",
-      "Presentaciones": "1 Litro, 1 Galón (3.78L), Media Caneca (2.5 Gal), Caneca (5 Galones / 19L)",
-      "Stock Total": "26 unidades",
+      "Presentaciones": "1 Litro, 1 Galón, Caneca 5 GL",
+      "Stock Total": "24 unidades",
       "Origen": "Distribución Matriz LiderPro"
     },
     "fullSpecs": {
       "Categoría": "Lubricantes",
       "Línea": "MOBIL Automotive",
-      "Presentaciones Disponibles": "1 Litro, 1 Galón (3.78L), Media Caneca (2.5 Gal), Caneca (5 Galones / 19L)",
+      "Presentaciones Disponibles": "1 Litro, 1 Galón, Caneca 5 GL",
       "Garantía": "Garantía Oficial de Fábrica y LiderPro"
     },
-    "description": "MOBIL DELVAC MX 15W40 distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Galón (3.78L), Media Caneca (2.5 Gal), Caneca (5 Galones / 19L)) para talleres y flotas en Manabí y a nivel nacional.",
+    "description": "MOBIL DELVAC MX 15W40 distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Galón, Caneca 5 GL) para talleres y flotas en Manabí y a nivel nacional.",
     "priceNote": "Consultar precio mayorista o unitario vía WhatsApp con factura SRI",
     "warranty": "Garantía oficial de autenticidad",
     "commercialStatus": "VERIFIED",
     "inStock": true,
-    "stockStatusText": "26 unidades disponibles en Bodega Pedernales",
+    "stockStatusText": "24 unidades disponibles en Bodega Pedernales",
     "dispatchIndicator": "Despacho Inmediato",
     "primaryOriginRecommendation": "Pedernales",
     "imageUrl": "/images/products/015MD12-15W40.png",
@@ -13545,25 +13536,16 @@ export const PRODUCTS: Product[] = [
       {
         "sku": "01504MD04-15W40",
         "name": "MOBIL DELVAC MX 15W40 4/1 GL (GALON 4/1 LT)",
-        "presentation": "1 Galón (3.78L)",
+        "presentation": "1 Galón",
         "volume": "3.78L",
         "stock": 4,
         "imageUrl": "/images/products/01504MD04-15W40.png",
         "barcode": "7751673002411"
       },
       {
-        "sku": "015MD2.5-15W40",
-        "name": "MOBIL DELVAC MX 15W40 2.5",
-        "presentation": "Media Caneca (2.5 Gal)",
-        "volume": "9.5L",
-        "stock": 2,
-        "imageUrl": "/images/products/015MD2_5-15W40.png",
-        "barcode": "7751673002428"
-      },
-      {
         "sku": "015MD5-15W40",
         "name": "MOBIL DELVAC MX 15W40 CANECA 5GL",
-        "presentation": "Caneca (5 Galones / 19L)",
+        "presentation": "Caneca 5 GL",
         "volume": "19.0L",
         "stock": 2,
         "imageUrl": "/images/products/015MD5-15W40.png",
@@ -13578,7 +13560,7 @@ export const PRODUCTS: Product[] = [
       }
     ],
     "features": [
-      "Presentación intercambiable en 4 tamaños unificados",
+      "Presentación intercambiable en 3 tamaños unificados",
       "Fórmula certificada de máxima pureza y durabilidad",
       "Despacho verificado desde Bodega Matriz Pedernales",
       "Facturación electrónica autorizada por el SRI"
@@ -13586,7 +13568,7 @@ export const PRODUCTS: Product[] = [
     "faqs": [
       {
         "question": "¿Qué presentaciones de MOBIL DELVAC MX 15W40 tienen en stock?",
-        "answer": "Disponemos de 4 presentaciones oficiales: 1 Litro, 1 Galón (3.78L), Media Caneca (2.5 Gal), Caneca (5 Galones / 19L). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
+        "answer": "Disponemos de 3 presentaciones oficiales: 1 Litro, 1 Galón, Caneca 5 GL. Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
       },
       {
         "question": "¿Realizan envíos a otras ciudades del país?",
@@ -13603,21 +13585,21 @@ export const PRODUCTS: Product[] = [
     "brand": "MOBIL",
     "category": "lubricantes",
     "applicationType": "autos",
-    "volume": "Media Caneca (2.5 Gal)",
-    "shortSpec": "Línea oficial MOBIL. Disponible en 2 presentaciones (Media Caneca (2.5 Gal), Caneca (5 Galones / 19L)) con stock en Bodega Pedernales.",
+    "volume": "Caneca 2.5 GL",
+    "shortSpec": "Línea oficial MOBIL. Disponible en 2 presentaciones (Caneca 2.5 GL, Caneca 5 GL) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "MOBIL",
-      "Presentaciones": "Media Caneca (2.5 Gal), Caneca (5 Galones / 19L)",
+      "Presentaciones": "Caneca 2.5 GL, Caneca 5 GL",
       "Stock Total": "3 unidades",
       "Origen": "Distribución Matriz LiderPro"
     },
     "fullSpecs": {
       "Categoría": "Lubricantes",
       "Línea": "MOBIL Automotive",
-      "Presentaciones Disponibles": "Media Caneca (2.5 Gal), Caneca (5 Galones / 19L)",
+      "Presentaciones Disponibles": "Caneca 2.5 GL, Caneca 5 GL",
       "Garantía": "Garantía Oficial de Fábrica y LiderPro"
     },
-    "description": "MOBIL DELVAC 1300 SUP 15W40 distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (Media Caneca (2.5 Gal), Caneca (5 Galones / 19L)) para talleres y flotas en Manabí y a nivel nacional.",
+    "description": "MOBIL DELVAC 1300 SUP 15W40 distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (Caneca 2.5 GL, Caneca 5 GL) para talleres y flotas en Manabí y a nivel nacional.",
     "priceNote": "Consultar precio mayorista o unitario vía WhatsApp con factura SRI",
     "warranty": "Garantía oficial de autenticidad",
     "commercialStatus": "VERIFIED",
@@ -13630,7 +13612,7 @@ export const PRODUCTS: Product[] = [
       {
         "sku": "015MD-513002.5",
         "name": "MOBIL DELVAC 1300 SUP 15W40 CAN 2.5/1 GL",
-        "presentation": "Media Caneca (2.5 Gal)",
+        "presentation": "Caneca 2.5 GL",
         "volume": "9.5L",
         "stock": 2,
         "imageUrl": "/images/products/015MD-513002_5.png",
@@ -13639,7 +13621,7 @@ export const PRODUCTS: Product[] = [
       {
         "sku": "015MD-51300",
         "name": "MOBIL DELVAC 1300 SUP 15W40 CAN 5/1",
-        "presentation": "Caneca (5 Galones / 19L)",
+        "presentation": "Caneca 5 GL",
         "volume": "19.0L",
         "stock": 1,
         "imageUrl": "/images/products/015MD-51300.png",
@@ -13662,7 +13644,7 @@ export const PRODUCTS: Product[] = [
     "faqs": [
       {
         "question": "¿Qué presentaciones de MOBIL DELVAC 1300 SUP 15W40 tienen en stock?",
-        "answer": "Disponemos de 2 presentaciones oficiales: Media Caneca (2.5 Gal), Caneca (5 Galones / 19L). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
+        "answer": "Disponemos de 2 presentaciones oficiales: Caneca 2.5 GL, Caneca 5 GL. Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
       },
       {
         "question": "¿Realizan envíos a otras ciudades del país?",
@@ -13680,20 +13662,20 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "1 Litro",
-    "shortSpec": "Línea oficial MOBIL. Disponible en 2 presentaciones (1 Litro, 1 Galón (3.78L)) con stock en Bodega Pedernales.",
+    "shortSpec": "Línea oficial MOBIL. Disponible en 2 presentaciones (1 Litro, 1 Galón) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "MOBIL",
-      "Presentaciones": "1 Litro, 1 Galón (3.78L)",
+      "Presentaciones": "1 Litro, 1 Galón",
       "Stock Total": "28 unidades",
       "Origen": "Distribución Matriz LiderPro"
     },
     "fullSpecs": {
       "Categoría": "Lubricantes",
       "Línea": "MOBIL Automotive",
-      "Presentaciones Disponibles": "1 Litro, 1 Galón (3.78L)",
+      "Presentaciones Disponibles": "1 Litro, 1 Galón",
       "Garantía": "Garantía Oficial de Fábrica y LiderPro"
     },
-    "description": "MOBIL 10W30 SEMI SINTETICO distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Galón (3.78L)) para talleres y flotas en Manabí y a nivel nacional.",
+    "description": "MOBIL 10W30 SEMI SINTETICO distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Galón) para talleres y flotas en Manabí y a nivel nacional.",
     "priceNote": "Consultar precio mayorista o unitario vía WhatsApp con factura SRI",
     "warranty": "Garantía oficial de autenticidad",
     "commercialStatus": "VERIFIED",
@@ -13715,7 +13697,7 @@ export const PRODUCTS: Product[] = [
       {
         "sku": "015MS04-10W30",
         "name": "MOBIL 10W30 SEMI SINTETICO 4/1 GL.",
-        "presentation": "1 Galón (3.78L)",
+        "presentation": "1 Galón",
         "volume": "3.78L",
         "stock": 15,
         "imageUrl": "/images/products/015MS04-10W30.png",
@@ -13738,7 +13720,7 @@ export const PRODUCTS: Product[] = [
     "faqs": [
       {
         "question": "¿Qué presentaciones de MOBIL 10W30 SEMI SINTETICO tienen en stock?",
-        "answer": "Disponemos de 2 presentaciones oficiales: 1 Litro, 1 Galón (3.78L). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
+        "answer": "Disponemos de 2 presentaciones oficiales: 1 Litro, 1 Galón. Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
       },
       {
         "question": "¿Realizan envíos a otras ciudades del país?",
@@ -13756,20 +13738,20 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "1 Litro",
-    "shortSpec": "Línea oficial MOBIL. Disponible en 2 presentaciones (1 Litro, 1 Galón (3.78L)) con stock en Bodega Pedernales.",
+    "shortSpec": "Línea oficial MOBIL. Disponible en 2 presentaciones (1 Litro, 1 Galón) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "MOBIL",
-      "Presentaciones": "1 Litro, 1 Galón (3.78L)",
+      "Presentaciones": "1 Litro, 1 Galón",
       "Stock Total": "16 unidades",
       "Origen": "Distribución Matriz LiderPro"
     },
     "fullSpecs": {
       "Categoría": "Lubricantes",
       "Línea": "MOBIL Automotive",
-      "Presentaciones Disponibles": "1 Litro, 1 Galón (3.78L)",
+      "Presentaciones Disponibles": "1 Litro, 1 Galón",
       "Garantía": "Garantía Oficial de Fábrica y LiderPro"
     },
-    "description": "MOBIL 20W50 SEMI SINTETICO distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Galón (3.78L)) para talleres y flotas en Manabí y a nivel nacional.",
+    "description": "MOBIL 20W50 SEMI SINTETICO distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Galón) para talleres y flotas en Manabí y a nivel nacional.",
     "priceNote": "Consultar precio mayorista o unitario vía WhatsApp con factura SRI",
     "warranty": "Garantía oficial de autenticidad",
     "commercialStatus": "VERIFIED",
@@ -13791,7 +13773,7 @@ export const PRODUCTS: Product[] = [
       {
         "sku": "015MS04-20W50",
         "name": "MOBIL 20W50 SEMI SINTETICO 4/1 GL",
-        "presentation": "1 Galón (3.78L)",
+        "presentation": "1 Galón",
         "volume": "3.78L",
         "stock": 4,
         "imageUrl": "/images/products/015MS04-20W50.png",
@@ -13814,7 +13796,7 @@ export const PRODUCTS: Product[] = [
     "faqs": [
       {
         "question": "¿Qué presentaciones de MOBIL 20W50 SEMI SINTETICO tienen en stock?",
-        "answer": "Disponemos de 2 presentaciones oficiales: 1 Litro, 1 Galón (3.78L). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
+        "answer": "Disponemos de 2 presentaciones oficiales: 1 Litro, 1 Galón. Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
       },
       {
         "question": "¿Realizan envíos a otras ciudades del país?",
@@ -13832,20 +13814,20 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "1 Litro",
-    "shortSpec": "Línea oficial AROIL. Disponible en 2 presentaciones (1 Litro, 1 Galón (3.78L)) con stock en Bodega Pedernales.",
+    "shortSpec": "Línea oficial AROIL. Disponible en 2 presentaciones (1 Litro, 1 Galón) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "AROIL",
-      "Presentaciones": "1 Litro, 1 Galón (3.78L)",
+      "Presentaciones": "1 Litro, 1 Galón",
       "Stock Total": "27 unidades",
       "Origen": "Distribución Matriz LiderPro"
     },
     "fullSpecs": {
       "Categoría": "Lubricantes",
       "Línea": "AROIL Automotive",
-      "Presentaciones Disponibles": "1 Litro, 1 Galón (3.78L)",
+      "Presentaciones Disponibles": "1 Litro, 1 Galón",
       "Garantía": "Garantía Oficial de Fábrica y LiderPro"
     },
-    "description": "AROIL RACING 10W30 SN distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Galón (3.78L)) para talleres y flotas en Manabí y a nivel nacional.",
+    "description": "AROIL RACING 10W30 SN distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Galón) para talleres y flotas en Manabí y a nivel nacional.",
     "priceNote": "Consultar precio mayorista o unitario vía WhatsApp con factura SRI",
     "warranty": "Garantía oficial de autenticidad",
     "commercialStatus": "VERIFIED",
@@ -13867,7 +13849,7 @@ export const PRODUCTS: Product[] = [
       {
         "sku": "0368AR00001",
         "name": "AROIL RACING 10W30 SN 6/1 GL",
-        "presentation": "1 Galón (3.78L)",
+        "presentation": "1 Galón",
         "volume": "3.78L",
         "stock": 5,
         "imageUrl": "/images/products/0368AR00001.png",
@@ -13890,7 +13872,7 @@ export const PRODUCTS: Product[] = [
     "faqs": [
       {
         "question": "¿Qué presentaciones de AROIL RACING 10W30 SN tienen en stock?",
-        "answer": "Disponemos de 2 presentaciones oficiales: 1 Litro, 1 Galón (3.78L). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
+        "answer": "Disponemos de 2 presentaciones oficiales: 1 Litro, 1 Galón. Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
       },
       {
         "question": "¿Realizan envíos a otras ciudades del país?",
@@ -13908,20 +13890,20 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "1 Litro",
-    "shortSpec": "Línea oficial AROIL. Disponible en 2 presentaciones (1 Litro, 1 Galón (3.78L)) con stock en Bodega Pedernales.",
+    "shortSpec": "Línea oficial AROIL. Disponible en 2 presentaciones (1 Litro, 1 Galón) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "AROIL",
-      "Presentaciones": "1 Litro, 1 Galón (3.78L)",
+      "Presentaciones": "1 Litro, 1 Galón",
       "Stock Total": "15 unidades",
       "Origen": "Distribución Matriz LiderPro"
     },
     "fullSpecs": {
       "Categoría": "Lubricantes",
       "Línea": "AROIL Automotive",
-      "Presentaciones Disponibles": "1 Litro, 1 Galón (3.78L)",
+      "Presentaciones Disponibles": "1 Litro, 1 Galón",
       "Garantía": "Garantía Oficial de Fábrica y LiderPro"
     },
-    "description": "AROIL RACING 20W50 SN distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Galón (3.78L)) para talleres y flotas en Manabí y a nivel nacional.",
+    "description": "AROIL RACING 20W50 SN distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Galón) para talleres y flotas en Manabí y a nivel nacional.",
     "priceNote": "Consultar precio mayorista o unitario vía WhatsApp con factura SRI",
     "warranty": "Garantía oficial de autenticidad",
     "commercialStatus": "VERIFIED",
@@ -13943,7 +13925,7 @@ export const PRODUCTS: Product[] = [
       {
         "sku": "0368AR00005",
         "name": "AROIL RACING 20W50 SN 6/1 GL",
-        "presentation": "1 Galón (3.78L)",
+        "presentation": "1 Galón",
         "volume": "3.78L",
         "stock": 4,
         "imageUrl": "/images/products/0368AR00005.png",
@@ -13966,7 +13948,7 @@ export const PRODUCTS: Product[] = [
     "faqs": [
       {
         "question": "¿Qué presentaciones de AROIL RACING 20W50 SN tienen en stock?",
-        "answer": "Disponemos de 2 presentaciones oficiales: 1 Litro, 1 Galón (3.78L). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
+        "answer": "Disponemos de 2 presentaciones oficiales: 1 Litro, 1 Galón. Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
       },
       {
         "question": "¿Realizan envíos a otras ciudades del país?",
@@ -13984,20 +13966,20 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "1 Litro",
-    "shortSpec": "Línea oficial AROIL. Disponible en 2 presentaciones (1 Litro, 1 Galón (3.78L)) con stock en Bodega Pedernales.",
+    "shortSpec": "Línea oficial AROIL. Disponible en 2 presentaciones (1 Litro, 1 Galón) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "AROIL",
-      "Presentaciones": "1 Litro, 1 Galón (3.78L)",
+      "Presentaciones": "1 Litro, 1 Galón",
       "Stock Total": "33 unidades",
       "Origen": "Distribución Matriz LiderPro"
     },
     "fullSpecs": {
       "Categoría": "Lubricantes",
       "Línea": "AROIL Automotive",
-      "Presentaciones Disponibles": "1 Litro, 1 Galón (3.78L)",
+      "Presentaciones Disponibles": "1 Litro, 1 Galón",
       "Garantía": "Garantía Oficial de Fábrica y LiderPro"
     },
-    "description": "AROIL SUPER 40 SL/CF distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Galón (3.78L)) para talleres y flotas en Manabí y a nivel nacional.",
+    "description": "AROIL SUPER 40 SL/CF distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Galón) para talleres y flotas en Manabí y a nivel nacional.",
     "priceNote": "Consultar precio mayorista o unitario vía WhatsApp con factura SRI",
     "warranty": "Garantía oficial de autenticidad",
     "commercialStatus": "VERIFIED",
@@ -14019,7 +14001,7 @@ export const PRODUCTS: Product[] = [
       {
         "sku": "0368AR00009",
         "name": "AROIL SUPER 40 SL/CF 6/1 GL.",
-        "presentation": "1 Galón (3.78L)",
+        "presentation": "1 Galón",
         "volume": "3.78L",
         "stock": 2,
         "imageUrl": "/images/products/0368AR00009.png",
@@ -14042,7 +14024,7 @@ export const PRODUCTS: Product[] = [
     "faqs": [
       {
         "question": "¿Qué presentaciones de AROIL SUPER 40 SL/CF tienen en stock?",
-        "answer": "Disponemos de 2 presentaciones oficiales: 1 Litro, 1 Galón (3.78L). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
+        "answer": "Disponemos de 2 presentaciones oficiales: 1 Litro, 1 Galón. Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
       },
       {
         "question": "¿Realizan envíos a otras ciudades del país?",
@@ -14060,25 +14042,25 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "1 Litro",
-    "shortSpec": "Línea oficial AROIL. Disponible en 4 presentaciones (1 Litro, 1 Galón (3.78L), Media Caneca (2.5 Gal), Caneca (5 Galones / 19L)) con stock en Bodega Pedernales.",
+    "shortSpec": "Línea oficial AROIL. Disponible en 3 presentaciones (1 Litro, 1 Galón, Caneca 5 GL) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "AROIL",
-      "Presentaciones": "1 Litro, 1 Galón (3.78L), Media Caneca (2.5 Gal), Caneca (5 Galones / 19L)",
-      "Stock Total": "25 unidades",
+      "Presentaciones": "1 Litro, 1 Galón, Caneca 5 GL",
+      "Stock Total": "23 unidades",
       "Origen": "Distribución Matriz LiderPro"
     },
     "fullSpecs": {
       "Categoría": "Lubricantes",
       "Línea": "AROIL Automotive",
-      "Presentaciones Disponibles": "1 Litro, 1 Galón (3.78L), Media Caneca (2.5 Gal), Caneca (5 Galones / 19L)",
+      "Presentaciones Disponibles": "1 Litro, 1 Galón, Caneca 5 GL",
       "Garantía": "Garantía Oficial de Fábrica y LiderPro"
     },
-    "description": "AROIL 15W40 CI-4 distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Galón (3.78L), Media Caneca (2.5 Gal), Caneca (5 Galones / 19L)) para talleres y flotas en Manabí y a nivel nacional.",
+    "description": "AROIL 15W40 CI-4 distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Galón, Caneca 5 GL) para talleres y flotas en Manabí y a nivel nacional.",
     "priceNote": "Consultar precio mayorista o unitario vía WhatsApp con factura SRI",
     "warranty": "Garantía oficial de autenticidad",
     "commercialStatus": "VERIFIED",
     "inStock": true,
-    "stockStatusText": "25 unidades disponibles en Bodega Pedernales",
+    "stockStatusText": "23 unidades disponibles en Bodega Pedernales",
     "dispatchIndicator": "Despacho Inmediato",
     "primaryOriginRecommendation": "Pedernales",
     "imageUrl": "/images/products/0368AR10031.png",
@@ -14095,25 +14077,16 @@ export const PRODUCTS: Product[] = [
       {
         "sku": "0368AR10001",
         "name": "AROIL 15W40 CI-4 6/1 GL",
-        "presentation": "1 Galón (3.78L)",
+        "presentation": "1 Galón",
         "volume": "3.78L",
         "stock": 5,
         "imageUrl": "/images/products/0368AR10001.png",
         "barcode": ""
       },
       {
-        "sku": "0368AR10002",
-        "name": "AROIL 15W40 CI-4 MEDIA CANECA 2.5 GL",
-        "presentation": "Media Caneca (2.5 Gal)",
-        "volume": "9.5L",
-        "stock": 2,
-        "imageUrl": "/images/products/0368AR10002.png",
-        "barcode": "0"
-      },
-      {
         "sku": "0368AR10003",
         "name": "AROIL 15W40 CI-4 BLD CAN 5 GL",
-        "presentation": "Caneca (5 Galones / 19L)",
+        "presentation": "Caneca 5 GL",
         "volume": "19.0L",
         "stock": 2,
         "imageUrl": "/images/products/0368AR10003.png",
@@ -14128,7 +14101,7 @@ export const PRODUCTS: Product[] = [
       }
     ],
     "features": [
-      "Presentación intercambiable en 4 tamaños unificados",
+      "Presentación intercambiable en 3 tamaños unificados",
       "Fórmula certificada de máxima pureza y durabilidad",
       "Despacho verificado desde Bodega Matriz Pedernales",
       "Facturación electrónica autorizada por el SRI"
@@ -14136,7 +14109,7 @@ export const PRODUCTS: Product[] = [
     "faqs": [
       {
         "question": "¿Qué presentaciones de AROIL 15W40 CI-4 tienen en stock?",
-        "answer": "Disponemos de 4 presentaciones oficiales: 1 Litro, 1 Galón (3.78L), Media Caneca (2.5 Gal), Caneca (5 Galones / 19L). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
+        "answer": "Disponemos de 3 presentaciones oficiales: 1 Litro, 1 Galón, Caneca 5 GL. Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
       },
       {
         "question": "¿Realizan envíos a otras ciudades del país?",
@@ -14154,25 +14127,25 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "1 Litro",
-    "shortSpec": "Línea oficial AROIL. Disponible en 4 presentaciones (1 Litro, 1 Galón (3.78L), Media Caneca (2.5 Gal), Caneca (5 Galones / 19L)) con stock en Bodega Pedernales.",
+    "shortSpec": "Línea oficial AROIL. Disponible en 3 presentaciones (1 Litro, 1 Galón, Caneca 5 GL) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "AROIL",
-      "Presentaciones": "1 Litro, 1 Galón (3.78L), Media Caneca (2.5 Gal), Caneca (5 Galones / 19L)",
-      "Stock Total": "33 unidades",
+      "Presentaciones": "1 Litro, 1 Galón, Caneca 5 GL",
+      "Stock Total": "32 unidades",
       "Origen": "Distribución Matriz LiderPro"
     },
     "fullSpecs": {
       "Categoría": "Lubricantes",
       "Línea": "AROIL Automotive",
-      "Presentaciones Disponibles": "1 Litro, 1 Galón (3.78L), Media Caneca (2.5 Gal), Caneca (5 Galones / 19L)",
+      "Presentaciones Disponibles": "1 Litro, 1 Galón, Caneca 5 GL",
       "Garantía": "Garantía Oficial de Fábrica y LiderPro"
     },
-    "description": "AROIL 25W60 CF distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Galón (3.78L), Media Caneca (2.5 Gal), Caneca (5 Galones / 19L)) para talleres y flotas en Manabí y a nivel nacional.",
+    "description": "AROIL 25W60 CF distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Galón, Caneca 5 GL) para talleres y flotas en Manabí y a nivel nacional.",
     "priceNote": "Consultar precio mayorista o unitario vía WhatsApp con factura SRI",
     "warranty": "Garantía oficial de autenticidad",
     "commercialStatus": "VERIFIED",
     "inStock": true,
-    "stockStatusText": "33 unidades disponibles en Bodega Pedernales",
+    "stockStatusText": "32 unidades disponibles en Bodega Pedernales",
     "dispatchIndicator": "Despacho Inmediato",
     "primaryOriginRecommendation": "Pedernales",
     "imageUrl": "/images/products/0368AR10032.png",
@@ -14189,25 +14162,16 @@ export const PRODUCTS: Product[] = [
       {
         "sku": "0368AR10008",
         "name": "AROIL 25W60 CF 6/1 GL",
-        "presentation": "1 Galón (3.78L)",
+        "presentation": "1 Galón",
         "volume": "3.78L",
         "stock": 12,
         "imageUrl": "/images/products/0368AR10008.png",
         "barcode": ""
       },
       {
-        "sku": "0368AR10009",
-        "name": "AROIL 25W60 CF CAN 2.5 GL",
-        "presentation": "Media Caneca (2.5 Gal)",
-        "volume": "9.5L",
-        "stock": 1,
-        "imageUrl": "/images/products/0368AR10009.png",
-        "barcode": "0"
-      },
-      {
         "sku": "0368AR10010",
         "name": "AROIL 25W60 CF CAN 5GL.",
-        "presentation": "Caneca (5 Galones / 19L)",
+        "presentation": "Caneca 5 GL",
         "volume": "19.0L",
         "stock": 8,
         "imageUrl": "/images/products/0368AR10010.png",
@@ -14222,7 +14186,7 @@ export const PRODUCTS: Product[] = [
       }
     ],
     "features": [
-      "Presentación intercambiable en 4 tamaños unificados",
+      "Presentación intercambiable en 3 tamaños unificados",
       "Fórmula certificada de máxima pureza y durabilidad",
       "Despacho verificado desde Bodega Matriz Pedernales",
       "Facturación electrónica autorizada por el SRI"
@@ -14230,7 +14194,7 @@ export const PRODUCTS: Product[] = [
     "faqs": [
       {
         "question": "¿Qué presentaciones de AROIL 25W60 CF tienen en stock?",
-        "answer": "Disponemos de 4 presentaciones oficiales: 1 Litro, 1 Galón (3.78L), Media Caneca (2.5 Gal), Caneca (5 Galones / 19L). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
+        "answer": "Disponemos de 3 presentaciones oficiales: 1 Litro, 1 Galón, Caneca 5 GL. Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
       },
       {
         "question": "¿Realizan envíos a otras ciudades del país?",
@@ -14247,7 +14211,7 @@ export const PRODUCTS: Product[] = [
     "brand": "AROIL",
     "category": "lubricantes",
     "applicationType": "autos",
-    "volume": "Caneca (5 Galones / 19L)",
+    "volume": "Caneca 5 GL",
     "shortSpec": "Producto original AROIL. Código OEM / Referencia: 0368AR10016. Stock disponible en Pedernales.",
     "specifications": {
       "Código / SKU": "0368AR10016",
@@ -14362,20 +14326,20 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "1 Litro",
-    "shortSpec": "Línea oficial AROIL. Disponible en 2 presentaciones (1 Litro, 1 Galón (3.78L)) con stock en Bodega Pedernales.",
+    "shortSpec": "Línea oficial AROIL. Disponible en 2 presentaciones (1 Litro, 1 Galón) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "AROIL",
-      "Presentaciones": "1 Litro, 1 Galón (3.78L)",
+      "Presentaciones": "1 Litro, 1 Galón",
       "Stock Total": "15 unidades",
       "Origen": "Distribución Matriz LiderPro"
     },
     "fullSpecs": {
       "Categoría": "Lubricantes",
       "Línea": "AROIL Automotive",
-      "Presentaciones Disponibles": "1 Litro, 1 Galón (3.78L)",
+      "Presentaciones Disponibles": "1 Litro, 1 Galón",
       "Garantía": "Garantía Oficial de Fábrica y LiderPro"
     },
-    "description": "AROIL 75W85 GL-5 distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Galón (3.78L)) para talleres y flotas en Manabí y a nivel nacional.",
+    "description": "AROIL 75W85 GL-5 distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Galón) para talleres y flotas en Manabí y a nivel nacional.",
     "priceNote": "Consultar precio mayorista o unitario vía WhatsApp con factura SRI",
     "warranty": "Garantía oficial de autenticidad",
     "commercialStatus": "VERIFIED",
@@ -14397,7 +14361,7 @@ export const PRODUCTS: Product[] = [
       {
         "sku": "0368AR40001",
         "name": "AROIL 75W85 GL-5 6/1 GL",
-        "presentation": "1 Galón (3.78L)",
+        "presentation": "1 Galón",
         "volume": "3.78L",
         "stock": 5,
         "imageUrl": "/images/products/0368AR40001.png",
@@ -14420,7 +14384,7 @@ export const PRODUCTS: Product[] = [
     "faqs": [
       {
         "question": "¿Qué presentaciones de AROIL 75W85 GL-5 tienen en stock?",
-        "answer": "Disponemos de 2 presentaciones oficiales: 1 Litro, 1 Galón (3.78L). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
+        "answer": "Disponemos de 2 presentaciones oficiales: 1 Litro, 1 Galón. Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
       },
       {
         "question": "¿Realizan envíos a otras ciudades del país?",
@@ -14438,20 +14402,20 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "1 Litro",
-    "shortSpec": "Línea oficial AROIL. Disponible en 3 presentaciones (1 Litro, 1 Galón (3.78L), Caneca (5 Galones / 19L)) con stock en Bodega Pedernales.",
+    "shortSpec": "Línea oficial AROIL. Disponible en 3 presentaciones (1 Litro, 1 Galón, Caneca 5 GL) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "AROIL",
-      "Presentaciones": "1 Litro, 1 Galón (3.78L), Caneca (5 Galones / 19L)",
+      "Presentaciones": "1 Litro, 1 Galón, Caneca 5 GL",
       "Stock Total": "14 unidades",
       "Origen": "Distribución Matriz LiderPro"
     },
     "fullSpecs": {
       "Categoría": "Lubricantes",
       "Línea": "AROIL Automotive",
-      "Presentaciones Disponibles": "1 Litro, 1 Galón (3.78L), Caneca (5 Galones / 19L)",
+      "Presentaciones Disponibles": "1 Litro, 1 Galón, Caneca 5 GL",
       "Garantía": "Garantía Oficial de Fábrica y LiderPro"
     },
-    "description": "AROIL 80W90 GL-5 distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Galón (3.78L), Caneca (5 Galones / 19L)) para talleres y flotas en Manabí y a nivel nacional.",
+    "description": "AROIL 80W90 GL-5 distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Galón, Caneca 5 GL) para talleres y flotas en Manabí y a nivel nacional.",
     "priceNote": "Consultar precio mayorista o unitario vía WhatsApp con factura SRI",
     "warranty": "Garantía oficial de autenticidad",
     "commercialStatus": "VERIFIED",
@@ -14473,7 +14437,7 @@ export const PRODUCTS: Product[] = [
       {
         "sku": "0368AR40005",
         "name": "AROIL 80W90 GL-5 6/1 GL",
-        "presentation": "1 Galón (3.78L)",
+        "presentation": "1 Galón",
         "volume": "3.78L",
         "stock": 1,
         "imageUrl": "/images/products/0368AR40005.png",
@@ -14482,7 +14446,7 @@ export const PRODUCTS: Product[] = [
       {
         "sku": "0368AR40006",
         "name": "AROIL 80W90 GL-5 CAN 5GL",
-        "presentation": "Caneca (5 Galones / 19L)",
+        "presentation": "Caneca 5 GL",
         "volume": "19.0L",
         "stock": 3,
         "imageUrl": "/images/products/0368AR40006.png",
@@ -14505,7 +14469,7 @@ export const PRODUCTS: Product[] = [
     "faqs": [
       {
         "question": "¿Qué presentaciones de AROIL 80W90 GL-5 tienen en stock?",
-        "answer": "Disponemos de 3 presentaciones oficiales: 1 Litro, 1 Galón (3.78L), Caneca (5 Galones / 19L). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
+        "answer": "Disponemos de 3 presentaciones oficiales: 1 Litro, 1 Galón, Caneca 5 GL. Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
       },
       {
         "question": "¿Realizan envíos a otras ciudades del país?",
@@ -14523,20 +14487,20 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "1 Litro",
-    "shortSpec": "Línea oficial AROIL. Disponible en 3 presentaciones (1 Litro, 1 Galón (3.78L), Caneca (5 Galones / 19L)) con stock en Bodega Pedernales.",
+    "shortSpec": "Línea oficial AROIL. Disponible en 3 presentaciones (1 Litro, 1 Galón, Caneca 5 GL) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "AROIL",
-      "Presentaciones": "1 Litro, 1 Galón (3.78L), Caneca (5 Galones / 19L)",
+      "Presentaciones": "1 Litro, 1 Galón, Caneca 5 GL",
       "Stock Total": "17 unidades",
       "Origen": "Distribución Matriz LiderPro"
     },
     "fullSpecs": {
       "Categoría": "Lubricantes",
       "Línea": "AROIL Automotive",
-      "Presentaciones Disponibles": "1 Litro, 1 Galón (3.78L), Caneca (5 Galones / 19L)",
+      "Presentaciones Disponibles": "1 Litro, 1 Galón, Caneca 5 GL",
       "Garantía": "Garantía Oficial de Fábrica y LiderPro"
     },
-    "description": "AROIL 85W140 GL-5 distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Galón (3.78L), Caneca (5 Galones / 19L)) para talleres y flotas en Manabí y a nivel nacional.",
+    "description": "AROIL 85W140 GL-5 distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Galón, Caneca 5 GL) para talleres y flotas en Manabí y a nivel nacional.",
     "priceNote": "Consultar precio mayorista o unitario vía WhatsApp con factura SRI",
     "warranty": "Garantía oficial de autenticidad",
     "commercialStatus": "VERIFIED",
@@ -14558,7 +14522,7 @@ export const PRODUCTS: Product[] = [
       {
         "sku": "0368AR40009",
         "name": "AROIL 85W140 GL-5 6/1 GL",
-        "presentation": "1 Galón (3.78L)",
+        "presentation": "1 Galón",
         "volume": "3.78L",
         "stock": 5,
         "imageUrl": "/images/products/0368AR40009.png",
@@ -14567,7 +14531,7 @@ export const PRODUCTS: Product[] = [
       {
         "sku": "0368AR40010",
         "name": "AROIL 85W140 GL- CAN 5GL",
-        "presentation": "Caneca (5 Galones / 19L)",
+        "presentation": "Caneca 5 GL",
         "volume": "19.0L",
         "stock": 2,
         "imageUrl": "/images/products/0368AR40010.png",
@@ -14590,7 +14554,7 @@ export const PRODUCTS: Product[] = [
     "faqs": [
       {
         "question": "¿Qué presentaciones de AROIL 85W140 GL-5 tienen en stock?",
-        "answer": "Disponemos de 3 presentaciones oficiales: 1 Litro, 1 Galón (3.78L), Caneca (5 Galones / 19L). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
+        "answer": "Disponemos de 3 presentaciones oficiales: 1 Litro, 1 Galón, Caneca 5 GL. Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
       },
       {
         "question": "¿Realizan envíos a otras ciudades del país?",
@@ -14608,20 +14572,20 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "1 Litro",
-    "shortSpec": "Línea oficial AROIL. Disponible en 3 presentaciones (1 Litro, 1 Galón (3.78L), Caneca (5 Galones / 19L)) con stock en Bodega Pedernales.",
+    "shortSpec": "Línea oficial AROIL. Disponible en 3 presentaciones (1 Litro, 1 Galón, Caneca 5 GL) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "AROIL",
-      "Presentaciones": "1 Litro, 1 Galón (3.78L), Caneca (5 Galones / 19L)",
+      "Presentaciones": "1 Litro, 1 Galón, Caneca 5 GL",
       "Stock Total": "18 unidades",
       "Origen": "Distribución Matriz LiderPro"
     },
     "fullSpecs": {
       "Categoría": "Lubricantes",
       "Línea": "AROIL Automotive",
-      "Presentaciones Disponibles": "1 Litro, 1 Galón (3.78L), Caneca (5 Galones / 19L)",
+      "Presentaciones Disponibles": "1 Litro, 1 Galón, Caneca 5 GL",
       "Garantía": "Garantía Oficial de Fábrica y LiderPro"
     },
-    "description": "AROIL 90 GL-4 distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Galón (3.78L), Caneca (5 Galones / 19L)) para talleres y flotas en Manabí y a nivel nacional.",
+    "description": "AROIL 90 GL-4 distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Galón, Caneca 5 GL) para talleres y flotas en Manabí y a nivel nacional.",
     "priceNote": "Consultar precio mayorista o unitario vía WhatsApp con factura SRI",
     "warranty": "Garantía oficial de autenticidad",
     "commercialStatus": "VERIFIED",
@@ -14643,7 +14607,7 @@ export const PRODUCTS: Product[] = [
       {
         "sku": "0368AR40013",
         "name": "AROIL 90 GL-4 6/1 GL",
-        "presentation": "1 Galón (3.78L)",
+        "presentation": "1 Galón",
         "volume": "3.78L",
         "stock": 4,
         "imageUrl": "/images/products/0368AR40013.png",
@@ -14652,7 +14616,7 @@ export const PRODUCTS: Product[] = [
       {
         "sku": "0368AR40014",
         "name": "AROIL 90 GL-4 CAN 5GL",
-        "presentation": "Caneca (5 Galones / 19L)",
+        "presentation": "Caneca 5 GL",
         "volume": "19.0L",
         "stock": 2,
         "imageUrl": "/images/products/0368AR40014.png",
@@ -14675,7 +14639,7 @@ export const PRODUCTS: Product[] = [
     "faqs": [
       {
         "question": "¿Qué presentaciones de AROIL 90 GL-4 tienen en stock?",
-        "answer": "Disponemos de 3 presentaciones oficiales: 1 Litro, 1 Galón (3.78L), Caneca (5 Galones / 19L). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
+        "answer": "Disponemos de 3 presentaciones oficiales: 1 Litro, 1 Galón, Caneca 5 GL. Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
       },
       {
         "question": "¿Realizan envíos a otras ciudades del país?",
@@ -14693,20 +14657,20 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "1 Litro",
-    "shortSpec": "Línea oficial AROIL. Disponible en 3 presentaciones (1 Litro, 1 Galón (3.78L), Caneca (5 Galones / 19L)) con stock en Bodega Pedernales.",
+    "shortSpec": "Línea oficial AROIL. Disponible en 3 presentaciones (1 Litro, 1 Galón, Caneca 5 GL) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "AROIL",
-      "Presentaciones": "1 Litro, 1 Galón (3.78L), Caneca (5 Galones / 19L)",
+      "Presentaciones": "1 Litro, 1 Galón, Caneca 5 GL",
       "Stock Total": "18 unidades",
       "Origen": "Distribución Matriz LiderPro"
     },
     "fullSpecs": {
       "Categoría": "Lubricantes",
       "Línea": "AROIL Automotive",
-      "Presentaciones Disponibles": "1 Litro, 1 Galón (3.78L), Caneca (5 Galones / 19L)",
+      "Presentaciones Disponibles": "1 Litro, 1 Galón, Caneca 5 GL",
       "Garantía": "Garantía Oficial de Fábrica y LiderPro"
     },
-    "description": "AROIL 140 GL-4 distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Galón (3.78L), Caneca (5 Galones / 19L)) para talleres y flotas en Manabí y a nivel nacional.",
+    "description": "AROIL 140 GL-4 distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Galón, Caneca 5 GL) para talleres y flotas en Manabí y a nivel nacional.",
     "priceNote": "Consultar precio mayorista o unitario vía WhatsApp con factura SRI",
     "warranty": "Garantía oficial de autenticidad",
     "commercialStatus": "VERIFIED",
@@ -14728,7 +14692,7 @@ export const PRODUCTS: Product[] = [
       {
         "sku": "0368AR40017",
         "name": "AROIL 140 GL-4 6/1 GL",
-        "presentation": "1 Galón (3.78L)",
+        "presentation": "1 Galón",
         "volume": "3.78L",
         "stock": 6,
         "imageUrl": "/images/products/0368AR40017.png",
@@ -14737,7 +14701,7 @@ export const PRODUCTS: Product[] = [
       {
         "sku": "0368AR40018",
         "name": "AROIL 140 GL-4 CAN 5 GL",
-        "presentation": "Caneca (5 Galones / 19L)",
+        "presentation": "Caneca 5 GL",
         "volume": "19.0L",
         "stock": 2,
         "imageUrl": "/images/products/0368AR40018.png",
@@ -14760,7 +14724,7 @@ export const PRODUCTS: Product[] = [
     "faqs": [
       {
         "question": "¿Qué presentaciones de AROIL 140 GL-4 tienen en stock?",
-        "answer": "Disponemos de 3 presentaciones oficiales: 1 Litro, 1 Galón (3.78L), Caneca (5 Galones / 19L). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
+        "answer": "Disponemos de 3 presentaciones oficiales: 1 Litro, 1 Galón, Caneca 5 GL. Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
       },
       {
         "question": "¿Realizan envíos a otras ciudades del país?",
@@ -14834,7 +14798,7 @@ export const PRODUCTS: Product[] = [
     "brand": "AROIL",
     "category": "lubricantes",
     "applicationType": "autos",
-    "volume": "Caneca (5 Galones / 19L)",
+    "volume": "Caneca 5 GL",
     "shortSpec": "Producto original AROIL. Código OEM / Referencia: 0368AR60026. Stock disponible en Pedernales.",
     "specifications": {
       "Código / SKU": "0368AR60026",
@@ -14892,20 +14856,20 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "1 Litro",
-    "shortSpec": "Línea oficial AMALIE. Disponible en 2 presentaciones (1 Litro, 1 Galón (3.78L)) con stock en Bodega Pedernales.",
+    "shortSpec": "Línea oficial AMALIE. Disponible en 2 presentaciones (1 Litro, 1 Galón) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "AMALIE",
-      "Presentaciones": "1 Litro, 1 Galón (3.78L)",
+      "Presentaciones": "1 Litro, 1 Galón",
       "Stock Total": "15 unidades",
       "Origen": "Distribución Matriz LiderPro"
     },
     "fullSpecs": {
       "Categoría": "Lubricantes",
       "Línea": "AMALIE Automotive",
-      "Presentaciones Disponibles": "1 Litro, 1 Galón (3.78L)",
+      "Presentaciones Disponibles": "1 Litro, 1 Galón",
       "Garantía": "Garantía Oficial de Fábrica y LiderPro"
     },
-    "description": "AMALIE 10W30 SYNT BLEND SN distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Galón (3.78L)) para talleres y flotas en Manabí y a nivel nacional.",
+    "description": "AMALIE 10W30 SYNT BLEND SN distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Galón) para talleres y flotas en Manabí y a nivel nacional.",
     "priceNote": "Consultar precio mayorista o unitario vía WhatsApp con factura SRI",
     "warranty": "Garantía oficial de autenticidad",
     "commercialStatus": "VERIFIED",
@@ -14927,7 +14891,7 @@ export const PRODUCTS: Product[] = [
       {
         "sku": "016AM-75677-36",
         "name": "AMALIE 10W30 SYNT BLEND SN 4/1 GL.",
-        "presentation": "1 Galón (3.78L)",
+        "presentation": "1 Galón",
         "volume": "3.78L",
         "stock": 3,
         "imageUrl": "/images/products/016AM-75677-36.png",
@@ -14950,7 +14914,7 @@ export const PRODUCTS: Product[] = [
     "faqs": [
       {
         "question": "¿Qué presentaciones de AMALIE 10W30 SYNT BLEND SN tienen en stock?",
-        "answer": "Disponemos de 2 presentaciones oficiales: 1 Litro, 1 Galón (3.78L). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
+        "answer": "Disponemos de 2 presentaciones oficiales: 1 Litro, 1 Galón. Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
       },
       {
         "question": "¿Realizan envíos a otras ciudades del país?",
@@ -14968,20 +14932,20 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "autos",
     "volume": "1 Litro",
-    "shortSpec": "Línea oficial AMALIE. Disponible en 2 presentaciones (1 Litro, 1 Galón (3.78L)) con stock en Bodega Pedernales.",
+    "shortSpec": "Línea oficial AMALIE. Disponible en 2 presentaciones (1 Litro, 1 Galón) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "AMALIE",
-      "Presentaciones": "1 Litro, 1 Galón (3.78L)",
+      "Presentaciones": "1 Litro, 1 Galón",
       "Stock Total": "16 unidades",
       "Origen": "Distribución Matriz LiderPro"
     },
     "fullSpecs": {
       "Categoría": "Lubricantes",
       "Línea": "AMALIE Automotive",
-      "Presentaciones Disponibles": "1 Litro, 1 Galón (3.78L)",
+      "Presentaciones Disponibles": "1 Litro, 1 Galón",
       "Garantía": "Garantía Oficial de Fábrica y LiderPro"
     },
-    "description": "AMALIE 20W50 SYNT BLEND SN distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Galón (3.78L)) para talleres y flotas en Manabí y a nivel nacional.",
+    "description": "AMALIE 20W50 SYNT BLEND SN distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Galón) para talleres y flotas en Manabí y a nivel nacional.",
     "priceNote": "Consultar precio mayorista o unitario vía WhatsApp con factura SRI",
     "warranty": "Garantía oficial de autenticidad",
     "commercialStatus": "VERIFIED",
@@ -15003,7 +14967,7 @@ export const PRODUCTS: Product[] = [
       {
         "sku": "016AM-75697-36",
         "name": "AMALIE 20W50 SYNT BLEND SN 4/1 GL",
-        "presentation": "1 Galón (3.78L)",
+        "presentation": "1 Galón",
         "volume": "3.78L",
         "stock": 4,
         "imageUrl": "/images/products/016AM-75697-36.png",
@@ -15026,7 +14990,7 @@ export const PRODUCTS: Product[] = [
     "faqs": [
       {
         "question": "¿Qué presentaciones de AMALIE 20W50 SYNT BLEND SN tienen en stock?",
-        "answer": "Disponemos de 2 presentaciones oficiales: 1 Litro, 1 Galón (3.78L). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
+        "answer": "Disponemos de 2 presentaciones oficiales: 1 Litro, 1 Galón. Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
       },
       {
         "question": "¿Realizan envíos a otras ciudades del país?",
@@ -15215,20 +15179,20 @@ export const PRODUCTS: Product[] = [
     "category": "lubricantes",
     "applicationType": "pesado",
     "volume": "1 Litro",
-    "shortSpec": "Línea oficial VALVOLINE. Disponible en 2 presentaciones (1 Litro, 1 Galón (3.78L)) con stock en Bodega Pedernales.",
+    "shortSpec": "Línea oficial VALVOLINE. Disponible en 2 presentaciones (1 Litro, 1 Galón) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "VALVOLINE",
-      "Presentaciones": "1 Litro, 1 Galón (3.78L)",
+      "Presentaciones": "1 Litro, 1 Galón",
       "Stock Total": "10 unidades",
       "Origen": "Distribución Matriz LiderPro"
     },
     "fullSpecs": {
       "Categoría": "Lubricantes",
       "Línea": "VALVOLINE Automotive",
-      "Presentaciones Disponibles": "1 Litro, 1 Galón (3.78L)",
+      "Presentaciones Disponibles": "1 Litro, 1 Galón",
       "Garantía": "Garantía Oficial de Fábrica y LiderPro"
     },
-    "description": "VALVOLINE CLASSIC SAE 20W50 SP distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Galón (3.78L)) para talleres y flotas en Manabí y a nivel nacional.",
+    "description": "VALVOLINE CLASSIC SAE 20W50 SP distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Litro, 1 Galón) para talleres y flotas en Manabí y a nivel nacional.",
     "priceNote": "Consultar precio mayorista o unitario vía WhatsApp con factura SRI",
     "warranty": "Garantía oficial de autenticidad",
     "commercialStatus": "VERIFIED",
@@ -15250,7 +15214,7 @@ export const PRODUCTS: Product[] = [
       {
         "sku": "038LUB-PC2050-0100",
         "name": "VALVOLINE  20W50 CLASSIC SP 3/1 GL",
-        "presentation": "1 Galón (3.78L)",
+        "presentation": "1 Galón",
         "volume": "3.78L",
         "stock": 1,
         "imageUrl": "/images/products/038LUB-PC2050-0100.png",
@@ -15273,7 +15237,7 @@ export const PRODUCTS: Product[] = [
     "faqs": [
       {
         "question": "¿Qué presentaciones de VALVOLINE CLASSIC SAE 20W50 SP tienen en stock?",
-        "answer": "Disponemos de 2 presentaciones oficiales: 1 Litro, 1 Galón (3.78L). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
+        "answer": "Disponemos de 2 presentaciones oficiales: 1 Litro, 1 Galón. Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
       },
       {
         "question": "¿Realizan envíos a otras ciudades del país?",
@@ -15290,7 +15254,7 @@ export const PRODUCTS: Product[] = [
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": "Presentación Estándar",
+    "volume": "Estándar",
     "shortSpec": "Producto original MANNOL. Código OEM / Referencia: 012MN6145. Stock disponible en Pedernales.",
     "specifications": {
       "Código / SKU": "012MN6145",
@@ -15347,7 +15311,7 @@ export const PRODUCTS: Product[] = [
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": "Presentación Estándar",
+    "volume": "Estándar",
     "shortSpec": "Producto original MANNOL. Código OEM / Referencia: 012MN6149. Stock disponible en Pedernales.",
     "specifications": {
       "Código / SKU": "012MN6149",
@@ -15404,7 +15368,7 @@ export const PRODUCTS: Product[] = [
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": "Spray 200 ml",
+    "volume": "200 ml",
     "shortSpec": "Producto original MANNOL. Código OEM / Referencia: 012MN7901. Stock disponible en Pedernales.",
     "specifications": {
       "Código / SKU": "012MN7901",
@@ -15461,7 +15425,7 @@ export const PRODUCTS: Product[] = [
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": "Spray 400 ml",
+    "volume": "400 ml",
     "shortSpec": "Producto original MANNOL. Código OEM / Referencia: 012MN7904. Stock disponible en Pedernales.",
     "specifications": {
       "Código / SKU": "012MN7904",
@@ -15518,7 +15482,7 @@ export const PRODUCTS: Product[] = [
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": "Tarrina 800 g",
+    "volume": "800 g",
     "shortSpec": "Producto original MANNOL. Código OEM / Referencia: 012MN8028-08. Stock disponible en Pedernales.",
     "specifications": {
       "Código / SKU": "012MN8028-08",
@@ -15575,21 +15539,21 @@ export const PRODUCTS: Product[] = [
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": "Tarrina 800 g",
-    "shortSpec": "Línea oficial MANNOL. Disponible en 3 presentaciones (Tarrina 800 g, Tarrina 4.5 kg, Caneca (16-18 kg)) con stock en Bodega Pedernales.",
+    "volume": "800 g",
+    "shortSpec": "Línea oficial MANNOL. Disponible en 3 presentaciones (800 g, 4.5 kg, Caneca 18 kg) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "MANNOL",
-      "Presentaciones": "Tarrina 800 g, Tarrina 4.5 kg, Caneca (16-18 kg)",
+      "Presentaciones": "800 g, 4.5 kg, Caneca 18 kg",
       "Stock Total": "3 unidades",
       "Origen": "Distribución Matriz LiderPro"
     },
     "fullSpecs": {
       "Categoría": "Aditivos",
       "Línea": "MANNOL Automotive",
-      "Presentaciones Disponibles": "Tarrina 800 g, Tarrina 4.5 kg, Caneca (16-18 kg)",
+      "Presentaciones Disponibles": "800 g, 4.5 kg, Caneca 18 kg",
       "Garantía": "Garantía Oficial de Fábrica y LiderPro"
     },
-    "description": "MANNOL GRASA LC-2 ALTA TEMPERATURA 4.5 KG distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (Tarrina 800 g, Tarrina 4.5 kg, Caneca (16-18 kg)) para talleres y flotas en Manabí y a nivel nacional.",
+    "description": "MANNOL GRASA LC-2 ALTA TEMPERATURA 4.5 KG distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (800 g, 4.5 kg, Caneca 18 kg) para talleres y flotas en Manabí y a nivel nacional.",
     "priceNote": "Consultar precio mayorista o unitario vía WhatsApp con factura SRI",
     "warranty": "Garantía oficial de autenticidad",
     "commercialStatus": "VERIFIED",
@@ -15602,7 +15566,7 @@ export const PRODUCTS: Product[] = [
       {
         "sku": "012MN8029-08",
         "name": "MANNOL GRASA LC-2 ALTA TEMPERATURA 800 GR",
-        "presentation": "Tarrina 800 g",
+        "presentation": "800 g",
         "volume": "800ml",
         "stock": 1,
         "imageUrl": "/images/products/012MN8029-08.png",
@@ -15611,7 +15575,7 @@ export const PRODUCTS: Product[] = [
       {
         "sku": "012MN8029",
         "name": "MANNOL GRASA LC-2 ALTA TEMPERATURA 4.5 KG",
-        "presentation": "Tarrina 4.5 kg",
+        "presentation": "4.5 kg",
         "volume": "4.5L",
         "stock": 1,
         "imageUrl": "/images/products/012MN8029.png",
@@ -15620,7 +15584,7 @@ export const PRODUCTS: Product[] = [
       {
         "sku": "012MN8116",
         "name": "MANNOL GRASA LC-2 ALTA TEMPERATURA 18 KG",
-        "presentation": "Caneca (16-18 kg)",
+        "presentation": "Caneca 18 kg",
         "volume": "18.0L",
         "stock": 1,
         "imageUrl": "/images/products/012MN8116.png",
@@ -15643,7 +15607,7 @@ export const PRODUCTS: Product[] = [
     "faqs": [
       {
         "question": "¿Qué presentaciones de MANNOL GRASA LC-2 ALTA TEMPERATURA 4.5 KG tienen en stock?",
-        "answer": "Disponemos de 3 presentaciones oficiales: Tarrina 800 g, Tarrina 4.5 kg, Caneca (16-18 kg). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
+        "answer": "Disponemos de 3 presentaciones oficiales: 800 g, 4.5 kg, Caneca 18 kg. Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
       },
       {
         "question": "¿Realizan envíos a otras ciudades del país?",
@@ -15660,7 +15624,7 @@ export const PRODUCTS: Product[] = [
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": "Envase 450 ml",
+    "volume": "450 ml",
     "shortSpec": "Producto original MANNOL. Código OEM / Referencia: 012MN8121. Stock disponible en Pedernales.",
     "specifications": {
       "Código / SKU": "012MN8121",
@@ -15717,7 +15681,7 @@ export const PRODUCTS: Product[] = [
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "motos",
-    "volume": "Envase 450 ml",
+    "volume": "450 ml",
     "shortSpec": "Producto original MANNOL. Código OEM / Referencia: 012MN9009-045. Stock disponible en Pedernales.",
     "specifications": {
       "Código / SKU": "012MN9009-045",
@@ -15774,7 +15738,7 @@ export const PRODUCTS: Product[] = [
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": "Spray 500 ml",
+    "volume": "500 ml",
     "shortSpec": "Producto original MANNOL. Código OEM / Referencia: 012MN9201. Stock disponible en Pedernales.",
     "specifications": {
       "Código / SKU": "012MN9201",
@@ -15831,7 +15795,7 @@ export const PRODUCTS: Product[] = [
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": "Envase 450 ml",
+    "volume": "450 ml",
     "shortSpec": "Producto original MANNOL. Código OEM / Referencia: 012MN9202-045. Stock disponible en Pedernales.",
     "specifications": {
       "Código / SKU": "012MN9202-045",
@@ -15888,7 +15852,7 @@ export const PRODUCTS: Product[] = [
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": "Envase 250 ml",
+    "volume": "250 ml",
     "shortSpec": "Producto original MANNOL. Código OEM / Referencia: 012MN9423-025. Stock disponible en Pedernales.",
     "specifications": {
       "Código / SKU": "012MN9423-025",
@@ -15945,7 +15909,7 @@ export const PRODUCTS: Product[] = [
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": "Envase 450 ml",
+    "volume": "450 ml",
     "shortSpec": "Producto original MANNOL. Código OEM / Referencia: 012MN9669. Stock disponible en Pedernales.",
     "specifications": {
       "Código / SKU": "012MN9669",
@@ -16002,7 +15966,7 @@ export const PRODUCTS: Product[] = [
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": "Presentación Estándar",
+    "volume": "Estándar",
     "shortSpec": "Producto original MANNOL. Código OEM / Referencia: 012MN9672. Stock disponible en Pedernales.",
     "specifications": {
       "Código / SKU": "012MN9672",
@@ -16059,7 +16023,7 @@ export const PRODUCTS: Product[] = [
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": "Spray 650 ml",
+    "volume": "650 ml",
     "shortSpec": "Producto original MANNOL. Código OEM / Referencia: 012MN9673. Stock disponible en Pedernales.",
     "specifications": {
       "Código / SKU": "012MN9673",
@@ -16116,7 +16080,7 @@ export const PRODUCTS: Product[] = [
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": "Presentación Estándar",
+    "volume": "Estándar",
     "shortSpec": "Producto original MANNOL. Código OEM / Referencia: 012MN9770. Stock disponible en Pedernales.",
     "specifications": {
       "Código / SKU": "012MN9770",
@@ -16173,7 +16137,7 @@ export const PRODUCTS: Product[] = [
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": "Presentación Estándar",
+    "volume": "Estándar",
     "shortSpec": "Producto original MANNOL. Código OEM / Referencia: 012MN9822. Stock disponible en Pedernales.",
     "specifications": {
       "Código / SKU": "012MN9822",
@@ -16230,7 +16194,7 @@ export const PRODUCTS: Product[] = [
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": "Envase 250 ml",
+    "volume": "250 ml",
     "shortSpec": "Producto original MANNOL. Código OEM / Referencia: 012MN9829-025. Stock disponible en Pedernales.",
     "specifications": {
       "Código / SKU": "012MN9829-025",
@@ -16287,7 +16251,7 @@ export const PRODUCTS: Product[] = [
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": "Spray 400 ml",
+    "volume": "400 ml",
     "shortSpec": "Producto original MANNOL. Código OEM / Referencia: 012MN9873. Stock disponible en Pedernales.",
     "specifications": {
       "Código / SKU": "012MN9873",
@@ -16344,7 +16308,7 @@ export const PRODUCTS: Product[] = [
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": "Envase 450 ml",
+    "volume": "450 ml",
     "shortSpec": "Producto original MANNOL. Código OEM / Referencia: 012MN9893. Stock disponible en Pedernales.",
     "specifications": {
       "Código / SKU": "012MN9893",
@@ -16401,7 +16365,7 @@ export const PRODUCTS: Product[] = [
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": "Presentación Estándar",
+    "volume": "Estándar",
     "shortSpec": "Producto original MANNOL. Código OEM / Referencia: 012MN9897. Stock disponible en Pedernales.",
     "specifications": {
       "Código / SKU": "012MN9897",
@@ -16458,7 +16422,7 @@ export const PRODUCTS: Product[] = [
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "motos",
-    "volume": "Envase 350 ml",
+    "volume": "350 ml",
     "shortSpec": "Producto original MANNOL. Código OEM / Referencia: 012MN9900. Stock disponible en Pedernales.",
     "specifications": {
       "Código / SKU": "012MN9900",
@@ -16572,7 +16536,7 @@ export const PRODUCTS: Product[] = [
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": "Envase 450 ml",
+    "volume": "450 ml",
     "shortSpec": "Producto original MANNOL. Código OEM / Referencia: 012MN9906. Stock disponible en Pedernales.",
     "specifications": {
       "Código / SKU": "012MN9906",
@@ -16629,7 +16593,7 @@ export const PRODUCTS: Product[] = [
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": "Presentación Estándar",
+    "volume": "Estándar",
     "shortSpec": "Producto original MANNOL. Código OEM / Referencia: 012MN9909. Stock disponible en Pedernales.",
     "specifications": {
       "Código / SKU": "012MN9909",
@@ -16686,7 +16650,7 @@ export const PRODUCTS: Product[] = [
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": "Tubo 85 g",
+    "volume": "85 g",
     "shortSpec": "Producto original MANNOL. Código OEM / Referencia: 012MN9911. Stock disponible en Pedernales.",
     "specifications": {
       "Código / SKU": "012MN9911",
@@ -16743,7 +16707,7 @@ export const PRODUCTS: Product[] = [
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": "Envase 250 ml",
+    "volume": "250 ml",
     "shortSpec": "Producto original MANNOL. Código OEM / Referencia: 012MN9923-025. Stock disponible en Pedernales.",
     "specifications": {
       "Código / SKU": "012MN9923-025",
@@ -16857,21 +16821,21 @@ export const PRODUCTS: Product[] = [
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": "Envase 450 ml",
-    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones (Envase 450 ml, 1 Litro) con stock en Bodega Pedernales.",
+    "volume": "450 ml",
+    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones (450 ml, 1 Litro) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "MANNOL",
-      "Presentaciones": "Envase 450 ml, 1 Litro",
+      "Presentaciones": "450 ml, 1 Litro",
       "Stock Total": "18 unidades",
       "Origen": "Distribución Matriz LiderPro"
     },
     "fullSpecs": {
       "Categoría": "Aditivos",
       "Línea": "MANNOL Automotive",
-      "Presentaciones Disponibles": "Envase 450 ml, 1 Litro",
+      "Presentaciones Disponibles": "450 ml, 1 Litro",
       "Garantía": "Garantía Oficial de Fábrica y LiderPro"
     },
-    "description": "MANNOL ESTER ADDITIVE / TRATAMIENTO DE ACEITE 450 ML Y 1LT distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (Envase 450 ml, 1 Litro) para talleres y flotas en Manabí y a nivel nacional.",
+    "description": "MANNOL ESTER ADDITIVE / TRATAMIENTO DE ACEITE 450 ML Y 1LT distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (450 ml, 1 Litro) para talleres y flotas en Manabí y a nivel nacional.",
     "priceNote": "Consultar precio mayorista o unitario vía WhatsApp con factura SRI",
     "warranty": "Garantía oficial de autenticidad",
     "commercialStatus": "VERIFIED",
@@ -16884,7 +16848,7 @@ export const PRODUCTS: Product[] = [
       {
         "sku": "012MN9929-045",
         "name": "MANNOL ESTER ADDITIVE / TRATAMIENTO DE ACEITE 450 ML",
-        "presentation": "Envase 450 ml",
+        "presentation": "450 ml",
         "volume": "450ml",
         "stock": 6,
         "imageUrl": "/images/products/012MN9929-045.png",
@@ -16916,7 +16880,7 @@ export const PRODUCTS: Product[] = [
     "faqs": [
       {
         "question": "¿Qué presentaciones de MANNOL ESTER ADDITIVE / TRATAMIENTO DE ACEITE 450 ML Y 1LT tienen en stock?",
-        "answer": "Disponemos de 2 presentaciones oficiales: Envase 450 ml, 1 Litro. Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
+        "answer": "Disponemos de 2 presentaciones oficiales: 450 ml, 1 Litro. Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
       },
       {
         "question": "¿Realizan envíos a otras ciudades del país?",
@@ -16933,21 +16897,21 @@ export const PRODUCTS: Product[] = [
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": "Envase 100 ml",
-    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones (Envase 100 ml, Envase 250 ml) con stock en Bodega Pedernales.",
+    "volume": "100 ml",
+    "shortSpec": "Línea oficial MANNOL. Disponible en 2 presentaciones (100 ml, 250 ml) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "MANNOL",
-      "Presentaciones": "Envase 100 ml, Envase 250 ml",
+      "Presentaciones": "100 ml, 250 ml",
       "Stock Total": "15 unidades",
       "Origen": "Distribución Matriz LiderPro"
     },
     "fullSpecs": {
       "Categoría": "Aditivos",
       "Línea": "MANNOL Automotive",
-      "Presentaciones Disponibles": "Envase 100 ml, Envase 250 ml",
+      "Presentaciones Disponibles": "100 ml, 250 ml",
       "Garantía": "Garantía Oficial de Fábrica y LiderPro"
     },
-    "description": "MANNOL DIESEL ESTER ADDITIVE 100ML Y 250ML distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (Envase 100 ml, Envase 250 ml) para talleres y flotas en Manabí y a nivel nacional.",
+    "description": "MANNOL DIESEL ESTER ADDITIVE 100ML Y 250ML distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (100 ml, 250 ml) para talleres y flotas en Manabí y a nivel nacional.",
     "priceNote": "Consultar precio mayorista o unitario vía WhatsApp con factura SRI",
     "warranty": "Garantía oficial de autenticidad",
     "commercialStatus": "VERIFIED",
@@ -16960,7 +16924,7 @@ export const PRODUCTS: Product[] = [
       {
         "sku": "012MN9930-01",
         "name": "MANNOL DIESEL ESTER ADDITIVE 100ML",
-        "presentation": "Envase 100 ml",
+        "presentation": "100 ml",
         "volume": "100ml",
         "stock": 5,
         "imageUrl": "/images/products/012MN9930-01.png",
@@ -16969,7 +16933,7 @@ export const PRODUCTS: Product[] = [
       {
         "sku": "012MN9930-025",
         "name": "MANNOL DIESEL ESTER ADDITIVE 250ML",
-        "presentation": "Envase 250 ml",
+        "presentation": "250 ml",
         "volume": "250ml",
         "stock": 10,
         "imageUrl": "/images/products/012MN9930-025.png",
@@ -16992,7 +16956,7 @@ export const PRODUCTS: Product[] = [
     "faqs": [
       {
         "question": "¿Qué presentaciones de MANNOL DIESEL ESTER ADDITIVE 100ML Y 250ML tienen en stock?",
-        "answer": "Disponemos de 2 presentaciones oficiales: Envase 100 ml, Envase 250 ml. Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
+        "answer": "Disponemos de 2 presentaciones oficiales: 100 ml, 250 ml. Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
       },
       {
         "question": "¿Realizan envíos a otras ciudades del país?",
@@ -17009,7 +16973,7 @@ export const PRODUCTS: Product[] = [
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": "Spray 650 ml",
+    "volume": "650 ml",
     "shortSpec": "Producto original MANNOL. Código OEM / Referencia: 012MN9931. Stock disponible en Pedernales.",
     "specifications": {
       "Código / SKU": "012MN9931",
@@ -17066,7 +17030,7 @@ export const PRODUCTS: Product[] = [
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": "Spray 500 ml",
+    "volume": "500 ml",
     "shortSpec": "Producto original MANNOL. Código OEM / Referencia: 012MN9939-05. Stock disponible en Pedernales.",
     "specifications": {
       "Código / SKU": "012MN9939-05",
@@ -17123,7 +17087,7 @@ export const PRODUCTS: Product[] = [
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "motos",
-    "volume": "Envase 450 ml",
+    "volume": "450 ml",
     "shortSpec": "Producto original MANNOL. Código OEM / Referencia: 012MN9943. Stock disponible en Pedernales.",
     "specifications": {
       "Código / SKU": "012MN9943",
@@ -17180,7 +17144,7 @@ export const PRODUCTS: Product[] = [
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": "Envase 450 ml",
+    "volume": "450 ml",
     "shortSpec": "Producto original MANNOL. Código OEM / Referencia: 012MN9944. Stock disponible en Pedernales.",
     "specifications": {
       "Código / SKU": "012MN9944",
@@ -17237,7 +17201,7 @@ export const PRODUCTS: Product[] = [
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": "Envase 250 ml",
+    "volume": "250 ml",
     "shortSpec": "Producto original MANNOL. Código OEM / Referencia: 012MN9950-025. Stock disponible en Pedernales.",
     "specifications": {
       "Código / SKU": "012MN9950-025",
@@ -17294,7 +17258,7 @@ export const PRODUCTS: Product[] = [
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": "Envase 450 ml",
+    "volume": "450 ml",
     "shortSpec": "Producto original MANNOL. Código OEM / Referencia: 012MN9954-045. Stock disponible en Pedernales.",
     "specifications": {
       "Código / SKU": "012MN9954-045",
@@ -17351,7 +17315,7 @@ export const PRODUCTS: Product[] = [
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": "Envase 450 ml",
+    "volume": "450 ml",
     "shortSpec": "Producto original MANNOL. Código OEM / Referencia: 012MN9955-045. Stock disponible en Pedernales.",
     "specifications": {
       "Código / SKU": "012MN9955-045",
@@ -17408,7 +17372,7 @@ export const PRODUCTS: Product[] = [
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": "Envase 250 ml",
+    "volume": "250 ml",
     "shortSpec": "Producto original MANNOL. Código OEM / Referencia: 012MN9956-025. Stock disponible en Pedernales.",
     "specifications": {
       "Código / SKU": "012MN9956-025",
@@ -17465,7 +17429,7 @@ export const PRODUCTS: Product[] = [
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": "Envase 250 ml",
+    "volume": "250 ml",
     "shortSpec": "Producto original MANNOL. Código OEM / Referencia: 012MN9957-025. Stock disponible en Pedernales.",
     "specifications": {
       "Código / SKU": "012MN9957-025",
@@ -17522,7 +17486,7 @@ export const PRODUCTS: Product[] = [
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": "Spray 400 ml",
+    "volume": "400 ml",
     "shortSpec": "Producto original MANNOL. Código OEM / Referencia: 012MN9958. Stock disponible en Pedernales.",
     "specifications": {
       "Código / SKU": "012MN9958",
@@ -17579,7 +17543,7 @@ export const PRODUCTS: Product[] = [
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": "Envase 250 ml",
+    "volume": "250 ml",
     "shortSpec": "Producto original MANNOL. Código OEM / Referencia: 012MN9965. Stock disponible en Pedernales.",
     "specifications": {
       "Código / SKU": "012MN9965",
@@ -17636,7 +17600,7 @@ export const PRODUCTS: Product[] = [
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": "Envase 250 ml",
+    "volume": "250 ml",
     "shortSpec": "Producto original MANNOL. Código OEM / Referencia: 012MN9966-025. Stock disponible en Pedernales.",
     "specifications": {
       "Código / SKU": "012MN9966-025",
@@ -17693,7 +17657,7 @@ export const PRODUCTS: Product[] = [
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": "Envase 250 ml",
+    "volume": "250 ml",
     "shortSpec": "Producto original MANNOL. Código OEM / Referencia: 012MN9968-025. Stock disponible en Pedernales.",
     "specifications": {
       "Código / SKU": "012MN9968-025",
@@ -17750,7 +17714,7 @@ export const PRODUCTS: Product[] = [
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": "Aerosol 520 ml",
+    "volume": "520 ml",
     "shortSpec": "Producto original MANNOL. Código OEM / Referencia: 012MN9971. Stock disponible en Pedernales.",
     "specifications": {
       "Código / SKU": "012MN9971",
@@ -17807,7 +17771,7 @@ export const PRODUCTS: Product[] = [
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "motos",
-    "volume": "Spray 500 ml",
+    "volume": "500 ml",
     "shortSpec": "Producto original MANNOL. Código OEM / Referencia: 012MN9973. Stock disponible en Pedernales.",
     "specifications": {
       "Código / SKU": "012MN9973",
@@ -17864,7 +17828,7 @@ export const PRODUCTS: Product[] = [
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": "Spray 500 ml",
+    "volume": "500 ml",
     "shortSpec": "Producto original MANNOL. Código OEM / Referencia: 012MN9974. Stock disponible en Pedernales.",
     "specifications": {
       "Código / SKU": "012MN9974",
@@ -17921,7 +17885,7 @@ export const PRODUCTS: Product[] = [
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "motos",
-    "volume": "Envase 350 ml",
+    "volume": "350 ml",
     "shortSpec": "Producto original MANNOL. Código OEM / Referencia: 012MN9990. Stock disponible en Pedernales.",
     "specifications": {
       "Código / SKU": "012MN9990",
@@ -17978,7 +17942,7 @@ export const PRODUCTS: Product[] = [
     "brand": "ABRO",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": "Aerosol 10 oz",
+    "volume": "10 oz",
     "shortSpec": "Producto original ABRO. Código OEM / Referencia: 10270.03.017. Stock disponible en Pedernales.",
     "specifications": {
       "Código / SKU": "10270.03.017",
@@ -18035,21 +17999,21 @@ export const PRODUCTS: Product[] = [
     "brand": "ABRO",
     "category": "refrigerantes",
     "applicationType": "autos",
-    "volume": "1 Cuarto (946 ml)",
-    "shortSpec": "Línea oficial ABRO. Disponible en 2 presentaciones (1 Cuarto (946 ml), 1 Galón (3.78L)) con stock en Bodega Pedernales.",
+    "volume": "1 Cuarto",
+    "shortSpec": "Línea oficial ABRO. Disponible en 2 presentaciones (1 Cuarto, 1 Galón) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "ABRO",
-      "Presentaciones": "1 Cuarto (946 ml), 1 Galón (3.78L)",
+      "Presentaciones": "1 Cuarto, 1 Galón",
       "Stock Total": "19 unidades",
       "Origen": "Distribución Matriz LiderPro"
     },
     "fullSpecs": {
       "Categoría": "Refrigerantes",
       "Línea": "ABRO Automotive",
-      "Presentaciones Disponibles": "1 Cuarto (946 ml), 1 Galón (3.78L)",
+      "Presentaciones Disponibles": "1 Cuarto, 1 Galón",
       "Garantía": "Garantía Oficial de Fábrica y LiderPro"
     },
-    "description": "ABRO REFRIGERANTE ROJO GALON distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Cuarto (946 ml), 1 Galón (3.78L)) para talleres y flotas en Manabí y a nivel nacional.",
+    "description": "ABRO REFRIGERANTE ROJO GALON distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Cuarto, 1 Galón) para talleres y flotas en Manabí y a nivel nacional.",
     "priceNote": "Consultar precio mayorista o unitario vía WhatsApp con factura SRI",
     "warranty": "Garantía oficial de autenticidad",
     "commercialStatus": "VERIFIED",
@@ -18062,7 +18026,7 @@ export const PRODUCTS: Product[] = [
       {
         "sku": "102EC-502LT",
         "name": "ABRO REFRIGERANTE ROJO CUARTO",
-        "presentation": "1 Cuarto (946 ml)",
+        "presentation": "1 Cuarto",
         "volume": "946ml",
         "stock": 10,
         "imageUrl": "/images/products/102EC-502LT.png",
@@ -18071,7 +18035,7 @@ export const PRODUCTS: Product[] = [
       {
         "sku": "102EC-502",
         "name": "ABRO REFRIGERANTE ROJO GALON",
-        "presentation": "1 Galón (3.78L)",
+        "presentation": "1 Galón",
         "volume": "3.78L",
         "stock": 9,
         "imageUrl": "/images/products/102EC-502.png",
@@ -18094,7 +18058,7 @@ export const PRODUCTS: Product[] = [
     "faqs": [
       {
         "question": "¿Qué presentaciones de ABRO REFRIGERANTE ROJO GALON tienen en stock?",
-        "answer": "Disponemos de 2 presentaciones oficiales: 1 Cuarto (946 ml), 1 Galón (3.78L). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
+        "answer": "Disponemos de 2 presentaciones oficiales: 1 Cuarto, 1 Galón. Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
       },
       {
         "question": "¿Realizan envíos a otras ciudades del país?",
@@ -18111,21 +18075,21 @@ export const PRODUCTS: Product[] = [
     "brand": "ABRO",
     "category": "refrigerantes",
     "applicationType": "autos",
-    "volume": "1 Cuarto (946 ml)",
-    "shortSpec": "Línea oficial ABRO. Disponible en 2 presentaciones (1 Cuarto (946 ml), 1 Galón (3.78L)) con stock en Bodega Pedernales.",
+    "volume": "1 Cuarto",
+    "shortSpec": "Línea oficial ABRO. Disponible en 2 presentaciones (1 Cuarto, 1 Galón) con stock en Bodega Pedernales.",
     "specifications": {
       "Marca": "ABRO",
-      "Presentaciones": "1 Cuarto (946 ml), 1 Galón (3.78L)",
+      "Presentaciones": "1 Cuarto, 1 Galón",
       "Stock Total": "43 unidades",
       "Origen": "Distribución Matriz LiderPro"
     },
     "fullSpecs": {
       "Categoría": "Refrigerantes",
       "Línea": "ABRO Automotive",
-      "Presentaciones Disponibles": "1 Cuarto (946 ml), 1 Galón (3.78L)",
+      "Presentaciones Disponibles": "1 Cuarto, 1 Galón",
       "Garantía": "Garantía Oficial de Fábrica y LiderPro"
     },
-    "description": "ABRO REFRIGERANTE VERDE GALON distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Cuarto (946 ml), 1 Galón (3.78L)) para talleres y flotas en Manabí y a nivel nacional.",
+    "description": "ABRO REFRIGERANTE VERDE GALON distribuido de forma oficial por LiderPro. Fórmula institucional de alto rendimiento disponible en múltiples presentaciones (1 Cuarto, 1 Galón) para talleres y flotas en Manabí y a nivel nacional.",
     "priceNote": "Consultar precio mayorista o unitario vía WhatsApp con factura SRI",
     "warranty": "Garantía oficial de autenticidad",
     "commercialStatus": "VERIFIED",
@@ -18138,7 +18102,7 @@ export const PRODUCTS: Product[] = [
       {
         "sku": "102EC-503LT",
         "name": "ABRO REFRIGERANTE VERDE CUARTO",
-        "presentation": "1 Cuarto (946 ml)",
+        "presentation": "1 Cuarto",
         "volume": "946ml",
         "stock": 26,
         "imageUrl": "/images/products/102EC-503LT.png",
@@ -18147,7 +18111,7 @@ export const PRODUCTS: Product[] = [
       {
         "sku": "102EC-503",
         "name": "ABRO REFRIGERANTE VERDE GALON",
-        "presentation": "1 Galón (3.78L)",
+        "presentation": "1 Galón",
         "volume": "3.78L",
         "stock": 17,
         "imageUrl": "/images/products/102EC-503.png",
@@ -18170,7 +18134,7 @@ export const PRODUCTS: Product[] = [
     "faqs": [
       {
         "question": "¿Qué presentaciones de ABRO REFRIGERANTE VERDE GALON tienen en stock?",
-        "answer": "Disponemos de 2 presentaciones oficiales: 1 Cuarto (946 ml), 1 Galón (3.78L). Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
+        "answer": "Disponemos de 2 presentaciones oficiales: 1 Cuarto, 1 Galón. Puedes seleccionar tu tamaño y cotizar directamente por WhatsApp."
       },
       {
         "question": "¿Realizan envíos a otras ciudades del país?",
@@ -18187,7 +18151,7 @@ export const PRODUCTS: Product[] = [
     "brand": "ABRO",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": "Presentación Estándar",
+    "volume": "Estándar",
     "shortSpec": "Producto original ABRO. Código OEM / Referencia: 102SS822. Stock disponible en Pedernales.",
     "specifications": {
       "Código / SKU": "102SS822",
@@ -18244,7 +18208,7 @@ export const PRODUCTS: Product[] = [
     "brand": "ABRO",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": "Presentación Estándar",
+    "volume": "Estándar",
     "shortSpec": "Producto original ABRO. Código OEM / Referencia: 15170.03.039. Stock disponible en Pedernales.",
     "specifications": {
       "Código / SKU": "15170.03.039",
@@ -18301,7 +18265,7 @@ export const PRODUCTS: Product[] = [
     "brand": "SIMONIZ",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": "Envase 250 ml",
+    "volume": "250 ml",
     "shortSpec": "Producto original SIMONIZ. Código OEM / Referencia: 1213027CH. Stock disponible en Pedernales.",
     "specifications": {
       "Código / SKU": "1213027CH",
@@ -18358,7 +18322,7 @@ export const PRODUCTS: Product[] = [
     "brand": "SIMONIZ",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": "Envase 250 ml",
+    "volume": "250 ml",
     "shortSpec": "Producto original SIMONIZ. Código OEM / Referencia: 1213027CT. Stock disponible en Pedernales.",
     "specifications": {
       "Código / SKU": "1213027CT",
@@ -18415,7 +18379,7 @@ export const PRODUCTS: Product[] = [
     "brand": "SIMONIZ",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": "Envase 250 ml",
+    "volume": "250 ml",
     "shortSpec": "Producto original SIMONIZ. Código OEM / Referencia: 1213027PT. Stock disponible en Pedernales.",
     "specifications": {
       "Código / SKU": "1213027PT",
@@ -18472,7 +18436,7 @@ export const PRODUCTS: Product[] = [
     "brand": "SIMONIZ",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": "Envase 250 ml",
+    "volume": "250 ml",
     "shortSpec": "Producto original SIMONIZ. Código OEM / Referencia: 1213027SP. Stock disponible en Pedernales.",
     "specifications": {
       "Código / SKU": "1213027SP",
@@ -18529,7 +18493,7 @@ export const PRODUCTS: Product[] = [
     "brand": "SIMONIZ",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": "Envase 300 ml",
+    "volume": "300 ml",
     "shortSpec": "Producto original SIMONIZ. Código OEM / Referencia: 1214020. Stock disponible en Pedernales.",
     "specifications": {
       "Código / SKU": "1214020",
@@ -18586,7 +18550,7 @@ export const PRODUCTS: Product[] = [
     "brand": "AREON",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": "Presentación Estándar",
+    "volume": "Estándar",
     "shortSpec": "Producto original AREON. Código OEM / Referencia: 122APC06. Stock disponible en Pedernales.",
     "specifications": {
       "Código / SKU": "122APC06",
@@ -18643,7 +18607,7 @@ export const PRODUCTS: Product[] = [
     "brand": "AREON",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": "Presentación Estándar",
+    "volume": "Estándar",
     "shortSpec": "Producto original AREON. Código OEM / Referencia: 122APC11. Stock disponible en Pedernales.",
     "specifications": {
       "Código / SKU": "122APC11",
@@ -18700,7 +18664,7 @@ export const PRODUCTS: Product[] = [
     "brand": "AREON",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": "Presentación Estándar",
+    "volume": "Estándar",
     "shortSpec": "Producto original AREON. Código OEM / Referencia: 122PACKMA60. Stock disponible en Pedernales.",
     "specifications": {
       "Código / SKU": "122PACKMA60",

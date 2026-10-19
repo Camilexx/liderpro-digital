@@ -37,6 +37,78 @@ def clean_display_name(raw_name, brand):
         name = name[len(brand):].strip()
     return f"{brand} {name}".strip()
 
+def format_clean_badge(pres_name):
+    if 'Caneca (20 Litros)' in pres_name:
+        return 'Caneca 20L'
+    if 'Caneca (5 Galones / 19L)' in pres_name:
+        return 'Caneca 5 GL'
+    if 'Media Caneca (2.5 Gal)' in pres_name:
+        return 'Caneca 2.5 GL'
+    if 'Caneca (10 Litros)' in pres_name:
+        return 'Caneca 10L'
+    if 'Bidón (5 Litros)' in pres_name:
+        return 'Bidón 5L'
+    if '1 Galón' in pres_name:
+        return '1 Galón'
+    if '1 Litro' in pres_name:
+        return '1 Litro'
+    if '1 Cuarto' in pres_name:
+        return '1 Cuarto'
+    if '16-18 kg' in pres_name or '18 KG' in pres_name:
+        return 'Caneca 18 kg'
+    if '4.5 kg' in pres_name:
+        return '4.5 kg'
+    if '800 g' in pres_name:
+        return '800 g'
+    if '400 g' in pres_name:
+        return '400 g'
+    if '230 g' in pres_name:
+        return '230 g'
+    if '85 g' in pres_name:
+        return '85 g'
+    if 'Libra' in pres_name:
+        return '1 Libra'
+    if '650 ml' in pres_name:
+        return '650 ml'
+    if '520 ml' in pres_name:
+        return '520 ml'
+    if '500 ml' in pres_name:
+        return '500 ml'
+    if '450 ml' in pres_name:
+        return '450 ml'
+    if '400 ml' in pres_name:
+        return '400 ml'
+    if '350 ml' in pres_name:
+        return '350 ml'
+    if '300 ml' in pres_name:
+        return '300 ml'
+    if '250 ml' in pres_name:
+        return '250 ml'
+    if '200 ml' in pres_name:
+        return '200 ml'
+    if '100 ml' in pres_name:
+        return '100 ml'
+    if '10 ml' in pres_name:
+        return 'Gotero 10 ml'
+    if '10 oz' in pres_name:
+        return '10 oz'
+    return pres_name
+
+def cap_variants_to_3(item_variants):
+    if len(item_variants) <= 3:
+        return item_variants
+    # When 4 variants exist, pick smallest, primary retail middle (Galón/5L), and largest industrial (Caneca)
+    first = item_variants[0]
+    last = item_variants[-1]
+    middle = None
+    for v in item_variants[1:-1]:
+        if 'Galón' in v['presentation'] or '5L' in v['presentation'] or '4.5' in v['presentation']:
+            middle = v
+            break
+    if not middle:
+        middle = item_variants[1]
+    return [first, middle, last]
+
 def detect_presentation(item):
     name = item['name']
     name_u = name.upper()
@@ -46,28 +118,28 @@ def detect_presentation(item):
     # 1. 20 Litros (Caneca 20L)
     if re.search(r'\b20/1\s*CAN\b|\bCAN\s*20/1\s*LT\b|\b20\s*LTS?\b|\b20LT\b', name_u):
         if not (name_u.startswith('MANNOL CJ X 20') and (sku.endswith('-1') or sku.endswith('-1A') or cost < 15.0)):
-            return 'Caneca (20 Litros)', 20.0
+            return 'Caneca 20L', 20.0
             
     # 2. 5 Galones / 19 Litros (Caneca 5 GL)
     if re.search(r'(?<![0-9\.])5\s*GL\b|CAN\s*5/1|\bCANECA\s*5\b|(?<![0-9\.])5/1\s*GL\b|BLD\s*CAN\s*5|CAN\s*5GL', name_u):
         if not re.search(r'2\.5\s*GL|2\.5/1\s*GL|\bMEDIA\s*CANECA\b', name_u):
-            return 'Caneca (5 Galones / 19L)', 19.0
+            return 'Caneca 5 GL', 19.0
             
     # 3. Media Caneca 2.5 Galones (9.5 Litros)
     if re.search(r'2\.5\s*GL\b|2\.5/1\s*GL\b|\bMEDIA\s*CANECA\b|(?<![0-9\.])2\.5\b', name_u):
-        return 'Media Caneca (2.5 Gal)', 9.5
+        return 'Caneca 2.5 GL', 9.5
         
     # 4. 10 Litros
     if re.search(r'\b10\s*LT\b|\b10LT\b|CAN\s*10\s*LT', name_u):
-        return 'Caneca (10 Litros)', 10.0
+        return 'Caneca 10L', 10.0
         
     # 5. 5 Litros (Bidón)
     if re.search(r'4/5\s*LT\b|4/5LT\b|(?<![0-9\.])5\s*LT\b|(?<![0-9\.])5LT\b', name_u):
-        return 'Bidón (5 Litros)', 5.0
+        return 'Bidón 5L', 5.0
         
     # 6. 1 Galón (3.78 Litros)
     if re.search(r'\b4/1\s*GL\b|\b6/1\s*GL\b|\b3/1\s*GL\b|(?<![0-9\.])1\s*GL\b|\b4\s*LT\b|\bGALON\b|\bGALONES\b', name_u):
-        return '1 Galón (3.78L)', 3.78
+        return '1 Galón', 3.78
         
     # 7. 1 Litro
     if re.search(r'\b12/1\s*LT\b|\b12/1\b|\b20/1\s*LT\b|(?<![0-9\.])1\s*LT\b|\b1LT\b|\bLITRO\b|\bLITROS\b', name_u) or sku.endswith('-1') or sku.endswith('-1A'):
@@ -75,29 +147,51 @@ def detect_presentation(item):
         
     # 8. 1 Cuarto (946 ml)
     if 'CUARTO' in name_u:
-        return '1 Cuarto (946 ml)', 0.946
+        return '1 Cuarto', 0.946
         
     # 9. Greases
     if re.search(r'18\s*KG\b|16\s*KG\b|16X1\s*KG\b', name_u):
-        return 'Caneca (16-18 kg)', 18.0
+        return 'Caneca 18 kg', 18.0
     if re.search(r'4\.5\s*KG\b', name_u):
-        return 'Tarrina 4.5 kg', 4.5
+        return '4.5 kg', 4.5
     if re.search(r'800\s*GR\b|800\s*GRS\b', name_u):
-        return 'Tarrina 800 g', 0.8
+        return '800 g', 0.8
     if re.search(r'400\s*GR\b|400GR\b', name_u):
-        return 'Tubo 400 g', 0.4
+        return '400 g', 0.4
     if re.search(r'230\s*GR\b|230GR\b', name_u):
-        return 'Tarrina 230 g', 0.23
+        return '230 g', 0.23
     if re.search(r'85\s*GR\b|85GR\b', name_u):
-        return 'Tubo 85 g', 0.085
+        return '85 g', 0.085
     if re.search(r'1\s*LB\b|1LB\b', name_u):
-        return 'Envase 1 Libra', 0.45
+        return '1 Libra', 0.45
         
     # 10. Chemicals & Sprays (ml)
     if re.search(r'650\s*ML\b|650ML\b', name_u):
-        return 'Spray 650 ml', 0.65
+        return '650 ml', 0.65
     if re.search(r'520\s*ML\b|520ML\b', name_u):
-        return 'Aerosol 520 ml', 0.52
+        return '520 ml', 0.52
+    if re.search(r'500\s*ML\b|500ML\b', name_u):
+        return '500 ml', 0.5
+    if re.search(r'450\s*ML\b|450ML\b|450\s*GR\b', name_u):
+        return '450 ml', 0.45
+    if re.search(r'400\s*ML\b|400ML\b', name_u):
+        return '400 ml', 0.4
+    if re.search(r'350\s*ML\b|350ML\b', name_u):
+        return '350 ml', 0.35
+    if re.search(r'300\s*ML\b|300ML\b|300\s*GR\b|300GR\b', name_u):
+        return '300 ml', 0.3
+    if re.search(r'250\s*ML\b|250ML\b|250\s*CC\b', name_u):
+        return '250 ml', 0.25
+    if re.search(r'200\s*ML\b|200ML\b', name_u):
+        return '200 ml', 0.2
+    if re.search(r'100\s*ML\b|100ML\b', name_u):
+        return '100 ml', 0.1
+    if re.search(r'10\s*ML\b|10ML\b', name_u):
+        return 'Gotero 10 ml', 0.01
+    if re.search(r'10\s*OZ\b|10OZ\b', name_u):
+        return '10 oz', 0.3
+        
+    return 'Estándar', 1.0
     if re.search(r'500\s*ML\b|500ML\b', name_u):
         return 'Spray 500 ml', 0.5
     if re.search(r'450\s*ML\b|450ML\b|450\s*GR\b', name_u):
@@ -408,6 +502,9 @@ for sheet_name, meta in SHEET_METAS.items():
                     'volume_val': vol_val
                 })
             item_variants.sort(key=lambda x: x['volume_val'])
+            
+            # Cap strictly to maximum 3 variants!
+            item_variants = cap_variants_to_3(item_variants)
             
             if not item_variants:
                 continue

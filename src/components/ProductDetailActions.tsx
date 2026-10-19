@@ -63,7 +63,7 @@ export default function ProductDetailActions({ product }: ProductDetailActionsPr
             </span>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-            {product.variants.map((v) => {
+            {product.variants.slice(0, 3).map((v) => {
               const isSelected = activeSku === v.sku;
               return (
                 <button

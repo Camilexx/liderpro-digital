@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Truck, ShieldCheck, MapPin, PackageCheck } from "lucide-react";
 import { BUSINESS_CONFIG } from "@/data/businessConfig";
 import { buildWhatsAppLink } from "@/lib/whatsapp";
@@ -39,19 +40,35 @@ export default function LocationsLogisticsSection() {
         {/* The 3 Core Logistics Pillars */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Card 1: Sede Central Pedernales */}
-          <div className="card-interactive p-7 flex flex-col justify-between space-y-5">
+          <div className="card-interactive p-6 flex flex-col justify-between space-y-4">
             <div>
-              <div className="flex items-center justify-between mb-4">
+              <div className="flex items-center justify-between mb-3">
                 <span className="text-xs font-black uppercase tracking-wider text-emerald-800 bg-emerald-50 border border-emerald-200 px-2.5 py-1 rounded-lg flex items-center gap-1.5">
                   <MapPin className="w-3.5 h-3.5" />
                   Sede Central Matriz
                 </span>
                 <span className="text-[10px] text-slate-400 font-mono">Manabí</span>
               </div>
-              <h3 className="text-xl font-black text-slate-950 mb-2">
+
+              {/* Photo of the Real Local in Pedernales */}
+              <div className="relative aspect-[16/10] rounded-2xl overflow-hidden border border-slate-200/90 shadow-sm mb-3 group">
+                <Image
+                  src="/images/hero/local-pedernales.jpg"
+                  alt="Local comercial y bodega matriz LiderPro en Pedernales, Manabí"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent pointer-events-none" />
+                <div className="absolute bottom-2 left-2 text-[10.5px] font-bold text-white bg-black/60 backdrop-blur-md px-2 py-0.5 rounded border border-white/20">
+                  Mostrador & Bodega Pedernales
+                </div>
+              </div>
+
+              <h3 className="text-xl font-black text-slate-950 mb-1.5">
                 Hub Pedernales
               </h3>
-              <p className="text-xs text-slate-600 leading-relaxed mb-4">
+              <p className="text-xs text-slate-600 leading-relaxed mb-3">
                 {pedernales.role}
               </p>
               <div className="text-xs text-slate-600 space-y-1.5 border-t border-slate-100 pt-3">

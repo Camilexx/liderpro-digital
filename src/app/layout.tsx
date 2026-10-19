@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/hero/automotive-hero.jpg",
+        url: "/images/hero/local-pedernales.jpg",
         width: 1200,
         height: 630,
         alt: "LiderPro Distribuidor Autorizado Multimarca Pedernales Ecuador",
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     title: "LiderPro Ecuador — Distribuidor Autorizado Multimarca",
     description:
       "Baterías, lubricantes y filtros con despacho nacional desde Hub Pedernales (Manabí) hacia las 24 provincias.",
-    images: ["/images/hero/automotive-hero.jpg"],
+    images: ["/images/hero/local-pedernales.jpg"],
   },
 };
 
@@ -79,7 +79,7 @@ const structuredData = {
         "Distribuidor Autorizado Multimarca de lubricantes, baterías, filtros y repuestos automotrices con Sede Central y Bodega Matriz en Pedernales, Manabí, y cobertura logística a las 24 provincias del Ecuador con facturación electrónica SRI.",
       "url": "https://liderpro-digital.vercel.app",
       "logo": "https://liderpro-digital.vercel.app/images/logo.png",
-      "image": "https://liderpro-digital.vercel.app/images/hero/automotive-hero.jpg",
+      "image": "https://liderpro-digital.vercel.app/images/hero/local-pedernales.jpg",
       "telephone": "+593967489002",
       "priceRange": "$$",
       "currenciesAccepted": "USD",

@@ -76,24 +76,55 @@ const VEHICLE_SEGMENTS: VehicleSegment[] = [
   },
 ];
 
-// Top 4 Flagship SKUs with diverse categories (Batteries + Lubricants)
-const FLAGSHIP_BEST_SELLER_SKUS = [
-  "03024-HP-I", // Batería Ecuador 24 HP High Power (Tapa Roja, 85 Amp)
-  "02724HPS4", // Batería Bosch 24 HP S4 PowerFrame (64 Amp)
-  "12MN7916-4", // Mannol Molibden Green Ultra 5W-30 Galón
-  "01504MD04-15W40", // Mobil Delvac MX 15W-40 Galón Diésel
-];
+// Top Curated Best Sellers by Category (Verified Active SKUs from Unified Excel)
+const BEST_SELLER_SKUS_BY_CATEGORY: Record<string, string[]> = {
+  todos: [
+    "03024-HP-I",   // Batería Ecuador 24 HP Tapa Roja (85 Ah)
+    "02724HPS4",    // Batería Bosch 24 HP S4 PowerFrame (64 Ah)
+    "LP-LUR-002-2", // Mobil Delvac MX 15W-40 Galón Diésel
+    "LP-LUR-010",   // Mannol Chevrolet/Opel OEM 5W-30 Sintético
+    "LP-FIL-002",   // Filtro Aire Hilux / Fortuner 2.7 & 2.4
+    "078AO-1539",   // Filtro Aceite Chevrolet D-Max 3.0 / 2.5
+    "03031-SHD",    // Batería Ecuador 31 SHD Pesada / Camaroneras
+    "LP-LUR-005-3", // Aroil 15W-40 CI-4 Diésel Pesado
+  ],
+  baterias: [
+    "03024-HP-I",   // Batería Ecuador 24 HP Tapa Roja 85 Amp
+    "02724HPS4",    // Batería Bosch 24 HP S4 64 Amp
+    "42HPS4",       // Batería Bosch 42 HP S4 55 Amp
+    "03031-SHD",    // Batería Ecuador 31 SHD Heavy Duty 105 Amp
+  ],
+  lubricantes: [
+    "LP-LUR-002-2", // Mobil Delvac MX 15W-40 Galón Diésel
+    "LP-LUR-010",   // Mannol Chevrolet/Opel OEM 5W-30 Sintético
+    "LP-LUR-005-3", // Aroil 15W-40 CI-4 Diésel Pesado
+    "LP-LUR-002-4", // Motul Moto 5000 10W-40 4T Semisintético
+  ],
+  filtros: [
+    "LP-FIL-002",   // Filtro Aire Hilux 2.7L / 2.4L DI
+    "078AO-1539",   // Filtro Aceite Chevrolet D-Max 3.0 / 2.5
+    "AA-2662",      // Filtro Aire Chevrolet D-Max 2.0T
+    "078AFP-012",   // Filtro Combustible Universal Advance
+  ],
+};
+
+const BEST_SELLER_TABS = [
+  { id: "todos", label: "⭐ Todos los Más Vendidos", count: 8 },
+  { id: "baterias", label: "🔋 Baterías de Alta Demanda", count: 4 },
+  { id: "lubricantes", label: "🛢️ Lubricantes & Aceites", count: 4 },
+  { id: "filtros", label: "🌪️ Filtros de Mayor Salida", count: 4 },
+] as const;
 
 // Curated 8-Product Showcase representing all distributor categories
 const CURATED_SHOWCASE_SKUS = [
-  "03024-HP-I", // Batería Ecuador 24 HP High Power
-  "42HPS4", // Batería Bosch 42 HP S4 55AMP
-  "12MN7916-4", // Mannol Molibden Green Ultra 5W-30 Galón
-  "01504MD04-15W40", // Mobil Delvac MX 15W-40 Galón
-  "080AO-3614ST", // Filtro Advance Aire 100% Sintético 15,000 km
-  "01001012", // Motul Moto 5000 10W-40 Semisintético 4T
-  "080AAK-102", // Kit Filtro de Aire Heavy Duty Hino 500
-  "03031-SHD", // Batería Ecuador 31 SHD Super Heavy Duty 105 Amp
+  "03024-HP-I",   // Batería Ecuador 24 HP High Power
+  "42HPS4",       // Batería Bosch 42 HP S4 55AMP
+  "LP-LUR-010",   // Mannol Chevrolet/Opel OEM 5W-30
+  "LP-LUR-002-2", // Mobil Delvac MX 15W-40 Galón
+  "LP-FIL-002",   // Filtro Advance Aire Hilux / Fortuner
+  "LP-LUR-002-4", // Motul Moto 5000 10W-40 4T
+  "078AO-1539",   // Filtro Aceite Chevrolet D-Max 3.0 / 2.5
+  "03031-SHD",    // Batería Ecuador 31 SHD Super Heavy Duty 105 Amp
 ];
 
 // Popular Vehicle Quick-Access Pills for Ecuador Market
@@ -110,11 +141,14 @@ const POPULAR_VEHICLES = [
 
 export default function HomePage() {
   const [selectedSegment, setSelectedSegment] = useState<ApplicationType | "todos">("todos");
+  const [bestSellerCategory, setBestSellerCategory] = useState<"todos" | "baterias" | "lubricantes" | "filtros">("todos");
 
   // Retrieve curated products safely
-  const bestSellerProducts = FLAGSHIP_BEST_SELLER_SKUS.map((sku) =>
-    PRODUCTS.find((p) => p.sku === sku)
-  ).filter(Boolean) as Product[];
+  const displayedBestSellers = (
+    BEST_SELLER_SKUS_BY_CATEGORY[bestSellerCategory] || BEST_SELLER_SKUS_BY_CATEGORY.todos
+  )
+    .map((sku) => PRODUCTS.find((p) => p.sku === sku))
+    .filter(Boolean) as Product[];
 
   const defaultShowcaseProducts = CURATED_SHOWCASE_SKUS.map((sku) =>
     PRODUCTS.find((p) => p.sku === sku)
@@ -346,37 +380,100 @@ export default function HomePage() {
 
       {/* 03: PRODUCTOS FLAGSHIP CON MAYOR ROTACIÓN EN MOSTRADOR PEDERNALES */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 animate-fade-up">
-        <div className="bg-gradient-to-br from-blue-50/70 via-white to-amber-50/40 border border-blue-200/80 rounded-3xl p-6 sm:p-8 space-y-6 shadow-sm">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
-            <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#061B40] text-[#FFC500] rounded-full text-[11px] font-black uppercase tracking-wider shadow-sm mb-2">
-                <span>⭐ ALTA ROTACIÓN & MÁS VENDIDOS</span>
+        <div className="bg-gradient-to-br from-white via-slate-50/70 to-blue-50/30 border border-slate-200/90 rounded-3xl p-6 sm:p-8 lg:p-10 space-y-6 shadow-sm">
+          {/* Header Row */}
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 pb-4 border-b border-slate-200/70">
+            <div className="space-y-1.5 max-w-2xl">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-[#061B40] text-[#FFC500] rounded-full text-[11px] font-black uppercase tracking-wider shadow-sm">
+                <Sparkles className="w-3.5 h-3.5" />
+                <span>TOP ROTACIÓN · BODEGA MATRIZ PEDERNALES</span>
               </div>
-              <h2 className="text-2xl sm:text-3xl font-black text-slate-950 tracking-tight">
-                Productos con Mayor Demanda en Mostrador Pedernales
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-950 tracking-tight">
+                Productos con Mayor Demanda en Mostrador
               </h2>
-              <p className="text-xs sm:text-sm text-slate-600 mt-1 max-w-2xl">
-                Los 4 artículos indispensables de mayor salida diaria: Baterías Ecuador Tapa Roja, Baterías Bosch PowerFrame, lubricantes sintéticos y aceite diésel para flotas. Stock físico verificado para retiro en local o despacho express interprovincial.
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                Artículos indispensables de mayor salida diaria y despacho a 24 provincias: Baterías Ecuador Tapa Roja, Bosch PowerFrame, aceites Mobil Delvac, sintéticos Mannol y filtración Advance para camionetas, camiones y flotas.
               </p>
             </div>
-            <a
-              href={buildWhatsAppLink("fleet_bulk", {
-                neededItem: "Productos Más Vendidos en Pedernales",
-                city: "Pedernales / Despacho Nacional",
-              })}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-gold !py-2.5 !px-5 text-xs font-black self-start md:self-auto shrink-0 shadow-md flex items-center gap-1.5"
-            >
-              <MessageCircle className="w-3.5 h-3.5" />
-              <span>Consultar Stock de Mayor Salida</span>
-            </a>
+
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 shrink-0">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-emerald-50 border border-emerald-200 rounded-xl text-xs font-bold text-emerald-800">
+                <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
+                <span>Stock Físico Verificado en Local</span>
+              </div>
+              <a
+                href={buildWhatsAppLink("fleet_bulk", {
+                  neededItem: "Productos Más Vendidos en Pedernales",
+                  city: "Pedernales / Despacho Nacional",
+                })}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-gold !py-2.5 !px-5 text-xs font-black shadow-md flex items-center gap-1.5"
+              >
+                <MessageCircle className="w-4 h-4" />
+                <span>Consultar Stock en Mostrador</span>
+              </a>
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {bestSellerProducts.map((prod, idx) => (
-              <ProductCard key={prod.id} product={prod} priority={idx < 2} />
+          {/* Interactive Category Tabs */}
+          <div className="flex items-center gap-2 overflow-x-auto pb-1 no-scrollbar pt-1">
+            {BEST_SELLER_TABS.map((tab) => {
+              const isActive = bestSellerCategory === tab.id;
+              return (
+                <button
+                  key={tab.id}
+                  type="button"
+                  onClick={() => setBestSellerCategory(tab.id)}
+                  className={`px-4 py-2 rounded-xl text-xs font-black transition-all cursor-pointer shrink-0 border flex items-center gap-2 ${
+                    isActive
+                      ? "bg-[#0A3B8C] text-white border-[#0A3B8C] shadow-sm scale-102"
+                      : "bg-white text-slate-700 border-slate-200/90 hover:bg-slate-100/80 hover:border-slate-300"
+                  }`}
+                >
+                  <span>{tab.label}</span>
+                  <span
+                    className={`text-[10px] px-1.5 py-0.5 rounded-md font-mono ${
+                      isActive ? "bg-white/20 text-white" : "bg-slate-100 text-slate-500"
+                    }`}
+                  >
+                    {tab.count}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+
+          {/* Products Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-2">
+            {displayedBestSellers.map((prod, idx) => (
+              <ProductCard key={prod.id} product={prod} priority={idx < 4} />
             ))}
+          </div>
+
+          {/* Bottom Reassurance Institutional Footer Strip */}
+          <div className="mt-6 pt-5 border-t border-slate-200/70 flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-bold text-slate-600 bg-white/70 p-4 rounded-2xl border border-slate-200/60">
+            <div className="flex flex-wrap items-center gap-4 sm:gap-6">
+              <div className="flex items-center gap-2">
+                <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                <span>Garantía Oficial Directa (18-24 Meses)</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Truck className="w-4 h-4 text-slate-700 shrink-0" />
+                <span>Despacho Diario Interprovincial a 24 Provincias</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <FileCheck2 className="w-4 h-4 text-slate-700 shrink-0" />
+                <span>Facturación Legal SRI Inmediata</span>
+              </div>
+            </div>
+            <Link
+              href="/productos"
+              className="text-xs font-black text-[#0A3B8C] hover:text-[#061B40] transition-colors flex items-center gap-1.5 uppercase tracking-wider shrink-0"
+            >
+              <span>Ver catálogo completo ({PRODUCTS.length})</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
         </div>
       </section>

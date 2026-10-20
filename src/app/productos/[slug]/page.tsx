@@ -1,19 +1,15 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import Image from "next/image";
 import {
   ShieldCheck,
-  Truck,
   ArrowLeft,
-  MapPin,
-  Check,
   HelpCircle,
   Wrench,
 } from "lucide-react";
 import { PRODUCTS } from "@/data/products";
 import ProductCard from "@/components/ProductCard";
-import ProductDetailActions from "@/components/ProductDetailActions";
+import ProductDetailShowcase from "@/components/ProductDetailShowcase";
 
 interface ProductPageProps {
   params: Promise<{ slug: string }>;
@@ -202,94 +198,8 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
         </ol>
       </nav>
 
-      {/* Main Product Showcase */}
-      <div className="bg-white rounded-3xl border border-slate-200/90 p-6 sm:p-12 shadow-sm">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-          {/* Left: Studio Product Photography */}
-          <div className="lg:col-span-6">
-            <div className="relative aspect-[4/3] rounded-2xl bg-slate-50 border border-slate-100 p-8 flex items-center justify-center overflow-hidden">
-              <Image
-                src={product.imageUrl}
-                alt={product.name}
-                fill
-                priority
-                className="object-contain p-6"
-              />
-            </div>
-          </div>
-
-          {/* Right: Technical Details & Direct WhatsApp Action */}
-          <div className="lg:col-span-6 space-y-6">
-            <div className="space-y-2">
-              <div className="flex items-center gap-2 text-[11px] font-bold text-slate-500 uppercase tracking-widest font-mono">
-                <span>{product.brand}</span>
-                <span>•</span>
-                <span>SKU: {product.sku}</span>
-              </div>
-
-              <h1 className="text-2xl sm:text-3xl font-black text-slate-950 tracking-tight leading-tight">
-                {product.name}
-              </h1>
-
-              <p className="text-sm font-semibold text-brand-primary">
-                {product.shortSpec}
-              </p>
-            </div>
-
-            {/* Price */}
-            {product.priceEstimate && (
-              <div className="py-3 border-y border-slate-100 flex items-baseline gap-3">
-                <span className="text-2xl font-black text-slate-950">
-                  {product.priceEstimate}
-                </span>
-                <span className="text-xs text-slate-500 font-medium">
-                  {product.priceNote}
-                </span>
-              </div>
-            )}
-
-            {/* Description */}
-            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              {product.description}
-            </p>
-
-            {/* Features checkmarks */}
-            <div className="space-y-2 pt-1 text-xs text-slate-700">
-              {product.features.map((feat, idx) => (
-                <div key={idx} className="flex items-start gap-2">
-                  <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                  <span>{feat}</span>
-                </div>
-              ))}
-            </div>
-
-            {/* WhatsApp CTA Action — Priority 1 Decision */}
-            <div className="pt-4 space-y-3">
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-emerald-50 border border-emerald-200 rounded-xl text-xs font-bold text-emerald-800">
-                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                <span>{product.dispatchIndicator}</span>
-              </div>
-
-              <ProductDetailActions product={product} />
-
-              <div className="bg-slate-50 border border-slate-200/80 rounded-xl p-3.5 space-y-2 text-xs text-slate-600">
-                <div className="flex items-center gap-2">
-                  <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" />
-                  <span><strong>Distribuidor Autorizado Multimarca:</strong> Producto 100% original con facturación SRI.</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <MapPin className="w-4 h-4 text-slate-700 shrink-0" />
-                  <span><strong>Hub Logístico Pedernales:</strong> Despacho diario por encomienda interprovincial y courier a las 24 provincias.</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Truck className="w-4 h-4 text-slate-700 shrink-0" />
-                  <span><strong>Garantía:</strong> {product.warranty}.</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      {/* Main Interactive Product Showcase */}
+      <ProductDetailShowcase product={product} />
 
       {/* Specifications & Verified Applications */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">

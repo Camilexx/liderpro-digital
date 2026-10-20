@@ -65,6 +65,7 @@ export default function ProductCard({ product, priority = false }: ProductCardPr
         <div className="relative aspect-square w-full min-h-[250px] sm:min-h-[270px] bg-gradient-to-b from-white via-slate-50/50 to-slate-100/30 p-3 sm:p-4 flex items-center justify-center border-b border-slate-100/90 overflow-hidden">
           {!imgError ? (
             <Image
+              key={activeImage}
               src={activeImage}
               alt={`${product.brand} - ${product.name}`}
               fill

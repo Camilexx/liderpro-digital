@@ -22795,7 +22795,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho Inmediato",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/bosch-s4-real.png",
+    "imageUrl": "/images/products/battery-bosch-24-hp-i-s4-64amp-602438.png",
     "compatibleVehicles": [
       {
         "make": "Toyota",
@@ -22891,7 +22891,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho Inmediato",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/bosch-s4-real.png",
+    "imageUrl": "/images/products/battery-bosch-24-hp-s4-64amp-602434.png",
     "compatibleVehicles": [
       {
         "make": "Toyota",
@@ -22987,7 +22987,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho Inmediato",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/bosch-s4-real.png",
+    "imageUrl": "/images/products/battery-bosch-27-hp-i-s4-85amp-602738.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -23077,7 +23077,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho Inmediato",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/bosch-s4-real.png",
+    "imageUrl": "/images/products/battery-bosch-27-hp-s4-88amp-602732.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -23167,7 +23167,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho Inmediato",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/bosch-s4-real.png",
+    "imageUrl": "/images/products/battery-bosch-34-hp-s4-70amp-603432.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -23257,7 +23257,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho Inmediato",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/bosch-s4-real.png",
+    "imageUrl": "/images/products/battery-bosch-42-fe-s3-45amp-304222.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -23347,7 +23347,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho Inmediato",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/bosch-s4-real.png",
+    "imageUrl": "/images/products/battery-bosch-42-hp-i-s4-55amp-604236.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -23437,7 +23437,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho Inmediato",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/bosch-s4-real.png",
+    "imageUrl": "/images/products/battery-bosch-b65-mp-i-s5-sellada.png",
     "compatibleVehicles": [
       {
         "make": "Volkswagen",
@@ -23515,7 +23515,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho Inmediato",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/bosch-s4-real.png",
+    "imageUrl": "/images/products/battery-bosch-n40-fe-s4-43amp-614022.png",
     "compatibleVehicles": [
       {
         "make": "Suzuki",
@@ -23605,7 +23605,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho Inmediato",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/bosch-s4-real.png",
+    "imageUrl": "/images/products/battery-bosch-ns40-fe-f-s4-604023.png",
     "compatibleVehicles": [
       {
         "make": "Suzuki",
@@ -23695,7 +23695,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho Inmediato",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/bosch-s4-real.png",
+    "imageUrl": "/images/products/battery-bosch-ns40-fe-i-f-s4-42amp-604027.png",
     "compatibleVehicles": [
       {
         "make": "Suzuki",
@@ -23785,7 +23785,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho Inmediato",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/baterias-ecuador-real.png",
+    "imageUrl": "/images/products/battery-ecuador-24-fe-full-equipo-65-amp.png",
     "compatibleVehicles": [
       {
         "make": "Toyota",
@@ -23881,7 +23881,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho Inmediato",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/baterias-ecuador-real.png",
+    "imageUrl": "/images/products/battery-ecuador-24-fe-i-full-equipo-65-amp.png",
     "compatibleVehicles": [
       {
         "make": "Toyota",
@@ -23977,7 +23977,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho Inmediato",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/baterias-ecuador-real.png",
+    "imageUrl": "/images/products/battery-ecuador-24-hp-i-high-power-85-amp.png",
     "compatibleVehicles": [
       {
         "make": "Toyota",
@@ -24073,7 +24073,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho Inmediato",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/baterias-ecuador-real.png",
+    "imageUrl": "/images/products/battery-ecuador-27-fe-full-equipo-80-amp.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -24163,7 +24163,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho Inmediato",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/baterias-ecuador-real.png",
+    "imageUrl": "/images/products/battery-ecuador-27-fe-i-full-equipo-80-amp.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -24253,7 +24253,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho Inmediato",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/baterias-ecuador-real.png",
+    "imageUrl": "/images/products/battery-ecuador-27-hp-high-power-95-amp.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -24343,7 +24343,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho Inmediato",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/baterias-ecuador-real.png",
+    "imageUrl": "/images/products/battery-ecuador-27-hp-i-high-power-95-amp.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -24433,7 +24433,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho Inmediato",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/baterias-ecuador-real.png",
+    "imageUrl": "/images/products/battery-ecuador-31-shd-super-heavy-duty-105-amp.png",
     "compatibleVehicles": [
       {
         "make": "Hino",
@@ -24511,7 +24511,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho Inmediato",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/baterias-ecuador-real.png",
+    "imageUrl": "/images/products/battery-ecuador-34-fe-full-equipo-65-amp.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -24601,7 +24601,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho Inmediato",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/baterias-ecuador-real.png",
+    "imageUrl": "/images/products/battery-ecuador-34-fe-i-full-equipo-65-amp.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -24691,7 +24691,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho Inmediato",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/baterias-ecuador-real.png",
+    "imageUrl": "/images/products/battery-ecuador-34-hp-high-power-80-amp.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -24781,7 +24781,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho Inmediato",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/baterias-ecuador-real.png",
+    "imageUrl": "/images/products/battery-ecuador-34-hp-i-high-power-80-amp.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -24871,7 +24871,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho Inmediato",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/baterias-ecuador-real.png",
+    "imageUrl": "/images/products/battery-ecuador-36-hp-high-power-50-amp.png",
     "compatibleVehicles": [
       {
         "make": "Toyota",
@@ -24967,7 +24967,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho Inmediato",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/baterias-ecuador-real.png",
+    "imageUrl": "/images/products/battery-ecuador-42-fe-full-equipo-55-amp.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -25057,7 +25057,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho Inmediato",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/baterias-ecuador-real.png",
+    "imageUrl": "/images/products/battery-ecuador-42-hp-high-power-62-amp.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -25147,7 +25147,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho Inmediato",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/baterias-ecuador-real.png",
+    "imageUrl": "/images/products/battery-ecuador-42-hp-i-high-power-62-amp.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",
@@ -25237,7 +25237,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho Inmediato",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/baterias-ecuador-real.png",
+    "imageUrl": "/images/products/battery-ecuador-55-hd-14pl-63amp-servicio-publico.png",
     "compatibleVehicles": [
       {
         "make": "Toyota",
@@ -25333,7 +25333,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho Inmediato",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/baterias-ecuador-real.png",
+    "imageUrl": "/images/products/battery-ecuador-55-hd-i-14pl-63amp-servicio-publico.png",
     "compatibleVehicles": [
       {
         "make": "Toyota",
@@ -25429,7 +25429,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho Inmediato",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/baterias-ecuador-real.png",
+    "imageUrl": "/images/products/battery-ecuador-65-hp-high-power-65-amp.png",
     "compatibleVehicles": [
       {
         "make": "Toyota",
@@ -25525,7 +25525,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho Inmediato",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/baterias-ecuador-real.png",
+    "imageUrl": "/images/products/battery-ecuador-66-hp-high-power-84-amp.png",
     "compatibleVehicles": [
       {
         "make": "Toyota",
@@ -25621,7 +25621,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho Inmediato",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/baterias-ecuador-real.png",
+    "imageUrl": "/images/products/battery-ecuador-n100-shd-i-super-heavy-duty-104-amp.png",
     "compatibleVehicles": [
       {
         "make": "Hino",
@@ -25699,7 +25699,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho Inmediato",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/baterias-ecuador-real.png",
+    "imageUrl": "/images/products/battery-ecuador-n150-shd-super-heavy-duty-160-amp.png",
     "compatibleVehicles": [
       {
         "make": "Hino",
@@ -25777,7 +25777,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho Inmediato",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/baterias-ecuador-real.png",
+    "imageUrl": "/images/products/battery-ecuador-n40-fe-i-full-equipo-45-amp.png",
     "compatibleVehicles": [
       {
         "make": "Suzuki",
@@ -25867,7 +25867,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho Inmediato",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/baterias-ecuador-real.png",
+    "imageUrl": "/images/products/battery-ecuador-n40-hp-high-power-50-amp.png",
     "compatibleVehicles": [
       {
         "make": "Suzuki",
@@ -25957,7 +25957,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho Inmediato",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/baterias-ecuador-real.png",
+    "imageUrl": "/images/products/battery-ecuador-n40-hp-i-high-power-50-amp.png",
     "compatibleVehicles": [
       {
         "make": "Suzuki",
@@ -26047,7 +26047,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho Inmediato",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/baterias-ecuador-real.png",
+    "imageUrl": "/images/products/battery-ecuador-ns40-fe-full-equipo-42-amp.png",
     "compatibleVehicles": [
       {
         "make": "Suzuki",
@@ -26137,7 +26137,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho Inmediato",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/baterias-ecuador-real.png",
+    "imageUrl": "/images/products/battery-ecuador-ns40-fe-i-full-equipo-42-amp.png",
     "compatibleVehicles": [
       {
         "make": "Suzuki",
@@ -26227,7 +26227,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho Inmediato",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/baterias-ecuador-real.png",
+    "imageUrl": "/images/products/battery-ecuador-ns40-hp-high-power-45-amp.png",
     "compatibleVehicles": [
       {
         "make": "Suzuki",
@@ -26317,7 +26317,7 @@ export const PRODUCTS: Product[] = [
     "stockStatusText": "Disponible en Bodega Pedernales",
     "dispatchIndicator": "Despacho Inmediato",
     "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/bosch-s4-real.png",
+    "imageUrl": "/images/products/battery-bosch-42-hp-s4-55amp-604232.png",
     "compatibleVehicles": [
       {
         "make": "Chevrolet",

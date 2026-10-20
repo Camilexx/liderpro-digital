@@ -55,17 +55,18 @@ export interface Product {
 }
 
 export const OFFICIAL_BRANDS = [
-  { name: "BATERÍAS ECUADOR", logoUrl: "/images/brands/baterias-ecuador.png", origin: "Línea Oficial Nacional", specialty: "Arranque & Alta Durabilidad" },
-  { name: "BOSCH", logoUrl: "/images/brands/bosch.png", origin: "Tecnología Alemana", specialty: "Baterías S4 PowerFrame" },
-  { name: "MANNOL", logoUrl: "/images/brands/mannol.png", origin: "Ingeniería Alemana", specialty: "Sintéticos, Coolant & Aditivos" },
-  { name: "AROIL", logoUrl: "/images/brands/aroil.png", origin: "Lubricantes Automotrices", specialty: "15W40 CI-4, 25W60, Hidráulicos" },
-  { name: "MOBIL", logoUrl: "/images/brands/mobil.png", origin: "Líder Global", specialty: "Delvac MX 15W40 & Sintéticos" },
-  { name: "VALVOLINE", logoUrl: "/images/brands/valvoline.png", origin: "Tradición Americana", specialty: "Classic 20W50 & ValvoDiesel" },
-  { name: "MOTUL", logoUrl: "/images/brands/motul.png", origin: "Tecnología Francesa", specialty: "Moto 5000 & 5100 Éster" },
-  { name: "AMALIE", logoUrl: "/images/brands/amalie.png", origin: "USA Formula", specialty: "10W30 & 20W50 Synthetic Blend" },
-  { name: "ADVANCE", logoUrl: "/images/brands/advance.png", origin: "Filtración Automotriz", specialty: "Filtros Aire, Aceite, Cabina, Combustible" },
-  { name: "ABRO", logoUrl: "/images/brands/abro.png", origin: "Cuidado Automotriz USA", specialty: "Selladores, Grasas & Químicos" },
-  { name: "SIMONIZ / AREON", logoUrl: "/images/brands/simoniz.png", origin: "Cosmética Automotriz", specialty: "Ambientadores & Protectores UV3" }
+  { name: "BATERÍAS ECUADOR", logoUrl: "/images/brands/baterias-ecuador.png" },
+  { name: "BOSCH", logoUrl: "/images/brands/bosch.png" },
+  { name: "MANNOL", logoUrl: "/images/brands/mannol.png" },
+  { name: "MOBIL", logoUrl: "/images/brands/mobil.png" },
+  { name: "VALVOLINE", logoUrl: "/images/brands/valvoline.png" },
+  { name: "MOTUL", logoUrl: "/images/brands/motul.png" },
+  { name: "AROIL", logoUrl: "/images/brands/aroil.png" },
+  { name: "AMALIE", logoUrl: "/images/brands/amalie.png" },
+  { name: "ADVANCE", logoUrl: "/images/brands/advance.png" },
+  { name: "ABRO", logoUrl: "/images/brands/abro.png" },
+  { name: "SIMONIZ", logoUrl: "/images/brands/simoniz.png" },
+  { name: "AREON", logoUrl: "/images/brands/areon.png" }
 ];
 
 export const PRODUCTS: Product[] = [

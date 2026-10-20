@@ -9,6 +9,7 @@ import {
   Search,
   MessageCircle,
   ArrowRight,
+  ArrowUpRight,
   Zap,
   Layers,
   Camera,
@@ -285,7 +286,7 @@ export default function HomePage() {
 
       {/* 02: FRANJA INSTITUCIONAL DE MARCAS OFICIALES (Brand Showcase) */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 animate-fade-up">
-        <div className="bg-white border border-slate-200/90 rounded-3xl p-6 sm:p-8 space-y-6 shadow-sm">
+        <div className="bg-white border border-slate-200/90 rounded-3xl p-6 sm:p-8 lg:p-10 space-y-6 shadow-sm">
           {/* Institutional Heading */}
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-4 border-b border-slate-100">
             <div className="space-y-1.5 max-w-2xl">
@@ -294,10 +295,10 @@ export default function HomePage() {
                 <span>Distribuidor Autorizado Multimarca • Sede Pedernales</span>
               </div>
               <h2 className="text-xl sm:text-2xl font-black text-slate-950 tracking-tight">
-                Respaldo de Marcas Oficiales de Alta Rotación en Ecuador
+                Marcas Oficiales con Respaldo y Garantía de Fábrica
               </h2>
               <p className="text-xs text-slate-600 leading-relaxed">
-                Abastecimiento directo con garantía de fabricante, fichas técnicas certificadas y lotes originales sellados para vehículos livianos, camionetas y flotas pesadas.
+                Abastecimiento directo 100% original con respaldo técnico de los fabricantes líderes mundiales y facturación legal SRI.
               </p>
             </div>
 
@@ -313,31 +314,29 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* 14 Official Brands Matrix - Interactive Navigation */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-3 sm:gap-3.5">
+          {/* Official Brands Grid — Prominent Institutional Showcase */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3.5 sm:gap-4 lg:gap-5">
             {OFFICIAL_BRANDS.map((brand) => (
               <Link
                 key={brand.name}
                 href={`/productos?marca=${encodeURIComponent(brand.name)}`}
-                className="border border-slate-200/80 bg-slate-50/60 hover:bg-white hover:border-[#0A3B8C] hover:shadow-md rounded-2xl p-3 flex flex-col items-center justify-between text-center transition-all duration-300 group"
+                title={`Ver catálogo oficial de ${brand.name}`}
+                className="group relative bg-white border border-slate-200/90 hover:border-[#0A3B8C]/60 rounded-2xl p-4 sm:p-5 flex items-center justify-center transition-all duration-300 shadow-2xs hover:shadow-lg hover:-translate-y-1 overflow-hidden min-h-[96px] sm:min-h-[112px]"
               >
-                <div className="relative w-full h-11 flex items-center justify-center p-1">
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-slate-50/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+
+                <div className="relative w-full h-12 sm:h-14 flex items-center justify-center">
                   <Image
                     src={brand.logoUrl}
                     alt={`Logo oficial ${brand.name} Ecuador`}
-                    width={140}
-                    height={44}
-                    loading="lazy"
-                    className="max-h-9 max-w-full object-contain filter group-hover:scale-105 transition-transform duration-300"
+                    fill
+                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 16vw"
+                    className="object-contain p-1 filter drop-shadow-2xs group-hover:scale-110 transition-transform duration-300 ease-out"
                   />
                 </div>
-                <div className="mt-2 w-full pt-2 border-t border-slate-200/60 flex flex-col items-center">
-                  <span className="text-[9.5px] font-bold text-slate-400 uppercase tracking-tight">
-                    {brand.origin}
-                  </span>
-                  <span className="text-[10px] text-slate-700 font-semibold tracking-tight line-clamp-1 group-hover:text-[#0A3B8C] transition-colors mt-0.5">
-                    {brand.specialty}
-                  </span>
+
+                <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+                  <ArrowUpRight className="w-3.5 h-3.5 text-[#0A3B8C]" />
                 </div>
               </Link>
             ))}

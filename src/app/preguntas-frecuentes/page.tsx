@@ -16,6 +16,13 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/preguntas-frecuentes",
   },
+  openGraph: {
+    title: "Preguntas Frecuentes (FAQ) | Envíos, Garantías y Pagos SRI — LiderPro",
+    description:
+      "Respuestas oficiales sobre despachos desde Pedernales, garantías de baterías, facturación SRI y cotizaciones mayoristas.",
+    url: "https://liderpro-digital.vercel.app/preguntas-frecuentes",
+    type: "website",
+  },
 };
 
 export default function PreguntasFrecuentesPage() {

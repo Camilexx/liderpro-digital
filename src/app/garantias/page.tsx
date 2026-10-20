@@ -26,6 +26,13 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/garantias",
   },
+  openGraph: {
+    title: "Políticas de Garantía Oficial de Fábrica — LiderPro Ecuador",
+    description:
+      "Garantía oficial directa de 12 meses en baterías Bosch y Baterías Ecuador con diagnóstico computarizado en Pedernales.",
+    url: "https://liderpro-digital.vercel.app/garantias",
+    type: "website",
+  },
 };
 
 const WARRANTY_TERMS = [

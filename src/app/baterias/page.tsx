@@ -7,7 +7,7 @@ import { buildWhatsAppLink } from "@/lib/whatsapp";
 export const metadata: Metadata = {
   title: "Baterías Automotrices Selladas 12V | Baterías Ecuador & Bosch S4",
   description:
-    "Distribuidor autorizado multimarca con 48 modelos de baterías selladas libres de mantenimiento: Baterías Ecuador Full Equipo y Bosch S4 PowerFrame con garantía oficial de 12 a 18 meses. Despacho nacional desde Bodega Matriz Pedernales.",
+    "Distribuidor autorizado multimarca con 40+ modelos de baterías selladas libres de mantenimiento: Baterías Ecuador Full Equipo y Bosch S4 PowerFrame con garantía oficial de 12 a 18 meses. Despacho nacional desde Bodega Matriz Pedernales.",
   keywords: [
     "baterias ecuador full equipo",
     "baterias bosch s4 ecuador",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Baterías Automotrices Selladas | Baterías Ecuador & Bosch S4 — LiderPro",
     description:
-      "48 referencias de baterías automotrices y de servicio pesado con garantía oficial de fábrica y despacho seguro a las 24 provincias del Ecuador.",
+      "Modelos certificados de baterías automotrices y de servicio pesado con garantía oficial de fábrica y despacho seguro a las 24 provincias del Ecuador.",
     url: "https://liderpro-digital.vercel.app/baterias",
     type: "website",
     images: [{ url: "/images/products/baterias-ecuador-fe.png", width: 800, height: 800 }],
@@ -43,7 +43,7 @@ export default function BatteriesPage() {
             Baterías Automotrices Selladas con Garantía Nacional de Fábrica
           </h1>
           <p className="text-xs sm:text-base text-slate-300 leading-relaxed">
-            Catálogo completo de <strong>48 modelos certificados</strong> para autos, camionetas 4x4, transporte pesado y sector camaronero. Tecnología 100% libre de mantenimiento, aleación Calcio-Plata y diagnóstico computarizado previo desde nuestra Bodega Matriz en Pedernales (Manabí).
+            Catálogo completo de <strong>modelos certificados</strong> para autos, camionetas 4x4, transporte pesado y sector camaronero. Tecnología 100% libre de mantenimiento, aleación Calcio-Plata y diagnóstico computarizado previo desde nuestra Bodega Matriz en Pedernales (Manabí).
           </p>
 
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2 text-xs">

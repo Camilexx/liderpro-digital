@@ -620,7 +620,7 @@ export default function HomePage() {
                 href="/productos"
                 className="btn-gold !py-3.5 !px-6 text-xs font-black uppercase tracking-wider text-center shadow-lg"
               >
-                <span>EXPLORAR CATÁLOGO (508)</span>
+                <span>EXPLORAR CATÁLOGO (366)</span>
               </Link>
             </div>
           </div>

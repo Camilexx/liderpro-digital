@@ -9,6 +9,13 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/privacidad",
   },
+  openGraph: {
+    title: "Política de Privacidad y Protección de Datos Personales — LiderPro",
+    description:
+      "Aviso de privacidad conforme a la LOPDP del Ecuador para cotizaciones y facturación SRI.",
+    url: "https://liderpro-digital.vercel.app/privacidad",
+    type: "website",
+  },
 };
 
 export default function PrivacidadPage() {

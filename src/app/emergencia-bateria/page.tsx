@@ -5,7 +5,17 @@ import { buildWhatsAppLink } from "@/lib/whatsapp";
 export const metadata: Metadata = {
   title: "¿Tu Vehículo No Enciende? Diagnóstico y Asistencia de Batería | LiderPro Ecuador",
   description:
-    "Orientación para vehículos sin encendido. Identificación de polaridad, capacidad CCA y verificación técnica de alternador con cobertura en todo Ecuador.",
+    "Orientación técnica para vehículos sin encendido. Identificación de polaridad, capacidad CCA y verificación técnica de alternador con cobertura y despacho en todo Ecuador.",
+  alternates: {
+    canonical: "/emergencia-bateria",
+  },
+  openGraph: {
+    title: "¿Tu Vehículo No Enciende? Diagnóstico de Batería | LiderPro Ecuador",
+    description:
+      "Guía técnica de emergencia para identificar si la falla es de batería o alternador. Envío prioritario de baterías selladas Baterías Ecuador y Bosch S4.",
+    url: "https://liderpro-digital.vercel.app/emergencia-bateria",
+    type: "website",
+  },
 };
 
 export default function EmergencyBatteryPage() {

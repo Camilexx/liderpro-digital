@@ -15,16 +15,11 @@ interface ProductPageProps {
   params: Promise<{ slug: string }>;
 }
 
-export const dynamicParams = true;
+export const dynamicParams = false;
 
 export async function generateStaticParams() {
-  // Prerender the top 60 highest-demand products at build time for speed, render remainder on-demand
-  const sorted = [...PRODUCTS].sort((a, b) => {
-    if (a.isBestSeller && !b.isBestSeller) return -1;
-    if (!a.isBestSeller && b.isBestSeller) return 1;
-    return 0;
-  });
-  return sorted.slice(0, 60).map((product) => ({
+  // Prerender 100% of the verified catalog (all 366 products) at build time for instant page loads & optimal SEO indexing
+  return PRODUCTS.map((product) => ({
     slug: product.slug,
   }));
 }

@@ -120,7 +120,7 @@ export default function QuoteBasketDrawer() {
                   Tu lista de cotización está vacía
                 </h4>
                 <p className="text-xs text-slate-500 max-w-xs mx-auto">
-                  Explora nuestro catálogo de 508 productos y añade los que requieras para tu taller, vehículo o flota.
+                  Explora nuestro catálogo verificado de 366 productos y añade los que requieras para tu taller, vehículo o flota.
                 </p>
               </div>
               <button

@@ -4,9 +4,19 @@ import { MessageCircle, HelpCircle, CheckCircle2, ArrowLeft } from "lucide-react
 import { buildWhatsAppLink } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
-  title: "Asesoría Técnica y Diagnóstico | LiderPro Ecuador",
+  title: "Asesoría Técnica y Diagnóstico Automotriz | LiderPro Ecuador",
   description:
-    "¿No sabes qué repuesto, batería o lubricante necesita tu auto? Describe el síntoma o envíanos una foto por WhatsApp. Te ayudamos a identificarlo con precisión.",
+    "¿No sabes qué repuesto, batería o lubricante necesita tu vehículo? Describe el síntoma o envíanos una foto por WhatsApp. Te ayudamos a identificarlo con precisión técnica.",
+  alternates: {
+    canonical: "/asesoria",
+  },
+  openGraph: {
+    title: "Asesoría Técnica y Diagnóstico Automotriz | LiderPro Ecuador",
+    description:
+      "Asesoría técnica guiada por WhatsApp para identificar baterías, lubricantes y filtros correctos según marca y modelo.",
+    url: "https://liderpro-digital.vercel.app/asesoria",
+    type: "website",
+  },
 };
 
 export default function AsesoriaPage() {

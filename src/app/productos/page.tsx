@@ -5,9 +5,9 @@ import { OFFICIAL_BRANDS } from "@/data/products";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Catálogo Multimarca Autorizado (508 Productos) | Baterías, Aceites y Filtros",
+  title: "Catálogo Multimarca Autorizado (366 Productos) | Baterías, Aceites y Filtros",
   description:
-    "Catálogo oficial multimarca con 508 productos verificados en Bodega Matriz Pedernales: Baterías Ecuador, Bosch, Aroil, Mannol, Mobil, Motul, Valvoline, Amalie, Advance Filters, NGK, Denso y ATE. Despacho diario a las 24 provincias del Ecuador.",
+    "Catálogo oficial multimarca con 366 productos verificados en Bodega Matriz Pedernales: Baterías Ecuador, Bosch, Aroil, Mannol, Mobil, Motul, Valvoline, Amalie, Advance Filters, NGK, Denso y ATE. Despacho diario a las 24 provincias del Ecuador.",
   keywords: [
     "catalogo repuestos automotrices ecuador",
     "baterias ecuador precios",
@@ -19,9 +19,9 @@ export const metadata: Metadata = {
     canonical: "/productos",
   },
   openGraph: {
-    title: "Catálogo Oficial Multimarca LiderPro Ecuador (508 Productos)",
+    title: "Catálogo Oficial Multimarca LiderPro Ecuador (366 Productos)",
     description:
-      "508 productos originales en stock para despacho inmediato desde Pedernales a las 24 provincias: baterías, lubricantes, filtros, refrigerantes y bujías.",
+      "366 productos originales en stock para despacho inmediato desde Pedernales a las 24 provincias: baterías, lubricantes, filtros, refrigerantes y bujías.",
     url: "https://liderpro-digital.vercel.app/productos",
     type: "website",
   },
@@ -35,7 +35,7 @@ export default function ProductsPage() {
         <div className="max-w-3xl space-y-3">
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-emerald-50 text-emerald-800 border border-emerald-200 rounded-full text-xs font-bold uppercase tracking-wider">
             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-            <span>🟢 508 productos en inventario físico • Bodega Pedernales</span>
+            <span>🟢 366 productos en inventario físico • Bodega Pedernales</span>
           </div>
           <h1 className="text-2xl sm:text-4xl font-black text-slate-950 tracking-tight">
             Catálogo Oficial Multimarca LiderPro

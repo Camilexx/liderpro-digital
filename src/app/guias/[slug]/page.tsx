@@ -20,9 +20,28 @@ export async function generateMetadata({ params }: GuideDetailProps): Promise<Me
   const article = EDUCATIONAL_ARTICLES.find((a) => a.slug === slug);
   if (!article) return { title: "Guía no encontrada | LiderPro" };
 
+  const title = `${article.title} | Guías Técnicas LiderPro Ecuador`;
+  const description = article.metaDescription;
+
   return {
-    title: `${article.title} | LiderPro Ecuador`,
-    description: article.metaDescription,
+    title,
+    description,
+    alternates: {
+      canonical: `/guias/${article.slug}`,
+    },
+    openGraph: {
+      title,
+      description,
+      url: `https://liderpro-digital.vercel.app/guias/${article.slug}`,
+      siteName: "LiderPro Ecuador",
+      locale: "es_EC",
+      type: "article",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+    },
   };
 }
 
@@ -34,8 +53,57 @@ export default async function GuideDetailPage({ params }: GuideDetailProps) {
     notFound();
   }
 
+  const guideJsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": article.title,
+        "description": article.metaDescription,
+        "author": {
+          "@type": "Organization",
+          "name": "LiderPro Ecuador",
+          "url": "https://liderpro-digital.vercel.app",
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "LiderPro Ecuador",
+          "logo": "https://liderpro-digital.vercel.app/images/logo.png",
+        },
+        "mainEntityOfPage": `https://liderpro-digital.vercel.app/guias/${article.slug}`,
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Inicio",
+            "item": "https://liderpro-digital.vercel.app",
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Guías Técnicas",
+            "item": "https://liderpro-digital.vercel.app/guias",
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": article.title,
+            "item": `https://liderpro-digital.vercel.app/guias/${article.slug}`,
+          },
+        ],
+      },
+    ],
+  };
+
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(guideJsonLd) }}
+      />
       <div>
         <Link
           href="/guias"

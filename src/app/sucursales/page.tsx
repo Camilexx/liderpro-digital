@@ -15,6 +15,13 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/sucursales",
   },
+  openGraph: {
+    title: "Sede Matriz Pedernales y Cobertura Nacional — LiderPro Ecuador",
+    description:
+      "Bodega Matriz y Centro de Despacho en Pedernales (Manabí) y atención directa a nivel nacional.",
+    url: "https://liderpro-digital.vercel.app/sucursales",
+    type: "website",
+  },
 };
 
 export default function BranchesPage() {

@@ -7,6 +7,16 @@ export const metadata: Metadata = {
   title: "Centro de Compatibilidad y Diagnóstico Automotriz | LiderPro Ecuador",
   description:
     "Verifica la compatibilidad exacta de baterías, aceites, filtros y bujías por marca, modelo y año. Tolerancias mecánicas confirmadas para el parque automotor de Ecuador.",
+  alternates: {
+    canonical: "/encuentra-tu-producto",
+  },
+  openGraph: {
+    title: "Buscador de Compatibilidad por Vehículo | LiderPro Ecuador",
+    description:
+      "Filtra baterías, aceites y filtros compatibles con Chevrolet, Toyota, Hyundai, Kia, Nissan, Hino y Suzuki.",
+    url: "https://liderpro-digital.vercel.app/encuentra-tu-producto",
+    type: "website",
+  },
 };
 
 const POPULAR_VEHICLE_KITS = [

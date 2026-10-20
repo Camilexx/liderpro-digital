@@ -92,6 +92,12 @@ const structuredData = {
         "postalCode": "131001",
         "addressCountry": "EC",
       },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 0.0717,
+        "longitude": -80.0526,
+      },
+      "hasMap": "https://maps.google.com/?q=0.0717,-80.0526",
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",

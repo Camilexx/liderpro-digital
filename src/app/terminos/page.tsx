@@ -9,6 +9,13 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/terminos",
   },
+  openGraph: {
+    title: "Términos y Condiciones de Venta y Servicio — LiderPro Ecuador",
+    description:
+      "Términos y condiciones comerciales aplicables a despachos, pagos, garantías y facturación en Ecuador.",
+    url: "https://liderpro-digital.vercel.app/terminos",
+    type: "website",
+  },
 };
 
 export default function TerminosPage() {

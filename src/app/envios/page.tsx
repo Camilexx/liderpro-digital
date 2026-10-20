@@ -27,6 +27,13 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/envios",
   },
+  openGraph: {
+    title: "Despacho Nacional a las 24 Provincias | LiderPro Ecuador",
+    description:
+      "Logística diaria desde Bodega Matriz en Pedernales (Manabí) hacia las 24 provincias por cooperativas de transporte y couriers.",
+    url: "https://liderpro-digital.vercel.app/envios",
+    type: "website",
+  },
 };
 
 export default function ShippingPage() {
@@ -338,10 +345,10 @@ export default function ShippingPage() {
             </a>
 
             <Link
-              href="/catalogo"
+              href="/productos"
               className="btn-secondary !px-8 !py-4 text-xs font-black uppercase tracking-wider rounded-xl border border-slate-700 hover:border-slate-500 text-white w-full sm:w-auto justify-center"
             >
-              <span>Explorar Catálogo de 508 Productos</span>
+              <span>Explorar Catálogo Completo (366 Ítems)</span>
             </Link>
           </div>
 

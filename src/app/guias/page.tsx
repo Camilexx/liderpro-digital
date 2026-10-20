@@ -7,6 +7,16 @@ export const metadata: Metadata = {
   title: "Guías Técnicas y Consejos Automotrices | LiderPro Ecuador",
   description:
     "Artículos educativos sobre mantenimiento, diagnóstico de baterías, aceites para motor y prevención de fallas mecánicas en Ecuador.",
+  alternates: {
+    canonical: "/guias",
+  },
+  openGraph: {
+    title: "Guías Técnicas y Consejos Automotrices | LiderPro Ecuador",
+    description:
+      "Artículos técnicos y consejos prácticos de mantenimiento preventivo, baterías y lubricantes para conductores en Ecuador.",
+    url: "https://liderpro-digital.vercel.app/guias",
+    type: "website",
+  },
 };
 
 export default function GuidesPage() {

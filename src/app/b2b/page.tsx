@@ -32,6 +32,13 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/b2b",
   },
+  openGraph: {
+    title: "Atención B2B y Precios Mayoristas para Talleres y Flotas — LiderPro",
+    description:
+      "Abastecimiento por mayor de lubricantes, baterías y filtros con facturación SRI y entrega directa a operaciones en las 24 provincias.",
+    url: "https://liderpro-digital.vercel.app/b2b",
+    type: "website",
+  },
 };
 
 const B2B_SECTORS_DATA = [
@@ -443,10 +450,10 @@ export default function B2BPage() {
             </a>
 
             <Link
-              href="/catalogo"
+              href="/productos"
               className="btn-secondary !px-8 !py-4 text-xs font-black uppercase tracking-wider rounded-xl border border-slate-700 hover:border-slate-500 text-white w-full sm:w-auto justify-center"
             >
-              <span>Ver Catálogo de 508 Productos</span>
+              <span>Ver Catálogo Completo (366 Ítems)</span>
             </Link>
           </div>
 

@@ -30,7 +30,9 @@ export interface BusinessConfig {
       role: string;
       address: string;
       phone: string;
+      directPhone: string;
       whatsapp: string;
+      directWhatsapp: string;
       hours: string;
       isStrategicHub: boolean;
       features: string[];
@@ -56,6 +58,8 @@ export interface BusinessConfig {
     zones: string[];
   };
   whatsappMasterNumber: string;
+  pedernalesDirectNumber: string;
+  pedernalesDirectPhone: string;
   socialLinks: {
     instagram: string;
     facebook: string;
@@ -89,7 +93,9 @@ export const BUSINESS_CONFIG: BusinessConfig = {
       role: "Centro principal de acopio multimarca, mostrador técnico minorista/mayorista, atención al sector camaronero y despacho diario interprovincial.",
       address: "Sede Central Pedernales, Manabí (Zona Comercial Automotriz)",
       phone: "+593 96 748 9002",
+      directPhone: "+593 98 389 3231",
       whatsapp: "593967489002",
+      directWhatsapp: "593983893231",
       hours: "Lunes a Sábado: 08:00 – 18:00",
       isStrategicHub: true,
       features: [
@@ -131,6 +137,8 @@ export const BUSINESS_CONFIG: BusinessConfig = {
     ],
   },
   whatsappMasterNumber: "593967489002",
+  pedernalesDirectNumber: "593983893231",
+  pedernalesDirectPhone: "+593 98 389 3231",
   socialLinks: {
     instagram: "https://www.instagram.com/liderpropedernales?srtk=MWRqOWcxd2w4YXMyeg==",
     facebook: "https://www.facebook.com/share/1CHEkuMeis/",

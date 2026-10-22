@@ -74,20 +74,35 @@ export default function LocationsLogisticsSection() {
               <div className="text-xs text-slate-600 space-y-1.5 border-t border-slate-100 pt-3">
                 <p><strong>Operación:</strong> Venta de mostrador, despacho a camaroneras y bodega mayorista.</p>
                 <p><strong>Horario:</strong> {pedernales.hours}</p>
+                <p><strong>Línea Directa Local:</strong> <a href="tel:+593983893231" className="text-slate-900 font-bold hover:text-blue-700">098 389 3231 (+593 98 389 3231)</a></p>
+                <p><strong>WhatsApp Nacional:</strong> <a href="https://wa.me/593967489002" target="_blank" rel="noopener noreferrer" className="text-emerald-700 font-bold hover:underline">096 748 9002</a></p>
                 <p><strong>Facturación:</strong> Facturación electrónica autorizada por el SRI.</p>
               </div>
             </div>
 
-            <a
-              href={buildWhatsAppLink("branch", { locationChoice: "pedernales" })}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => trackEvent("branch_view", { branch: "pedernales" })}
-              className="btn-whatsapp !w-full !py-2.5 !text-xs font-bold flex items-center justify-between group"
-            >
-              <span>Atención Directa Sede Pedernales</span>
-              <ArrowRight className="w-3.5 h-3.5 text-white/80 group-hover:translate-x-1 transition-all" />
-            </a>
+            <div className="space-y-2">
+              <a
+                href="https://wa.me/593983893231?text=Hola%20LiderPro%20Pedernales%2C%20deseo%20comunicarme%20directamente%20con%20el%20mostrador%20local."
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => trackEvent("branch_view", { branch: "pedernales_local" })}
+                className="w-full py-2.5 px-4 bg-[#061B40] hover:bg-[#0A3B8C] text-[#FFC500] rounded-xl text-xs font-black flex items-center justify-between border border-[#FFC500]/30 shadow-sm transition-all"
+              >
+                <span>📞 Local Pedernales: 098 389 3231</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </a>
+
+              <a
+                href={buildWhatsAppLink("branch", { locationChoice: "pedernales" })}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => trackEvent("branch_view", { branch: "pedernales" })}
+                className="btn-whatsapp !w-full !py-2.5 !text-xs font-bold flex items-center justify-between group"
+              >
+                <span>💬 WhatsApp Nacional: 096 748 9002</span>
+                <ArrowRight className="w-3.5 h-3.5 text-white/80 group-hover:translate-x-1 transition-all" />
+              </a>
+            </div>
           </div>
 
           {/* Card 2: Circuito Diario de Encomiendas y Couriers */}

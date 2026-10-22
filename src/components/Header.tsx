@@ -259,16 +259,24 @@ export default function Header() {
             </div>
           </div>
 
-          <div className="pt-2">
+          <div className="pt-2 grid grid-cols-2 gap-2">
+            <a
+              href="https://wa.me/593983893231?text=Hola%20LiderPro%20Pedernales%2C%20deseo%20consultar%20disponibilidad%20en%20el%20local."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="py-2.5 px-3 bg-[#0A3B8C] hover:bg-blue-800 text-[#FFC500] text-[11px] font-black rounded-xl flex items-center justify-center gap-1.5 shadow-md border border-[#FFC500]/30 text-center"
+            >
+              <span>Local: 098 389 3231</span>
+            </a>
             <a
               href={buildWhatsAppLink("general_quote")}
               target="_blank"
               rel="noopener noreferrer"
               onClick={handleWhatsAppClick}
-              className="w-full py-3 !bg-[#25D366] hover:!bg-[#20ba59] !text-slate-950 text-xs font-black rounded-xl flex items-center justify-center gap-2 shadow-lg"
+              className="py-2.5 px-3 bg-[#25D366] hover:bg-[#20ba59] text-slate-950 text-[11px] font-black rounded-xl flex items-center justify-center gap-1.5 shadow-lg text-center"
             >
-              <MessageCircle className="w-4 h-4" />
-              <span>ASESOR WHATSAPP</span>
+              <MessageCircle className="w-3.5 h-3.5" />
+              <span>WhatsApp: 096</span>
             </a>
           </div>
         </div>

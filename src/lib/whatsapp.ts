@@ -41,8 +41,21 @@ export function buildDirectWhatsAppLink(
   return `https://wa.me/${phone}?text=${encoded}`;
 }
 
-export function buildWhatsAppLink(action: WhatsAppActionType, context: WhatsAppContext = {}): string {
-  const phone = BUSINESS_CONFIG.whatsappMasterNumber || "593967489002";
+export function buildPedernalesDirectLink(
+  text: string = "Hola LiderPro Mostrador Pedernales, deseo consultar disponibilidad y precios en el local."
+): string {
+  const phone = BUSINESS_CONFIG.pedernalesDirectNumber || "593983893231";
+  return `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
+}
+
+export function buildWhatsAppLink(
+  action: WhatsAppActionType,
+  context: WhatsAppContext = {},
+  preferDirectLocal: boolean = false
+): string {
+  const phone = preferDirectLocal
+    ? BUSINESS_CONFIG.pedernalesDirectNumber || "593983893231"
+    : BUSINESS_CONFIG.whatsappMasterNumber || "593967489002";
 
   if (context.text) {
     return `https://wa.me/${phone}?text=${encodeURIComponent(context.text)}`;

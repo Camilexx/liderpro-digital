@@ -88,6 +88,22 @@ export default function Footer() {
                 </a>
               </div>
             </div>
+
+            {/* Direct Phone Lines */}
+            <div className="pt-3 text-[11.5px] space-y-1.5 text-slate-300 border-t border-slate-800/80">
+              <div className="flex items-center gap-2">
+                <span className="text-[#FFC500] font-bold">📞 Local Pedernales:</span>
+                <a href="tel:+593983893231" className="hover:text-white font-semibold underline decoration-slate-600">
+                  098 389 3231 (+593 98 389 3231)
+                </a>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-emerald-400 font-bold">💬 WhatsApp Nacional:</span>
+                <a href="https://wa.me/593967489002" target="_blank" rel="noopener noreferrer" className="hover:text-white font-semibold underline decoration-slate-600">
+                  096 748 9002 (+593 96 748 9002)
+                </a>
+              </div>
+            </div>
           </div>
 
           {/* Categorías */}

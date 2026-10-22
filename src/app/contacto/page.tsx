@@ -143,13 +143,29 @@ export default function ContactPage() {
           </div>
 
           <div className="bg-white p-6 rounded-3xl border border-slate-200 shadow-soft text-xs text-slate-600 space-y-3">
-            <strong className="text-slate-800 block text-sm">Puntos de Atención:</strong>
-            <p>
-              <strong>Pedernales:</strong> {BUSINESS_CONFIG.locations.pedernales.address}
-            </p>
-            <p>
-              <strong>Quito:</strong> {BUSINESS_CONFIG.locations.quito.address}
-            </p>
+            <strong className="text-slate-800 block text-sm">Puntos de Atención y Teléfonos Directos:</strong>
+            <div className="p-3 bg-slate-50 rounded-xl space-y-1.5 border border-slate-100">
+              <p className="font-bold text-slate-900">Hub Central Pedernales (Manabí):</p>
+              <p className="text-[11px] text-slate-500">{BUSINESS_CONFIG.locations.pedernales.address}</p>
+              <div className="pt-1.5 flex flex-col gap-1 text-[11px]">
+                <p>
+                  📞 <strong>Línea Directa Local Pedernales:</strong>{" "}
+                  <a href="tel:+593983893231" className="text-blue-700 font-bold hover:underline">
+                    098 389 3231
+                  </a>
+                </p>
+                <p>
+                  💬 <strong>WhatsApp & Despacho Nacional:</strong>{" "}
+                  <a href="https://wa.me/593967489002" target="_blank" rel="noopener noreferrer" className="text-emerald-700 font-bold hover:underline">
+                    096 748 9002
+                  </a>
+                </p>
+              </div>
+            </div>
+            <div className="p-3 bg-slate-50 rounded-xl space-y-1 border border-slate-100">
+              <p className="font-bold text-slate-900">Enlace Logístico Sierra — Quito:</p>
+              <p className="text-[11px] text-slate-500">{BUSINESS_CONFIG.locations.quito.address}</p>
+            </div>
           </div>
         </div>
       </div>

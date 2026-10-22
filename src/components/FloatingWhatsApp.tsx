@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { buildWhatsAppLink } from "@/lib/whatsapp";
 import { trackEvent } from "@/lib/analytics";
+import { Phone, MessageCircle, X } from "lucide-react";
 
 function WhatsAppIcon({ className = "w-7 h-7" }: { className?: string }) {
   return (
@@ -13,47 +14,88 @@ function WhatsAppIcon({ className = "w-7 h-7" }: { className?: string }) {
 }
 
 export default function FloatingWhatsApp() {
-  const [isHovered, setIsHovered] = useState(false);
-
-  const handleClick = () => {
-    trackEvent("whatsapp_click", { location: "floating_button" });
-  };
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <aside
-      aria-label="Atención por WhatsApp"
-      className="fixed bottom-6 right-6 z-50 flex items-center gap-3"
+      aria-label="Atención Telefónica y WhatsApp LiderPro"
+      className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3"
     >
-      {/* Floating Tooltip */}
-      <div
-        role="status"
-        className={`hidden sm:flex items-center gap-2 px-3.5 py-2 bg-[#061B40] text-white text-xs font-bold rounded-xl shadow-2xl border border-white/10 transition-all duration-300 pointer-events-none ${
-          isHovered ? "opacity-100 translate-x-0 scale-100" : "opacity-0 translate-x-3 scale-95"
-        }`}
-      >
-        <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-        <span>¿Dudas con tu producto? Asesoría en vivo</span>
-      </div>
+      {/* Channels Popover Card */}
+      {isOpen && (
+        <div className="bg-[#061B40] text-white p-4 rounded-2xl shadow-2xl border border-[#FFC500]/30 w-72 space-y-3 animate-fade-up">
+          <div className="flex items-center justify-between pb-2 border-b border-white/10">
+            <span className="text-xs font-black uppercase text-[#FFC500] tracking-wider">
+              Líneas de Atención Oficial
+            </span>
+            <button
+              onClick={() => setIsOpen(false)}
+              className="text-slate-400 hover:text-white p-1 cursor-pointer"
+              aria-label="Cerrar panel de contacto"
+            >
+              <X className="w-4 h-4" />
+            </button>
+          </div>
 
-      {/* Floating Action Button */}
-      <a
-        href={buildWhatsAppLink("general_quote")}
-        target="_blank"
-        rel="noopener noreferrer"
-        onClick={handleClick}
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-        onFocus={() => setIsHovered(true)}
-        onBlur={() => setIsHovered(false)}
-        aria-label="Contactar a un asesor técnico por WhatsApp"
-        className="relative w-14 h-14 bg-gradient-to-tr from-[#1EBE5D] to-[#25D366] hover:from-[#1AA851] hover:to-[#22C35E] text-white rounded-full flex items-center justify-center shadow-[0_8px_25px_rgba(37,211,102,0.45)] hover:shadow-[0_12px_32px_rgba(37,211,102,0.65)] hover:scale-105 active:scale-95 transition-all duration-300"
+          <div className="space-y-2">
+            {/* Channel 1: Local Pedernales Directo */}
+            <a
+              href="https://wa.me/593983893231?text=Hola%20LiderPro%20Pedernales%2C%20deseo%20consultar%20disponibilidad%20en%20el%20mostrador%20local."
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => trackEvent("whatsapp_click", { location: "floating_local_pedernales" })}
+              className="flex items-center gap-3 p-2.5 rounded-xl bg-white/10 hover:bg-white/20 transition-all border border-white/10 group"
+            >
+              <div className="w-8 h-8 rounded-lg bg-[#FFC500] text-slate-950 flex items-center justify-center font-bold shrink-0">
+                <Phone className="w-4 h-4 text-slate-950" />
+              </div>
+              <div className="text-left">
+                <div className="text-[11px] font-black text-white group-hover:text-[#FFC500] transition-colors">
+                  Local Pedernales Directo
+                </div>
+                <div className="text-[10px] text-slate-300 font-mono">
+                  098 389 3231 · Mostrador
+                </div>
+              </div>
+            </a>
+
+            {/* Channel 2: WhatsApp Despacho Nacional */}
+            <a
+              href={buildWhatsAppLink("general_quote")}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => trackEvent("whatsapp_click", { location: "floating_master" })}
+              className="flex items-center gap-3 p-2.5 rounded-xl bg-[#25D366]/20 hover:bg-[#25D366]/30 transition-all border border-[#25D366]/40 group"
+            >
+              <div className="w-8 h-8 rounded-lg bg-[#25D366] text-slate-950 flex items-center justify-center font-bold shrink-0">
+                <MessageCircle className="w-4 h-4 text-slate-950 fill-black/10" />
+              </div>
+              <div className="text-left">
+                <div className="text-[11px] font-black text-emerald-300 group-hover:text-white transition-colors">
+                  WhatsApp Despacho Nacional
+                </div>
+                <div className="text-[10px] text-slate-300 font-mono">
+                  096 748 9002 · Asesoría
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      )}
+
+      {/* Floating Action Button Toggle */}
+      <button
+        type="button"
+        onClick={() => setIsOpen(!isOpen)}
+        aria-label="Abrir opciones de contacto telefónico y WhatsApp"
+        className="relative w-14 h-14 bg-gradient-to-tr from-[#1EBE5D] to-[#25D366] hover:from-[#1AA851] hover:to-[#22C35E] text-white rounded-full flex items-center justify-center shadow-[0_8px_25px_rgba(37,211,102,0.45)] hover:shadow-[0_12px_32px_rgba(37,211,102,0.65)] hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer"
       >
         <span className="absolute -top-1 -right-1 flex h-4 w-4">
           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-300 opacity-75"></span>
           <span className="relative inline-flex rounded-full h-4 w-4 bg-emerald-500 border-2 border-white"></span>
         </span>
         <WhatsAppIcon className="w-7 h-7 fill-white" />
-      </a>
+      </button>
     </aside>
   );
 }

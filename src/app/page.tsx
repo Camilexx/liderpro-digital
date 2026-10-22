@@ -22,6 +22,7 @@ import {
   ShieldCheck,
   FileCheck2,
   MapPin,
+  Phone,
 } from "lucide-react";
 import ProductCard from "@/components/ProductCard";
 import EmergencyBanner from "@/components/EmergencyBanner";
@@ -79,40 +80,41 @@ const VEHICLE_SEGMENTS: VehicleSegment[] = [
 // Top Curated Best Sellers by Category (Verified Active SKUs from Unified Excel)
 const BEST_SELLER_SKUS_BY_CATEGORY: Record<string, string[]> = {
   todos: [
-    "03024-HP-I",   // Batería Ecuador 24 HP Tapa Roja (85 Ah)
-    "02724HPS4",    // Batería Bosch 24 HP S4 PowerFrame (64 Ah)
-    "LP-LUR-002-2", // Mobil Delvac MX 15W-40 Galón Diésel
+    "03024-HP-I",   // Batería Ecuador 24 HP High Power (85A Tapa Roja)
     "LP-LUR-010",   // Mannol Chevrolet/Opel OEM 5W-30 Sintético
-    "LP-FIL-002",   // Filtro Aire Hilux / Fortuner 2.7 & 2.4
-    "078AO-1539",   // Filtro Aceite Chevrolet D-Max 3.0 / 2.5
+    "03042-HP",     // Batería Ecuador 42 HP High Power (62A)
+    "LP-LUR-008",   // Mannol Classic 10W-40 Semisintético
+    "03027-HP",     // Batería Ecuador 27 HP High Power (95A Diésel)
+    "LP-LUR-006",   // Mannol TS-4 SHPD 15W-40 Diésel Pesado
     "03031-SHD",    // Batería Ecuador 31 SHD Pesada / Camaroneras
-    "LP-LUR-005-3", // Aroil 15W-40 CI-4 Diésel Pesado
+    "LP-LUR-003",   // Mannol Refrigerante Rojo G12+ 5 Años
   ],
-  baterias: [
-    "03024-HP-I",   // Batería Ecuador 24 HP Tapa Roja 85 Amp
-    "02724HPS4",    // Batería Bosch 24 HP S4 64 Amp
-    "42HPS4",       // Batería Bosch 42 HP S4 55 Amp
-    "03031-SHD",    // Batería Ecuador 31 SHD Heavy Duty 105 Amp
+  baterias_ecuador: [
+    "03024-HP-I",   // Batería Ecuador 24 HP I High Power 85 Amp (Tapa Roja)
+    "03042-HP",     // Batería Ecuador 42 HP High Power 62 Amp
+    "03027-HP",     // Batería Ecuador 27 HP High Power 95 Amp (Camionetas)
+    "03031-SHD",    // Batería Ecuador 31 SHD Super Heavy Duty 105 Amp
+    "03034-HP",     // Batería Ecuador 34 HP High Power 80 Amp
+    "030NS40-HP",   // Batería Ecuador NS40 HP High Power 45 Amp (Asiáticos)
+    "03024-FE",     // Batería Ecuador 24 FE Full Equipo 65 Amp
+    "030N150-SHD",  // Batería Ecuador N150 SHD Super Heavy Duty 160 Amp
   ],
-  lubricantes: [
-    "LP-LUR-002-2", // Mobil Delvac MX 15W-40 Galón Diésel
-    "LP-LUR-010",   // Mannol Chevrolet/Opel OEM 5W-30 Sintético
-    "LP-LUR-005-3", // Aroil 15W-40 CI-4 Diésel Pesado
-    "LP-LUR-002-4", // Motul Moto 5000 10W-40 4T Semisintético
-  ],
-  filtros: [
-    "LP-FIL-002",   // Filtro Aire Hilux 2.7L / 2.4L DI
-    "078AO-1539",   // Filtro Aceite Chevrolet D-Max 3.0 / 2.5
-    "AA-2662",      // Filtro Aire Chevrolet D-Max 2.0T
-    "078AFP-012",   // Filtro Combustible Universal Advance
+  mannol: [
+    "LP-LUR-010",   // Mannol Chevrolet Opel OEM 5W-30 Sintético
+    "LP-LUR-008",   // Mannol Classic 10W-40 Semisintético
+    "LP-LUR-006",   // Mannol TS-4 SHPD 15W-40 Extra Diésel
+    "LP-LUR-007",   // Mannol Safari 20W-50 Alto Rendimiento
+    "LP-LUR-011",   // Mannol Toyota Lexus OEM 5W-30 Metálico
+    "LP-LUR-003",   // Mannol Refrigerante Rojo G12+ 5 Años
+    "LP-LUR-013",   // Mannol Ceramic 5W-30 Sintético Avanzado
+    "LP-LUR-020",   // Mannol Diesel TDI 5W-30 Sintético
   ],
 };
 
 const BEST_SELLER_TABS = [
-  { id: "todos", label: "⭐ Todos los Más Vendidos", count: 8 },
-  { id: "baterias", label: "🔋 Baterías de Alta Demanda", count: 4 },
-  { id: "lubricantes", label: "🛢️ Lubricantes & Aceites", count: 4 },
-  { id: "filtros", label: "🌪️ Filtros de Mayor Salida", count: 4 },
+  { id: "todos", label: "⭐ Selección Insignia (Ambas Marcas)", count: 8 },
+  { id: "baterias_ecuador", label: "🔋 Baterías Ecuador (Línea Oficial)", count: 8 },
+  { id: "mannol", label: "🇩🇪 Mannol Alemania (Lubricantes & Químicos)", count: 8 },
 ] as const;
 
 // Curated 8-Product Showcase representing all distributor categories
@@ -141,7 +143,7 @@ const POPULAR_VEHICLES = [
 
 export default function HomePage() {
   const [selectedSegment, setSelectedSegment] = useState<ApplicationType | "todos">("todos");
-  const [bestSellerCategory, setBestSellerCategory] = useState<"todos" | "baterias" | "lubricantes" | "filtros">("todos");
+  const [bestSellerCategory, setBestSellerCategory] = useState<"todos" | "baterias_ecuador" | "mannol">("todos");
 
   // Retrieve curated products safely
   const displayedBestSellers = (
@@ -276,14 +278,24 @@ export default function HomePage() {
 
             {/* Information & Quick Access Strip (Placed OUTSIDE image to ensure 100% photo visibility) */}
             <div className="bg-white border border-slate-200/90 rounded-2xl p-3 shadow-sm space-y-2.5">
-              <div className="flex items-center justify-between text-xs text-slate-700 px-1">
+              <div className="flex flex-wrap items-center justify-between text-xs text-slate-700 px-1 gap-2">
                 <div className="flex items-center gap-2 font-bold text-slate-900">
                   <MapPin className="w-4 h-4 text-emerald-600 shrink-0" />
                   <span>Mostrador Comercial & Bodega Pedernales</span>
                 </div>
-                <span className="text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-200">
-                  📦 Stock Físico en Percha
-                </span>
+                <div className="flex items-center gap-2">
+                  <a
+                    href="tel:+593983893231"
+                    className="inline-flex items-center gap-1.5 text-[11px] font-black text-blue-900 bg-blue-50 hover:bg-blue-100 px-2.5 py-1 rounded-lg border border-blue-200 transition-colors"
+                    title="Llamar directo al local en Pedernales"
+                  >
+                    <Phone className="w-3 h-3 text-blue-700" />
+                    <span>Directo: 098 389 3231</span>
+                  </a>
+                  <span className="text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-200 hidden sm:inline">
+                    📦 Stock Físico
+                  </span>
+                </div>
               </div>
 
               {/* Clean Quick Category Pills */}
@@ -378,45 +390,135 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 03: PRODUCTOS FLAGSHIP CON MAYOR ROTACIÓN EN MOSTRADOR PEDERNALES */}
+      {/* 03: PRODUCTOS FLAGSHIP CON MAYOR ROTACIÓN EN MOSTRADOR PEDERNALES: MANNOL Y BATERÍAS ECUADOR */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 animate-fade-up">
-        <div className="bg-gradient-to-br from-white via-slate-50/70 to-blue-50/30 border border-slate-200/90 rounded-3xl p-6 sm:p-8 lg:p-10 space-y-6 shadow-sm">
+        <div className="bg-gradient-to-br from-white via-slate-50/70 to-blue-50/30 border border-slate-200/90 rounded-3xl p-6 sm:p-8 lg:p-10 space-y-8 shadow-sm">
           {/* Header Row */}
-          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 pb-4 border-b border-slate-200/70">
-            <div className="space-y-1.5 max-w-2xl">
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-5 pb-5 border-b border-slate-200/70">
+            <div className="space-y-2 max-w-2xl">
               <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-[#061B40] text-[#FFC500] rounded-full text-[11px] font-black uppercase tracking-wider shadow-sm">
                 <Sparkles className="w-3.5 h-3.5" />
-                <span>TOP ROTACIÓN · BODEGA MATRIZ PEDERNALES</span>
+                <span>MARCAS INSIGNIA OFICIALES · BODEGA MATRIZ PEDERNALES</span>
               </div>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-950 tracking-tight">
-                Productos con Mayor Demanda en Mostrador
+                Selección Más Vendida: Baterías Ecuador & Mannol
               </h2>
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                Artículos indispensables de mayor salida diaria y despacho a 24 provincias: Baterías Ecuador Tapa Roja, Bosch PowerFrame, aceites Mobil Delvac, sintéticos Mannol y filtración Advance para camionetas, camiones y flotas.
+                Las dos líneas líderes con mayor salida y demanda diaria en nuestro mostrador físico y despachos interprovinciales. Baterías de arranque pesado con garantía escrita y lubricación sintética alemana certificada.
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 shrink-0">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-emerald-50 border border-emerald-200 rounded-xl text-xs font-bold text-emerald-800">
-                <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
-                <span>Stock Físico Verificado en Local</span>
-              </div>
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 shrink-0">
               <a
-                href={buildWhatsAppLink("fleet_bulk", {
-                  neededItem: "Productos Más Vendidos en Pedernales",
-                  city: "Pedernales / Despacho Nacional",
-                })}
+                href="tel:+593983893231"
+                className="btn-secondary !py-2.5 !px-4 text-xs font-black shadow-sm flex items-center justify-center gap-2 border-slate-300 hover:border-slate-400"
+                title="Llamar directo al local en Pedernales"
+              >
+                <Phone className="w-3.5 h-3.5 text-blue-700" />
+                <span>Local: 098 389 3231</span>
+              </a>
+              <a
+                href="https://wa.me/593983893231?text=Hola%20LiderPro%20Pedernales%2C%20deseo%20consultar%20disponibilidad%20de%20Bater%C3%ADas%20Ecuador%20y%20aceites%20Mannol."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-gold !py-2.5 !px-5 text-xs font-black shadow-md flex items-center gap-1.5"
+                className="btn-gold !py-2.5 !px-5 text-xs font-black shadow-md flex items-center justify-center gap-2 text-center"
               >
                 <MessageCircle className="w-4 h-4" />
-                <span>Consultar Stock en Mostrador</span>
+                <span>Mostrador WhatsApp</span>
               </a>
             </div>
           </div>
 
-          {/* Interactive Category Tabs */}
+          {/* Dual Brand Institutional Presentation Pillars */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Pillar A: Baterías Ecuador */}
+            <div className="bg-gradient-to-br from-[#061B40] to-[#0A3B8C] text-white p-5 sm:p-6 rounded-2xl border border-[#FFC500]/30 shadow-md flex flex-col justify-between space-y-4">
+              <div className="space-y-2.5">
+                <div className="flex items-center justify-between flex-wrap gap-2">
+                  <span className="text-[11px] font-black uppercase tracking-wider text-[#FFC500] bg-white/10 px-2.5 py-1 rounded-md border border-white/10 flex items-center gap-1.5">
+                    🔋 Baterías Ecuador Oficial
+                  </span>
+                  <span className="text-[10px] font-bold bg-[#FFC500] text-slate-950 px-2 py-0.5 rounded-full uppercase tracking-wider">
+                    Sponsor Oficial La Tri (FEF)
+                  </span>
+                </div>
+                <h3 className="text-lg sm:text-xl font-black text-white tracking-tight">
+                  Líder Nacional en Arranque y Trabajo Pesado
+                </h3>
+                <p className="text-xs text-slate-200 leading-relaxed">
+                  Tecnología Calcio-Plata 100% libre de mantenimiento. Modelos High Power Tapa Roja (24HP, 42HP, 27HP) y Super Heavy Duty 31 SHD para camaroneras y flotas de transporte.
+                </p>
+                <div className="pt-1 flex flex-wrap gap-2 text-[11px] text-amber-300 font-semibold">
+                  <span>✓ 18 a 24 Meses de Garantía</span>
+                  <span>•</span>
+                  <span>✓ Diagnóstico Previo en Local</span>
+                  <span>•</span>
+                  <span>✓ Entrega a Nivel Nacional</span>
+                </div>
+              </div>
+              <div className="pt-2 flex items-center justify-between border-t border-white/10 text-xs">
+                <button
+                  type="button"
+                  onClick={() => setBestSellerCategory("baterias_ecuador")}
+                  className="font-bold text-[#FFC500] hover:text-white transition-colors flex items-center gap-1"
+                >
+                  <span>Ver Modelos Baterías Ecuador</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </button>
+                <Link
+                  href="/baterias"
+                  className="text-[11px] text-slate-300 hover:text-white underline decoration-slate-400"
+                >
+                  Línea completa baterías
+                </Link>
+              </div>
+            </div>
+
+            {/* Pillar B: Mannol Alemania */}
+            <div className="bg-gradient-to-br from-slate-900 via-slate-950 to-[#061B40] text-white p-5 sm:p-6 rounded-2xl border border-slate-700/80 shadow-md flex flex-col justify-between space-y-4">
+              <div className="space-y-2.5">
+                <div className="flex items-center justify-between flex-wrap gap-2">
+                  <span className="text-[11px] font-black uppercase tracking-wider text-emerald-400 bg-white/10 px-2.5 py-1 rounded-md border border-white/10 flex items-center gap-1.5">
+                    🇩🇪 Mannol · Made in Germany
+                  </span>
+                  <span className="text-[10px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 px-2 py-0.5 rounded-full uppercase tracking-wider">
+                    Certificación OEM Alemania
+                  </span>
+                </div>
+                <h3 className="text-lg sm:text-xl font-black text-white tracking-tight">
+                  Lubricación Sintética de Alta Tecnología
+                </h3>
+                <p className="text-xs text-slate-200 leading-relaxed">
+                  Homologaciones directas Mercedes-Benz, BMW, VW y GM Dexos. Aceites 5W-30 OEM, 10W-40 Classic, 15W-40 TS-4 Diésel Pesado y Refrigerantes Orgánicos OAT G12+.
+                </p>
+                <div className="pt-1 flex flex-wrap gap-2 text-[11px] text-emerald-300 font-semibold">
+                  <span>✓ 100% Sellado de Fábrica</span>
+                  <span>•</span>
+                  <span>✓ Litros, Galones y Canecas</span>
+                  <span>•</span>
+                  <span>✓ Máxima Durabilidad del Motor</span>
+                </div>
+              </div>
+              <div className="pt-2 flex items-center justify-between border-t border-white/10 text-xs">
+                <button
+                  type="button"
+                  onClick={() => setBestSellerCategory("mannol")}
+                  className="font-bold text-emerald-400 hover:text-white transition-colors flex items-center gap-1"
+                >
+                  <span>Ver Catálogo Mannol</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </button>
+                <Link
+                  href="/lubricantes"
+                  className="text-[11px] text-slate-300 hover:text-white underline decoration-slate-400"
+                >
+                  Línea completa lubricantes
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          {/* Interactive Category Tabs for the Two Brands */}
           <div className="flex items-center gap-2 overflow-x-auto pb-1 no-scrollbar pt-1">
             {BEST_SELLER_TABS.map((tab) => {
               const isActive = bestSellerCategory === tab.id;
@@ -425,7 +527,7 @@ export default function HomePage() {
                   key={tab.id}
                   type="button"
                   onClick={() => setBestSellerCategory(tab.id)}
-                  className={`px-4 py-2 rounded-xl text-xs font-black transition-all cursor-pointer shrink-0 border flex items-center gap-2 ${
+                  className={`px-4 py-2.5 rounded-xl text-xs font-black transition-all cursor-pointer shrink-0 border flex items-center gap-2 ${
                     isActive
                       ? "bg-[#0A3B8C] text-white border-[#0A3B8C] shadow-sm scale-102"
                       : "bg-white text-slate-700 border-slate-200/90 hover:bg-slate-100/80 hover:border-slate-300"

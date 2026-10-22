@@ -80,7 +80,7 @@ const structuredData = {
       "url": "https://liderpro-digital.vercel.app",
       "logo": "https://liderpro-digital.vercel.app/images/logo.png",
       "image": "https://liderpro-digital.vercel.app/images/hero/local-pedernales.jpg",
-      "telephone": "+593967489002",
+      "telephone": ["+593967489002", "+593983893231"],
       "priceRange": "$$",
       "currenciesAccepted": "USD",
       "paymentAccepted": "Cash, Credit Card, Electronic Transfer, SRI Withholding",

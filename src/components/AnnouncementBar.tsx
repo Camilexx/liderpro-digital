@@ -40,7 +40,28 @@ export default function AnnouncementBar() {
           </span>
         </div>
 
-        <div className="flex items-center gap-4 text-[11px]">
+        <div className="flex items-center gap-3 sm:gap-4 text-[11px]">
+          <div className="hidden lg:flex items-center gap-3 text-slate-300 font-medium">
+            <a
+              href="tel:+593983893231"
+              className="hover:text-[#FFC500] flex items-center gap-1 transition-colors"
+              title="Llamada directa Mostrador Pedernales"
+            >
+              <span className="text-slate-400">Local Pedernales:</span>
+              <strong className="text-white font-bold">098 389 3231</strong>
+            </a>
+            <span className="text-slate-600">|</span>
+            <a
+              href="https://wa.me/593967489002"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-emerald-400 flex items-center gap-1 transition-colors"
+              title="WhatsApp Despacho Nacional"
+            >
+              <span className="text-slate-400">WhatsApp:</span>
+              <strong className="text-emerald-400 font-bold">096 748 9002</strong>
+            </a>
+          </div>
           <Link
             href="/envios"
             className="hidden sm:inline text-[#FFC500] hover:text-white font-bold transition-colors"

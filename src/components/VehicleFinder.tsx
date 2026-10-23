@@ -192,8 +192,8 @@ export default function VehicleFinder({
 
   return (
     <div className="bg-white rounded-3xl border border-slate-200/90 shadow-xl shadow-slate-200/50 p-6 sm:p-10 animate-fade-up relative overflow-hidden">
-      {/* Top Accent Gradient Bar */}
-      <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-red-600 via-amber-500 to-emerald-600" />
+      {/* Top Accent Gradient Bar - Official LiderPro Palette */}
+      <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#061B40] via-[#0A3B8C] to-[#FFC500]" />
 
       {/* Editorial Title */}
       <div className="flex flex-col sm:flex-row sm:items-baseline justify-between pb-6 border-b border-slate-100 gap-4">
@@ -220,7 +220,7 @@ export default function VehicleFinder({
                 <span
                   key={step}
                   className={`w-2 h-2 rounded-full transition-all ${
-                    step <= currentStep ? "bg-brand-primary" : "bg-slate-300"
+                    step <= currentStep ? "bg-[#0A3B8C]" : "bg-slate-300"
                   }`}
                 />
               ))}
@@ -254,7 +254,7 @@ export default function VehicleFinder({
                 onClick={() => handleSegmentSelect(seg)}
                 className={`card-interactive p-4 text-left flex flex-col justify-between gap-2 cursor-pointer ${
                   isSelected
-                    ? "!border-brand-primary !bg-red-50/40 ring-2 ring-brand-primary/20"
+                    ? "!border-[#0A3B8C] !bg-blue-50/50 ring-2 ring-[#0A3B8C]/20"
                     : ""
                 }`}
               >
@@ -463,7 +463,7 @@ export default function VehicleFinder({
               })}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-slate-900 font-black underline hover:text-brand-primary"
+              className="text-slate-900 font-black underline hover:text-[#0A3B8C]"
             >
               Consultar por WhatsApp
             </a>

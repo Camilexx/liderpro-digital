@@ -27,14 +27,14 @@ function TikTokIcon({ className = "w-3.5 h-3.5" }: { className?: string }) {
 
 export default function AnnouncementBar() {
   return (
-    <div className="bg-[#061B40] text-slate-300 py-2 px-4 sm:px-6 lg:px-8 text-xs border-b border-[#0A3B8C]/40">
+    <div className="bg-[#04122b] text-slate-300 py-2 px-4 sm:px-6 lg:px-8 text-xs border-b border-[#0A3B8C]/40">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <span className="w-2 h-2 rounded-full bg-[#FFC500] animate-pulse"></span>
-          <span className="font-semibold text-white tracking-wide text-[11px] sm:text-xs">
+          <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0"></span>
+          <span className="font-bold text-white tracking-wide text-[11px] sm:text-xs">
             Hub Central Pedernales, Manabí
           </span>
-          <span className="text-slate-500 hidden md:inline">•</span>
+          <span className="text-slate-600 hidden md:inline">•</span>
           <span className="text-slate-300 hidden md:inline text-[11px]">
             Despachos diarios a nivel nacional (24 provincias)
           </span>
@@ -44,22 +44,22 @@ export default function AnnouncementBar() {
           <div className="hidden lg:flex items-center gap-3 text-slate-300 font-medium">
             <a
               href="tel:+593983893231"
-              className="hover:text-[#FFC500] flex items-center gap-1 transition-colors"
+              className="hover:text-[#FFC500] flex items-center gap-1.5 transition-colors bg-white/5 hover:bg-white/10 px-2 py-0.5 rounded-md border border-white/10"
               title="Llamada directa Mostrador Pedernales"
             >
-              <span className="text-slate-400">Local Pedernales:</span>
+              <span className="text-slate-400">Local:</span>
               <strong className="text-white font-bold">098 389 3231</strong>
             </a>
-            <span className="text-slate-600">|</span>
+            <span className="text-slate-700">|</span>
             <a
               href="https://wa.me/593967489002"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-emerald-400 flex items-center gap-1 transition-colors"
+              className="hover:text-emerald-300 flex items-center gap-1.5 transition-colors bg-emerald-950/60 hover:bg-emerald-900/60 px-2 py-0.5 rounded-md border border-emerald-500/30"
               title="WhatsApp Despacho Nacional"
             >
-              <span className="text-slate-400">WhatsApp:</span>
-              <strong className="text-emerald-400 font-bold">096 748 9002</strong>
+              <span className="text-emerald-400 font-semibold">WhatsApp:</span>
+              <strong className="text-white font-bold">096 748 9002</strong>
             </a>
           </div>
           <Link

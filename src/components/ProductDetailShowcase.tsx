@@ -110,13 +110,13 @@ export default function ProductDetailShowcase({ product }: ProductDetailShowcase
             )}
 
             {/* Badges: Brand & Best Seller */}
-            <div className="absolute top-4 left-4 flex flex-col gap-1.5 z-10 pointer-events-none">
-              <span className="px-3 py-1 bg-[#061B40] text-white text-xs font-black uppercase tracking-wider rounded-lg shadow-sm border border-white/10 backdrop-blur-xs">
+            <div className="absolute top-4 left-4 flex items-center gap-2 z-10 pointer-events-none">
+              <span className="px-3 py-1 bg-[#061B40]/95 backdrop-blur-md text-white text-xs font-black uppercase tracking-wider rounded-lg shadow-sm border border-white/10">
                 {product.brand}
               </span>
               {product.isBestSeller && (
                 <span className="px-2.5 py-1 bg-gradient-to-r from-[#FFC500] to-[#FDB813] text-slate-950 font-black text-[10px] uppercase tracking-wider rounded-lg shadow-sm border border-amber-400/80 flex items-center gap-1">
-                  ⭐ Más Vendido
+                  ⭐ Top Ventas
                 </span>
               )}
             </div>

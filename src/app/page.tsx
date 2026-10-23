@@ -195,21 +195,21 @@ export default function HomePage() {
 
             {/* Quick Metrics Bar: 4 Institutional Pillars */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-1">
-              <div className="bg-slate-50 border border-slate-200/90 rounded-2xl p-2.5 text-center">
-                <span className="block text-base sm:text-lg font-black text-[#0A3B8C]">+500</span>
-                <span className="text-[10.5px] text-slate-600 font-bold uppercase tracking-tight">Referencias</span>
+              <div className="bg-slate-50/80 border border-slate-200/90 rounded-2xl p-3 text-center shadow-2xs hover:bg-white transition-colors">
+                <span className="block text-lg sm:text-xl font-black text-[#0A3B8C]">+500</span>
+                <span className="text-[10px] text-slate-500 font-bold uppercase tracking-wider">Referencias</span>
               </div>
-              <div className="bg-slate-50 border border-slate-200/90 rounded-2xl p-2.5 text-center">
-                <span className="block text-base sm:text-lg font-black text-emerald-600">24 Provincias</span>
-                <span className="text-[10.5px] text-slate-600 font-bold uppercase tracking-tight">Despacho Diario</span>
+              <div className="bg-slate-50/80 border border-slate-200/90 rounded-2xl p-3 text-center shadow-2xs hover:bg-white transition-colors">
+                <span className="block text-lg sm:text-xl font-black text-emerald-600">24 Provincias</span>
+                <span className="text-[10px] text-slate-500 font-bold uppercase tracking-wider">Despacho Diario</span>
               </div>
-              <div className="bg-slate-50 border border-slate-200/90 rounded-2xl p-2.5 text-center">
-                <span className="block text-base sm:text-lg font-black text-slate-900">100% SRI</span>
-                <span className="text-[10.5px] text-slate-600 font-bold uppercase tracking-tight">Lote Original</span>
+              <div className="bg-slate-50/80 border border-slate-200/90 rounded-2xl p-3 text-center shadow-2xs hover:bg-white transition-colors">
+                <span className="block text-lg sm:text-xl font-black text-slate-900">100% SRI</span>
+                <span className="text-[10px] text-slate-500 font-bold uppercase tracking-wider">Lote Original</span>
               </div>
-              <div className="bg-slate-50 border border-slate-200/90 rounded-2xl p-2.5 text-center">
-                <span className="block text-base sm:text-lg font-black text-amber-600">Mayorista</span>
-                <span className="text-[10.5px] text-slate-600 font-bold uppercase tracking-tight">& Mostrador</span>
+              <div className="bg-slate-50/80 border border-slate-200/90 rounded-2xl p-3 text-center shadow-2xs hover:bg-white transition-colors">
+                <span className="block text-lg sm:text-xl font-black text-amber-600">Mayorista</span>
+                <span className="text-[10px] text-slate-500 font-bold uppercase tracking-wider">& Mostrador</span>
               </div>
             </div>
 
@@ -421,7 +421,7 @@ export default function HomePage() {
                 href="https://wa.me/593983893231?text=Hola%20LiderPro%20Pedernales%2C%20deseo%20consultar%20disponibilidad%20de%20Bater%C3%ADas%20Ecuador%20y%20aceites%20Mannol."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-gold !py-2.5 !px-5 text-xs font-black shadow-md flex items-center justify-center gap-2 text-center"
+                className="btn-whatsapp !py-2.5 !px-4 text-xs font-black shadow-md flex items-center justify-center gap-2 text-center"
               >
                 <MessageCircle className="w-4 h-4" />
                 <span>Mostrador WhatsApp</span>
@@ -529,14 +529,14 @@ export default function HomePage() {
                   onClick={() => setBestSellerCategory(tab.id)}
                   className={`px-4 py-2.5 rounded-xl text-xs font-black transition-all cursor-pointer shrink-0 border flex items-center gap-2 ${
                     isActive
-                      ? "bg-[#0A3B8C] text-white border-[#0A3B8C] shadow-sm scale-102"
-                      : "bg-white text-slate-700 border-slate-200/90 hover:bg-slate-100/80 hover:border-slate-300"
+                      ? "bg-[#061B40] text-white border-[#061B40] shadow-sm scale-102"
+                      : "bg-white text-slate-700 border-slate-200/90 hover:bg-slate-50 hover:border-slate-300"
                   }`}
                 >
                   <span>{tab.label}</span>
                   <span
                     className={`text-[10px] px-1.5 py-0.5 rounded-md font-mono ${
-                      isActive ? "bg-white/20 text-white" : "bg-slate-100 text-slate-500"
+                      isActive ? "bg-white/20 text-[#FFC500]" : "bg-slate-100 text-slate-500"
                     }`}
                   >
                     {tab.count}
@@ -584,7 +584,7 @@ export default function HomePage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 animate-fade-up">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
           <div>
-            <span className="text-xs font-bold uppercase tracking-wider text-brand-primary">
+            <span className="text-xs font-black uppercase tracking-wider text-[#0A3B8C]">
               Segmentación Táctil en 1 Clic
             </span>
             <h2 className="text-2xl sm:text-3xl font-black text-slate-950 tracking-tight">

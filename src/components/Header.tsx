@@ -59,48 +59,48 @@ export default function Header() {
             </div>
           </Link>
 
-          {/* Desktop Navigation - 100% Golden & Single Word for Maximum Legibility */}
-          <nav className="hidden lg:flex items-center gap-6 xl:gap-8 text-[13px] font-bold text-[#FFC500]">
+          {/* Desktop Navigation - Clean White & Gold Active Accents */}
+          <nav className="hidden lg:flex items-center gap-6 xl:gap-8 text-[13.5px] font-semibold text-slate-100">
             <Link
               href="/encuentra-tu-producto"
-              className="hover:text-white transition-colors py-1 flex items-center gap-1.5 relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-[#FFC500] after:scale-x-0 hover:after:scale-x-100 after:transition-transform"
+              className="hover:text-[#FFC500] transition-colors py-1 flex items-center gap-1.5 relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-[#FFC500] after:scale-x-0 hover:after:scale-x-100 after:transition-transform"
             >
               <Search className="w-3.5 h-3.5 text-[#FFC500]" />
               <span>Buscador</span>
             </Link>
             <Link
               href="/productos"
-              className="hover:text-white transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-[#FFC500] after:scale-x-0 hover:after:scale-x-100 after:transition-transform"
+              className="hover:text-[#FFC500] transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-[#FFC500] after:scale-x-0 hover:after:scale-x-100 after:transition-transform"
             >
               Catálogo
             </Link>
             <Link
               href="/baterias"
-              className="hover:text-white transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-[#FFC500] after:scale-x-0 hover:after:scale-x-100 after:transition-transform"
+              className="hover:text-[#FFC500] transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-[#FFC500] after:scale-x-0 hover:after:scale-x-100 after:transition-transform"
             >
               Baterías
             </Link>
             <Link
               href="/lubricantes"
-              className="hover:text-white transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-[#FFC500] after:scale-x-0 hover:after:scale-x-100 after:transition-transform"
+              className="hover:text-[#FFC500] transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-[#FFC500] after:scale-x-0 hover:after:scale-x-100 after:transition-transform"
             >
               Lubricantes
             </Link>
             <Link
               href="/filtros"
-              className="hover:text-white transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-[#FFC500] after:scale-x-0 hover:after:scale-x-100 after:transition-transform"
+              className="hover:text-[#FFC500] transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-[#FFC500] after:scale-x-0 hover:after:scale-x-100 after:transition-transform"
             >
               Filtros
             </Link>
             <Link
               href="/b2b"
-              className="hover:text-white transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-[#FFC500] after:scale-x-0 hover:after:scale-x-100 after:transition-transform"
+              className="hover:text-[#FFC500] transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-[#FFC500] after:scale-x-0 hover:after:scale-x-100 after:transition-transform"
             >
               Mayorista
             </Link>
             <Link
               href="/envios"
-              className="hover:text-white transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-[#FFC500] after:scale-x-0 hover:after:scale-x-100 after:transition-transform"
+              className="hover:text-[#FFC500] transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-[#FFC500] after:scale-x-0 hover:after:scale-x-100 after:transition-transform"
             >
               Envíos
             </Link>
@@ -125,10 +125,11 @@ export default function Header() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={handleWhatsAppClick}
-              className="btn-whatsapp btn-shine !bg-[#25D366] hover:!bg-[#20ba59] !text-slate-950 hover:!text-black !py-2.5 !px-5 text-xs font-black tracking-wider flex items-center gap-2 rounded-xl shadow-lg shadow-emerald-950/40 border border-emerald-400/30 shrink-0"
+              className="btn-whatsapp btn-shine !py-2.5 !px-4 text-xs font-black tracking-wider flex items-center gap-2 rounded-xl shadow-lg shadow-emerald-950/40 border border-emerald-400/30 shrink-0"
             >
-              <MessageCircle className="w-4 h-4 text-slate-950 fill-black/10" />
-              <span>ASESOR WHATSAPP</span>
+              <span className="w-2 h-2 rounded-full bg-emerald-300 animate-pulse shrink-0" />
+              <MessageCircle className="w-4 h-4 text-white" />
+              <span>ASESOR EN LÍNEA</span>
             </a>
           </div>
 

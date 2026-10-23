@@ -83,21 +83,21 @@ export default function ProductCard({ product, priority = false }: ProductCardPr
             </div>
           )}
 
-          {/* Badges: Brand & Best Seller */}
-          <div className="absolute top-3 left-3 flex flex-col gap-1.5 z-10 pointer-events-none">
-            <span className="px-2.5 py-1 bg-[#061B40] text-white text-[10.5px] font-black uppercase tracking-wider rounded-lg shadow-sm border border-white/10 backdrop-blur-xs">
+          {/* Badges: Brand & Best Seller in Single Row */}
+          <div className="absolute top-3 left-3 flex items-center gap-1.5 z-10 pointer-events-none">
+            <span className="px-2.5 py-1 bg-[#061B40]/95 backdrop-blur-md text-white text-[10.5px] font-black uppercase tracking-wider rounded-lg shadow-sm border border-white/15">
               {product.brand}
             </span>
             {product.isBestSeller && (
-              <span className="px-2 py-0.5 bg-gradient-to-r from-[#FFC500] to-[#FDB813] text-slate-950 font-black text-[9.5px] uppercase tracking-wider rounded-lg shadow-sm border border-amber-400/80 flex items-center gap-1">
-                ⭐ Más Vendido
+              <span className="px-2 py-1 bg-gradient-to-r from-[#FFC500] to-[#FDB813] text-slate-950 font-black text-[9.5px] uppercase tracking-wider rounded-lg shadow-sm border border-amber-300 flex items-center gap-1">
+                ⭐ Top Ventas
               </span>
             )}
           </div>
 
           {/* Presentation Pill */}
           {presentation && (
-            <div className="absolute top-3 right-3 px-2.5 py-1 bg-white/95 text-slate-800 font-extrabold text-[10.5px] rounded-lg border border-slate-200/90 shadow-2xs backdrop-blur-xs z-10">
+            <div className="absolute top-3 right-3 px-2.5 py-1 bg-white/95 backdrop-blur-md text-slate-800 font-extrabold text-[10.5px] rounded-lg border border-slate-200/90 shadow-2xs z-10">
               {presentation}
             </div>
           )}
@@ -159,20 +159,20 @@ export default function ProductCard({ product, priority = false }: ProductCardPr
 
       {/* Dispatch Status & Action Buttons */}
       <div className="p-4 sm:p-5 pt-2">
-        <div className="mb-3 pb-2 border-b border-slate-100 space-y-1.5">
-          <div className="flex items-center justify-between text-[11px] font-semibold text-emerald-800 bg-emerald-50/80 px-2.5 py-1.5 rounded-lg border border-emerald-200/60">
-            <span className="flex items-center gap-1.5 font-bold">
+        <div className="mb-3 pb-2 border-b border-slate-100 space-y-1">
+          <div className="flex items-center justify-between text-[11px] font-bold text-emerald-800 bg-emerald-50/90 px-2.5 py-1.5 rounded-lg border border-emerald-200/70">
+            <span className="flex items-center gap-1.5">
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse shrink-0" />
-              <span>Disponible en Bodega Pedernales</span>
+              <span>En Stock Bodega Pedernales</span>
             </span>
-            <span className="text-[10px] text-emerald-700 font-extrabold uppercase">
-              Despacho Inmediato
+            <span className="text-[10px] text-emerald-700 font-extrabold uppercase tracking-tight">
+              Despacho 24h
             </span>
           </div>
 
           <div className="flex items-center justify-between text-[10.5px] text-slate-500 font-medium px-0.5">
             <span>{product.warranty}</span>
-            <span className="font-bold text-slate-800 uppercase tracking-tight">{product.applicationType}</span>
+            <span className="font-bold text-slate-700 uppercase tracking-tight">{product.applicationType}</span>
           </div>
         </div>
 
@@ -188,15 +188,15 @@ export default function ProductCard({ product, priority = false }: ProductCardPr
             target="_blank"
             rel="noopener noreferrer"
             onClick={handleWhatsApp}
-            className="btn-whatsapp !py-2.5 !px-2.5 !text-[11.5px] font-black uppercase tracking-wider rounded-xl flex items-center justify-center gap-1.5"
+            className="btn-whatsapp !py-2.5 !px-2.5 !text-xs font-black uppercase tracking-wider rounded-xl flex items-center justify-center gap-1.5 shadow-sm"
           >
-            <MessageCircle className="w-4 h-4 shrink-0" />
-            <span>WhatsApp</span>
+            <MessageCircle className="w-3.5 h-3.5 shrink-0" />
+            <span>Cotizar</span>
           </a>
 
           <Link
             href={`/productos/${product.slug}`}
-            className="btn-secondary !py-2.5 !px-2.5 !text-[11.5px] font-bold text-center flex items-center justify-center gap-1 hover:border-[#0A3B8C] hover:text-[#0A3B8C] rounded-xl"
+            className="btn-secondary !py-2.5 !px-2.5 !text-xs font-bold text-center flex items-center justify-center gap-1 hover:border-[#0A3B8C] hover:text-[#0A3B8C] rounded-xl"
           >
             <span>Ver Ficha</span>
             <ArrowUpRight className="w-3.5 h-3.5 opacity-60" />

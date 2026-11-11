@@ -19,7 +19,7 @@ export interface ProductVariant {
   barcode?: string;
   price?: number | null;
   priceEstimate?: string | null;
-  officialSku?: string;
+  officialSku?: string | null;
 }
 
 export interface Product {
@@ -900,9 +900,9 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Galón / 5L",
         "stock": 10,
         "imageUrl": "/images/products/variant-mannol-mannol-cj-x-20-lt-special-plus-10w30-lp-lur-009-c4.png",
-        "price": 9.83,
-        "priceEstimate": "$9.83",
-        "officialSku": "012MN7512-1A"
+        "price": 32.22,
+        "priceEstimate": "$32.22",
+        "officialSku": "012MN7512-4A"
       }
     ],
     "compatibleVehicles": [
@@ -1007,9 +1007,9 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Galón / 5L",
         "stock": 10,
         "imageUrl": "/images/products/variant-mannol-mannol-chevrolet-opel-oem-5w30-lp-lur-010-c4.png",
-        "price": 14.78,
-        "priceEstimate": "$14.78",
-        "officialSku": "012MN7701-1"
+        "price": null,
+        "priceEstimate": "Consultar en mostrador",
+        "officialSku": null
       }
     ],
     "compatibleVehicles": [
@@ -1448,9 +1448,9 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Litro",
         "stock": 10,
         "imageUrl": "/images/products/variant-mannol-mannol-ceramic-pro-10w40-lp-lur-014-c3.png",
-        "price": 39.55,
-        "priceEstimate": "$39.55",
-        "officialSku": "012MN7726-5"
+        "price": null,
+        "priceEstimate": "Consultar en mostrador",
+        "officialSku": null
       },
       {
         "sku": "LP-LUR-014-C4",
@@ -3488,9 +3488,9 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Galón / 5L",
         "stock": 10,
         "imageUrl": "/images/products/variant-mannol-mannol-cj-x-20-lt-molibden-green-ultra-5w30-lp-lur-037-c4.png",
-        "price": 16.17,
-        "priceEstimate": "$16.17",
-        "officialSku": "12MN7916-1"
+        "price": 55.35,
+        "priceEstimate": "$55.35",
+        "officialSku": "12MN7916-4"
       }
     ],
     "compatibleVehicles": [
@@ -3731,7 +3731,7 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Lubricante automotriz oficial MOBIL DELVAC MX 15W40 marca MOBIL. Formulado para otorgar una película protectora duradera que reduce el desgaste prematuro de pistones, cilindros y rodamientos bajo condiciones de trabajo severo y altas temperaturas ambientales en Pedernales y la provincia de Manabí.",
-    "priceEstimate": "$49.48",
+    "priceEstimate": "$6.83",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza según el tamaño requerido.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -3748,9 +3748,9 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Litro",
         "stock": 10,
         "imageUrl": "/images/products/variant-mobil-mobil-delvac-mx-15w40-lp-lur-002-2-c3.png",
-        "price": 49.48,
-        "priceEstimate": "$49.48",
-        "officialSku": "015MD2.5-15W40"
+        "price": 6.83,
+        "priceEstimate": "$6.83",
+        "officialSku": "015MD12-15W40"
       },
       {
         "sku": "LP-LUR-002-2-C4",
@@ -3831,7 +3831,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "MOBIL DELVAC MX 15W40",
-    "price": 49.48
+    "price": 6.83
   },
   {
     "id": "mobil-mobil-delvac-1300-sup-15w40-lp-lur-003-2",
@@ -17686,9 +17686,9 @@ export const PRODUCTS: Product[] = [
         "volume": "Caneca 5 GL",
         "stock": 10,
         "imageUrl": "/images/products/variant-aroil-aroil-15w40-ci-4-lp-lur-005-3-c5.png",
-        "price": 33.78,
-        "priceEstimate": "$33.78",
-        "officialSku": "0368AR10002"
+        "price": 62.61,
+        "priceEstimate": "$62.61",
+        "officialSku": "0368AR10003"
       }
     ],
     "compatibleVehicles": [
@@ -19235,7 +19235,7 @@ export const PRODUCTS: Product[] = [
       "Normativa": "Cumple y excede especificaciones API / ACEA / ISO"
     },
     "description": "Línea oficial MANNOL GRASA LC-2 ALTA TEMPERATURA 4.5 KG de MANNOL. Disponible en varias presentaciones unificadas (800 g, 1 Galón / 5L, Caneca 5 GL) para cubrir desde el servicio individual hasta el abastecimiento de flotas pesadas.",
-    "priceEstimate": "$60.91",
+    "priceEstimate": "$8.70",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza según el tamaño requerido.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -19252,14 +19252,14 @@ export const PRODUCTS: Product[] = [
         "volume": "800 g",
         "stock": 10,
         "imageUrl": "/images/products/variant-mannol-mannol-grasa-lc-2-alta-temperatura-45-kg-lp-man-008-c3.png",
-        "price": 60.91,
-        "priceEstimate": "$60.91",
-        "officialSku": "012MN8029"
+        "price": 8.7,
+        "priceEstimate": "$8.70",
+        "officialSku": "012MN8028-08"
       },
       {
         "sku": "LP-MAN-008-C4",
-        "name": "MANNOL Grasa LC-2 Alta Temperatura 4.5 Kg (1 Galón / 5L)",
-        "presentation": "1 Galón / 5L",
+        "name": "MANNOL Grasa LC-2 Alta Temperatura 4.5 Kg (4.5 Kg)",
+        "presentation": "4.5 Kg",
         "volume": "1 Galón / 5L",
         "stock": 10,
         "imageUrl": "/images/products/variant-mannol-mannol-grasa-lc-2-alta-temperatura-45-kg-lp-man-008-c4.png",
@@ -19269,8 +19269,8 @@ export const PRODUCTS: Product[] = [
       },
       {
         "sku": "LP-MAN-008-C6",
-        "name": "MANNOL Grasa LC-2 Alta Temperatura 4.5 Kg (Caneca 5 GL)",
-        "presentation": "Caneca 5 GL",
+        "name": "MANNOL Grasa LC-2 Alta Temperatura 4.5 Kg (Caneca 18 Kg)",
+        "presentation": "Caneca 18 Kg",
         "volume": "Caneca 5 GL",
         "stock": 10,
         "imageUrl": "/images/products/variant-mannol-mannol-grasa-lc-2-alta-temperatura-45-kg-lp-man-008-c6.png",
@@ -19305,7 +19305,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL GRASA LC-2 ALTA TEMPERATURA 4.5 KG",
-    "price": 60.91
+    "price": 8.7
   },
   {
     "id": "mannol-mannol-grasa-lc-2-alta-temperatura-18-kg-lp-man-009",
@@ -20796,7 +20796,7 @@ export const PRODUCTS: Product[] = [
       "Normativa": "Cumple y excede especificaciones API / ACEA / ISO"
     },
     "description": "Línea oficial MANNOL ESTER ADDITIVE / TRATAMIENTO DE ACEITE 450 ML Y 1LT de MANNOL. Disponible en varias presentaciones unificadas (450 ml, 1 Galón / 5L) para cubrir desde el servicio individual hasta el abastecimiento de flotas pesadas.",
-    "priceEstimate": "$17.52",
+    "priceEstimate": "$8.48",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza según el tamaño requerido.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -20813,14 +20813,14 @@ export const PRODUCTS: Product[] = [
         "volume": "450 ml",
         "stock": 10,
         "imageUrl": "/images/products/variant-mannol-mannol-ester-additive-tratamiento-de-aceite-450-ml-y-1lt-lp-man-033-c3.png",
-        "price": 17.52,
-        "priceEstimate": "$17.52",
-        "officialSku": "012MN9929-1"
+        "price": 8.48,
+        "priceEstimate": "$8.48",
+        "officialSku": "012MN9929-045"
       },
       {
         "sku": "LP-MAN-033-C4",
-        "name": "MANNOL Ester Additive / Tratamiento De Aceite 450 Ml Y 1lt (1 Galón / 5L)",
-        "presentation": "1 Galón / 5L",
+        "name": "MANNOL Ester Additive / Tratamiento De Aceite 450 Ml Y 1lt (1 Litro)",
+        "presentation": "1 Litro",
         "volume": "1 Galón / 5L",
         "stock": 10,
         "imageUrl": "/images/products/variant-mannol-mannol-ester-additive-tratamiento-de-aceite-450-ml-y-1lt-lp-man-033-c4.png",
@@ -20855,7 +20855,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL ESTER ADDITIVE / TRATAMIENTO DE ACEITE 450 ML Y 1LT",
-    "price": 17.52
+    "price": 8.48
   },
   {
     "id": "mannol-mannol-diesel-ester-additive-100ml-y-250ml-lp-man-034",
@@ -20905,8 +20905,8 @@ export const PRODUCTS: Product[] = [
       },
       {
         "sku": "LP-MAN-034-C4",
-        "name": "MANNOL Diésel Ester Additive 100ml Y 250ml (1 Galón / 5L)",
-        "presentation": "1 Galón / 5L",
+        "name": "MANNOL Diésel Ester Additive 100ml Y 250ml (100 ml)",
+        "presentation": "100 ml",
         "volume": "1 Galón / 5L",
         "stock": 10,
         "imageUrl": "/images/products/variant-mannol-mannol-diesel-ester-additive-100ml-y-250ml-lp-man-034-c4.png",
@@ -22372,7 +22372,7 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Líquido refrigerante y anticongelante ABRO REFRIGERANTE ROJO GALON garantizado por ABRO. Formulado con inhibidores orgánicos que previenen la corrosión galvánica, la formación de sarro y el recalentamiento en motores que operan bajo condiciones climáticas cálidas como la costa ecuatoriana.",
-    "priceEstimate": "$3.13",
+    "priceEstimate": "$1.35",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza según el tamaño requerido.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -22389,9 +22389,9 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Litro",
         "stock": 10,
         "imageUrl": "/images/products/variant-abro-abro-refrigerante-rojo-galon-lp-abr-004-c3.png",
-        "price": 3.13,
-        "priceEstimate": "$3.13",
-        "officialSku": "102EC-502"
+        "price": 1.35,
+        "priceEstimate": "$1.35",
+        "officialSku": "102EC-502LT"
       },
       {
         "sku": "LP-ABR-004-C4",
@@ -22455,7 +22455,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "ABRO REFRIGERANTE ROJO GALON",
-    "price": 3.13
+    "price": 1.35
   },
   {
     "id": "abro-abro-refrigerante-verde-galon-lp-abr-005",
@@ -22484,7 +22484,7 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Líquido refrigerante y anticongelante ABRO REFRIGERANTE VERDE GALON garantizado por ABRO. Formulado con inhibidores orgánicos que previenen la corrosión galvánica, la formación de sarro y el recalentamiento en motores que operan bajo condiciones climáticas cálidas como la costa ecuatoriana.",
-    "priceEstimate": "$3.13",
+    "priceEstimate": "$1.35",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza según el tamaño requerido.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -22501,9 +22501,9 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Litro",
         "stock": 10,
         "imageUrl": "/images/products/variant-abro-abro-refrigerante-verde-galon-lp-abr-005-c3.png",
-        "price": 3.13,
-        "priceEstimate": "$3.13",
-        "officialSku": "102EC-503"
+        "price": 1.35,
+        "priceEstimate": "$1.35",
+        "officialSku": "102EC-503LT"
       },
       {
         "sku": "LP-ABR-005-C4",
@@ -22567,7 +22567,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "ABRO REFRIGERANTE VERDE GALON",
-    "price": 3.13
+    "price": 1.35
   },
   {
     "id": "abro-abro-grasa-3-azul-1lb-envase-plástico-lg-990-lp-abr-006",

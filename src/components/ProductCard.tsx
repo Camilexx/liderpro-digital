@@ -16,7 +16,9 @@ interface ProductCardProps {
 
 export default function ProductCard({ product, priority = false }: ProductCardProps) {
   const [selectedVariant, setSelectedVariant] = useState<ProductVariant | null>(
-    product.variants && product.variants.length > 0 ? product.variants[0] : null
+    product.variants && product.variants.length > 0
+      ? product.variants.find((v) => v.price !== null && v.price !== undefined) || product.variants[0]
+      : null
   );
   const [imgError, setImgError] = useState(false);
   const [justAdded, setJustAdded] = useState(false);
@@ -30,11 +32,16 @@ export default function ProductCard({ product, priority = false }: ProductCardPr
   const presentation = rawPresentation?.replace("1 Galón / 5L", "1 Galón");
 
   const activePrice = selectedVariant
-    ? (selectedVariant.priceEstimate ?? product.priceEstimate)
+    ? (selectedVariant.priceEstimate !== undefined ? selectedVariant.priceEstimate : product.priceEstimate)
     : product.priceEstimate;
   const activeNumericPrice = selectedVariant
-    ? (selectedVariant.price ?? product.price)
+    ? (selectedVariant.price !== undefined ? selectedVariant.price : product.price)
     : product.price;
+  const isPriced = Boolean(
+    activePrice &&
+    activePrice.includes("$") &&
+    activeNumericPrice !== null
+  );
 
   const inBasket = items.find((it) => it.product.sku === activeSku);
   const isMannolPromoEligible =
@@ -146,7 +153,7 @@ export default function ProductCard({ product, priority = false }: ProductCardPr
 
           {/* Official Price Block — Prominent & Clear for Senior Readability */}
           <div className="bg-slate-50 border border-slate-200/90 rounded-xl px-3.5 py-2.5 flex items-center justify-between gap-2">
-            {activePrice ? (
+            {isPriced ? (
               <>
                 <div>
                   <span className="block text-[10px] font-extrabold uppercase tracking-wider text-slate-500">
@@ -169,11 +176,16 @@ export default function ProductCard({ product, priority = false }: ProductCardPr
               </>
             ) : (
               <div className="flex items-center justify-between w-full">
-                <span className="text-xs font-black text-[#0A3B8C]">
-                  Consultar Precio en Mostrador
-                </span>
-                <span className="px-2 py-0.5 bg-emerald-100 text-emerald-900 text-[10px] font-black rounded-md">
-                  Disponible
+                <div>
+                  <span className="block text-[10px] font-extrabold uppercase tracking-wider text-slate-500">
+                    Disponibilidad
+                  </span>
+                  <span className="text-xs sm:text-sm font-black text-[#0A3B8C]">
+                    Consultar en mostrador
+                  </span>
+                </div>
+                <span className="px-2 py-0.5 bg-amber-100 text-amber-900 text-[10px] font-black rounded-md border border-amber-300">
+                  Bajo Pedido
                 </span>
               </div>
             )}
@@ -217,7 +229,7 @@ export default function ProductCard({ product, priority = false }: ProductCardPr
                             isSelected ? "text-[#FFC500]" : "text-[#0A3B8C]"
                           }`}
                         >
-                          {v.priceEstimate}
+                          {v.price !== null ? v.priceEstimate : "Consultar"}
                         </span>
                       )}
                     </button>

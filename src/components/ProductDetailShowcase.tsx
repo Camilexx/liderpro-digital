@@ -28,7 +28,9 @@ export default function ProductDetailShowcase({ product }: ProductDetailShowcase
   const { addItem, setIsOpen, items } = useQuoteBasket();
 
   const [selectedVariant, setSelectedVariant] = useState<ProductVariant | null>(
-    product.variants && product.variants.length > 0 ? product.variants[0] : null
+    product.variants && product.variants.length > 0
+      ? product.variants.find((v) => v.price !== null && v.price !== undefined) || product.variants[0]
+      : null
   );
   const [imgError, setImgError] = useState(false);
   const [quantity, setQuantity] = useState(1);
@@ -43,11 +45,16 @@ export default function ProductDetailShowcase({ product }: ProductDetailShowcase
   const activePresentation = rawPresentation?.replace("1 Galón / 5L", "1 Galón");
 
   const activePrice = selectedVariant
-    ? (selectedVariant.priceEstimate ?? product.priceEstimate)
+    ? (selectedVariant.priceEstimate !== undefined ? selectedVariant.priceEstimate : product.priceEstimate)
     : product.priceEstimate;
   const activeNumericPrice = selectedVariant
-    ? (selectedVariant.price ?? product.price)
+    ? (selectedVariant.price !== undefined ? selectedVariant.price : product.price)
     : product.price;
+  const isPriced = Boolean(
+    activePrice &&
+    activePrice.includes("$") &&
+    activeNumericPrice !== null
+  );
 
   const inBasketItem = items.find((it) => it.product.sku === activeSku);
   const variantsList =
@@ -188,7 +195,7 @@ export default function ProductDetailShowcase({ product }: ProductDetailShowcase
                         </span>
                         {v.priceEstimate && (
                           <span className="text-[11px] font-black text-emerald-700 block">
-                            {v.priceEstimate}
+                            {v.price !== null ? v.priceEstimate : "Consultar"}
                           </span>
                         )}
                       </div>
@@ -222,7 +229,7 @@ export default function ProductDetailShowcase({ product }: ProductDetailShowcase
 
           {/* Official Price Block */}
           <div className="p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-slate-50 via-blue-50/40 to-emerald-50/30 border-2 border-slate-200/90 flex flex-wrap items-center justify-between gap-4">
-            {activePrice ? (
+            {isPriced ? (
               <div>
                 <span className="block text-xs font-black uppercase tracking-wider text-slate-500">
                   Precio Oficial de Venta ({activePresentation || "Unidad"})
@@ -247,7 +254,10 @@ export default function ProductDetailShowcase({ product }: ProductDetailShowcase
                   Disponibilidad en Mostrador Pedernales
                 </span>
                 <span className="text-xl font-black text-[#0A3B8C]">
-                  Consultar Precio Actualizado por WhatsApp
+                  Consultar Disponibilidad y Precio en Mostrador
+                </span>
+                <span className="block text-[11px] text-slate-500 font-medium mt-1">
+                  ✓ Producto bajo pedido especial o rotación alta en almacén
                 </span>
               </div>
             )}

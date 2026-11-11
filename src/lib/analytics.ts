@@ -25,6 +25,8 @@ export type AnalyticsEventName =
   | "basket_add"
   | "basket_view"
   | "basket_whatsapp_quote"
+  | "add_mannol_combo"
+  | "whatsapp_mannol_combo"
   | "purchase"
   | "lead_created";
 

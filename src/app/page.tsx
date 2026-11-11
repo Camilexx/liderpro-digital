@@ -25,6 +25,7 @@ import {
   Phone,
 } from "lucide-react";
 import ProductCard from "@/components/ProductCard";
+import MannolPromosSection from "@/components/MannolPromosSection";
 import EmergencyBanner from "@/components/EmergencyBanner";
 import LocationsLogisticsSection from "@/components/LocationsLogisticsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
@@ -214,10 +215,18 @@ export default function HomePage() {
             </div>
 
             {/* High-Impact CTAs */}
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-1">
+            <div className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-3 pt-1">
+              <a
+                href="#promociones-mannol"
+                className="btn-gold !py-3.5 !px-5 text-xs font-black tracking-wider flex items-center justify-center gap-2 text-center shadow-lg"
+              >
+                <Sparkles className="w-4 h-4 fill-slate-950" />
+                <span>¡COMBO CAMBIO MANNOL!</span>
+              </a>
+
               <a
                 href="#buscador"
-                className="btn-primary btn-shine !py-3.5 !px-6 text-xs font-black tracking-wider flex items-center justify-center gap-2.5 text-center group"
+                className="btn-primary btn-shine !py-3.5 !px-5 text-xs font-black tracking-wider flex items-center justify-center gap-2 text-center group"
               >
                 <Search className="w-4 h-4" />
                 <span>BUSCAR POR MI VEHÍCULO</span>
@@ -225,13 +234,13 @@ export default function HomePage() {
               </a>
 
               <a
-                href={buildWhatsAppLink("quick_compatibility")}
+                href="https://wa.me/593983893231?text=Hola%20LiderPro%20Pedernales%2C%20deseo%20cotizar%20el%20Combo%20Cambio%20Mannol%20o%20repuestos%20para%20mi%20veh%C3%ADculo."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-whatsapp !py-3.5 !px-6 text-xs font-black tracking-wider flex items-center justify-center gap-2.5 text-center shadow-lg shadow-emerald-600/20"
+                className="btn-whatsapp !py-3.5 !px-5 text-xs font-black tracking-wider flex items-center justify-center gap-2 text-center shadow-lg shadow-emerald-600/20"
               >
                 <MessageCircle className="w-4 h-4" />
-                <span>COTIZAR EN SEDE PEDERNALES</span>
+                <span>WHATSAPP: 098 389 3231</span>
               </a>
             </div>
 
@@ -281,7 +290,7 @@ export default function HomePage() {
               <div className="flex flex-wrap items-center justify-between text-xs text-slate-700 px-1 gap-2">
                 <div className="flex items-center gap-2 font-bold text-slate-900">
                   <MapPin className="w-4 h-4 text-emerald-600 shrink-0" />
-                  <span>Mostrador Comercial & Bodega Pedernales</span>
+                  <span>Vía al Carmen (Frente a gasolinera Pedernales)</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <a
@@ -389,6 +398,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* 02.5: NUEVAS PROMOCIONES EXCLUSIVAS MANNOL (¡COMBO CAMBIO MANNOL!) */}
+      <MannolPromosSection />
 
       {/* 03: PRODUCTOS FLAGSHIP CON MAYOR ROTACIÓN EN MOSTRADOR PEDERNALES: MANNOL Y BATERÍAS ECUADOR */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 animate-fade-up">
@@ -1061,26 +1073,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* Sticky Mobile WhatsApp CTA Bar */}
-      <div className="fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200/90 p-2.5 sm:hidden shadow-2xl flex items-center gap-2">
-        <a
-          href="#buscador"
-          className="flex-1 py-3 px-2 text-center bg-slate-900 active:bg-slate-950 text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-colors flex items-center justify-center gap-1.5"
-        >
-          <Search className="w-3.5 h-3.5" />
-          <span>Buscar Producto</span>
-        </a>
-        <a
-          href={buildWhatsAppLink("quick_compatibility")}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex-1 py-3 px-2 btn-whatsapp font-bold text-xs uppercase tracking-wider rounded-xl flex items-center justify-center gap-1.5"
-        >
-          <MessageCircle className="w-4 h-4" />
-          <span>Asesor WhatsApp</span>
-        </a>
-      </div>
     </div>
   );
 }

@@ -1,0 +1,889 @@
+{
+  "total_catalog_products": 366,
+  "matched_catalog_products": 359,
+  "updated_products_with_price": 352,
+  "updated_variants_with_price": 96,
+  "catalog_items_with_null_excel_price": [
+    {
+      "sku": "AA-9476",
+      "name": "Filtro de Aire de Motor Advance (AA-9476) — Chevrolet Cavalier 2019 - AA-9476",
+      "excel_matches": [
+        "080AA-9476"
+      ]
+    },
+    {
+      "sku": "AA-3038",
+      "name": "Filtro de Aire de Motor Advance (AA-3038) — JAC T9 2.0 2025 - AA-3038",
+      "excel_matches": [
+        "FILTRO AIRE 080AA-3038"
+      ]
+    },
+    {
+      "sku": "080AO-4386ST",
+      "name": "Filtro de Aceite Advance (AO-4386ST) — (medio Filtrante 100% Sintetico 15000 Km.) Suzuki Grand Vitara Suzuki, Next, Toyot",
+      "excel_matches": [
+        "080AO-4386ST"
+      ]
+    },
+    {
+      "sku": "080AO-500ST",
+      "name": "Filtro de Aceite Advance (AO-500ST) — (medio Filtrante 100% Sintetico 15000 Km.) Chevrolet, Ford, Jmc, JAC - AO-500S",
+      "excel_matches": [
+        "080AO-500ST"
+      ]
+    },
+    {
+      "sku": "080AO-667-1",
+      "name": "Filtro de Aceite Advance (AO-667-1) — (ph49a,lf667,c-5510,lfp3191, Psl417)oil Filter Caterpillar, Mack, Scania, Volv",
+      "excel_matches": [
+        "080AO-667-1"
+      ]
+    },
+    {
+      "sku": "080AOE-9229-1",
+      "name": "Filtro de Aceite Advance (AOE-9229-1) — Elementojac Hfc 1140 7.8L, Hfc 1160 7.8L, Hfc 1180 7.8L - Aoe9229/1",
+      "excel_matches": [
+        "080AOE-9229-1"
+      ]
+    },
+    {
+      "sku": "080AOE-9496ST",
+      "name": "Filtro de Aceite Advance (AOE-9496ST) — Elemento (medio Filtrante 100% Sintetico 15000 Km.) Volkswagen Bora, Jetta, Skoda",
+      "excel_matches": [
+        "080AOE-9496ST"
+      ]
+    }
+  ],
+  "catalog_items_not_in_excel": [
+    {
+      "sku": "LP-FIL-033",
+      "brand": "ADVANCE",
+      "name": "Filtro de Aire de Motor Advance — Chevrolet Luv D-MAX 2.4 D-MAX 3.5 Gasolina / Mitsubishi L200",
+      "rawErpName": "FILTRO AIRE CH LUV DMAX 2.4 DMAX 3.5 GASOLINA / MT L200 ADVANCE"
+    },
+    {
+      "sku": "080AC-2807",
+      "brand": "ADVANCE",
+      "name": "Filtro de Cabina (A/C) Advance (AC-2807) — Hyundai Tucson IX 2.0/ KIA Cerato 1.6/16- Sportage Active /12- Cerato 97133-2E200",
+      "rawErpName": "FILTRO CABINA HY TUCSON IX 2.0/ KIA CERATO 1.6/16- SPORTAGE ACTIVE /12- CERATO 97133-2E200 ADVANCE"
+    },
+    {
+      "sku": "LP-PER-011",
+      "brand": "SIMONIZ / AREON",
+      "name": "Shampoo Cera Para Autos 600ml",
+      "rawErpName": "SHAMPOO CERA PARA AUTOS 600ML"
+    },
+    {
+      "sku": "027N40FES4",
+      "brand": "BOSCH",
+      "name": "Batería Bosch N40 FE S4 (43 Amp)",
+      "rawErpName": "BATERIA BOSCH N40 FE S4 43AMP 614022"
+    },
+    {
+      "sku": "03042-FE",
+      "brand": "BATERÍAS ECUADOR",
+      "name": "Batería Ecuador 42 FE — Full Equipo (55 Amp)",
+      "rawErpName": "BATERIA ECUADOR 42 FE FULL EQUIPO 55 AMP"
+    },
+    {
+      "sku": "030N40-HP",
+      "brand": "BATERÍAS ECUADOR",
+      "name": "Batería Ecuador N40 HP — High Power Tapa Roja (50 Amp)",
+      "rawErpName": "BATERIA ECUADOR N40 HP HIGH POWER 50 AMP"
+    },
+    {
+      "sku": "030NS40-FE-I",
+      "brand": "BATERÍAS ECUADOR",
+      "name": "Batería Ecuador NS40 FE I — Full Equipo (42 Amp)",
+      "rawErpName": "BATERIA ECUADOR NS40 FE I FULL EQUIPO 42 AMP"
+    }
+  ],
+  "total_excel_rows": 531,
+  "excel_skus_matched_to_catalog": 415,
+  "excel_skus_unregistered_in_catalog_count": 116,
+  "excel_skus_unregistered_in_catalog": [
+    {
+      "sku": "144ACR650-50",
+      "name": "ACDELCO REFRIGERANTE 50/50 GL",
+      "pventa": 14.57,
+      "row": 18
+    },
+    {
+      "sku": "142A.DEST.GL",
+      "name": "AGUA DESTILADA (1GL)",
+      "pventa": 2.37,
+      "row": 19
+    },
+    {
+      "sku": "142A.DEST.LT",
+      "name": "AGUA DESTILADA (1LT)",
+      "pventa": 0.65,
+      "row": 20
+    },
+    {
+      "sku": "016AM-79106-56",
+      "name": "AMALIE 15W40 CK4 12/1LT",
+      "pventa": 7.39,
+      "row": 23
+    },
+    {
+      "sku": "016AM-79107-36",
+      "name": "AMALIE 15W40 CK4 4/1 GL.",
+      "pventa": 26.52,
+      "row": 24
+    },
+    {
+      "sku": "012MNAMB",
+      "name": "AMBIENTAL MANNOL",
+      "pventa": null,
+      "row": 27
+    },
+    {
+      "sku": "099AN-ANT",
+      "name": "ANILLOS ANTISULFATANTES",
+      "pventa": 0.91,
+      "row": 28
+    },
+    {
+      "sku": "036AR90000",
+      "name": "AROIL GRASA CHASSIS 2 AZUL CANECA 16 KG",
+      "pventa": 48.7,
+      "row": 57
+    },
+    {
+      "sku": "0368AR90004",
+      "name": "AROIL GRASA CHASSIS 2 ROJA CANECA 16X1 KG",
+      "pventa": 48.7,
+      "row": 58
+    },
+    {
+      "sku": "AROIL ROJO 0368BF00004",
+      "name": "AROIL ISO 68 ROJO CAN 5 GL",
+      "pventa": 36.53,
+      "row": 60
+    },
+    {
+      "sku": "0368AR20011",
+      "name": "AROIL MOTOR 2T TC 12/1 LT",
+      "pventa": 3.74,
+      "row": 61
+    },
+    {
+      "sku": "141ATE-G4",
+      "name": "ATE LIQUIDO DE FRENOS DOT 4 LITRO",
+      "pventa": 10.57,
+      "row": 69
+    },
+    {
+      "sku": "141ATE-M4",
+      "name": "ATE LIQUIDO DE FRENOS DOT 4 MEDIO LITRO",
+      "pventa": 6.78,
+      "row": 70
+    },
+    {
+      "sku": "141ATE-G3",
+      "name": "ATE LIQUIDO DE FRENOS DOT3 LITRO",
+      "pventa": 9.3,
+      "row": 71
+    },
+    {
+      "sku": "141ATE-P3",
+      "name": "ATE LIQUIDO DE FRENOS DOT3 PINTAS",
+      "pventa": 4.09,
+      "row": 72
+    },
+    {
+      "sku": "103B1016",
+      "name": "BARDAHL B1 OIL SUPPLEMENT 15oz",
+      "pventa": 12.89,
+      "row": 73
+    },
+    {
+      "sku": "103B2115",
+      "name": "BARDAHL B2 OIL TREATMENT 15oz",
+      "pventa": 14.21,
+      "row": 74
+    },
+    {
+      "sku": "103B3119",
+      "name": "BARDAHL GEAR OIL ADDITIVE + STOP LEAK",
+      "pventa": 12.51,
+      "row": 75
+    },
+    {
+      "sku": "103B1532",
+      "name": "BARDAHL SPECIAL DUTY 32oz",
+      "pventa": 21.82,
+      "row": 76
+    },
+    {
+      "sku": "02734HPIS4",
+      "name": "BATERIA BOSCH 34 HP I S4 70AMP 603436",
+      "pventa": 161.03,
+      "row": 81
+    },
+    {
+      "sku": "02748HPS4",
+      "name": "BATERIA BOSCH 48 HP S4 1120 77AMP 604832",
+      "pventa": 174.3,
+      "row": 86
+    },
+    {
+      "sku": "02755PROISPT5",
+      "name": "BATERIA BOSCH 55 PRO I T5 45AMP SMART POWER X805568",
+      "pventa": 125.51,
+      "row": 87
+    },
+    {
+      "sku": "02755PROSPT5",
+      "name": "BATERIA BOSCH 55 PRO T5 45AMP SMART POWER X805564",
+      "pventa": 125.51,
+      "row": 88
+    },
+    {
+      "sku": "02765FES4",
+      "name": "BATERIA BOSCH 65 FE S4 50AMP 606522",
+      "pventa": 156.77,
+      "row": 89
+    },
+    {
+      "sku": "03024-HP",
+      "name": "BATERIA ECUADOR 24 HP HIGH POWER 85 AMP",
+      "pventa": 161.71,
+      "row": 95
+    },
+    {
+      "sku": "03048-MP",
+      "name": "BATERIA ECUADOR 48 MP MEGA POWER 88 AMP",
+      "pventa": 183.6,
+      "row": 109
+    },
+    {
+      "sku": "03055-HP",
+      "name": "BATERIA ECUADOR 55 HP HIGH POWER 65 AMP",
+      "pventa": 137.0,
+      "row": 112
+    },
+    {
+      "sku": "042K16PR-U",
+      "name": "BUJIA DENSO JIMMY 1.300I RODEO V6 3.2I JEEP GRAND CHER / BKR5E NGK / RC-12YC CHAMPION / IK16 IRIDIO",
+      "pventa": 1.73,
+      "row": 121
+    },
+    {
+      "sku": "042W16EXR-U11",
+      "name": "BUJIA ND DENSO ROSCA LARGA C/R NGK BPR5EY-11",
+      "pventa": 1.74,
+      "row": 122
+    },
+    {
+      "sku": "043DCPR7E-BRAS",
+      "name": "BUJIA NGK CHEVROLET SAIL 1.4 SPART GT 1 / XU22EPR-U DENSO / RA-7YC CHAMPION / IXU22 IRIDIO",
+      "pventa": 2.61,
+      "row": 123
+    },
+    {
+      "sku": "043LKR6D-10E",
+      "name": "BUJIA NGK CHEVROLET SAIL/MOTO PULSAR 200 NS",
+      "pventa": 3.71,
+      "row": 124
+    },
+    {
+      "sku": "043BPR6EY",
+      "name": "BUJIA NGK CHEVROLET SPARK/LUV 2.2L 13/16-14X19 / W20EXR-U DENSO / IW20 IRIDIO",
+      "pventa": 2.0,
+      "row": 125
+    },
+    {
+      "sku": "043BKR6E",
+      "name": "BUJIA NGK CHEVROLET/DAEWOO CIELO/REACER/SEPHIA 5/8 / K20PRU DENSO / IK20 IRIDIO",
+      "pventa": 2.26,
+      "row": 126
+    },
+    {
+      "sku": "043BKR5E-11",
+      "name": "BUJIA NGK CHV, HND, HDY, KIA, MZD, MSB, NSA / K16PR-U11 DENSO / IK16 IRIDIO",
+      "pventa": 2.04,
+      "row": 127
+    },
+    {
+      "sku": "043CR9E",
+      "name": "BUJIA NGK COMPETENCIA MOTO SUZUKI 650 / U27ESR-N DENSO / IU27 IRIDIO",
+      "pventa": 6.96,
+      "row": 128
+    },
+    {
+      "sku": "043BP5ES",
+      "name": "BUJIA NGK DATSUN/TOYOTA/ISUZU/MAZDA 13/16 T. CALIENTE / W16EP-U DENSO / IW16 IRIDIO",
+      "pventa": 1.7,
+      "row": 129
+    },
+    {
+      "sku": "043BKR5EGP",
+      "name": "BUJIA NGK EXAGONO5/8 ELECTRODO DE PLATINO PLATINO ALTO DESEMPEÑO",
+      "pventa": 3.26,
+      "row": 130
+    },
+    {
+      "sku": "043BPR5EGP-BRA",
+      "name": "BUJIA NGK G-POWER PLATINO -AUTOS JAPONES BRASILEÑA",
+      "pventa": 3.96,
+      "row": 131
+    },
+    {
+      "sku": "043LFR5A-11-BR",
+      "name": "BUJIA NGK HDY TUCSON IX 2.0 KIA BRASILEÑA / K16HPR-U11 DENSO / IKH16 IRIDIO",
+      "pventa": 2.7,
+      "row": 132
+    },
+    {
+      "sku": "043BKR6E-11",
+      "name": "BUJIA NGK KIA CARENS RIO SEPHIA 5/8-14X19 / K20PR-U11 DENSO / RC-9MC4 CHAMPION / IK20 IRIDIO",
+      "pventa": 2.25,
+      "row": 133
+    },
+    {
+      "sku": "043BPR5EY",
+      "name": "BUJIA NGK MITSUB MONTEROV6/BMW/BENZ/CHEV CORSA ECOLOG 13/16 / W16EXR-U DENSO / IW16 IRIDIO",
+      "pventa": 2.04,
+      "row": 134
+    },
+    {
+      "sku": "043C7HSA",
+      "name": "BUJIA NGK MOTO HONDA 50-60-80-100-200 5/8 / Z-9Y CHAMPION / U22FS-U DENSO",
+      "pventa": 1.96,
+      "row": 135
+    },
+    {
+      "sku": "043D8EA",
+      "name": "BUJIA NGK MOTO HONDA KAWASAKI/SUZUKI / X24ES-U DENSO / IX24 IRIDIO",
+      "pventa": 1.83,
+      "row": 136
+    },
+    {
+      "sku": "043BM6A",
+      "name": "BUJIA NGK MOTOSIERRAS 3/4 14X9.5MM / W20M-U DENSO",
+      "pventa": 1.96,
+      "row": 137
+    },
+    {
+      "sku": "043BKR5E",
+      "name": "BUJIA NGK SWIFT/DAEWO/RACER/MAZDA2600/2220 5/8 / RC-12YC CHAMPION / K16PR-U DENSO / IK16 IRIDIO",
+      "pventa": 2.48,
+      "row": 138
+    },
+    {
+      "sku": "043LFR6C-11",
+      "name": "BUJIA NGK TOYOTA HI-LUX 2.7 20 BRASILEÑA / K20HR-U11 DENSO / IKH20 IRIDIO",
+      "pventa": 2.72,
+      "row": 139
+    },
+    {
+      "sku": "042LFR5AGP",
+      "name": "BUJIA NGK TUCSON IX 2.0 VITARA SZ 2.4 TOYOTA HY LUX PUNTA PLATINO",
+      "pventa": 3.74,
+      "row": 140
+    },
+    {
+      "sku": "037H7-600ML",
+      "name": "DESENGRASANTE H7 LIQUIDO MULTIUSO 600 ML",
+      "pventa": 4.35,
+      "row": 141
+    },
+    {
+      "sku": "1062000021",
+      "name": "DUCHA GRAFITADA NEGRA 1000ML",
+      "pventa": 4.61,
+      "row": 142
+    },
+    {
+      "sku": "072GB105",
+      "name": "DUCHA GRAFITADA NEGRA GLOBAL BALDE 5/1. GL",
+      "pventa": null,
+      "row": 143
+    },
+    {
+      "sku": "143DGN-5",
+      "name": "DUCHA GRAFITADA NEGRA LUBRISTONE BALDE 5GL.",
+      "pventa": null,
+      "row": 144
+    },
+    {
+      "sku": "1062000022",
+      "name": "DUCHA GRAFITADA TRANSPARENTE 1000ML",
+      "pventa": 4.39,
+      "row": 145
+    },
+    {
+      "sku": "ECOVL",
+      "name": "ECOVALOR (VENTA LUBRICANTES)",
+      "pventa": 0.02,
+      "row": 147
+    },
+    {
+      "sku": "080AO-1304",
+      "name": "FILTRO ACEITE HINO FD FF TURBO (DOBLE FLUJO CON PURGA) (ADVANCE)",
+      "pventa": 7.65,
+      "row": 169
+    },
+    {
+      "sku": "080AO-10060ST",
+      "name": "FILTRO ADVANCE ACEITE (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) CHEVROLET, CADILLAC, CITROEN, DODGE",
+      "pventa": null,
+      "row": 185
+    },
+    {
+      "sku": "080AOE-10759ST",
+      "name": "FILTRO ADVANCE ACEITE ELEMENTO (MEDIO FILTRANTE 100% SINTETICO 15.000 KM.) VOLKSWAGEN AMAROK - AOE-",
+      "pventa": null,
+      "row": 198
+    },
+    {
+      "sku": "080AAK-122",
+      "name": "FILTRO ADVANCE AIRE FULL SERVICE KIT AA-60360 + AA-70360 JAC HFC1160 HFC1130 HFC1134 - AAK-122",
+      "pventa": 37.85,
+      "row": 210
+    },
+    {
+      "sku": "080AFS-19555",
+      "name": "FILTRO ADVANCE COMBUSTIBLE FUEL WATER SEPARATOR JOHN DEERE 79OE 829E CATERPILLAR 320C 322B PSC877 P5",
+      "pventa": null,
+      "row": 219
+    },
+    {
+      "sku": "080AFS-1306B",
+      "name": "FILTRO ADVANCE COMBUSTIBLE HINO GD, GH, FG (CON VISOR) - CAJA X 20- AFS-1306B",
+      "pventa": 12.55,
+      "row": 220
+    },
+    {
+      "sku": "080AA-10115",
+      "name": "FILTRO AIRE CH CAPTIVA 10 3.0 (PANEL FLEXIBLE) \"ADVANCE\"",
+      "pventa": 9.13,
+      "row": 222
+    },
+    {
+      "sku": "080AA-9345",
+      "name": "FILTRO AIRE CH TRAIL BLAZER / HUMMER - AA-9345 (CILINDRICO) \"ADVANCE\" (MK-9345)",
+      "pventa": 8.35,
+      "row": 235
+    },
+    {
+      "sku": "080AA-28113",
+      "name": "FILTRO AIRE HY GRAND I10 /15 \"ADVANCE\"",
+      "pventa": 2.82,
+      "row": 249
+    },
+    {
+      "sku": "080AA-28650",
+      "name": "FILTRO AIRE HY HD72 COUNTY 3.9 (A28650) 28130 5A500 SELLO MARIPOSA (CILINDRICO) \"ADVANCE\" (MK-30281)",
+      "pventa": 19.91,
+      "row": 250
+    },
+    {
+      "sku": "080AA-12065",
+      "name": "FILTRO AIRE HY TUCSON TL 2016 SPORTAGE X LINE GT 2016 (28113-D3300) \"ADVANCE\"",
+      "pventa": 3.61,
+      "row": 254
+    },
+    {
+      "sku": "080AAK-107",
+      "name": "FILTRO AIRE ISUZU FRR, FTR34 11 FULL SERVICE KIT (AA- 5539 AA-5538) \"ADVANCE\"",
+      "pventa": 27.61,
+      "row": 255
+    },
+    {
+      "sku": "080AAK-102",
+      "name": "FILTRO AIRE KIT FULL SERVICE HINO 500 FG FM GD GH 2004 (FILTRO DE AIRE PRIMARIO AA-1325 \"ADVANCE\"",
+      "pventa": 25.59,
+      "row": 266
+    },
+    {
+      "sku": "080AAK-121",
+      "name": "FILTRO AIRE SINOTRUK 1067 5 TON. MOT CUMMINS ISF 3.8  FULL SERVICE KIT (AA-90654+AA-90655) \"ADVANCE\"",
+      "pventa": 25.48,
+      "row": 277
+    },
+    {
+      "sku": "080AA-10697",
+      "name": "FILTRO AIRE VW AMAROK - AA-10697 (RED 2H0129620A) \"ADVANCE\"  (MK-82242)",
+      "pventa": 8.43,
+      "row": 281
+    },
+    {
+      "sku": "080AC-65320",
+      "name": "FILTRO CABINA CH AVEO EMOTION 1.6 - AC- 65320 \"ADVANCE\" (MC-74874)",
+      "pventa": 4.91,
+      "row": 286
+    },
+    {
+      "sku": "080AC-28300",
+      "name": "FILTRO CABINA HY SANTA FE 2.4 3.3, KIA SORENTO 3.3 2015, SONATA 2.0 HIBRIDO 2.4 \"ADVANCE\"",
+      "pventa": 4.91,
+      "row": 304
+    },
+    {
+      "sku": "080AC-28380",
+      "name": "FILTRO CABINA HY TUCSON TL /16 SPORTAGE GT /16  KIA STONIC - AC28380 \"ADVANCE\"  (MC-83236)",
+      "pventa": 3.91,
+      "row": 306
+    },
+    {
+      "sku": "080AC-31060",
+      "name": "FILTRO CABINA VW AMAROK MC-70620 \"ADVANCE\"",
+      "pventa": 5.3,
+      "row": 311
+    },
+    {
+      "sku": "080AFS-20402",
+      "name": "FILTRO COMBUSTIBLE 10 MICRON, TURBINA 900 (2040TM, FS20402, SF-1913- 10) (SEPARADOR) \"ADVANCE\"",
+      "pventa": 5.13,
+      "row": 314
+    },
+    {
+      "sku": "079AFK-001",
+      "name": "FILTRO COMBUSTIBLE CH DMAX 3.0 DIESEL- DMAX 2.5 TURBO KIT FILTROS \"ADVANCE\"",
+      "pventa": 5.48,
+      "row": 319
+    },
+    {
+      "sku": "080AFK-002",
+      "name": "FILTRO COMBUSTIBLE CH TRAIL BLAZER 2.8 12 ELEMENTO KIT DE FILTROS DIESEL \"ADVANCE\"",
+      "pventa": 11.91,
+      "row": 327
+    },
+    {
+      "sku": "078AFI-11004",
+      "name": "FILTRO COMBUSTIBLE SUMERGIBLE HY ACCENT 1.6 /12-13 KIA RIO R 1.4 /12-15 GRAN I10 \"ADVANCE\"",
+      "pventa": 12.65,
+      "row": 349
+    },
+    {
+      "sku": "080AFP-787",
+      "name": "FILTRO COMBUSTIBLE VW AMAROK 2.0 TDI  MODULO DIESEL  \"ADVANCE\" (MF-15969)",
+      "pventa": 15.78,
+      "row": 355
+    },
+    {
+      "sku": "122302803",
+      "name": "FOCO BOSCH ECO H4 12v 60/55W P43t",
+      "pventa": 4.0,
+      "row": 357
+    },
+    {
+      "sku": "122302814",
+      "name": "FOCO BOSCH ECO P21 12V 21/5Wp21/5W 2 CONTACTOS (CJA 10UND)",
+      "pventa": 0.78,
+      "row": 358
+    },
+    {
+      "sku": "122302811",
+      "name": "FOCO BOSCH ECO P21W 12V 21W BA15s 1 CONTACTO (CJA 10 UND)",
+      "pventa": 0.61,
+      "row": 359
+    },
+    {
+      "sku": "0204962",
+      "name": "KENDALL 10W30 GT-1 HP 3/1 GL",
+      "pventa": 22.61,
+      "row": 360
+    },
+    {
+      "sku": "0207918",
+      "name": "KENDALL 20W50 SEMI SIN API SN GT-1H 12/1 LT",
+      "pventa": 6.09,
+      "row": 361
+    },
+    {
+      "sku": "0207920",
+      "name": "KENDALL 20W50 SEMI SINT API SN GT-1 HP 3/1 GL",
+      "pventa": 22.61,
+      "row": 362
+    },
+    {
+      "sku": "07199-5050",
+      "name": "KIT DE LIMPIEZA Y MANTENIMIENTO K&N ROJO",
+      "pventa": 21.73,
+      "row": 363
+    },
+    {
+      "sku": "012MN8029-023",
+      "name": "MANNOL GRASA ALTA TEMP LC-2 230GR (CJ X 24 UND)",
+      "pventa": 3.17,
+      "row": 409
+    },
+    {
+      "sku": "012MN8029-04",
+      "name": "MANNOL GRASA ALTA TEMP LC-2 400GR (COD. ANTERIOR 8104) (CJ X 24 UND)",
+      "pventa": 6.0,
+      "row": 410
+    },
+    {
+      "sku": "12206888",
+      "name": "PLUMA BOSCH AEROFIT CURVA 14\"",
+      "pventa": 7.91,
+      "row": 499
+    },
+    {
+      "sku": "12206890",
+      "name": "PLUMA BOSCH AEROFIT CURVA 16\"",
+      "pventa": 8.48,
+      "row": 500
+    },
+    {
+      "sku": "12206892",
+      "name": "PLUMA BOSCH AEROFIT CURVA 18\"",
+      "pventa": 8.87,
+      "row": 501
+    },
+    {
+      "sku": "12206894",
+      "name": "PLUMA BOSCH AEROFIT CURVA 20\"",
+      "pventa": 9.22,
+      "row": 502
+    },
+    {
+      "sku": "12206896",
+      "name": "PLUMA BOSCH AEROFIT CURVA 22\"",
+      "pventa": 9.74,
+      "row": 503
+    },
+    {
+      "sku": "12206898",
+      "name": "PLUMA BOSCH AEROFIT CURVA 24\"",
+      "pventa": 9.83,
+      "row": 504
+    },
+    {
+      "sku": "122006899",
+      "name": "PLUMA BOSCH AEROFIT CURVA 26\"",
+      "pventa": 11.16,
+      "row": 505
+    },
+    {
+      "sku": "12216722",
+      "name": "PLUMA BOSCH AEROFIT CURVA MULTICLIP 14\"",
+      "pventa": 9.48,
+      "row": 506
+    },
+    {
+      "sku": "12216724",
+      "name": "PLUMA BOSCH AEROFIT CURVA MULTICLIP 16\"",
+      "pventa": 10.19,
+      "row": 507
+    },
+    {
+      "sku": "12216725",
+      "name": "PLUMA BOSCH AEROFIT CURVA MULTICLIP 18\"",
+      "pventa": 10.65,
+      "row": 508
+    },
+    {
+      "sku": "122016727",
+      "name": "PLUMA BOSCH AEROFIT CURVA MULTICLIP 20\"",
+      "pventa": 11.04,
+      "row": 509
+    },
+    {
+      "sku": "12216729",
+      "name": "PLUMA BOSCH AEROFIT CURVA MULTICLIP 22\"",
+      "pventa": 11.65,
+      "row": 510
+    },
+    {
+      "sku": "12216730",
+      "name": "PLUMA BOSCH AEROFIT CURVA MULTICLIP 24\"",
+      "pventa": 11.83,
+      "row": 511
+    },
+    {
+      "sku": "12216731",
+      "name": "PLUMA BOSCH AEROFIT CURVA MULTICLIP 26\"",
+      "pventa": 12.17,
+      "row": 512
+    },
+    {
+      "sku": "12204911",
+      "name": "PLUMA BOSCH ECO METÁLICA 14\"",
+      "pventa": 4.13,
+      "row": 513
+    },
+    {
+      "sku": "12204914",
+      "name": "PLUMA BOSCH ECO METÁLICA 18\"",
+      "pventa": 5.26,
+      "row": 514
+    },
+    {
+      "sku": "12204915",
+      "name": "PLUMA BOSCH ECO METÁLICA 19",
+      "pventa": 5.3,
+      "row": 515
+    },
+    {
+      "sku": "12204916",
+      "name": "PLUMA BOSCH ECO METÁLICA 20\"",
+      "pventa": 5.43,
+      "row": 516
+    },
+    {
+      "sku": "12204918",
+      "name": "PLUMA BOSCH ECO METÁLICA 22\"",
+      "pventa": 6.26,
+      "row": 517
+    },
+    {
+      "sku": "12204910",
+      "name": "PLUMA BOSCH ECO METÁLICA 24\"",
+      "pventa": 6.17,
+      "row": 518
+    },
+    {
+      "sku": "0995009VCU",
+      "name": "SOPORTE DE BATERIA INFERIOR PEQUEÑO UNIVERSAL",
+      "pventa": 3.57,
+      "row": 525
+    },
+    {
+      "sku": "0995009R",
+      "name": "SOPORTE DE BATERIA UNIVERSAL ROJO VARILLA LARGA",
+      "pventa": 3.57,
+      "row": 526
+    },
+    {
+      "sku": "1111048GR",
+      "name": "TAPETE DURA LINE TRASERO ENT. GRIS",
+      "pventa": 15.22,
+      "row": 527
+    },
+    {
+      "sku": "1556236",
+      "name": "TAPETE QUICK FIT SIMONIZ PVC NEGRO 3PZS",
+      "pventa": 20.87,
+      "row": 528
+    },
+    {
+      "sku": "012TDCM",
+      "name": "TARJETAS DE CAMBIO MANNOL (5UND)",
+      "pventa": null,
+      "row": 529
+    },
+    {
+      "sku": "098TBDN",
+      "name": "TERMINAL BATERIA BORNE DELGADO NEGATIVO",
+      "pventa": 1.79,
+      "row": 530
+    },
+    {
+      "sku": "098TBDP",
+      "name": "TERMINAL BATERIA BORNE DELGADO POSITIVO",
+      "pventa": 1.79,
+      "row": 531
+    },
+    {
+      "sku": "098TBGN",
+      "name": "TERMINAL BATERIA BORNE GRUESO NEGATIVO",
+      "pventa": 1.79,
+      "row": 532
+    },
+    {
+      "sku": "098TBGP",
+      "name": "TERMINAL BATERIA BORNE GRUESO POSITIVO",
+      "pventa": 1.79,
+      "row": 533
+    },
+    {
+      "sku": "098TBG-IN",
+      "name": "TERMINAL BATERIA TIPO ORIGINAL CON CAPUCHON BORNE GRUESO (PAR)",
+      "pventa": 3.12,
+      "row": 534
+    }
+  ],
+  "excel_rows_without_pventa_count": 14,
+  "excel_rows_without_pventa": [
+    {
+      "sku": "012MNAMB",
+      "name": "AMBIENTAL MANNOL",
+      "pventa": null,
+      "row": 27
+    },
+    {
+      "sku": "072GB105",
+      "name": "DUCHA GRAFITADA NEGRA GLOBAL BALDE 5/1. GL",
+      "pventa": null,
+      "row": 143
+    },
+    {
+      "sku": "143DGN-5",
+      "name": "DUCHA GRAFITADA NEGRA LUBRISTONE BALDE 5GL.",
+      "pventa": null,
+      "row": 144
+    },
+    {
+      "sku": "080AO-10060ST",
+      "name": "FILTRO ADVANCE ACEITE (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) CHEVROLET, CADILLAC, CITROEN, DODGE",
+      "pventa": null,
+      "row": 185
+    },
+    {
+      "sku": "080AO-500ST",
+      "name": "FILTRO ADVANCE ACEITE (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) CHEVROLET, FORD, JMC, JAC - AO-500S",
+      "pventa": null,
+      "row": 187
+    },
+    {
+      "sku": "080AO-4386ST",
+      "name": "FILTRO ADVANCE ACEITE (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) SUZUKI GRAND VITARA SZ, NEXT, TOYOT",
+      "pventa": null,
+      "row": 192
+    },
+    {
+      "sku": "080AO-667-1",
+      "name": "FILTRO ADVANCE ACEITE (PH49A,LF667,C-5510,LFP3191, PSL417)OIL FILTER CATERPILLAR, MACK, SCANIA, VOLV",
+      "pventa": null,
+      "row": 193
+    },
+    {
+      "sku": "080AOE-10759ST",
+      "name": "FILTRO ADVANCE ACEITE ELEMENTO (MEDIO FILTRANTE 100% SINTETICO 15.000 KM.) VOLKSWAGEN AMAROK - AOE-",
+      "pventa": null,
+      "row": 198
+    },
+    {
+      "sku": "080AOE-9496ST",
+      "name": "FILTRO ADVANCE ACEITE ELEMENTO (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) VOLKSWAGEN BORA, JETTA, SK",
+      "pventa": null,
+      "row": 201
+    },
+    {
+      "sku": "080AOE-9229-1",
+      "name": "FILTRO ADVANCE ACEITE ELEMENTOJAC HFC 1140 7.8L, HFC 1160 7.8L, HFC 1180 7.8L - AOE9229/1",
+      "pventa": null,
+      "row": 202
+    },
+    {
+      "sku": "080AA-9476",
+      "name": "FILTRO ADVANCE AIRE CHEVROLET CAVALIER 2019 CJ X 24 - AA-9476",
+      "pventa": null,
+      "row": 208
+    },
+    {
+      "sku": "FILTRO AIRE 080AA-3038",
+      "name": "FILTRO ADVANCE AIRE JAC T9 2.0 2025 - AA-3038",
+      "pventa": null,
+      "row": 211
+    },
+    {
+      "sku": "080AFS-19555",
+      "name": "FILTRO ADVANCE COMBUSTIBLE FUEL WATER SEPARATOR JOHN DEERE 79OE 829E CATERPILLAR 320C 322B PSC877 P5",
+      "pventa": null,
+      "row": 219
+    },
+    {
+      "sku": "012TDCM",
+      "name": "TARJETAS DE CAMBIO MANNOL (5UND)",
+      "pventa": null,
+      "row": 529
+    }
+  ]
+}

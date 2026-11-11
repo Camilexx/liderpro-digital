@@ -91,7 +91,7 @@ export const BUSINESS_CONFIG: BusinessConfig = {
       province: "Manabí",
       region: "Costa / Hub Nacional",
       role: "Centro principal de acopio multimarca, mostrador técnico minorista/mayorista, atención al sector camaronero y despacho diario interprovincial.",
-      address: "Sede Central Pedernales, Manabí (Zona Comercial Automotriz)",
+      address: "Vía al Carmen (Frente a gasolinera Pedernales), Pedernales, Manabí",
       phone: "+593 96 748 9002",
       directPhone: "+593 98 389 3231",
       whatsapp: "593967489002",

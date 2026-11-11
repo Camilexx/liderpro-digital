@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { MessageCircle, Package, Plus, Check, ShoppingBag, ArrowUpRight } from "lucide-react";
+import { MessageCircle, Package, Plus, Check, ShoppingBag, ArrowUpRight, Sparkles } from "lucide-react";
 import { Product, ProductVariant } from "@/data/products";
 import { buildWhatsAppLink } from "@/lib/whatsapp";
 import { trackEvent } from "@/lib/analytics";
@@ -22,12 +22,24 @@ export default function ProductCard({ product, priority = false }: ProductCardPr
   const [justAdded, setJustAdded] = useState(false);
   const { addItem, items } = useQuoteBasket();
 
-  const activeSku = selectedVariant ? selectedVariant.sku : product.sku;
+  const activeSku = selectedVariant ? (selectedVariant.officialSku || selectedVariant.sku) : product.sku;
   const activeImage = selectedVariant?.imageUrl || product.imageUrl;
-  const presentation = selectedVariant
+  const rawPresentation = selectedVariant
     ? selectedVariant.presentation
     : (product.volume || product.plates || undefined);
+  const presentation = rawPresentation?.replace("1 Galón / 5L", "1 Galón");
+
+  const activePrice = selectedVariant
+    ? (selectedVariant.priceEstimate ?? product.priceEstimate)
+    : product.priceEstimate;
+  const activeNumericPrice = selectedVariant
+    ? (selectedVariant.price ?? product.price)
+    : product.price;
+
   const inBasket = items.find((it) => it.product.sku === activeSku);
+  const isMannolPromoEligible =
+    product.brand.toUpperCase() === "MANNOL" &&
+    (product.category === "lubricantes" || product.category === "aditivos");
 
   const handleWhatsApp = () => {
     trackEvent("whatsapp_product", {
@@ -43,26 +55,34 @@ export default function ProductCard({ product, priority = false }: ProductCardPr
     const productToAdd: Product = selectedVariant
       ? {
           ...product,
-          sku: selectedVariant.sku,
-          name: selectedVariant.name,
-          volume: selectedVariant.presentation,
+          sku: activeSku,
+          name: selectedVariant.name.replace("1 Galón / 5L", "1 Galón"),
+          volume: presentation,
           imageUrl: selectedVariant.imageUrl,
+          price: activeNumericPrice,
+          priceEstimate: activePrice,
         }
-      : product;
+      : {
+          ...product,
+          sku: activeSku,
+          price: activeNumericPrice,
+          priceEstimate: activePrice,
+        };
     addItem(productToAdd, 1);
     setJustAdded(true);
     setTimeout(() => setJustAdded(false), 1800);
   };
 
-  const variantsList = product.variants && product.variants.length > 1
-    ? product.variants.slice(0, 3)
-    : [];
+  const variantsList =
+    product.variants && product.variants.length > 1
+      ? product.variants.slice(0, 4)
+      : [];
 
   return (
-    <div className="bg-white rounded-2xl border border-slate-200/90 hover:border-[#0A3B8C]/40 shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between overflow-hidden group">
+    <div className="bg-white rounded-2xl border-2 border-slate-200/90 hover:border-[#0A3B8C] shadow-xs hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between overflow-hidden group">
       <div>
         {/* Large Institutional Product Image Stage */}
-        <div className="relative aspect-square w-full min-h-[250px] sm:min-h-[270px] bg-gradient-to-b from-white via-slate-50/50 to-slate-100/30 p-3 sm:p-4 flex items-center justify-center border-b border-slate-100/90 overflow-hidden">
+        <div className="relative aspect-square w-full min-h-[245px] sm:min-h-[265px] bg-gradient-to-b from-white via-slate-50/50 to-slate-100/40 p-3 sm:p-4 flex items-center justify-center border-b border-slate-100 overflow-hidden">
           {!imgError ? (
             <Image
               key={activeImage}
@@ -83,54 +103,97 @@ export default function ProductCard({ product, priority = false }: ProductCardPr
             </div>
           )}
 
-          {/* Badges: Brand & Best Seller in Single Row */}
-          <div className="absolute top-3 left-3 flex items-center gap-1.5 z-10 pointer-events-none">
-            <span className="px-2.5 py-1 bg-[#061B40]/95 backdrop-blur-md text-white text-[10.5px] font-black uppercase tracking-wider rounded-lg shadow-sm border border-white/15">
+          {/* Top Left Badges: Brand, Best Seller & Mannol Combo Eligible */}
+          <div className="absolute top-3 left-3 flex flex-wrap items-center gap-1.5 z-10 pointer-events-none max-w-[72%]">
+            <span className="px-2.5 py-1 bg-[#061B40]/95 backdrop-blur-md text-white text-[11px] font-black uppercase tracking-wider rounded-lg shadow-sm border border-white/15">
               {product.brand}
             </span>
             {product.isBestSeller && (
-              <span className="px-2 py-1 bg-gradient-to-r from-[#FFC500] to-[#FDB813] text-slate-950 font-black text-[9.5px] uppercase tracking-wider rounded-lg shadow-sm border border-amber-300 flex items-center gap-1">
+              <span className="px-2 py-1 bg-gradient-to-r from-[#FFC500] to-[#FDB813] text-slate-950 font-black text-[10px] uppercase tracking-wider rounded-lg shadow-sm border border-amber-300 flex items-center gap-1">
                 ⭐ Top Ventas
+              </span>
+            )}
+            {isMannolPromoEligible && (
+              <span className="px-2 py-0.5 bg-emerald-600/95 text-white font-black text-[9.5px] uppercase tracking-wider rounded-md shadow-xs flex items-center gap-1">
+                <Sparkles className="w-2.5 h-2.5 text-[#FFC500]" />
+                Aplica Combo Mannol
               </span>
             )}
           </div>
 
           {/* Presentation Pill */}
           {presentation && (
-            <div className="absolute top-3 right-3 px-2.5 py-1 bg-white/95 backdrop-blur-md text-slate-800 font-extrabold text-[10.5px] rounded-lg border border-slate-200/90 shadow-2xs z-10">
+            <div className="absolute top-3 right-3 px-2.5 py-1 bg-white/95 backdrop-blur-md text-slate-900 font-extrabold text-[11px] rounded-lg border border-slate-300 shadow-2xs z-10">
               {presentation}
             </div>
           )}
         </div>
 
-        {/* Product Details */}
+        {/* Product Details — Adult-Friendly High-Contrast Typography */}
         <div className="p-4 sm:p-5 pb-2 space-y-2.5">
-          <div className="flex items-center justify-between text-[11px] font-bold uppercase tracking-wider">
+          <div className="flex items-center justify-between text-xs font-bold uppercase tracking-wider">
             <span className="text-[#0A3B8C] font-black">{product.category}</span>
-            <span className="font-mono text-slate-500 text-[10px] bg-slate-100 px-2 py-0.5 rounded-md font-bold border border-slate-200/60">
-              SKU: {activeSku}
+            <span className="font-mono text-slate-600 text-[11px] bg-slate-100 px-2 py-0.5 rounded-md font-bold border border-slate-200">
+              Cód: {activeSku}
             </span>
           </div>
 
-          <h3 className="text-base font-black text-slate-950 group-hover:text-[#0A3B8C] transition-colors line-clamp-2 leading-snug min-h-[2.6rem]">
+          <h3 className="text-base sm:text-[17px] font-black text-slate-950 group-hover:text-[#0A3B8C] transition-colors line-clamp-2 leading-snug min-h-[2.75rem]">
             <Link href={`/productos/${product.slug}`}>
               {product.name}
             </Link>
           </h3>
 
-          <p className="text-xs text-slate-600 line-clamp-2 leading-relaxed min-h-[2rem]">
+          {/* Official Price Block — Prominent & Clear for Senior Readability */}
+          <div className="bg-slate-50 border border-slate-200/90 rounded-xl px-3.5 py-2.5 flex items-center justify-between gap-2">
+            {activePrice ? (
+              <>
+                <div>
+                  <span className="block text-[10px] font-extrabold uppercase tracking-wider text-slate-500">
+                    Precio Oficial Local
+                  </span>
+                  <span className="text-xl sm:text-2xl font-black text-[#061B40] tracking-tight">
+                    {activePrice}
+                  </span>
+                </div>
+                <div className="text-right">
+                  <span className="inline-block px-2 py-0.5 bg-emerald-100 text-emerald-900 text-[10px] font-black rounded-md border border-emerald-300">
+                    ✓ Stock Activo
+                  </span>
+                  {presentation && (
+                    <span className="block text-[10.5px] font-bold text-slate-600 mt-0.5">
+                      {presentation}
+                    </span>
+                  )}
+                </div>
+              </>
+            ) : (
+              <div className="flex items-center justify-between w-full">
+                <span className="text-xs font-black text-[#0A3B8C]">
+                  Consultar Precio en Mostrador
+                </span>
+                <span className="px-2 py-0.5 bg-emerald-100 text-emerald-900 text-[10px] font-black rounded-md">
+                  Disponible
+                </span>
+              </div>
+            )}
+          </div>
+
+          <p className="text-xs sm:text-[13px] text-slate-600 line-clamp-2 leading-relaxed min-h-[2.2rem]">
             {product.shortSpec}
           </p>
 
-          {/* Single-Row Segmented Size Selector (Maximum 3 clean options) */}
+          {/* Interactive Size Selector (Large Touch Buttons with Price Preview) */}
           {variantsList.length > 1 && (
-            <div className="pt-2.5 pb-1 border-t border-slate-100/90 flex items-center justify-between gap-1.5">
-              <span className="text-[10px] font-black text-slate-400 uppercase tracking-wider shrink-0">
-                Tamaño:
+            <div className="pt-2.5 pb-1 border-t border-slate-100 space-y-1.5">
+              <span className="text-[11px] font-black text-slate-600 uppercase tracking-wider block">
+                Elige el tamaño (clic para ver precio):
               </span>
-              <div className="flex items-center gap-1.5 flex-wrap justify-end">
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-1.5">
                 {variantsList.map((v) => {
-                  const isSelected = activeSku === v.sku;
+                  const vSku = v.officialSku || v.sku;
+                  const isSelected = activeSku === vSku || selectedVariant?.sku === v.sku;
+                  const cleanPres = v.presentation.replace("1 Galón / 5L", "1 Galón");
                   return (
                     <button
                       key={v.sku}
@@ -141,13 +204,22 @@ export default function ProductCard({ product, priority = false }: ProductCardPr
                         setSelectedVariant(v);
                         setImgError(false);
                       }}
-                      className={`px-2.5 py-1 rounded-lg text-[10.5px] font-black tracking-tight transition-all cursor-pointer border ${
+                      className={`py-2 px-2 rounded-xl text-[11px] font-black tracking-tight transition-all cursor-pointer border text-center flex flex-col items-center justify-center min-h-[42px] ${
                         isSelected
-                          ? "bg-[#0A3B8C] text-white border-[#0A3B8C] shadow-2xs scale-102"
-                          : "bg-slate-50 hover:bg-slate-100 text-slate-700 border-slate-200 hover:border-slate-300"
+                          ? "bg-[#0A3B8C] text-white border-[#0A3B8C] shadow-sm ring-2 ring-[#0A3B8C]/20"
+                          : "bg-slate-50 hover:bg-blue-50/60 text-slate-800 border-slate-200 hover:border-[#0A3B8C]/40"
                       }`}
                     >
-                      {v.presentation}
+                      <span className="leading-tight">{cleanPres}</span>
+                      {v.priceEstimate && (
+                        <span
+                          className={`text-[10px] font-extrabold ${
+                            isSelected ? "text-[#FFC500]" : "text-[#0A3B8C]"
+                          }`}
+                        >
+                          {v.priceEstimate}
+                        </span>
+                      )}
                     </button>
                   );
                 })}
@@ -157,81 +229,83 @@ export default function ProductCard({ product, priority = false }: ProductCardPr
         </div>
       </div>
 
-      {/* Dispatch Status & Action Buttons */}
-      <div className="p-4 sm:p-5 pt-2">
-        <div className="mb-3 pb-2 border-b border-slate-100 space-y-1">
-          <div className="flex items-center justify-between text-[11px] font-bold text-emerald-800 bg-emerald-50/90 px-2.5 py-1.5 rounded-lg border border-emerald-200/70">
-            <span className="flex items-center gap-1.5">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse shrink-0" />
-              <span>En Stock Bodega Pedernales</span>
-            </span>
-            <span className="text-[10px] text-emerald-700 font-extrabold uppercase tracking-tight">
-              Despacho 24h
-            </span>
-          </div>
-
-          <div className="flex items-center justify-between text-[10.5px] text-slate-500 font-medium px-0.5">
-            <span>{product.warranty}</span>
-            <span className="font-bold text-slate-700 uppercase tracking-tight">{product.applicationType}</span>
-          </div>
-        </div>
-
-        {/* WhatsApp & Ficha Grid */}
-        <div className="grid grid-cols-2 gap-2 mb-2">
+      {/* Action Buttons — Adult-Friendly High Touch Targets */}
+      <div className="p-4 sm:p-5 pt-2 space-y-2">
+        {/* Primary Row: Pedir por WhatsApp & Ver Ficha */}
+        <div className="grid grid-cols-12 gap-2">
           <a
-            href={buildWhatsAppLink("product", {
-              brand: product.brand,
-              productName: selectedVariant ? selectedVariant.name : product.name,
-              presentation: presentation || undefined,
-              sku: activeSku,
-            })}
+            href={buildWhatsAppLink(
+              "product",
+              {
+                brand: product.brand,
+                productName: `${product.name}${activePrice ? ` (${activePrice})` : ""}`,
+                presentation: presentation || undefined,
+                sku: activeSku,
+              },
+              true
+            )}
             target="_blank"
             rel="noopener noreferrer"
             onClick={handleWhatsApp}
-            className="btn-whatsapp !py-2.5 !px-2.5 !text-xs font-black uppercase tracking-wider rounded-xl flex items-center justify-center gap-1.5 shadow-sm"
+            className="col-span-7 btn-whatsapp !py-3 !px-3 !text-xs font-black uppercase tracking-wider rounded-xl flex items-center justify-center gap-1.5 shadow-sm min-h-[44px]"
           >
-            <MessageCircle className="w-3.5 h-3.5 shrink-0" />
-            <span>Cotizar</span>
+            <MessageCircle className="w-4 h-4 shrink-0" />
+            <span>Pedir WhatsApp</span>
           </a>
 
           <Link
             href={`/productos/${product.slug}`}
-            className="btn-secondary !py-2.5 !px-2.5 !text-xs font-bold text-center flex items-center justify-center gap-1 hover:border-[#0A3B8C] hover:text-[#0A3B8C] rounded-xl"
+            className="col-span-5 btn-secondary !py-3 !px-2.5 !text-xs font-black text-center flex items-center justify-center gap-1 hover:border-[#0A3B8C] hover:text-[#0A3B8C] rounded-xl min-h-[44px]"
           >
             <span>Ver Ficha</span>
-            <ArrowUpRight className="w-3.5 h-3.5 opacity-60" />
+            <ArrowUpRight className="w-3.5 h-3.5 opacity-70" />
           </Link>
         </div>
 
-        {/* Quick Add to Quote Basket */}
-        <button
-          type="button"
-          onClick={handleAddToBasket}
-          className={`w-full py-2.5 px-3 text-[11px] font-black uppercase tracking-wider rounded-xl flex items-center justify-center gap-1.5 transition-all cursor-pointer ${
-            justAdded
-              ? "bg-emerald-600 text-white shadow-xs"
-              : inBasket
-              ? "bg-[#061B40] text-[#FFC500] hover:bg-[#0A3B8C] border border-[#FFC500]/40"
-              : "bg-slate-100 hover:bg-[#061B40] text-slate-700 hover:text-white border border-slate-200/90"
-          }`}
-        >
-          {justAdded ? (
-            <>
-              <Check className="w-4 h-4 text-white" />
-              <span>✓ Añadido a Cotización</span>
-            </>
-          ) : inBasket ? (
-            <>
-              <ShoppingBag className="w-4 h-4 text-[#FFC500]" />
-              <span>En tu lista ({inBasket.quantity}) • Añadir +</span>
-            </>
-          ) : (
-            <>
-              <Plus className="w-4 h-4 text-[#0A3B8C] group-hover:text-[#FFC500]" />
-              <span>+ Añadir a Cotización</span>
-            </>
-          )}
-        </button>
+        {/* Secondary Row: Add to Basket + Direct Combo Consultation */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
+          <button
+            type="button"
+            onClick={handleAddToBasket}
+            className={`w-full py-2.5 px-2.5 text-[11px] font-black uppercase tracking-wider rounded-xl flex items-center justify-center gap-1.5 transition-all cursor-pointer min-h-[40px] ${
+              justAdded
+                ? "bg-emerald-600 text-white shadow-xs"
+                : inBasket
+                ? "bg-[#061B40] text-[#FFC500] hover:bg-[#0A3B8C] border border-[#FFC500]/40"
+                : "bg-slate-100 hover:bg-[#061B40] text-slate-800 hover:text-white border border-slate-200"
+            }`}
+          >
+            {justAdded ? (
+              <>
+                <Check className="w-3.5 h-3.5 text-white shrink-0" />
+                <span>✓ En tu Lista</span>
+              </>
+            ) : inBasket ? (
+              <>
+                <ShoppingBag className="w-3.5 h-3.5 text-[#FFC500] shrink-0" />
+                <span>Lista ({inBasket.quantity}) +</span>
+              </>
+            ) : (
+              <>
+                <Plus className="w-3.5 h-3.5 text-[#0A3B8C] group-hover:text-[#FFC500] shrink-0" />
+                <span>Añadir a Lista</span>
+              </>
+            )}
+          </button>
+
+          <a
+            href={`https://wa.me/593983893231?text=${encodeURIComponent(
+              `Hola LiderPro Pedernales, estoy viendo ${product.name} (${presentation || activeSku}${activePrice ? ` - ${activePrice}` : ""}). ¿Me ayudan confirmando si le queda a mi vehículo o armando mi Combo Cambio Mannol?`
+            )}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full py-2.5 px-2.5 text-[11px] font-black uppercase tracking-tight rounded-xl bg-amber-50 hover:bg-[#FFC500] text-amber-950 hover:text-slate-950 border border-amber-300/90 flex items-center justify-center gap-1 transition-all min-h-[40px]"
+            title="Consultar si este producto aplica para tu vehículo o combo"
+          >
+            <Sparkles className="w-3.5 h-3.5 text-amber-600 shrink-0" />
+            <span>¿Aplica a mi auto?</span>
+          </a>
+        </div>
       </div>
     </div>
   );

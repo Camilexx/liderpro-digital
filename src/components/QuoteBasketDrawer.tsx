@@ -13,7 +13,7 @@ import {
   Building2,
   MapPin,
   FileText,
-  Package
+  Package,
 } from "lucide-react";
 import { useQuoteBasket } from "@/context/QuoteBasketContext";
 
@@ -27,6 +27,7 @@ export default function QuoteBasketDrawer() {
     clearBasket,
     totalItems,
     totalUnits,
+    totalEstimatedPrice,
     sendWhatsAppQuote,
   } = useQuoteBasket();
 
@@ -40,25 +41,25 @@ export default function QuoteBasketDrawer() {
 
   return (
     <>
-      {/* Floating Desktop Trigger Pill (Only if there are items and drawer is closed) */}
+      {/* Floating Desktop Trigger Pill */}
       {totalItems > 0 && !isOpen && (
         <button
           onClick={() => setIsOpen(true)}
-          className="hidden sm:flex fixed bottom-24 right-6 z-40 items-center gap-3 bg-[#061B40] text-white pl-4 pr-5 py-3 rounded-2xl shadow-2xl border border-[#FFC500]/60 hover:scale-105 active:scale-95 transition-all duration-200 group"
+          className="hidden sm:flex fixed bottom-24 right-6 z-40 items-center gap-3 bg-[#061B40] text-white pl-4 pr-5 py-3 rounded-2xl shadow-2xl border-2 border-[#FFC500] hover:scale-105 active:scale-95 transition-all duration-200 group cursor-pointer"
           aria-label="Ver lista de cotización"
         >
-          <span className="relative flex items-center justify-center w-8 h-8 rounded-xl bg-[#0A3B8C] text-[#FFC500]">
-            <ShoppingBag className="w-4 h-4" />
-            <span className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-[#FFC500] text-slate-950 font-black text-[10px] flex items-center justify-center shadow-sm">
+          <span className="relative flex items-center justify-center w-9 h-9 rounded-xl bg-[#0A3B8C] text-[#FFC500]">
+            <ShoppingBag className="w-5 h-5" />
+            <span className="absolute -top-1.5 -right-1.5 w-5 h-5 rounded-full bg-[#FFC500] text-slate-950 font-black text-[11px] flex items-center justify-center shadow-sm">
               {totalItems}
             </span>
           </span>
           <div className="text-left">
-            <p className="text-[11px] font-black tracking-wider uppercase text-[#FFC500]">
-              Mi Cotización
+            <p className="text-xs font-black tracking-wider uppercase text-[#FFC500]">
+              Mi Lista ({totalUnits} un.)
             </p>
-            <p className="text-[10px] text-slate-300 font-medium">
-              {totalUnits} {totalUnits === 1 ? "unidad" : "unidades"} en lista
+            <p className="text-xs text-white font-extrabold">
+              {totalEstimatedPrice > 0 ? `Total: $${totalEstimatedPrice.toFixed(2)}` : "Ver cotización"}
             </p>
           </div>
         </button>
@@ -86,7 +87,7 @@ export default function QuoteBasketDrawer() {
             </div>
             <div>
               <h3 className="text-base font-black tracking-tight text-white flex items-center gap-2">
-                <span>Lista de Cotización</span>
+                <span>Mi Lista de Pedido</span>
                 {totalItems > 0 && (
                   <span className="px-2 py-0.5 rounded-full bg-[#FFC500] text-slate-950 text-xs font-black">
                     {totalItems}
@@ -94,14 +95,14 @@ export default function QuoteBasketDrawer() {
                 )}
               </h3>
               <p className="text-[11px] text-slate-300">
-                Hub Matriz Pedernales • Despacho Nacional
+                Vía al Carmen (Frente a gasolinera Pedernales) • 098 389 3231
               </p>
             </div>
           </div>
 
           <button
             onClick={() => setIsOpen(false)}
-            className="p-2 text-slate-400 hover:text-white rounded-xl hover:bg-white/10 transition-colors"
+            className="p-2 text-slate-400 hover:text-white rounded-xl hover:bg-white/10 transition-colors cursor-pointer"
             aria-label="Cerrar cotizador"
           >
             <X className="w-5 h-5" />
@@ -116,18 +117,18 @@ export default function QuoteBasketDrawer() {
                 <Package className="w-8 h-8" />
               </div>
               <div className="space-y-1">
-                <h4 className="text-sm font-bold text-slate-800">
-                  Tu lista de cotización está vacía
+                <h4 className="text-base font-bold text-slate-800">
+                  Tu lista de pedido está vacía
                 </h4>
-                <p className="text-xs text-slate-500 max-w-xs mx-auto">
-                  Explora nuestro catálogo verificado de 366 productos y añade los que requieras para tu taller, vehículo o flota.
+                <p className="text-xs text-slate-600 max-w-xs mx-auto leading-relaxed">
+                  Explora nuestro catálogo oficial o elige uno de los Combos Cambio Mannol y agrégalo para enviarlo por WhatsApp.
                 </p>
               </div>
               <button
                 onClick={() => setIsOpen(false)}
-                className="btn-secondary !text-xs !py-2.5 !px-5 inline-block"
+                className="btn-secondary !text-xs !py-2.5 !px-5 inline-block cursor-pointer"
               >
-                Explorar Catálogo
+                Ver Productos y Combos
               </button>
             </div>
           ) : (
@@ -135,11 +136,11 @@ export default function QuoteBasketDrawer() {
               {/* Actions strip */}
               <div className="flex items-center justify-between text-xs pb-2 border-b border-slate-100">
                 <span className="font-bold text-slate-700">
-                  {totalItems} {totalItems === 1 ? "referencia" : "referencias"} ({totalUnits} unidades)
+                  {totalItems} {totalItems === 1 ? "producto" : "productos"} ({totalUnits} unidades)
                 </span>
                 <button
                   onClick={clearBasket}
-                  className="text-xs text-red-600 hover:text-red-700 font-semibold flex items-center gap-1 hover:underline cursor-pointer"
+                  className="text-xs text-red-600 hover:text-red-700 font-bold flex items-center gap-1 hover:underline cursor-pointer"
                 >
                   <Trash2 className="w-3.5 h-3.5" />
                   <span>Vaciar lista</span>
@@ -150,10 +151,11 @@ export default function QuoteBasketDrawer() {
               <div className="space-y-3">
                 {items.map((it) => {
                   const pres = it.product.volume || it.product.plates;
+                  const unitPrice = typeof it.product.price === "number" ? it.product.price : null;
                   return (
                     <div
                       key={it.product.sku}
-                      className="p-3 bg-slate-50 border border-slate-200/90 rounded-2xl flex items-center gap-3 group hover:border-[#0A3B8C]/40 transition-colors"
+                      className="p-3.5 bg-slate-50 border border-slate-200/90 rounded-2xl flex items-center gap-3 group hover:border-[#0A3B8C]/40 transition-colors"
                     >
                       {/* Thumbnail */}
                       <div className="relative w-16 h-16 rounded-xl bg-white p-1 border border-slate-200 shrink-0 overflow-hidden">
@@ -168,51 +170,54 @@ export default function QuoteBasketDrawer() {
 
                       {/* Info */}
                       <div className="flex-1 min-w-0">
-                        <div className="flex items-center gap-1.5 mb-0.5">
-                          <span className="text-[9px] font-black uppercase text-slate-500 bg-slate-200/80 px-1.5 py-0.2 rounded font-mono">
+                        <div className="flex items-center justify-between gap-1.5 mb-0.5">
+                          <span className="text-[10px] font-black uppercase text-slate-600 bg-slate-200/80 px-1.5 py-0.5 rounded font-mono">
                             {it.product.sku}
                           </span>
-                          <span className="text-[9px] font-bold text-[#0A3B8C] uppercase">
-                            {it.product.brand}
-                          </span>
+                          {unitPrice !== null && (
+                            <span className="text-sm font-black text-[#061B40]">
+                              ${(unitPrice * it.quantity).toFixed(2)}
+                            </span>
+                          )}
                         </div>
-                        <h4 className="text-xs font-bold text-slate-900 truncate">
+                        <h4 className="text-xs sm:text-sm font-black text-slate-900 truncate">
                           {it.product.name}
                         </h4>
-                        {pres && (
-                          <p className="text-[10px] text-slate-500 font-medium">
-                            Presentación: {pres}
-                          </p>
-                        )}
+                        <div className="flex items-center justify-between text-[11px] text-slate-600 font-medium mt-0.5">
+                          <span>{pres ? `Envase: ${pres}` : it.product.brand}</span>
+                          {unitPrice !== null && it.quantity > 1 && (
+                            <span className="text-[10px] text-slate-500">(${unitPrice.toFixed(2)} c/u)</span>
+                          )}
+                        </div>
 
                         {/* Quantity Counter */}
-                        <div className="flex items-center gap-2 mt-2">
+                        <div className="flex items-center justify-between gap-2 mt-2">
                           <div className="flex items-center border border-slate-300 rounded-lg bg-white overflow-hidden shadow-2xs">
                             <button
                               onClick={() => updateQuantity(it.product.sku, -1)}
-                              className="px-2 py-1 text-slate-600 hover:bg-slate-100 transition-colors"
+                              className="px-2.5 py-1 text-slate-700 hover:bg-slate-100 transition-colors cursor-pointer"
                               aria-label="Disminuir cantidad"
                             >
-                              <Minus className="w-3 h-3" />
+                              <Minus className="w-3.5 h-3.5" />
                             </button>
-                            <span className="px-2.5 py-0.5 text-xs font-black text-slate-900 min-w-7 text-center">
+                            <span className="px-3 py-0.5 text-xs font-black text-slate-900 min-w-7 text-center">
                               {it.quantity}
                             </span>
                             <button
                               onClick={() => updateQuantity(it.product.sku, 1)}
-                              className="px-2 py-1 text-slate-600 hover:bg-slate-100 transition-colors"
+                              className="px-2.5 py-1 text-slate-700 hover:bg-slate-100 transition-colors cursor-pointer"
                               aria-label="Aumentar cantidad"
                             >
-                              <Plus className="w-3 h-3" />
+                              <Plus className="w-3.5 h-3.5" />
                             </button>
                           </div>
 
                           <button
                             onClick={() => removeItem(it.product.sku)}
-                            className="p-1.5 text-slate-400 hover:text-red-600 rounded-lg hover:bg-red-50 transition-colors"
+                            className="p-1.5 text-slate-400 hover:text-red-600 rounded-lg hover:bg-red-50 transition-colors cursor-pointer"
                             aria-label="Eliminar producto"
                           >
-                            <Trash2 className="w-3.5 h-3.5" />
+                            <Trash2 className="w-4 h-4" />
                           </button>
                         </div>
                       </div>
@@ -221,57 +226,74 @@ export default function QuoteBasketDrawer() {
                 })}
               </div>
 
+              {/* Subtotal Card */}
+              {totalEstimatedPrice > 0 && (
+                <div className="bg-gradient-to-r from-[#061B40] to-[#0A3B8C] text-white rounded-2xl p-4 flex items-center justify-between shadow-md">
+                  <div>
+                    <span className="text-[10.5px] font-black uppercase tracking-wider text-[#FFC500] block">
+                      Total Oficial Estimado
+                    </span>
+                    <span className="text-[11px] text-slate-200">
+                      Precios oficiales de mostrador Pedernales
+                    </span>
+                  </div>
+                  <span className="text-2xl font-black text-[#FFC500]">
+                    ${totalEstimatedPrice.toFixed(2)}
+                  </span>
+                </div>
+              )}
+
               {/* Customer Data Optional Fields */}
               <div className="bg-slate-50 rounded-2xl p-4 border border-slate-200/90 space-y-3 mt-4">
-                <p className="text-[11px] font-black text-slate-900 uppercase tracking-wide flex items-center gap-1.5">
+                <p className="text-xs font-black text-slate-900 uppercase tracking-wide flex items-center gap-1.5">
                   <FileText className="w-3.5 h-3.5 text-[#0A3B8C]" />
-                  <span>Datos Opcionales para Cotización / Factura SRI</span>
+                  <span>Datos Opcionales para Entrega / Factura</span>
                 </p>
 
                 <div className="space-y-2">
                   <div className="relative">
-                    <Building2 className="w-3.5 h-3.5 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
+                    <Building2 className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
                     <input
                       type="text"
-                      placeholder="Nombre del Taller / Razón Social"
+                      placeholder="Tu Nombre o Taller (opcional)"
                       value={customerName}
                       onChange={(e) => setCustomerName(e.target.value)}
-                      className="w-full pl-9 pr-3 py-2 bg-white border border-slate-200 rounded-xl text-xs text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-1 focus:ring-[#0A3B8C]"
+                      className="w-full pl-9 pr-3 py-2.5 bg-white border border-slate-300 rounded-xl text-xs font-semibold text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#0A3B8C]"
                     />
                   </div>
 
                   <div className="relative">
-                    <MapPin className="w-3.5 h-3.5 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
+                    <MapPin className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
                     <input
                       type="text"
-                      placeholder="Ciudad de Destino (ej: Pedernales, Quito, Manta)"
+                      placeholder="Sector en Pedernales o Ciudad de Envío"
                       value={city}
                       onChange={(e) => setCity(e.target.value)}
-                      className="w-full pl-9 pr-3 py-2 bg-white border border-slate-200 rounded-xl text-xs text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-1 focus:ring-[#0A3B8C]"
+                      className="w-full pl-9 pr-3 py-2.5 bg-white border border-slate-300 rounded-xl text-xs font-semibold text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#0A3B8C]"
                     />
                   </div>
 
                   <div className="relative">
-                    <FileText className="w-3.5 h-3.5 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
+                    <FileText className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
                     <input
                       type="text"
-                      placeholder="RUC o Cédula para Factura (opcional)"
+                      placeholder="RUC o Cédula para Factura SRI (opcional)"
                       value={rucCedula}
                       onChange={(e) => setRucCedula(e.target.value)}
-                      className="w-full pl-9 pr-3 py-2 bg-white border border-slate-200 rounded-xl text-xs text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-1 focus:ring-[#0A3B8C]"
+                      className="w-full pl-9 pr-3 py-2.5 bg-white border border-slate-300 rounded-xl text-xs font-semibold text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#0A3B8C]"
                     />
                   </div>
                 </div>
               </div>
 
               {/* Institutional Trust Badges */}
-              <div className="grid grid-cols-2 gap-2 text-[10.5px] text-slate-600 font-semibold pt-1">
-                <div className="flex items-center gap-1.5 bg-emerald-50 text-emerald-800 p-2 rounded-xl border border-emerald-200/60">
+              <div className="grid grid-cols-2 gap-2 text-[11px] text-slate-700 font-bold pt-1">
+                <div className="flex items-center gap-1.5 bg-emerald-50 text-emerald-900 p-2.5 rounded-xl border border-emerald-200">
                   <span className="w-2 h-2 rounded-full bg-emerald-500 shrink-0" />
-                  <span>Stock en Pedernales</span>
+                  <span>Envío Gratis Pedernales</span>
                 </div>
-                <div className="flex items-center gap-1.5 bg-blue-50 text-blue-900 p-2 rounded-xl border border-blue-200/60">
-                  <ShieldCheck className="w-3.5 h-3.5 text-blue-700 shrink-0" />
+                <div className="flex items-center gap-1.5 bg-blue-50 text-blue-900 p-2.5 rounded-xl border border-blue-200">
+                  <ShieldCheck className="w-4 h-4 text-blue-700 shrink-0" />
                   <span>Facturación SRI 100%</span>
                 </div>
               </div>
@@ -284,13 +306,13 @@ export default function QuoteBasketDrawer() {
           <div className="p-5 bg-slate-50 border-t border-slate-200 shrink-0 space-y-2">
             <button
               onClick={handleSend}
-              className="w-full py-3.5 px-4 bg-[#25D366] hover:bg-[#20ba59] active:scale-[0.98] text-slate-950 font-black text-xs uppercase tracking-wider rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-emerald-950/20 transition-all cursor-pointer"
+              className="w-full py-4 px-4 bg-[#25D366] hover:bg-[#20ba59] active:scale-[0.98] text-slate-950 font-black text-xs sm:text-sm uppercase tracking-wider rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-emerald-950/20 transition-all cursor-pointer"
             >
               <Send className="w-4 h-4 fill-black/10" />
-              <span>Enviar Pedido Consolidado a WhatsApp</span>
+              <span>Enviar Pedido a WhatsApp (098 389 3231)</span>
             </button>
-            <p className="text-[10px] text-center text-slate-500 font-medium">
-              Te atenderá un asesor comercial oficial desde Bodega Pedernales.
+            <p className="text-[11px] text-center text-slate-600 font-semibold">
+              Atención inmediata desde nuestro local en Vía al Carmen (Frente a gasolinera Pedernales).
             </p>
           </div>
         )}

@@ -20,12 +20,13 @@ interface QuoteBasketContextType {
   clearBasket: () => void;
   totalItems: number;
   totalUnits: number;
+  totalEstimatedPrice: number;
   sendWhatsAppQuote: (customerName?: string, city?: string, rucCedula?: string) => void;
 }
 
 const QuoteBasketContext = createContext<QuoteBasketContextType | undefined>(undefined);
 
-const STORAGE_KEY = "liderpro_quote_basket_v1";
+const STORAGE_KEY = "liderpro_quote_basket_v2";
 
 export function QuoteBasketProvider({ children }: { children: React.ReactNode }) {
   const [items, setItems] = useState<BasketItem[]>([]);
@@ -102,37 +103,57 @@ export function QuoteBasketProvider({ children }: { children: React.ReactNode })
 
   const totalItems = items.length;
   const totalUnits = useMemo(() => items.reduce((sum, it) => sum + it.quantity, 0), [items]);
+  const totalEstimatedPrice = useMemo(
+    () =>
+      items.reduce((sum, it) => {
+        const unitPrice = typeof it.product.price === "number" ? it.product.price : 0;
+        return sum + unitPrice * it.quantity;
+      }, 0),
+    [items]
+  );
 
   const sendWhatsAppQuote = (customerName = "", city = "", rucCedula = "") => {
     if (items.length === 0) return;
 
     const lines: string[] = [
-      "¡Hola LiderPro Ecuador! 👋",
-      "Requiero cotización formal y confirmación de stock para el siguiente pedido:",
+      "¡Hola LiderPro Pedernales! 👋",
+      "Deseo confirmar disponibilidad y pedido de la siguiente lista oficial:",
       "",
     ];
 
     items.forEach((it, idx) => {
       const pres = it.product.volume || it.product.plates || "Estándar";
-      lines.push(`${idx + 1}. [SKU: ${it.product.sku}] ${it.product.name}`);
-      lines.push(`   Marca: ${it.product.brand} | Presentación: ${pres} | Cantidad: ${it.quantity} un.`);
+      const unitP = typeof it.product.price === "number" ? `$${it.product.price.toFixed(2)} c/u` : "Por confirmar";
+      const subP =
+        typeof it.product.price === "number"
+          ? ` | Subtotal: $${(it.product.price * it.quantity).toFixed(2)}`
+          : "";
+      lines.push(`${idx + 1}. [Cód: ${it.product.sku}] ${it.product.name}`);
+      lines.push(
+        `   Marca: ${it.product.brand} | Presentación: ${pres} | Cant: ${it.quantity} un. (${unitP}${subP})`
+      );
     });
 
     lines.push("");
     lines.push(`📦 Total ítems: ${items.length} referencias (${totalUnits} unidades en total)`);
+    if (totalEstimatedPrice > 0) {
+      lines.push(`💰 Total Referencial Lista: $${totalEstimatedPrice.toFixed(2)}`);
+    }
 
     if (customerName.trim()) {
-      lines.push(`🏢 Taller / Razón Social: ${customerName.trim()}`);
+      lines.push(`👤 Cliente / Taller: ${customerName.trim()}`);
     }
     if (city.trim()) {
-      lines.push(`📍 Ciudad / Destino: ${city.trim()}`);
+      lines.push(`📍 Ciudad / Sector: ${city.trim()}`);
     }
     if (rucCedula.trim()) {
       lines.push(`📄 RUC / Cédula SRI: ${rucCedula.trim()}`);
     }
 
     lines.push("");
-    lines.push("Agradezco confirmar valores con Facturación Electrónica SRI y tiempo de despacho desde Bodega Pedernales.");
+    lines.push(
+      "¿Me confirman por favor si mi pedido aplica a regalo de cortesía del Combo Cambio Mannol y envío gratis en Pedernales?"
+    );
 
     trackEvent("basket_whatsapp_quote", {
       itemCount: items.length,
@@ -140,7 +161,8 @@ export function QuoteBasketProvider({ children }: { children: React.ReactNode })
     });
 
     const encoded = encodeURIComponent(lines.join("\n"));
-    const url = `https://wa.me/${BUSINESS_CONFIG.whatsappMasterNumber}?text=${encoded}`;
+    const phone = BUSINESS_CONFIG.pedernalesDirectNumber || "593983893231";
+    const url = `https://wa.me/${phone}?text=${encoded}`;
     window.open(url, "_blank");
   };
 
@@ -156,6 +178,7 @@ export function QuoteBasketProvider({ children }: { children: React.ReactNode })
         clearBasket,
         totalItems,
         totalUnits,
+        totalEstimatedPrice,
         sendWhatsAppQuote,
       }}
     >

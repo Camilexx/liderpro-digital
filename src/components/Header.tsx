@@ -8,6 +8,7 @@ import { buildWhatsAppLink } from "@/lib/whatsapp";
 import { trackEvent } from "@/lib/analytics";
 import { BUSINESS_CONFIG } from "@/data/businessConfig";
 import { useQuoteBasket } from "@/context/QuoteBasketContext";
+import { useWhatsAppSelector } from "@/context/WhatsAppSelectorContext";
 
 function InstagramIcon({ className = "w-4 h-4" }: { className?: string }) {
   return (
@@ -36,26 +37,36 @@ function TikTokIcon({ className = "w-4 h-4" }: { className?: string }) {
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { totalItems, setIsOpen } = useQuoteBasket();
+  const { openSelector } = useWhatsAppSelector();
 
   const handleWhatsAppClick = () => {
     trackEvent("whatsapp_click", { location: "header_nav" });
+    openSelector({ sourceLocation: "header_nav" });
   };
 
   return (
-    <header className="sticky top-0 z-40 bg-[#061B40] text-white border-b border-[#FFC500]/20 shadow-xl transition-all backdrop-blur-md">
+    <header className="sticky top-0 z-40 bg-[#09152B] text-white border-b border-[#FACC15]/25 shadow-xl transition-all backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-18 sm:h-20">
-          {/* Official Logo */}
-          <Link href="/" className="flex items-center group py-1.5 focus:outline-none shrink-0">
+          {/* Official Logo + Brand Name */}
+          <Link href="/" className="flex items-center gap-2.5 group py-1.5 focus:outline-none shrink-0">
             <div className="relative">
               <Image
                 src="/images/logo-white.png"
-                alt="LiderPro - Productos Automotrices"
+                alt="LiderPro Pedernales - Productos Automotrices"
                 width={200}
                 height={48}
                 priority
-                className="h-10 sm:h-12 w-auto object-contain hover:scale-[1.02] transition-transform duration-200"
+                className="h-9 sm:h-11 w-auto object-contain hover:scale-[1.02] transition-transform duration-200"
               />
+            </div>
+            <div className="hidden sm:flex flex-col leading-none">
+              <span className="text-sm font-black tracking-tight text-white group-hover:text-[#FACC15] transition-colors">
+                LiderPro Pedernales
+              </span>
+              <span className="text-[10px] font-bold text-[#FACC15]/90 uppercase tracking-wider mt-0.5">
+                Distribuidor Oficial
+              </span>
             </div>
           </Link>
 
@@ -120,17 +131,15 @@ export default function Header() {
               </button>
             )}
 
-            <a
-              href={buildWhatsAppLink("general_quote")}
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              type="button"
               onClick={handleWhatsAppClick}
-              className="btn-whatsapp btn-shine !py-2.5 !px-4 text-xs font-black tracking-wider flex items-center gap-2 rounded-xl shadow-lg shadow-emerald-950/40 border border-emerald-400/30 shrink-0"
+              className="btn-whatsapp btn-shine !py-2.5 !px-4 text-xs font-black tracking-wider flex items-center gap-2 rounded-xl shadow-lg shadow-emerald-950/40 border border-emerald-400/30 shrink-0 cursor-pointer"
             >
               <span className="w-2 h-2 rounded-full bg-emerald-300 animate-pulse shrink-0" />
               <MessageCircle className="w-4 h-4 text-white" />
               <span>ASESOR EN LÍNEA</span>
-            </a>
+            </button>
           </div>
 
           {/* Mobile menu trigger */}
@@ -149,16 +158,14 @@ export default function Header() {
               </button>
             )}
 
-            <a
-              href={buildWhatsAppLink("general_quote")}
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              type="button"
               onClick={handleWhatsAppClick}
-              className="p-2.5 bg-[#25D366] active:bg-[#20ba59] text-slate-950 rounded-xl shadow-sm font-bold"
+              className="p-2.5 bg-[#25D366] active:bg-[#20ba59] text-slate-950 rounded-xl shadow-sm font-bold cursor-pointer"
               aria-label="Hablar con asesor"
             >
               <MessageCircle className="w-4 h-4" />
-            </a>
+            </button>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="p-2 text-slate-200 hover:text-white"

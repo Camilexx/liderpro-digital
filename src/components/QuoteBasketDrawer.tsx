@@ -16,6 +16,7 @@ import {
   Package,
 } from "lucide-react";
 import { useQuoteBasket } from "@/context/QuoteBasketContext";
+import { useWhatsAppSelector } from "@/context/WhatsAppSelectorContext";
 
 export default function QuoteBasketDrawer() {
   const {
@@ -27,16 +28,33 @@ export default function QuoteBasketDrawer() {
     clearBasket,
     totalItems,
     totalUnits,
-    totalEstimatedPrice,
-    sendWhatsAppQuote,
   } = useQuoteBasket();
+  const { openSelector } = useWhatsAppSelector();
 
   const [customerName, setCustomerName] = useState("");
   const [city, setCity] = useState("");
   const [rucCedula, setRucCedula] = useState("");
 
   const handleSend = () => {
-    sendWhatsAppQuote(customerName, city, rucCedula);
+    if (items.length === 0) return;
+    const lines: string[] = [
+      "¡Hola LiderPro Pedernales! Vengo de la web y deseo cotizar mi lista de productos + reclamar mi regalo de cortesía (MANNOL 6145 Cockpit Care + Esponja):",
+      "",
+    ];
+    items.forEach((it, idx) => {
+      const pres = it.product.volume || it.product.plates || "Estándar";
+      lines.push(`${idx + 1}. [Cód: ${it.product.sku}] ${it.product.name} — Presentación: ${pres} — Cant: ${it.quantity}`);
+    });
+    lines.push("");
+    if (customerName.trim()) lines.push(`👤 Cliente / Taller: ${customerName.trim()}`);
+    if (city.trim()) lines.push(`📍 Ciudad / Sector: ${city.trim()}`);
+    if (rucCedula.trim()) lines.push(`📄 RUC / Cédula SRI: ${rucCedula.trim()}`);
+    setIsOpen(false);
+    openSelector({
+      itemTitle: `Lista de Pedido (${items.length} productos, ${totalUnits} un.)`,
+      customMessage: lines.join("\n"),
+      sourceLocation: "quote_basket_drawer",
+    });
   };
 
   return (
@@ -59,7 +77,7 @@ export default function QuoteBasketDrawer() {
               Mi Lista ({totalUnits} un.)
             </p>
             <p className="text-xs text-white font-extrabold">
-              {totalEstimatedPrice > 0 ? `Total: $${totalEstimatedPrice.toFixed(2)}` : "Ver cotización"}
+              🎁 Cotizar Lista + Regalo
             </p>
           </div>
         </button>
@@ -174,20 +192,15 @@ export default function QuoteBasketDrawer() {
                           <span className="text-[10px] font-black uppercase text-slate-600 bg-slate-200/80 px-1.5 py-0.5 rounded font-mono">
                             {it.product.sku}
                           </span>
-                          {unitPrice !== null && (
-                            <span className="text-sm font-black text-[#061B40]">
-                              ${(unitPrice * it.quantity).toFixed(2)}
-                            </span>
-                          )}
+                          <span className="text-[10px] font-black text-emerald-700 bg-emerald-100 px-1.5 py-0.5 rounded">
+                            ✓ Stock
+                          </span>
                         </div>
                         <h4 className="text-xs sm:text-sm font-black text-slate-900 truncate">
                           {it.product.name}
                         </h4>
                         <div className="flex items-center justify-between text-[11px] text-slate-600 font-medium mt-0.5">
                           <span>{pres ? `Envase: ${pres}` : it.product.brand}</span>
-                          {unitPrice !== null && it.quantity > 1 && (
-                            <span className="text-[10px] text-slate-500">(${unitPrice.toFixed(2)} c/u)</span>
-                          )}
                         </div>
 
                         {/* Quantity Counter */}
@@ -226,22 +239,20 @@ export default function QuoteBasketDrawer() {
                 })}
               </div>
 
-              {/* Subtotal Card */}
-              {totalEstimatedPrice > 0 && (
-                <div className="bg-gradient-to-r from-[#061B40] to-[#0A3B8C] text-white rounded-2xl p-4 flex items-center justify-between shadow-md">
-                  <div>
-                    <span className="text-[10.5px] font-black uppercase tracking-wider text-[#FFC500] block">
-                      Total Oficial Estimado
-                    </span>
-                    <span className="text-[11px] text-slate-200">
-                      Precios oficiales de mostrador Pedernales
-                    </span>
-                  </div>
-                  <span className="text-2xl font-black text-[#FFC500]">
-                    ${totalEstimatedPrice.toFixed(2)}
+              {/* Gift Card */}
+              <div className="bg-gradient-to-r from-[#09152B] to-[#0A3B8C] text-white rounded-2xl p-4 flex items-center justify-between shadow-md border border-[#FACC15]/40">
+                <div>
+                  <span className="text-[10.5px] font-black uppercase tracking-wider text-[#FACC15] block">
+                    🎁 Cotizar + Reclamar Regalo
+                  </span>
+                  <span className="text-[11px] text-slate-200">
+                    Envío gratis en Combos MANNOL o pedidos ≥ $35 USD
                   </span>
                 </div>
-              )}
+                <span className="text-xs font-black text-[#22C55E] bg-[#22C55E]/15 px-2.5 py-1 rounded-lg border border-[#22C55E]/40">
+                  Elegir WhatsApp
+                </span>
+              </div>
 
               {/* Customer Data Optional Fields */}
               <div className="bg-slate-50 rounded-2xl p-4 border border-slate-200/90 space-y-3 mt-4">

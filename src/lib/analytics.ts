@@ -4,6 +4,7 @@ export type AnalyticsEventName =
   | "vehicle_finder_start"
   | "vehicle_finder_complete"
   | "whatsapp_click"
+  | "whatsapp_selector_open"
   | "whatsapp_product"
   | "whatsapp_vehicle"
   | "whatsapp_emergency"

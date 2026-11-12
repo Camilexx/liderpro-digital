@@ -1,0 +1,4236 @@
+[
+  {
+    "sku": "012MN4011-1",
+    "parent_sku": "LP-LUR-002",
+    "slug": "mannol-mannol-refrigerante-azul-vida-util-3-años-lp-lur-002",
+    "brand": "MANNOL",
+    "category": "refrigerantes",
+    "name": "MANNOL Refrigerante Azul Vida Útil 3 Años (1 Litro)",
+    "presentation": "1 Litro",
+    "base_price_no_iva": 4.39
+  },
+  {
+    "sku": "012MN4011-5",
+    "parent_sku": "LP-LUR-002",
+    "slug": "mannol-mannol-refrigerante-azul-vida-util-3-años-lp-lur-002",
+    "brand": "MANNOL",
+    "category": "refrigerantes",
+    "name": "MANNOL Refrigerante Azul Vida Útil 3 Años (1 Galón / 5L)",
+    "presentation": "1 Galón / 5L",
+    "base_price_no_iva": 18.48
+  },
+  {
+    "sku": "012MN4012-1",
+    "parent_sku": "LP-LUR-003",
+    "slug": "mannol-mannol-refrigerante-rojo-vida-util-5-años-lp-lur-003",
+    "brand": "MANNOL",
+    "category": "refrigerantes",
+    "name": "MANNOL Refrigerante Rojo Vida Útil 5 Años (1 Litro)",
+    "presentation": "1 Litro",
+    "base_price_no_iva": 4.78
+  },
+  {
+    "sku": "012MN4012-5",
+    "parent_sku": "LP-LUR-003",
+    "slug": "mannol-mannol-refrigerante-rojo-vida-util-5-años-lp-lur-003",
+    "brand": "MANNOL",
+    "category": "refrigerantes",
+    "name": "MANNOL Refrigerante Rojo Vida Útil 5 Años (1 Galón / 5L)",
+    "presentation": "1 Galón / 5L",
+    "base_price_no_iva": 20.39
+  },
+  {
+    "sku": "012MN4013-1",
+    "parent_sku": "LP-LUR-004",
+    "slug": "mannol-mannol-refrigerante-verde-vida-util-3-años-lp-lur-004",
+    "brand": "MANNOL",
+    "category": "refrigerantes",
+    "name": "MANNOL Refrigerante Verde Vida Útil 3 Años (1 Litro)",
+    "presentation": "1 Litro",
+    "base_price_no_iva": 4.39
+  },
+  {
+    "sku": "012MN4013-5",
+    "parent_sku": "LP-LUR-004",
+    "slug": "mannol-mannol-refrigerante-verde-vida-util-3-años-lp-lur-004",
+    "brand": "MANNOL",
+    "category": "refrigerantes",
+    "name": "MANNOL Refrigerante Verde Vida Útil 3 Años (1 Galón / 5L)",
+    "presentation": "1 Galón / 5L",
+    "base_price_no_iva": 18.48
+  },
+  {
+    "sku": "012MN4016-1",
+    "parent_sku": "LP-LUR-005",
+    "slug": "mannol-mannol-refrigerante-naranja-vida-util-5-años-lp-lur-005",
+    "brand": "MANNOL",
+    "category": "refrigerantes",
+    "name": "MANNOL Refrigerante Naranja Vida Útil 5 Años (1 Litro)",
+    "presentation": "1 Litro",
+    "base_price_no_iva": 4.78
+  },
+  {
+    "sku": "012MN4016-5",
+    "parent_sku": "LP-LUR-005",
+    "slug": "mannol-mannol-refrigerante-naranja-vida-util-5-años-lp-lur-005",
+    "brand": "MANNOL",
+    "category": "refrigerantes",
+    "name": "MANNOL Refrigerante Naranja Vida Útil 5 Años (1 Galón / 5L)",
+    "presentation": "1 Galón / 5L",
+    "base_price_no_iva": 20.39
+  },
+  {
+    "sku": "012MN7104-1",
+    "parent_sku": "LP-LUR-006",
+    "slug": "mannol-mannol-ts-4-shpd-15w40-extra-lp-lur-006",
+    "brand": "MANNOL",
+    "category": "lubricantes",
+    "name": "MANNOL TS-4 SHPD 15W-40 Extra (1 Litro)",
+    "presentation": "1 Litro",
+    "base_price_no_iva": 9.09
+  },
+  {
+    "sku": "012MN7104-5A",
+    "parent_sku": "LP-LUR-006",
+    "slug": "mannol-mannol-ts-4-shpd-15w40-extra-lp-lur-006",
+    "brand": "MANNOL",
+    "category": "lubricantes",
+    "name": "MANNOL TS-4 SHPD 15W-40 Extra (1 Galón / 5L)",
+    "presentation": "1 Galón / 5L",
+    "base_price_no_iva": 39.78
+  },
+  {
+    "sku": "012MN7404-1A",
+    "parent_sku": "LP-LUR-007",
+    "slug": "mannol-mannol-safari-20w50-lp-lur-007",
+    "brand": "MANNOL",
+    "category": "lubricantes",
+    "name": "MANNOL Safari 20W-50 (1 Litro)",
+    "presentation": "1 Litro",
+    "base_price_no_iva": 9.3
+  },
+  {
+    "sku": "012MN7404-4A",
+    "parent_sku": "LP-LUR-007",
+    "slug": "mannol-mannol-safari-20w50-lp-lur-007",
+    "brand": "MANNOL",
+    "category": "lubricantes",
+    "name": "MANNOL Safari 20W-50 (1 Galón / 5L)",
+    "presentation": "1 Galón / 5L",
+    "base_price_no_iva": 31.13
+  },
+  {
+    "sku": "012MN7501-1",
+    "parent_sku": "LP-LUR-008",
+    "slug": "mannol-mannol-classic-10w40-lp-lur-008",
+    "brand": "MANNOL",
+    "category": "lubricantes",
+    "name": "MANNOL Classic 10W-40 (1 Litro)",
+    "presentation": "1 Litro",
+    "base_price_no_iva": 9.61
+  },
+  {
+    "sku": "012MN7501-4",
+    "parent_sku": "LP-LUR-008",
+    "slug": "mannol-mannol-classic-10w40-lp-lur-008",
+    "brand": "MANNOL",
+    "category": "lubricantes",
+    "name": "MANNOL Classic 10W-40 (1 Galón / 5L)",
+    "presentation": "1 Galón / 5L",
+    "base_price_no_iva": 34.57
+  },
+  {
+    "sku": "012MN7512-1A",
+    "parent_sku": "LP-LUR-009",
+    "slug": "mannol-mannol-cj-x-20-lt-special-plus-10w30-lp-lur-009",
+    "brand": "MANNOL",
+    "category": "lubricantes",
+    "name": "MANNOL Special Plus 10W-30 (1 Litro)",
+    "presentation": "1 Litro",
+    "base_price_no_iva": 9.83
+  },
+  {
+    "sku": "012MN7512-4A",
+    "parent_sku": "LP-LUR-009",
+    "slug": "mannol-mannol-cj-x-20-lt-special-plus-10w30-lp-lur-009",
+    "brand": "MANNOL",
+    "category": "lubricantes",
+    "name": "MANNOL Special Plus 10W-30 (1 Galón / 5L)",
+    "presentation": "1 Galón / 5L",
+    "base_price_no_iva": 32.22
+  },
+  {
+    "sku": "012MN7701-1",
+    "parent_sku": "LP-LUR-010",
+    "slug": "mannol-mannol-chevrolet-opel-oem-5w30-lp-lur-010",
+    "brand": "MANNOL",
+    "category": "lubricantes",
+    "name": "MANNOL Chevrolet Opel O.e.m 5W-30 (1 Litro)",
+    "presentation": "1 Litro",
+    "base_price_no_iva": 14.78
+  },
+  {
+    "sku": "LP-LUR-010-C4",
+    "parent_sku": "LP-LUR-010",
+    "slug": "mannol-mannol-chevrolet-opel-oem-5w30-lp-lur-010",
+    "brand": "MANNOL",
+    "category": "lubricantes",
+    "name": "MANNOL Chevrolet Opel O.e.m 5W-30 (1 Galón / 5L)",
+    "presentation": "1 Galón / 5L",
+    "base_price_no_iva": null
+  },
+  {
+    "sku": "012MN7709-1",
+    "parent_sku": "LP-LUR-011",
+    "slug": "mannol-mannol-toyota-lexus-oem-5w30-metálico-lp-lur-011",
+    "brand": "MANNOL",
+    "category": "lubricantes",
+    "name": "MANNOL Toyota Lexus O.e.m 5W-30 Metálico (1 Litro)",
+    "presentation": "1 Litro",
+    "base_price_no_iva": 14.78
+  },
+  {
+    "sku": "012MN7709-4",
+    "parent_sku": "LP-LUR-011",
+    "slug": "mannol-mannol-toyota-lexus-oem-5w30-metálico-lp-lur-011",
+    "brand": "MANNOL",
+    "category": "lubricantes",
+    "name": "MANNOL Toyota Lexus O.e.m 5W-30 Metálico (1 Galón / 5L)",
+    "presentation": "1 Galón / 5L",
+    "base_price_no_iva": 54.65
+  },
+  {
+    "sku": "012MN7713-1",
+    "parent_sku": "LP-LUR-012",
+    "slug": "mannol-mannol-hyundai-kia-oem-5w30-metálico-lp-lur-012",
+    "brand": "MANNOL",
+    "category": "lubricantes",
+    "name": "MANNOL Hyundai Kia O.e.m 5W-30 Metálico (1 Litro)",
+    "presentation": "1 Litro",
+    "base_price_no_iva": 13.48
+  },
+  {
+    "sku": "012MN7713-4",
+    "parent_sku": "LP-LUR-012",
+    "slug": "mannol-mannol-hyundai-kia-oem-5w30-metálico-lp-lur-012",
+    "brand": "MANNOL",
+    "category": "lubricantes",
+    "name": "MANNOL Hyundai Kia O.e.m 5W-30 Metálico (1 Galón / 5L)",
+    "presentation": "1 Galón / 5L",
+    "base_price_no_iva": 46.39
+  },
+  {
+    "sku": "012MN7720-1",
+    "parent_sku": "LP-LUR-013",
+    "slug": "mannol-mannol-ceramic-5w30-lp-lur-013",
+    "brand": "MANNOL",
+    "category": "lubricantes",
+    "name": "MANNOL Ceramic 5W-30 (1 Litro)",
+    "presentation": "1 Litro",
+    "base_price_no_iva": 15.57
+  },
+  {
+    "sku": "012MN7720-4",
+    "parent_sku": "LP-LUR-013",
+    "slug": "mannol-mannol-ceramic-5w30-lp-lur-013",
+    "brand": "MANNOL",
+    "category": "lubricantes",
+    "name": "MANNOL Ceramic 5W-30 (1 Galón / 5L)",
+    "presentation": "1 Galón / 5L",
+    "base_price_no_iva": 52.91
+  },
+  {
+    "sku": "LP-LUR-014-C3",
+    "parent_sku": "LP-LUR-014",
+    "slug": "mannol-mannol-ceramic-pro-10w40-lp-lur-014",
+    "brand": "MANNOL",
+    "category": "lubricantes",
+    "name": "MANNOL Ceramic Pro 10W-40 (1 Litro)",
+    "presentation": "1 Litro",
+    "base_price_no_iva": null
+  },
+  {
+    "sku": "012MN7726-5",
+    "parent_sku": "LP-LUR-014",
+    "slug": "mannol-mannol-ceramic-pro-10w40-lp-lur-014",
+    "brand": "MANNOL",
+    "category": "lubricantes",
+    "name": "MANNOL Ceramic Pro 10W-40 (1 Galón / 5L)",
+    "presentation": "1 Galón / 5L",
+    "base_price_no_iva": 39.55
+  },
+  {
+    "sku": "LP-LUR-015",
+    "parent_sku": "LP-LUR-015",
+    "slug": "mannol-mannol-cj-x-20-lt-4takt-motorbike-10w40-lp-lur-015",
+    "brand": "MANNOL",
+    "category": "lubricantes",
+    "name": "MANNOL 4takt Motorbike 10W-40",
+    "presentation": "20 Lt",
+    "base_price_no_iva": 12.52
+  },
+  {
+    "sku": "LP-LUR-016",
+    "parent_sku": "LP-LUR-016",
+    "slug": "mannol-mannol-cj-x-20-und-4takt-motorbike-10w50-lp-lur-016",
+    "brand": "MANNOL",
+    "category": "lubricantes",
+    "name": "MANNOL 4takt Motorbike 10W-50",
+    "presentation": "1 Litro",
+    "base_price_no_iva": 11.43
+  },
+  {
+    "sku": "LP-LUR-017",
+    "parent_sku": "LP-LUR-017",
+    "slug": "mannol-mannol-powerbike-15w50-metálico-lp-lur-017",
+    "brand": "MANNOL",
+    "category": "lubricantes",
+    "name": "MANNOL Powerbike 15W-50 Metálico",
+    "presentation": "1 Litro",
+    "base_price_no_iva": 12.43
+  },
+  {
+    "sku": "012MN7904-1",
+    "parent_sku": "LP-LUR-018",
+    "slug": "mannol-mannol-diesel-turbo-5w40-lp-lur-018",
+    "brand": "MANNOL",
+    "category": "lubricantes",
+    "name": "MANNOL Diésel Turbo 5W-40 (1 Litro)",
+    "presentation": "1 Litro",
+    "base_price_no_iva": 12.3
+  },
+  {
+    "sku": "012MN7904-5",
+    "parent_sku": "LP-LUR-018",
+    "slug": "mannol-mannol-diesel-turbo-5w40-lp-lur-018",
+    "brand": "MANNOL",
+    "category": "lubricantes",
+    "name": "MANNOL Diésel Turbo 5W-40 (1 Galón / 5L)",
+    "presentation": "1 Galón / 5L",
+    "base_price_no_iva": 52.87
+  },
+  {
+    "sku": "012MN7906-1A",
+    "parent_sku": "LP-LUR-019",
+    "slug": "mannol-mannol-energy-ultra-jp-5w20-lp-lur-019",
+    "brand": "MANNOL",
+    "category": "lubricantes",
+    "name": "MANNOL Energy Ultra Jp 5W-20 (1 Litro)",
+    "presentation": "1 Litro",
+    "base_price_no_iva": 13.43
+  },
+  {
+    "sku": "012MN7906-4A",
+    "parent_sku": "LP-LUR-019",
+    "slug": "mannol-mannol-energy-ultra-jp-5w20-lp-lur-019",
+    "brand": "MANNOL",
+    "category": "lubricantes",
+    "name": "MANNOL Energy Ultra Jp 5W-20 (1 Galón / 5L)",
+    "presentation": "1 Galón / 5L",
+    "base_price_no_iva": 49.09
+  },
+  {
+    "sku": "012MN7909-1",
+    "parent_sku": "LP-LUR-020",
+    "slug": "mannol-mannol-diesel-tdi-5w30-lp-lur-020",
+    "brand": "MANNOL",
+    "category": "lubricantes",
+    "name": "MANNOL Diésel TDI 5W-30 (1 Litro)",
+    "presentation": "1 Litro",
+    "base_price_no_iva": 14.26
+  },
+  {
+    "sku": "012MN7909-5",
+    "parent_sku": "LP-LUR-020",
+    "slug": "mannol-mannol-diesel-tdi-5w30-lp-lur-020",
+    "brand": "MANNOL",
+    "category": "lubricantes",
+    "name": "MANNOL Diésel TDI 5W-30 (1 Galón / 5L)",
+    "presentation": "1 Galón / 5L",
+    "base_price_no_iva": 61.61
+  },
+  {
+    "sku": "012MN7914-1A",
+    "parent_sku": "LP-LUR-021",
+    "slug": "mannol-mannol-energy-formula-jp-5w30-metálico-lp-lur-021",
+    "brand": "MANNOL",
+    "category": "lubricantes",
+    "name": "MANNOL Energy Formula Jp 5W-30 Metálico (1 Litro)",
+    "presentation": "1 Litro",
+    "base_price_no_iva": 10.83
+  },
+  {
+    "sku": "012MN7914-4A",
+    "parent_sku": "LP-LUR-021",
+    "slug": "mannol-mannol-energy-formula-jp-5w30-metálico-lp-lur-021",
+    "brand": "MANNOL",
+    "category": "lubricantes",
+    "name": "MANNOL Energy Formula Jp 5W-30 Metálico (1 Galón / 5L)",
+    "presentation": "1 Galón / 5L",
+    "base_price_no_iva": 38.09
+  },
+  {
+    "sku": "012MN7924-1",
+    "parent_sku": "LP-LUR-022",
+    "slug": "mannol-mannol-for-chinese-cars-5w30-lp-lur-022",
+    "brand": "MANNOL",
+    "category": "lubricantes",
+    "name": "MANNOL For Chinese Cars 5W-30 (1 Litro)",
+    "presentation": "1 Litro",
+    "base_price_no_iva": 11.96
+  },
+  {
+    "sku": "012MN7924-4",
+    "parent_sku": "LP-LUR-022",
+    "slug": "mannol-mannol-for-chinese-cars-5w30-lp-lur-022",
+    "brand": "MANNOL",
+    "category": "lubricantes",
+    "name": "MANNOL For Chinese Cars 5W-30 (1 Galón / 5L)",
+    "presentation": "1 Galón / 5L",
+    "base_price_no_iva": 41.22
+  },
+  {
+    "sku": "012MN8101-1A",
+    "parent_sku": "LP-LUR-023",
+    "slug": "mannol-mannol-fwd-75w85-gl4-lp-lur-023",
+    "brand": "MANNOL",
+    "category": "lubricantes",
+    "name": "MANNOL FWD 75W-85 Gl4 (1 Litro)",
+    "presentation": "1 Litro",
+    "base_price_no_iva": 8.7
+  },
+  {
+    "sku": "012MN8101-4",
+    "parent_sku": "LP-LUR-023",
+    "slug": "mannol-mannol-fwd-75w85-gl4-lp-lur-023",
+    "brand": "MANNOL",
+    "category": "lubricantes",
+    "name": "MANNOL FWD 75W-85 Gl4 (1 Galón / 5L)",
+    "presentation": "1 Galón / 5L",
+    "base_price_no_iva": 32.35
+  },
+  {
+    "sku": "012MN8105-4",
+    "parent_sku": "LP-LUR-024",
+    "slug": "mannol-mannol-hypoid-lsd-85w140-gl5-ls-deslizamiento-limitado-lp-lur-024",
+    "brand": "MANNOL",
+    "category": "lubricantes",
+    "name": "MANNOL Hypoid LSD 85W-140 Gl5 Ls (deslizamiento Limitado) (1 Galón / 5L)",
+    "presentation": "1 Galón / 5L",
+    "base_price_no_iva": 31.65
+  },
+  {
+    "sku": "012MN8105-20",
+    "parent_sku": "LP-LUR-024",
+    "slug": "mannol-mannol-hypoid-lsd-85w140-gl5-ls-deslizamiento-limitado-lp-lur-024",
+    "brand": "MANNOL",
+    "category": "lubricantes",
+    "name": "MANNOL Hypoid LSD 85W-140 Gl5 Ls (deslizamiento Limitado) (Caneca 5 GL)",
+    "presentation": "Caneca 5 GL",
+    "base_price_no_iva": 112.09
+  },
+  {
+    "sku": "012MN8106-1",
+    "parent_sku": "LP-LUR-025",
+    "slug": "mannol-mannol-hypoid-getriebeoel-80w90-gl4-gl5-ls-deslizamiento-limitado-lp-lur-025",
+    "brand": "MANNOL",
+    "category": "lubricantes",
+    "name": "MANNOL Hypoid Getriebeoel 80W-90 Gl4 Gl5 Ls (deslizamiento Limitado) (1 Litro)",
+    "presentation": "1 Litro",
+    "base_price_no_iva": 8.0
+  },
+  {
+    "sku": "012MN8106-4",
+    "parent_sku": "LP-LUR-025",
+    "slug": "mannol-mannol-hypoid-getriebeoel-80w90-gl4-gl5-ls-deslizamiento-limitado-lp-lur-025",
+    "brand": "MANNOL",
+    "category": "lubricantes",
+    "name": "MANNOL Hypoid Getriebeoel 80W-90 Gl4 Gl5 Ls (deslizamiento Limitado) (1 Galón / 5L)",
+    "presentation": "1 Galón / 5L",
+    "base_price_no_iva": 29.65
+  },
+  {
+    "sku": "012MN8107-4",
+    "parent_sku": "LP-LUR-026",
+    "slug": "mannol-mannol-universal-getriebeoel-80w90-gl4-lp-lur-026",
+    "brand": "MANNOL",
+    "category": "lubricantes",
+    "name": "MANNOL Universal Getriebeoel 80W-90 Gl4 (1 Galón / 5L)",
+    "presentation": "1 Galón / 5L",
+    "base_price_no_iva": 25.52
+  },
+  {
+    "sku": "012MN8107-20",
+    "parent_sku": "LP-LUR-026",
+    "slug": "mannol-mannol-universal-getriebeoel-80w90-gl4-lp-lur-026",
+    "brand": "MANNOL",
+    "category": "lubricantes",
+    "name": "MANNOL Universal Getriebeoel 80W-90 Gl4 (Caneca 5 GL)",
+    "presentation": "Caneca 5 GL",
+    "base_price_no_iva": 90.3
+  },
+  {
+    "sku": "012MN8108-1",
+    "parent_sku": "LP-LUR-027",
+    "slug": "mannol-mannol-transm-basic-plus-75w90-gl4-lp-lur-027",
+    "brand": "MANNOL",
+    "category": "lubricantes",
+    "name": "MANNOL Transm. Basic Plus 75W-90 Gl4 (1 Litro)",
+    "presentation": "1 Litro",
+    "base_price_no_iva": 10.74
+  },
+  {
+    "sku": "012MN8108-4",
+    "parent_sku": "LP-LUR-027",
+    "slug": "mannol-mannol-transm-basic-plus-75w90-gl4-lp-lur-027",
+    "brand": "MANNOL",
+    "category": "lubricantes",
+    "name": "MANNOL Transm. Basic Plus 75W-90 Gl4 (1 Galón / 5L)",
+    "presentation": "1 Galón / 5L",
+    "base_price_no_iva": 39.83
+  },
+  {
+    "sku": "LP-LUR-028",
+    "parent_sku": "LP-LUR-028",
+    "slug": "mannol-mannol-oem-mtf-3-75w-metalico-lp-lur-028",
+    "brand": "MANNOL",
+    "category": "lubricantes",
+    "name": "MANNOL O.e.m MTF-3 75w Metalico",
+    "presentation": "1 Litro",
+    "base_price_no_iva": 14.39
+  },
+  {
+    "sku": "LP-LUR-029",
+    "parent_sku": "LP-LUR-029",
+    "slug": "mannol-mannol-dct-fluid-cajas-doble-embrague-lp-lur-029",
+    "brand": "MANNOL",
+    "category": "lubricantes",
+    "name": "MANNOL DCT Fluid Cajas Doble Embrague",
+    "presentation": "1 Litro",
+    "base_price_no_iva": 18.87
+  },
+  {
+    "sku": "LP-LUR-030",
+    "parent_sku": "LP-LUR-030",
+    "slug": "mannol-mannol-atf-dexron-iii-lp-lur-030",
+    "brand": "MANNOL",
+    "category": "lubricantes",
+    "name": "MANNOL ATF Dexron Iii",
+    "presentation": "1 Litro",
+    "base_price_no_iva": 10.3
+  },
+  {
+    "sku": "LP-LUR-031",
+    "parent_sku": "LP-LUR-031",
+    "slug": "mannol-mannol-atf-dexron-vi-lp-lur-031",
+    "brand": "MANNOL",
+    "category": "lubricantes",
+    "name": "MANNOL ATF Dexron Vi",
+    "presentation": "1 Litro",
+    "base_price_no_iva": 14.09
+  },
+  {
+    "sku": "LP-LUR-032",
+    "parent_sku": "LP-LUR-032",
+    "slug": "mannol-mannol-cvt-nissan-ns-3-lp-lur-032",
+    "brand": "MANNOL",
+    "category": "lubricantes",
+    "name": "MANNOL CVT Nissan NISSAN-3",
+    "presentation": "1 Litro",
+    "base_price_no_iva": 20.61
+  },
+  {
+    "sku": "LP-LUR-033",
+    "parent_sku": "LP-LUR-033",
+    "slug": "mannol-mannol-atf-ulv-lp-lur-033",
+    "brand": "MANNOL",
+    "category": "lubricantes",
+    "name": "MANNOL ATF ULV",
+    "presentation": "1 Litro",
+    "base_price_no_iva": 13.3
+  },
+  {
+    "sku": "LP-LUR-034",
+    "parent_sku": "LP-LUR-034",
+    "slug": "mannol-mannol-hydro-hv-iso-32-longlife-lp-lur-034",
+    "brand": "MANNOL",
+    "category": "lubricantes",
+    "name": "MANNOL Hydro Hv ISO 32 Longlife",
+    "presentation": "Caneca 5 GL",
+    "base_price_no_iva": 86.96
+  },
+  {
+    "sku": "LP-LUR-035",
+    "parent_sku": "LP-LUR-035",
+    "slug": "mannol-mannol-hydro-hv-iso-46-longlife-lp-lur-035",
+    "brand": "MANNOL",
+    "category": "lubricantes",
+    "name": "MANNOL Hydro Hv ISO 46 Longlife",
+    "presentation": "Caneca 5 GL",
+    "base_price_no_iva": 86.96
+  },
+  {
+    "sku": "LP-LUR-036",
+    "parent_sku": "LP-LUR-036",
+    "slug": "mannol-mannol-multifarm-stou-10w-30-lp-lur-036",
+    "brand": "MANNOL",
+    "category": "lubricantes",
+    "name": "MANNOL Multifarm STOU 10W-30",
+    "presentation": "Caneca 5 GL",
+    "base_price_no_iva": 101.3
+  },
+  {
+    "sku": "12MN7916-1",
+    "parent_sku": "LP-LUR-037",
+    "slug": "mannol-mannol-cj-x-20-lt-molibden-green-ultra-5w30-lp-lur-037",
+    "brand": "MANNOL",
+    "category": "lubricantes",
+    "name": "MANNOL Molibden Green Ultra 5W-30 (1 Litro)",
+    "presentation": "1 Litro",
+    "base_price_no_iva": 16.17
+  },
+  {
+    "sku": "12MN7916-4",
+    "parent_sku": "LP-LUR-037",
+    "slug": "mannol-mannol-cj-x-20-lt-molibden-green-ultra-5w30-lp-lur-037",
+    "brand": "MANNOL",
+    "category": "lubricantes",
+    "name": "MANNOL Molibden Green Ultra 5W-30 (1 Galón / 5L)",
+    "presentation": "1 Galón / 5L",
+    "base_price_no_iva": 55.35
+  },
+  {
+    "sku": "LP-LUR-038",
+    "parent_sku": "LP-LUR-038",
+    "slug": "mannol-mannol-ts-5-uhpd-10w40-lp-lur-038",
+    "brand": "MANNOL",
+    "category": "lubricantes",
+    "name": "MANNOL TS-5 UHPD 10W-40",
+    "presentation": "Caneca 5 GL",
+    "base_price_no_iva": 105.22
+  },
+  {
+    "sku": "LP-LUR-039",
+    "parent_sku": "LP-LUR-039",
+    "slug": "mannol-mannol-hydro-hv-iso-68-lp-lur-039",
+    "brand": "MANNOL",
+    "category": "lubricantes",
+    "name": "MANNOL Hydro Hv ISO 68",
+    "presentation": "Caneca 5 GL",
+    "base_price_no_iva": 86.96
+  },
+  {
+    "sku": "015MD12-15W40",
+    "parent_sku": "LP-LUR-002-2",
+    "slug": "mobil-mobil-delvac-mx-15w40-lp-lur-002-2",
+    "brand": "MOBIL",
+    "category": "lubricantes",
+    "name": "MOBIL Delvac Mx 15W-40 (1 Litro)",
+    "presentation": "1 Litro",
+    "base_price_no_iva": 6.83
+  },
+  {
+    "sku": "01504MD04-15W40",
+    "parent_sku": "LP-LUR-002-2",
+    "slug": "mobil-mobil-delvac-mx-15w40-lp-lur-002-2",
+    "brand": "MOBIL",
+    "category": "lubricantes",
+    "name": "MOBIL Delvac Mx 15W-40 (1 Galón)",
+    "presentation": "1 Galón",
+    "base_price_no_iva": 24.39
+  },
+  {
+    "sku": "015MD5-15W40",
+    "parent_sku": "LP-LUR-002-2",
+    "slug": "mobil-mobil-delvac-mx-15w40-lp-lur-002-2",
+    "brand": "MOBIL",
+    "category": "lubricantes",
+    "name": "MOBIL Delvac Mx 15W-40 (Caneca 5 GL)",
+    "presentation": "Caneca 5 GL",
+    "base_price_no_iva": 94.35
+  },
+  {
+    "sku": "LP-LUR-003-2",
+    "parent_sku": "LP-LUR-003-2",
+    "slug": "mobil-mobil-delvac-1300-sup-15w40-lp-lur-003-2",
+    "brand": "MOBIL",
+    "category": "lubricantes",
+    "name": "MOBIL Delvac 1300 Sup 15W-40",
+    "presentation": "Caneca 5 GL",
+    "base_price_no_iva": 105.83
+  },
+  {
+    "sku": "015MS12-10W30",
+    "parent_sku": "LP-LUR-004-2",
+    "slug": "mobil-mobil-10w30-semi-sintetico-lp-lur-004-2",
+    "brand": "MOBIL",
+    "category": "lubricantes",
+    "name": "MOBIL 10W-30 Semi Sintético (1 Litro)",
+    "presentation": "1 Litro",
+    "base_price_no_iva": 6.48
+  },
+  {
+    "sku": "015MS04-10W30",
+    "parent_sku": "LP-LUR-004-2",
+    "slug": "mobil-mobil-10w30-semi-sintetico-lp-lur-004-2",
+    "brand": "MOBIL",
+    "category": "lubricantes",
+    "name": "MOBIL 10W-30 Semi Sintético (1 Galón)",
+    "presentation": "1 Galón",
+    "base_price_no_iva": 24.13
+  },
+  {
+    "sku": "015MS12-20W50",
+    "parent_sku": "LP-LUR-005-2",
+    "slug": "mobil-mobil-20w50-semi-sintetico-lp-lur-005-2",
+    "brand": "MOBIL",
+    "category": "lubricantes",
+    "name": "MOBIL 20W-50 Semi Sintético (1 Litro)",
+    "presentation": "1 Litro",
+    "base_price_no_iva": 6.48
+  },
+  {
+    "sku": "015MS04-20W50",
+    "parent_sku": "LP-LUR-005-2",
+    "slug": "mobil-mobil-20w50-semi-sintetico-lp-lur-005-2",
+    "brand": "MOBIL",
+    "category": "lubricantes",
+    "name": "MOBIL 20W-50 Semi Sintético (1 Galón)",
+    "presentation": "1 Galón",
+    "base_price_no_iva": 24.13
+  },
+  {
+    "sku": "LP-FIL-002",
+    "parent_sku": "LP-FIL-002",
+    "slug": "advance-filtro-aire-ty-hilux-27l-fi-16-21-hilux-24l-di-16-21-fortuner-27l-fi-16-21-advance-lp-fil-002",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aire de Motor Advance — Toyota Hilux 2.7L Fi 16-21 Hilux 2.4L Di 16-21, Fortuner 2.7L Fi 16-21",
+    "presentation": "Unidad",
+    "base_price_no_iva": 5.48
+  },
+  {
+    "sku": "LP-FIL-003",
+    "parent_sku": "LP-FIL-003",
+    "slug": "advance-filtro-aire-jac-pick-up-t6-20-17--19-gasolina-prem-aip1068-xtrag-ap-164-advance-lp-fil-003",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aire de Motor Advance — JAC Pick Up T6 2.0 17- 19 Gasolina (prem Aip1068 Xtrag AP-164)",
+    "presentation": "Unidad",
+    "base_price_no_iva": 6.26
+  },
+  {
+    "sku": "LP-FIL-004",
+    "parent_sku": "LP-FIL-004",
+    "slug": "advance-filtro-aire-hy-tucson-20l-04-10-kia-sportage-advance-lp-fil-004",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aire de Motor Advance — Hyundai Tucson 2.0L 04-10, KIA Sportage",
+    "presentation": "Unidad",
+    "base_price_no_iva": 3.61
+  },
+  {
+    "sku": "LP-FIL-005",
+    "parent_sku": "LP-FIL-005",
+    "slug": "advance-filtro-aire-hy-accent-14-16-rio-xcite-xtrag-ap-111-red-28113-1g000-advance-lp-fil-005",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aire de Motor Advance — Hyundai Accent 1.4-1.6 Rio Xcite (xtrag AP-111 Red 28113-1G000)",
+    "presentation": "Unidad",
+    "base_price_no_iva": 2.91
+  },
+  {
+    "sku": "LP-FIL-006",
+    "parent_sku": "LP-FIL-006",
+    "slug": "advance-filtro-aire-sz-gran-vitara-sz-20-27-advance-lp-fil-006",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aire de Motor Advance — Suzuki Gran Vitara Suzuki 2.0 2.7",
+    "presentation": "Unidad",
+    "base_price_no_iva": 2.96
+  },
+  {
+    "sku": "LP-FIL-007",
+    "parent_sku": "LP-FIL-007",
+    "slug": "advance-filtro-aire-kia-soul-12--solutoxciteverna-20--advance-lp-fil-007",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aire de Motor Advance — KIA Soul /12- Soluto/xcite/verna /20",
+    "presentation": "Unidad",
+    "base_price_no_iva": 3.26
+  },
+  {
+    "sku": "AA-10891",
+    "parent_sku": "AA-10891",
+    "slug": "advance-filtro-aire-ch-joy---aa--10891-advance-aa-10891",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aire de Motor Advance (AA-10891) — Chevrolet Joy - Aa- 10891",
+    "presentation": "Unidad",
+    "base_price_no_iva": 4.0
+  },
+  {
+    "sku": "LP-FIL-009",
+    "parent_sku": "LP-FIL-009",
+    "slug": "advance-filtro-aire-ch-spark-gt-2011-beat---prem-aip777-mil-mk-92369-red-96827723-advance-lp-fil-009",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aire de Motor Advance — Chevrolet Spark GT 2011, Beat - (prem Aip777 Mil MK-92369, Red 96827723)",
+    "presentation": "Unidad",
+    "base_price_no_iva": 2.78
+  },
+  {
+    "sku": "LP-FIL-010",
+    "parent_sku": "LP-FIL-010",
+    "slug": "advance-filtro-aire-ch-luv-dmax-24-gas-trailblazer-15--cilindrico-advance-lp-fil-010",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aire de Motor Advance — Chevrolet Luv D-MAX 2.4 Gas. Trailblazer /15- (cilindrico)",
+    "presentation": "Unidad",
+    "base_price_no_iva": 9.48
+  },
+  {
+    "sku": "LP-FIL-011",
+    "parent_sku": "LP-FIL-011",
+    "slug": "advance-filtro-aire-zotye-t600-advance-lp-fil-011",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aire de Motor Advance — Zotye T600",
+    "presentation": "Unidad",
+    "base_price_no_iva": 5.3
+  },
+  {
+    "sku": "AA-11113",
+    "parent_sku": "AA-11113",
+    "slug": "advance-filtro-aire-dongfeng-rich-6-2020---aa-11113-advance-aa-11113",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aire de Motor Advance (AA-11113) — Dongfeng Rich 6 2020 - AA-11113",
+    "presentation": "Unidad",
+    "base_price_no_iva": 4.35
+  },
+  {
+    "sku": "LP-FIL-013",
+    "parent_sku": "LP-FIL-013",
+    "slug": "advance-filtro-aire-rn-logan-ii-14-16-14-16-2019-sandero-14-16-14-16-165469466r-advance-lp-fil-013",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aire de Motor Advance — Renault Logan II 1.4, 1.6 (14-16) 2019, Sandero 1.4 1.6 (14-16), 165469466R",
+    "presentation": "Unidad",
+    "base_price_no_iva": 4.52
+  },
+  {
+    "sku": "LP-FIL-014",
+    "parent_sku": "LP-FIL-014",
+    "slug": "advance-filtro-aire-rn-logan-16-16--sandero-stepway-16-16--duster-16-20-16--advance-panelado-165460-lp-fil-014",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aire de Motor Advance — Renault Logan 1.6 /16- Sandero Stepway 1.6 /16- Duster 1.6-2.0 /16- Panelado 165460",
+    "presentation": "Unidad",
+    "base_price_no_iva": 4.65
+  },
+  {
+    "sku": "LP-FIL-015",
+    "parent_sku": "LP-FIL-015",
+    "slug": "advance-filtro-aire-fd-ranger-nueva-25-mz-bt50-nueva-red-aip892-xtrag-sr-2072-red-1wa013z40-cil-advance-lp-fil-015",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aire de Motor Advance — Ford Ranger Nueva 2.5 Mazda BT-50 Nueva (red Aip892 Xtrag SR-2072 Red 1WA013Z40) (cil)",
+    "presentation": "Unidad",
+    "base_price_no_iva": 7.19
+  },
+  {
+    "sku": "LP-FIL-016",
+    "parent_sku": "LP-FIL-016",
+    "slug": "advance-filtro-aire-ch-cruze-18-10-16-ch-orlando-advance-lp-fil-016",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aire de Motor Advance — Chevrolet Cruze 1.8 /10-16 / Chevrolet Orlando",
+    "presentation": "Unidad",
+    "base_price_no_iva": 5.74
+  },
+  {
+    "sku": "LP-FIL-017",
+    "parent_sku": "LP-FIL-017",
+    "slug": "advance-filtro-aire-ch-spark-moderno-2006-07-panel-mk-91485-advance-lp-fil-017",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aire de Motor Advance — Chevrolet Spark Moderno 2006-07 (panel) (mk-91485)",
+    "presentation": "Unidad",
+    "base_price_no_iva": 2.82
+  },
+  {
+    "sku": "LP-FIL-018",
+    "parent_sku": "LP-FIL-018",
+    "slug": "advance-filtro-aire-hy-accent-rb-kia-rio-prem-aip837-red-28113-1r100-advance-lp-fil-018",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aire de Motor Advance — Hyundai Accent Rb KIA Rio (prem Aip837 Red 28113-1R100)",
+    "presentation": "Unidad",
+    "base_price_no_iva": 2.78
+  },
+  {
+    "sku": "LP-FIL-019",
+    "parent_sku": "LP-FIL-019",
+    "slug": "advance-filtro-aire-ch-sail-advance-lp-fil-019",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aire de Motor Advance — Chevrolet Sail",
+    "presentation": "Unidad",
+    "base_price_no_iva": 3.09
+  },
+  {
+    "sku": "AA-25006",
+    "parent_sku": "AA-25006",
+    "slug": "advance-filtro-aire-great-wall-poer-20t-diesel-2022---aa-25006-advance-aa-25006",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aire de Motor Advance (AA-25006) — Great Wall Poer 2.0T Diesel 2022 - AA-25006",
+    "presentation": "Unidad",
+    "base_price_no_iva": 5.61
+  },
+  {
+    "sku": "AA-25011",
+    "parent_sku": "AA-25011",
+    "slug": "advance-filtro-advance-aire-tank-300-20t-500-20t---aa--25011-aa-25011",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aire de Motor Advance (AA-25011) — Tank 300 2.0T, 500 2.0T - Aa- 25011",
+    "presentation": "Unidad",
+    "base_price_no_iva": 5.52
+  },
+  {
+    "sku": "LP-FIL-022",
+    "parent_sku": "LP-FIL-022",
+    "slug": "advance-filtro-aire-ns-x-trail-14-qashqai-20-15--rn-koleos-advance-lp-fil-022",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aire de Motor Advance — Nissan X-trail /14 Qashqai 2.0 /15- Renault Koleos",
+    "presentation": "Unidad",
+    "base_price_no_iva": 5.61
+  },
+  {
+    "sku": "LP-FIL-023",
+    "parent_sku": "LP-FIL-023",
+    "slug": "advance-filtro-aire-mz-bt50-25-turbo-diesel-b2500-galant-gas-2000-diesel-4x2-mil-mk-9021-advance-lp-fil-023",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aire de Motor Advance — Mazda BT-50 2.5 Turbo Diesel B2500 Galant Gas 2000 Diesel 4X2 (mil MK-9021)",
+    "presentation": "Unidad",
+    "base_price_no_iva": 4.7
+  },
+  {
+    "sku": "LP-FIL-024",
+    "parent_sku": "LP-FIL-024",
+    "slug": "advance-filtro-aire-ch-luv-dmax-30-14--panelado-advance-lp-fil-024",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aire de Motor Advance — Chevrolet Luv D-MAX 3.0 /14- Panelado",
+    "presentation": "Unidad",
+    "base_price_no_iva": 4.7
+  },
+  {
+    "sku": "AA-2662",
+    "parent_sku": "AA-2662",
+    "slug": "advance-filtro-advance-aire-chevrolet-d-max-20t-diesel-2025-cj-x-24---aa-2662-aa-2662",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aire de Motor Advance (AA-2662) — Chevrolet D-MAX 2.0T Diesel 2025 - AA-2662",
+    "presentation": "Unidad",
+    "base_price_no_iva": 5.96
+  },
+  {
+    "sku": "LP-FIL-026",
+    "parent_sku": "LP-FIL-026",
+    "slug": "advance-filtro-aire-hy-tucson-all-new-20-santa-fe-25-sonata-20-kia-sorento-35-advance-lp-fil-026",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aire de Motor Advance — Hyundai Tucson All New 2.0 Santa Fe 2.5 Sonata 2.0 KIA Sorento 3.5",
+    "presentation": "Unidad",
+    "base_price_no_iva": 4.3
+  },
+  {
+    "sku": "LP-FIL-027",
+    "parent_sku": "LP-FIL-027",
+    "slug": "advance-filtro-aire-hy-bus-county-hd65-hd72-hd78-sello-radial-cilindrico-advance-mk-94190-lp-fil-027",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aire de Motor Advance — Hyundai Bus County, Hd65, Hd72 , Hd78 Sello Radial (cilindrico) (mk-94190)",
+    "presentation": "Unidad",
+    "base_price_no_iva": 8.61
+  },
+  {
+    "sku": "LP-FIL-028",
+    "parent_sku": "LP-FIL-028",
+    "slug": "advance-filtro-aire-kia-grand-pregio-2006-2012-cilindrico-advance-lp-fil-028",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aire de Motor Advance — KIA Grand Pregio 2006-2012 (cilindrico)",
+    "presentation": "Unidad",
+    "base_price_no_iva": 4.87
+  },
+  {
+    "sku": "LP-FIL-029",
+    "parent_sku": "LP-FIL-029",
+    "slug": "advance-filtro-aire-great-wall-wingle-5-20-diesel-19-wingle-7-advance-lp-fil-029",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aire de Motor Advance — Great Wall Wingle 5 2.0 Diesel 19, Wingle 7",
+    "presentation": "Unidad",
+    "base_price_no_iva": 4.22
+  },
+  {
+    "sku": "LP-FIL-030",
+    "parent_sku": "LP-FIL-030",
+    "slug": "advance-filtro-aire-kia-picanto-r-10-17-28113-1y100-advance-lp-fil-030",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aire de Motor Advance — KIA Picanto R /10-17 (28113-1y100)",
+    "presentation": "Unidad",
+    "base_price_no_iva": 3.09
+  },
+  {
+    "sku": "LP-FIL-031",
+    "parent_sku": "LP-FIL-031",
+    "slug": "advance-filtro-aire-ns-sentra-b-15-almera-murano-pathfinder-30ch-scross-16546-0z000-advance-lp-fil-031",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aire de Motor Advance — Nissan Sentra B-15 Almera Murano Pathfinder 3.0/CHEVROLET Scross (16546-0z000)",
+    "presentation": "Unidad",
+    "base_price_no_iva": 3.26
+  },
+  {
+    "sku": "LP-FIL-032",
+    "parent_sku": "LP-FIL-032",
+    "slug": "advance-filtro-aire-ch-rodeo-26-redondo-advance-lp-fil-032",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aire de Motor Advance — Chevrolet Rodeo 2.6 (redondo)",
+    "presentation": "Unidad",
+    "base_price_no_iva": 4.7
+  },
+  {
+    "sku": "LP-FIL-033",
+    "parent_sku": "LP-FIL-033",
+    "slug": "advance-filtro-aire-ch-luv-dmax-24-dmax-35-gasolina-mt-l200-advance-lp-fil-033",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aire de Motor Advance — Chevrolet Luv D-MAX 2.4 D-MAX 3.5 Gasolina / Mitsubishi L200",
+    "presentation": "Unidad",
+    "base_price_no_iva": null
+  },
+  {
+    "sku": "AA-54",
+    "parent_sku": "AA-54",
+    "slug": "advance-filtro-advance-aire-nissan-x-trail-e-power-15-vc-turboe-4orce-t33-qashqai-13t-caja-x-24---aa--54-aa-54",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aire de Motor Advance (AA-54) — Nissan X-trail E-power 1.5 Vc Turbo(e-4orce T33) Qashqai 1.3T Caja X 24 - Aa- 54",
+    "presentation": "Unidad",
+    "base_price_no_iva": 5.91
+  },
+  {
+    "sku": "AA-5827",
+    "parent_sku": "AA-5827",
+    "slug": "advance-filtro-aire-vw-golf-jetta-sk-octavia-audi-a3-18t---aa-5827-advance-mk-5827-aa-5827",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aire de Motor Advance (AA-5827) — Volkswagen Golf Jetta Skoda Octavia Audi A3 1.8T - AA-5827 (mk-5827)",
+    "presentation": "Unidad",
+    "base_price_no_iva": 5.61
+  },
+  {
+    "sku": "LP-FIL-036",
+    "parent_sku": "LP-FIL-036",
+    "slug": "advance-filtro-aire-mz-bt50-ty-hilux-25-27--09-fortunerjac-28-cilindrico-advance-lp-fil-036",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aire de Motor Advance — Mazda BT-50 Toyota Hilux 2.5-2.7 /-09 / Fortunerjac 2.8 (cilindrico)",
+    "presentation": "Unidad",
+    "base_price_no_iva": 5.35
+  },
+  {
+    "sku": "LP-FIL-037",
+    "parent_sku": "LP-FIL-037",
+    "slug": "advance-filtro-aire-kia-picanto-new-2017-red-28113-g6000-xtraguard-ca-g6000-advance-lp-fil-037",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aire de Motor Advance — KIA Picanto New 2017 (red 28113-G6000 Xtraguard Ca-g6000)",
+    "presentation": "Unidad",
+    "base_price_no_iva": 4.39
+  },
+  {
+    "sku": "LP-FIL-038",
+    "parent_sku": "LP-FIL-038",
+    "slug": "advance-filtro-aire-isuzu-npr-39-turbo-nhr-nkr-8941560520-cilindrico-advance-mk-5070-lp-fil-038",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aire de Motor Advance — Isuzu Npr 3,9 Turbo Nhr Nkr 8941560520 (cilindrico) (mk-5070)",
+    "presentation": "Unidad",
+    "base_price_no_iva": 10.78
+  },
+  {
+    "sku": "AA-6127",
+    "parent_sku": "AA-6127",
+    "slug": "advance-filtro-aire-ch-d-max-25-35-tdi-aa-6127sr-550aip6828-97147860910-cilindrico-advance-aa-6127",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aire de Motor Advance (AA-6127) — Chevrolet D-MAX 2.5 3.5 Tdi (aa-6127/sr-550/aip682/8-97147860910) (cilindrico)",
+    "presentation": "Unidad",
+    "base_price_no_iva": 4.22
+  },
+  {
+    "sku": "LP-FIL-040",
+    "parent_sku": "LP-FIL-040",
+    "slug": "advance-filtro-aire-mz-bt-50-gasolina-2200-iny-fd-ranger-22-26-2008-advance-lp-fil-040",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aire de Motor Advance — Mazda BT-50 Gasolina 2200 Iny Ford Ranger 2.2 2.6 2008",
+    "presentation": "Unidad",
+    "base_price_no_iva": 2.78
+  },
+  {
+    "sku": "LP-FIL-041",
+    "parent_sku": "LP-FIL-041",
+    "slug": "advance-filtro-aire-ch-vitara-16-97-01-cuadrado-advance-lp-fil-041",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aire de Motor Advance — Chevrolet Vitara 1.6 /97-01 (cuadrado)",
+    "presentation": "Unidad",
+    "base_price_no_iva": 5.17
+  },
+  {
+    "sku": "LP-FIL-042",
+    "parent_sku": "LP-FIL-042",
+    "slug": "advance-filtro-aire-ns-sentra-b14-rn-duster-advance-prem-aip515-xtrag-ap-103-red-16546-73c10-lp-fil-042",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aire de Motor Advance — Nissan Sentra B14 Renault Duster (prem Aip515 Xtrag AP-103 Red 16546-73C10)",
+    "presentation": "Unidad",
+    "base_price_no_iva": 3.0
+  },
+  {
+    "sku": "LP-FIL-043",
+    "parent_sku": "LP-FIL-043",
+    "slug": "advance-filtro-aire-ch-vitara-spts-iny-advance-lp-fil-043",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aire de Motor Advance — Chevrolet Vitara Spts Iny",
+    "presentation": "Unidad",
+    "base_price_no_iva": 3.26
+  },
+  {
+    "sku": "LP-FIL-044",
+    "parent_sku": "LP-FIL-044",
+    "slug": "advance-filtro-aire-ch-rodeo-32-trooper-32-luv-22-23-32-advance-lp-fil-044",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aire de Motor Advance — Chevrolet Rodeo 3.2, Trooper 3.2, Luv 2.2, 2.3, 3.2",
+    "presentation": "Unidad",
+    "base_price_no_iva": 3.61
+  },
+  {
+    "sku": "LP-FIL-045",
+    "parent_sku": "LP-FIL-045",
+    "slug": "advance-filtro-aire-ch-gran-vitara-3ptasprem-aip513-xtrag-wa-8069-red-25311970-advance-lp-fil-045",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aire de Motor Advance — Chevrolet Gran Vitara 3PTAS(PREM Aip513 Xtrag WA-8069 Red 25311970)",
+    "presentation": "Unidad",
+    "base_price_no_iva": 2.78
+  },
+  {
+    "sku": "LP-FIL-046",
+    "parent_sku": "LP-FIL-046",
+    "slug": "advance-filtro-aire-sz-gran-vitara-sz-24-78k00-advance-lp-fil-046",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aire de Motor Advance — Suzuki Gran Vitara Suzuki 2.4 78K00",
+    "presentation": "Unidad",
+    "base_price_no_iva": 4.35
+  },
+  {
+    "sku": "LP-FIL-047",
+    "parent_sku": "LP-FIL-047",
+    "slug": "advance-filtro-aire-hy-tucson-ix-kia-sportage-r-11-12-creta---mk-29766-prem-aip767-advance-lp-fil-047",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aire de Motor Advance — Hyundai Tucson IX KIA Sportage R 11-12 Creta - (mk-29766 Prem Aip767",
+    "presentation": "Unidad",
+    "base_price_no_iva": 3.09
+  },
+  {
+    "sku": "LP-FIL-048",
+    "parent_sku": "LP-FIL-048",
+    "slug": "advance-filtro-aire-rn-logansanderodustermegane-advance-c18581-lp-fil-048",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aire de Motor Advance — Renault Logan/sandero/duster/megane C1858/1",
+    "presentation": "Unidad",
+    "base_price_no_iva": 3.43
+  },
+  {
+    "sku": "LP-FIL-049",
+    "parent_sku": "LP-FIL-049",
+    "slug": "advance-filtro-aire-kia-rio-x-line-18-gt-limited-sport-advance-lp-fil-049",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aire de Motor Advance — KIA Rio X Line /18 GT Limited Sport",
+    "presentation": "Unidad",
+    "base_price_no_iva": 4.13
+  },
+  {
+    "sku": "LP-FIL-050",
+    "parent_sku": "LP-FIL-050",
+    "slug": "advance-filtro-aire-great-wall-wingle-22-advance-lp-fil-050",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aire de Motor Advance — Great Wall Wingle /22",
+    "presentation": "Unidad",
+    "base_price_no_iva": 6.26
+  },
+  {
+    "sku": "LP-FIL-051",
+    "parent_sku": "LP-FIL-051",
+    "slug": "advance-filtro-aire-zx-auto-grand-tiger-wingle-advance-a38010-1109101-k08-a1-lp-fil-051",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aire de Motor Advance — Zx Auto-grand Tiger-wingle A38010 1109101-K08-A1",
+    "presentation": "Unidad",
+    "base_price_no_iva": 3.09
+  },
+  {
+    "sku": "AA-9123",
+    "parent_sku": "AA-9123",
+    "slug": "advance-filtro-aire-chery-tiggo-2-pro-15l---aa-9123-advance-aa-9123",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aire de Motor Advance (AA-9123) — Chery Tiggo 2 Pro 1.5L - AA-9123",
+    "presentation": "Unidad",
+    "base_price_no_iva": 5.35
+  },
+  {
+    "sku": "AA-9124",
+    "parent_sku": "AA-9124",
+    "slug": "advance-filtro-aire-chery-arrizo-5-15---aa--9124-advance-aa-9124",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aire de Motor Advance (AA-9124) — Chery Arrizo 5 1.5 - Aa- 9124",
+    "presentation": "Unidad",
+    "base_price_no_iva": 4.87
+  },
+  {
+    "sku": "AA-9322",
+    "parent_sku": "AA-9322",
+    "slug": "advance-filtro-aire-ch-sail-15l-17-21-aa-9322-aip1018-ap143-90799322-advance-aa-9322",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aire de Motor Advance (AA-9322) — Chevrolet Sail 1.5L 17-21 (aa-9322, Aip1018, Ap143, 90799322)",
+    "presentation": "Unidad",
+    "base_price_no_iva": 3.43
+  },
+  {
+    "sku": "LP-FIL-055",
+    "parent_sku": "LP-FIL-055",
+    "slug": "advance-filtro-aire-kia-cerato-16-05-09-hy-elantra-16-00-06-cuupe-tiburon-02-08---aa9392-advance-lp-fil-055",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aire de Motor Advance — KIA Cerato 1.6 05-09 Hyundai Elantra 1.6 00-06 Cuupe Tiburon 02-08 - Aa9392",
+    "presentation": "Unidad",
+    "base_price_no_iva": 3.91
+  },
+  {
+    "sku": "AA-9476",
+    "parent_sku": "AA-9476",
+    "slug": "advance-filtro-advance-aire-chevrolet-cavalier-2019-cj-x-24---aa-9476-aa-9476",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aire de Motor Advance (AA-9476) — Chevrolet Cavalier 2019 - AA-9476",
+    "presentation": "Unidad",
+    "base_price_no_iva": null
+  },
+  {
+    "sku": "LP-FIL-057",
+    "parent_sku": "LP-FIL-057",
+    "slug": "advance-filtro-aire-hy-getz-13-2002-advance-mk-24086-lp-fil-057",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aire de Motor Advance — Hyundai Getz 1.3 2002 (mk-24086)",
+    "presentation": "Unidad",
+    "base_price_no_iva": 3.26
+  },
+  {
+    "sku": "LP-FIL-058",
+    "parent_sku": "LP-FIL-058",
+    "slug": "advance-filtro-aire-vw-jetta-iv-20-11-sk-octavia-14--20-fsi-07-cilindrico-advance-lp-fil-058",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aire de Motor Advance — Volkswagen Jetta IV 2.0 /11, Skoda Octavia 1.4 -2.0 Fsi /07 (cilindrico)",
+    "presentation": "Unidad",
+    "base_price_no_iva": 7.04
+  },
+  {
+    "sku": "LP-FIL-059",
+    "parent_sku": "LP-FIL-059",
+    "slug": "advance-filtro-aire-isuzu-npr-11-19-nhr-reward-11-18-nmr-11-14-nqr-11-18-nlr-11-18-jac-hfc1035-cil-advance-lp-fil-059",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aire de Motor Advance — Isuzu Npr 11-19 Nhr Reward 11-18 Nmr 11-14 Nqr 11-18 NLR 11-18 JAC Hfc1035 (cil)",
+    "presentation": "Unidad",
+    "base_price_no_iva": 14.11
+  },
+  {
+    "sku": "LP-FIL-060",
+    "parent_sku": "LP-FIL-060",
+    "slug": "advance-filtro-aire-ch-aveo-chy-taxi-advance-lp-fil-060",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aire de Motor Advance — Chevrolet Aveo Chy Taxi",
+    "presentation": "Unidad",
+    "base_price_no_iva": 2.17
+  },
+  {
+    "sku": "AA-994",
+    "parent_sku": "AA-994",
+    "slug": "advance-filtro-aire-rn-logan-sandero---aa-994-advance-mk-9074-aa-994",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aire de Motor Advance (AA-994) — Renault Logan, Sandero - AA-994 (mk-9074)",
+    "presentation": "Unidad",
+    "base_price_no_iva": 5.0
+  },
+  {
+    "sku": "LP-FIL-065",
+    "parent_sku": "LP-FIL-065",
+    "slug": "advance-filtro-aire-kia-cerato-13--hy-elantra-16-07-11-i30-16-09-10-koup-20-10-17-advance-lp-fil-065",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aire de Motor Advance — KIA Cerato /13- Hyundai Elantra 1.6 /07-11 I30 1.6 /09-10 Koup 2.0 /10-17",
+    "presentation": "Unidad",
+    "base_price_no_iva": 3.0
+  },
+  {
+    "sku": "AA-3038",
+    "parent_sku": "AA-3038",
+    "slug": "advance-filtro-advance-aire-jac-t9-20-2025---aa-3038-aa-3038",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aire de Motor Advance (AA-3038) — JAC T9 2.0 2025 - AA-3038",
+    "presentation": "Unidad",
+    "base_price_no_iva": null
+  },
+  {
+    "sku": "078AO-10127",
+    "parent_sku": "078AO-10127",
+    "slug": "advance-filtro-aceite-kia-pregio-h-100-terracan-carnival-diesel-k2700-h-350-advance-078ao-10127",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Combustible Advance (AO-10127) — KIA Pregio H 100 Terracan Carnival Diesel K2700 H-350",
+    "presentation": "Unidad",
+    "base_price_no_iva": 2.91
+  },
+  {
+    "sku": "078AO-1539",
+    "parent_sku": "078AO-1539",
+    "slug": "advance-filtro-aceite-ch-d-max-30-02-16-d-max-25-02-12-fd-escape-20-01-04-advance-078ao-1539",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aceite Advance (AO-1539) — Chevrolet D-MAX 3.0 02-16 D-MAX 2.5 02-12, Ford Escape 2.0 01-04",
+    "presentation": "Unidad",
+    "base_price_no_iva": 2.17
+  },
+  {
+    "sku": "078AO-2",
+    "parent_sku": "078AO-2",
+    "slug": "advance-filtro-aceite-fd-f150-escape-explorer-v8-iny-wingle-diesel-20-ph-820-advance-078ao-2",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Combustible Advance (AO-2) — Ford F150-escape-explorer V8 Iny. Wingle Diesel 2.0 (ph-820)",
+    "presentation": "Unidad",
+    "base_price_no_iva": 2.65
+  },
+  {
+    "sku": "078AO-2841",
+    "parent_sku": "078AO-2841",
+    "slug": "advance-filtro-aceite-ch-sailvan-n200-n300spark-gtbeat-premier-10000km-sh4444-advance-078ao-2841",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aceite Advance (AO-2841) — Chevrolet Sail/van N200-n300/spark Gt/beat Premier (10000km) (sh4444)",
+    "presentation": "Unidad",
+    "base_price_no_iva": 2.17
+  },
+  {
+    "sku": "078AO-2849",
+    "parent_sku": "078AO-2849",
+    "slug": "advance-filtro-aceite-mz-16-20-22-26bt50-gasfd-courier-20-22-wingle-5-gas-advance-078ao-2849",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aceite Advance (AO-2849) — Mazda 1.6-2.0-2.2-2.6/BT-50 Gas/ford Courier 2.0-2.2 Wingle 5 Gas",
+    "presentation": "Unidad",
+    "base_price_no_iva": 2.17
+  },
+  {
+    "sku": "078AO-2863",
+    "parent_sku": "078AO-2863",
+    "slug": "advance-filtro-aceite-ch-luv-25-dieselgreat-wallhaval-h5-25wingle-28camion-jack-ph7325-advance-078ao-2863",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Combustible Advance (AO-2863) — Chevrolet Luv 2.5 Diesel/great Wall/haval H5 2.5/WINGLE 2.8/CAMION Jack (ph7325)",
+    "presentation": "Unidad",
+    "base_price_no_iva": 3.52
+  },
+  {
+    "sku": "078AO-2870",
+    "parent_sku": "078AO-2870",
+    "slug": "advance-filtro-aceite-mercedes-190-sk-fabia-i-felicia-super-b-vw-crossfox-gol-golf-polo-advance-078ao-2870",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aceite Advance (AO-2870) — Mercedes 190 Skoda Fabia I Felicia Super B Volkswagen Crossfox Gol Golf Polo",
+    "presentation": "Unidad",
+    "base_price_no_iva": 2.52
+  },
+  {
+    "sku": "078AO-2879",
+    "parent_sku": "078AO-2879",
+    "slug": "advance-filtro-aceite-ns-navara-jeep-land-rover-lada-dodge-fiat-antiguos-ph-43-advance-078ao-2879",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aceite Advance (AO-2879) — Nissan Navara, Jeep. Land Rover. Lada, Dodge, Fiat Antiguos (ph-43)",
+    "presentation": "Unidad",
+    "base_price_no_iva": 3.12
+  },
+  {
+    "sku": "078AO-4967",
+    "parent_sku": "078AO-4967",
+    "slug": "advance-filtro-aceite-ch-spark-life-10l-06-19ty-rav-4changan-alsvin-15l-advance-078ao-4967",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aceite Advance (AO-4967) — Chevrolet Spark Life 1.0L 06-19/TOYOTA Rav 4/CHANGAN Alsvin 1.5L",
+    "presentation": "Unidad",
+    "base_price_no_iva": 2.17
+  },
+  {
+    "sku": "078AO-50710",
+    "parent_sku": "078AO-50710",
+    "slug": "advance-filtro-aceite-ch-luv-d-max-14--advance-078ao-50710",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aceite Advance (AO-50710) — Chevrolet Luv D-MAX /14",
+    "presentation": "Unidad",
+    "base_price_no_iva": 2.17
+  },
+  {
+    "sku": "078AO-7317",
+    "parent_sku": "078AO-7317",
+    "slug": "advance-filtro-aceite-fiat-palio-fiorino-civic-accord-kia-i10-cerato-ph2867-advance-078ao-7317",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aceite Advance (AO-7317) — Fiat Palio Fiorino Civic Accord KIA I10 Cerato (ph2867)",
+    "presentation": "Unidad",
+    "base_price_no_iva": 2.17
+  },
+  {
+    "sku": "078AO-8",
+    "parent_sku": "078AO-8",
+    "slug": "advance-filtro-aceite-fddodgety-stouthiluxland-cruisermz-bt50-diesel-ph-8-advance-078ao-8",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Combustible Advance (AO-8) — Ford/dodge/toyota Stout/hilux/land Cruiser/mazda BT-50 Diesel PH-8",
+    "presentation": "Unidad",
+    "base_price_no_iva": 2.87
+  },
+  {
+    "sku": "079AOE-10246",
+    "parent_sku": "079AOE-10246",
+    "slug": "advance-filtro-aceite-ch-cruze-18l-tracker-18l-16v-13-19-elemento-advance-079aoe-10246",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aceite Advance (079AOE-10246) — Chevrolet Cruze 1.8L / Tracker 1.8L 16V 13-19 / (elemento)",
+    "presentation": "Unidad",
+    "base_price_no_iva": 2.88
+  },
+  {
+    "sku": "080AO-1",
+    "parent_sku": "080AO-1",
+    "slug": "advance-filtro-aceite-mz-bt-50-diesel-advance-080ao-1",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Combustible Advance (AO-1) — Mazda BT-50 Diesel",
+    "presentation": "Unidad",
+    "base_price_no_iva": 3.17
+  },
+  {
+    "sku": "080AO-1051",
+    "parent_sku": "080AO-1051",
+    "slug": "advance-filtro-advance-aceite-chevrolet-d-max-20t-diesel-2025---ao-1051-2400-unidad-500-080ao-1051",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Combustible Advance (AO-1051) — Chevrolet D-MAX 2.0T Diesel 2025 - AO-1051 24.00 Unidad 5,00",
+    "presentation": "Unidad",
+    "base_price_no_iva": 2.17
+  },
+  {
+    "sku": "080AO-10600",
+    "parent_sku": "080AO-10600",
+    "slug": "advance-filtro-aceite-vw-tiguan-20-07--amarok-gas-passat-18-07--audi-20-con-rosca-macho-advance-080ao-10600",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aceite Advance (AO-10600) — Volkswagen Tiguan 2.0 /07- Amarok Gas. Passat 1.8 /07- Audi 2.0 Con Rosca Macho",
+    "presentation": "Unidad",
+    "base_price_no_iva": 5.43
+  },
+  {
+    "sku": "080AO-1302",
+    "parent_sku": "080AO-1302",
+    "slug": "advance-filtro-aceite-mt-canterfusohino-fb-fchd-55hd-65-c161-advance-080ao-1302",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aceite Advance (AO-1302) — Mitsubishi Canter/fuso/hino Fb-fc/hd 55/HD 65 C161",
+    "presentation": "Unidad",
+    "base_price_no_iva": 4.35
+  },
+  {
+    "sku": "080AO-1314",
+    "parent_sku": "080AO-1314",
+    "slug": "advance-filtro-aceite-hino-fb1817-fd2220-fd2320-fe3020-sg3320-sg3325-advance-080ao-1314",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aceite Advance (AO-1314) — Hino Fb1817, Fd2220, Fd2320, Fe3020, Sg3320, Sg3325 ()",
+    "presentation": "Unidad",
+    "base_price_no_iva": 7.13
+  },
+  {
+    "sku": "080AO-1318",
+    "parent_sku": "080AO-1318",
+    "slug": "advance-filtro-aceite-hino-dutro-09-advance-080ao-1318",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aceite Advance (AO-1318) — Hino Dutro /09",
+    "presentation": "Unidad",
+    "base_price_no_iva": 4.83
+  },
+  {
+    "sku": "080AO-1321",
+    "parent_sku": "080AO-1321",
+    "slug": "advance-filtro-aceite-hino-300-dutro-07-12-300-euro-dutro-512-616-616dc-716-816-advance-080ao-1321",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aceite Advance (AO-1321) — Hino 300 Dutro 07-12 300 Euro Dutro 512 616 616DC 716 816",
+    "presentation": "Unidad",
+    "base_price_no_iva": 7.26
+  },
+  {
+    "sku": "080AO-1513",
+    "parent_sku": "080AO-1513",
+    "slug": "advance-filtro-aceite-iz-ftr-fsr-fvr-9899-sakura-c1513-hard-8-94396-375-4-advance-080ao-1513",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aceite Advance (AO-1513) — Iz FTR Fsr Fvr 98/99 ( Sakura C1513 / Hard 8-94396-375-4)",
+    "presentation": "Unidad",
+    "base_price_no_iva": 9.39
+  },
+  {
+    "sku": "080AO-1522",
+    "parent_sku": "080AO-1522",
+    "slug": "advance-filtro-aceite-isz-npr-nkr-98-motor-4b-advance-080ao-1522",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aceite Advance (AO-1522) — Isz Npr Nkr 98-MOTOR 4B",
+    "presentation": "Unidad",
+    "base_price_no_iva": 8.83
+  },
+  {
+    "sku": "080AO-2801",
+    "parent_sku": "080AO-2801",
+    "slug": "advance-filtro-aceite-great-wall-wingle-28-diesel-mahindra-pick-up-scorpio-jac-hfc-1040k-m20-15-advance-080ao-2801",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Combustible Advance (AO-2801) — Great Wall Wingle 2.8 Diesel Mahindra Pick Up Scorpio JAC Hfc 1040K M20 1.5",
+    "presentation": "Unidad",
+    "base_price_no_iva": 2.65
+  },
+  {
+    "sku": "080AO-2825",
+    "parent_sku": "080AO-2825",
+    "slug": "advance-filtro-aceite-dt12-15-ns-sentra-92-98-ty-68-84-hilux-stout-ns-datsun-advance-080ao-2825",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aceite Advance (AO-2825) — Dt1.2-1.5 Nissan Sentra /92-98 Toyota /68-84 Hilux Stout Nissan Datsun",
+    "presentation": "Unidad",
+    "base_price_no_iva": 2.17
+  },
+  {
+    "sku": "080AO-2841ST",
+    "parent_sku": "080AO-2841ST",
+    "slug": "advance-filtro-advance-aceite-medio-filtrante-100-sintetico-15000-km-chevrole-cavalier-groove-sail-n2-080ao-2841st",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aceite Advance (AO-2841ST) — (medio Filtrante 100% Sintetico 15000 Km.) Chevrole Cavalier, Groove, Sail, N2",
+    "presentation": "Unidad",
+    "base_price_no_iva": 2.61
+  },
+  {
+    "sku": "080AO-2849ST",
+    "parent_sku": "080AO-2849ST",
+    "slug": "advance-filtro-advance-aceite-medio-filtrante-100-sintetico-15000-km-jac-t8-mazda-16-18-b2000---1600-080ao-2849st",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aceite Advance (AO-2849ST) — (medio Filtrante 100% Sintetico 15000 Km.) JAC T8 Mazda 1.6 1.8 B2000 - 1.600",
+    "presentation": "Unidad",
+    "base_price_no_iva": 3.04
+  },
+  {
+    "sku": "080AO-2870ST",
+    "parent_sku": "080AO-2870ST",
+    "slug": "advance-filtro-advance-aceite-medio-filtrante-100-sintetico-15000-km-audi-skoda-volkswagen-doble-valv-080ao-2870st",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aceite Advance (AO-2870ST) — (medio Filtrante 100% Sintetico 15000 Km.) Audi, Skoda, Volkswagen (doble Valv",
+    "presentation": "Unidad",
+    "base_price_no_iva": 3.48
+  },
+  {
+    "sku": "080AO-3387",
+    "parent_sku": "080AO-3387",
+    "slug": "advance-filtro-aceite-ch-aveocorsaoptraluv-22-24dmax-ph-2862-advance-080ao-3387",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aceite Advance (AO-3387) — Chevrolet Aveo/corsa/optra/luv 2.2-2.4/D-MAX (ph-2862)",
+    "presentation": "Unidad",
+    "base_price_no_iva": 2.17
+  },
+  {
+    "sku": "080AO-3387ST",
+    "parent_sku": "080AO-3387ST",
+    "slug": "advance-filtro-advance-aceite-medio-filtrante-100-sintetico-15000-km-chevrolet-daewoo-fiat---ao-3387st-080ao-3387st",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aceite Advance (AO-3387ST) — (medio Filtrante 100% Sintetico 15000 Km.) Chevrolet, Daewoo, Fiat - AO-3387ST",
+    "presentation": "Unidad",
+    "base_price_no_iva": 2.61
+  },
+  {
+    "sku": "080AO-3593",
+    "parent_sku": "080AO-3593",
+    "slug": "advance-filtro-aceite-ch-luv-32dmax-35hykiatucsonsportagegreat-walltrooper-advance-080ao-3593",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aceite Advance (AO-3593) — Chevrolet Luv 3.2/D-MAX 3.5/HYUNDAI/KIA/TUCSON/SPORTAGE/GREAT Wall/trooper",
+    "presentation": "Unidad",
+    "base_price_no_iva": 2.17
+  },
+  {
+    "sku": "080AO-3593ST",
+    "parent_sku": "080AO-3593ST",
+    "slug": "advance-filtro-advance-aceite-medio-filtrante-100-sintetico-15000-km-chevrolet-great-wall-hyundai-kia-080ao-3593st",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aceite Advance (AO-3593ST) — (medio Filtrante 100% Sintetico 15000 Km.) Chevrolet, Great Wall, Hyundai, KIA",
+    "presentation": "Unidad",
+    "base_price_no_iva": 2.61
+  },
+  {
+    "sku": "080AO-3614",
+    "parent_sku": "080AO-3614",
+    "slug": "advance-filtro-aceite-ch-forsa-i-iigrand-vitarajinmyvitaradaihatsu-terios-13-ph966b-advance-080ao-3614",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aceite Advance (AO-3614) — Chevrolet Forsa I-ii/grand Vitara/jinmy/vitara/daihatsu Terios 1.3 (ph966b)",
+    "presentation": "Unidad",
+    "base_price_no_iva": 2.17
+  },
+  {
+    "sku": "080AO-3614ST",
+    "parent_sku": "080AO-3614ST",
+    "slug": "advance-filtro-advance-aire-medio-filtrante-100-sintetico-15000-km-chery-chevrolet-dongfeng-faw-ford-jetour-080ao-3614st",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aire de Motor Advance (AO-3614ST) — Medio Filtrante 100 Sintetico 15000 Km. Chery Chevrolet Dongfeng Faw Ford Jetour",
+    "presentation": "Unidad",
+    "base_price_no_iva": 2.61
+  },
+  {
+    "sku": "080AO-3675",
+    "parent_sku": "080AO-3675",
+    "slug": "advance-filtro-aceite-ch-trailblazer-silverado-2000-cheyenne-2000-plb3675-advance-ph-59-ph3429a-080ao-3675",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aceite Advance (AO-3675) — Chevrolet Trailblazer-silverado 2000-CHEYENNE 2000 (plb3675) PH-59 Ph3429a",
+    "presentation": "Unidad",
+    "base_price_no_iva": 2.48
+  },
+  {
+    "sku": "080AO-3830",
+    "parent_sku": "080AO-3830",
+    "slug": "advance-filtro-advance-aceite-mitsubishi-canter-hyundai-hd55-hd65-hd72-hd78-doble-filtracion-c--5816-caj-080ao-3830",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aceite Advance (AO-3830) — Mitsubishi Canter, Hyundai Hd55, Hd65, Hd72, Hd78 Doble Filtracion C- 5816 Caj",
+    "presentation": "Unidad",
+    "base_price_no_iva": 5.19
+  },
+  {
+    "sku": "080AO-3985",
+    "parent_sku": "080AO-3985",
+    "slug": "advance-filtro-aceite-rn-clioscenicmeganelogantwingo-con-tuerca-advance-080ao-3985",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aceite Advance (AO-3985) — Renault Clio/scenic/megane/logan/twingo Con Tuerca",
+    "presentation": "Unidad",
+    "base_price_no_iva": 2.17
+  },
+  {
+    "sku": "080AO-4386ST",
+    "parent_sku": "080AO-4386ST",
+    "slug": "advance-filtro-advance-aceite-medio-filtrante-100-sintetico-15000-km-suzuki-grand-vitara-sz-next-toyot-080ao-4386st",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aceite Advance (AO-4386ST) — (medio Filtrante 100% Sintetico 15000 Km.) Suzuki Grand Vitara Suzuki, Next, Toyot",
+    "presentation": "Unidad",
+    "base_price_no_iva": null
+  },
+  {
+    "sku": "080AO-4952",
+    "parent_sku": "080AO-4952",
+    "slug": "advance-filtro-advance-aceite-mg-zotye-t600-15-chevrolet-tahoe-silverado-trail-blazer-ext---ao-4952-080ao-4952",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aceite Advance (AO-4952) — Mg, Zotye T600 1.5, Chevrolet Tahoe, Silverado, Trail Blazer Ext - AO-4952",
+    "presentation": "Unidad",
+    "base_price_no_iva": 2.22
+  },
+  {
+    "sku": "080AO-500-1",
+    "parent_sku": "080AO-500-1",
+    "slug": "advance-filtro-advance-aceite-ford-edge-explorer-expedition-f-150-caja-x-40---ao-5001-080ao-500-1",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aceite Advance (AO-500-1) — Ford Edge, Explorer, Expedition, F-150 Caja X 40 - AO-500/1",
+    "presentation": "Unidad",
+    "base_price_no_iva": 2.98
+  },
+  {
+    "sku": "080AO-500ST",
+    "parent_sku": "080AO-500ST",
+    "slug": "advance-filtro-advance-aceite-medio-filtrante-100-sintetico-15000-km-chevrolet-ford-jmc-jac---ao-500s-080ao-500st",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aceite Advance (AO-500ST) — (medio Filtrante 100% Sintetico 15000 Km.) Chevrolet, Ford, Jmc, JAC - AO-500S",
+    "presentation": "Unidad",
+    "base_price_no_iva": null
+  },
+  {
+    "sku": "080AO-50710-1",
+    "parent_sku": "080AO-50710-1",
+    "slug": "advance-filtro-advance-aceite-chevrolet-dmax-2014-caja-x-40--ao-507101-080ao-50710-1",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aceite Advance (AO-50710-1) — Chevrolet D-MAX 2014 Caja X 40- AO-50710/1",
+    "presentation": "Unidad",
+    "base_price_no_iva": 2.95
+  },
+  {
+    "sku": "080AO-5190",
+    "parent_sku": "080AO-5190",
+    "slug": "advance-filtro-aceite-ch-nhr-nkr-m26x15-dual-8-94360427-1-advance-080ao-5190",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aceite Advance (AO-5190) — Chevrolet Nhr, Nkr M26x1,5 Dual (8-94360427-1)",
+    "presentation": "Unidad",
+    "base_price_no_iva": 4.48
+  },
+  {
+    "sku": "080AO-6102",
+    "parent_sku": "080AO-6102",
+    "slug": "advance-filtro-advance-aceite-ud-trucks-fd6t-c-270-c1200-6102-uj1034-sc270---ao-6100-080ao-6102",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aceite Advance (AO-6102) — Ud Trucks Fd6t (c-270, C12.00 6102, Uj1034, Sc270) - AO-6100",
+    "presentation": "Unidad",
+    "base_price_no_iva": 7.85
+  },
+  {
+    "sku": "080AO-6607",
+    "parent_sku": "080AO-6607",
+    "slug": "advance-filtro-aceite-fiat-uno-fire-13-honda-accord-23-atos-prime-11-kia-cerato-forte-16-tiida-advance-080ao-6607",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aceite Advance (AO-6607) — Fiat Uno Fire 1.3 Honda Accord 2.3 Atos Prime 1.1 KIA Cerato Forte 1.6 Tiida",
+    "presentation": "Unidad",
+    "base_price_no_iva": 2.17
+  },
+  {
+    "sku": "080AO-6607ST",
+    "parent_sku": "080AO-6607ST",
+    "slug": "advance-filtro-advance-aceite-medio-filtrante-100-sintetico-15000-km-hyundai-kia-foton-great-wall-ha-080ao-6607st",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aceite Advance (AO-6607ST) — (medio Filtrante 100% Sintetico 15000 Km.) Hyundai, Kia, Foton, Great Wall, Ha",
+    "presentation": "Unidad",
+    "base_price_no_iva": 2.61
+  },
+  {
+    "sku": "080AO-667-1",
+    "parent_sku": "080AO-667-1",
+    "slug": "advance-filtro-advance-aceite-ph49alf667c-5510lfp3191-psl417oil-filter-caterpillar-mack-scania-volv-080ao-667-1",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aceite Advance (AO-667-1) — (ph49a,lf667,c-5510,lfp3191, Psl417)oil Filter Caterpillar, Mack, Scania, Volv",
+    "presentation": "Unidad",
+    "base_price_no_iva": null
+  },
+  {
+    "sku": "080AO-7317ST",
+    "parent_sku": "080AO-7317ST",
+    "slug": "advance-filtro-advance-aceite-medio-filtrante-100-sintetico-15000-km-great-wallhyundai-kia-mitsubishi-080ao-7317st",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aceite Advance (AO-7317ST) — (medio Filtrante 100% Sintetico 15000 Km.) Great Wall,hyundai, Kia, Mitsubishi",
+    "presentation": "Unidad",
+    "base_price_no_iva": 2.61
+  },
+  {
+    "sku": "080AO-9566",
+    "parent_sku": "080AO-9566",
+    "slug": "advance-filtro-aceite-ty-hilux-27-fortuner-27-advance-ml-20004-080ao-9566",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aceite Advance (AO-9566) — Toyota Hilux 2.7 Fortuner 2.7 (ml-20004)",
+    "presentation": "Unidad",
+    "base_price_no_iva": 2.57
+  },
+  {
+    "sku": "080AO-9617",
+    "parent_sku": "080AO-9617",
+    "slug": "advance-filtro-aceite-dongfeng-df-140-dfm-210-fd-cargo-815e-ml-55081-c-5713-lf645-hph-9617-advance-080ao-9617",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aceite Advance (AO-9617) — Dongfeng Df 140 Dfm 210 Ford Cargo 815E (ml-55081) C-5713 Lf645 HPH-9617",
+    "presentation": "Unidad",
+    "base_price_no_iva": 6.26
+  },
+  {
+    "sku": "080AOE-11651ST",
+    "parent_sku": "080AOE-11651ST",
+    "slug": "advance-filtro-advance-aceite-elemento-medio-filtrante-100-sintetico-15000-km-ford-ranger-mazda-bt50-e-080aoe-11651st",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aceite Advance (AOE-11651ST) — Elemento (medio Filtrante 100% Sintetico 15.000 Km.) Ford Ranger, Mazda BT-50 E",
+    "presentation": "Unidad",
+    "base_price_no_iva": 3.12
+  },
+  {
+    "sku": "080AOE-11724ST",
+    "parent_sku": "080AOE-11724ST",
+    "slug": "advance-filtro-advance-aceite-elemento-medio-filtrante-100-sintetico-15000-km-chevrolet-trailblazer-28-080aoe-11724st",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aceite Advance (AOE-11724ST) — Elemento (medio Filtrante 100% Sintetico 15000 Km.) Chevrolet Trailblazer 2.8",
+    "presentation": "Unidad",
+    "base_price_no_iva": 3.83
+  },
+  {
+    "sku": "080AOE-1501",
+    "parent_sku": "080AOE-1501",
+    "slug": "advance-filtro-aceite-isuzu-npr-nml-2-nmr-elemento-advance-080aoe-1501",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aceite Advance (AOE-1501) — Isuzu Npr Nml 2 Nmr (elemento)",
+    "presentation": "Unidad",
+    "base_price_no_iva": 2.74
+  },
+  {
+    "sku": "080AOE-486ST",
+    "parent_sku": "080AOE-486ST",
+    "slug": "advance-filtro-advance-aceite-elemento-medio-filtrante-100-sintetico-15000-km-haval-all-new-h6-20t-2022-080aoe-486st",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aceite Advance (AOE-486ST) — Elemento (medio Filtrante 100% Sintetico 15000 Km.) Haval All New H6 2.0T 2022",
+    "presentation": "Unidad",
+    "base_price_no_iva": 4.39
+  },
+  {
+    "sku": "080AOE-9229-1",
+    "parent_sku": "080AOE-9229-1",
+    "slug": "advance-filtro-advance-aceite-elementojac-hfc-1140-78l-hfc-1160-78l-hfc-1180-78l---aoe92291-080aoe-9229-1",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aceite Advance (AOE-9229-1) — Elementojac Hfc 1140 7.8L, Hfc 1160 7.8L, Hfc 1180 7.8L - Aoe9229/1",
+    "presentation": "Unidad",
+    "base_price_no_iva": null
+  },
+  {
+    "sku": "080AOE-9496ST",
+    "parent_sku": "080AOE-9496ST",
+    "slug": "advance-filtro-advance-aceite-elemento-medio-filtrante-100-sintetico-15000-km-volkswagen-bora-jetta-sk-080aoe-9496st",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aceite Advance (AOE-9496ST) — Elemento (medio Filtrante 100% Sintetico 15000 Km.) Volkswagen Bora, Jetta, Skoda",
+    "presentation": "Unidad",
+    "base_price_no_iva": null
+  },
+  {
+    "sku": "080AOE-9540",
+    "parent_sku": "080AOE-9540",
+    "slug": "advance-filtro-aceite-ns-urvan-diesel-ns-frontier-elemento-advance-080aoe-9540",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Combustible Advance (AOE-9540) — Nissan Urvan Diesel, Nissan Frontier (elemento)",
+    "presentation": "Unidad",
+    "base_price_no_iva": 2.48
+  },
+  {
+    "sku": "080AOE-9974ST",
+    "parent_sku": "080AOE-9974ST",
+    "slug": "advance-filtro-advance-aceite-elemento-medio-filtrante-100-sintetico-15000-km-great-wall-poer-20t-dies-080aoe-9974st",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aceite Advance (AOE-9974ST) — Elemento (medio Filtrante 100% Sintetico 15.000 Km.) Great Wall Poer 2.0T Dies",
+    "presentation": "Unidad",
+    "base_price_no_iva": 3.13
+  },
+  {
+    "sku": "AO-3985ST",
+    "parent_sku": "AO-3985ST",
+    "slug": "advance-filtro-advance-aceite-sandero-stepwayssangyong-tivoli-16-con-tuerca---ao-3985st-ao-3985st",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Aceite Advance (AO-3985ST) — Sandero Stepway;ssangyong Tivoli 1.6 Con Tuerca - AO-3985ST",
+    "presentation": "Unidad",
+    "base_price_no_iva": 2.61
+  },
+  {
+    "sku": "078AC-1401",
+    "parent_sku": "078AC-1401",
+    "slug": "advance-filtro-cabina-ch-gran-vitara-16-20-03-15-advance-078ac-1401",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Cabina (A/C) Advance (AC-1401) — Chevrolet Gran Vitara 1.6-2.0 /03-15",
+    "presentation": "Unidad",
+    "base_price_no_iva": 4.48
+  },
+  {
+    "sku": "078AC-30020",
+    "parent_sku": "078AC-30020",
+    "slug": "advance-filtro-cabina-vw-bora-jetta-tiguan-sk-fabia-1ac-300202-14-16v-14-8v-superb-octavia-advance-078ac-30020",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Cabina (A/C) Advance (AC-30020) — Volkswagen Bora Jetta Tiguan Skoda Fabia 1.AC-30020,2 1.4 16V 1.4 8V Superb Octavia",
+    "presentation": "Unidad",
+    "base_price_no_iva": 7.04
+  },
+  {
+    "sku": "080AC- 4418",
+    "parent_sku": "080AC- 4418",
+    "slug": "advance-filtro-cabina-chery-tiggo-2-pro-15-2023-advance-080ac--4418",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Cabina (A/C) Advance (AC- 4418) — Chery Tiggo 2 Pro 1.5 2023",
+    "presentation": "Unidad",
+    "base_price_no_iva": 3.96
+  },
+  {
+    "sku": "080AC-10245-2",
+    "parent_sku": "080AC-10245-2",
+    "slug": "advance-filtro-cabina-hy-getz-2-componentes---ac-10245--2-advance-080ac-10245-2",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Cabina (A/C) Advance (AC-10245-2) — Hyundai Getz (2 Componentes) - AC-10245- 2",
+    "presentation": "Unidad",
+    "base_price_no_iva": 5.0
+  },
+  {
+    "sku": "080AC-11105",
+    "parent_sku": "080AC-11105",
+    "slug": "advance-filtro-advance-cabina-zotye-t600---ac-11105-080ac-11105",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Cabina (A/C) Advance (AC-11105) — Zotye T600 - AC-11105",
+    "presentation": "Unidad",
+    "base_price_no_iva": 3.49
+  },
+  {
+    "sku": "080AC-1114",
+    "parent_sku": "080AC-1114",
+    "slug": "advance-filtro-cabina-ty-yaris-corolla-highlander-advance-080ac-1114",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Cabina (A/C) Advance (AC-1114) — Toyota Yaris-corolla-highlander",
+    "presentation": "Unidad",
+    "base_price_no_iva": 3.14
+  },
+  {
+    "sku": "080AC-12775",
+    "parent_sku": "080AC-12775",
+    "slug": "advance-filtro-advance-cabina-subaru-forester-20l-wrx-2t---ac-12775-080ac-12775",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Cabina (A/C) Advance (AC-12775) — Subaru Forester 2.0L, WRX 2.T - AC-12775",
+    "presentation": "Unidad",
+    "base_price_no_iva": 3.83
+  },
+  {
+    "sku": "080AC-14050",
+    "parent_sku": "080AC-14050",
+    "slug": "advance-filtro-cabina-ch-gran-vitara-sz-xtrag-ac-108-red-95861-64j00-advance-080ac-14050",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Cabina (A/C) Advance (AC-14050) — Chevrolet Gran Vitara Suzuki (xtrag AC-108 Red 95861-64J00)",
+    "presentation": "Unidad",
+    "base_price_no_iva": 4.39
+  },
+  {
+    "sku": "080AC-14051",
+    "parent_sku": "080AC-14051",
+    "slug": "advance-filtro-cabina-ch-grand-vitara-sz-next-20-24-15-19-marco-de-plastico-advance-080ac-14051",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Cabina (A/C) Advance (AC-14051) — Chevrolet Grand Vitara Suzuki Next 2.0, 2.4 /15-19 Marco De Plastico",
+    "presentation": "Unidad",
+    "base_price_no_iva": 6.22
+  },
+  {
+    "sku": "080AC-17140",
+    "parent_sku": "080AC-17140",
+    "slug": "advance-filtro-cabina-fd-ranger-mz-bt50-2015-advance-080ac-17140",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Cabina (A/C) Advance (AC-17140) — Ford Ranger Mazda BT-50 2015",
+    "presentation": "Unidad",
+    "base_price_no_iva": 5.43
+  },
+  {
+    "sku": "080AC-18120",
+    "parent_sku": "080AC-18120",
+    "slug": "advance-filtro-cabina-ch-luv-dmax-30-14-x-trail-classic-l200-asx-outlander-advance-080ac-18120",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Cabina (A/C) Advance (AC-18120) — Chevrolet Luv D-MAX 3.0 /14 X-trail Classic L200 ASX Outlander",
+    "presentation": "Unidad",
+    "base_price_no_iva": 4.91
+  },
+  {
+    "sku": "080AC-22010",
+    "parent_sku": "080AC-22010",
+    "slug": "advance-filtro-cabina-ch-dmax-diesel-25-30-05-versa-17-18---ac22010-advance-080ac-22010",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Cabina (A/C) Advance (AC-22010) — Chevrolet D-MAX Diesel 2.5-3.0 /05 Versa /17-18 - Ac22010",
+    "presentation": "Unidad",
+    "base_price_no_iva": 4.91
+  },
+  {
+    "sku": "080AC-25091",
+    "parent_sku": "080AC-25091",
+    "slug": "advance-filtro-cabina-ns-frontier-np300-25-2019-dongfeng-rich-6---ac-25091-advance-080ac-25091",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Cabina (A/C) Advance (AC-25091) — Nissan Frontier NP300 2,5 2019, Dongfeng Rich 6 - AC-25091",
+    "presentation": "Unidad",
+    "base_price_no_iva": 4.91
+  },
+  {
+    "sku": "080AC-2807",
+    "parent_sku": "080AC-2807",
+    "slug": "advance-filtro-cabina-hy-tucson-ix-20-kia-cerato-1616--sportage-active-12--cerato-97133-2e200-advance-080ac-2807",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Cabina (A/C) Advance (AC-2807) — Hyundai Tucson IX 2.0/ KIA Cerato 1.6/16- Sportage Active /12- Cerato 97133-2E200",
+    "presentation": "Unidad",
+    "base_price_no_iva": null
+  },
+  {
+    "sku": "080AC-2808",
+    "parent_sku": "080AC-2808",
+    "slug": "advance-filtro-cabina-hy-i10-grand-i10-kia-picanto-ch-spark-advance-mc-94242-080ac-2808",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Cabina (A/C) Advance (AC-2808) — Hyundai I10 Grand I10 KIA Picanto Chevrolet Spark (mc-94242)",
+    "presentation": "Unidad",
+    "base_price_no_iva": 2.96
+  },
+  {
+    "sku": "080AC-28151",
+    "parent_sku": "080AC-28151",
+    "slug": "advance-filtro-cabina-hy-santa-fe-27-2006-2001-24-09-12---ac-28110-advance-080ac-28151",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Cabina (A/C) Advance (AC-28151) — Hyundai Santa Fe 2.7 2006-2001, 2.4 09-12 - AC-28110",
+    "presentation": "Unidad",
+    "base_price_no_iva": 4.48
+  },
+  {
+    "sku": "080AC-28160",
+    "parent_sku": "080AC-28160",
+    "slug": "advance-filtro-cabina-hy-accent-iii-14-16-2005-2010---ac-28160-advance-080ac-28160",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Cabina (A/C) Advance (AC-28160) — Hyundai Accent III 1.4, 1.6 2005-2010 - AC-28160",
+    "presentation": "Unidad",
+    "base_price_no_iva": 3.74
+  },
+  {
+    "sku": "080AC-28261",
+    "parent_sku": "080AC-28261",
+    "slug": "advance-filtro-cabina-kia-rio-x-line-gt-seltos-2020---creta-2022-ac-28261-advance-080ac-28261",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Cabina (A/C) Advance (AC-28261) — KIA Rio X Line, GT , Seltos 2020 - Creta 2022 AC-28261",
+    "presentation": "Unidad",
+    "base_price_no_iva": 2.51
+  },
+  {
+    "sku": "080AC-4403-2",
+    "parent_sku": "080AC-4403-2",
+    "slug": "advance-filtro-cabina-great-wall-wingle-720--advance-080ac-4403-2",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Cabina (A/C) Advance (AC-4403-2) — Great Wall Wingle 7/20",
+    "presentation": "Unidad",
+    "base_price_no_iva": 4.91
+  },
+  {
+    "sku": "080AC-4408",
+    "parent_sku": "080AC-4408",
+    "slug": "advance-filtro-cabina-jetour-x70-15t-x70-coupe-16t---ac-4408-advance-080ac-4408",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Cabina (A/C) Advance (AC-4408) — Jetour X70 1.5T, X70 Coupe 1.6T - AC-4408",
+    "presentation": "Unidad",
+    "base_price_no_iva": 4.91
+  },
+  {
+    "sku": "080AC-4412",
+    "parent_sku": "080AC-4412",
+    "slug": "advance-filtro-cabina-great-wall-poer-20-gasolina-diesel---ac--4412-advance-080ac-4412",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Cabina (A/C) Advance (AC-4412) — Great Wall Poer 2.0 Gasolina Diesel - Ac- 4412",
+    "presentation": "Unidad",
+    "base_price_no_iva": 4.65
+  },
+  {
+    "sku": "080AC-4426",
+    "parent_sku": "080AC-4426",
+    "slug": "advance-filtro-advance-cabina-ac-18120-mg-5-15-chevrolet-luv-d-max-30-2014-x-trail-classic-l200-asx-080ac-4426",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Cabina (A/C) Advance (AC-4426) — (ac-18120) MG 5 1.5, Chevrolet Luv D-MAX 3.0 2014, X-trail Classic, L200, ASX",
+    "presentation": "Unidad",
+    "base_price_no_iva": 4.91
+  },
+  {
+    "sku": "080AC-49030",
+    "parent_sku": "080AC-49030",
+    "slug": "advance-filtro-cabina-great-wall-wingle-22-24-28-10--advance-080ac-49030",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Cabina (A/C) Advance (AC-49030) — Great Wall Wingle 2.2 2.4 2.8 10",
+    "presentation": "Unidad",
+    "base_price_no_iva": 4.26
+  },
+  {
+    "sku": "080AC-65210",
+    "parent_sku": "080AC-65210",
+    "slug": "advance-filtro-cabina-ch-orlando-cruze-spark-gt-tracker-cavalier---ac-65210-advance-080ac-65210",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Cabina (A/C) Advance (AC-65210) — Chevrolet Orlando Cruze Spark GT Tracker Cavalier - AC-65210",
+    "presentation": "Unidad",
+    "base_price_no_iva": 5.04
+  },
+  {
+    "sku": "080AC-65220",
+    "parent_sku": "080AC-65220",
+    "slug": "advance-filtro-cabina-ch-spark-gt-2017-beat-active-2019-advance-080ac-65220",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Cabina (A/C) Advance (AC-65220) — Chevrolet Spark GT 2017 Beat Active 2019",
+    "presentation": "Unidad",
+    "base_price_no_iva": 2.51
+  },
+  {
+    "sku": "080AC-65340",
+    "parent_sku": "080AC-65340",
+    "slug": "advance-filtro-cabina-ch-trail-blazer-28-ltz-17--colorado---ac-65340-advance-080ac-65340",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Cabina (A/C) Advance (AC-65340) — Chevrolet Trail Blazer 2.8 LTZ 17- Colorado - AC-65340",
+    "presentation": "Unidad",
+    "base_price_no_iva": 5.17
+  },
+  {
+    "sku": "080AC-9858",
+    "parent_sku": "080AC-9858",
+    "slug": "advance-filtro-cabina-ch-sail-advance-080ac-9858",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Cabina (A/C) Advance (AC-9858) — Chevrolet Sail",
+    "presentation": "Unidad",
+    "base_price_no_iva": 3.13
+  },
+  {
+    "sku": "078AFP-012",
+    "parent_sku": "078AFP-012",
+    "slug": "advance-filtro-combustible-universal-advance-078afp-012",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Combustible Advance (AFP-012) — Universal",
+    "presentation": "Unidad",
+    "base_price_no_iva": 1.3
+  },
+  {
+    "sku": "078AFP-079",
+    "parent_sku": "078AFP-079",
+    "slug": "advance-filtro-combustible-vw-golf-jetta-sk-octavia---chery-tiggo-2-fullwin-2012-advance-078afp-079",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Combustible Advance (AFP-079) — Volkswagen Golf, Jetta, Skoda Octavia - Chery Tiggo 2, Fullwin 2012",
+    "presentation": "Unidad",
+    "base_price_no_iva": 3.52
+  },
+  {
+    "sku": "078AFP-179",
+    "parent_sku": "078AFP-179",
+    "slug": "advance-filtro-combustible-great-wall-haval-h5wingle-20hy-tucson-dieseljinbeimahindrazx-auto-g-advance-078afp-179",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Combustible Advance (AFP-179) — Great Wall Haval H5/wingle 2.0/HYUNDAI Tucson Diesel/jinbei/mahindra/zx Auto G",
+    "presentation": "Unidad",
+    "base_price_no_iva": 4.35
+  },
+  {
+    "sku": "078AFP-5138",
+    "parent_sku": "078AFP-5138",
+    "slug": "advance-filtro-combustible-ch-nhr-npr-d-max25-30-great-wall-wingle-diesel-2028-hino-gd-gh-advance-078afp-5138",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Combustible Advance (AFP-5138) — Chevrolet Nhr, Npr, D-max2.5-3.0, Great Wall Wingle Diesel 2.0,2.8/ Hino Gd GH",
+    "presentation": "Unidad",
+    "base_price_no_iva": 2.65
+  },
+  {
+    "sku": "078AFP-523",
+    "parent_sku": "078AFP-523",
+    "slug": "advance-filtro-combustible-ch-gran-vitara-3-5-ptas-mz-323-mf-5982-prem-flp368-red-15410-65d00-advance-078afp-523",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Combustible Advance (AFP-523) — Chevrolet Gran Vitara 3-5 Ptas Mazda 323 (mf-5982 Prem Flp368 Red 15410-65D00",
+    "presentation": "Unidad",
+    "base_price_no_iva": 2.48
+  },
+  {
+    "sku": "079AFE-1509",
+    "parent_sku": "079AFE-1509",
+    "slug": "advance-filtro-combustible-ch-nmr-ftr-fvr-nqr-npr2014-elemento-advance-079afe-1509",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Combustible Advance (079AFE-1509) — Chevrolet Nmr-ftr-fvr-nqr-npr(2014) (elemento)",
+    "presentation": "Unidad",
+    "base_price_no_iva": 4.22
+  },
+  {
+    "sku": "079AFE-268",
+    "parent_sku": "079AFE-268",
+    "slug": "advance-filtro-combustible-ty-hilux-27-diesel-hiace-30-elemento-advance-079afe-268",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Combustible Advance (079AFE-268) — Toyota Hilux 2.7 Diesel Hiace 3.0 (elemento)",
+    "presentation": "Unidad",
+    "base_price_no_iva": 2.74
+  },
+  {
+    "sku": "079AFP-1511",
+    "parent_sku": "079AFP-1511",
+    "slug": "advance-filtro-combustible-ch-dmax-30-diesel--13-trampa-de-agua-advance-079afp-1511",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Combustible Advance (079AFP-1511) — Chevrolet D-MAX 3.0 Diesel /-13 Trampa De Agua",
+    "presentation": "Unidad",
+    "base_price_no_iva": 3.04
+  },
+  {
+    "sku": "080AFE-15130",
+    "parent_sku": "080AFE-15130",
+    "slug": "advance-filtro-combustible-isuzu-frr-fsr-ftr-fvr---series-forward-11--19-mt134s-17-18-sec-elem-advance-080afe-15130",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Combustible Advance (AFE-15130) — Isuzu Frr Fsr FTR Fvr - Series Forward 11- 19 Mt134s 17-18 Sec. (elem)",
+    "presentation": "Unidad",
+    "base_price_no_iva": 5.96
+  },
+  {
+    "sku": "080AFE-295-1",
+    "parent_sku": "080AFE-295-1",
+    "slug": "advance-filtro-combustible-great-wall-poer-20-diesel-4d20m-elemento-advance-080afe-295-1",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Combustible Advance (AFE-295-1) — Great Wall Poer 2.0 Diesel 4D20M (elemento)",
+    "presentation": "Unidad",
+    "base_price_no_iva": 5.3
+  },
+  {
+    "sku": "080AFE-296-1",
+    "parent_sku": "080AFE-296-1",
+    "slug": "advance-filtro-combustible-great-wall-poer-20-diesel-4d20m-2da-generacion-long-life-filter-advance-080afe-296-1",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Combustible Advance (AFE-296-1) — Great Wall Poer 2.0 Diesel 4D20M 2DA Generacion Long Life Filter",
+    "presentation": "Unidad",
+    "base_price_no_iva": 12.52
+  },
+  {
+    "sku": "080AFE-297",
+    "parent_sku": "080AFE-297",
+    "slug": "advance-filtro-advance-combustible-chevrolet-d-max-20t-diesel-2025-cj-x-20---afe--297-080afe-297",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Combustible Advance (AFE-297) — Chevrolet D-MAX 2.0T Diesel 2025 - Afe- 297",
+    "presentation": "Unidad",
+    "base_price_no_iva": 7.41
+  },
+  {
+    "sku": "080AFE-385",
+    "parent_sku": "080AFE-385",
+    "slug": "advance-filtro-combustible-fd-ranger-32-tdci-ranger-courier-xl-22l-new-bt-50-ii-32-advance-080afe-385",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Combustible Advance (AFE-385) — Ford Ranger 3.2 Tdci, Ranger Courier Xl 2.2L, New BT-50 II 3.2",
+    "presentation": "Unidad",
+    "base_price_no_iva": 4.61
+  },
+  {
+    "sku": "080AFI-9303",
+    "parent_sku": "080AFI-9303",
+    "slug": "advance-filtro-combustible-sumergible-hy-getz-matrix-santa-fe-2002-advance-080afi-9303",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Combustible Advance (AFI-9303) — Sumergible Hyundai Getz, Matrix, Santa Fe 2002",
+    "presentation": "Unidad",
+    "base_price_no_iva": 13.39
+  },
+  {
+    "sku": "080AFI-9307",
+    "parent_sku": "080AFI-9307",
+    "slug": "advance-filtro-combustible-sumergible-kia-rio-xcite-new-accent-mf-48737-advance-080afi-9307",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Combustible Advance (AFI-9307) — Sumergible KIA Rio Xcite, New Accent (mf-48737)",
+    "presentation": "Unidad",
+    "base_price_no_iva": 12.65
+  },
+  {
+    "sku": "080AFP-023",
+    "parent_sku": "080AFP-023",
+    "slug": "advance-filtro-combustible-mt-l200-sportero-diesel-lukas-cav926-nueva-foton-cs-y-cs2-advance-080afp-023",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Combustible Advance (AFP-023) — Mitsubishi L200 Sportero Diesel Lukas Cav926 Nueva Foton Cs Y Cs2",
+    "presentation": "Unidad",
+    "base_price_no_iva": 2.35
+  },
+  {
+    "sku": "080AFP-046",
+    "parent_sku": "080AFP-046",
+    "slug": "advance-filtro-combustible-kia-pregio-besta-carens-h100-terracan-diesel-ch-nlr-advance-mf-4886-080afp-046",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Combustible Advance (AFP-046) — KIA Pregio, Besta, Carens, H100 Terracan Diesel Chevrolet NLR (mf-4886)",
+    "presentation": "Unidad",
+    "base_price_no_iva": 3.91
+  },
+  {
+    "sku": "080AFP-072",
+    "parent_sku": "080AFP-072",
+    "slug": "advance-filtro-combustible-rn-clio-twingo-megane-scenic-peugeot-206-berlingo-advance-080afp-072",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Combustible Advance (AFP-072) — Renault Clio Twingo Megane Scenic Peugeot 206 Berlingo",
+    "presentation": "Unidad",
+    "base_price_no_iva": 2.78
+  },
+  {
+    "sku": "080AFP-083",
+    "parent_sku": "080AFP-083",
+    "slug": "advance-filtro-combustible-mz-bt50-crdi-bt-50-tdi-mt-montero-sport-ns-frontier-t-advance-080afp-083",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Combustible Advance (AFP-083) — Mazda BT-50 Crdi, BT-50 Tdi / Mitsubishi Montero Sport / Nissan Frontier T",
+    "presentation": "Unidad",
+    "base_price_no_iva": 4.22
+  },
+  {
+    "sku": "080AFP-1020",
+    "parent_sku": "080AFP-1020",
+    "slug": "advance-filtro-combustible-mt-canter-35--intercoooler-hd-hy-hd72-sam-sfc352-prem-flp3-advance-080afp-1020",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Combustible Advance (AFP-1020) — Mitsubishi Canter 3.5- Intercoooler Hd Hyundai Hd72 (sam Sfc352 Prem Flp3",
+    "presentation": "Unidad",
+    "base_price_no_iva": 2.95
+  },
+  {
+    "sku": "080AFP-140",
+    "parent_sku": "080AFP-140",
+    "slug": "advance-filtro-combustible-great-wall-wingle-20-28-jac-t6-28-foton-iveco-mahindra-advance-080afp-140",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Combustible Advance (AFP-140) — Great Wall Wingle 2.0-2.8 JAC T6 2.8 Foton Iveco Mahindra",
+    "presentation": "Unidad",
+    "base_price_no_iva": 4.48
+  },
+  {
+    "sku": "080AFP-202",
+    "parent_sku": "080AFP-202",
+    "slug": "advance-filtro-combustible-ns-2400-4x4-sentra-iny-curvo-10y00-advance-080afp-202",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Combustible Advance (AFP-202) — Nissan 2400 4X4 Sentra Iny Curvo (10y00)",
+    "presentation": "Unidad",
+    "base_price_no_iva": 2.17
+  },
+  {
+    "sku": "080AFP-203",
+    "parent_sku": "080AFP-203",
+    "slug": "advance-filtro-combustible-ch-vitara-afp-203-advance-mf-94925-080afp-203",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Combustible Advance (AFP-203) — Chevrolet Vitara AFP-203 (mf-94925)",
+    "presentation": "Unidad",
+    "base_price_no_iva": 3.74
+  },
+  {
+    "sku": "080AFP-31120",
+    "parent_sku": "080AFP-31120",
+    "slug": "advance-filtro-combustible-ty-hilux-27-gas-punta-a-punta-sin-base-advance-mf-64951-mf-41570-080afp-31120",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Combustible Advance (AFP-31120) — Toyota Hilux 2.7 Gas (punta A Punta Sin Base) (mf-64951) (mf-41570)",
+    "presentation": "Unidad",
+    "base_price_no_iva": 2.74
+  },
+  {
+    "sku": "080AFP-3627",
+    "parent_sku": "080AFP-3627",
+    "slug": "advance-filtro-combustible-ch-nhr-npr-d-max-dies-daihatsu-delta-advance-080afp-3627",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Combustible Advance (AFP-3627) — Chevrolet Nhr Npr D-MAX Dies Daihatsu Delta",
+    "presentation": "Unidad",
+    "base_price_no_iva": 2.43
+  },
+  {
+    "sku": "080AFP-4102",
+    "parent_sku": "080AFP-4102",
+    "slug": "advance-filtro-combustible-foton-aumark-dongfeng-fc5704-fc5504-fp586f-ff42000-ff5018-advance-mf-4102-080afp-4102",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Combustible Advance (AFP-4102) — Foton Aumark Dongfeng Fc5704 Fc5504 Fp586f Ff42000 Ff5018 (mf-4102)",
+    "presentation": "Unidad",
+    "base_price_no_iva": 3.3
+  },
+  {
+    "sku": "080AFP-4183",
+    "parent_sku": "080AFP-4183",
+    "slug": "advance-filtro-combustible-jac-t6-diesel-vlvmancase-rovernew-hollandlindnerfiat-advance-080afp-4183",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Combustible Advance (AFP-4183) — JAC T6 Diesel, Vlv,man,case, Rover,/new Holland,lindner,fiat",
+    "presentation": "Unidad",
+    "base_price_no_iva": 6.65
+  },
+  {
+    "sku": "080AFP-555",
+    "parent_sku": "080AFP-555",
+    "slug": "advance-filtro-combustible-ch-corsa-14-16-18dmax-24-35zafiram4great-wall-c30-advance-080afp-555",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Combustible Advance (AFP-555) — Chevrolet Corsa 1.4-1.6-1.8/D-MAX 2.4-3.5/ZAFIRA/M4/GREAT Wall C30",
+    "presentation": "Unidad",
+    "base_price_no_iva": 2.17
+  },
+  {
+    "sku": "080AFP-5612",
+    "parent_sku": "080AFP-5612",
+    "slug": "advance-filtro-advance-combustible-filter-daf-foton-jac-fc-5725-sff2241-psc75-lff5485---afp-5612-080afp-5612",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Combustible Advance (AFP-5612) — Filter Daf, Foton, JAC (fc-5725, Sff2241, Psc75, Lff5485) - AFP-5612",
+    "presentation": "Unidad",
+    "base_price_no_iva": 5.5
+  },
+  {
+    "sku": "080AFP-573",
+    "parent_sku": "080AFP-573",
+    "slug": "advance-filtro-combustible-ch-chevytaxi-lanos-spark-matiz-aveo-optra-advance-080afp-573",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Combustible Advance (AFP-573) — Chevrolet Chevytaxi Lanos Spark Matiz Aveo Optra",
+    "presentation": "Unidad",
+    "base_price_no_iva": 2.17
+  },
+  {
+    "sku": "080AFP-704",
+    "parent_sku": "080AFP-704",
+    "slug": "advance-filtro-combustible-mz-bt50-gasolina-2200-iny-fd-ranger-22-26-2008-red-je45-20-490a-advance-080afp-704",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Combustible Advance (AFP-704) — Mazda BT-50 Gasolina, 2200 Iny Ford Ranger 2.2, 2.6 2008 (red Je45-20-490a",
+    "presentation": "Unidad",
+    "base_price_no_iva": 2.52
+  },
+  {
+    "sku": "080AFP-874",
+    "parent_sku": "080AFP-874",
+    "slug": "advance-filtro-combustible-ch-trail-blazer-53l-antigua-gasolina-mf-6397---afp-874-advance-080afp-874",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Combustible Advance (AFP-874) — Chevrolet Trail Blazer 5.3L Antigua Gasolina (mf-6397) - AFP-874",
+    "presentation": "Unidad",
+    "base_price_no_iva": 4.04
+  },
+  {
+    "sku": "080AFP-876",
+    "parent_sku": "080AFP-876",
+    "slug": "advance-filtro-combustible-ch-sail-14l-12-18-advance-080afp-876",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Combustible Advance (AFP-876) — Chevrolet Sail 1.4L 12-18",
+    "presentation": "Unidad",
+    "base_price_no_iva": 2.65
+  },
+  {
+    "sku": "080AFP-877",
+    "parent_sku": "080AFP-877",
+    "slug": "advance-filtro-combustible-ch-sail-15-2018-cavalier-2019-mf-72809-prem-flp482-red-90872178-advance-080afp-877",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Combustible Advance (AFP-877) — Chevrolet Sail 1.5 2018, Cavalier 2019 (mf-72809 Prem Flp482 Red 90872178",
+    "presentation": "Unidad",
+    "base_price_no_iva": 2.78
+  },
+  {
+    "sku": "080AFP-974",
+    "parent_sku": "080AFP-974",
+    "slug": "advance-filtro-combustible-ch-luv-trooper-rodeo-peugeot-306-wingle-24-22l-fi-n200-advance-080afp-974",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Combustible Advance (AFP-974) — Chevrolet Luv, Trooper, Rodeo, Peugeot 306, Wingle 2.4 2.2L Fi N200",
+    "presentation": "Unidad",
+    "base_price_no_iva": 2.17
+  },
+  {
+    "sku": "080AFS-1212",
+    "parent_sku": "080AFS-1212",
+    "slug": "advance-filtro-combustible-camc-h08-440-380-cabezal-300-14m3-motor-cummins-ism380-foton-aumark-advance-080afs-1212",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Combustible Advance (AFS-1212) — Camc H08 440, 380, Cabezal 300, 14M3 Motor Cummins Ism380, Foton Aumark",
+    "presentation": "Unidad",
+    "base_price_no_iva": 7.04
+  },
+  {
+    "sku": "080AFS-127-1",
+    "parent_sku": "080AFS-127-1",
+    "slug": "advance-filtro-combustible-vw-17210-mb-1721-hino-gd-gh-fc-con-valvula-separador-advance-080afs-127-1",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Combustible Advance (AFS-127-1) — Volkswagen 17210, Mb 1721, Hino Gd, Gh, Fc Con Valvula (separador)",
+    "presentation": "Unidad",
+    "base_price_no_iva": 8.65
+  },
+  {
+    "sku": "080AFS-1306",
+    "parent_sku": "080AFS-1306",
+    "slug": "advance-filtro-combustible-hino-gd-fuel-r60t-separador-advance-080afs-1306",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Combustible Advance (AFS-1306) — Hino Gd Fuel/ R60t ( Separador)",
+    "presentation": "Unidad",
+    "base_price_no_iva": 6.95
+  },
+  {
+    "sku": "080AFS-193",
+    "parent_sku": "080AFS-193",
+    "slug": "advance-filtro-combustible-dongfeng-captain-e-513-e-613-fsp0120-separador-advance-080afs-193",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Combustible Advance (AFS-193) — Dongfeng Captain E-513, E-613 (fsp0120) (separador)",
+    "presentation": "Unidad",
+    "base_price_no_iva": 4.43
+  },
+  {
+    "sku": "080AFS-194-1",
+    "parent_sku": "080AFS-194-1",
+    "slug": "advance-filtro-combustible-rich-6-25cc-diesel-20---separador-advance-080afs-194-1",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Combustible Advance (AFS-194-1) — Rich 6 2.5CC Diesel 20 - (separador)",
+    "presentation": "Unidad",
+    "base_price_no_iva": 4.39
+  },
+  {
+    "sku": "080AFS-7912",
+    "parent_sku": "080AFS-7912",
+    "slug": "advance-filtro-combustible-isuzu-nkr-nmr-npr-nqr-mercedez-series-reward-11-separador-advance-080afs-7912",
+    "brand": "ADVANCE",
+    "category": "filtros",
+    "name": "Filtro de Combustible Advance (AFS-7912) — Isuzu Nkr Nmr Npr Nqr Mercedez Series Reward /11 (separador)",
+    "presentation": "Unidad",
+    "base_price_no_iva": 7.83
+  },
+  {
+    "sku": "016AM-75676-56",
+    "parent_sku": "LP-LUR-002-3",
+    "slug": "amalie-amalie-10w30-synt-blend-sn-lp-lur-002-3",
+    "brand": "AMALIE",
+    "category": "lubricantes",
+    "name": "AMALIE 10W-30 Synt Blend SN (1 Litro)",
+    "presentation": "1 Litro",
+    "base_price_no_iva": 6.96
+  },
+  {
+    "sku": "016AM-75677-36",
+    "parent_sku": "LP-LUR-002-3",
+    "slug": "amalie-amalie-10w30-synt-blend-sn-lp-lur-002-3",
+    "brand": "AMALIE",
+    "category": "lubricantes",
+    "name": "AMALIE 10W-30 Synt Blend SN (1 Galón)",
+    "presentation": "1 Galón",
+    "base_price_no_iva": 25.65
+  },
+  {
+    "sku": "016AM-75696-56",
+    "parent_sku": "LP-LUR-003-3",
+    "slug": "amalie-amalie-20w50-synt-blend-sn-121-lt-lp-lur-003-3",
+    "brand": "AMALIE",
+    "category": "lubricantes",
+    "name": "AMALIE 20W-50 Synt Blend SN (1 Litro)",
+    "presentation": "1 Litro",
+    "base_price_no_iva": 6.96
+  },
+  {
+    "sku": "016AM-75697-36",
+    "parent_sku": "LP-LUR-003-3",
+    "slug": "amalie-amalie-20w50-synt-blend-sn-121-lt-lp-lur-003-3",
+    "brand": "AMALIE",
+    "category": "lubricantes",
+    "name": "AMALIE 20W-50 Synt Blend SN (1 Galón)",
+    "presentation": "1 Galón",
+    "base_price_no_iva": 25.65
+  },
+  {
+    "sku": "LP-LUR-002-4",
+    "parent_sku": "LP-LUR-002-4",
+    "slug": "motul-motul-moto-5000-10w40-semisintetico-ambar-lp-lur-002-4",
+    "brand": "MOTUL",
+    "category": "lubricantes",
+    "name": "MOTUL Moto 5000 10W-40 Semisintetico Ambar",
+    "presentation": "1 Litro",
+    "base_price_no_iva": 6.96
+  },
+  {
+    "sku": "LP-LUR-003-4",
+    "parent_sku": "LP-LUR-003-4",
+    "slug": "motul-motul-moto-5100-15w50-semisintetico-ester-ambar-lp-lur-003-4",
+    "brand": "MOTUL",
+    "category": "lubricantes",
+    "name": "MOTUL Moto 5100 15W-50 Semisintetico Ester Ambar",
+    "presentation": "1 Litro",
+    "base_price_no_iva": 8.7
+  },
+  {
+    "sku": "LP-LUR-004-3",
+    "parent_sku": "LP-LUR-004-3",
+    "slug": "motul-motul-moto-5000-20w50-semi-sintetico-121-lt-lp-lur-004-3",
+    "brand": "MOTUL",
+    "category": "lubricantes",
+    "name": "MOTUL Moto 5000 20W-50 Semi Sintético",
+    "presentation": "1 Lt",
+    "base_price_no_iva": 7.83
+  },
+  {
+    "sku": "0368AR00030",
+    "parent_sku": "LP-LUR-002-5",
+    "slug": "aroil-aroil-racing-10w30-sn-lp-lur-002-5",
+    "brand": "AROIL",
+    "category": "lubricantes",
+    "name": "AROIL Racing 10W-30 SN (1 Litro)",
+    "presentation": "1 Litro",
+    "base_price_no_iva": 4.04
+  },
+  {
+    "sku": "0368AR00001",
+    "parent_sku": "LP-LUR-002-5",
+    "slug": "aroil-aroil-racing-10w30-sn-lp-lur-002-5",
+    "brand": "AROIL",
+    "category": "lubricantes",
+    "name": "AROIL Racing 10W-30 SN (1 Galón)",
+    "presentation": "1 Galón",
+    "base_price_no_iva": 12.7
+  },
+  {
+    "sku": "0368AR00031",
+    "parent_sku": "LP-LUR-003-5",
+    "slug": "aroil-aroil-racing-20w50-sn-lp-lur-003-5",
+    "brand": "AROIL",
+    "category": "lubricantes",
+    "name": "AROIL Racing 20W-50 SN (1 Litro)",
+    "presentation": "1 Litro",
+    "base_price_no_iva": 4.04
+  },
+  {
+    "sku": "0368AR00005",
+    "parent_sku": "LP-LUR-003-5",
+    "slug": "aroil-aroil-racing-20w50-sn-lp-lur-003-5",
+    "brand": "AROIL",
+    "category": "lubricantes",
+    "name": "AROIL Racing 20W-50 SN (1 Galón)",
+    "presentation": "1 Galón",
+    "base_price_no_iva": 14.35
+  },
+  {
+    "sku": "0368AR00032",
+    "parent_sku": "LP-LUR-004-4",
+    "slug": "aroil-aroil-super-40-slcf-lp-lur-004-4",
+    "brand": "AROIL",
+    "category": "lubricantes",
+    "name": "AROIL Super 40 Sl/cf (1 Litro)",
+    "presentation": "1 Litro",
+    "base_price_no_iva": 3.3
+  },
+  {
+    "sku": "0368AR00009",
+    "parent_sku": "LP-LUR-004-4",
+    "slug": "aroil-aroil-super-40-slcf-lp-lur-004-4",
+    "brand": "AROIL",
+    "category": "lubricantes",
+    "name": "AROIL Super 40 Sl/cf (1 Galón)",
+    "presentation": "1 Galón",
+    "base_price_no_iva": 12.48
+  },
+  {
+    "sku": "0368AR10031",
+    "parent_sku": "LP-LUR-005-3",
+    "slug": "aroil-aroil-15w40-ci-4-lp-lur-005-3",
+    "brand": "AROIL",
+    "category": "lubricantes",
+    "name": "AROIL 15W-40 CI-4 (1 Litro)",
+    "presentation": "1 Litro",
+    "base_price_no_iva": 3.96
+  },
+  {
+    "sku": "0368AR10001",
+    "parent_sku": "LP-LUR-005-3",
+    "slug": "aroil-aroil-15w40-ci-4-lp-lur-005-3",
+    "brand": "AROIL",
+    "category": "lubricantes",
+    "name": "AROIL 15W-40 CI-4 (1 Galón)",
+    "presentation": "1 Galón",
+    "base_price_no_iva": 15.26
+  },
+  {
+    "sku": "0368AR10003",
+    "parent_sku": "LP-LUR-005-3",
+    "slug": "aroil-aroil-15w40-ci-4-lp-lur-005-3",
+    "brand": "AROIL",
+    "category": "lubricantes",
+    "name": "AROIL 15W-40 CI-4 (Caneca 5 GL)",
+    "presentation": "Caneca 5 GL",
+    "base_price_no_iva": 62.61
+  },
+  {
+    "sku": "0368AR10032",
+    "parent_sku": "LP-LUR-006-2",
+    "slug": "aroil-aroil-25w60-cf-lp-lur-006-2",
+    "brand": "AROIL",
+    "category": "lubricantes",
+    "name": "AROIL 25W-60 CF (1 Litro)",
+    "presentation": "1 Litro",
+    "base_price_no_iva": 3.87
+  },
+  {
+    "sku": "0368AR10008",
+    "parent_sku": "LP-LUR-006-2",
+    "slug": "aroil-aroil-25w60-cf-lp-lur-006-2",
+    "brand": "AROIL",
+    "category": "lubricantes",
+    "name": "AROIL 25W-60 CF (1 Galón)",
+    "presentation": "1 Galón",
+    "base_price_no_iva": 13.52
+  },
+  {
+    "sku": "0368AR10010",
+    "parent_sku": "LP-LUR-006-2",
+    "slug": "aroil-aroil-25w60-cf-lp-lur-006-2",
+    "brand": "AROIL",
+    "category": "lubricantes",
+    "name": "AROIL 25W-60 CF (Caneca 5 GL)",
+    "presentation": "Caneca 5 GL",
+    "base_price_no_iva": 59.91
+  },
+  {
+    "sku": "LP-LUR-007-2",
+    "parent_sku": "LP-LUR-007-2",
+    "slug": "aroil-aroil-diesel-40-cf-lp-lur-007-2",
+    "brand": "AROIL",
+    "category": "lubricantes",
+    "name": "AROIL Diésel 40 CF",
+    "presentation": "Caneca 5 GL",
+    "base_price_no_iva": 62.61
+  },
+  {
+    "sku": "LP-LUR-009-2",
+    "parent_sku": "LP-LUR-009-2",
+    "slug": "aroil-aroil-4t-20w50-sl-jaso-ma2-lp-lur-009-2",
+    "brand": "AROIL",
+    "category": "lubricantes",
+    "name": "AROIL 4T 20W-50 SL Jaso Ma2",
+    "presentation": "1 Litro",
+    "base_price_no_iva": 4.04
+  },
+  {
+    "sku": "0368AR40038",
+    "parent_sku": "LP-LUR-010-2",
+    "slug": "aroil-aroil-75w85-gl-5-lp-lur-010-2",
+    "brand": "AROIL",
+    "category": "lubricantes",
+    "name": "AROIL 75W-85 GL-5 (1 Litro)",
+    "presentation": "1 Litro",
+    "base_price_no_iva": 4.35
+  },
+  {
+    "sku": "0368AR40001",
+    "parent_sku": "LP-LUR-010-2",
+    "slug": "aroil-aroil-75w85-gl-5-lp-lur-010-2",
+    "brand": "AROIL",
+    "category": "lubricantes",
+    "name": "AROIL 75W-85 GL-5 (1 Galón)",
+    "presentation": "1 Galón",
+    "base_price_no_iva": 14.87
+  },
+  {
+    "sku": "0368AR40039",
+    "parent_sku": "LP-LUR-011-2",
+    "slug": "aroil-aroil-80w90-gl-5-lp-lur-011-2",
+    "brand": "AROIL",
+    "category": "lubricantes",
+    "name": "AROIL 80W-90 GL-5 (1 Litro)",
+    "presentation": "1 Litro",
+    "base_price_no_iva": 3.96
+  },
+  {
+    "sku": "0368AR40005",
+    "parent_sku": "LP-LUR-011-2",
+    "slug": "aroil-aroil-80w90-gl-5-lp-lur-011-2",
+    "brand": "AROIL",
+    "category": "lubricantes",
+    "name": "AROIL 80W-90 GL-5 (1 Galón)",
+    "presentation": "1 Galón",
+    "base_price_no_iva": 14.61
+  },
+  {
+    "sku": "0368AR40040",
+    "parent_sku": "LP-LUR-012-2",
+    "slug": "aroil-aroil-85w140-gl-5-lp-lur-012-2",
+    "brand": "AROIL",
+    "category": "lubricantes",
+    "name": "AROIL 85W-140 GL-5 (1 Litro)",
+    "presentation": "1 Litro",
+    "base_price_no_iva": 4.78
+  },
+  {
+    "sku": "0368AR40009",
+    "parent_sku": "LP-LUR-012-2",
+    "slug": "aroil-aroil-85w140-gl-5-lp-lur-012-2",
+    "brand": "AROIL",
+    "category": "lubricantes",
+    "name": "AROIL 85W-140 GL-5 (1 Galón)",
+    "presentation": "1 Galón",
+    "base_price_no_iva": 16.91
+  },
+  {
+    "sku": "0368AR40041",
+    "parent_sku": "LP-LUR-013-2",
+    "slug": "aroil-aroil-90-gl-4-lp-lur-013-2",
+    "brand": "AROIL",
+    "category": "lubricantes",
+    "name": "AROIL 90 GL-4 (1 Litro)",
+    "presentation": "1 Litro",
+    "base_price_no_iva": 4.04
+  },
+  {
+    "sku": "0368AR40013",
+    "parent_sku": "LP-LUR-013-2",
+    "slug": "aroil-aroil-90-gl-4-lp-lur-013-2",
+    "brand": "AROIL",
+    "category": "lubricantes",
+    "name": "AROIL 90 GL-4 (1 Galón)",
+    "presentation": "1 Galón",
+    "base_price_no_iva": 13.87
+  },
+  {
+    "sku": "0368AR40014",
+    "parent_sku": "LP-LUR-013-2",
+    "slug": "aroil-aroil-90-gl-4-lp-lur-013-2",
+    "brand": "AROIL",
+    "category": "lubricantes",
+    "name": "AROIL 90 GL-4 (Caneca 5 GL)",
+    "presentation": "Caneca 5 GL",
+    "base_price_no_iva": 65.3
+  },
+  {
+    "sku": "0368AR40042",
+    "parent_sku": "LP-LUR-014-2",
+    "slug": "aroil-aroil-140-gl-4-lp-lur-014-2",
+    "brand": "AROIL",
+    "category": "lubricantes",
+    "name": "AROIL 140 GL-4 (1 Litro)",
+    "presentation": "1 Litro",
+    "base_price_no_iva": 4.04
+  },
+  {
+    "sku": "0368AR40017",
+    "parent_sku": "LP-LUR-014-2",
+    "slug": "aroil-aroil-140-gl-4-lp-lur-014-2",
+    "brand": "AROIL",
+    "category": "lubricantes",
+    "name": "AROIL 140 GL-4 (1 Galón)",
+    "presentation": "1 Galón",
+    "base_price_no_iva": 15.39
+  },
+  {
+    "sku": "0368AR40018",
+    "parent_sku": "LP-LUR-014-2",
+    "slug": "aroil-aroil-140-gl-4-lp-lur-014-2",
+    "brand": "AROIL",
+    "category": "lubricantes",
+    "name": "AROIL 140 GL-4 (Caneca 5 GL)",
+    "presentation": "Caneca 5 GL",
+    "base_price_no_iva": 72.52
+  },
+  {
+    "sku": "LP-LUR-015-2",
+    "parent_sku": "LP-LUR-015-2",
+    "slug": "aroil-aroil-atf-diii-lp-lur-015-2",
+    "brand": "AROIL",
+    "category": "lubricantes",
+    "name": "AROIL ATF Diii",
+    "presentation": "1 Litro",
+    "base_price_no_iva": 4.57
+  },
+  {
+    "sku": "LP-LUR-016-2",
+    "parent_sku": "LP-LUR-016-2",
+    "slug": "aroil-aroil-aw-iso-68-rojo-lp-lur-016-2",
+    "brand": "AROIL",
+    "category": "lubricantes",
+    "name": "AROIL Aw ISO 68 Rojo",
+    "presentation": "Caneca 5 GL",
+    "base_price_no_iva": 53.3
+  },
+  {
+    "sku": "LP-LUR-017-2",
+    "parent_sku": "LP-LUR-017-2",
+    "slug": "aroil-aroil-tracfluid-10w30-lp-lur-017-2",
+    "brand": "AROIL",
+    "category": "lubricantes",
+    "name": "AROIL Tracfluid 10W-30",
+    "presentation": "Caneca 5 GL",
+    "base_price_no_iva": 63.74
+  },
+  {
+    "sku": "LP-LUR-018-2",
+    "parent_sku": "LP-LUR-018-2",
+    "slug": "aroil-aroil-iso-68-ambar-bld-lp-lur-018-2",
+    "brand": "AROIL",
+    "category": "lubricantes",
+    "name": "AROIL ISO 68 Ambar Bld",
+    "presentation": "Caneca 5 GL",
+    "base_price_no_iva": 36.53
+  },
+  {
+    "sku": "LP-MAN-002",
+    "parent_sku": "LP-MAN-002",
+    "slug": "mannol-mannol-aditivo-limpia-parabrisas-concentrado-250ml-lp-man-002",
+    "brand": "MANNOL",
+    "category": "aditivos",
+    "name": "MANNOL Aditivo Limpia Parabrisas Concentrado 250ml",
+    "presentation": "250Ml",
+    "base_price_no_iva": 4.0
+  },
+  {
+    "sku": "LP-MAN-003",
+    "parent_sku": "LP-MAN-003",
+    "slug": "mannol-mannol-limpiador-protector-uv3-cockpit-care-apple-lp-man-003",
+    "brand": "MANNOL",
+    "category": "aditivos",
+    "name": "MANNOL Limpiador Protector UV3 Cockpit Care Apple",
+    "presentation": "1 Litro",
+    "base_price_no_iva": 4.35
+  },
+  {
+    "sku": "LP-MAN-004",
+    "parent_sku": "LP-MAN-004",
+    "slug": "mannol-mannol-limpiador-protector-uv3-cockpit-care-vainilla-lp-man-004",
+    "brand": "MANNOL",
+    "category": "aditivos",
+    "name": "MANNOL Limpiador Protector UV3 Cockpit Care Vainilla",
+    "presentation": "1 Litro",
+    "base_price_no_iva": 4.35
+  },
+  {
+    "sku": "LP-MAN-005",
+    "parent_sku": "LP-MAN-005",
+    "slug": "mannol-mannol-grasa-chain-lube-para-cadenas-200ml-lp-man-005",
+    "brand": "MANNOL",
+    "category": "aditivos",
+    "name": "MANNOL Grasa Chain Lube Para Cadenas 200ml",
+    "presentation": "200Ml",
+    "base_price_no_iva": 3.26
+  },
+  {
+    "sku": "LP-MAN-006",
+    "parent_sku": "LP-MAN-006",
+    "slug": "mannol-mannol-chain-cleaner-limpiador-de-cadenas-400ml-lp-man-006",
+    "brand": "MANNOL",
+    "category": "aditivos",
+    "name": "MANNOL Chain Cleaner / Limpiador De Cadenas 400ml",
+    "presentation": "400Ml",
+    "base_price_no_iva": 3.7
+  },
+  {
+    "sku": "LP-MAN-007",
+    "parent_sku": "LP-MAN-007",
+    "slug": "mannol-mannol-grasa-de-litio-multiuso-800-grs-ep2-lp-man-007",
+    "brand": "MANNOL",
+    "category": "aditivos",
+    "name": "MANNOL Grasa De Litio Multiuso 800 Grs Ep2",
+    "presentation": "800 Grs",
+    "base_price_no_iva": 8.7
+  },
+  {
+    "sku": "012MN8028-08",
+    "parent_sku": "LP-MAN-008",
+    "slug": "mannol-mannol-grasa-lc-2-alta-temperatura-45-kg-lp-man-008",
+    "brand": "MANNOL",
+    "category": "aditivos",
+    "name": "MANNOL Grasa LC-2 Alta Temperatura 4.5 Kg (800 g)",
+    "presentation": "800 g",
+    "base_price_no_iva": 8.7
+  },
+  {
+    "sku": "012MN8029",
+    "parent_sku": "LP-MAN-008",
+    "slug": "mannol-mannol-grasa-lc-2-alta-temperatura-45-kg-lp-man-008",
+    "brand": "MANNOL",
+    "category": "aditivos",
+    "name": "MANNOL Grasa LC-2 Alta Temperatura 4.5 Kg (4.5 Kg)",
+    "presentation": "4.5 Kg",
+    "base_price_no_iva": 60.91
+  },
+  {
+    "sku": "012MN8116",
+    "parent_sku": "LP-MAN-008",
+    "slug": "mannol-mannol-grasa-lc-2-alta-temperatura-45-kg-lp-man-008",
+    "brand": "MANNOL",
+    "category": "aditivos",
+    "name": "MANNOL Grasa LC-2 Alta Temperatura 4.5 Kg (Caneca 18 Kg)",
+    "presentation": "Caneca 18 Kg",
+    "base_price_no_iva": 207.78
+  },
+  {
+    "sku": "LP-MAN-009",
+    "parent_sku": "LP-MAN-009",
+    "slug": "mannol-mannol-grasa-lc-2-alta-temperatura-18-kg-lp-man-009",
+    "brand": "MANNOL",
+    "category": "aditivos",
+    "name": "MANNOL Grasa LC-2 Alta Temperatura 18 Kg",
+    "presentation": "18 Kg",
+    "base_price_no_iva": 207.78
+  },
+  {
+    "sku": "LP-MAN-010",
+    "parent_sku": "LP-MAN-010",
+    "slug": "mannol-mannol-grasa-blanca-spray-450gr-lp-man-010",
+    "brand": "MANNOL",
+    "category": "aditivos",
+    "name": "MANNOL Grasa Blanca Spray 450gr",
+    "presentation": "450Gr",
+    "base_price_no_iva": 7.26
+  },
+  {
+    "sku": "LP-MAN-011",
+    "parent_sku": "LP-MAN-011",
+    "slug": "mannol-mannol-motor-flush-professional-ester-450-ml-lp-man-011",
+    "brand": "MANNOL",
+    "category": "aditivos",
+    "name": "MANNOL Motor Flush Professional + Ester 450 Ml",
+    "presentation": "450 Ml",
+    "base_price_no_iva": 4.83
+  },
+  {
+    "sku": "LP-MAN-012",
+    "parent_sku": "LP-MAN-012",
+    "slug": "mannol-mannol-kit-limpiador-de-catalizador-500ml-lp-man-012",
+    "brand": "MANNOL",
+    "category": "aditivos",
+    "name": "MANNOL Kit Limpiador De Catalizador 500ml",
+    "presentation": "500Ml",
+    "base_price_no_iva": 10.13
+  },
+  {
+    "sku": "LP-MAN-013",
+    "parent_sku": "LP-MAN-013",
+    "slug": "mannol-mannol-aditivo-limpiador-de-catalizador-450-ml-lp-man-013",
+    "brand": "MANNOL",
+    "category": "aditivos",
+    "name": "MANNOL Aditivo Limpiador De Catalizador 450 Ml",
+    "presentation": "450 Ml",
+    "base_price_no_iva": 8.96
+  },
+  {
+    "sku": "LP-MAN-014",
+    "parent_sku": "LP-MAN-014",
+    "slug": "mannol-mannol-oil-leak-stop-250-ml-lp-man-014",
+    "brand": "MANNOL",
+    "category": "aditivos",
+    "name": "MANNOL Oil Leak Stop 250 Ml",
+    "presentation": "250 Ml",
+    "base_price_no_iva": 6.0
+  },
+  {
+    "sku": "LP-MAN-015",
+    "parent_sku": "LP-MAN-015",
+    "slug": "mannol-mannol-liquido-encendido-ether-450ml-lp-man-015",
+    "brand": "MANNOL",
+    "category": "aditivos",
+    "name": "MANNOL Líquido Encendido Ether 450ml",
+    "presentation": "450Ml",
+    "base_price_no_iva": 6.87
+  },
+  {
+    "sku": "LP-MAN-016",
+    "parent_sku": "LP-MAN-016",
+    "slug": "mannol-mannol-limpiador-de-zapatas-embragues-cadenas-600ml-lp-man-016",
+    "brand": "MANNOL",
+    "category": "aditivos",
+    "name": "MANNOL Limpiador De Zapatas Embragues Cadenas 600ml",
+    "presentation": "600Ml",
+    "base_price_no_iva": 4.57
+  },
+  {
+    "sku": "LP-MAN-017",
+    "parent_sku": "LP-MAN-017",
+    "slug": "mannol-mannol-limpiador-de-neumáticos-en-espuma-650-ml-lp-man-017",
+    "brand": "MANNOL",
+    "category": "aditivos",
+    "name": "MANNOL Limpiador De Neumáticos En Espuma 650 Ml",
+    "presentation": "650 Ml",
+    "base_price_no_iva": 9.22
+  },
+  {
+    "sku": "LP-MAN-018",
+    "parent_sku": "LP-MAN-018",
+    "slug": "mannol-mannol-limpiador-carburador-600-ml-lp-man-018",
+    "brand": "MANNOL",
+    "category": "aditivos",
+    "name": "MANNOL Limpiador Carburador 600 Ml",
+    "presentation": "600 Ml",
+    "base_price_no_iva": 3.65
+  },
+  {
+    "sku": "LP-MAN-019",
+    "parent_sku": "LP-MAN-019",
+    "slug": "mannol-mannol-super-goma-gel-3gr-lp-man-019",
+    "brand": "MANNOL",
+    "category": "aditivos",
+    "name": "MANNOL Super Goma Gel 3gr",
+    "presentation": "3Gr",
+    "base_price_no_iva": 0.61
+  },
+  {
+    "sku": "LP-MAN-020",
+    "parent_sku": "LP-MAN-020",
+    "slug": "mannol-mannol-aditivo-ceramo-ester-250-ml-lp-man-020",
+    "brand": "MANNOL",
+    "category": "aditivos",
+    "name": "MANNOL Aditivo Ceramo Ester 250 Ml",
+    "presentation": "250 Ml",
+    "base_price_no_iva": 18.13
+  },
+  {
+    "sku": "LP-MAN-021",
+    "parent_sku": "LP-MAN-021",
+    "slug": "mannol-mannol-limpiador-cuerpo-de-aceleración-mariposa-400ml-lp-man-021",
+    "brand": "MANNOL",
+    "category": "aditivos",
+    "name": "MANNOL Limpiador Cuerpo De Aceleración / Mariposa 400ml",
+    "presentation": "400Ml",
+    "base_price_no_iva": 4.65
+  },
+  {
+    "sku": "LP-MAN-022",
+    "parent_sku": "LP-MAN-022",
+    "slug": "mannol-mannol-lubricante-multiuso-anticorrosivo-400-ml-135oz-lp-man-022",
+    "brand": "MANNOL",
+    "category": "aditivos",
+    "name": "MANNOL Lubricante Multiuso Anticorrosivo 400 Ml / 13.5oz",
+    "presentation": "400 Ml",
+    "base_price_no_iva": 5.65
+  },
+  {
+    "sku": "LP-MAN-023",
+    "parent_sku": "LP-MAN-023",
+    "slug": "mannol-mannol-limpiador-de-contactos-electronico-450-ml-lp-man-023",
+    "brand": "MANNOL",
+    "category": "aditivos",
+    "name": "MANNOL Limpiador De Contactos Electronico 450 Ml",
+    "presentation": "450 Ml",
+    "base_price_no_iva": 4.57
+  },
+  {
+    "sku": "LP-MAN-024",
+    "parent_sku": "LP-MAN-024",
+    "slug": "mannol-mannol-tratamiento-de-bandas-200m-lp-man-024",
+    "brand": "MANNOL",
+    "category": "aditivos",
+    "name": "MANNOL Tratamiento De Bandas 200m",
+    "presentation": "1 Litro",
+    "base_price_no_iva": 4.43
+  },
+  {
+    "sku": "LP-MAN-025",
+    "parent_sku": "LP-MAN-025",
+    "slug": "mannol-mannol-motor-flush-350-ml-lp-man-025",
+    "brand": "MANNOL",
+    "category": "aditivos",
+    "name": "MANNOL Motor Flush 350 Ml",
+    "presentation": "350 Ml",
+    "base_price_no_iva": 3.26
+  },
+  {
+    "sku": "LP-MAN-026",
+    "parent_sku": "LP-MAN-026",
+    "slug": "mannol-mannol-aditivo-caja-automática-100ml-para-4-litros-lp-man-026",
+    "brand": "MANNOL",
+    "category": "aditivos",
+    "name": "MANNOL Aditivo Caja Automática 100ml Para 4 Litros",
+    "presentation": "100Ml",
+    "base_price_no_iva": 4.96
+  },
+  {
+    "sku": "LP-MAN-027",
+    "parent_sku": "LP-MAN-027",
+    "slug": "mannol-mannol-aditivo-caja-manual-100ml-para-4-litros-lp-man-027",
+    "brand": "MANNOL",
+    "category": "aditivos",
+    "name": "MANNOL Aditivo Caja Manual 100ml Para 4 Litros",
+    "presentation": "100Ml",
+    "base_price_no_iva": 4.09
+  },
+  {
+    "sku": "LP-MAN-028",
+    "parent_sku": "LP-MAN-028",
+    "slug": "mannol-mannol-llanta-doctor-450ml-lp-man-028",
+    "brand": "MANNOL",
+    "category": "aditivos",
+    "name": "MANNOL Llanta Doctor 450ml",
+    "presentation": "450Ml",
+    "base_price_no_iva": 5.61
+  },
+  {
+    "sku": "LP-MAN-029",
+    "parent_sku": "LP-MAN-029",
+    "slug": "mannol-mannol-tratamiento-anticorrosion-anticor-1l-cj-x-12-und-lp-man-029",
+    "brand": "MANNOL",
+    "category": "aditivos",
+    "name": "MANNOL Tratamiento Anticorrosion Anticor 1l ()",
+    "presentation": "1 Litro",
+    "base_price_no_iva": 13.96
+  },
+  {
+    "sku": "LP-MAN-030",
+    "parent_sku": "LP-MAN-030",
+    "slug": "mannol-mannol-silicon-gris-85gr-lp-man-030",
+    "brand": "MANNOL",
+    "category": "aditivos",
+    "name": "MANNOL Silicon Gris 85gr",
+    "presentation": "85Gr",
+    "base_price_no_iva": 4.13
+  },
+  {
+    "sku": "LP-MAN-031",
+    "parent_sku": "LP-MAN-031",
+    "slug": "mannol-mannol-aditivo-sellador-fuga-dirección-hidráulica-250-ml-cj-x-50-und-lp-man-031",
+    "brand": "MANNOL",
+    "category": "aditivos",
+    "name": "MANNOL Aditivo Sellador Fuga Dirección Hidráulica 250 Ml ()",
+    "presentation": "250 Ml",
+    "base_price_no_iva": 5.26
+  },
+  {
+    "sku": "LP-MAN-032",
+    "parent_sku": "LP-MAN-032",
+    "slug": "mannol-mannol-trabapernos-fijacion-fuerte-10ml-lp-man-032",
+    "brand": "MANNOL",
+    "category": "aditivos",
+    "name": "MANNOL Trabapernos (fijacion Fuerte) 10ml",
+    "presentation": "10Ml",
+    "base_price_no_iva": 3.61
+  },
+  {
+    "sku": "012MN9929-045",
+    "parent_sku": "LP-MAN-033",
+    "slug": "mannol-mannol-ester-additive-tratamiento-de-aceite-450-ml-y-1lt-lp-man-033",
+    "brand": "MANNOL",
+    "category": "aditivos",
+    "name": "MANNOL Ester Additive / Tratamiento De Aceite 450 Ml Y 1lt (450 ml)",
+    "presentation": "450 ml",
+    "base_price_no_iva": 8.48
+  },
+  {
+    "sku": "012MN9929-1",
+    "parent_sku": "LP-MAN-033",
+    "slug": "mannol-mannol-ester-additive-tratamiento-de-aceite-450-ml-y-1lt-lp-man-033",
+    "brand": "MANNOL",
+    "category": "aditivos",
+    "name": "MANNOL Ester Additive / Tratamiento De Aceite 450 Ml Y 1lt (1 Litro)",
+    "presentation": "1 Litro",
+    "base_price_no_iva": 17.52
+  },
+  {
+    "sku": "012MN9930-025",
+    "parent_sku": "LP-MAN-034",
+    "slug": "mannol-mannol-diesel-ester-additive-100ml-y-250ml-lp-man-034",
+    "brand": "MANNOL",
+    "category": "aditivos",
+    "name": "MANNOL Diésel Ester Additive 100ml Y 250ml (250 ml)",
+    "presentation": "250 ml",
+    "base_price_no_iva": 5.57
+  },
+  {
+    "sku": "012MN9930-01",
+    "parent_sku": "LP-MAN-034",
+    "slug": "mannol-mannol-diesel-ester-additive-100ml-y-250ml-lp-man-034",
+    "brand": "MANNOL",
+    "category": "aditivos",
+    "name": "MANNOL Diésel Ester Additive 100ml Y 250ml (100 ml)",
+    "presentation": "100 ml",
+    "base_price_no_iva": 2.78
+  },
+  {
+    "sku": "LP-MAN-035",
+    "parent_sku": "LP-MAN-035",
+    "slug": "mannol-mannol-limpiador-de-tapiceria-650ml-lp-man-035",
+    "brand": "MANNOL",
+    "category": "aditivos",
+    "name": "MANNOL Limpiador De Tapiceria 650ml",
+    "presentation": "650Ml",
+    "base_price_no_iva": 3.78
+  },
+  {
+    "sku": "LP-MAN-036",
+    "parent_sku": "LP-MAN-036",
+    "slug": "mannol-mannol-burning-booster-mejorador-de-combustion-500ml-metalico-lp-man-036",
+    "brand": "MANNOL",
+    "category": "aditivos",
+    "name": "MANNOL Burning Booster / Mejorador De Combustion 500ml Metalico",
+    "presentation": "500Ml",
+    "base_price_no_iva": 6.83
+  },
+  {
+    "sku": "LP-MAN-037",
+    "parent_sku": "LP-MAN-037",
+    "slug": "mannol-mannol-motor-life-extender-reparador-450ml-lp-man-037",
+    "brand": "MANNOL",
+    "category": "aditivos",
+    "name": "MANNOL Motor Life Extender / Reparador 450ml",
+    "presentation": "450Ml",
+    "base_price_no_iva": 7.78
+  },
+  {
+    "sku": "LP-MAN-038",
+    "parent_sku": "LP-MAN-038",
+    "slug": "mannol-mannol-limpiador-de-cuero-450ml-lp-man-038",
+    "brand": "MANNOL",
+    "category": "aditivos",
+    "name": "MANNOL Limpiador De Cuero 450ml",
+    "presentation": "450Ml",
+    "base_price_no_iva": 3.78
+  },
+  {
+    "sku": "LP-MAN-039",
+    "parent_sku": "LP-MAN-039",
+    "slug": "mannol-mannol-benzin-ester-additive-plástico-250ml-lp-man-039",
+    "brand": "MANNOL",
+    "category": "aditivos",
+    "name": "MANNOL Benzin Ester Additive Plástico 250ml",
+    "presentation": "250Ml",
+    "base_price_no_iva": 5.57
+  },
+  {
+    "sku": "LP-MAN-040",
+    "parent_sku": "LP-MAN-040",
+    "slug": "mannol-mannol-super-benzin-octane-plus-6-450ml-lp-man-040",
+    "brand": "MANNOL",
+    "category": "aditivos",
+    "name": "MANNOL Super Benzin Octane Plus + 6 450ml",
+    "presentation": "450Ml",
+    "base_price_no_iva": 8.43
+  },
+  {
+    "sku": "LP-MAN-041",
+    "parent_sku": "LP-MAN-041",
+    "slug": "mannol-mannol-super-diesel-cetane-plus-4-450ml-lp-man-041",
+    "brand": "MANNOL",
+    "category": "aditivos",
+    "name": "MANNOL Super Diésel (cetane Plus + 4) 450ml",
+    "presentation": "450Ml",
+    "base_price_no_iva": 7.43
+  },
+  {
+    "sku": "LP-MAN-042",
+    "parent_sku": "LP-MAN-042",
+    "slug": "mannol-mannol-diesel-jet-cleaner-250ml-lp-man-042",
+    "brand": "MANNOL",
+    "category": "aditivos",
+    "name": "MANNOL Diésel Jet Cleaner 250ml",
+    "presentation": "250Ml",
+    "base_price_no_iva": 3.13
+  },
+  {
+    "sku": "LP-MAN-043",
+    "parent_sku": "LP-MAN-043",
+    "slug": "mannol-mannol-injector-cleaner-gasolina-250ml-lp-man-043",
+    "brand": "MANNOL",
+    "category": "aditivos",
+    "name": "MANNOL Injector Cleaner Gasolina 250ml",
+    "presentation": "250Ml",
+    "base_price_no_iva": 3.35
+  },
+  {
+    "sku": "LP-MAN-044",
+    "parent_sku": "LP-MAN-044",
+    "slug": "mannol-mannol-dpf-cleaner-metal-400ml-lp-man-044",
+    "brand": "MANNOL",
+    "category": "aditivos",
+    "name": "MANNOL Dpf Cleaner Metal 400ml",
+    "presentation": "400Ml",
+    "base_price_no_iva": 11.57
+  },
+  {
+    "sku": "LP-MAN-045",
+    "parent_sku": "LP-MAN-045",
+    "slug": "mannol-mannol-limpiador-radiador-250-ml-lp-man-045",
+    "brand": "MANNOL",
+    "category": "aditivos",
+    "name": "MANNOL Limpiador Radiador 250 Ml",
+    "presentation": "250 Ml",
+    "base_price_no_iva": 4.04
+  },
+  {
+    "sku": "LP-MAN-046",
+    "parent_sku": "LP-MAN-046",
+    "slug": "mannol-mannol-sellador-de-fugas-para-radiador-250ml-lp-man-046",
+    "brand": "MANNOL",
+    "category": "aditivos",
+    "name": "MANNOL Sellador De Fugas Para Radiador 250ml",
+    "presentation": "250Ml",
+    "base_price_no_iva": 3.96
+  },
+  {
+    "sku": "LP-MAN-047",
+    "parent_sku": "LP-MAN-047",
+    "slug": "mannol-mannol-sellador-de-fugas-caja-de-cambios-250ml-lp-man-047",
+    "brand": "MANNOL",
+    "category": "aditivos",
+    "name": "MANNOL Sellador De Fugas Caja De Cambios 250ml",
+    "presentation": "250Ml",
+    "base_price_no_iva": 5.52
+  },
+  {
+    "sku": "LP-MAN-048",
+    "parent_sku": "LP-MAN-048",
+    "slug": "mannol-mannol-limpiador-de-aire-acondicionado-520-ml-lp-man-048",
+    "brand": "MANNOL",
+    "category": "aditivos",
+    "name": "MANNOL Limpiador De Aire Acondicionado 520 Ml",
+    "presentation": "520 Ml",
+    "base_price_no_iva": 4.3
+  },
+  {
+    "sku": "LP-MAN-049",
+    "parent_sku": "LP-MAN-049",
+    "slug": "mannol-mannol-limpiador-externo-de-motor-spray-500-ml-lp-man-049",
+    "brand": "MANNOL",
+    "category": "aditivos",
+    "name": "MANNOL Limpiador Externo De Motor Spray 500 Ml",
+    "presentation": "500 Ml",
+    "base_price_no_iva": 3.65
+  },
+  {
+    "sku": "LP-MAN-050",
+    "parent_sku": "LP-MAN-050",
+    "slug": "mannol-mannol-limpia-vidrios-500ml-lp-man-050",
+    "brand": "MANNOL",
+    "category": "aditivos",
+    "name": "MANNOL Limpia Vidrios 500ml",
+    "presentation": "500Ml",
+    "base_price_no_iva": 3.87
+  },
+  {
+    "sku": "LP-MAN-051",
+    "parent_sku": "LP-MAN-051",
+    "slug": "mannol-mannol-limpiador-inyectores-diesel-300-ml-lp-man-051",
+    "brand": "MANNOL",
+    "category": "aditivos",
+    "name": "MANNOL Limpiador Inyectores Diésel 300 Ml",
+    "presentation": "300 Ml",
+    "base_price_no_iva": 3.91
+  },
+  {
+    "sku": "LP-MAN-052",
+    "parent_sku": "LP-MAN-052",
+    "slug": "mannol-mannol-limpia-inyectores-gasolina-300-ml-lp-man-052",
+    "brand": "MANNOL",
+    "category": "aditivos",
+    "name": "MANNOL Limpia Inyectores Gasolina 300 Ml",
+    "presentation": "300 Ml",
+    "base_price_no_iva": 3.74
+  },
+  {
+    "sku": "LP-MAN-053",
+    "parent_sku": "LP-MAN-053",
+    "slug": "mannol-mannol-aditivo-motor-dr-350-ml-lp-man-053",
+    "brand": "MANNOL",
+    "category": "aditivos",
+    "name": "MANNOL Aditivo Motor Dr. 350 Ml",
+    "presentation": "350 Ml",
+    "base_price_no_iva": 3.74
+  },
+  {
+    "sku": "LP-MAN-054",
+    "parent_sku": "LP-MAN-054",
+    "slug": "mannol-mannol-aditivo-molibdeno-300-ml-lp-man-054",
+    "brand": "MANNOL",
+    "category": "aditivos",
+    "name": "MANNOL Aditivo Molibdeno 300 Ml",
+    "presentation": "300 Ml",
+    "base_price_no_iva": 5.52
+  },
+  {
+    "sku": "LP-ABR-002",
+    "parent_sku": "LP-ABR-002",
+    "slug": "abro-abro-sellador-polvo-radiador-ab-404-lp-abr-002",
+    "brand": "ABRO",
+    "category": "aditivos",
+    "name": "ABRO Sellador Polvo Radiador AB-404",
+    "presentation": "1 Litro",
+    "base_price_no_iva": 0.7
+  },
+  {
+    "sku": "LP-ABR-003",
+    "parent_sku": "LP-ABR-003",
+    "slug": "abro-abro-lubricante-penetrante-ab-80-10oz-lp-abr-003",
+    "brand": "ABRO",
+    "category": "aditivos",
+    "name": "ABRO Lubricante Penetrante AB-80 10oz",
+    "presentation": "10Oz",
+    "base_price_no_iva": 4.04
+  },
+  {
+    "sku": "102EC-502LT",
+    "parent_sku": "LP-ABR-004",
+    "slug": "abro-abro-refrigerante-rojo-galon-lp-abr-004",
+    "brand": "ABRO",
+    "category": "refrigerantes",
+    "name": "ABRO Refrigerante Rojo Galon (1 Litro)",
+    "presentation": "1 Litro",
+    "base_price_no_iva": 1.35
+  },
+  {
+    "sku": "102EC-502",
+    "parent_sku": "LP-ABR-004",
+    "slug": "abro-abro-refrigerante-rojo-galon-lp-abr-004",
+    "brand": "ABRO",
+    "category": "refrigerantes",
+    "name": "ABRO Refrigerante Rojo Galon (1 Galón)",
+    "presentation": "1 Galón",
+    "base_price_no_iva": 3.13
+  },
+  {
+    "sku": "102EC-503LT",
+    "parent_sku": "LP-ABR-005",
+    "slug": "abro-abro-refrigerante-verde-galon-lp-abr-005",
+    "brand": "ABRO",
+    "category": "refrigerantes",
+    "name": "ABRO Refrigerante Verde Galon (1 Litro)",
+    "presentation": "1 Litro",
+    "base_price_no_iva": 1.35
+  },
+  {
+    "sku": "102EC-503",
+    "parent_sku": "LP-ABR-005",
+    "slug": "abro-abro-refrigerante-verde-galon-lp-abr-005",
+    "brand": "ABRO",
+    "category": "refrigerantes",
+    "name": "ABRO Refrigerante Verde Galon (1 Galón)",
+    "presentation": "1 Galón",
+    "base_price_no_iva": 3.13
+  },
+  {
+    "sku": "LP-ABR-006",
+    "parent_sku": "LP-ABR-006",
+    "slug": "abro-abro-grasa-3-azul-1lb-envase-plástico-lg-990-lp-abr-006",
+    "brand": "ABRO",
+    "category": "aditivos",
+    "name": "ABRO Grasa # 3 Azul 1lb Envase Plástico LG-990",
+    "presentation": "1 Litro",
+    "base_price_no_iva": 4.78
+  },
+  {
+    "sku": "LP-ABR-007",
+    "parent_sku": "LP-ABR-007",
+    "slug": "abro-abro-super-sellador-de-blocks-ss-822-lp-abr-007",
+    "brand": "ABRO",
+    "category": "aditivos",
+    "name": "ABRO Super Sellador De Blocks SS-822",
+    "presentation": "1 Litro",
+    "base_price_no_iva": 6.47
+  },
+  {
+    "sku": "LP-ABR-008",
+    "parent_sku": "LP-ABR-008",
+    "slug": "abro-abro-cinta-electrica-negra-taipe-lp-abr-008",
+    "brand": "ABRO",
+    "category": "aditivos",
+    "name": "ABRO Cinta Electrica Negra Taipe",
+    "presentation": "1 Litro",
+    "base_price_no_iva": 0.43
+  },
+  {
+    "sku": "LP-ABR-009",
+    "parent_sku": "LP-ABR-009",
+    "slug": "abro-abro-cinta-empaque-transparente-48x80yds-lp-abr-009",
+    "brand": "ABRO",
+    "category": "aditivos",
+    "name": "ABRO Cinta Empaque Transparente 48x80yds",
+    "presentation": "1 Litro",
+    "base_price_no_iva": 1.13
+  },
+  {
+    "sku": "LP-PER-002",
+    "parent_sku": "LP-PER-002",
+    "slug": "simoniz-areon-simoniz-uv3-chicle-250-cc-lp-per-002",
+    "brand": "SIMONIZ",
+    "category": "aditivos",
+    "name": "Simoniz UV3 Chicle 250 Cc.",
+    "presentation": "250 Cc",
+    "base_price_no_iva": 3.91
+  },
+  {
+    "sku": "LP-PER-003",
+    "parent_sku": "LP-PER-003",
+    "slug": "simoniz-areon-simoniz-uv3-citrus-250-cc-lp-per-003",
+    "brand": "SIMONIZ",
+    "category": "aditivos",
+    "name": "Simoniz UV3 Citrus 250 Cc.",
+    "presentation": "250 Cc",
+    "base_price_no_iva": 3.91
+  },
+  {
+    "sku": "LP-PER-004",
+    "parent_sku": "LP-PER-004",
+    "slug": "simoniz-areon-simoniz-uv3-fresa-250-cc-lp-per-004",
+    "brand": "SIMONIZ",
+    "category": "aditivos",
+    "name": "Simoniz UV3 Fresa 250 Cc.",
+    "presentation": "250 Cc",
+    "base_price_no_iva": 3.91
+  },
+  {
+    "sku": "LP-PER-005",
+    "parent_sku": "LP-PER-005",
+    "slug": "simoniz-areon-simoniz-uv3-picadura-tabaco-250-cc-lp-per-005",
+    "brand": "SIMONIZ",
+    "category": "aditivos",
+    "name": "Simoniz UV3 Picadura Tabaco 250 Cc.",
+    "presentation": "250 Cc",
+    "base_price_no_iva": 3.91
+  },
+  {
+    "sku": "LP-PER-006",
+    "parent_sku": "LP-PER-006",
+    "slug": "simoniz-areon-simoniz-uv3-carro-nuevo-250-cc-lp-per-006",
+    "brand": "SIMONIZ",
+    "category": "aditivos",
+    "name": "Simoniz UV3 Carro Nuevo 250 Cc.",
+    "presentation": "250 Cc",
+    "base_price_no_iva": 3.91
+  },
+  {
+    "sku": "LP-PER-007",
+    "parent_sku": "LP-PER-007",
+    "slug": "simoniz-areon-simoniz-cera-300gr-siempre-nuevo-lp-per-007",
+    "brand": "SIMONIZ",
+    "category": "aditivos",
+    "name": "Simoniz Cera 300gr Siempre Nuevo",
+    "presentation": "300Gr",
+    "base_price_no_iva": 4.3
+  },
+  {
+    "sku": "LP-PER-008",
+    "parent_sku": "LP-PER-008",
+    "slug": "simoniz-areon-areon-perfume-black-crystal-lp-per-008",
+    "brand": "AREON",
+    "category": "aditivos",
+    "name": "Areon Perfume Black Crystal",
+    "presentation": "1 Litro",
+    "base_price_no_iva": 3.26
+  },
+  {
+    "sku": "LP-PER-009",
+    "parent_sku": "LP-PER-009",
+    "slug": "simoniz-areon-areon-perfume-new-car-lp-per-009",
+    "brand": "AREON",
+    "category": "aditivos",
+    "name": "Areon Perfume New Car",
+    "presentation": "1 Litro",
+    "base_price_no_iva": 3.26
+  },
+  {
+    "sku": "LP-PER-010",
+    "parent_sku": "LP-PER-010",
+    "slug": "simoniz-areon-areon-mon-display-60-pcs-mix-fragancias-lp-per-010",
+    "brand": "AREON",
+    "category": "aditivos",
+    "name": "Areon Mon Display 60 Pcs Mix Fragancias",
+    "presentation": "1 Litro",
+    "base_price_no_iva": 0.87
+  },
+  {
+    "sku": "LP-PER-011",
+    "parent_sku": "LP-PER-011",
+    "slug": "simoniz-areon-shampoo-cera-para-autos-600ml-lp-per-011",
+    "brand": "SIMONIZ / AREON",
+    "category": "aditivos",
+    "name": "Shampoo Cera Para Autos 600ml",
+    "presentation": "600Ml",
+    "base_price_no_iva": null
+  },
+  {
+    "sku": "LP-LUR-002-6",
+    "parent_sku": "LP-LUR-002-6",
+    "slug": "valvoline-valvodiesel-sae-15w40-api-ch4-lp-lur-002-6",
+    "brand": "VALVOLINE",
+    "category": "lubricantes",
+    "name": "Valvodiesel SAE 15W-40 API Ch4",
+    "presentation": "1 Litro",
+    "base_price_no_iva": 4.49
+  },
+  {
+    "sku": "038LUB-PC2050-0025",
+    "parent_sku": "LP-LUR-003-6",
+    "slug": "valvoline-valvoline-classic-sae-20w50-sp-lp-lur-003-6",
+    "brand": "VALVOLINE",
+    "category": "lubricantes",
+    "name": "VALVOLINE Classic SAE 20W-50 SP (1 Litro)",
+    "presentation": "1 Litro",
+    "base_price_no_iva": 4.57
+  },
+  {
+    "sku": "038LUB-PC2050-0100",
+    "parent_sku": "LP-LUR-003-6",
+    "slug": "valvoline-valvoline-classic-sae-20w50-sp-lp-lur-003-6",
+    "brand": "VALVOLINE",
+    "category": "lubricantes",
+    "name": "VALVOLINE Classic SAE 20W-50 SP (1 Galón)",
+    "presentation": "1 Galón",
+    "base_price_no_iva": 17.13
+  },
+  {
+    "sku": "LP-LUR-004-5",
+    "parent_sku": "LP-LUR-004-5",
+    "slug": "valvoline-valvoline-sae-10w30-classic-api-sp-lp-lur-004-5",
+    "brand": "VALVOLINE",
+    "category": "lubricantes",
+    "name": "VALVOLINE SAE 10W-30 Classic API SP",
+    "presentation": "1 Litro",
+    "base_price_no_iva": 4.83
+  },
+  {
+    "sku": "02724HPIS4",
+    "parent_sku": "02724HPIS4",
+    "slug": "bosch-bateria-bosch-24-hp-i-s4-64amp-602438-02724hpis4",
+    "brand": "BOSCH",
+    "category": "baterias",
+    "name": "Batería Bosch 24 HP I S4 (64 Amp)",
+    "presentation": "64Ah",
+    "base_price_no_iva": 157.71
+  },
+  {
+    "sku": "02724HPS4",
+    "parent_sku": "02724HPS4",
+    "slug": "bosch-bateria-bosch-24-hp-s4-64amp-602434-02724hps4",
+    "brand": "BOSCH",
+    "category": "baterias",
+    "name": "Batería Bosch 24 HP S4 (64 Amp)",
+    "presentation": "64Ah",
+    "base_price_no_iva": 157.71
+  },
+  {
+    "sku": "02727HPIS4",
+    "parent_sku": "02727HPIS4",
+    "slug": "bosch-bateria-bosch-27-hp-i-s4-85amp-602738-02727hpis4",
+    "brand": "BOSCH",
+    "category": "baterias",
+    "name": "Batería Bosch 27 HP I S4 (85 Amp)",
+    "presentation": "85Ah",
+    "base_price_no_iva": 197.02
+  },
+  {
+    "sku": "02727HPS4",
+    "parent_sku": "02727HPS4",
+    "slug": "bosch-bateria-bosch-27-hp-s4-88amp-602732-02727hps4",
+    "brand": "BOSCH",
+    "category": "baterias",
+    "name": "Batería Bosch 27 HP S4 (88 Amp)",
+    "presentation": "88Ah",
+    "base_price_no_iva": 197.02
+  },
+  {
+    "sku": "02734HPS4",
+    "parent_sku": "02734HPS4",
+    "slug": "bosch-bateria-bosch-34-hp-s4-70amp-603432-02734hps4",
+    "brand": "BOSCH",
+    "category": "baterias",
+    "name": "Batería Bosch 34 HP S4 (70 Amp)",
+    "presentation": "70Ah",
+    "base_price_no_iva": 161.03
+  },
+  {
+    "sku": "02742FES3",
+    "parent_sku": "02742FES3",
+    "slug": "bosch-bateria-bosch-42-fe-s3-45amp-304222-02742fes3",
+    "brand": "BOSCH",
+    "category": "baterias",
+    "name": "Batería Bosch 42 FE S3 (45 Amp)",
+    "presentation": "45Ah",
+    "base_price_no_iva": 93.75
+  },
+  {
+    "sku": "02742HPIS4",
+    "parent_sku": "02742HPIS4",
+    "slug": "bosch-bateria-bosch-42-hp-i-s4-55amp-604236-02742hpis4",
+    "brand": "BOSCH",
+    "category": "baterias",
+    "name": "Batería Bosch 42 HP I S4 (55 Amp)",
+    "presentation": "55Ah",
+    "base_price_no_iva": 130.24
+  },
+  {
+    "sku": "0277B6548",
+    "parent_sku": "0277B6548",
+    "slug": "bosch-bateria-bosch-b65-mp-i-s5-sellada-0277b6548",
+    "brand": "BOSCH",
+    "category": "baterias",
+    "name": "Batería Bosch B65 MP I S5 SELLADA",
+    "presentation": "65Ah",
+    "base_price_no_iva": 236.81
+  },
+  {
+    "sku": "027N40FES4",
+    "parent_sku": "027N40FES4",
+    "slug": "bosch-bateria-bosch-n40-fe-s4-43amp-614022-027n40fes4",
+    "brand": "BOSCH",
+    "category": "baterias",
+    "name": "Batería Bosch N40 FE S4 (43 Amp)",
+    "presentation": "43Ah",
+    "base_price_no_iva": null
+  },
+  {
+    "sku": "027NS40FEFS4",
+    "parent_sku": "027NS40FEFS4",
+    "slug": "bosch-bateria-bosch-ns40-fe-f-s4-604023-027ns40fefs4",
+    "brand": "BOSCH",
+    "category": "baterias",
+    "name": "Batería Bosch NS40 FE F S4",
+    "presentation": "65Ah",
+    "base_price_no_iva": 108.0
+  },
+  {
+    "sku": "027NS40FEIFS4",
+    "parent_sku": "027NS40FEIFS4",
+    "slug": "bosch-bateria-bosch-ns40-fe-i-f-s4-42amp-604027-027ns40feifs4",
+    "brand": "BOSCH",
+    "category": "baterias",
+    "name": "Batería Bosch NS40 FE I F S4 (42 Amp)",
+    "presentation": "42Ah",
+    "base_price_no_iva": 108.0
+  },
+  {
+    "sku": "03024-FE",
+    "parent_sku": "03024-FE",
+    "slug": "baterías-ecuador-bateria-ecuador-24-fe-full-equipo-65-amp-03024-fe",
+    "brand": "BATERÍAS ECUADOR",
+    "category": "baterias",
+    "name": "Batería Ecuador 24 FE — Full Equipo (65 Amp)",
+    "presentation": "65Ah",
+    "base_price_no_iva": 143.0
+  },
+  {
+    "sku": "03024-FE-I",
+    "parent_sku": "03024-FE-I",
+    "slug": "baterías-ecuador-bateria-ecuador-24-fe-i-full-equipo-65-amp-03024-fe-i",
+    "brand": "BATERÍAS ECUADOR",
+    "category": "baterias",
+    "name": "Batería Ecuador 24 FE I — Full Equipo (65 Amp)",
+    "presentation": "65Ah",
+    "base_price_no_iva": 143.0
+  },
+  {
+    "sku": "03024-HP-I",
+    "parent_sku": "03024-HP-I",
+    "slug": "baterías-ecuador-bateria-ecuador-24-hp-i-high-power-85-amp-03024-hp-i",
+    "brand": "BATERÍAS ECUADOR",
+    "category": "baterias",
+    "name": "Batería Ecuador 24 HP I — High Power Tapa Roja (85 Amp)",
+    "presentation": "85Ah",
+    "base_price_no_iva": 161.71
+  },
+  {
+    "sku": "03027-FE",
+    "parent_sku": "03027-FE",
+    "slug": "baterías-ecuador-bateria-ecuador-27-fe-full-equipo-80-amp-03027-fe",
+    "brand": "BATERÍAS ECUADOR",
+    "category": "baterias",
+    "name": "Batería Ecuador 27 FE — Full Equipo (80 Amp)",
+    "presentation": "80Ah",
+    "base_price_no_iva": 167.79
+  },
+  {
+    "sku": "03027-FE-I",
+    "parent_sku": "03027-FE-I",
+    "slug": "baterías-ecuador-bateria-ecuador-27-fe-i-full-equipo-80-amp-03027-fe-i",
+    "brand": "BATERÍAS ECUADOR",
+    "category": "baterias",
+    "name": "Batería Ecuador 27 FE I — Full Equipo (80 Amp)",
+    "presentation": "80Ah",
+    "base_price_no_iva": 167.79
+  },
+  {
+    "sku": "03027-HP",
+    "parent_sku": "03027-HP",
+    "slug": "baterías-ecuador-bateria-ecuador-27-hp-high-power-95-amp-03027-hp",
+    "brand": "BATERÍAS ECUADOR",
+    "category": "baterias",
+    "name": "Batería Ecuador 27 HP — High Power Tapa Roja (95 Amp)",
+    "presentation": "95Ah",
+    "base_price_no_iva": 201.88
+  },
+  {
+    "sku": "03027-HP-I",
+    "parent_sku": "03027-HP-I",
+    "slug": "baterías-ecuador-bateria-ecuador-27-hp-i-high-power-95-amp-03027-hp-i",
+    "brand": "BATERÍAS ECUADOR",
+    "category": "baterias",
+    "name": "Batería Ecuador 27 HP I — High Power Tapa Roja (95 Amp)",
+    "presentation": "95Ah",
+    "base_price_no_iva": 201.88
+  },
+  {
+    "sku": "03031-SHD",
+    "parent_sku": "03031-SHD",
+    "slug": "baterías-ecuador-bateria-ecuador-31-shd-super-heavy-duty-105-amp-03031-shd",
+    "brand": "BATERÍAS ECUADOR",
+    "category": "baterias",
+    "name": "Batería Ecuador 31 SHD — Super Heavy Duty (105 Amp)",
+    "presentation": "105Ah",
+    "base_price_no_iva": 209.0
+  },
+  {
+    "sku": "03034-FE",
+    "parent_sku": "03034-FE",
+    "slug": "baterías-ecuador-bateria-ecuador-34-fe-full-equipo-65-amp-03034-fe",
+    "brand": "BATERÍAS ECUADOR",
+    "category": "baterias",
+    "name": "Batería Ecuador 34 FE — Full Equipo (65 Amp)",
+    "presentation": "65Ah",
+    "base_price_no_iva": 140.0
+  },
+  {
+    "sku": "03034-FE-I",
+    "parent_sku": "03034-FE-I",
+    "slug": "baterías-ecuador-bateria-ecuador-34-fe-i-full-equipo-65-amp-03034-fe-i",
+    "brand": "BATERÍAS ECUADOR",
+    "category": "baterias",
+    "name": "Batería Ecuador 34 FE I — Full Equipo (65 Amp)",
+    "presentation": "65Ah",
+    "base_price_no_iva": 140.0
+  },
+  {
+    "sku": "03034-HP",
+    "parent_sku": "03034-HP",
+    "slug": "baterías-ecuador-bateria-ecuador-34-hp-high-power-80-amp-03034-hp",
+    "brand": "BATERÍAS ECUADOR",
+    "category": "baterias",
+    "name": "Batería Ecuador 34 HP — High Power Tapa Roja (80 Amp)",
+    "presentation": "80Ah",
+    "base_price_no_iva": 164.29
+  },
+  {
+    "sku": "03034-HP-I",
+    "parent_sku": "03034-HP-I",
+    "slug": "baterías-ecuador-bateria-ecuador-34-hp-i-high-power-80-amp-03034-hp-i",
+    "brand": "BATERÍAS ECUADOR",
+    "category": "baterias",
+    "name": "Batería Ecuador 34 HP I — High Power Tapa Roja (80 Amp)",
+    "presentation": "80Ah",
+    "base_price_no_iva": 164.29
+  },
+  {
+    "sku": "03036-HP",
+    "parent_sku": "03036-HP",
+    "slug": "baterías-ecuador-bateria-ecuador-36-hp-high-power-50-amp-03036-hp",
+    "brand": "BATERÍAS ECUADOR",
+    "category": "baterias",
+    "name": "Batería Ecuador 36 HP — High Power Tapa Roja (50 Amp)",
+    "presentation": "50Ah",
+    "base_price_no_iva": 128.75
+  },
+  {
+    "sku": "03042-FE",
+    "parent_sku": "03042-FE",
+    "slug": "baterías-ecuador-bateria-ecuador-42-fe-full-equipo-55-amp-03042-fe",
+    "brand": "BATERÍAS ECUADOR",
+    "category": "baterias",
+    "name": "Batería Ecuador 42 FE — Full Equipo (55 Amp)",
+    "presentation": "55Ah",
+    "base_price_no_iva": null
+  },
+  {
+    "sku": "03042-HP",
+    "parent_sku": "03042-HP",
+    "slug": "baterías-ecuador-bateria-ecuador-42-hp-high-power-62-amp-03042-hp",
+    "brand": "BATERÍAS ECUADOR",
+    "category": "baterias",
+    "name": "Batería Ecuador 42 HP — High Power Tapa Roja (62 Amp)",
+    "presentation": "62Ah",
+    "base_price_no_iva": 133.39
+  },
+  {
+    "sku": "03042-HP-I",
+    "parent_sku": "03042-HP-I",
+    "slug": "baterías-ecuador-bateria-ecuador-42-hp-i-high-power-62-amp-03042-hp-i",
+    "brand": "BATERÍAS ECUADOR",
+    "category": "baterias",
+    "name": "Batería Ecuador 42 HP I — High Power Tapa Roja (62 Amp)",
+    "presentation": "62Ah",
+    "base_price_no_iva": 133.39
+  },
+  {
+    "sku": "03055-HD",
+    "parent_sku": "03055-HD",
+    "slug": "baterías-ecuador-bateria-ecuador-55-hd-14pl-63amp-servicio-publico-03055-hd",
+    "brand": "BATERÍAS ECUADOR",
+    "category": "baterias",
+    "name": "Batería Ecuador 55 HD 14PL SERVICIO PUBLICO — Maxi Power (63 Amp)",
+    "presentation": "63Ah",
+    "base_price_no_iva": 128.52
+  },
+  {
+    "sku": "03055-HD-I",
+    "parent_sku": "03055-HD-I",
+    "slug": "baterías-ecuador-bateria-ecuador-55-hd-i-14pl-63amp-servicio-publico-03055-hd-i",
+    "brand": "BATERÍAS ECUADOR",
+    "category": "baterias",
+    "name": "Batería Ecuador 55 HD I 14PL SERVICIO PUBLICO — Maxi Power (63 Amp)",
+    "presentation": "63Ah",
+    "base_price_no_iva": 128.52
+  },
+  {
+    "sku": "03065-HP",
+    "parent_sku": "03065-HP",
+    "slug": "baterías-ecuador-bateria-ecuador-65-hp-high-power-65-amp-03065-hp",
+    "brand": "BATERÍAS ECUADOR",
+    "category": "baterias",
+    "name": "Batería Ecuador 65 HP — High Power Tapa Roja (65 Amp)",
+    "presentation": "65Ah",
+    "base_price_no_iva": 160.68
+  },
+  {
+    "sku": "03066-HP",
+    "parent_sku": "03066-HP",
+    "slug": "baterías-ecuador-bateria-ecuador-66-hp-high-power-84-amp-03066-hp",
+    "brand": "BATERÍAS ECUADOR",
+    "category": "baterias",
+    "name": "Batería Ecuador 66 HP — High Power Tapa Roja (84 Amp)",
+    "presentation": "84Ah",
+    "base_price_no_iva": 179.0
+  },
+  {
+    "sku": "030N100-SHD-I",
+    "parent_sku": "030N100-SHD-I",
+    "slug": "baterías-ecuador-bateria-ecuador-n100-shd-i-super-heavy-duty-104-amp-030n100-shd-i",
+    "brand": "BATERÍAS ECUADOR",
+    "category": "baterias",
+    "name": "Batería Ecuador N100 SHD I — Super Heavy Duty (104 Amp)",
+    "presentation": "104Ah",
+    "base_price_no_iva": 237.15
+  },
+  {
+    "sku": "030N150-SHD",
+    "parent_sku": "030N150-SHD",
+    "slug": "baterías-ecuador-bateria-ecuador-n150-shd-super-heavy-duty-160-amp-030n150-shd",
+    "brand": "BATERÍAS ECUADOR",
+    "category": "baterias",
+    "name": "Batería Ecuador N150 SHD — Super Heavy Duty (160 Amp)",
+    "presentation": "160Ah",
+    "base_price_no_iva": 340.0
+  },
+  {
+    "sku": "030N40-FE-I",
+    "parent_sku": "030N40-FE-I",
+    "slug": "baterías-ecuador-bateria-ecuador-n40-fe-i-full-equipo-45-amp-030n40-fe-i",
+    "brand": "BATERÍAS ECUADOR",
+    "category": "baterias",
+    "name": "Batería Ecuador N40 FE I — Full Equipo (45 Amp)",
+    "presentation": "45Ah",
+    "base_price_no_iva": 109.14
+  },
+  {
+    "sku": "030N40-HP",
+    "parent_sku": "030N40-HP",
+    "slug": "baterías-ecuador-bateria-ecuador-n40-hp-high-power-50-amp-030n40-hp",
+    "brand": "BATERÍAS ECUADOR",
+    "category": "baterias",
+    "name": "Batería Ecuador N40 HP — High Power Tapa Roja (50 Amp)",
+    "presentation": "50Ah",
+    "base_price_no_iva": null
+  },
+  {
+    "sku": "030N40-HP-I",
+    "parent_sku": "030N40-HP-I",
+    "slug": "baterías-ecuador-bateria-ecuador-n40-hp-i-high-power-50-amp-030n40-hp-i",
+    "brand": "BATERÍAS ECUADOR",
+    "category": "baterias",
+    "name": "Batería Ecuador N40 HP I — High Power Tapa Roja (50 Amp)",
+    "presentation": "50Ah",
+    "base_price_no_iva": 116.91
+  },
+  {
+    "sku": "030NS40-FE",
+    "parent_sku": "030NS40-FE",
+    "slug": "baterías-ecuador-bateria-ecuador-ns40-fe-full-equipo-42-amp-030ns40-fe",
+    "brand": "BATERÍAS ECUADOR",
+    "category": "baterias",
+    "name": "Batería Ecuador NS40 FE — Full Equipo (42 Amp)",
+    "presentation": "42Ah",
+    "base_price_no_iva": 93.35
+  },
+  {
+    "sku": "030NS40-FE-I",
+    "parent_sku": "030NS40-FE-I",
+    "slug": "baterías-ecuador-bateria-ecuador-ns40-fe-i-full-equipo-42-amp-030ns40-fe-i",
+    "brand": "BATERÍAS ECUADOR",
+    "category": "baterias",
+    "name": "Batería Ecuador NS40 FE I — Full Equipo (42 Amp)",
+    "presentation": "42Ah",
+    "base_price_no_iva": null
+  },
+  {
+    "sku": "030NS40-HP",
+    "parent_sku": "030NS40-HP",
+    "slug": "baterías-ecuador-bateria-ecuador-ns40-hp-high-power-45-amp-030ns40-hp",
+    "brand": "BATERÍAS ECUADOR",
+    "category": "baterias",
+    "name": "Batería Ecuador NS40 HP — High Power Tapa Roja (45 Amp)",
+    "presentation": "45Ah",
+    "base_price_no_iva": 110.74
+  },
+  {
+    "sku": "42HPS4",
+    "parent_sku": "42HPS4",
+    "slug": "bosch-bateria-bosch-42-hp-s4-55amp-604232-42hps4",
+    "brand": "BOSCH",
+    "category": "baterias",
+    "name": "Batería Bosch 42 HP S4 (55 Amp)",
+    "presentation": "55Ah",
+    "base_price_no_iva": 130.24
+  },
+  {
+    "sku": "ECOVLBAT",
+    "parent_sku": "ECOVLBAT",
+    "slug": "baterías-ecuador-ecovalor-venta-bateria-vehículo-ecovlbat",
+    "brand": "BATERÍAS ECUADOR",
+    "category": "baterias",
+    "name": "Batería Ecuador ECOVALOR (VENTA BATERIA VEHÍCULO) — Maxi Power",
+    "presentation": "65Ah",
+    "base_price_no_iva": 0.25
+  },
+  {
+    "sku": "COMBO-MANNOL-1A",
+    "brand": "MANNOL",
+    "category": "combos",
+    "name": "¡Combo Cambio MANNOL! 1A Classic 10W-40 (Galón) + Filtro Advance + Regalo",
+    "presentation": "Galón + Filtro + MANNOL 6145 + Esponja",
+    "base_price_no_iva": 36.74
+  },
+  {
+    "sku": "COMBO-MANNOL-1B",
+    "brand": "MANNOL",
+    "category": "combos",
+    "name": "¡Combo Cambio MANNOL! 1B Energy Formula JP 5W-30 (Galón) + Filtro Advance + Regalo",
+    "presentation": "Galón + Filtro + MANNOL 6145 + Esponja",
+    "base_price_no_iva": 40.26
+  },
+  {
+    "sku": "COMBO-MANNOL-1C",
+    "brand": "MANNOL",
+    "category": "combos",
+    "name": "¡Combo Cambio MANNOL! 1C Safari 20W-50 (Galón) + Filtro Advance + Regalo",
+    "presentation": "Galón + Filtro + MANNOL 6145 + Esponja",
+    "base_price_no_iva": 33.3
+  },
+  {
+    "sku": "COMBO-MANNOL-2A",
+    "brand": "MANNOL",
+    "category": "combos",
+    "name": "¡Combo Cambio MANNOL! 2A TS-4 15W-40 (7 Litros) + Filtro + Regalo",
+    "presentation": "7 Litros + Filtro + MANNOL 6145 + Esponja",
+    "base_price_no_iva": 62.09
+  },
+  {
+    "sku": "COMBO-MANNOL-2B",
+    "brand": "MANNOL",
+    "category": "combos",
+    "name": "¡Combo Cambio MANNOL! 2B Diesel Turbo 5W-40 (7 Litros) + Filtro + Regalo",
+    "presentation": "7 Litros + Filtro + MANNOL 6145 + Esponja",
+    "base_price_no_iva": 81.6
+  },
+  {
+    "sku": "COMBO-MANNOL-2C",
+    "brand": "MANNOL",
+    "category": "combos",
+    "name": "¡Combo Cambio MANNOL! 2C Classic 10W-40 (6 Litros) + Filtro + Regalo",
+    "presentation": "6 Litros + Filtro + MANNOL 6145 + Esponja",
+    "base_price_no_iva": 56.4
+  },
+  {
+    "sku": "COMBO-MANNOL-3A",
+    "brand": "MANNOL",
+    "category": "combos",
+    "name": "¡Combo Cambio MANNOL! 3A TS-4 15W-40 (Caneca 20L) + Filtro Pesado + Regalo",
+    "presentation": "Caneca 20L + Filtro + MANNOL 6145 + Esponja",
+    "base_price_no_iva": 108.69
+  },
+  {
+    "sku": "COMBO-MANNOL-3B",
+    "brand": "MANNOL",
+    "category": "combos",
+    "name": "¡Combo Cambio MANNOL! 3B TS-5 UHPD 10W-40 (Caneca 20L) + Filtro Pesado + Regalo",
+    "presentation": "Caneca 20L + Filtro + MANNOL 6145 + Esponja",
+    "base_price_no_iva": 111.74
+  }
+]

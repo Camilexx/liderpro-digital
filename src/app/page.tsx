@@ -33,6 +33,7 @@ import FAQSection from "@/components/FAQSection";
 import { PRODUCTS, OFFICIAL_BRANDS, ApplicationType, Product } from "@/data/products";
 import { EDUCATIONAL_ARTICLES } from "@/data/articles";
 import { buildWhatsAppLink } from "@/lib/whatsapp";
+import { useWhatsAppSelector } from "@/context/WhatsAppSelectorContext";
 
 interface VehicleSegment {
   id: ApplicationType | "todos";
@@ -145,6 +146,7 @@ const POPULAR_VEHICLES = [
 export default function HomePage() {
   const [selectedSegment, setSelectedSegment] = useState<ApplicationType | "todos">("todos");
   const [bestSellerCategory, setBestSellerCategory] = useState<"todos" | "baterias_ecuador" | "mannol">("todos");
+  const { openSelector } = useWhatsAppSelector();
 
   // Retrieve curated products safely
   const displayedBestSellers = (
@@ -183,10 +185,10 @@ export default function HomePage() {
 
             {/* Main Headline with Satin Brand Gradient */}
             <h1 className="text-3xl sm:text-4xl lg:text-[3rem] font-black tracking-tight text-slate-950 leading-[1.08]">
-              Distribuidor Autorizado Multimarca.
+              LiderPro Pedernales.
               <br />
               <span className="bg-gradient-to-r from-[#0A3B8C] via-[#0D47A1] to-[#0A3B8C] bg-clip-text text-transparent">
-                Baterías, Lubricantes y Filtros en Ecuador.
+                Baterías, lubricantes, filtros, aditivos, llantas
               </span>
             </h1>
 
@@ -233,15 +235,19 @@ export default function HomePage() {
                 <span className="text-white/80 group-hover:translate-x-1 transition-transform">→</span>
               </a>
 
-              <a
-                href="https://wa.me/593983893231?text=Hola%20LiderPro%20Pedernales%2C%20deseo%20cotizar%20el%20Combo%20Cambio%20Mannol%20o%20repuestos%20para%20mi%20veh%C3%ADculo."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-whatsapp !py-3.5 !px-5 text-xs font-black tracking-wider flex items-center justify-center gap-2 text-center shadow-lg shadow-emerald-600/20"
+              <button
+                type="button"
+                onClick={() =>
+                  openSelector({
+                    itemTitle: "¡Combo Cambio MANNOL! o repuestos para mi vehículo",
+                    sourceLocation: "hero_cta",
+                  })
+                }
+                className="btn-whatsapp !py-3.5 !px-5 text-xs font-black tracking-wider flex items-center justify-center gap-2 text-center shadow-lg shadow-emerald-600/20 cursor-pointer"
               >
                 <MessageCircle className="w-4 h-4" />
-                <span>WHATSAPP: 098 389 3231</span>
-              </a>
+                <span>🎁 COTIZAR + RECLAMAR REGALO</span>
+              </button>
             </div>
 
             {/* Reassurance Microcopy Badges */}

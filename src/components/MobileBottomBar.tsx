@@ -3,14 +3,16 @@
 import Link from "next/link";
 import { Home, Search, ShoppingBag, MessageCircle } from "lucide-react";
 import { useQuoteBasket } from "@/context/QuoteBasketContext";
-import { buildWhatsAppLink } from "@/lib/whatsapp";
+import { useWhatsAppSelector } from "@/context/WhatsAppSelectorContext";
 import { trackEvent } from "@/lib/analytics";
 
 export default function MobileBottomBar() {
   const { totalItems, setIsOpen } = useQuoteBasket();
+  const { openSelector } = useWhatsAppSelector();
 
   const handleWhatsApp = () => {
     trackEvent("whatsapp_click", { location: "mobile_bottom_bar" });
+    openSelector({ sourceLocation: "mobile_bottom_bar" });
   };
 
   return (
@@ -55,16 +57,14 @@ export default function MobileBottomBar() {
         </button>
 
         {/* 4. WhatsApp Asesor Oficial */}
-        <a
-          href={buildWhatsAppLink("general_quote")}
-          target="_blank"
-          rel="noopener noreferrer"
+        <button
+          type="button"
           onClick={handleWhatsApp}
-          className="flex flex-col items-center justify-center py-1 px-1.5 rounded-xl bg-[#25D366] text-slate-950 font-black active:scale-95 shadow-md transition-all"
+          className="flex flex-col items-center justify-center py-1 px-1.5 rounded-xl bg-[#25D366] text-slate-950 font-black active:scale-95 shadow-md transition-all cursor-pointer"
         >
           <MessageCircle className="w-4 h-4 fill-black/10 mb-0.5" />
           <span className="text-[10px] font-black uppercase tracking-tight">WhatsApp</span>
-        </a>
+        </button>
       </div>
     </aside>
   );

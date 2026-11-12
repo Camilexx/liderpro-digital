@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
+import { redirect } from "next/navigation";
 import Link from "next/link";
 import {
   ShieldCheck,
@@ -15,7 +15,7 @@ interface ProductPageProps {
   params: Promise<{ slug: string }>;
 }
 
-export const dynamicParams = false;
+export const dynamicParams = true;
 
 export async function generateStaticParams() {
   // Prerender 100% of the verified catalog (all 366 products) at build time for instant page loads & optimal SEO indexing
@@ -75,10 +75,37 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
 
 export default async function ProductDetailPage({ params }: ProductPageProps) {
   const { slug } = await params;
-  const product = PRODUCTS.find((p) => p.slug === slug);
+  const decoded = decodeURIComponent(slug).trim();
+  const lower = decoded.toLowerCase();
+
+  let product = PRODUCTS.find((p) => p.slug === decoded || p.slug.toLowerCase() === lower);
 
   if (!product) {
-    notFound();
+    // Smart resolution by SKU, officialSku, or variant SKU (Zero-404 Healing)
+    const bySku = PRODUCTS.find(
+      (p) =>
+        p.sku.toLowerCase() === lower ||
+        p.id.toLowerCase() === lower ||
+        p.variants?.some(
+          (v) =>
+            v.sku.toLowerCase() === lower ||
+            (v.officialSku && v.officialSku.toLowerCase() === lower)
+        )
+    );
+    if (bySku) {
+      redirect(`/productos/${bySku.slug}`);
+    }
+
+    // Fuzzy substring match on slug or name
+    const fuzzy = PRODUCTS.find(
+      (p) => p.slug.toLowerCase().includes(lower) || p.name.toLowerCase().includes(lower)
+    );
+    if (fuzzy) {
+      redirect(`/productos/${fuzzy.slug}`);
+    }
+
+    // Graceful fallback to Vehicle/Catalog finder instead of raw 404
+    redirect(`/encuentra-tu-producto?q=${encodeURIComponent(decoded)}`);
   }
 
   const categoryRoutes: Record<string, { label: string; href: string }> = {

@@ -19,8 +19,16 @@ export const metadata: Metadata = {
     canonical: "./",
   },
   title: {
-    default: "LiderPro Ecuador — Distribuidor Autorizado Multimarca | Hub Pedernales",
-    template: "%s | LiderPro Ecuador",
+    default: "LiderPro Pedernales — Distribuidor Autorizado Multimarca | Ecuador",
+    template: "%s | LiderPro Pedernales",
+  },
+  icons: {
+    icon: [
+      { url: "/favicon.png", type: "image/png" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
   },
   description:
     "Distribuidor Autorizado Multimarca de lubricantes, baterías, filtros y químicos automotrices e industriales (Baterías Ecuador, Bosch, Mannol, Aroil, Mobil, Motul, Valvoline, Amalie, Advance, ATE, NGK, Denso, Bardahl, Abro). Despacho diario desde Bodega Matriz en Pedernales (Manabí) a las 24 provincias del Ecuador con facturación electrónica SRI.",
@@ -147,8 +155,11 @@ const structuredData = {
 };
 
 import { QuoteBasketProvider } from "@/context/QuoteBasketContext";
+import { WhatsAppSelectorProvider } from "@/context/WhatsAppSelectorContext";
 import QuoteBasketDrawer from "@/components/QuoteBasketDrawer";
+import WhatsAppSelectorModal from "@/components/WhatsAppSelectorModal";
 import MobileBottomBar from "@/components/MobileBottomBar";
+import HermesSalesWidget from "@/components/HermesSalesWidget";
 
 export default function RootLayout({
   children,
@@ -220,15 +231,19 @@ export default function RootLayout({
         )}
       </head>
       <body className="min-h-screen flex flex-col bg-slate-50 text-slate-900 antialiased selection:bg-brand-primary selection:text-white relative pb-16 lg:pb-0">
-        <QuoteBasketProvider>
-          <AnnouncementBar />
-          <Header />
-          <main className="flex-grow">{children}</main>
-          <Footer />
-          <QuoteBasketDrawer />
-          <FloatingWhatsApp />
-          <MobileBottomBar />
-        </QuoteBasketProvider>
+        <WhatsAppSelectorProvider>
+          <QuoteBasketProvider>
+            <AnnouncementBar />
+            <Header />
+            <main className="flex-grow">{children}</main>
+            <Footer />
+            <QuoteBasketDrawer />
+            <WhatsAppSelectorModal />
+            <HermesSalesWidget />
+            <FloatingWhatsApp />
+            <MobileBottomBar />
+          </QuoteBasketProvider>
+        </WhatsAppSelectorProvider>
       </body>
     </html>
   );

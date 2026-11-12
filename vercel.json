@@ -1,0 +1,17 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/index.html", "destination": "/", "permanent": true },
+    { "source": "/catalogo", "destination": "/productos", "permanent": true },
+    { "source": "/catalogo/:path*", "destination": "/productos/:path*", "permanent": true },
+    { "source": "/fichas/:slug", "destination": "/productos/:slug", "permanent": true },
+    { "source": "/producto.html", "destination": "/productos", "permanent": true },
+    { "source": "/producto/:slug", "destination": "/productos/:slug", "permanent": true },
+    { "source": "/baterias.html", "destination": "/baterias", "permanent": true },
+    { "source": "/lubricantes.html", "destination": "/lubricantes", "permanent": true },
+    { "source": "/filtros.html", "destination": "/filtros", "permanent": true },
+    { "source": "/contacto.html", "destination": "/contacto", "permanent": true }
+  ]
+}

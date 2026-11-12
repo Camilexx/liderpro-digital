@@ -16,8 +16,8 @@ import {
   Sparkles,
 } from "lucide-react";
 import { Product, ProductVariant } from "@/data/products";
-import { buildWhatsAppLink } from "@/lib/whatsapp";
 import { useQuoteBasket } from "@/context/QuoteBasketContext";
+import { useWhatsAppSelector } from "@/context/WhatsAppSelectorContext";
 import { trackEvent } from "@/lib/analytics";
 
 interface ProductDetailShowcaseProps {
@@ -26,6 +26,7 @@ interface ProductDetailShowcaseProps {
 
 export default function ProductDetailShowcase({ product }: ProductDetailShowcaseProps) {
   const { addItem, setIsOpen, items } = useQuoteBasket();
+  const { openSelector } = useWhatsAppSelector();
 
   const [selectedVariant, setSelectedVariant] = useState<ProductVariant | null>(
     product.variants && product.variants.length > 0
@@ -227,40 +228,21 @@ export default function ProductDetailShowcase({ product }: ProductDetailShowcase
             </p>
           </div>
 
-          {/* Official Price Block */}
-          <div className="p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-slate-50 via-blue-50/40 to-emerald-50/30 border-2 border-slate-200/90 flex flex-wrap items-center justify-between gap-4">
-            {isPriced ? (
-              <div>
-                <span className="block text-xs font-black uppercase tracking-wider text-slate-500">
-                  Precio Oficial de Venta ({activePresentation || "Unidad"})
-                </span>
-                <div className="flex items-baseline gap-3 mt-0.5">
-                  <span className="text-3xl sm:text-4xl font-black text-[#061B40] tracking-tight">
-                    {activePrice}
-                  </span>
-                  {quantity > 1 && activeNumericPrice && (
-                    <span className="text-xs font-extrabold text-emerald-800 bg-emerald-100 px-2.5 py-1 rounded-lg border border-emerald-200">
-                      Total x{quantity}: ${(activeNumericPrice * quantity).toFixed(2)}
-                    </span>
-                  )}
-                </div>
-                <span className="block text-[11px] text-slate-500 font-medium mt-1">
-                  ✓ {product.priceNote}
+          {/* Official Gift & Quote Block — Zero Public Prices */}
+          <div className="p-4 sm:p-5 rounded-2xl bg-[#09152B] border-2 border-[#FACC15]/60 text-white flex flex-wrap items-center justify-between gap-4 shadow-lg">
+            <div>
+              <span className="block text-xs font-black uppercase tracking-wider text-[#FACC15]">
+                🎁 Cotizar + Reclamar Regalo ({activePresentation || "Unidad"})
+              </span>
+              <div className="flex items-baseline gap-3 mt-1">
+                <span className="text-xl sm:text-2xl font-black text-white tracking-tight">
+                  Solicita tu Cotización Oficial con IVA
                 </span>
               </div>
-            ) : (
-              <div>
-                <span className="block text-xs font-black uppercase tracking-wider text-slate-500">
-                  Disponibilidad en Mostrador Pedernales
-                </span>
-                <span className="text-xl font-black text-[#0A3B8C]">
-                  Consultar Disponibilidad y Precio en Mostrador
-                </span>
-                <span className="block text-[11px] text-slate-500 font-medium mt-1">
-                  ✓ Producto bajo pedido especial o rotación alta en almacén
-                </span>
-              </div>
-            )}
+              <span className="block text-[11px] text-slate-300 font-medium mt-1">
+                ✓ Incluye verificación por vehículo • Regalo MANNOL 6145 Cockpit Care + Esponja en combos/compras ≥ $35
+              </span>
+            </div>
           </div>
 
           {/* Description */}
@@ -304,19 +286,9 @@ export default function ProductDetailShowcase({ product }: ProductDetailShowcase
                       }`}
                     >
                       <div className="font-black">{cleanPres}</div>
-                      {v.priceEstimate ? (
-                        <div
-                          className={`text-xs font-black mt-0.5 ${
-                            isSelected ? "text-[#FFC500]" : "text-emerald-700"
-                          }`}
-                        >
-                          {v.priceEstimate}
-                        </div>
-                      ) : (
-                        <div className={`text-[10.5px] font-medium ${isSelected ? "text-blue-100" : "text-slate-400"}`}>
-                          En Stock
-                        </div>
-                      )}
+                      <div className={`text-[10.5px] font-bold mt-0.5 ${isSelected ? "text-[#FACC15]" : "text-emerald-700"}`}>
+                        ✓ Disponible
+                      </div>
                     </button>
                   );
                 })}
@@ -358,26 +330,22 @@ export default function ProductDetailShowcase({ product }: ProductDetailShowcase
                 </div>
               </div>
 
-              {/* Primary WhatsApp Direct CTA */}
-              <a
-                href={buildWhatsAppLink(
-                  "product",
-                  {
-                    brand: product.brand,
-                    productName: `${activeName}${activePrice ? ` (${activePrice})` : ""}`,
-                    presentation: activePresentation,
+              {/* Primary WhatsApp Direct CTA — Opens Dual Line Selector */}
+              <button
+                type="button"
+                onClick={() => {
+                  handleWhatsApp();
+                  openSelector({
+                    itemTitle: `${activeName} (${activePresentation || activeSku}) x${quantity}`,
                     sku: activeSku,
-                  },
-                  true
-                )}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={handleWhatsApp}
+                    sourceLocation: "product_detail_primary",
+                  });
+                }}
                 className="w-full inline-flex items-center justify-center gap-3 py-4 px-6 rounded-2xl bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-700 hover:to-emerald-600 text-white font-black text-sm sm:text-base shadow-md hover:shadow-lg transition-all duration-200 transform hover:-translate-y-0.5 cursor-pointer text-center"
               >
                 <MessageCircle className="w-5 h-5 fill-current" />
-                <span>Pedir por WhatsApp Directo (098 389 3231)</span>
-              </a>
+                <span>🎁 Cotizar + Reclamar Regalo (Elegir WhatsApp)</span>
+              </button>
 
               {/* Secondary Add-to-Quote-Basket + Combo Inquiry */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
@@ -403,17 +371,21 @@ export default function ProductDetailShowcase({ product }: ProductDetailShowcase
                   )}
                 </button>
 
-                <a
-                  href={`https://wa.me/593983893231?text=${encodeURIComponent(
-                    `Hola LiderPro Pedernales, estoy viendo ${activeName} (Cód: ${activeSku}${activePrice ? `, Precio: ${activePrice}` : ""}). Deseo saber qué Combo Cambio Mannol completo me recomiendan para mi vehículo.`
-                  )}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 py-3.5 px-4 rounded-xl bg-amber-50 hover:bg-[#FFC500] text-amber-950 hover:text-slate-950 border-2 border-amber-300 text-xs font-black uppercase tracking-wider transition-all text-center"
+                <button
+                  type="button"
+                  onClick={() =>
+                    openSelector({
+                      itemTitle: `Combo Cambio Mannol con ${activeName}`,
+                      customMessage: `¡Hola LiderPro Pedernales! Estoy viendo ${activeName} (Cód: ${activeSku}). Deseo armar mi ¡Combo Cambio MANNOL! con filtro y reclamar mi regalo (MANNOL 6145 Cockpit Care + Esponja).`,
+                      sku: activeSku,
+                      sourceLocation: "product_detail_combo",
+                    })
+                  }
+                  className="inline-flex items-center justify-center gap-2 py-3.5 px-4 rounded-xl bg-amber-50 hover:bg-[#FFC500] text-amber-950 hover:text-slate-950 border-2 border-amber-300 text-xs font-black uppercase tracking-wider transition-all text-center cursor-pointer"
                 >
                   <Sparkles className="w-4 h-4 text-amber-600" />
                   <span>Armar Combo con Filtro</span>
-                </a>
+                </button>
               </div>
 
               {inBasketItem && (

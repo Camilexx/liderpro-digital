@@ -5,9 +5,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { MessageCircle, Package, Plus, Check, ShoppingBag, ArrowUpRight, Sparkles } from "lucide-react";
 import { Product, ProductVariant } from "@/data/products";
-import { buildWhatsAppLink } from "@/lib/whatsapp";
 import { trackEvent } from "@/lib/analytics";
 import { useQuoteBasket } from "@/context/QuoteBasketContext";
+import { useWhatsAppSelector } from "@/context/WhatsAppSelectorContext";
 
 interface ProductCardProps {
   product: Product;
@@ -23,6 +23,7 @@ export default function ProductCard({ product, priority = false }: ProductCardPr
   const [imgError, setImgError] = useState(false);
   const [justAdded, setJustAdded] = useState(false);
   const { addItem, items } = useQuoteBasket();
+  const { openSelector } = useWhatsAppSelector();
 
   const activeSku = selectedVariant ? (selectedVariant.officialSku || selectedVariant.sku) : product.sku;
   const activeImage = selectedVariant?.imageUrl || product.imageUrl;
@@ -151,44 +152,21 @@ export default function ProductCard({ product, priority = false }: ProductCardPr
             </Link>
           </h3>
 
-          {/* Official Price Block — Prominent & Clear for Senior Readability */}
-          <div className="bg-slate-50 border border-slate-200/90 rounded-xl px-3.5 py-2.5 flex items-center justify-between gap-2">
-            {isPriced ? (
-              <>
-                <div>
-                  <span className="block text-[10px] font-extrabold uppercase tracking-wider text-slate-500">
-                    Precio Oficial Local
-                  </span>
-                  <span className="text-xl sm:text-2xl font-black text-[#061B40] tracking-tight">
-                    {activePrice}
-                  </span>
-                </div>
-                <div className="text-right">
-                  <span className="inline-block px-2 py-0.5 bg-emerald-100 text-emerald-900 text-[10px] font-black rounded-md border border-emerald-300">
-                    ✓ Stock Activo
-                  </span>
-                  {presentation && (
-                    <span className="block text-[10.5px] font-bold text-slate-600 mt-0.5">
-                      {presentation}
-                    </span>
-                  )}
-                </div>
-              </>
-            ) : (
-              <div className="flex items-center justify-between w-full">
-                <div>
-                  <span className="block text-[10px] font-extrabold uppercase tracking-wider text-slate-500">
-                    Disponibilidad
-                  </span>
-                  <span className="text-xs sm:text-sm font-black text-[#0A3B8C]">
-                    Consultar en mostrador
-                  </span>
-                </div>
-                <span className="px-2 py-0.5 bg-amber-100 text-amber-900 text-[10px] font-black rounded-md border border-amber-300">
-                  Bajo Pedido
-                </span>
-              </div>
-            )}
+          {/* Official Gift & Stock Block — 100% Zero Public Prices */}
+          <div className="bg-[#09152B] border border-[#FACC15]/40 rounded-xl px-3.5 py-2.5 flex items-center justify-between gap-2 text-white">
+            <div>
+              <span className="block text-[10px] font-extrabold uppercase tracking-wider text-[#FACC15]">
+                🎁 Cotizar + Reclamar Regalo
+              </span>
+              <span className="text-xs sm:text-sm font-black text-white tracking-tight">
+                {presentation ? `Presentación: ${presentation}` : "Disponible en Bodega"}
+              </span>
+            </div>
+            <div className="text-right shrink-0">
+              <span className="inline-block px-2 py-0.5 bg-[#22C55E]/20 text-[#22C55E] text-[10px] font-black rounded-md border border-[#22C55E]/40">
+                ✓ Stock Activo
+              </span>
+            </div>
           </div>
 
           <p className="text-xs sm:text-[13px] text-slate-600 line-clamp-2 leading-relaxed min-h-[2.2rem]">
@@ -223,15 +201,13 @@ export default function ProductCard({ product, priority = false }: ProductCardPr
                       }`}
                     >
                       <span className="leading-tight">{cleanPres}</span>
-                      {v.priceEstimate && (
-                        <span
-                          className={`text-[10px] font-extrabold ${
-                            isSelected ? "text-[#FFC500]" : "text-[#0A3B8C]"
-                          }`}
-                        >
-                          {v.price !== null ? v.priceEstimate : "Consultar"}
-                        </span>
-                      )}
+                      <span
+                        className={`text-[9.5px] font-extrabold ${
+                          isSelected ? "text-[#FACC15]" : "text-emerald-700"
+                        }`}
+                      >
+                        ✓ Disponible
+                      </span>
                     </button>
                   );
                 })}
@@ -245,25 +221,21 @@ export default function ProductCard({ product, priority = false }: ProductCardPr
       <div className="p-4 sm:p-5 pt-2 space-y-2">
         {/* Primary Row: Pedir por WhatsApp & Ver Ficha */}
         <div className="grid grid-cols-12 gap-2">
-          <a
-            href={buildWhatsAppLink(
-              "product",
-              {
-                brand: product.brand,
-                productName: `${product.name}${activePrice ? ` (${activePrice})` : ""}`,
-                presentation: presentation || undefined,
+          <button
+            type="button"
+            onClick={() => {
+              handleWhatsApp();
+              openSelector({
+                itemTitle: `${product.name}${presentation ? ` (${presentation})` : ""}`,
                 sku: activeSku,
-              },
-              true
-            )}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={handleWhatsApp}
-            className="col-span-7 btn-whatsapp !py-3 !px-3 !text-xs font-black uppercase tracking-wider rounded-xl flex items-center justify-center gap-1.5 shadow-sm min-h-[44px]"
+                sourceLocation: "product_card",
+              });
+            }}
+            className="col-span-7 btn-whatsapp !py-3 !px-2.5 !text-[11px] font-black uppercase tracking-tight rounded-xl flex items-center justify-center gap-1.5 shadow-sm min-h-[44px] cursor-pointer"
           >
             <MessageCircle className="w-4 h-4 shrink-0" />
-            <span>Pedir WhatsApp</span>
-          </a>
+            <span>🎁 Cotizar + Regalo</span>
+          </button>
 
           <Link
             href={`/productos/${product.slug}`}
@@ -305,18 +277,22 @@ export default function ProductCard({ product, priority = false }: ProductCardPr
             )}
           </button>
 
-          <a
-            href={`https://wa.me/593983893231?text=${encodeURIComponent(
-              `Hola LiderPro Pedernales, estoy viendo ${product.name} (${presentation || activeSku}${activePrice ? ` - ${activePrice}` : ""}). ¿Me ayudan confirmando si le queda a mi vehículo o armando mi Combo Cambio Mannol?`
-            )}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full py-2.5 px-2.5 text-[11px] font-black uppercase tracking-tight rounded-xl bg-amber-50 hover:bg-[#FFC500] text-amber-950 hover:text-slate-950 border border-amber-300/90 flex items-center justify-center gap-1 transition-all min-h-[40px]"
+          <button
+            type="button"
+            onClick={() =>
+              openSelector({
+                itemTitle: `${product.name} (${presentation || activeSku})`,
+                customMessage: `¡Hola LiderPro! Vengo de la web y estoy viendo ${product.name} (${presentation || activeSku}). ¿Me ayudan confirmando si aplica a mi vehículo y cómo reclamar mi regalo de cortesía?`,
+                sku: activeSku,
+                sourceLocation: "product_card_compatibility",
+              })
+            }
+            className="w-full py-2.5 px-2.5 text-[11px] font-black uppercase tracking-tight rounded-xl bg-amber-50 hover:bg-[#FFC500] text-amber-950 hover:text-slate-950 border border-amber-300/90 flex items-center justify-center gap-1 transition-all min-h-[40px] cursor-pointer"
             title="Consultar si este producto aplica para tu vehículo o combo"
           >
             <Sparkles className="w-3.5 h-3.5 text-amber-600 shrink-0" />
             <span>¿Aplica a mi auto?</span>
-          </a>
+          </button>
         </div>
       </div>
     </div>

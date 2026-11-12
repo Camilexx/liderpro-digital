@@ -102,7 +102,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Líquido refrigerante y anticongelante MANNOL REFRIGERANTE AZUL VIDA UTIL 3 AÑOS garantizado por MANNOL. Formulado con inhibidores orgánicos que previenen la corrosión galvánica, la formación de sarro y el recalentamiento en motores que operan bajo condiciones climáticas cálidas como la costa ecuatoriana.",
-    "priceEstimate": "$4.39",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza según el tamaño requerido.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -119,8 +118,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Litro",
         "stock": 10,
         "imageUrl": "/images/products/variant-mannol-mannol-refrigerante-azul-vida-util-3-años-lp-lur-002-c3.png",
-        "price": 4.39,
-        "priceEstimate": "$4.39",
+        "price": null,
         "officialSku": "012MN4011-1"
       },
       {
@@ -130,8 +128,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Galón / 5L",
         "stock": 10,
         "imageUrl": "/images/products/variant-mannol-mannol-refrigerante-azul-vida-util-3-años-lp-lur-002-c4.png",
-        "price": 18.48,
-        "priceEstimate": "$18.48",
+        "price": null,
         "officialSku": "012MN4011-5"
       }
     ],
@@ -185,7 +182,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "MANNOL REFRIGERANTE AZUL VIDA UTIL 3 AÑOS",
-    "price": 4.39
+    "price": null
   },
   {
     "id": "mannol-mannol-refrigerante-rojo-vida-util-5-años-lp-lur-003",
@@ -214,7 +211,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Líquido refrigerante y anticongelante MANNOL REFRIGERANTE ROJO VIDA UTIL 5 AÑOS garantizado por MANNOL. Formulado con inhibidores orgánicos que previenen la corrosión galvánica, la formación de sarro y el recalentamiento en motores que operan bajo condiciones climáticas cálidas como la costa ecuatoriana.",
-    "priceEstimate": "$4.78",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza según el tamaño requerido.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -231,8 +227,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Litro",
         "stock": 10,
         "imageUrl": "/images/products/variant-mannol-mannol-refrigerante-rojo-vida-util-5-años-lp-lur-003-c3.png",
-        "price": 4.78,
-        "priceEstimate": "$4.78",
+        "price": null,
         "officialSku": "012MN4012-1"
       },
       {
@@ -242,8 +237,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Galón / 5L",
         "stock": 10,
         "imageUrl": "/images/products/variant-mannol-mannol-refrigerante-rojo-vida-util-5-años-lp-lur-003-c4.png",
-        "price": 20.39,
-        "priceEstimate": "$20.39",
+        "price": null,
         "officialSku": "012MN4012-5"
       }
     ],
@@ -297,7 +291,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "MANNOL REFRIGERANTE ROJO VIDA UTIL 5 AÑOS",
-    "price": 4.78
+    "price": null
   },
   {
     "id": "mannol-mannol-refrigerante-verde-vida-util-3-años-lp-lur-004",
@@ -326,7 +320,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Líquido refrigerante y anticongelante MANNOL REFRIGERANTE VERDE VIDA UTIL 3 AÑOS garantizado por MANNOL. Formulado con inhibidores orgánicos que previenen la corrosión galvánica, la formación de sarro y el recalentamiento en motores que operan bajo condiciones climáticas cálidas como la costa ecuatoriana.",
-    "priceEstimate": "$4.39",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza según el tamaño requerido.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -343,8 +336,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Litro",
         "stock": 10,
         "imageUrl": "/images/products/variant-mannol-mannol-refrigerante-verde-vida-util-3-años-lp-lur-004-c3.png",
-        "price": 4.39,
-        "priceEstimate": "$4.39",
+        "price": null,
         "officialSku": "012MN4013-1"
       },
       {
@@ -354,8 +346,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Galón / 5L",
         "stock": 10,
         "imageUrl": "/images/products/variant-mannol-mannol-refrigerante-verde-vida-util-3-años-lp-lur-004-c4.png",
-        "price": 18.48,
-        "priceEstimate": "$18.48",
+        "price": null,
         "officialSku": "012MN4013-5"
       }
     ],
@@ -409,7 +400,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "MANNOL REFRIGERANTE VERDE VIDA UTIL 3 AÑOS",
-    "price": 4.39
+    "price": null
   },
   {
     "id": "mannol-mannol-refrigerante-naranja-vida-util-5-años-lp-lur-005",
@@ -438,7 +429,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Líquido refrigerante y anticongelante MANNOL REFRIGERANTE NARANJA VIDA UTIL 5 AÑOS garantizado por MANNOL. Formulado con inhibidores orgánicos que previenen la corrosión galvánica, la formación de sarro y el recalentamiento en motores que operan bajo condiciones climáticas cálidas como la costa ecuatoriana.",
-    "priceEstimate": "$4.78",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza según el tamaño requerido.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -455,8 +445,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Litro",
         "stock": 10,
         "imageUrl": "/images/products/variant-mannol-mannol-refrigerante-naranja-vida-util-5-años-lp-lur-005-c3.png",
-        "price": 4.78,
-        "priceEstimate": "$4.78",
+        "price": null,
         "officialSku": "012MN4016-1"
       },
       {
@@ -466,8 +455,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Galón / 5L",
         "stock": 10,
         "imageUrl": "/images/products/variant-mannol-mannol-refrigerante-naranja-vida-util-5-años-lp-lur-005-c4.png",
-        "price": 20.39,
-        "priceEstimate": "$20.39",
+        "price": null,
         "officialSku": "012MN4016-5"
       }
     ],
@@ -521,7 +509,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "MANNOL REFRIGERANTE NARANJA VIDA UTIL 5 AÑOS",
-    "price": 4.78
+    "price": null
   },
   {
     "id": "mannol-mannol-ts-4-shpd-15w40-extra-lp-lur-006",
@@ -551,7 +539,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Lubricante automotriz oficial MANNOL TS-4 SHPD 15W40 EXTRA marca MANNOL. Formulado para otorgar una película protectora duradera que reduce el desgaste prematuro de pistones, cilindros y rodamientos bajo condiciones de trabajo severo y altas temperaturas ambientales en Pedernales y la provincia de Manabí.",
-    "priceEstimate": "$9.09",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza según el tamaño requerido.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -568,8 +555,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Litro",
         "stock": 10,
         "imageUrl": "/images/products/variant-mannol-mannol-ts-4-shpd-15w40-extra-lp-lur-006-c3.png",
-        "price": 9.09,
-        "priceEstimate": "$9.09",
+        "price": null,
         "officialSku": "012MN7104-1"
       },
       {
@@ -579,8 +565,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Galón / 5L",
         "stock": 10,
         "imageUrl": "/images/products/variant-mannol-mannol-ts-4-shpd-15w40-extra-lp-lur-006-c4.png",
-        "price": 39.78,
-        "priceEstimate": "$39.78",
+        "price": null,
         "officialSku": "012MN7104-5A"
       }
     ],
@@ -640,7 +625,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL TS-4 SHPD 15W40 EXTRA",
-    "price": 9.09
+    "price": null
   },
   {
     "id": "mannol-mannol-safari-20w50-lp-lur-007",
@@ -670,7 +655,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Lubricante automotriz oficial MANNOL SAFARI 20W50 marca MANNOL. Formulado para otorgar una película protectora duradera que reduce el desgaste prematuro de pistones, cilindros y rodamientos bajo condiciones de trabajo severo y altas temperaturas ambientales en Pedernales y la provincia de Manabí.",
-    "priceEstimate": "$9.30",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza según el tamaño requerido.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -687,8 +671,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Litro",
         "stock": 10,
         "imageUrl": "/images/products/variant-mannol-mannol-safari-20w50-lp-lur-007-c3.png",
-        "price": 9.3,
-        "priceEstimate": "$9.30",
+        "price": null,
         "officialSku": "012MN7404-1A"
       },
       {
@@ -698,8 +681,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Galón / 5L",
         "stock": 10,
         "imageUrl": "/images/products/variant-mannol-mannol-safari-20w50-lp-lur-007-c4.png",
-        "price": 31.13,
-        "priceEstimate": "$31.13",
+        "price": null,
         "officialSku": "012MN7404-4A"
       }
     ],
@@ -741,7 +723,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL SAFARI 20W50",
-    "price": 9.3
+    "price": null
   },
   {
     "id": "mannol-mannol-classic-10w40-lp-lur-008",
@@ -771,7 +753,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Lubricante automotriz oficial MANNOL CLASSIC 10W40 marca MANNOL. Formulado para otorgar una película protectora duradera que reduce el desgaste prematuro de pistones, cilindros y rodamientos bajo condiciones de trabajo severo y altas temperaturas ambientales en Pedernales y la provincia de Manabí.",
-    "priceEstimate": "$9.61",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza según el tamaño requerido.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -788,8 +769,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Litro",
         "stock": 10,
         "imageUrl": "/images/products/variant-mannol-mannol-classic-10w40-lp-lur-008-c3.png",
-        "price": 9.61,
-        "priceEstimate": "$9.61",
+        "price": null,
         "officialSku": "012MN7501-1"
       },
       {
@@ -799,8 +779,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Galón / 5L",
         "stock": 10,
         "imageUrl": "/images/products/variant-mannol-mannol-classic-10w40-lp-lur-008-c4.png",
-        "price": 34.57,
-        "priceEstimate": "$34.57",
+        "price": null,
         "officialSku": "012MN7501-4"
       }
     ],
@@ -842,7 +821,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL CLASSIC 10W40",
-    "price": 9.61
+    "price": null
   },
   {
     "id": "mannol-mannol-cj-x-20-lt-special-plus-10w30-lp-lur-009",
@@ -872,7 +851,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Lubricante automotriz oficial MANNOL CJ X 20 LT SPECIAL PLUS 10W30 marca MANNOL. Formulado para otorgar una película protectora duradera que reduce el desgaste prematuro de pistones, cilindros y rodamientos bajo condiciones de trabajo severo y altas temperaturas ambientales en Pedernales y la provincia de Manabí.",
-    "priceEstimate": "$9.83",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza según el tamaño requerido.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -889,8 +867,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Litro",
         "stock": 10,
         "imageUrl": "/images/products/variant-mannol-mannol-cj-x-20-lt-special-plus-10w30-lp-lur-009-c3.png",
-        "price": 9.83,
-        "priceEstimate": "$9.83",
+        "price": null,
         "officialSku": "012MN7512-1A"
       },
       {
@@ -900,8 +877,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Galón / 5L",
         "stock": 10,
         "imageUrl": "/images/products/variant-mannol-mannol-cj-x-20-lt-special-plus-10w30-lp-lur-009-c4.png",
-        "price": 32.22,
-        "priceEstimate": "$32.22",
+        "price": null,
         "officialSku": "012MN7512-4A"
       }
     ],
@@ -949,7 +925,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL CJ X 20 LT SPECIAL PLUS 10W30",
-    "price": 9.83
+    "price": null
   },
   {
     "id": "mannol-mannol-chevrolet-opel-oem-5w30-lp-lur-010",
@@ -979,7 +955,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Lubricante automotriz oficial MANNOL CHEVROLET OPEL O.E.M 5W30 marca MANNOL. Formulado para otorgar una película protectora duradera que reduce el desgaste prematuro de pistones, cilindros y rodamientos bajo condiciones de trabajo severo y altas temperaturas ambientales en Pedernales y la provincia de Manabí.",
-    "priceEstimate": "$14.78",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza según el tamaño requerido.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -996,8 +971,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Litro",
         "stock": 10,
         "imageUrl": "/images/products/variant-mannol-mannol-chevrolet-opel-oem-5w30-lp-lur-010-c3.png",
-        "price": 14.78,
-        "priceEstimate": "$14.78",
+        "price": null,
         "officialSku": "012MN7701-1"
       },
       {
@@ -1008,7 +982,6 @@ export const PRODUCTS: Product[] = [
         "stock": 10,
         "imageUrl": "/images/products/variant-mannol-mannol-chevrolet-opel-oem-5w30-lp-lur-010-c4.png",
         "price": null,
-        "priceEstimate": "Consultar en mostrador",
         "officialSku": null
       }
     ],
@@ -1062,7 +1035,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL CHEVROLET OPEL O.E.M 5W30",
-    "price": 14.78
+    "price": null
   },
   {
     "id": "mannol-mannol-toyota-lexus-oem-5w30-metálico-lp-lur-011",
@@ -1092,7 +1065,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Lubricante automotriz oficial MANNOL TOYOTA LEXUS O.E.M 5W30 METÁLICO marca MANNOL. Formulado para otorgar una película protectora duradera que reduce el desgaste prematuro de pistones, cilindros y rodamientos bajo condiciones de trabajo severo y altas temperaturas ambientales en Pedernales y la provincia de Manabí.",
-    "priceEstimate": "$14.78",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza según el tamaño requerido.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -1109,8 +1081,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Litro",
         "stock": 10,
         "imageUrl": "/images/products/variant-mannol-mannol-toyota-lexus-oem-5w30-metálico-lp-lur-011-c3.png",
-        "price": 14.78,
-        "priceEstimate": "$14.78",
+        "price": null,
         "officialSku": "012MN7709-1"
       },
       {
@@ -1120,8 +1091,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Galón / 5L",
         "stock": 10,
         "imageUrl": "/images/products/variant-mannol-mannol-toyota-lexus-oem-5w30-metálico-lp-lur-011-c4.png",
-        "price": 54.65,
-        "priceEstimate": "$54.65",
+        "price": null,
         "officialSku": "012MN7709-4"
       }
     ],
@@ -1175,7 +1145,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL TOYOTA LEXUS O.E.M 5W30 METÁLICO",
-    "price": 14.78
+    "price": null
   },
   {
     "id": "mannol-mannol-hyundai-kia-oem-5w30-metálico-lp-lur-012",
@@ -1205,7 +1175,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Lubricante automotriz oficial MANNOL HYUNDAI KIA O.E.M 5W30 METÁLICO marca MANNOL. Formulado para otorgar una película protectora duradera que reduce el desgaste prematuro de pistones, cilindros y rodamientos bajo condiciones de trabajo severo y altas temperaturas ambientales en Pedernales y la provincia de Manabí.",
-    "priceEstimate": "$13.48",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza según el tamaño requerido.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -1222,8 +1191,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Litro",
         "stock": 10,
         "imageUrl": "/images/products/variant-mannol-mannol-hyundai-kia-oem-5w30-metálico-lp-lur-012-c3.png",
-        "price": 13.48,
-        "priceEstimate": "$13.48",
+        "price": null,
         "officialSku": "012MN7713-1"
       },
       {
@@ -1233,8 +1201,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Galón / 5L",
         "stock": 10,
         "imageUrl": "/images/products/variant-mannol-mannol-hyundai-kia-oem-5w30-metálico-lp-lur-012-c4.png",
-        "price": 46.39,
-        "priceEstimate": "$46.39",
+        "price": null,
         "officialSku": "012MN7713-4"
       }
     ],
@@ -1288,7 +1255,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL HYUNDAI KIA O.E.M 5W30 METÁLICO",
-    "price": 13.48
+    "price": null
   },
   {
     "id": "mannol-mannol-ceramic-5w30-lp-lur-013",
@@ -1318,7 +1285,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Lubricante automotriz oficial MANNOL CERAMIC 5W30 marca MANNOL. Formulado para otorgar una película protectora duradera que reduce el desgaste prematuro de pistones, cilindros y rodamientos bajo condiciones de trabajo severo y altas temperaturas ambientales en Pedernales y la provincia de Manabí.",
-    "priceEstimate": "$15.57",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza según el tamaño requerido.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -1335,8 +1301,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Litro",
         "stock": 10,
         "imageUrl": "/images/products/variant-mannol-mannol-ceramic-5w30-lp-lur-013-c3.png",
-        "price": 15.57,
-        "priceEstimate": "$15.57",
+        "price": null,
         "officialSku": "012MN7720-1"
       },
       {
@@ -1346,8 +1311,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Galón / 5L",
         "stock": 10,
         "imageUrl": "/images/products/variant-mannol-mannol-ceramic-5w30-lp-lur-013-c4.png",
-        "price": 52.91,
-        "priceEstimate": "$52.91",
+        "price": null,
         "officialSku": "012MN7720-4"
       }
     ],
@@ -1401,7 +1365,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL CERAMIC 5W30",
-    "price": 15.57
+    "price": null
   },
   {
     "id": "mannol-mannol-ceramic-pro-10w40-lp-lur-014",
@@ -1431,7 +1395,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Lubricante automotriz oficial MANNOL CERAMIC PRO 10W40 marca MANNOL. Formulado para otorgar una película protectora duradera que reduce el desgaste prematuro de pistones, cilindros y rodamientos bajo condiciones de trabajo severo y altas temperaturas ambientales en Pedernales y la provincia de Manabí.",
-    "priceEstimate": "$39.55",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza según el tamaño requerido.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -1449,7 +1412,6 @@ export const PRODUCTS: Product[] = [
         "stock": 10,
         "imageUrl": "/images/products/variant-mannol-mannol-ceramic-pro-10w40-lp-lur-014-c3.png",
         "price": null,
-        "priceEstimate": "Consultar en mostrador",
         "officialSku": null
       },
       {
@@ -1459,8 +1421,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Galón / 5L",
         "stock": 10,
         "imageUrl": "/images/products/variant-mannol-mannol-ceramic-pro-10w40-lp-lur-014-c4.png",
-        "price": 39.55,
-        "priceEstimate": "$39.55",
+        "price": null,
         "officialSku": "012MN7726-5"
       }
     ],
@@ -1502,7 +1463,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL CERAMIC PRO 10W40",
-    "price": 39.55
+    "price": null
   },
   {
     "id": "mannol-mannol-cj-x-20-lt-4takt-motorbike-10w40-lp-lur-015",
@@ -1532,7 +1493,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Lubricante automotriz oficial MANNOL CJ X 20 LT 4TAKT MOTORBIKE 10W40 marca MANNOL. Formulado para otorgar una película protectora duradera que reduce el desgaste prematuro de pistones, cilindros y rodamientos bajo condiciones de trabajo severo y altas temperaturas ambientales en Pedernales y la provincia de Manabí.",
-    "priceEstimate": "$12.52",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -1578,7 +1538,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL CJ X 20 LT 4TAKT MOTORBIKE 10W40",
-    "price": 12.52
+    "price": null
   },
   {
     "id": "mannol-mannol-cj-x-20-und-4takt-motorbike-10w50-lp-lur-016",
@@ -1608,7 +1568,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Lubricante automotriz oficial MANNOL CJ X 20 UND 4TAKT MOTORBIKE 10W50 marca MANNOL. Formulado para otorgar una película protectora duradera que reduce el desgaste prematuro de pistones, cilindros y rodamientos bajo condiciones de trabajo severo y altas temperaturas ambientales en Pedernales y la provincia de Manabí.",
-    "priceEstimate": "$11.43",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -1654,7 +1613,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL CJ X 20 UND 4TAKT MOTORBIKE 10W50",
-    "price": 11.43
+    "price": null
   },
   {
     "id": "mannol-mannol-powerbike-15w50-metálico-lp-lur-017",
@@ -1684,7 +1643,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Lubricante automotriz oficial MANNOL POWERBIKE 15W50 METÁLICO marca MANNOL. Formulado para otorgar una película protectora duradera que reduce el desgaste prematuro de pistones, cilindros y rodamientos bajo condiciones de trabajo severo y altas temperaturas ambientales en Pedernales y la provincia de Manabí.",
-    "priceEstimate": "$12.43",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -1730,7 +1688,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL POWERBIKE 15W50 METÁLICO",
-    "price": 12.43
+    "price": null
   },
   {
     "id": "mannol-mannol-diesel-turbo-5w40-lp-lur-018",
@@ -1760,7 +1718,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Lubricante automotriz oficial MANNOL DIESEL TURBO 5W40 marca MANNOL. Formulado para otorgar una película protectora duradera que reduce el desgaste prematuro de pistones, cilindros y rodamientos bajo condiciones de trabajo severo y altas temperaturas ambientales en Pedernales y la provincia de Manabí.",
-    "priceEstimate": "$12.30",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza según el tamaño requerido.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -1777,8 +1734,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Litro",
         "stock": 10,
         "imageUrl": "/images/products/variant-mannol-mannol-diesel-turbo-5w40-lp-lur-018-c3.png",
-        "price": 12.3,
-        "priceEstimate": "$12.30",
+        "price": null,
         "officialSku": "012MN7904-1"
       },
       {
@@ -1788,8 +1744,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Galón / 5L",
         "stock": 10,
         "imageUrl": "/images/products/variant-mannol-mannol-diesel-turbo-5w40-lp-lur-018-c4.png",
-        "price": 52.87,
-        "priceEstimate": "$52.87",
+        "price": null,
         "officialSku": "012MN7904-5"
       }
     ],
@@ -1825,7 +1780,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL DIESEL TURBO 5W40",
-    "price": 12.3
+    "price": null
   },
   {
     "id": "mannol-mannol-energy-ultra-jp-5w20-lp-lur-019",
@@ -1855,7 +1810,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Lubricante automotriz oficial MANNOL ENERGY ULTRA JP 5W20 marca MANNOL. Formulado para otorgar una película protectora duradera que reduce el desgaste prematuro de pistones, cilindros y rodamientos bajo condiciones de trabajo severo y altas temperaturas ambientales en Pedernales y la provincia de Manabí.",
-    "priceEstimate": "$13.43",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza según el tamaño requerido.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -1872,8 +1826,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Litro",
         "stock": 10,
         "imageUrl": "/images/products/variant-mannol-mannol-energy-ultra-jp-5w20-lp-lur-019-c3.png",
-        "price": 13.43,
-        "priceEstimate": "$13.43",
+        "price": null,
         "officialSku": "012MN7906-1A"
       },
       {
@@ -1883,8 +1836,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Galón / 5L",
         "stock": 10,
         "imageUrl": "/images/products/variant-mannol-mannol-energy-ultra-jp-5w20-lp-lur-019-c4.png",
-        "price": 49.09,
-        "priceEstimate": "$49.09",
+        "price": null,
         "officialSku": "012MN7906-4A"
       }
     ],
@@ -1938,7 +1890,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL ENERGY ULTRA JP 5W20",
-    "price": 13.43
+    "price": null
   },
   {
     "id": "mannol-mannol-diesel-tdi-5w30-lp-lur-020",
@@ -1968,7 +1920,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Lubricante automotriz oficial MANNOL DIESEL TDI 5W30 marca MANNOL. Formulado para otorgar una película protectora duradera que reduce el desgaste prematuro de pistones, cilindros y rodamientos bajo condiciones de trabajo severo y altas temperaturas ambientales en Pedernales y la provincia de Manabí.",
-    "priceEstimate": "$14.26",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza según el tamaño requerido.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -1985,8 +1936,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Litro",
         "stock": 10,
         "imageUrl": "/images/products/variant-mannol-mannol-diesel-tdi-5w30-lp-lur-020-c3.png",
-        "price": 14.26,
-        "priceEstimate": "$14.26",
+        "price": null,
         "officialSku": "012MN7909-1"
       },
       {
@@ -1996,8 +1946,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Galón / 5L",
         "stock": 10,
         "imageUrl": "/images/products/variant-mannol-mannol-diesel-tdi-5w30-lp-lur-020-c4.png",
-        "price": 61.61,
-        "priceEstimate": "$61.61",
+        "price": null,
         "officialSku": "012MN7909-5"
       }
     ],
@@ -2051,7 +2000,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL DIESEL TDI 5W30",
-    "price": 14.26
+    "price": null
   },
   {
     "id": "mannol-mannol-energy-formula-jp-5w30-metálico-lp-lur-021",
@@ -2081,7 +2030,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Lubricante automotriz oficial MANNOL ENERGY FORMULA JP 5W30 METÁLICO marca MANNOL. Formulado para otorgar una película protectora duradera que reduce el desgaste prematuro de pistones, cilindros y rodamientos bajo condiciones de trabajo severo y altas temperaturas ambientales en Pedernales y la provincia de Manabí.",
-    "priceEstimate": "$10.83",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza según el tamaño requerido.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -2098,8 +2046,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Litro",
         "stock": 10,
         "imageUrl": "/images/products/variant-mannol-mannol-energy-formula-jp-5w30-metálico-lp-lur-021-c3.png",
-        "price": 10.83,
-        "priceEstimate": "$10.83",
+        "price": null,
         "officialSku": "012MN7914-1A"
       },
       {
@@ -2109,8 +2056,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Galón / 5L",
         "stock": 10,
         "imageUrl": "/images/products/variant-mannol-mannol-energy-formula-jp-5w30-metálico-lp-lur-021-c4.png",
-        "price": 38.09,
-        "priceEstimate": "$38.09",
+        "price": null,
         "officialSku": "012MN7914-4A"
       }
     ],
@@ -2164,7 +2110,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL ENERGY FORMULA JP 5W30 METÁLICO",
-    "price": 10.83
+    "price": null
   },
   {
     "id": "mannol-mannol-for-chinese-cars-5w30-lp-lur-022",
@@ -2194,7 +2140,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Lubricante automotriz oficial MANNOL FOR CHINESE CARS 5W30 marca MANNOL. Formulado para otorgar una película protectora duradera que reduce el desgaste prematuro de pistones, cilindros y rodamientos bajo condiciones de trabajo severo y altas temperaturas ambientales en Pedernales y la provincia de Manabí.",
-    "priceEstimate": "$11.96",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza según el tamaño requerido.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -2211,8 +2156,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Litro",
         "stock": 10,
         "imageUrl": "/images/products/variant-mannol-mannol-for-chinese-cars-5w30-lp-lur-022-c3.png",
-        "price": 11.96,
-        "priceEstimate": "$11.96",
+        "price": null,
         "officialSku": "012MN7924-1"
       },
       {
@@ -2222,8 +2166,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Galón / 5L",
         "stock": 10,
         "imageUrl": "/images/products/variant-mannol-mannol-for-chinese-cars-5w30-lp-lur-022-c4.png",
-        "price": 41.22,
-        "priceEstimate": "$41.22",
+        "price": null,
         "officialSku": "012MN7924-4"
       }
     ],
@@ -2277,7 +2220,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL FOR CHINESE CARS 5W30",
-    "price": 11.96
+    "price": null
   },
   {
     "id": "mannol-mannol-fwd-75w85-gl4-lp-lur-023",
@@ -2307,7 +2250,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Lubricante automotriz oficial MANNOL FWD 75W85 GL4 marca MANNOL. Formulado para otorgar una película protectora duradera que reduce el desgaste prematuro de pistones, cilindros y rodamientos bajo condiciones de trabajo severo y altas temperaturas ambientales en Pedernales y la provincia de Manabí.",
-    "priceEstimate": "$8.70",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza según el tamaño requerido.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -2324,8 +2266,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Litro",
         "stock": 10,
         "imageUrl": "/images/products/variant-mannol-mannol-fwd-75w85-gl4-lp-lur-023-c3.png",
-        "price": 8.7,
-        "priceEstimate": "$8.70",
+        "price": null,
         "officialSku": "012MN8101-1A"
       },
       {
@@ -2335,8 +2276,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Galón / 5L",
         "stock": 10,
         "imageUrl": "/images/products/variant-mannol-mannol-fwd-75w85-gl4-lp-lur-023-c4.png",
-        "price": 32.35,
-        "priceEstimate": "$32.35",
+        "price": null,
         "officialSku": "012MN8101-4"
       }
     ],
@@ -2384,7 +2324,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL FWD 75W85 GL4",
-    "price": 8.7
+    "price": null
   },
   {
     "id": "mannol-mannol-hypoid-lsd-85w140-gl5-ls-deslizamiento-limitado-lp-lur-024",
@@ -2414,7 +2354,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Lubricante automotriz oficial MANNOL HYPOID LSD 85W140 GL5 LS (DESLIZAMIENTO LIMITADO) marca MANNOL. Formulado para otorgar una película protectora duradera que reduce el desgaste prematuro de pistones, cilindros y rodamientos bajo condiciones de trabajo severo y altas temperaturas ambientales en Pedernales y la provincia de Manabí.",
-    "priceEstimate": "$31.65",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza según el tamaño requerido.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -2431,8 +2370,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Galón / 5L",
         "stock": 10,
         "imageUrl": "/images/products/variant-mannol-mannol-hypoid-lsd-85w140-gl5-ls-deslizamiento-limitado-lp-lur-024-c4.png",
-        "price": 31.65,
-        "priceEstimate": "$31.65",
+        "price": null,
         "officialSku": "012MN8105-4"
       },
       {
@@ -2442,8 +2380,7 @@ export const PRODUCTS: Product[] = [
         "volume": "Caneca 5 GL",
         "stock": 10,
         "imageUrl": "/images/products/variant-mannol-mannol-hypoid-lsd-85w140-gl5-ls-deslizamiento-limitado-lp-lur-024-c5.png",
-        "price": 112.09,
-        "priceEstimate": "$112.09",
+        "price": null,
         "officialSku": "012MN8105-20"
       }
     ],
@@ -2479,7 +2416,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL HYPOID LSD 85W140 GL5 LS (DESLIZAMIENTO LIMITADO)",
-    "price": 31.65
+    "price": null
   },
   {
     "id": "mannol-mannol-hypoid-getriebeoel-80w90-gl4-gl5-ls-deslizamiento-limitado-lp-lur-025",
@@ -2509,7 +2446,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Lubricante automotriz oficial MANNOL HYPOID GETRIEBEOEL 80W90 GL4 GL5 LS (DESLIZAMIENTO LIMITADO) marca MANNOL. Formulado para otorgar una película protectora duradera que reduce el desgaste prematuro de pistones, cilindros y rodamientos bajo condiciones de trabajo severo y altas temperaturas ambientales en Pedernales y la provincia de Manabí.",
-    "priceEstimate": "$8.00",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza según el tamaño requerido.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -2526,8 +2462,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Litro",
         "stock": 10,
         "imageUrl": "/images/products/variant-mannol-mannol-hypoid-getriebeoel-80w90-gl4-gl5-ls-deslizamiento-limitado-lp-lur-025-c3.png",
-        "price": 8.0,
-        "priceEstimate": "$8.00",
+        "price": null,
         "officialSku": "012MN8106-1"
       },
       {
@@ -2537,8 +2472,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Galón / 5L",
         "stock": 10,
         "imageUrl": "/images/products/variant-mannol-mannol-hypoid-getriebeoel-80w90-gl4-gl5-ls-deslizamiento-limitado-lp-lur-025-c4.png",
-        "price": 29.65,
-        "priceEstimate": "$29.65",
+        "price": null,
         "officialSku": "012MN8106-4"
       }
     ],
@@ -2586,7 +2520,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL HYPOID GETRIEBEOEL 80W90 GL4 GL5 LS (DESLIZAMIENTO LIMITADO)",
-    "price": 8.0
+    "price": null
   },
   {
     "id": "mannol-mannol-universal-getriebeoel-80w90-gl4-lp-lur-026",
@@ -2616,7 +2550,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Lubricante automotriz oficial MANNOL UNIVERSAL GETRIEBEOEL 80W90 GL4 marca MANNOL. Formulado para otorgar una película protectora duradera que reduce el desgaste prematuro de pistones, cilindros y rodamientos bajo condiciones de trabajo severo y altas temperaturas ambientales en Pedernales y la provincia de Manabí.",
-    "priceEstimate": "$25.52",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza según el tamaño requerido.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -2633,8 +2566,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Galón / 5L",
         "stock": 10,
         "imageUrl": "/images/products/variant-mannol-mannol-universal-getriebeoel-80w90-gl4-lp-lur-026-c4.png",
-        "price": 25.52,
-        "priceEstimate": "$25.52",
+        "price": null,
         "officialSku": "012MN8107-4"
       },
       {
@@ -2644,8 +2576,7 @@ export const PRODUCTS: Product[] = [
         "volume": "Caneca 5 GL",
         "stock": 10,
         "imageUrl": "/images/products/variant-mannol-mannol-universal-getriebeoel-80w90-gl4-lp-lur-026-c5.png",
-        "price": 90.3,
-        "priceEstimate": "$90.30",
+        "price": null,
         "officialSku": "012MN8107-20"
       }
     ],
@@ -2693,7 +2624,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL UNIVERSAL GETRIEBEOEL 80W90 GL4",
-    "price": 25.52
+    "price": null
   },
   {
     "id": "mannol-mannol-transm-basic-plus-75w90-gl4-lp-lur-027",
@@ -2723,7 +2654,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Lubricante automotriz oficial MANNOL TRANSM. BASIC PLUS 75W90 GL4 marca MANNOL. Formulado para otorgar una película protectora duradera que reduce el desgaste prematuro de pistones, cilindros y rodamientos bajo condiciones de trabajo severo y altas temperaturas ambientales en Pedernales y la provincia de Manabí.",
-    "priceEstimate": "$10.74",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza según el tamaño requerido.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -2740,8 +2670,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Litro",
         "stock": 10,
         "imageUrl": "/images/products/variant-mannol-mannol-transm-basic-plus-75w90-gl4-lp-lur-027-c3.png",
-        "price": 10.74,
-        "priceEstimate": "$10.74",
+        "price": null,
         "officialSku": "012MN8108-1"
       },
       {
@@ -2751,8 +2680,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Galón / 5L",
         "stock": 10,
         "imageUrl": "/images/products/variant-mannol-mannol-transm-basic-plus-75w90-gl4-lp-lur-027-c4.png",
-        "price": 39.83,
-        "priceEstimate": "$39.83",
+        "price": null,
         "officialSku": "012MN8108-4"
       }
     ],
@@ -2800,7 +2728,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL TRANSM. BASIC PLUS 75W90 GL4",
-    "price": 10.74
+    "price": null
   },
   {
     "id": "mannol-mannol-oem-mtf-3-75w-metalico-lp-lur-028",
@@ -2830,7 +2758,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Lubricante automotriz oficial MANNOL O.E.M MTF-3 75W METALICO marca MANNOL. Formulado para otorgar una película protectora duradera que reduce el desgaste prematuro de pistones, cilindros y rodamientos bajo condiciones de trabajo severo y altas temperaturas ambientales en Pedernales y la provincia de Manabí.",
-    "priceEstimate": "$14.39",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -2870,7 +2797,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL O.E.M MTF-3 75W METALICO",
-    "price": 14.39
+    "price": null
   },
   {
     "id": "mannol-mannol-dct-fluid-cajas-doble-embrague-lp-lur-029",
@@ -2900,7 +2827,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Lubricante automotriz oficial MANNOL DCT FLUID CAJAS DOBLE EMBRAGUE marca MANNOL. Formulado para otorgar una película protectora duradera que reduce el desgaste prematuro de pistones, cilindros y rodamientos bajo condiciones de trabajo severo y altas temperaturas ambientales en Pedernales y la provincia de Manabí.",
-    "priceEstimate": "$18.87",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -2940,7 +2866,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL DCT FLUID CAJAS DOBLE EMBRAGUE",
-    "price": 18.87
+    "price": null
   },
   {
     "id": "mannol-mannol-atf-dexron-iii-lp-lur-030",
@@ -2970,7 +2896,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Lubricante automotriz oficial MANNOL ATF DEXRON III marca MANNOL. Formulado para otorgar una película protectora duradera que reduce el desgaste prematuro de pistones, cilindros y rodamientos bajo condiciones de trabajo severo y altas temperaturas ambientales en Pedernales y la provincia de Manabí.",
-    "priceEstimate": "$10.30",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -3010,7 +2935,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL ATF DEXRON III",
-    "price": 10.3
+    "price": null
   },
   {
     "id": "mannol-mannol-atf-dexron-vi-lp-lur-031",
@@ -3040,7 +2965,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Lubricante automotriz oficial MANNOL ATF DEXRON VI marca MANNOL. Formulado para otorgar una película protectora duradera que reduce el desgaste prematuro de pistones, cilindros y rodamientos bajo condiciones de trabajo severo y altas temperaturas ambientales en Pedernales y la provincia de Manabí.",
-    "priceEstimate": "$14.09",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -3080,7 +3004,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL ATF DEXRON VI",
-    "price": 14.09
+    "price": null
   },
   {
     "id": "mannol-mannol-cvt-nissan-ns-3-lp-lur-032",
@@ -3110,7 +3034,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Lubricante automotriz oficial MANNOL CVT NISSAN NS-3 marca MANNOL. Formulado para otorgar una película protectora duradera que reduce el desgaste prematuro de pistones, cilindros y rodamientos bajo condiciones de trabajo severo y altas temperaturas ambientales en Pedernales y la provincia de Manabí.",
-    "priceEstimate": "$20.61",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -3150,7 +3073,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL CVT NISSAN NS-3",
-    "price": 20.61
+    "price": null
   },
   {
     "id": "mannol-mannol-atf-ulv-lp-lur-033",
@@ -3180,7 +3103,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Lubricante automotriz oficial MANNOL ATF ULV marca MANNOL. Formulado para otorgar una película protectora duradera que reduce el desgaste prematuro de pistones, cilindros y rodamientos bajo condiciones de trabajo severo y altas temperaturas ambientales en Pedernales y la provincia de Manabí.",
-    "priceEstimate": "$13.30",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -3220,7 +3142,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL ATF ULV",
-    "price": 13.3
+    "price": null
   },
   {
     "id": "mannol-mannol-hydro-hv-iso-32-longlife-lp-lur-034",
@@ -3250,7 +3172,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Lubricante automotriz oficial MANNOL HYDRO HV ISO 32 LONGLIFE marca MANNOL. Formulado para otorgar una película protectora duradera que reduce el desgaste prematuro de pistones, cilindros y rodamientos bajo condiciones de trabajo severo y altas temperaturas ambientales en Pedernales y la provincia de Manabí.",
-    "priceEstimate": "$86.96",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -3290,7 +3211,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL HYDRO HV ISO 32 LONGLIFE",
-    "price": 86.96
+    "price": null
   },
   {
     "id": "mannol-mannol-hydro-hv-iso-46-longlife-lp-lur-035",
@@ -3320,7 +3241,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Lubricante automotriz oficial MANNOL HYDRO HV ISO 46 LONGLIFE marca MANNOL. Formulado para otorgar una película protectora duradera que reduce el desgaste prematuro de pistones, cilindros y rodamientos bajo condiciones de trabajo severo y altas temperaturas ambientales en Pedernales y la provincia de Manabí.",
-    "priceEstimate": "$86.96",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -3360,7 +3280,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL HYDRO HV ISO 46 LONGLIFE",
-    "price": 86.96
+    "price": null
   },
   {
     "id": "mannol-mannol-multifarm-stou-10w-30-lp-lur-036",
@@ -3390,7 +3310,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Lubricante automotriz oficial MANNOL MULTIFARM STOU 10W-30 marca MANNOL. Formulado para otorgar una película protectora duradera que reduce el desgaste prematuro de pistones, cilindros y rodamientos bajo condiciones de trabajo severo y altas temperaturas ambientales en Pedernales y la provincia de Manabí.",
-    "priceEstimate": "$101.30",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -3430,7 +3349,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL MULTIFARM STOU 10W-30",
-    "price": 101.3
+    "price": null
   },
   {
     "id": "mannol-mannol-cj-x-20-lt-molibden-green-ultra-5w30-lp-lur-037",
@@ -3460,7 +3379,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Lubricante automotriz oficial MANNOL CJ X 20 LT MOLIBDEN GREEN ULTRA 5W30 marca MANNOL. Formulado para otorgar una película protectora duradera que reduce el desgaste prematuro de pistones, cilindros y rodamientos bajo condiciones de trabajo severo y altas temperaturas ambientales en Pedernales y la provincia de Manabí.",
-    "priceEstimate": "$16.17",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza según el tamaño requerido.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -3477,8 +3395,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Litro",
         "stock": 10,
         "imageUrl": "/images/products/variant-mannol-mannol-cj-x-20-lt-molibden-green-ultra-5w30-lp-lur-037-c3.png",
-        "price": 16.17,
-        "priceEstimate": "$16.17",
+        "price": null,
         "officialSku": "12MN7916-1"
       },
       {
@@ -3488,8 +3405,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Galón / 5L",
         "stock": 10,
         "imageUrl": "/images/products/variant-mannol-mannol-cj-x-20-lt-molibden-green-ultra-5w30-lp-lur-037-c4.png",
-        "price": 55.35,
-        "priceEstimate": "$55.35",
+        "price": null,
         "officialSku": "12MN7916-4"
       }
     ],
@@ -3543,7 +3459,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL CJ X 20 LT MOLIBDEN GREEN ULTRA 5W30",
-    "price": 16.17
+    "price": null
   },
   {
     "id": "mannol-mannol-ts-5-uhpd-10w40-lp-lur-038",
@@ -3573,7 +3489,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Lubricante automotriz oficial MANNOL TS-5 UHPD 10W40 marca MANNOL. Formulado para otorgar una película protectora duradera que reduce el desgaste prematuro de pistones, cilindros y rodamientos bajo condiciones de trabajo severo y altas temperaturas ambientales en Pedernales y la provincia de Manabí.",
-    "priceEstimate": "$105.22",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -3619,7 +3534,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL TS-5 UHPD 10W40",
-    "price": 105.22
+    "price": null
   },
   {
     "id": "mannol-mannol-hydro-hv-iso-68-lp-lur-039",
@@ -3649,7 +3564,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Lubricante automotriz oficial MANNOL HYDRO HV ISO 68 marca MANNOL. Formulado para otorgar una película protectora duradera que reduce el desgaste prematuro de pistones, cilindros y rodamientos bajo condiciones de trabajo severo y altas temperaturas ambientales en Pedernales y la provincia de Manabí.",
-    "priceEstimate": "$86.96",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -3701,7 +3615,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL HYDRO HV ISO 68",
-    "price": 86.96
+    "price": null
   },
   {
     "id": "mobil-mobil-delvac-mx-15w40-lp-lur-002-2",
@@ -3731,7 +3645,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Lubricante automotriz oficial MOBIL DELVAC MX 15W40 marca MOBIL. Formulado para otorgar una película protectora duradera que reduce el desgaste prematuro de pistones, cilindros y rodamientos bajo condiciones de trabajo severo y altas temperaturas ambientales en Pedernales y la provincia de Manabí.",
-    "priceEstimate": "$6.83",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza según el tamaño requerido.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -3748,8 +3661,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Litro",
         "stock": 10,
         "imageUrl": "/images/products/variant-mobil-mobil-delvac-mx-15w40-lp-lur-002-2-c3.png",
-        "price": 6.83,
-        "priceEstimate": "$6.83",
+        "price": null,
         "officialSku": "015MD12-15W40"
       },
       {
@@ -3759,8 +3671,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Galón",
         "stock": 10,
         "imageUrl": "/images/products/variant-mobil-mobil-delvac-mx-15w40-lp-lur-002-2-c4.png",
-        "price": 24.39,
-        "priceEstimate": "$24.39",
+        "price": null,
         "officialSku": "01504MD04-15W40"
       },
       {
@@ -3770,8 +3681,7 @@ export const PRODUCTS: Product[] = [
         "volume": "Caneca 5 GL",
         "stock": 10,
         "imageUrl": "/images/products/variant-mobil-mobil-delvac-mx-15w40-lp-lur-002-2-c5.png",
-        "price": 94.35,
-        "priceEstimate": "$94.35",
+        "price": null,
         "officialSku": "015MD5-15W40"
       }
     ],
@@ -3831,7 +3741,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "MOBIL DELVAC MX 15W40",
-    "price": 6.83
+    "price": null
   },
   {
     "id": "mobil-mobil-delvac-1300-sup-15w40-lp-lur-003-2",
@@ -3861,7 +3771,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Lubricante automotriz oficial MOBIL DELVAC 1300 SUP 15W40 marca MOBIL. Formulado para otorgar una película protectora duradera que reduce el desgaste prematuro de pistones, cilindros y rodamientos bajo condiciones de trabajo severo y altas temperaturas ambientales en Pedernales y la provincia de Manabí.",
-    "priceEstimate": "$105.83",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -3925,7 +3834,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "MOBIL DELVAC 1300 SUP 15W40",
-    "price": 105.83
+    "price": null
   },
   {
     "id": "mobil-mobil-10w30-semi-sintetico-lp-lur-004-2",
@@ -3955,7 +3864,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Lubricante automotriz oficial MOBIL 10W30 SEMI SINTETICO marca MOBIL. Formulado para otorgar una película protectora duradera que reduce el desgaste prematuro de pistones, cilindros y rodamientos bajo condiciones de trabajo severo y altas temperaturas ambientales en Pedernales y la provincia de Manabí.",
-    "priceEstimate": "$6.48",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza según el tamaño requerido.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -3972,8 +3880,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Litro",
         "stock": 10,
         "imageUrl": "/images/products/variant-mobil-mobil-10w30-semi-sintetico-lp-lur-004-2-c3.png",
-        "price": 6.48,
-        "priceEstimate": "$6.48",
+        "price": null,
         "officialSku": "015MS12-10W30"
       },
       {
@@ -3983,8 +3890,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Galón",
         "stock": 10,
         "imageUrl": "/images/products/variant-mobil-mobil-10w30-semi-sintetico-lp-lur-004-2-c4.png",
-        "price": 24.13,
-        "priceEstimate": "$24.13",
+        "price": null,
         "officialSku": "015MS04-10W30"
       }
     ],
@@ -4032,7 +3938,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "MOBIL 10W30 SEMI SINTETICO",
-    "price": 6.48
+    "price": null
   },
   {
     "id": "mobil-mobil-20w50-semi-sintetico-lp-lur-005-2",
@@ -4062,7 +3968,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Lubricante automotriz oficial MOBIL 20W50 SEMI SINTETICO marca MOBIL. Formulado para otorgar una película protectora duradera que reduce el desgaste prematuro de pistones, cilindros y rodamientos bajo condiciones de trabajo severo y altas temperaturas ambientales en Pedernales y la provincia de Manabí.",
-    "priceEstimate": "$6.48",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza según el tamaño requerido.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -4079,8 +3984,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Litro",
         "stock": 10,
         "imageUrl": "/images/products/variant-mobil-mobil-20w50-semi-sintetico-lp-lur-005-2-c3.png",
-        "price": 6.48,
-        "priceEstimate": "$6.48",
+        "price": null,
         "officialSku": "015MS12-20W50"
       },
       {
@@ -4090,8 +3994,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Galón",
         "stock": 10,
         "imageUrl": "/images/products/variant-mobil-mobil-20w50-semi-sintetico-lp-lur-005-2-c4.png",
-        "price": 24.13,
-        "priceEstimate": "$24.13",
+        "price": null,
         "officialSku": "015MS04-20W50"
       }
     ],
@@ -4133,7 +4036,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "MOBIL 20W50 SEMI SINTETICO",
-    "price": 6.48
+    "price": null
   },
   {
     "id": "advance-filtro-aire-ty-hilux-27l-fi-16-21-hilux-24l-di-16-21-fortuner-27l-fi-16-21-advance-lp-fil-002",
@@ -4164,7 +4067,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO AIRE TY HILUX 2.7L FI 16-21 HILUX 2.4L DI 16-21, FORTUNER 2.7L FI 16-21 ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Toyota Hilux 2.4 TD / 2.7 Gasolina / 2.8 TD, Toyota Fortuner 2.7 Gasolina / 2.8 TD.",
-    "priceEstimate": "$5.48",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -4205,7 +4107,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "FILTRO AIRE TY HILUX 2.7L FI 16-21 HILUX 2.4L DI 16-21, FORTUNER 2.7L FI 16-21 ADVANCE",
-    "price": 5.48
+    "price": null
   },
   {
     "id": "advance-filtro-aire-jac-pick-up-t6-20-17--19-gasolina-prem-aip1068-xtrag-ap-164-advance-lp-fil-003",
@@ -4236,7 +4138,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO AIRE JAC PICK UP T6 2.0 17- 19 GASOLINA (PREM AIP1068 XTRAG AP-164) ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con JAC T6 / T8 Pick Up / Camiones HFC.",
-    "priceEstimate": "$6.26",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -4271,7 +4172,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "FILTRO AIRE JAC PICK UP T6 2.0 17- 19 GASOLINA (PREM AIP1068 XTRAG AP-164) ADVANCE",
-    "price": 6.26
+    "price": null
   },
   {
     "id": "advance-filtro-aire-hy-tucson-20l-04-10-kia-sportage-advance-lp-fil-004",
@@ -4302,7 +4203,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO AIRE HY TUCSON 2.0L 04-10, KIA SPORTAGE ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Hyundai Tucson (IX / TL / All New), Kia Sportage (Active / Sportage R / GT).",
-    "priceEstimate": "$3.61",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -4343,7 +4243,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "FILTRO AIRE HY TUCSON 2.0L 04-10, KIA SPORTAGE ADVANCE",
-    "price": 3.61
+    "price": null
   },
   {
     "id": "advance-filtro-aire-hy-accent-14-16-rio-xcite-xtrag-ap-111-red-28113-1g000-advance-lp-fil-005",
@@ -4374,7 +4274,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO AIRE HY ACCENT 1.4-1.6 RIO XCITE (XTRAG AP-111 RED 28113-1G000) ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Hyundai Accent (New Accent / Accent RB / Blue), Kia Rio (Stylus / Xcite / R) / Soluto.",
-    "priceEstimate": "$2.91",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -4415,7 +4314,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "FILTRO AIRE HY ACCENT 1.4-1.6 RIO XCITE (XTRAG AP-111 RED 28113-1G000) ADVANCE",
-    "price": 2.91
+    "price": null
   },
   {
     "id": "advance-filtro-aire-sz-gran-vitara-sz-20-27-advance-lp-fil-006",
@@ -4446,7 +4345,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO AIRE SZ GRAN VITARA SZ 2.0 2.7 ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Suzuki Grand Vitara SZ (2.0 / 2.4 / 2.7 V6).",
-    "priceEstimate": "$2.96",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -4481,7 +4379,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO AIRE SZ GRAN VITARA SZ 2.0 2.7 ADVANCE",
-    "price": 2.96
+    "price": null
   },
   {
     "id": "advance-filtro-aire-kia-soul-12--solutoxciteverna-20--advance-lp-fil-007",
@@ -4512,7 +4410,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO AIRE KIA SOUL /12- SOLUTO/XCITE/VERNA /20- ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Hyundai Accent (New Accent / Accent RB / Blue), Kia Rio (Stylus / Xcite / R) / Soluto.",
-    "priceEstimate": "$3.26",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -4553,7 +4450,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO AIRE KIA SOUL /12- SOLUTO/XCITE/VERNA /20- ADVANCE",
-    "price": 3.26
+    "price": null
   },
   {
     "id": "advance-filtro-aire-ch-joy---aa--10891-advance-aa-10891",
@@ -4584,7 +4481,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO AIRE CH JOY - AA- 10891 ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Multimarca Aplicación Específica por Código Técnico.",
-    "priceEstimate": "$4.00",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -4618,7 +4514,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO AIRE CH JOY - AA- 10891 ADVANCE",
-    "price": 4.0
+    "price": null
   },
   {
     "id": "advance-filtro-aire-ch-spark-gt-2011-beat---prem-aip777-mil-mk-92369-red-96827723-advance-lp-fil-009",
@@ -4649,7 +4545,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO AIRE CH SPARK GT 2011, BEAT - (PREM AIP777 MIL MK-92369, RED 96827723) ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Chevrolet Spark GT / Spark Life / Beat.",
-    "priceEstimate": "$2.78",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -4684,7 +4579,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO AIRE CH SPARK GT 2011, BEAT - (PREM AIP777 MIL MK-92369, RED 96827723) ADVANCE",
-    "price": 2.78
+    "price": null
   },
   {
     "id": "advance-filtro-aire-ch-luv-dmax-24-gas-trailblazer-15--cilindrico-advance-lp-fil-010",
@@ -4715,7 +4610,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO AIRE CH LUV DMAX 2.4 GAS. TRAILBLAZER /15- (CILINDRICO) ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Chevrolet D-Max (CRDi / 2.0T / 2.5 / 3.0 / 2.4).",
-    "priceEstimate": "$9.48",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -4750,7 +4644,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO AIRE CH LUV DMAX 2.4 GAS. TRAILBLAZER /15- (CILINDRICO) ADVANCE",
-    "price": 9.48
+    "price": null
   },
   {
     "id": "advance-filtro-aire-zotye-t600-advance-lp-fil-011",
@@ -4781,7 +4675,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO AIRE ZOTYE T600 ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con JAC T6 / T8 Pick Up / Camiones HFC.",
-    "priceEstimate": "$5.30",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -4816,7 +4709,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO AIRE ZOTYE T600 ADVANCE",
-    "price": 5.3
+    "price": null
   },
   {
     "id": "advance-filtro-aire-dongfeng-rich-6-2020---aa-11113-advance-aa-11113",
@@ -4847,7 +4740,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO AIRE DONGFENG RICH 6 2020 - AA-11113 ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Dongfeng / Chery / Jetour Dongfeng Rich 6 2.5 Diésel 4x4.",
-    "priceEstimate": "$4.35",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -4882,7 +4774,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO AIRE DONGFENG RICH 6 2020 - AA-11113 ADVANCE",
-    "price": 4.35
+    "price": null
   },
   {
     "id": "advance-filtro-aire-rn-logan-ii-14-16-14-16-2019-sandero-14-16-14-16-165469466r-advance-lp-fil-013",
@@ -4913,7 +4805,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO AIRE RN LOGAN II 1.4, 1.6 (14-16) 2019, SANDERO 1.4 1.6 (14-16), 165469466R ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Renault Duster / Logan / Sandero Stepway.",
-    "priceEstimate": "$4.52",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -4948,7 +4839,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO AIRE RN LOGAN II 1.4, 1.6 (14-16) 2019, SANDERO 1.4 1.6 (14-16), 165469466R ADVANCE",
-    "price": 4.52
+    "price": null
   },
   {
     "id": "advance-filtro-aire-rn-logan-16-16--sandero-stepway-16-16--duster-16-20-16--advance-panelado-165460-lp-fil-014",
@@ -4979,7 +4870,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO AIRE RN LOGAN 1.6 /16- SANDERO STEPWAY 1.6 /16- DUSTER 1.6-2.0 /16- ADVANCE PANELADO 165460 marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Renault Duster / Logan / Sandero Stepway.",
-    "priceEstimate": "$4.65",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -5014,7 +4904,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO AIRE RN LOGAN 1.6 /16- SANDERO STEPWAY 1.6 /16- DUSTER 1.6-2.0 /16- ADVANCE PANELADO 165460",
-    "price": 4.65
+    "price": null
   },
   {
     "id": "advance-filtro-aire-fd-ranger-nueva-25-mz-bt50-nueva-red-aip892-xtrag-sr-2072-red-1wa013z40-cil-advance-lp-fil-015",
@@ -5045,7 +4935,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO AIRE FD RANGER NUEVA 2.5 MZ BT50 NUEVA (RED AIP892 XTRAG SR-2072 RED 1WA013Z40) (CIL) ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Mazda BT-50 (2.2 / 2.5 / 2.6 / 3.2 TDCi) / Mazda 3, Ford F-150 / Ranger / Explorer.",
-    "priceEstimate": "$7.19",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -5086,7 +4975,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO AIRE FD RANGER NUEVA 2.5 MZ BT50 NUEVA (RED AIP892 XTRAG SR-2072 RED 1WA013Z40) (CIL) ADVANCE",
-    "price": 7.19
+    "price": null
   },
   {
     "id": "advance-filtro-aire-ch-cruze-18-10-16-ch-orlando-advance-lp-fil-016",
@@ -5117,7 +5006,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO AIRE CH CRUZE 1.8 /10-16 / CH ORLANDO ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Chevrolet Tracker / Cruze / Orlando.",
-    "priceEstimate": "$5.74",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -5152,7 +5040,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO AIRE CH CRUZE 1.8 /10-16 / CH ORLANDO ADVANCE",
-    "price": 5.74
+    "price": null
   },
   {
     "id": "advance-filtro-aire-ch-spark-moderno-2006-07-panel-mk-91485-advance-lp-fil-017",
@@ -5183,7 +5071,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO AIRE CH SPARK MODERNO 2006-07 (PANEL) (MK-91485) ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Chevrolet Spark GT / Spark Life / Beat.",
-    "priceEstimate": "$2.82",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -5218,7 +5105,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO AIRE CH SPARK MODERNO 2006-07 (PANEL) (MK-91485) ADVANCE",
-    "price": 2.82
+    "price": null
   },
   {
     "id": "advance-filtro-aire-hy-accent-rb-kia-rio-prem-aip837-red-28113-1r100-advance-lp-fil-018",
@@ -5249,7 +5136,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO AIRE HY ACCENT RB KIA RIO (PREM AIP837 RED 28113-1R100) ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Hyundai Accent (New Accent / Accent RB / Blue), Kia Rio (Stylus / Xcite / R) / Soluto.",
-    "priceEstimate": "$2.78",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -5290,7 +5176,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO AIRE HY ACCENT RB KIA RIO (PREM AIP837 RED 28113-1R100) ADVANCE",
-    "price": 2.78
+    "price": null
   },
   {
     "id": "advance-filtro-aire-ch-sail-advance-lp-fil-019",
@@ -5321,7 +5207,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO AIRE CH SAIL ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Chevrolet Sail (1.4 / 1.5 / Sedan).",
-    "priceEstimate": "$3.09",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -5356,7 +5241,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO AIRE CH SAIL ADVANCE",
-    "price": 3.09
+    "price": null
   },
   {
     "id": "advance-filtro-aire-great-wall-poer-20t-diesel-2022---aa-25006-advance-aa-25006",
@@ -5387,7 +5272,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO AIRE GREAT WALL POER 2.0T DIESEL 2022 - AA-25006 ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Hino Serie 300 Dutro / Serie 500 (GD / GH / FG / FM), Great Wall / Haval Wingle 5 / Wingle 7 / Poer 2.0T / Haval H5.",
-    "priceEstimate": "$5.61",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -5428,7 +5312,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO AIRE GREAT WALL POER 2.0T DIESEL 2022 - AA-25006 ADVANCE",
-    "price": 5.61
+    "price": null
   },
   {
     "id": "advance-filtro-advance-aire-tank-300-20t-500-20t---aa--25011-aa-25011",
@@ -5459,7 +5343,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO ADVANCE AIRE TANK 300 2.0T, 500 2.0T - AA- 25011 marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Hino Serie 300 Dutro / Serie 500 (GD / GH / FG / FM).",
-    "priceEstimate": "$5.52",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -5494,7 +5377,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO ADVANCE AIRE TANK 300 2.0T, 500 2.0T - AA- 25011",
-    "price": 5.52
+    "price": null
   },
   {
     "id": "advance-filtro-aire-ns-x-trail-14-qashqai-20-15--rn-koleos-advance-lp-fil-022",
@@ -5525,7 +5408,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO AIRE NS X-TRAIL /14 QASHQAI 2.0 /15- RN KOLEOS ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Multimarca Aplicación Específica por Código Técnico.",
-    "priceEstimate": "$5.61",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -5559,7 +5441,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO AIRE NS X-TRAIL /14 QASHQAI 2.0 /15- RN KOLEOS ADVANCE",
-    "price": 5.61
+    "price": null
   },
   {
     "id": "advance-filtro-aire-mz-bt50-25-turbo-diesel-b2500-galant-gas-2000-diesel-4x2-mil-mk-9021-advance-lp-fil-023",
@@ -5590,7 +5472,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO AIRE MZ BT50 2.5 TURBO DIESEL B2500 GALANT GAS 2000 DIESEL 4X2 (MIL MK-9021) ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Hino Serie 300 Dutro / Serie 500 (GD / GH / FG / FM), Mazda BT-50 (2.2 / 2.5 / 2.6 / 3.2 TDCi) / Mazda 3.",
-    "priceEstimate": "$4.70",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -5631,7 +5512,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO AIRE MZ BT50 2.5 TURBO DIESEL B2500 GALANT GAS 2000 DIESEL 4X2 (MIL MK-9021) ADVANCE",
-    "price": 4.7
+    "price": null
   },
   {
     "id": "advance-filtro-aire-ch-luv-dmax-30-14--panelado-advance-lp-fil-024",
@@ -5662,7 +5543,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO AIRE CH LUV DMAX 3.0 /14- PANELADO ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Chevrolet D-Max (CRDi / 2.0T / 2.5 / 3.0 / 2.4).",
-    "priceEstimate": "$4.70",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -5697,7 +5577,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO AIRE CH LUV DMAX 3.0 /14- PANELADO ADVANCE",
-    "price": 4.7
+    "price": null
   },
   {
     "id": "advance-filtro-advance-aire-chevrolet-d-max-20t-diesel-2025-cj-x-24---aa-2662-aa-2662",
@@ -5728,7 +5608,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO ADVANCE AIRE CHEVROLET D-MAX 2.0T DIESEL 2025 CJ X 24 - AA-2662 marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Chevrolet D-Max (CRDi / 2.0T / 2.5 / 3.0 / 2.4).",
-    "priceEstimate": "$5.96",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -5763,7 +5642,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO ADVANCE AIRE CHEVROLET D-MAX 2.0T DIESEL 2025 CJ X 24 - AA-2662",
-    "price": 5.96
+    "price": null
   },
   {
     "id": "advance-filtro-aire-hy-tucson-all-new-20-santa-fe-25-sonata-20-kia-sorento-35-advance-lp-fil-026",
@@ -5794,7 +5673,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO AIRE HY TUCSON ALL NEW 2.0 SANTA FE 2.5 SONATA 2.0 KIA SORENTO 3.5 ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Hyundai Tucson (IX / TL / All New), Kia Sportage (Active / Sportage R / GT).",
-    "priceEstimate": "$4.30",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -5835,7 +5713,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO AIRE HY TUCSON ALL NEW 2.0 SANTA FE 2.5 SONATA 2.0 KIA SORENTO 3.5 ADVANCE",
-    "price": 4.3
+    "price": null
   },
   {
     "id": "advance-filtro-aire-hy-bus-county-hd65-hd72-hd78-sello-radial-cilindrico-advance-mk-94190-lp-fil-027",
@@ -5866,7 +5744,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO AIRE HY BUS COUNTY, HD65, HD72 , HD78 SELLO RADIAL (CILINDRICO) ADVANCE (MK-94190) marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Multimarca Aplicación Específica por Código Técnico.",
-    "priceEstimate": "$8.61",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -5900,7 +5777,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO AIRE HY BUS COUNTY, HD65, HD72 , HD78 SELLO RADIAL (CILINDRICO) ADVANCE (MK-94190)",
-    "price": 8.61
+    "price": null
   },
   {
     "id": "advance-filtro-aire-kia-grand-pregio-2006-2012-cilindrico-advance-lp-fil-028",
@@ -5931,7 +5808,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO AIRE KIA GRAND PREGIO 2006-2012 (CILINDRICO) ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Multimarca Aplicación Específica por Código Técnico.",
-    "priceEstimate": "$4.87",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -5965,7 +5841,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO AIRE KIA GRAND PREGIO 2006-2012 (CILINDRICO) ADVANCE",
-    "price": 4.87
+    "price": null
   },
   {
     "id": "advance-filtro-aire-great-wall-wingle-5-20-diesel-19-wingle-7-advance-lp-fil-029",
@@ -5996,7 +5872,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO AIRE GREAT WALL WINGLE 5 2.0 DIESEL 19, WINGLE 7 ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Great Wall / Haval Wingle 5 / Wingle 7 / Poer 2.0T / Haval H5.",
-    "priceEstimate": "$4.22",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -6031,7 +5906,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO AIRE GREAT WALL WINGLE 5 2.0 DIESEL 19, WINGLE 7 ADVANCE",
-    "price": 4.22
+    "price": null
   },
   {
     "id": "advance-filtro-aire-kia-picanto-r-10-17-28113-1y100-advance-lp-fil-030",
@@ -6062,7 +5937,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO AIRE KIA PICANTO R /10-17 (28113-1Y100) ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Multimarca Aplicación Específica por Código Técnico.",
-    "priceEstimate": "$3.09",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -6096,7 +5970,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO AIRE KIA PICANTO R /10-17 (28113-1Y100) ADVANCE",
-    "price": 3.09
+    "price": null
   },
   {
     "id": "advance-filtro-aire-ns-sentra-b-15-almera-murano-pathfinder-30ch-scross-16546-0z000-advance-lp-fil-031",
@@ -6127,7 +6001,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO AIRE NS SENTRA B-15 ALMERA MURANO PATHFINDER 3.0/CH SCROSS (16546-0Z000) ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Multimarca Aplicación Específica por Código Técnico.",
-    "priceEstimate": "$3.26",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -6161,7 +6034,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO AIRE NS SENTRA B-15 ALMERA MURANO PATHFINDER 3.0/CH SCROSS (16546-0Z000) ADVANCE",
-    "price": 3.26
+    "price": null
   },
   {
     "id": "advance-filtro-aire-ch-rodeo-26-redondo-advance-lp-fil-032",
@@ -6192,7 +6065,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO AIRE CH RODEO 2.6 (REDONDO) ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Multimarca Aplicación Específica por Código Técnico.",
-    "priceEstimate": "$4.70",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -6226,7 +6098,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO AIRE CH RODEO 2.6 (REDONDO) ADVANCE",
-    "price": 4.7
+    "price": null
   },
   {
     "id": "advance-filtro-aire-ch-luv-dmax-24-dmax-35-gasolina-mt-l200-advance-lp-fil-033",
@@ -6323,7 +6195,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO ADVANCE AIRE NISSAN X-TRAIL E-POWER 1.5 VC TURBO(E-4ORCE T33) QASHQAI 1.3T CAJA X 24 - AA- 54 marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Multimarca Aplicación Específica por Código Técnico.",
-    "priceEstimate": "$5.91",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -6357,7 +6228,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO ADVANCE AIRE NISSAN X-TRAIL E-POWER 1.5 VC TURBO(E-4ORCE T33) QASHQAI 1.3T CAJA X 24 - AA- 54",
-    "price": 5.91
+    "price": null
   },
   {
     "id": "advance-filtro-aire-vw-golf-jetta-sk-octavia-audi-a3-18t---aa-5827-advance-mk-5827-aa-5827",
@@ -6388,7 +6259,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO AIRE VW GOLF JETTA SK OCTAVIA AUDI A3 1.8T - AA-5827 ADVANCE (MK-5827) marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Volkswagen Amarok / Gol / Jetta / Bora.",
-    "priceEstimate": "$5.61",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -6423,7 +6293,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO AIRE VW GOLF JETTA SK OCTAVIA AUDI A3 1.8T - AA-5827 ADVANCE (MK-5827)",
-    "price": 5.61
+    "price": null
   },
   {
     "id": "advance-filtro-aire-mz-bt50-ty-hilux-25-27--09-fortunerjac-28-cilindrico-advance-lp-fil-036",
@@ -6454,7 +6324,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO AIRE MZ BT50 TY HILUX 2.5-2.7 /-09 / FORTUNERJAC 2.8 (CILINDRICO) ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Toyota Hilux 2.4 TD / 2.7 Gasolina / 2.8 TD, Toyota Fortuner 2.7 Gasolina / 2.8 TD, JAC T6 / T8 Pick Up / Camiones HFC, Mazda BT-50 (2.2 / 2.5 / 2.6 / 3.2 TDCi) / Mazda 3.",
-    "priceEstimate": "$5.35",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -6507,7 +6376,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO AIRE MZ BT50 TY HILUX 2.5-2.7 /-09 / FORTUNERJAC 2.8 (CILINDRICO) ADVANCE",
-    "price": 5.35
+    "price": null
   },
   {
     "id": "advance-filtro-aire-kia-picanto-new-2017-red-28113-g6000-xtraguard-ca-g6000-advance-lp-fil-037",
@@ -6538,7 +6407,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO AIRE KIA PICANTO NEW 2017 (RED 28113-G6000 XTRAGUARD CA-G6000) ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Multimarca Aplicación Específica por Código Técnico.",
-    "priceEstimate": "$4.39",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -6572,7 +6440,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO AIRE KIA PICANTO NEW 2017 (RED 28113-G6000 XTRAGUARD CA-G6000) ADVANCE",
-    "price": 4.39
+    "price": null
   },
   {
     "id": "advance-filtro-aire-isuzu-npr-39-turbo-nhr-nkr-8941560520-cilindrico-advance-mk-5070-lp-fil-038",
@@ -6603,7 +6471,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO AIRE ISUZU NPR 3,9 TURBO NHR NKR 8941560520 (CILINDRICO) ADVANCE (MK-5070) marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Isuzu Forward (FRR / FTR / FVR) / Camiones NPR / NQR.",
-    "priceEstimate": "$10.78",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -6638,7 +6505,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO AIRE ISUZU NPR 3,9 TURBO NHR NKR 8941560520 (CILINDRICO) ADVANCE (MK-5070)",
-    "price": 10.78
+    "price": null
   },
   {
     "id": "advance-filtro-aire-ch-d-max-25-35-tdi-aa-6127sr-550aip6828-97147860910-cilindrico-advance-aa-6127",
@@ -6669,7 +6536,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO AIRE CH D-MAX 2.5 3.5 TDI (AA-6127/SR-550/AIP682/8-97147860910) (CILINDRICO) ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Chevrolet D-Max (CRDi / 2.0T / 2.5 / 3.0 / 2.4).",
-    "priceEstimate": "$4.22",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -6704,7 +6570,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO AIRE CH D-MAX 2.5 3.5 TDI (AA-6127/SR-550/AIP682/8-97147860910) (CILINDRICO) ADVANCE",
-    "price": 4.22
+    "price": null
   },
   {
     "id": "advance-filtro-aire-mz-bt-50-gasolina-2200-iny-fd-ranger-22-26-2008-advance-lp-fil-040",
@@ -6735,7 +6601,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO AIRE MZ BT-50 GASOLINA 2200 INY FD RANGER 2.2 2.6 2008 ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Mazda BT-50 (2.2 / 2.5 / 2.6 / 3.2 TDCi) / Mazda 3, Ford F-150 / Ranger / Explorer.",
-    "priceEstimate": "$2.78",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -6776,7 +6641,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO AIRE MZ BT-50 GASOLINA 2200 INY FD RANGER 2.2 2.6 2008 ADVANCE",
-    "price": 2.78
+    "price": null
   },
   {
     "id": "advance-filtro-aire-ch-vitara-16-97-01-cuadrado-advance-lp-fil-041",
@@ -6807,7 +6672,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO AIRE CH VITARA 1.6 /97-01 (CUADRADO) ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Multimarca Aplicación Específica por Código Técnico.",
-    "priceEstimate": "$5.17",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -6841,7 +6705,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO AIRE CH VITARA 1.6 /97-01 (CUADRADO) ADVANCE",
-    "price": 5.17
+    "price": null
   },
   {
     "id": "advance-filtro-aire-ns-sentra-b14-rn-duster-advance-prem-aip515-xtrag-ap-103-red-16546-73c10-lp-fil-042",
@@ -6872,7 +6736,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO AIRE NS SENTRA B14 RN DUSTER ADVANCE (PREM AIP515 XTRAG AP-103 RED 16546-73C10) marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Renault Duster / Logan / Sandero Stepway.",
-    "priceEstimate": "$3.00",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -6907,7 +6770,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO AIRE NS SENTRA B14 RN DUSTER ADVANCE (PREM AIP515 XTRAG AP-103 RED 16546-73C10)",
-    "price": 3.0
+    "price": null
   },
   {
     "id": "advance-filtro-aire-ch-vitara-spts-iny-advance-lp-fil-043",
@@ -6938,7 +6801,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO AIRE CH VITARA SPTS INY ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Multimarca Aplicación Específica por Código Técnico.",
-    "priceEstimate": "$3.26",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -6972,7 +6834,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO AIRE CH VITARA SPTS INY ADVANCE",
-    "price": 3.26
+    "price": null
   },
   {
     "id": "advance-filtro-aire-ch-rodeo-32-trooper-32-luv-22-23-32-advance-lp-fil-044",
@@ -7003,7 +6865,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO AIRE CH RODEO 3.2, TROOPER 3.2, LUV 2.2, 2.3, 3.2 ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Multimarca Aplicación Específica por Código Técnico.",
-    "priceEstimate": "$3.61",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -7037,7 +6898,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO AIRE CH RODEO 3.2, TROOPER 3.2, LUV 2.2, 2.3, 3.2 ADVANCE",
-    "price": 3.61
+    "price": null
   },
   {
     "id": "advance-filtro-aire-ch-gran-vitara-3ptasprem-aip513-xtrag-wa-8069-red-25311970-advance-lp-fil-045",
@@ -7068,7 +6929,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO AIRE CH GRAN VITARA 3PTAS(PREM AIP513 XTRAG WA-8069 RED 25311970) ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Suzuki Grand Vitara SZ (2.0 / 2.4 / 2.7 V6).",
-    "priceEstimate": "$2.78",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -7103,7 +6963,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO AIRE CH GRAN VITARA 3PTAS(PREM AIP513 XTRAG WA-8069 RED 25311970) ADVANCE",
-    "price": 2.78
+    "price": null
   },
   {
     "id": "advance-filtro-aire-sz-gran-vitara-sz-24-78k00-advance-lp-fil-046",
@@ -7134,7 +6994,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO AIRE SZ GRAN VITARA SZ 2.4 78K00 ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Suzuki Grand Vitara SZ (2.0 / 2.4 / 2.7 V6).",
-    "priceEstimate": "$4.35",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -7169,7 +7028,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO AIRE SZ GRAN VITARA SZ 2.4 78K00 ADVANCE",
-    "price": 4.35
+    "price": null
   },
   {
     "id": "advance-filtro-aire-hy-tucson-ix-kia-sportage-r-11-12-creta---mk-29766-prem-aip767-advance-lp-fil-047",
@@ -7200,7 +7059,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO AIRE HY TUCSON IX KIA SPORTAGE R 11-12 CRETA - (MK-29766 PREM AIP767 ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Hyundai Tucson (IX / TL / All New), Kia Sportage (Active / Sportage R / GT).",
-    "priceEstimate": "$3.09",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -7241,7 +7099,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO AIRE HY TUCSON IX KIA SPORTAGE R 11-12 CRETA - (MK-29766 PREM AIP767 ADVANCE",
-    "price": 3.09
+    "price": null
   },
   {
     "id": "advance-filtro-aire-rn-logansanderodustermegane-advance-c18581-lp-fil-048",
@@ -7272,7 +7130,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO AIRE RN LOGAN/SANDERO/DUSTER/MEGANE ADVANCE C1858/1 marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Renault Duster / Logan / Sandero Stepway.",
-    "priceEstimate": "$3.43",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -7307,7 +7164,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO AIRE RN LOGAN/SANDERO/DUSTER/MEGANE ADVANCE C1858/1",
-    "price": 3.43
+    "price": null
   },
   {
     "id": "advance-filtro-aire-kia-rio-x-line-18-gt-limited-sport-advance-lp-fil-049",
@@ -7338,7 +7195,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO AIRE KIA RIO X LINE /18 GT LIMITED SPORT ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Hyundai Accent (New Accent / Accent RB / Blue), Kia Rio (Stylus / Xcite / R) / Soluto.",
-    "priceEstimate": "$4.13",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -7379,7 +7235,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO AIRE KIA RIO X LINE /18 GT LIMITED SPORT ADVANCE",
-    "price": 4.13
+    "price": null
   },
   {
     "id": "advance-filtro-aire-great-wall-wingle-22-advance-lp-fil-050",
@@ -7410,7 +7266,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO AIRE GREAT WALL WINGLE /22 ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Great Wall / Haval Wingle 5 / Wingle 7 / Poer 2.0T / Haval H5.",
-    "priceEstimate": "$6.26",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -7445,7 +7300,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO AIRE GREAT WALL WINGLE /22 ADVANCE",
-    "price": 6.26
+    "price": null
   },
   {
     "id": "advance-filtro-aire-zx-auto-grand-tiger-wingle-advance-a38010-1109101-k08-a1-lp-fil-051",
@@ -7476,7 +7331,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO AIRE ZX AUTO-GRAND TIGER-WINGLE ADVANCE A38010 1109101-K08-A1 marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Great Wall / Haval Wingle 5 / Wingle 7 / Poer 2.0T / Haval H5.",
-    "priceEstimate": "$3.09",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -7511,7 +7365,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO AIRE ZX AUTO-GRAND TIGER-WINGLE ADVANCE A38010 1109101-K08-A1",
-    "price": 3.09
+    "price": null
   },
   {
     "id": "advance-filtro-aire-chery-tiggo-2-pro-15l---aa-9123-advance-aa-9123",
@@ -7542,7 +7396,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO AIRE CHERY TIGGO 2 PRO 1.5L - AA-9123 ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Dongfeng / Chery / Jetour Chery Tiggo 2 / Tiggo 2 Pro / Jetour X70.",
-    "priceEstimate": "$5.35",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -7577,7 +7430,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO AIRE CHERY TIGGO 2 PRO 1.5L - AA-9123 ADVANCE",
-    "price": 5.35
+    "price": null
   },
   {
     "id": "advance-filtro-aire-chery-arrizo-5-15---aa--9124-advance-aa-9124",
@@ -7608,7 +7461,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO AIRE CHERY ARRIZO 5 1.5 - AA- 9124 ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Dongfeng / Chery / Jetour Chery Tiggo 2 / Tiggo 2 Pro / Jetour X70.",
-    "priceEstimate": "$4.87",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -7643,7 +7495,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO AIRE CHERY ARRIZO 5 1.5 - AA- 9124 ADVANCE",
-    "price": 4.87
+    "price": null
   },
   {
     "id": "advance-filtro-aire-ch-sail-15l-17-21-aa-9322-aip1018-ap143-90799322-advance-aa-9322",
@@ -7674,7 +7526,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO AIRE CH SAIL 1.5L 17-21 (AA-9322, AIP1018, AP143, 90799322) ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Chevrolet Sail (1.4 / 1.5 / Sedan).",
-    "priceEstimate": "$3.43",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -7709,7 +7560,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO AIRE CH SAIL 1.5L 17-21 (AA-9322, AIP1018, AP143, 90799322) ADVANCE",
-    "price": 3.43
+    "price": null
   },
   {
     "id": "advance-filtro-aire-kia-cerato-16-05-09-hy-elantra-16-00-06-cuupe-tiburon-02-08---aa9392-advance-lp-fil-055",
@@ -7740,7 +7591,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO AIRE KIA CERATO 1.6 05-09 HY ELANTRA 1.6 00-06 CUUPE TIBURON 02-08 - AA9392 ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Multimarca Aplicación Específica por Código Técnico.",
-    "priceEstimate": "$3.91",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -7774,7 +7624,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO AIRE KIA CERATO 1.6 05-09 HY ELANTRA 1.6 00-06 CUUPE TIBURON 02-08 - AA9392 ADVANCE",
-    "price": 3.91
+    "price": null
   },
   {
     "id": "advance-filtro-advance-aire-chevrolet-cavalier-2019-cj-x-24---aa-9476-aa-9476",
@@ -7870,7 +7720,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO AIRE HY GETZ 1.3 2002 ADVANCE (MK-24086) marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Multimarca Aplicación Específica por Código Técnico.",
-    "priceEstimate": "$3.26",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -7904,7 +7753,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO AIRE HY GETZ 1.3 2002 ADVANCE (MK-24086)",
-    "price": 3.26
+    "price": null
   },
   {
     "id": "advance-filtro-aire-vw-jetta-iv-20-11-sk-octavia-14--20-fsi-07-cilindrico-advance-lp-fil-058",
@@ -7935,7 +7784,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO AIRE VW JETTA IV 2.0 /11, SK OCTAVIA 1.4 -2.0 FSI /07 (CILINDRICO) ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Volkswagen Amarok / Gol / Jetta / Bora.",
-    "priceEstimate": "$7.04",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -7970,7 +7818,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO AIRE VW JETTA IV 2.0 /11, SK OCTAVIA 1.4 -2.0 FSI /07 (CILINDRICO) ADVANCE",
-    "price": 7.04
+    "price": null
   },
   {
     "id": "advance-filtro-aire-isuzu-npr-11-19-nhr-reward-11-18-nmr-11-14-nqr-11-18-nlr-11-18-jac-hfc1035-cil-advance-lp-fil-059",
@@ -8001,7 +7849,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO AIRE ISUZU NPR 11-19 NHR REWARD 11-18 NMR 11-14 NQR 11-18 NLR 11-18 JAC HFC1035 (CIL) ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Isuzu Forward (FRR / FTR / FVR) / Camiones NPR / NQR, JAC T6 / T8 Pick Up / Camiones HFC.",
-    "priceEstimate": "$14.11",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -8042,7 +7889,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO AIRE ISUZU NPR 11-19 NHR REWARD 11-18 NMR 11-14 NQR 11-18 NLR 11-18 JAC HFC1035 (CIL) ADVANCE",
-    "price": 14.11
+    "price": null
   },
   {
     "id": "advance-filtro-aire-ch-aveo-chy-taxi-advance-lp-fil-060",
@@ -8073,7 +7920,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO AIRE CH AVEO CHY TAXI ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Chevrolet Aveo (Family / Emotion / Activo).",
-    "priceEstimate": "$2.17",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -8108,7 +7954,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO AIRE CH AVEO CHY TAXI ADVANCE",
-    "price": 2.17
+    "price": null
   },
   {
     "id": "advance-filtro-aire-rn-logan-sandero---aa-994-advance-mk-9074-aa-994",
@@ -8139,7 +7985,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO AIRE RN LOGAN, SANDERO - AA-994 ADVANCE (MK-9074) marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Renault Duster / Logan / Sandero Stepway.",
-    "priceEstimate": "$5.00",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -8174,7 +8019,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO AIRE RN LOGAN, SANDERO - AA-994 ADVANCE (MK-9074)",
-    "price": 5.0
+    "price": null
   },
   {
     "id": "advance-filtro-aire-kia-cerato-13--hy-elantra-16-07-11-i30-16-09-10-koup-20-10-17-advance-lp-fil-065",
@@ -8205,7 +8050,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO AIRE KIA CERATO /13- HY ELANTRA 1.6 /07-11 I30 1.6 /09-10 KOUP 2.0 /10-17 ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Multimarca Aplicación Específica por Código Técnico.",
-    "priceEstimate": "$3.00",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -8239,7 +8083,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO AIRE KIA CERATO /13- HY ELANTRA 1.6 /07-11 I30 1.6 /09-10 KOUP 2.0 /10-17 ADVANCE",
-    "price": 3.0
+    "price": null
   },
   {
     "id": "advance-filtro-advance-aire-jac-t9-20-2025---aa-3038-aa-3038",
@@ -8336,7 +8180,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO ACEITE KIA PREGIO H 100 TERRACAN CARNIVAL DIESEL K2700 H-350 ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Multimarca Aplicación Específica por Código Técnico.",
-    "priceEstimate": "$2.91",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -8370,7 +8213,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "FILTRO ACEITE KIA PREGIO H 100 TERRACAN CARNIVAL DIESEL K2700 H-350 ADVANCE",
-    "price": 2.91
+    "price": null
   },
   {
     "id": "advance-filtro-aceite-ch-d-max-30-02-16-d-max-25-02-12-fd-escape-20-01-04-advance-078ao-1539",
@@ -8401,7 +8244,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO ACEITE CH D-MAX 3.0 02-16 D-MAX 2.5 02-12, FD ESCAPE 2.0 01-04 ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Chevrolet D-Max (CRDi / 2.0T / 2.5 / 3.0 / 2.4).",
-    "priceEstimate": "$2.17",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -8436,7 +8278,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "FILTRO ACEITE CH D-MAX 3.0 02-16 D-MAX 2.5 02-12, FD ESCAPE 2.0 01-04 ADVANCE",
-    "price": 2.17
+    "price": null
   },
   {
     "id": "advance-filtro-aceite-fd-f150-escape-explorer-v8-iny-wingle-diesel-20-ph-820-advance-078ao-2",
@@ -8467,7 +8309,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO ACEITE FD F150-ESCAPE-EXPLORER V8 INY. WINGLE DIESEL 2.0 (PH-820) ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Great Wall / Haval Wingle 5 / Wingle 7 / Poer 2.0T / Haval H5, Ford F-150 / Ranger / Explorer.",
-    "priceEstimate": "$2.65",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -8508,7 +8349,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "FILTRO ACEITE FD F150-ESCAPE-EXPLORER V8 INY. WINGLE DIESEL 2.0 (PH-820) ADVANCE",
-    "price": 2.65
+    "price": null
   },
   {
     "id": "advance-filtro-aceite-ch-sailvan-n200-n300spark-gtbeat-premier-10000km-sh4444-advance-078ao-2841",
@@ -8539,7 +8380,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO ACEITE CH SAIL/VAN N200-N300/SPARK GT/BEAT PREMIER (10000KM) (SH4444) ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Chevrolet Sail (1.4 / 1.5 / Sedan), Chevrolet Spark GT / Spark Life / Beat.",
-    "priceEstimate": "$2.17",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -8580,7 +8420,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "FILTRO ACEITE CH SAIL/VAN N200-N300/SPARK GT/BEAT PREMIER (10000KM) (SH4444) ADVANCE",
-    "price": 2.17
+    "price": null
   },
   {
     "id": "advance-filtro-aceite-mz-16-20-22-26bt50-gasfd-courier-20-22-wingle-5-gas-advance-078ao-2849",
@@ -8611,7 +8451,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO ACEITE MZ 1.6-2.0-2.2-2.6/BT50 GAS/FD COURIER 2.0-2.2 WINGLE 5 GAS ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Great Wall / Haval Wingle 5 / Wingle 7 / Poer 2.0T / Haval H5, Mazda BT-50 (2.2 / 2.5 / 2.6 / 3.2 TDCi) / Mazda 3.",
-    "priceEstimate": "$2.17",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -8652,7 +8491,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO ACEITE MZ 1.6-2.0-2.2-2.6/BT50 GAS/FD COURIER 2.0-2.2 WINGLE 5 GAS ADVANCE",
-    "price": 2.17
+    "price": null
   },
   {
     "id": "advance-filtro-aceite-ch-luv-25-dieselgreat-wallhaval-h5-25wingle-28camion-jack-ph7325-advance-078ao-2863",
@@ -8683,7 +8522,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO ACEITE CH LUV 2.5 DIESEL/GREAT WALL/HAVAL H5 2.5/WINGLE 2.8/CAMION JACK (PH7325) ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Great Wall / Haval Wingle 5 / Wingle 7 / Poer 2.0T / Haval H5, JAC T6 / T8 Pick Up / Camiones HFC.",
-    "priceEstimate": "$3.52",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -8724,7 +8562,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO ACEITE CH LUV 2.5 DIESEL/GREAT WALL/HAVAL H5 2.5/WINGLE 2.8/CAMION JACK (PH7325) ADVANCE",
-    "price": 3.52
+    "price": null
   },
   {
     "id": "advance-filtro-aceite-mercedes-190-sk-fabia-i-felicia-super-b-vw-crossfox-gol-golf-polo-advance-078ao-2870",
@@ -8755,7 +8593,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO ACEITE MERCEDES 190 SK FABIA I FELICIA SUPER B VW CROSSFOX GOL GOLF POLO ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Volkswagen Amarok / Gol / Jetta / Bora.",
-    "priceEstimate": "$2.52",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -8790,7 +8627,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO ACEITE MERCEDES 190 SK FABIA I FELICIA SUPER B VW CROSSFOX GOL GOLF POLO ADVANCE",
-    "price": 2.52
+    "price": null
   },
   {
     "id": "advance-filtro-aceite-ns-navara-jeep-land-rover-lada-dodge-fiat-antiguos-ph-43-advance-078ao-2879",
@@ -8821,7 +8658,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO ACEITE NS NAVARA, JEEP. LAND ROVER. LADA, DODGE, FIAT ANTIGUOS (PH-43) ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Nissan Frontier (D22 / D40 / NP300 2.5 Diésel / Gas).",
-    "priceEstimate": "$3.12",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -8856,7 +8692,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO ACEITE NS NAVARA, JEEP. LAND ROVER. LADA, DODGE, FIAT ANTIGUOS (PH-43) ADVANCE",
-    "price": 3.12
+    "price": null
   },
   {
     "id": "advance-filtro-aceite-ch-spark-life-10l-06-19ty-rav-4changan-alsvin-15l-advance-078ao-4967",
@@ -8887,7 +8723,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO ACEITE CH SPARK LIFE 1.0L 06-19/TY RAV 4/CHANGAN ALSVIN 1.5L ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Chevrolet Spark GT / Spark Life / Beat.",
-    "priceEstimate": "$2.17",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -8922,7 +8757,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO ACEITE CH SPARK LIFE 1.0L 06-19/TY RAV 4/CHANGAN ALSVIN 1.5L ADVANCE",
-    "price": 2.17
+    "price": null
   },
   {
     "id": "advance-filtro-aceite-ch-luv-d-max-14--advance-078ao-50710",
@@ -8953,7 +8788,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO ACEITE CH LUV D-MAX /14- ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Chevrolet D-Max (CRDi / 2.0T / 2.5 / 3.0 / 2.4).",
-    "priceEstimate": "$2.17",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -8988,7 +8822,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO ACEITE CH LUV D-MAX /14- ADVANCE",
-    "price": 2.17
+    "price": null
   },
   {
     "id": "advance-filtro-aceite-fiat-palio-fiorino-civic-accord-kia-i10-cerato-ph2867-advance-078ao-7317",
@@ -9019,7 +8853,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO ACEITE FIAT PALIO FIORINO CIVIC ACCORD KIA I10 CERATO (PH2867) ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Multimarca Aplicación Específica por Código Técnico.",
-    "priceEstimate": "$2.17",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -9053,7 +8886,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO ACEITE FIAT PALIO FIORINO CIVIC ACCORD KIA I10 CERATO (PH2867) ADVANCE",
-    "price": 2.17
+    "price": null
   },
   {
     "id": "advance-filtro-aceite-fddodgety-stouthiluxland-cruisermz-bt50-diesel-ph-8-advance-078ao-8",
@@ -9084,7 +8917,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO ACEITE FD/DODGE/TY STOUT/HILUX/LAND CRUISER/MZ BT50 DIESEL PH-8 ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Toyota Hilux 2.4 TD / 2.7 Gasolina / 2.8 TD, Toyota Fortuner 2.7 Gasolina / 2.8 TD, Mazda BT-50 (2.2 / 2.5 / 2.6 / 3.2 TDCi) / Mazda 3.",
-    "priceEstimate": "$2.87",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -9131,7 +8963,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO ACEITE FD/DODGE/TY STOUT/HILUX/LAND CRUISER/MZ BT50 DIESEL PH-8 ADVANCE",
-    "price": 2.87
+    "price": null
   },
   {
     "id": "advance-filtro-aceite-ch-cruze-18l-tracker-18l-16v-13-19-elemento-advance-079aoe-10246",
@@ -9162,7 +8994,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO ACEITE CH CRUZE 1.8L / TRACKER 1.8L 16V 13-19 / (ELEMENTO) ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Chevrolet Tracker / Cruze / Orlando.",
-    "priceEstimate": "$2.88",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -9197,7 +9028,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO ACEITE CH CRUZE 1.8L / TRACKER 1.8L 16V 13-19 / (ELEMENTO) ADVANCE",
-    "price": 2.88
+    "price": null
   },
   {
     "id": "advance-filtro-aceite-mz-bt-50-diesel-advance-080ao-1",
@@ -9228,7 +9059,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO ACEITE MZ BT-50 DIESEL ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Mazda BT-50 (2.2 / 2.5 / 2.6 / 3.2 TDCi) / Mazda 3.",
-    "priceEstimate": "$3.17",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -9263,7 +9093,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO ACEITE MZ BT-50 DIESEL ADVANCE",
-    "price": 3.17
+    "price": null
   },
   {
     "id": "advance-filtro-advance-aceite-chevrolet-d-max-20t-diesel-2025---ao-1051-2400-unidad-500-080ao-1051",
@@ -9294,7 +9124,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO ADVANCE ACEITE CHEVROLET D-MAX 2.0T DIESEL 2025 - AO-1051 24.00 UNIDAD 5,00 marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Chevrolet D-Max (CRDi / 2.0T / 2.5 / 3.0 / 2.4).",
-    "priceEstimate": "$2.17",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -9329,7 +9158,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO ADVANCE ACEITE CHEVROLET D-MAX 2.0T DIESEL 2025 - AO-1051 24.00 UNIDAD 5,00",
-    "price": 2.17
+    "price": null
   },
   {
     "id": "advance-filtro-aceite-vw-tiguan-20-07--amarok-gas-passat-18-07--audi-20-con-rosca-macho-advance-080ao-10600",
@@ -9360,7 +9189,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO ACEITE VW TIGUAN 2.0 /07- AMAROK GAS. PASSAT 1.8 /07- AUDI 2.0 CON ROSCA MACHO ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Multimarca Aplicación Específica por Código Técnico.",
-    "priceEstimate": "$5.43",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -9394,7 +9222,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO ACEITE VW TIGUAN 2.0 /07- AMAROK GAS. PASSAT 1.8 /07- AUDI 2.0 CON ROSCA MACHO ADVANCE",
-    "price": 5.43
+    "price": null
   },
   {
     "id": "advance-filtro-aceite-mt-canterfusohino-fb-fchd-55hd-65-c161-advance-080ao-1302",
@@ -9425,7 +9253,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO ACEITE MT CANTER/FUSO/HINO FB-FC/HD 55/HD 65 C161 ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Hino Serie 300 Dutro / Serie 500 (GD / GH / FG / FM).",
-    "priceEstimate": "$4.35",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -9460,7 +9287,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO ACEITE MT CANTER/FUSO/HINO FB-FC/HD 55/HD 65 C161 ADVANCE",
-    "price": 4.35
+    "price": null
   },
   {
     "id": "advance-filtro-aceite-hino-fb1817-fd2220-fd2320-fe3020-sg3320-sg3325-advance-080ao-1314",
@@ -9491,7 +9318,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO ACEITE HINO FB1817, FD2220, FD2320, FE3020, SG3320, SG3325 (ADVANCE) marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Hino Serie 300 Dutro / Serie 500 (GD / GH / FG / FM).",
-    "priceEstimate": "$7.13",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -9526,7 +9352,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO ACEITE HINO FB1817, FD2220, FD2320, FE3020, SG3320, SG3325 (ADVANCE)",
-    "price": 7.13
+    "price": null
   },
   {
     "id": "advance-filtro-aceite-hino-dutro-09-advance-080ao-1318",
@@ -9557,7 +9383,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO ACEITE HINO DUTRO /09 ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Hino Serie 300 Dutro / Serie 500 (GD / GH / FG / FM).",
-    "priceEstimate": "$4.83",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -9592,7 +9417,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO ACEITE HINO DUTRO /09 ADVANCE",
-    "price": 4.83
+    "price": null
   },
   {
     "id": "advance-filtro-aceite-hino-300-dutro-07-12-300-euro-dutro-512-616-616dc-716-816-advance-080ao-1321",
@@ -9623,7 +9448,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO ACEITE HINO 300 DUTRO 07-12 300 EURO DUTRO 512 616 616DC 716 816 ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Hino Serie 300 Dutro / Serie 500 (GD / GH / FG / FM).",
-    "priceEstimate": "$7.26",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -9658,7 +9482,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO ACEITE HINO 300 DUTRO 07-12 300 EURO DUTRO 512 616 616DC 716 816 ADVANCE",
-    "price": 7.26
+    "price": null
   },
   {
     "id": "advance-filtro-aceite-iz-ftr-fsr-fvr-9899-sakura-c1513-hard-8-94396-375-4-advance-080ao-1513",
@@ -9689,7 +9513,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO ACEITE IZ FTR FSR FVR 98/99 ( SAKURA C1513 / HARD 8-94396-375-4) ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Isuzu Forward (FRR / FTR / FVR) / Camiones NPR / NQR.",
-    "priceEstimate": "$9.39",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -9724,7 +9547,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO ACEITE IZ FTR FSR FVR 98/99 ( SAKURA C1513 / HARD 8-94396-375-4) ADVANCE",
-    "price": 9.39
+    "price": null
   },
   {
     "id": "advance-filtro-aceite-isz-npr-nkr-98-motor-4b-advance-080ao-1522",
@@ -9755,7 +9578,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO ACEITE ISZ NPR NKR 98-MOTOR 4B ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Suzuki Grand Vitara SZ (2.0 / 2.4 / 2.7 V6), Isuzu Forward (FRR / FTR / FVR) / Camiones NPR / NQR.",
-    "priceEstimate": "$8.83",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -9796,7 +9618,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO ACEITE ISZ NPR NKR 98-MOTOR 4B ADVANCE",
-    "price": 8.83
+    "price": null
   },
   {
     "id": "advance-filtro-aceite-great-wall-wingle-28-diesel-mahindra-pick-up-scorpio-jac-hfc-1040k-m20-15-advance-080ao-2801",
@@ -9827,7 +9649,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO ACEITE GREAT WALL WINGLE 2.8 DIESEL MAHINDRA PICK UP SCORPIO JAC HFC 1040K M20 1.5 ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Great Wall / Haval Wingle 5 / Wingle 7 / Poer 2.0T / Haval H5, JAC T6 / T8 Pick Up / Camiones HFC.",
-    "priceEstimate": "$2.65",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -9868,7 +9689,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO ACEITE GREAT WALL WINGLE 2.8 DIESEL MAHINDRA PICK UP SCORPIO JAC HFC 1040K M20 1.5 ADVANCE",
-    "price": 2.65
+    "price": null
   },
   {
     "id": "advance-filtro-aceite-dt12-15-ns-sentra-92-98-ty-68-84-hilux-stout-ns-datsun-advance-080ao-2825",
@@ -9899,7 +9720,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO ACEITE DT1.2-1.5 NS SENTRA /92-98 TY /68-84 HILUX STOUT NS DATSUN ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Toyota Hilux 2.4 TD / 2.7 Gasolina / 2.8 TD, Toyota Fortuner 2.7 Gasolina / 2.8 TD.",
-    "priceEstimate": "$2.17",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -9940,7 +9760,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO ACEITE DT1.2-1.5 NS SENTRA /92-98 TY /68-84 HILUX STOUT NS DATSUN ADVANCE",
-    "price": 2.17
+    "price": null
   },
   {
     "id": "advance-filtro-advance-aceite-medio-filtrante-100-sintetico-15000-km-chevrole-cavalier-groove-sail-n2-080ao-2841st",
@@ -9971,7 +9791,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO ADVANCE ACEITE (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) CHEVROLE CAVALIER, GROOVE, SAIL, N2 marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Chevrolet Sail (1.4 / 1.5 / Sedan), Hino Serie 300 Dutro / Serie 500 (GD / GH / FG / FM).",
-    "priceEstimate": "$2.61",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -10012,7 +9831,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO ADVANCE ACEITE (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) CHEVROLE CAVALIER, GROOVE, SAIL, N2",
-    "price": 2.61
+    "price": null
   },
   {
     "id": "advance-filtro-advance-aceite-medio-filtrante-100-sintetico-15000-km-jac-t8-mazda-16-18-b2000---1600-080ao-2849st",
@@ -10043,7 +9862,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO ADVANCE ACEITE (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) JAC T8 MAZDA 1.6 1.8 B2000 - 1.600 marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Hino Serie 300 Dutro / Serie 500 (GD / GH / FG / FM), JAC T6 / T8 Pick Up / Camiones HFC, Mazda BT-50 (2.2 / 2.5 / 2.6 / 3.2 TDCi) / Mazda 3.",
-    "priceEstimate": "$3.04",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -10090,7 +9908,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO ADVANCE ACEITE (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) JAC T8 MAZDA 1.6 1.8 B2000 - 1.600",
-    "price": 3.04
+    "price": null
   },
   {
     "id": "advance-filtro-advance-aceite-medio-filtrante-100-sintetico-15000-km-audi-skoda-volkswagen-doble-valv-080ao-2870st",
@@ -10121,7 +9939,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO ADVANCE ACEITE (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) AUDI, SKODA, VOLKSWAGEN (DOBLE VALV marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Hino Serie 300 Dutro / Serie 500 (GD / GH / FG / FM).",
-    "priceEstimate": "$3.48",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -10156,7 +9973,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO ADVANCE ACEITE (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) AUDI, SKODA, VOLKSWAGEN (DOBLE VALV",
-    "price": 3.48
+    "price": null
   },
   {
     "id": "advance-filtro-aceite-ch-aveocorsaoptraluv-22-24dmax-ph-2862-advance-080ao-3387",
@@ -10187,7 +10004,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO ACEITE CH AVEO/CORSA/OPTRA/LUV 2.2-2.4/DMAX (PH-2862) ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Chevrolet D-Max (CRDi / 2.0T / 2.5 / 3.0 / 2.4), Chevrolet Aveo (Family / Emotion / Activo).",
-    "priceEstimate": "$2.17",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -10228,7 +10044,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO ACEITE CH AVEO/CORSA/OPTRA/LUV 2.2-2.4/DMAX (PH-2862) ADVANCE",
-    "price": 2.17
+    "price": null
   },
   {
     "id": "advance-filtro-advance-aceite-medio-filtrante-100-sintetico-15000-km-chevrolet-daewoo-fiat---ao-3387st-080ao-3387st",
@@ -10259,7 +10075,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO ADVANCE ACEITE (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) CHEVROLET, DAEWOO, FIAT - AO-3387ST marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Hino Serie 300 Dutro / Serie 500 (GD / GH / FG / FM).",
-    "priceEstimate": "$2.61",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -10294,7 +10109,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO ADVANCE ACEITE (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) CHEVROLET, DAEWOO, FIAT - AO-3387ST",
-    "price": 2.61
+    "price": null
   },
   {
     "id": "advance-filtro-aceite-ch-luv-32dmax-35hykiatucsonsportagegreat-walltrooper-advance-080ao-3593",
@@ -10325,7 +10140,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO ACEITE CH LUV 3.2/DMAX 3.5/HY/KIA/TUCSON/SPORTAGE/GREAT WALL/TROOPER ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Chevrolet D-Max (CRDi / 2.0T / 2.5 / 3.0 / 2.4), Hyundai Tucson (IX / TL / All New), Kia Sportage (Active / Sportage R / GT).",
-    "priceEstimate": "$2.17",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -10372,7 +10186,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO ACEITE CH LUV 3.2/DMAX 3.5/HY/KIA/TUCSON/SPORTAGE/GREAT WALL/TROOPER ADVANCE",
-    "price": 2.17
+    "price": null
   },
   {
     "id": "advance-filtro-advance-aceite-medio-filtrante-100-sintetico-15000-km-chevrolet-great-wall-hyundai-kia-080ao-3593st",
@@ -10403,7 +10217,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO ADVANCE ACEITE (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) CHEVROLET, GREAT WALL, HYUNDAI, KIA marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Hino Serie 300 Dutro / Serie 500 (GD / GH / FG / FM).",
-    "priceEstimate": "$2.61",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -10438,7 +10251,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO ADVANCE ACEITE (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) CHEVROLET, GREAT WALL, HYUNDAI, KIA",
-    "price": 2.61
+    "price": null
   },
   {
     "id": "advance-filtro-aceite-ch-forsa-i-iigrand-vitarajinmyvitaradaihatsu-terios-13-ph966b-advance-080ao-3614",
@@ -10469,7 +10282,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO ACEITE CH FORSA I-II/GRAND VITARA/JINMY/VITARA/DAIHATSU TERIOS 1.3 (PH966B) ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Hyundai Accent (New Accent / Accent RB / Blue), Kia Rio (Stylus / Xcite / R) / Soluto, Suzuki Grand Vitara SZ (2.0 / 2.4 / 2.7 V6).",
-    "priceEstimate": "$2.17",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -10516,7 +10328,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO ACEITE CH FORSA I-II/GRAND VITARA/JINMY/VITARA/DAIHATSU TERIOS 1.3 (PH966B) ADVANCE",
-    "price": 2.17
+    "price": null
   },
   {
     "id": "advance-filtro-advance-aire-medio-filtrante-100-sintetico-15000-km-chery-chevrolet-dongfeng-faw-ford-jetour-080ao-3614st",
@@ -10547,7 +10359,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO ADVANCE AIRE MEDIO FILTRANTE 100 SINTETICO 15000 KM. CHERY CHEVROLET DONGFENG FAW FORD JETOUR marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Hino Serie 300 Dutro / Serie 500 (GD / GH / FG / FM), Dongfeng / Chery / Jetour Chery Tiggo 2 / Tiggo 2 Pro / Jetour X70, Dongfeng / Chery / Jetour Dongfeng Rich 6 2.5 Diésel 4x4.",
-    "priceEstimate": "$2.61",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -10594,7 +10405,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO ADVANCE AIRE MEDIO FILTRANTE 100 SINTETICO 15000 KM. CHERY CHEVROLET DONGFENG FAW FORD JETOUR",
-    "price": 2.61
+    "price": null
   },
   {
     "id": "advance-filtro-aceite-ch-trailblazer-silverado-2000-cheyenne-2000-plb3675-advance-ph-59-ph3429a-080ao-3675",
@@ -10625,7 +10436,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO ACEITE CH TRAILBLAZER-SILVERADO 2000-CHEYENNE 2000 (PLB3675) ADVANCE PH-59 PH3429A marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Multimarca Aplicación Específica por Código Técnico.",
-    "priceEstimate": "$2.48",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -10659,7 +10469,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO ACEITE CH TRAILBLAZER-SILVERADO 2000-CHEYENNE 2000 (PLB3675) ADVANCE PH-59 PH3429A",
-    "price": 2.48
+    "price": null
   },
   {
     "id": "advance-filtro-advance-aceite-mitsubishi-canter-hyundai-hd55-hd65-hd72-hd78-doble-filtracion-c--5816-caj-080ao-3830",
@@ -10690,7 +10500,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO ADVANCE ACEITE MITSUBISHI CANTER, HYUNDAI HD55, HD65, HD72, HD78 DOBLE FILTRACION C- 5816 CAJ marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Multimarca Aplicación Específica por Código Técnico.",
-    "priceEstimate": "$5.19",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -10724,7 +10533,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO ADVANCE ACEITE MITSUBISHI CANTER, HYUNDAI HD55, HD65, HD72, HD78 DOBLE FILTRACION C- 5816 CAJ",
-    "price": 5.19
+    "price": null
   },
   {
     "id": "advance-filtro-aceite-rn-clioscenicmeganelogantwingo-con-tuerca-advance-080ao-3985",
@@ -10755,7 +10564,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO ACEITE RN CLIO/SCENIC/MEGANE/LOGAN/TWINGO CON TUERCA ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Renault Duster / Logan / Sandero Stepway.",
-    "priceEstimate": "$2.17",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -10790,7 +10598,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO ACEITE RN CLIO/SCENIC/MEGANE/LOGAN/TWINGO CON TUERCA ADVANCE",
-    "price": 2.17
+    "price": null
   },
   {
     "id": "advance-filtro-advance-aceite-medio-filtrante-100-sintetico-15000-km-suzuki-grand-vitara-sz-next-toyot-080ao-4386st",
@@ -10893,7 +10701,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO ADVANCE ACEITE MG, ZOTYE T600 1.5, CHEVROLET TAHOE, SILVERADO, TRAIL BLAZER EXT - AO-4952 marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con JAC T6 / T8 Pick Up / Camiones HFC.",
-    "priceEstimate": "$2.22",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -10928,7 +10735,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO ADVANCE ACEITE MG, ZOTYE T600 1.5, CHEVROLET TAHOE, SILVERADO, TRAIL BLAZER EXT - AO-4952",
-    "price": 2.22
+    "price": null
   },
   {
     "id": "advance-filtro-advance-aceite-ford-edge-explorer-expedition-f-150-caja-x-40---ao-5001-080ao-500-1",
@@ -10959,7 +10766,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO ADVANCE ACEITE FORD EDGE, EXPLORER, EXPEDITION, F-150 CAJA X 40 - AO-500/1 marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Hino Serie 300 Dutro / Serie 500 (GD / GH / FG / FM), Ford F-150 / Ranger / Explorer.",
-    "priceEstimate": "$2.98",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -11000,7 +10806,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO ADVANCE ACEITE FORD EDGE, EXPLORER, EXPEDITION, F-150 CAJA X 40 - AO-500/1",
-    "price": 2.98
+    "price": null
   },
   {
     "id": "advance-filtro-advance-aceite-medio-filtrante-100-sintetico-15000-km-chevrolet-ford-jmc-jac---ao-500s-080ao-500st",
@@ -11103,7 +10909,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO ADVANCE ACEITE CHEVROLET DMAX 2014 CAJA X 40- AO-50710/1 marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Chevrolet D-Max (CRDi / 2.0T / 2.5 / 3.0 / 2.4).",
-    "priceEstimate": "$2.95",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -11138,7 +10943,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO ADVANCE ACEITE CHEVROLET DMAX 2014 CAJA X 40- AO-50710/1",
-    "price": 2.95
+    "price": null
   },
   {
     "id": "advance-filtro-aceite-ch-nhr-nkr-m26x15-dual-8-94360427-1-advance-080ao-5190",
@@ -11169,7 +10974,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO ACEITE CH NHR, NKR M26X1,5 DUAL (8-94360427-1) ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Multimarca Aplicación Específica por Código Técnico.",
-    "priceEstimate": "$4.48",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -11203,7 +11007,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO ACEITE CH NHR, NKR M26X1,5 DUAL (8-94360427-1) ADVANCE",
-    "price": 4.48
+    "price": null
   },
   {
     "id": "advance-filtro-advance-aceite-ud-trucks-fd6t-c-270-c1200-6102-uj1034-sc270---ao-6100-080ao-6102",
@@ -11234,7 +11038,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO ADVANCE ACEITE UD TRUCKS FD6T (C-270, C12.00 6102, UJ1034, SC270) - AO-6100 marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Multimarca Aplicación Específica por Código Técnico.",
-    "priceEstimate": "$7.85",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -11268,7 +11071,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO ADVANCE ACEITE UD TRUCKS FD6T (C-270, C12.00 6102, UJ1034, SC270) - AO-6100",
-    "price": 7.85
+    "price": null
   },
   {
     "id": "advance-filtro-aceite-fiat-uno-fire-13-honda-accord-23-atos-prime-11-kia-cerato-forte-16-tiida-advance-080ao-6607",
@@ -11299,7 +11102,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO ACEITE FIAT UNO FIRE 1.3 HONDA ACCORD 2.3 ATOS PRIME 1.1 KIA CERATO FORTE 1.6 TIIDA ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Multimarca Aplicación Específica por Código Técnico.",
-    "priceEstimate": "$2.17",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -11333,7 +11135,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO ACEITE FIAT UNO FIRE 1.3 HONDA ACCORD 2.3 ATOS PRIME 1.1 KIA CERATO FORTE 1.6 TIIDA ADVANCE",
-    "price": 2.17
+    "price": null
   },
   {
     "id": "advance-filtro-advance-aceite-medio-filtrante-100-sintetico-15000-km-hyundai-kia-foton-great-wall-ha-080ao-6607st",
@@ -11364,7 +11166,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO ADVANCE ACEITE (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) HYUNDAI, KIA, FOTON, GREAT WALL, HA marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Hino Serie 300 Dutro / Serie 500 (GD / GH / FG / FM).",
-    "priceEstimate": "$2.61",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -11399,7 +11200,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO ADVANCE ACEITE (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) HYUNDAI, KIA, FOTON, GREAT WALL, HA",
-    "price": 2.61
+    "price": null
   },
   {
     "id": "advance-filtro-advance-aceite-ph49alf667c-5510lfp3191-psl417oil-filter-caterpillar-mack-scania-volv-080ao-667-1",
@@ -11495,7 +11296,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO ADVANCE ACEITE (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) GREAT WALL,HYUNDAI, KIA, MITSUBISHI marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Hino Serie 300 Dutro / Serie 500 (GD / GH / FG / FM).",
-    "priceEstimate": "$2.61",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -11530,7 +11330,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO ADVANCE ACEITE (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) GREAT WALL,HYUNDAI, KIA, MITSUBISHI",
-    "price": 2.61
+    "price": null
   },
   {
     "id": "advance-filtro-aceite-ty-hilux-27-fortuner-27-advance-ml-20004-080ao-9566",
@@ -11561,7 +11361,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO ACEITE TY HILUX 2.7 FORTUNER 2.7 ADVANCE (ML-20004) marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Toyota Hilux 2.4 TD / 2.7 Gasolina / 2.8 TD, Toyota Fortuner 2.7 Gasolina / 2.8 TD.",
-    "priceEstimate": "$2.57",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -11602,7 +11401,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO ACEITE TY HILUX 2.7 FORTUNER 2.7 ADVANCE (ML-20004)",
-    "price": 2.57
+    "price": null
   },
   {
     "id": "advance-filtro-aceite-dongfeng-df-140-dfm-210-fd-cargo-815e-ml-55081-c-5713-lf645-hph-9617-advance-080ao-9617",
@@ -11633,7 +11432,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO ACEITE DONGFENG DF 140 DFM 210 FD CARGO 815E (ML-55081) C-5713 LF645 HPH-9617/ ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Dongfeng / Chery / Jetour Dongfeng Rich 6 2.5 Diésel 4x4.",
-    "priceEstimate": "$6.26",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -11668,7 +11466,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO ACEITE DONGFENG DF 140 DFM 210 FD CARGO 815E (ML-55081) C-5713 LF645 HPH-9617/ ADVANCE",
-    "price": 6.26
+    "price": null
   },
   {
     "id": "advance-filtro-advance-aceite-elemento-medio-filtrante-100-sintetico-15000-km-ford-ranger-mazda-bt50-e-080aoe-11651st",
@@ -11699,7 +11497,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO ADVANCE ACEITE ELEMENTO (MEDIO FILTRANTE 100% SINTETICO 15.000 KM.) FORD RANGER, MAZDA BT50 E marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Mazda BT-50 (2.2 / 2.5 / 2.6 / 3.2 TDCi) / Mazda 3, Ford F-150 / Ranger / Explorer.",
-    "priceEstimate": "$3.12",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -11740,7 +11537,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO ADVANCE ACEITE ELEMENTO (MEDIO FILTRANTE 100% SINTETICO 15.000 KM.) FORD RANGER, MAZDA BT50 E",
-    "price": 3.12
+    "price": null
   },
   {
     "id": "advance-filtro-advance-aceite-elemento-medio-filtrante-100-sintetico-15000-km-chevrolet-trailblazer-28-080aoe-11724st",
@@ -11771,7 +11568,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO ADVANCE ACEITE ELEMENTO (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) CHEVROLET TRAILBLAZER 2.8 marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Hino Serie 300 Dutro / Serie 500 (GD / GH / FG / FM).",
-    "priceEstimate": "$3.83",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -11806,7 +11602,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO ADVANCE ACEITE ELEMENTO (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) CHEVROLET TRAILBLAZER 2.8",
-    "price": 3.83
+    "price": null
   },
   {
     "id": "advance-filtro-aceite-isuzu-npr-nml-2-nmr-elemento-advance-080aoe-1501",
@@ -11837,7 +11633,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO ACEITE ISUZU NPR NML 2 NMR (ELEMENTO) ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Isuzu Forward (FRR / FTR / FVR) / Camiones NPR / NQR.",
-    "priceEstimate": "$2.74",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -11872,7 +11667,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO ACEITE ISUZU NPR NML 2 NMR (ELEMENTO) ADVANCE",
-    "price": 2.74
+    "price": null
   },
   {
     "id": "advance-filtro-advance-aceite-elemento-medio-filtrante-100-sintetico-15000-km-haval-all-new-h6-20t-2022-080aoe-486st",
@@ -11903,7 +11698,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO ADVANCE ACEITE ELEMENTO (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) HAVAL ALL NEW H6 2.0T 2022 marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Hino Serie 300 Dutro / Serie 500 (GD / GH / FG / FM), Great Wall / Haval Wingle 5 / Wingle 7 / Poer 2.0T / Haval H5.",
-    "priceEstimate": "$4.39",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -11944,7 +11738,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO ADVANCE ACEITE ELEMENTO (MEDIO FILTRANTE 100% SINTETICO 15000 KM.) HAVAL ALL NEW H6 2.0T 2022",
-    "price": 4.39
+    "price": null
   },
   {
     "id": "advance-filtro-advance-aceite-elementojac-hfc-1140-78l-hfc-1160-78l-hfc-1180-78l---aoe92291-080aoe-9229-1",
@@ -12113,7 +11907,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO ACEITE NS URVAN DIESEL, NS FRONTIER (ELEMENTO) ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Nissan Frontier (D22 / D40 / NP300 2.5 Diésel / Gas).",
-    "priceEstimate": "$2.48",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -12148,7 +11941,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO ACEITE NS URVAN DIESEL, NS FRONTIER (ELEMENTO) ADVANCE",
-    "price": 2.48
+    "price": null
   },
   {
     "id": "advance-filtro-advance-aceite-elemento-medio-filtrante-100-sintetico-15000-km-great-wall-poer-20t-dies-080aoe-9974st",
@@ -12179,7 +11972,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO ADVANCE ACEITE ELEMENTO (MEDIO FILTRANTE 100% SINTETICO 15.000 KM.) GREAT WALL POER 2.0T DIES marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Great Wall / Haval Wingle 5 / Wingle 7 / Poer 2.0T / Haval H5.",
-    "priceEstimate": "$3.13",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -12214,7 +12006,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO ADVANCE ACEITE ELEMENTO (MEDIO FILTRANTE 100% SINTETICO 15.000 KM.) GREAT WALL POER 2.0T DIES",
-    "price": 3.13
+    "price": null
   },
   {
     "id": "advance-filtro-advance-aceite-sandero-stepwayssangyong-tivoli-16-con-tuerca---ao-3985st-ao-3985st",
@@ -12245,7 +12037,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO ADVANCE ACEITE SANDERO STEPWAY;SSANGYONG TIVOLI 1.6 CON TUERCA - AO-3985ST marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Renault Duster / Logan / Sandero Stepway.",
-    "priceEstimate": "$2.61",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -12280,7 +12071,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO ADVANCE ACEITE SANDERO STEPWAY;SSANGYONG TIVOLI 1.6 CON TUERCA - AO-3985ST",
-    "price": 2.61
+    "price": null
   },
   {
     "id": "advance-filtro-cabina-ch-gran-vitara-16-20-03-15-advance-078ac-1401",
@@ -12311,7 +12102,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO CABINA CH GRAN VITARA 1.6-2.0 /03-15 ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Suzuki Grand Vitara SZ (2.0 / 2.4 / 2.7 V6).",
-    "priceEstimate": "$4.48",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -12346,7 +12136,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "FILTRO CABINA CH GRAN VITARA 1.6-2.0 /03-15 ADVANCE",
-    "price": 4.48
+    "price": null
   },
   {
     "id": "advance-filtro-cabina-vw-bora-jetta-tiguan-sk-fabia-1ac-300202-14-16v-14-8v-superb-octavia-advance-078ac-30020",
@@ -12377,7 +12167,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO CABINA VW BORA JETTA TIGUAN SK FABIA 1.AC-30020,2 1.4 16V 1.4 8V SUPERB OCTAVIA ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Volkswagen Amarok / Gol / Jetta / Bora.",
-    "priceEstimate": "$7.04",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -12412,7 +12201,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "FILTRO CABINA VW BORA JETTA TIGUAN SK FABIA 1.AC-30020,2 1.4 16V 1.4 8V SUPERB OCTAVIA ADVANCE",
-    "price": 7.04
+    "price": null
   },
   {
     "id": "advance-filtro-cabina-chery-tiggo-2-pro-15-2023-advance-080ac--4418",
@@ -12443,7 +12232,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO CABINA CHERY TIGGO 2 PRO 1.5 2023 ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Dongfeng / Chery / Jetour Chery Tiggo 2 / Tiggo 2 Pro / Jetour X70.",
-    "priceEstimate": "$3.96",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -12478,7 +12266,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "FILTRO CABINA CHERY TIGGO 2 PRO 1.5 2023 ADVANCE",
-    "price": 3.96
+    "price": null
   },
   {
     "id": "advance-filtro-cabina-hy-getz-2-componentes---ac-10245--2-advance-080ac-10245-2",
@@ -12509,7 +12297,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO CABINA HY GETZ (2 COMPONENTES) - AC-10245- 2 ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Multimarca Aplicación Específica por Código Técnico.",
-    "priceEstimate": "$5.00",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -12543,7 +12330,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "FILTRO CABINA HY GETZ (2 COMPONENTES) - AC-10245- 2 ADVANCE",
-    "price": 5.0
+    "price": null
   },
   {
     "id": "advance-filtro-advance-cabina-zotye-t600---ac-11105-080ac-11105",
@@ -12574,7 +12361,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO ADVANCE CABINA ZOTYE T600 - AC-11105 marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con JAC T6 / T8 Pick Up / Camiones HFC.",
-    "priceEstimate": "$3.49",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -12609,7 +12395,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO ADVANCE CABINA ZOTYE T600 - AC-11105",
-    "price": 3.49
+    "price": null
   },
   {
     "id": "advance-filtro-cabina-ty-yaris-corolla-highlander-advance-080ac-1114",
@@ -12640,7 +12426,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO CABINA TY YARIS-COROLLA-HIGHLANDER ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Multimarca Aplicación Específica por Código Técnico.",
-    "priceEstimate": "$3.14",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -12674,7 +12459,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO CABINA TY YARIS-COROLLA-HIGHLANDER ADVANCE",
-    "price": 3.14
+    "price": null
   },
   {
     "id": "advance-filtro-advance-cabina-subaru-forester-20l-wrx-2t---ac-12775-080ac-12775",
@@ -12705,7 +12490,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO ADVANCE CABINA SUBARU FORESTER 2.0L, WRX 2.T - AC-12775 marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Multimarca Aplicación Específica por Código Técnico.",
-    "priceEstimate": "$3.83",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -12739,7 +12523,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO ADVANCE CABINA SUBARU FORESTER 2.0L, WRX 2.T - AC-12775",
-    "price": 3.83
+    "price": null
   },
   {
     "id": "advance-filtro-cabina-ch-gran-vitara-sz-xtrag-ac-108-red-95861-64j00-advance-080ac-14050",
@@ -12770,7 +12554,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO CABINA CH GRAN VITARA SZ (XTRAG AC-108 RED 95861-64J00) ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Suzuki Grand Vitara SZ (2.0 / 2.4 / 2.7 V6).",
-    "priceEstimate": "$4.39",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -12805,7 +12588,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO CABINA CH GRAN VITARA SZ (XTRAG AC-108 RED 95861-64J00) ADVANCE",
-    "price": 4.39
+    "price": null
   },
   {
     "id": "advance-filtro-cabina-ch-grand-vitara-sz-next-20-24-15-19-marco-de-plastico-advance-080ac-14051",
@@ -12836,7 +12619,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO CABINA CH GRAND VITARA SZ NEXT 2.0, 2.4 /15-19 MARCO DE PLASTICO ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Suzuki Grand Vitara SZ (2.0 / 2.4 / 2.7 V6).",
-    "priceEstimate": "$6.22",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -12871,7 +12653,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO CABINA CH GRAND VITARA SZ NEXT 2.0, 2.4 /15-19 MARCO DE PLASTICO ADVANCE",
-    "price": 6.22
+    "price": null
   },
   {
     "id": "advance-filtro-cabina-fd-ranger-mz-bt50-2015-advance-080ac-17140",
@@ -12902,7 +12684,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO CABINA FD RANGER MZ BT50 2015 ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Mazda BT-50 (2.2 / 2.5 / 2.6 / 3.2 TDCi) / Mazda 3, Ford F-150 / Ranger / Explorer.",
-    "priceEstimate": "$5.43",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -12943,7 +12724,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO CABINA FD RANGER MZ BT50 2015 ADVANCE",
-    "price": 5.43
+    "price": null
   },
   {
     "id": "advance-filtro-cabina-ch-luv-dmax-30-14-x-trail-classic-l200-asx-outlander-advance-080ac-18120",
@@ -12974,7 +12755,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO CABINA CH LUV DMAX 3.0 /14 X-TRAIL CLASSIC L200 ASX OUTLANDER ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Chevrolet D-Max (CRDi / 2.0T / 2.5 / 3.0 / 2.4).",
-    "priceEstimate": "$4.91",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -13009,7 +12789,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO CABINA CH LUV DMAX 3.0 /14 X-TRAIL CLASSIC L200 ASX OUTLANDER ADVANCE",
-    "price": 4.91
+    "price": null
   },
   {
     "id": "advance-filtro-cabina-ch-dmax-diesel-25-30-05-versa-17-18---ac22010-advance-080ac-22010",
@@ -13040,7 +12820,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO CABINA CH DMAX DIESEL 2.5-3.0 /05 VERSA /17-18 - AC22010 ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Chevrolet D-Max (CRDi / 2.0T / 2.5 / 3.0 / 2.4).",
-    "priceEstimate": "$4.91",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -13075,7 +12854,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO CABINA CH DMAX DIESEL 2.5-3.0 /05 VERSA /17-18 - AC22010 ADVANCE",
-    "price": 4.91
+    "price": null
   },
   {
     "id": "advance-filtro-cabina-ns-frontier-np300-25-2019-dongfeng-rich-6---ac-25091-advance-080ac-25091",
@@ -13106,7 +12885,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO CABINA NS FRONTIER NP300 2,5 2019, DONGFENG RICH 6 - AC-25091 ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Nissan Frontier (D22 / D40 / NP300 2.5 Diésel / Gas), Dongfeng / Chery / Jetour Dongfeng Rich 6 2.5 Diésel 4x4.",
-    "priceEstimate": "$4.91",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -13147,7 +12925,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO CABINA NS FRONTIER NP300 2,5 2019, DONGFENG RICH 6 - AC-25091 ADVANCE",
-    "price": 4.91
+    "price": null
   },
   {
     "id": "advance-filtro-cabina-hy-tucson-ix-20-kia-cerato-1616--sportage-active-12--cerato-97133-2e200-advance-080ac-2807",
@@ -13250,7 +13028,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO CABINA HY I10 GRAND I10 KIA PICANTO CH SPARK ADVANCE (MC-94242) marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Chevrolet Spark GT / Spark Life / Beat.",
-    "priceEstimate": "$2.96",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -13285,7 +13062,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO CABINA HY I10 GRAND I10 KIA PICANTO CH SPARK ADVANCE (MC-94242)",
-    "price": 2.96
+    "price": null
   },
   {
     "id": "advance-filtro-cabina-hy-santa-fe-27-2006-2001-24-09-12---ac-28110-advance-080ac-28151",
@@ -13316,7 +13093,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO CABINA HY SANTA FE 2.7 2006-2001, 2.4 09-12 - AC-28110 ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Multimarca Aplicación Específica por Código Técnico.",
-    "priceEstimate": "$4.48",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -13350,7 +13126,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO CABINA HY SANTA FE 2.7 2006-2001, 2.4 09-12 - AC-28110 ADVANCE",
-    "price": 4.48
+    "price": null
   },
   {
     "id": "advance-filtro-cabina-hy-accent-iii-14-16-2005-2010---ac-28160-advance-080ac-28160",
@@ -13381,7 +13157,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO CABINA HY ACCENT III 1.4, 1.6 2005-2010 - AC-28160 ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Hyundai Accent (New Accent / Accent RB / Blue), Kia Rio (Stylus / Xcite / R) / Soluto.",
-    "priceEstimate": "$3.74",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -13422,7 +13197,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO CABINA HY ACCENT III 1.4, 1.6 2005-2010 - AC-28160 ADVANCE",
-    "price": 3.74
+    "price": null
   },
   {
     "id": "advance-filtro-cabina-kia-rio-x-line-gt-seltos-2020---creta-2022-ac-28261-advance-080ac-28261",
@@ -13453,7 +13228,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO CABINA KIA RIO X LINE, GT , SELTOS 2020 - CRETA 2022 AC-28261 ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Hyundai Accent (New Accent / Accent RB / Blue), Kia Rio (Stylus / Xcite / R) / Soluto.",
-    "priceEstimate": "$2.51",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -13494,7 +13268,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO CABINA KIA RIO X LINE, GT , SELTOS 2020 - CRETA 2022 AC-28261 ADVANCE",
-    "price": 2.51
+    "price": null
   },
   {
     "id": "advance-filtro-cabina-great-wall-wingle-720--advance-080ac-4403-2",
@@ -13525,7 +13299,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO CABINA GREAT WALL WINGLE 7/20- ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Great Wall / Haval Wingle 5 / Wingle 7 / Poer 2.0T / Haval H5.",
-    "priceEstimate": "$4.91",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -13560,7 +13333,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO CABINA GREAT WALL WINGLE 7/20- ADVANCE",
-    "price": 4.91
+    "price": null
   },
   {
     "id": "advance-filtro-cabina-jetour-x70-15t-x70-coupe-16t---ac-4408-advance-080ac-4408",
@@ -13591,7 +13364,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO CABINA JETOUR X70 1.5T, X70 COUPE 1.6T - AC-4408 ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Multimarca Aplicación Específica por Código Técnico.",
-    "priceEstimate": "$4.91",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -13625,7 +13397,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO CABINA JETOUR X70 1.5T, X70 COUPE 1.6T - AC-4408 ADVANCE",
-    "price": 4.91
+    "price": null
   },
   {
     "id": "advance-filtro-cabina-great-wall-poer-20-gasolina-diesel---ac--4412-advance-080ac-4412",
@@ -13656,7 +13428,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO CABINA GREAT WALL POER 2.0 GASOLINA DIESEL - AC- 4412 ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Great Wall / Haval Wingle 5 / Wingle 7 / Poer 2.0T / Haval H5.",
-    "priceEstimate": "$4.65",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -13691,7 +13462,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO CABINA GREAT WALL POER 2.0 GASOLINA DIESEL - AC- 4412 ADVANCE",
-    "price": 4.65
+    "price": null
   },
   {
     "id": "advance-filtro-advance-cabina-ac-18120-mg-5-15-chevrolet-luv-d-max-30-2014-x-trail-classic-l200-asx-080ac-4426",
@@ -13722,7 +13493,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO ADVANCE CABINA (AC-18120) MG 5 1.5, CHEVROLET LUV D-MAX 3.0 2014, X-TRAIL CLASSIC, L200, ASX, marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Chevrolet D-Max (CRDi / 2.0T / 2.5 / 3.0 / 2.4).",
-    "priceEstimate": "$4.91",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -13757,7 +13527,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO ADVANCE CABINA (AC-18120) MG 5 1.5, CHEVROLET LUV D-MAX 3.0 2014, X-TRAIL CLASSIC, L200, ASX,",
-    "price": 4.91
+    "price": null
   },
   {
     "id": "advance-filtro-cabina-great-wall-wingle-22-24-28-10--advance-080ac-49030",
@@ -13788,7 +13558,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO CABINA GREAT WALL WINGLE 2.2 2.4 2.8 10- ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Great Wall / Haval Wingle 5 / Wingle 7 / Poer 2.0T / Haval H5.",
-    "priceEstimate": "$4.26",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -13823,7 +13592,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO CABINA GREAT WALL WINGLE 2.2 2.4 2.8 10- ADVANCE",
-    "price": 4.26
+    "price": null
   },
   {
     "id": "advance-filtro-cabina-ch-orlando-cruze-spark-gt-tracker-cavalier---ac-65210-advance-080ac-65210",
@@ -13854,7 +13623,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO CABINA CH ORLANDO CRUZE SPARK GT TRACKER CAVALIER - AC-65210 ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Chevrolet Spark GT / Spark Life / Beat, Chevrolet Tracker / Cruze / Orlando.",
-    "priceEstimate": "$5.04",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -13895,7 +13663,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO CABINA CH ORLANDO CRUZE SPARK GT TRACKER CAVALIER - AC-65210 ADVANCE",
-    "price": 5.04
+    "price": null
   },
   {
     "id": "advance-filtro-cabina-ch-spark-gt-2017-beat-active-2019-advance-080ac-65220",
@@ -13926,7 +13694,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO CABINA CH SPARK GT 2017 BEAT ACTIVE 2019 ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Chevrolet Spark GT / Spark Life / Beat.",
-    "priceEstimate": "$2.51",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -13961,7 +13728,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO CABINA CH SPARK GT 2017 BEAT ACTIVE 2019 ADVANCE",
-    "price": 2.51
+    "price": null
   },
   {
     "id": "advance-filtro-cabina-ch-trail-blazer-28-ltz-17--colorado---ac-65340-advance-080ac-65340",
@@ -13992,7 +13759,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO CABINA CH TRAIL BLAZER 2.8 LTZ 17- COLORADO - AC-65340 ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Multimarca Aplicación Específica por Código Técnico.",
-    "priceEstimate": "$5.17",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -14026,7 +13792,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO CABINA CH TRAIL BLAZER 2.8 LTZ 17- COLORADO - AC-65340 ADVANCE",
-    "price": 5.17
+    "price": null
   },
   {
     "id": "advance-filtro-cabina-ch-sail-advance-080ac-9858",
@@ -14057,7 +13823,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO CABINA CH SAIL ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Chevrolet Sail (1.4 / 1.5 / Sedan).",
-    "priceEstimate": "$3.13",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -14092,7 +13857,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO CABINA CH SAIL ADVANCE",
-    "price": 3.13
+    "price": null
   },
   {
     "id": "advance-filtro-combustible-universal-advance-078afp-012",
@@ -14123,7 +13888,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO COMBUSTIBLE UNIVERSAL ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Multimarca Aplicación Específica por Código Técnico.",
-    "priceEstimate": "$1.30",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -14157,7 +13921,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "FILTRO COMBUSTIBLE UNIVERSAL ADVANCE",
-    "price": 1.3
+    "price": null
   },
   {
     "id": "advance-filtro-combustible-vw-golf-jetta-sk-octavia---chery-tiggo-2-fullwin-2012-advance-078afp-079",
@@ -14188,7 +13952,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO COMBUSTIBLE VW GOLF, JETTA, SK OCTAVIA - CHERY TIGGO 2, FULLWIN 2012, ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Volkswagen Amarok / Gol / Jetta / Bora, Dongfeng / Chery / Jetour Chery Tiggo 2 / Tiggo 2 Pro / Jetour X70.",
-    "priceEstimate": "$3.52",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -14229,7 +13992,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "FILTRO COMBUSTIBLE VW GOLF, JETTA, SK OCTAVIA - CHERY TIGGO 2, FULLWIN 2012, ADVANCE",
-    "price": 3.52
+    "price": null
   },
   {
     "id": "advance-filtro-combustible-great-wall-haval-h5wingle-20hy-tucson-dieseljinbeimahindrazx-auto-g-advance-078afp-179",
@@ -14260,7 +14023,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO COMBUSTIBLE GREAT WALL HAVAL H5/WINGLE 2.0/HY TUCSON DIESEL/JINBEI/MAHINDRA/ZX AUTO G ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Hyundai Tucson (IX / TL / All New), Kia Sportage (Active / Sportage R / GT), Great Wall / Haval Wingle 5 / Wingle 7 / Poer 2.0T / Haval H5.",
-    "priceEstimate": "$4.35",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -14307,7 +14069,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "FILTRO COMBUSTIBLE GREAT WALL HAVAL H5/WINGLE 2.0/HY TUCSON DIESEL/JINBEI/MAHINDRA/ZX AUTO G ADVANCE",
-    "price": 4.35
+    "price": null
   },
   {
     "id": "advance-filtro-combustible-ch-nhr-npr-d-max25-30-great-wall-wingle-diesel-2028-hino-gd-gh-advance-078afp-5138",
@@ -14338,7 +14100,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO COMBUSTIBLE CH NHR, NPR, D-MAX2.5-3.0, GREAT WALL WINGLE DIESEL 2.0,2.8/ HINO GD GH ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Chevrolet D-Max (CRDi / 2.0T / 2.5 / 3.0 / 2.4), Hino Serie 300 Dutro / Serie 500 (GD / GH / FG / FM), Isuzu Forward (FRR / FTR / FVR) / Camiones NPR / NQR, Great Wall / Haval Wingle 5 / Wingle 7 / Poer 2.0T / Haval H5.",
-    "priceEstimate": "$2.65",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -14391,7 +14152,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "FILTRO COMBUSTIBLE CH NHR, NPR, D-MAX2.5-3.0, GREAT WALL WINGLE DIESEL 2.0,2.8/ HINO GD GH ADVANCE",
-    "price": 2.65
+    "price": null
   },
   {
     "id": "advance-filtro-combustible-ch-gran-vitara-3-5-ptas-mz-323-mf-5982-prem-flp368-red-15410-65d00-advance-078afp-523",
@@ -14422,7 +14183,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO COMBUSTIBLE CH GRAN VITARA 3-5 PTAS MZ 323 (MF-5982 PREM FLP368 RED 15410-65D00 ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Suzuki Grand Vitara SZ (2.0 / 2.4 / 2.7 V6).",
-    "priceEstimate": "$2.48",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -14457,7 +14217,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO COMBUSTIBLE CH GRAN VITARA 3-5 PTAS MZ 323 (MF-5982 PREM FLP368 RED 15410-65D00 ADVANCE",
-    "price": 2.48
+    "price": null
   },
   {
     "id": "advance-filtro-combustible-ch-nmr-ftr-fvr-nqr-npr2014-elemento-advance-079afe-1509",
@@ -14488,7 +14248,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO COMBUSTIBLE CH NMR-FTR-FVR-NQR-NPR(2014) (ELEMENTO) ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Isuzu Forward (FRR / FTR / FVR) / Camiones NPR / NQR.",
-    "priceEstimate": "$4.22",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -14523,7 +14282,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO COMBUSTIBLE CH NMR-FTR-FVR-NQR-NPR(2014) (ELEMENTO) ADVANCE",
-    "price": 4.22
+    "price": null
   },
   {
     "id": "advance-filtro-combustible-ty-hilux-27-diesel-hiace-30-elemento-advance-079afe-268",
@@ -14554,7 +14313,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO COMBUSTIBLE TY HILUX 2.7 DIESEL HIACE 3.0 (ELEMENTO) ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Toyota Hilux 2.4 TD / 2.7 Gasolina / 2.8 TD, Toyota Fortuner 2.7 Gasolina / 2.8 TD.",
-    "priceEstimate": "$2.74",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -14595,7 +14353,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO COMBUSTIBLE TY HILUX 2.7 DIESEL HIACE 3.0 (ELEMENTO) ADVANCE",
-    "price": 2.74
+    "price": null
   },
   {
     "id": "advance-filtro-combustible-ch-dmax-30-diesel--13-trampa-de-agua-advance-079afp-1511",
@@ -14626,7 +14384,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO COMBUSTIBLE CH DMAX 3.0 DIESEL /-13 TRAMPA DE AGUA ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Chevrolet D-Max (CRDi / 2.0T / 2.5 / 3.0 / 2.4).",
-    "priceEstimate": "$3.04",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -14661,7 +14418,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO COMBUSTIBLE CH DMAX 3.0 DIESEL /-13 TRAMPA DE AGUA ADVANCE",
-    "price": 3.04
+    "price": null
   },
   {
     "id": "advance-filtro-combustible-isuzu-frr-fsr-ftr-fvr---series-forward-11--19-mt134s-17-18-sec-elem-advance-080afe-15130",
@@ -14692,7 +14449,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO COMBUSTIBLE ISUZU FRR FSR FTR FVR - SERIES FORWARD 11- 19 MT134S 17-18 SEC. (ELEM) ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Isuzu Forward (FRR / FTR / FVR) / Camiones NPR / NQR.",
-    "priceEstimate": "$5.96",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -14727,7 +14483,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO COMBUSTIBLE ISUZU FRR FSR FTR FVR - SERIES FORWARD 11- 19 MT134S 17-18 SEC. (ELEM) ADVANCE",
-    "price": 5.96
+    "price": null
   },
   {
     "id": "advance-filtro-combustible-great-wall-poer-20-diesel-4d20m-elemento-advance-080afe-295-1",
@@ -14758,7 +14514,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO COMBUSTIBLE GREAT WALL POER 2.0 DIESEL 4D20M (ELEMENTO) ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Great Wall / Haval Wingle 5 / Wingle 7 / Poer 2.0T / Haval H5.",
-    "priceEstimate": "$5.30",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -14793,7 +14548,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO COMBUSTIBLE GREAT WALL POER 2.0 DIESEL 4D20M (ELEMENTO) ADVANCE",
-    "price": 5.3
+    "price": null
   },
   {
     "id": "advance-filtro-combustible-great-wall-poer-20-diesel-4d20m-2da-generacion-long-life-filter-advance-080afe-296-1",
@@ -14824,7 +14579,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO COMBUSTIBLE GREAT WALL POER 2.0 DIESEL 4D20M 2DA GENERACION LONG LIFE FILTER ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Great Wall / Haval Wingle 5 / Wingle 7 / Poer 2.0T / Haval H5.",
-    "priceEstimate": "$12.52",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -14859,7 +14613,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO COMBUSTIBLE GREAT WALL POER 2.0 DIESEL 4D20M 2DA GENERACION LONG LIFE FILTER ADVANCE",
-    "price": 12.52
+    "price": null
   },
   {
     "id": "advance-filtro-advance-combustible-chevrolet-d-max-20t-diesel-2025-cj-x-20---afe--297-080afe-297",
@@ -14890,7 +14644,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO ADVANCE COMBUSTIBLE CHEVROLET D-MAX 2.0T DIESEL 2025 CJ X 20 - AFE- 297 marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Chevrolet D-Max (CRDi / 2.0T / 2.5 / 3.0 / 2.4).",
-    "priceEstimate": "$7.41",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -14925,7 +14678,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO ADVANCE COMBUSTIBLE CHEVROLET D-MAX 2.0T DIESEL 2025 CJ X 20 - AFE- 297",
-    "price": 7.41
+    "price": null
   },
   {
     "id": "advance-filtro-combustible-fd-ranger-32-tdci-ranger-courier-xl-22l-new-bt-50-ii-32-advance-080afe-385",
@@ -14956,7 +14709,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO COMBUSTIBLE FD RANGER 3.2 TDCI, RANGER COURIER XL 2.2L, NEW BT-50 II 3.2 ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Mazda BT-50 (2.2 / 2.5 / 2.6 / 3.2 TDCi) / Mazda 3, Ford F-150 / Ranger / Explorer.",
-    "priceEstimate": "$4.61",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -14997,7 +14749,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO COMBUSTIBLE FD RANGER 3.2 TDCI, RANGER COURIER XL 2.2L, NEW BT-50 II 3.2 ADVANCE",
-    "price": 4.61
+    "price": null
   },
   {
     "id": "advance-filtro-combustible-sumergible-hy-getz-matrix-santa-fe-2002-advance-080afi-9303",
@@ -15028,7 +14780,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO COMBUSTIBLE SUMERGIBLE HY GETZ, MATRIX, SANTA FE 2002 ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Multimarca Aplicación Específica por Código Técnico.",
-    "priceEstimate": "$13.39",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -15062,7 +14813,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO COMBUSTIBLE SUMERGIBLE HY GETZ, MATRIX, SANTA FE 2002 ADVANCE",
-    "price": 13.39
+    "price": null
   },
   {
     "id": "advance-filtro-combustible-sumergible-kia-rio-xcite-new-accent-mf-48737-advance-080afi-9307",
@@ -15093,7 +14844,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO COMBUSTIBLE SUMERGIBLE KIA RIO XCITE, NEW ACCENT (MF-48737) ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Hyundai Accent (New Accent / Accent RB / Blue), Kia Rio (Stylus / Xcite / R) / Soluto.",
-    "priceEstimate": "$12.65",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -15134,7 +14884,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO COMBUSTIBLE SUMERGIBLE KIA RIO XCITE, NEW ACCENT (MF-48737) ADVANCE",
-    "price": 12.65
+    "price": null
   },
   {
     "id": "advance-filtro-combustible-mt-l200-sportero-diesel-lukas-cav926-nueva-foton-cs-y-cs2-advance-080afp-023",
@@ -15165,7 +14915,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO COMBUSTIBLE MT L200 SPORTERO DIESEL LUKAS CAV926 NUEVA FOTON CS Y CS2 ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Multimarca Aplicación Específica por Código Técnico.",
-    "priceEstimate": "$2.35",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -15199,7 +14948,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO COMBUSTIBLE MT L200 SPORTERO DIESEL LUKAS CAV926 NUEVA FOTON CS Y CS2 ADVANCE",
-    "price": 2.35
+    "price": null
   },
   {
     "id": "advance-filtro-combustible-kia-pregio-besta-carens-h100-terracan-diesel-ch-nlr-advance-mf-4886-080afp-046",
@@ -15230,7 +14979,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO COMBUSTIBLE KIA PREGIO, BESTA, CARENS, H100 TERRACAN DIESEL CH NLR ADVANCE (MF-4886) marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Multimarca Aplicación Específica por Código Técnico.",
-    "priceEstimate": "$3.91",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -15264,7 +15012,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO COMBUSTIBLE KIA PREGIO, BESTA, CARENS, H100 TERRACAN DIESEL CH NLR ADVANCE (MF-4886)",
-    "price": 3.91
+    "price": null
   },
   {
     "id": "advance-filtro-combustible-rn-clio-twingo-megane-scenic-peugeot-206-berlingo-advance-080afp-072",
@@ -15295,7 +15043,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO COMBUSTIBLE RN CLIO TWINGO MEGANE SCENIC PEUGEOT 206 BERLINGO ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Multimarca Aplicación Específica por Código Técnico.",
-    "priceEstimate": "$2.78",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -15329,7 +15076,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO COMBUSTIBLE RN CLIO TWINGO MEGANE SCENIC PEUGEOT 206 BERLINGO ADVANCE",
-    "price": 2.78
+    "price": null
   },
   {
     "id": "advance-filtro-combustible-mz-bt50-crdi-bt-50-tdi-mt-montero-sport-ns-frontier-t-advance-080afp-083",
@@ -15360,7 +15107,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO COMBUSTIBLE MZ BT50 CRDI, BT-50 TDI / MT MONTERO SPORT / NS FRONTIER T ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Mazda BT-50 (2.2 / 2.5 / 2.6 / 3.2 TDCi) / Mazda 3, Nissan Frontier (D22 / D40 / NP300 2.5 Diésel / Gas).",
-    "priceEstimate": "$4.22",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -15401,7 +15147,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO COMBUSTIBLE MZ BT50 CRDI, BT-50 TDI / MT MONTERO SPORT / NS FRONTIER T ADVANCE",
-    "price": 4.22
+    "price": null
   },
   {
     "id": "advance-filtro-combustible-mt-canter-35--intercoooler-hd-hy-hd72-sam-sfc352-prem-flp3-advance-080afp-1020",
@@ -15432,7 +15178,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO COMBUSTIBLE MT CANTER 3.5- INTERCOOOLER HD HY HD72 (SAM SFC352 PREM FLP3 ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Multimarca Aplicación Específica por Código Técnico.",
-    "priceEstimate": "$2.95",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -15466,7 +15211,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO COMBUSTIBLE MT CANTER 3.5- INTERCOOOLER HD HY HD72 (SAM SFC352 PREM FLP3 ADVANCE",
-    "price": 2.95
+    "price": null
   },
   {
     "id": "advance-filtro-combustible-great-wall-wingle-20-28-jac-t6-28-foton-iveco-mahindra-advance-080afp-140",
@@ -15497,7 +15242,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO COMBUSTIBLE GREAT WALL WINGLE 2.0-2.8 JAC T6 2.8 FOTON IVECO MAHINDRA ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Great Wall / Haval Wingle 5 / Wingle 7 / Poer 2.0T / Haval H5, JAC T6 / T8 Pick Up / Camiones HFC.",
-    "priceEstimate": "$4.48",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -15538,7 +15282,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO COMBUSTIBLE GREAT WALL WINGLE 2.0-2.8 JAC T6 2.8 FOTON IVECO MAHINDRA ADVANCE",
-    "price": 4.48
+    "price": null
   },
   {
     "id": "advance-filtro-combustible-ns-2400-4x4-sentra-iny-curvo-10y00-advance-080afp-202",
@@ -15569,7 +15313,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO COMBUSTIBLE NS 2400 4X4 SENTRA INY CURVO (10Y00) ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Multimarca Aplicación Específica por Código Técnico.",
-    "priceEstimate": "$2.17",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -15603,7 +15346,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO COMBUSTIBLE NS 2400 4X4 SENTRA INY CURVO (10Y00) ADVANCE",
-    "price": 2.17
+    "price": null
   },
   {
     "id": "advance-filtro-combustible-ch-vitara-afp-203-advance-mf-94925-080afp-203",
@@ -15634,7 +15377,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO COMBUSTIBLE CH VITARA AFP-203 ADVANCE (MF-94925) marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Multimarca Aplicación Específica por Código Técnico.",
-    "priceEstimate": "$3.74",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -15668,7 +15410,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO COMBUSTIBLE CH VITARA AFP-203 ADVANCE (MF-94925)",
-    "price": 3.74
+    "price": null
   },
   {
     "id": "advance-filtro-combustible-ty-hilux-27-gas-punta-a-punta-sin-base-advance-mf-64951-mf-41570-080afp-31120",
@@ -15699,7 +15441,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO COMBUSTIBLE TY HILUX 2.7 GAS (PUNTA A PUNTA SIN BASE) ADVANCE (MF-64951) (MF-41570) marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Toyota Hilux 2.4 TD / 2.7 Gasolina / 2.8 TD, Toyota Fortuner 2.7 Gasolina / 2.8 TD.",
-    "priceEstimate": "$2.74",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -15740,7 +15481,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO COMBUSTIBLE TY HILUX 2.7 GAS (PUNTA A PUNTA SIN BASE) ADVANCE (MF-64951) (MF-41570)",
-    "price": 2.74
+    "price": null
   },
   {
     "id": "advance-filtro-combustible-ch-nhr-npr-d-max-dies-daihatsu-delta-advance-080afp-3627",
@@ -15771,7 +15512,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO COMBUSTIBLE CH NHR NPR D-MAX DIES DAIHATSU DELTA ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Chevrolet D-Max (CRDi / 2.0T / 2.5 / 3.0 / 2.4), Isuzu Forward (FRR / FTR / FVR) / Camiones NPR / NQR.",
-    "priceEstimate": "$2.43",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -15812,7 +15552,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO COMBUSTIBLE CH NHR NPR D-MAX DIES DAIHATSU DELTA ADVANCE",
-    "price": 2.43
+    "price": null
   },
   {
     "id": "advance-filtro-combustible-foton-aumark-dongfeng-fc5704-fc5504-fp586f-ff42000-ff5018-advance-mf-4102-080afp-4102",
@@ -15843,7 +15583,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO COMBUSTIBLE FOTON AUMARK DONGFENG FC5704 FC5504 FP586F FF42000 FF5018 ADVANCE (MF-4102) marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Dongfeng / Chery / Jetour Dongfeng Rich 6 2.5 Diésel 4x4.",
-    "priceEstimate": "$3.30",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -15878,7 +15617,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO COMBUSTIBLE FOTON AUMARK DONGFENG FC5704 FC5504 FP586F FF42000 FF5018 ADVANCE (MF-4102)",
-    "price": 3.3
+    "price": null
   },
   {
     "id": "advance-filtro-combustible-jac-t6-diesel-vlvmancase-rovernew-hollandlindnerfiat-advance-080afp-4183",
@@ -15909,7 +15648,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO COMBUSTIBLE JAC T6 DIESEL, VLV,MAN,CASE, ROVER,/NEW HOLLAND,LINDNER,FIAT ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con JAC T6 / T8 Pick Up / Camiones HFC.",
-    "priceEstimate": "$6.65",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -15944,7 +15682,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO COMBUSTIBLE JAC T6 DIESEL, VLV,MAN,CASE, ROVER,/NEW HOLLAND,LINDNER,FIAT ADVANCE",
-    "price": 6.65
+    "price": null
   },
   {
     "id": "advance-filtro-combustible-ch-corsa-14-16-18dmax-24-35zafiram4great-wall-c30-advance-080afp-555",
@@ -15975,7 +15713,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO COMBUSTIBLE CH CORSA 1.4-1.6-1.8/DMAX 2.4-3.5/ZAFIRA/M4/GREAT WALL C30 ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Chevrolet D-Max (CRDi / 2.0T / 2.5 / 3.0 / 2.4).",
-    "priceEstimate": "$2.17",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -16010,7 +15747,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO COMBUSTIBLE CH CORSA 1.4-1.6-1.8/DMAX 2.4-3.5/ZAFIRA/M4/GREAT WALL C30 ADVANCE",
-    "price": 2.17
+    "price": null
   },
   {
     "id": "advance-filtro-advance-combustible-filter-daf-foton-jac-fc-5725-sff2241-psc75-lff5485---afp-5612-080afp-5612",
@@ -16041,7 +15778,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO ADVANCE COMBUSTIBLE FILTER DAF, FOTON, JAC (FC-5725, SFF2241, PSC75, LFF5485) - AFP-5612 marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con JAC T6 / T8 Pick Up / Camiones HFC.",
-    "priceEstimate": "$5.50",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -16076,7 +15812,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO ADVANCE COMBUSTIBLE FILTER DAF, FOTON, JAC (FC-5725, SFF2241, PSC75, LFF5485) - AFP-5612",
-    "price": 5.5
+    "price": null
   },
   {
     "id": "advance-filtro-combustible-ch-chevytaxi-lanos-spark-matiz-aveo-optra-advance-080afp-573",
@@ -16107,7 +15843,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO COMBUSTIBLE CH CHEVYTAXI LANOS SPARK MATIZ AVEO OPTRA ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Chevrolet Spark GT / Spark Life / Beat, Chevrolet Aveo (Family / Emotion / Activo).",
-    "priceEstimate": "$2.17",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -16148,7 +15883,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO COMBUSTIBLE CH CHEVYTAXI LANOS SPARK MATIZ AVEO OPTRA ADVANCE",
-    "price": 2.17
+    "price": null
   },
   {
     "id": "advance-filtro-combustible-mz-bt50-gasolina-2200-iny-fd-ranger-22-26-2008-red-je45-20-490a-advance-080afp-704",
@@ -16179,7 +15914,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO COMBUSTIBLE MZ BT50 GASOLINA, 2200 INY FD RANGER 2.2, 2.6 2008 (RED JE45-20-490A ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Mazda BT-50 (2.2 / 2.5 / 2.6 / 3.2 TDCi) / Mazda 3, Ford F-150 / Ranger / Explorer.",
-    "priceEstimate": "$2.52",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -16220,7 +15954,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO COMBUSTIBLE MZ BT50 GASOLINA, 2200 INY FD RANGER 2.2, 2.6 2008 (RED JE45-20-490A ADVANCE",
-    "price": 2.52
+    "price": null
   },
   {
     "id": "advance-filtro-combustible-ch-trail-blazer-53l-antigua-gasolina-mf-6397---afp-874-advance-080afp-874",
@@ -16251,7 +15985,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO COMBUSTIBLE CH TRAIL BLAZER 5.3L ANTIGUA GASOLINA (MF-6397) - AFP-874 ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Multimarca Aplicación Específica por Código Técnico.",
-    "priceEstimate": "$4.04",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -16285,7 +16018,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO COMBUSTIBLE CH TRAIL BLAZER 5.3L ANTIGUA GASOLINA (MF-6397) - AFP-874 ADVANCE",
-    "price": 4.04
+    "price": null
   },
   {
     "id": "advance-filtro-combustible-ch-sail-14l-12-18-advance-080afp-876",
@@ -16316,7 +16049,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO COMBUSTIBLE CH SAIL 1.4L 12-18 ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Chevrolet Sail (1.4 / 1.5 / Sedan).",
-    "priceEstimate": "$2.65",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -16351,7 +16083,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO COMBUSTIBLE CH SAIL 1.4L 12-18 ADVANCE",
-    "price": 2.65
+    "price": null
   },
   {
     "id": "advance-filtro-combustible-ch-sail-15-2018-cavalier-2019-mf-72809-prem-flp482-red-90872178-advance-080afp-877",
@@ -16382,7 +16114,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO COMBUSTIBLE CH SAIL 1.5 2018, CAVALIER 2019 (MF-72809 PREM FLP482 RED 90872178 ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Chevrolet Sail (1.4 / 1.5 / Sedan).",
-    "priceEstimate": "$2.78",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -16417,7 +16148,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO COMBUSTIBLE CH SAIL 1.5 2018, CAVALIER 2019 (MF-72809 PREM FLP482 RED 90872178 ADVANCE",
-    "price": 2.78
+    "price": null
   },
   {
     "id": "advance-filtro-combustible-ch-luv-trooper-rodeo-peugeot-306-wingle-24-22l-fi-n200-advance-080afp-974",
@@ -16448,7 +16179,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO COMBUSTIBLE CH LUV, TROOPER, RODEO, PEUGEOT 306, WINGLE 2.4 2.2L FI N200 ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Great Wall / Haval Wingle 5 / Wingle 7 / Poer 2.0T / Haval H5.",
-    "priceEstimate": "$2.17",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -16483,7 +16213,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO COMBUSTIBLE CH LUV, TROOPER, RODEO, PEUGEOT 306, WINGLE 2.4 2.2L FI N200 ADVANCE",
-    "price": 2.17
+    "price": null
   },
   {
     "id": "advance-filtro-combustible-camc-h08-440-380-cabezal-300-14m3-motor-cummins-ism380-foton-aumark-advance-080afs-1212",
@@ -16514,7 +16244,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO COMBUSTIBLE CAMC H08 440, 380, CABEZAL 300, 14M3 MOTOR CUMMINS ISM380, FOTON AUMARK ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Multimarca Aplicación Específica por Código Técnico.",
-    "priceEstimate": "$7.04",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -16548,7 +16277,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO COMBUSTIBLE CAMC H08 440, 380, CABEZAL 300, 14M3 MOTOR CUMMINS ISM380, FOTON AUMARK ADVANCE",
-    "price": 7.04
+    "price": null
   },
   {
     "id": "advance-filtro-combustible-vw-17210-mb-1721-hino-gd-gh-fc-con-valvula-separador-advance-080afs-127-1",
@@ -16579,7 +16308,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO COMBUSTIBLE VW 17210, MB 1721, HINO GD, GH, FC CON VALVULA (SEPARADOR) ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Hino Serie 300 Dutro / Serie 500 (GD / GH / FG / FM).",
-    "priceEstimate": "$8.65",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -16614,7 +16342,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO COMBUSTIBLE VW 17210, MB 1721, HINO GD, GH, FC CON VALVULA (SEPARADOR) ADVANCE",
-    "price": 8.65
+    "price": null
   },
   {
     "id": "advance-filtro-combustible-hino-gd-fuel-r60t-separador-advance-080afs-1306",
@@ -16645,7 +16373,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO COMBUSTIBLE HINO GD FUEL/ R60T ( SEPARADOR) ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Hino Serie 300 Dutro / Serie 500 (GD / GH / FG / FM).",
-    "priceEstimate": "$6.95",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -16680,7 +16407,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO COMBUSTIBLE HINO GD FUEL/ R60T ( SEPARADOR) ADVANCE",
-    "price": 6.95
+    "price": null
   },
   {
     "id": "advance-filtro-combustible-dongfeng-captain-e-513-e-613-fsp0120-separador-advance-080afs-193",
@@ -16711,7 +16438,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO COMBUSTIBLE DONGFENG CAPTAIN E-513, E-613 (FSP0120) (SEPARADOR) ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Dongfeng / Chery / Jetour Dongfeng Rich 6 2.5 Diésel 4x4.",
-    "priceEstimate": "$4.43",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -16746,7 +16472,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO COMBUSTIBLE DONGFENG CAPTAIN E-513, E-613 (FSP0120) (SEPARADOR) ADVANCE",
-    "price": 4.43
+    "price": null
   },
   {
     "id": "advance-filtro-combustible-rich-6-25cc-diesel-20---separador-advance-080afs-194-1",
@@ -16777,7 +16503,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO COMBUSTIBLE RICH 6 2.5CC DIESEL 20 - (SEPARADOR) ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Dongfeng / Chery / Jetour Dongfeng Rich 6 2.5 Diésel 4x4.",
-    "priceEstimate": "$4.39",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -16812,7 +16537,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO COMBUSTIBLE RICH 6 2.5CC DIESEL 20 - (SEPARADOR) ADVANCE",
-    "price": 4.39
+    "price": null
   },
   {
     "id": "advance-filtro-combustible-isuzu-nkr-nmr-npr-nqr-mercedez-series-reward-11-separador-advance-080afs-7912",
@@ -16843,7 +16568,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Facturación electrónica autorizada por el SRI"
     },
     "description": "Filtro automotriz de alta eficiencia FILTRO COMBUSTIBLE ISUZU NKR NMR NPR NQR MERCEDEZ SERIES REWARD /11 (SEPARADOR) ADVANCE marca ADVANCE. Fabricado bajo normas ISO/TS 16949 para garantizar un caudal óptimo sin caídas de presión y una capacidad de retención superior contra polvo, hollín y partículas abrasivas. Compatible exactamente con Isuzu Forward (FRR / FTR / FVR) / Camiones NPR / NQR.",
-    "priceEstimate": "$7.83",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza al mejor precio de distribuidor por mayor o menor.",
     "warranty": "Garantía de Fábrica Directa",
     "commercialStatus": "VERIFIED",
@@ -16878,7 +16602,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "FILTRO COMBUSTIBLE ISUZU NKR NMR NPR NQR MERCEDEZ SERIES REWARD /11 (SEPARADOR) ADVANCE",
-    "price": 7.83
+    "price": null
   },
   {
     "id": "amalie-amalie-10w30-synt-blend-sn-lp-lur-002-3",
@@ -16908,7 +16632,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Lubricante automotriz oficial AMALIE 10W30 SYNT BLEND SN marca AMALIE. Formulado para otorgar una película protectora duradera que reduce el desgaste prematuro de pistones, cilindros y rodamientos bajo condiciones de trabajo severo y altas temperaturas ambientales en Pedernales y la provincia de Manabí.",
-    "priceEstimate": "$6.96",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza según el tamaño requerido.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -16925,8 +16648,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Litro",
         "stock": 10,
         "imageUrl": "/images/products/variant-amalie-amalie-10w30-synt-blend-sn-lp-lur-002-3-c3.png",
-        "price": 6.96,
-        "priceEstimate": "$6.96",
+        "price": null,
         "officialSku": "016AM-75676-56"
       },
       {
@@ -16936,8 +16658,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Galón",
         "stock": 10,
         "imageUrl": "/images/products/variant-amalie-amalie-10w30-synt-blend-sn-lp-lur-002-3-c4.png",
-        "price": 25.65,
-        "priceEstimate": "$25.65",
+        "price": null,
         "officialSku": "016AM-75677-36"
       }
     ],
@@ -16985,7 +16706,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "AMALIE 10W30 SYNT BLEND SN",
-    "price": 6.96
+    "price": null
   },
   {
     "id": "amalie-amalie-20w50-synt-blend-sn-121-lt-lp-lur-003-3",
@@ -17015,7 +16736,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Lubricante automotriz oficial AMALIE 20W50 SYNT BLEND SN 12/1 LT marca AMALIE. Formulado para otorgar una película protectora duradera que reduce el desgaste prematuro de pistones, cilindros y rodamientos bajo condiciones de trabajo severo y altas temperaturas ambientales en Pedernales y la provincia de Manabí.",
-    "priceEstimate": "$6.96",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza según el tamaño requerido.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -17032,8 +16752,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Litro",
         "stock": 10,
         "imageUrl": "/images/products/variant-amalie-amalie-20w50-synt-blend-sn-121-lt-lp-lur-003-3-c3.png",
-        "price": 6.96,
-        "priceEstimate": "$6.96",
+        "price": null,
         "officialSku": "016AM-75696-56"
       },
       {
@@ -17043,8 +16762,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Galón",
         "stock": 10,
         "imageUrl": "/images/products/variant-amalie-amalie-20w50-synt-blend-sn-121-lt-lp-lur-003-3-c4.png",
-        "price": 25.65,
-        "priceEstimate": "$25.65",
+        "price": null,
         "officialSku": "016AM-75697-36"
       }
     ],
@@ -17086,7 +16804,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "AMALIE 20W50 SYNT BLEND SN 12/1 LT",
-    "price": 6.96
+    "price": null
   },
   {
     "id": "motul-motul-moto-5000-10w40-semisintetico-ambar-lp-lur-002-4",
@@ -17116,7 +16834,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Lubricante automotriz oficial MOTUL MOTO 5000 10W40 SEMISINTETICO AMBAR marca MOTUL. Formulado para otorgar una película protectora duradera que reduce el desgaste prematuro de pistones, cilindros y rodamientos bajo condiciones de trabajo severo y altas temperaturas ambientales en Pedernales y la provincia de Manabí.",
-    "priceEstimate": "$6.96",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -17162,7 +16879,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "MOTUL MOTO 5000 10W40 SEMISINTETICO AMBAR",
-    "price": 6.96
+    "price": null
   },
   {
     "id": "motul-motul-moto-5100-15w50-semisintetico-ester-ambar-lp-lur-003-4",
@@ -17192,7 +16909,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Lubricante automotriz oficial MOTUL MOTO 5100 15W50 SEMISINTETICO ESTER AMBAR marca MOTUL. Formulado para otorgar una película protectora duradera que reduce el desgaste prematuro de pistones, cilindros y rodamientos bajo condiciones de trabajo severo y altas temperaturas ambientales en Pedernales y la provincia de Manabí.",
-    "priceEstimate": "$8.70",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -17238,7 +16954,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "MOTUL MOTO 5100 15W50 SEMISINTETICO ESTER AMBAR",
-    "price": 8.7
+    "price": null
   },
   {
     "id": "motul-motul-moto-5000-20w50-semi-sintetico-121-lt-lp-lur-004-3",
@@ -17268,7 +16984,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Lubricante automotriz oficial MOTUL MOTO 5000 20W50 SEMI SINTETICO 12/1 LT marca MOTUL. Formulado para otorgar una película protectora duradera que reduce el desgaste prematuro de pistones, cilindros y rodamientos bajo condiciones de trabajo severo y altas temperaturas ambientales en Pedernales y la provincia de Manabí.",
-    "priceEstimate": "$7.83",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -17314,7 +17029,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "MOTUL MOTO 5000 20W50 SEMI SINTETICO 12/1 LT",
-    "price": 7.83
+    "price": null
   },
   {
     "id": "aroil-aroil-racing-10w30-sn-lp-lur-002-5",
@@ -17344,7 +17059,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Lubricante automotriz oficial AROIL RACING 10W30 SN marca AROIL. Formulado para otorgar una película protectora duradera que reduce el desgaste prematuro de pistones, cilindros y rodamientos bajo condiciones de trabajo severo y altas temperaturas ambientales en Pedernales y la provincia de Manabí.",
-    "priceEstimate": "$4.04",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza según el tamaño requerido.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -17361,8 +17075,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Litro",
         "stock": 10,
         "imageUrl": "/images/products/variant-aroil-aroil-racing-10w30-sn-lp-lur-002-5-c3.png",
-        "price": 4.04,
-        "priceEstimate": "$4.04",
+        "price": null,
         "officialSku": "0368AR00030"
       },
       {
@@ -17372,8 +17085,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Galón",
         "stock": 10,
         "imageUrl": "/images/products/variant-aroil-aroil-racing-10w30-sn-lp-lur-002-5-c4.png",
-        "price": 12.7,
-        "priceEstimate": "$12.70",
+        "price": null,
         "officialSku": "0368AR00001"
       }
     ],
@@ -17421,7 +17133,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "AROIL RACING 10W30 SN",
-    "price": 4.04
+    "price": null
   },
   {
     "id": "aroil-aroil-racing-20w50-sn-lp-lur-003-5",
@@ -17451,7 +17163,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Lubricante automotriz oficial AROIL RACING 20W50 SN marca AROIL. Formulado para otorgar una película protectora duradera que reduce el desgaste prematuro de pistones, cilindros y rodamientos bajo condiciones de trabajo severo y altas temperaturas ambientales en Pedernales y la provincia de Manabí.",
-    "priceEstimate": "$4.04",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza según el tamaño requerido.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -17468,8 +17179,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Litro",
         "stock": 10,
         "imageUrl": "/images/products/variant-aroil-aroil-racing-20w50-sn-lp-lur-003-5-c3.png",
-        "price": 4.04,
-        "priceEstimate": "$4.04",
+        "price": null,
         "officialSku": "0368AR00031"
       },
       {
@@ -17479,8 +17189,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Galón",
         "stock": 10,
         "imageUrl": "/images/products/variant-aroil-aroil-racing-20w50-sn-lp-lur-003-5-c4.png",
-        "price": 14.35,
-        "priceEstimate": "$14.35",
+        "price": null,
         "officialSku": "0368AR00005"
       }
     ],
@@ -17522,7 +17231,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "AROIL RACING 20W50 SN",
-    "price": 4.04
+    "price": null
   },
   {
     "id": "aroil-aroil-super-40-slcf-lp-lur-004-4",
@@ -17552,7 +17261,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Lubricante automotriz oficial AROIL SUPER 40 SL/CF marca AROIL. Formulado para otorgar una película protectora duradera que reduce el desgaste prematuro de pistones, cilindros y rodamientos bajo condiciones de trabajo severo y altas temperaturas ambientales en Pedernales y la provincia de Manabí.",
-    "priceEstimate": "$3.30",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza según el tamaño requerido.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -17569,8 +17277,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Litro",
         "stock": 10,
         "imageUrl": "/images/products/variant-aroil-aroil-super-40-slcf-lp-lur-004-4-c3.png",
-        "price": 3.3,
-        "priceEstimate": "$3.30",
+        "price": null,
         "officialSku": "0368AR00032"
       },
       {
@@ -17580,8 +17287,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Galón",
         "stock": 10,
         "imageUrl": "/images/products/variant-aroil-aroil-super-40-slcf-lp-lur-004-4-c4.png",
-        "price": 12.48,
-        "priceEstimate": "$12.48",
+        "price": null,
         "officialSku": "0368AR00009"
       }
     ],
@@ -17617,7 +17323,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "AROIL SUPER 40 SL/CF",
-    "price": 3.3
+    "price": null
   },
   {
     "id": "aroil-aroil-15w40-ci-4-lp-lur-005-3",
@@ -17647,7 +17353,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Lubricante automotriz oficial AROIL 15W40 CI-4 marca AROIL. Formulado para otorgar una película protectora duradera que reduce el desgaste prematuro de pistones, cilindros y rodamientos bajo condiciones de trabajo severo y altas temperaturas ambientales en Pedernales y la provincia de Manabí.",
-    "priceEstimate": "$3.96",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza según el tamaño requerido.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -17664,8 +17369,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Litro",
         "stock": 10,
         "imageUrl": "/images/products/variant-aroil-aroil-15w40-ci-4-lp-lur-005-3-c3.png",
-        "price": 3.96,
-        "priceEstimate": "$3.96",
+        "price": null,
         "officialSku": "0368AR10031"
       },
       {
@@ -17675,8 +17379,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Galón",
         "stock": 10,
         "imageUrl": "/images/products/variant-aroil-aroil-15w40-ci-4-lp-lur-005-3-c4.png",
-        "price": 15.26,
-        "priceEstimate": "$15.26",
+        "price": null,
         "officialSku": "0368AR10001"
       },
       {
@@ -17686,8 +17389,7 @@ export const PRODUCTS: Product[] = [
         "volume": "Caneca 5 GL",
         "stock": 10,
         "imageUrl": "/images/products/variant-aroil-aroil-15w40-ci-4-lp-lur-005-3-c5.png",
-        "price": 62.61,
-        "priceEstimate": "$62.61",
+        "price": null,
         "officialSku": "0368AR10003"
       }
     ],
@@ -17747,7 +17449,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "AROIL 15W40 CI-4",
-    "price": 3.96
+    "price": null
   },
   {
     "id": "aroil-aroil-25w60-cf-lp-lur-006-2",
@@ -17777,7 +17479,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Lubricante automotriz oficial AROIL 25W60 CF marca AROIL. Formulado para otorgar una película protectora duradera que reduce el desgaste prematuro de pistones, cilindros y rodamientos bajo condiciones de trabajo severo y altas temperaturas ambientales en Pedernales y la provincia de Manabí.",
-    "priceEstimate": "$3.87",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza según el tamaño requerido.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -17794,8 +17495,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Litro",
         "stock": 10,
         "imageUrl": "/images/products/variant-aroil-aroil-25w60-cf-lp-lur-006-2-c3.png",
-        "price": 3.87,
-        "priceEstimate": "$3.87",
+        "price": null,
         "officialSku": "0368AR10032"
       },
       {
@@ -17805,8 +17505,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Galón",
         "stock": 10,
         "imageUrl": "/images/products/variant-aroil-aroil-25w60-cf-lp-lur-006-2-c4.png",
-        "price": 13.52,
-        "priceEstimate": "$13.52",
+        "price": null,
         "officialSku": "0368AR10008"
       },
       {
@@ -17816,8 +17515,7 @@ export const PRODUCTS: Product[] = [
         "volume": "Caneca 5 GL",
         "stock": 10,
         "imageUrl": "/images/products/variant-aroil-aroil-25w60-cf-lp-lur-006-2-c5.png",
-        "price": 59.91,
-        "priceEstimate": "$59.91",
+        "price": null,
         "officialSku": "0368AR10010"
       }
     ],
@@ -17859,7 +17557,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "AROIL 25W60 CF",
-    "price": 3.87
+    "price": null
   },
   {
     "id": "aroil-aroil-diesel-40-cf-lp-lur-007-2",
@@ -17889,7 +17587,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Lubricante automotriz oficial AROIL DIESEL 40 CF marca AROIL. Formulado para otorgar una película protectora duradera que reduce el desgaste prematuro de pistones, cilindros y rodamientos bajo condiciones de trabajo severo y altas temperaturas ambientales en Pedernales y la provincia de Manabí.",
-    "priceEstimate": "$62.61",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -17929,7 +17626,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "AROIL DIESEL 40 CF",
-    "price": 62.61
+    "price": null
   },
   {
     "id": "aroil-aroil-4t-20w50-sl-jaso-ma2-lp-lur-009-2",
@@ -17959,7 +17656,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Lubricante automotriz oficial AROIL 4T 20W50 SL JASO MA2 marca AROIL. Formulado para otorgar una película protectora duradera que reduce el desgaste prematuro de pistones, cilindros y rodamientos bajo condiciones de trabajo severo y altas temperaturas ambientales en Pedernales y la provincia de Manabí.",
-    "priceEstimate": "$4.04",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -18005,7 +17701,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "AROIL 4T 20W50 SL JASO MA2",
-    "price": 4.04
+    "price": null
   },
   {
     "id": "aroil-aroil-75w85-gl-5-lp-lur-010-2",
@@ -18035,7 +17731,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Lubricante automotriz oficial AROIL 75W85 GL-5 marca AROIL. Formulado para otorgar una película protectora duradera que reduce el desgaste prematuro de pistones, cilindros y rodamientos bajo condiciones de trabajo severo y altas temperaturas ambientales en Pedernales y la provincia de Manabí.",
-    "priceEstimate": "$4.35",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza según el tamaño requerido.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -18052,8 +17747,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Litro",
         "stock": 10,
         "imageUrl": "/images/products/variant-aroil-aroil-75w85-gl-5-lp-lur-010-2-c3.png",
-        "price": 4.35,
-        "priceEstimate": "$4.35",
+        "price": null,
         "officialSku": "0368AR40038"
       },
       {
@@ -18063,8 +17757,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Galón",
         "stock": 10,
         "imageUrl": "/images/products/variant-aroil-aroil-75w85-gl-5-lp-lur-010-2-c4.png",
-        "price": 14.87,
-        "priceEstimate": "$14.87",
+        "price": null,
         "officialSku": "0368AR40001"
       }
     ],
@@ -18112,7 +17805,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "AROIL 75W85 GL-5",
-    "price": 4.35
+    "price": null
   },
   {
     "id": "aroil-aroil-80w90-gl-5-lp-lur-011-2",
@@ -18142,7 +17835,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Lubricante automotriz oficial AROIL 80W90 GL-5 marca AROIL. Formulado para otorgar una película protectora duradera que reduce el desgaste prematuro de pistones, cilindros y rodamientos bajo condiciones de trabajo severo y altas temperaturas ambientales en Pedernales y la provincia de Manabí.",
-    "priceEstimate": "$3.96",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza según el tamaño requerido.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -18159,8 +17851,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Litro",
         "stock": 10,
         "imageUrl": "/images/products/variant-aroil-aroil-80w90-gl-5-lp-lur-011-2-c3.png",
-        "price": 3.96,
-        "priceEstimate": "$3.96",
+        "price": null,
         "officialSku": "0368AR40039"
       },
       {
@@ -18170,8 +17861,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Galón",
         "stock": 10,
         "imageUrl": "/images/products/variant-aroil-aroil-80w90-gl-5-lp-lur-011-2-c4.png",
-        "price": 14.61,
-        "priceEstimate": "$14.61",
+        "price": null,
         "officialSku": "0368AR40005"
       }
     ],
@@ -18219,7 +17909,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "AROIL 80W90 GL-5",
-    "price": 3.96
+    "price": null
   },
   {
     "id": "aroil-aroil-85w140-gl-5-lp-lur-012-2",
@@ -18249,7 +17939,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Lubricante automotriz oficial AROIL 85W140 GL-5 marca AROIL. Formulado para otorgar una película protectora duradera que reduce el desgaste prematuro de pistones, cilindros y rodamientos bajo condiciones de trabajo severo y altas temperaturas ambientales en Pedernales y la provincia de Manabí.",
-    "priceEstimate": "$4.78",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza según el tamaño requerido.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -18266,8 +17955,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Litro",
         "stock": 10,
         "imageUrl": "/images/products/variant-aroil-aroil-85w140-gl-5-lp-lur-012-2-c3.png",
-        "price": 4.78,
-        "priceEstimate": "$4.78",
+        "price": null,
         "officialSku": "0368AR40040"
       },
       {
@@ -18277,8 +17965,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Galón",
         "stock": 10,
         "imageUrl": "/images/products/variant-aroil-aroil-85w140-gl-5-lp-lur-012-2-c4.png",
-        "price": 16.91,
-        "priceEstimate": "$16.91",
+        "price": null,
         "officialSku": "0368AR40009"
       }
     ],
@@ -18314,7 +18001,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "AROIL 85W140 GL-5",
-    "price": 4.78
+    "price": null
   },
   {
     "id": "aroil-aroil-90-gl-4-lp-lur-013-2",
@@ -18344,7 +18031,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Lubricante automotriz oficial AROIL 90 GL-4 marca AROIL. Formulado para otorgar una película protectora duradera que reduce el desgaste prematuro de pistones, cilindros y rodamientos bajo condiciones de trabajo severo y altas temperaturas ambientales en Pedernales y la provincia de Manabí.",
-    "priceEstimate": "$4.04",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza según el tamaño requerido.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -18361,8 +18047,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Litro",
         "stock": 10,
         "imageUrl": "/images/products/variant-aroil-aroil-90-gl-4-lp-lur-013-2-c3.png",
-        "price": 4.04,
-        "priceEstimate": "$4.04",
+        "price": null,
         "officialSku": "0368AR40041"
       },
       {
@@ -18372,8 +18057,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Galón",
         "stock": 10,
         "imageUrl": "/images/products/variant-aroil-aroil-90-gl-4-lp-lur-013-2-c4.png",
-        "price": 13.87,
-        "priceEstimate": "$13.87",
+        "price": null,
         "officialSku": "0368AR40013"
       },
       {
@@ -18383,8 +18067,7 @@ export const PRODUCTS: Product[] = [
         "volume": "Caneca 5 GL",
         "stock": 10,
         "imageUrl": "/images/products/variant-aroil-aroil-90-gl-4-lp-lur-013-2-c5.png",
-        "price": 65.3,
-        "priceEstimate": "$65.30",
+        "price": null,
         "officialSku": "0368AR40014"
       }
     ],
@@ -18420,7 +18103,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "AROIL 90 GL-4",
-    "price": 4.04
+    "price": null
   },
   {
     "id": "aroil-aroil-140-gl-4-lp-lur-014-2",
@@ -18450,7 +18133,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Lubricante automotriz oficial AROIL 140 GL-4 marca AROIL. Formulado para otorgar una película protectora duradera que reduce el desgaste prematuro de pistones, cilindros y rodamientos bajo condiciones de trabajo severo y altas temperaturas ambientales en Pedernales y la provincia de Manabí.",
-    "priceEstimate": "$4.04",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza según el tamaño requerido.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -18467,8 +18149,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Litro",
         "stock": 10,
         "imageUrl": "/images/products/variant-aroil-aroil-140-gl-4-lp-lur-014-2-c3.png",
-        "price": 4.04,
-        "priceEstimate": "$4.04",
+        "price": null,
         "officialSku": "0368AR40042"
       },
       {
@@ -18478,8 +18159,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Galón",
         "stock": 10,
         "imageUrl": "/images/products/variant-aroil-aroil-140-gl-4-lp-lur-014-2-c4.png",
-        "price": 15.39,
-        "priceEstimate": "$15.39",
+        "price": null,
         "officialSku": "0368AR40017"
       },
       {
@@ -18489,8 +18169,7 @@ export const PRODUCTS: Product[] = [
         "volume": "Caneca 5 GL",
         "stock": 10,
         "imageUrl": "/images/products/variant-aroil-aroil-140-gl-4-lp-lur-014-2-c5.png",
-        "price": 72.52,
-        "priceEstimate": "$72.52",
+        "price": null,
         "officialSku": "0368AR40018"
       }
     ],
@@ -18526,7 +18205,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "AROIL 140 GL-4",
-    "price": 4.04
+    "price": null
   },
   {
     "id": "aroil-aroil-atf-diii-lp-lur-015-2",
@@ -18556,7 +18235,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Lubricante automotriz oficial AROIL ATF DIII marca AROIL. Formulado para otorgar una película protectora duradera que reduce el desgaste prematuro de pistones, cilindros y rodamientos bajo condiciones de trabajo severo y altas temperaturas ambientales en Pedernales y la provincia de Manabí.",
-    "priceEstimate": "$4.57",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -18596,7 +18274,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "AROIL ATF DIII",
-    "price": 4.57
+    "price": null
   },
   {
     "id": "aroil-aroil-aw-iso-68-rojo-lp-lur-016-2",
@@ -18626,7 +18304,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Lubricante automotriz oficial AROIL AW ISO 68 ROJO marca AROIL. Formulado para otorgar una película protectora duradera que reduce el desgaste prematuro de pistones, cilindros y rodamientos bajo condiciones de trabajo severo y altas temperaturas ambientales en Pedernales y la provincia de Manabí.",
-    "priceEstimate": "$53.30",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -18678,7 +18355,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "AROIL AW ISO 68 ROJO",
-    "price": 53.3
+    "price": null
   },
   {
     "id": "aroil-aroil-tracfluid-10w30-lp-lur-017-2",
@@ -18708,7 +18385,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Lubricante automotriz oficial AROIL TRACFLUID 10W30 marca AROIL. Formulado para otorgar una película protectora duradera que reduce el desgaste prematuro de pistones, cilindros y rodamientos bajo condiciones de trabajo severo y altas temperaturas ambientales en Pedernales y la provincia de Manabí.",
-    "priceEstimate": "$63.74",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -18760,7 +18436,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "AROIL TRACFLUID 10W30",
-    "price": 63.74
+    "price": null
   },
   {
     "id": "aroil-aroil-iso-68-ambar-bld-lp-lur-018-2",
@@ -18790,7 +18466,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Lubricante automotriz oficial AROIL ISO 68 AMBAR BLD marca AROIL. Formulado para otorgar una película protectora duradera que reduce el desgaste prematuro de pistones, cilindros y rodamientos bajo condiciones de trabajo severo y altas temperaturas ambientales en Pedernales y la provincia de Manabí.",
-    "priceEstimate": "$36.53",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -18842,7 +18517,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "AROIL ISO 68 AMBAR BLD",
-    "price": 36.53
+    "price": null
   },
   {
     "id": "mannol-mannol-aditivo-limpia-parabrisas-concentrado-250ml-lp-man-002",
@@ -18869,7 +18544,6 @@ export const PRODUCTS: Product[] = [
       "Bodega": "Despacho directo desde Bodega Pedernales"
     },
     "description": "Producto oficial MANNOL ADITIVO LIMPIA PARABRISAS CONCENTRADO 250ML garantizado por MANNOL. Formulado bajo los más rigurosos estándares internacionales para protección prolongada.",
-    "priceEstimate": "$4.00",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -18903,7 +18577,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "MANNOL ADITIVO LIMPIA PARABRISAS CONCENTRADO 250ML",
-    "price": 4.0
+    "price": null
   },
   {
     "id": "mannol-mannol-limpiador-protector-uv3-cockpit-care-apple-lp-man-003",
@@ -18930,7 +18604,6 @@ export const PRODUCTS: Product[] = [
       "Bodega": "Despacho directo desde Bodega Pedernales"
     },
     "description": "Producto oficial MANNOL LIMPIADOR PROTECTOR UV3 COCKPIT CARE APPLE garantizado por MANNOL. Formulado bajo los más rigurosos estándares internacionales para protección prolongada.",
-    "priceEstimate": "$4.35",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -18964,7 +18637,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "MANNOL LIMPIADOR PROTECTOR UV3 COCKPIT CARE APPLE",
-    "price": 4.35
+    "price": null
   },
   {
     "id": "mannol-mannol-limpiador-protector-uv3-cockpit-care-vainilla-lp-man-004",
@@ -18991,7 +18664,6 @@ export const PRODUCTS: Product[] = [
       "Bodega": "Despacho directo desde Bodega Pedernales"
     },
     "description": "Producto oficial MANNOL LIMPIADOR PROTECTOR UV3 COCKPIT CARE VAINILLA garantizado por MANNOL. Formulado bajo los más rigurosos estándares internacionales para protección prolongada.",
-    "priceEstimate": "$4.35",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -19025,7 +18697,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "MANNOL LIMPIADOR PROTECTOR UV3 COCKPIT CARE VAINILLA",
-    "price": 4.35
+    "price": null
   },
   {
     "id": "mannol-mannol-grasa-chain-lube-para-cadenas-200ml-lp-man-005",
@@ -19052,7 +18724,6 @@ export const PRODUCTS: Product[] = [
       "Bodega": "Despacho directo desde Bodega Pedernales"
     },
     "description": "Producto oficial MANNOL GRASA CHAIN LUBE PARA CADENAS 200ML garantizado por MANNOL. Formulado bajo los más rigurosos estándares internacionales para protección prolongada.",
-    "priceEstimate": "$3.26",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -19086,7 +18757,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "MANNOL GRASA CHAIN LUBE PARA CADENAS 200ML",
-    "price": 3.26
+    "price": null
   },
   {
     "id": "mannol-mannol-chain-cleaner-limpiador-de-cadenas-400ml-lp-man-006",
@@ -19113,7 +18784,6 @@ export const PRODUCTS: Product[] = [
       "Bodega": "Despacho directo desde Bodega Pedernales"
     },
     "description": "Producto oficial MANNOL CHAIN CLEANER / LIMPIADOR DE CADENAS 400ML garantizado por MANNOL. Formulado bajo los más rigurosos estándares internacionales para protección prolongada.",
-    "priceEstimate": "$3.70",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -19147,7 +18817,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL CHAIN CLEANER / LIMPIADOR DE CADENAS 400ML",
-    "price": 3.7
+    "price": null
   },
   {
     "id": "mannol-mannol-grasa-de-litio-multiuso-800-grs-ep2-lp-man-007",
@@ -19174,7 +18844,6 @@ export const PRODUCTS: Product[] = [
       "Bodega": "Despacho directo desde Bodega Pedernales"
     },
     "description": "Producto oficial MANNOL GRASA DE LITIO MULTIUSO 800 GRS EP2 garantizado por MANNOL. Formulado bajo los más rigurosos estándares internacionales para protección prolongada.",
-    "priceEstimate": "$8.70",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -19208,7 +18877,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL GRASA DE LITIO MULTIUSO 800 GRS EP2",
-    "price": 8.7
+    "price": null
   },
   {
     "id": "mannol-mannol-grasa-lc-2-alta-temperatura-45-kg-lp-man-008",
@@ -19235,7 +18904,6 @@ export const PRODUCTS: Product[] = [
       "Normativa": "Cumple y excede especificaciones API / ACEA / ISO"
     },
     "description": "Línea oficial MANNOL GRASA LC-2 ALTA TEMPERATURA 4.5 KG de MANNOL. Disponible en varias presentaciones unificadas (800 g, 1 Galón / 5L, Caneca 5 GL) para cubrir desde el servicio individual hasta el abastecimiento de flotas pesadas.",
-    "priceEstimate": "$8.70",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza según el tamaño requerido.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -19252,8 +18920,7 @@ export const PRODUCTS: Product[] = [
         "volume": "800 g",
         "stock": 10,
         "imageUrl": "/images/products/variant-mannol-mannol-grasa-lc-2-alta-temperatura-45-kg-lp-man-008-c3.png",
-        "price": 8.7,
-        "priceEstimate": "$8.70",
+        "price": null,
         "officialSku": "012MN8028-08"
       },
       {
@@ -19263,8 +18930,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Galón / 5L",
         "stock": 10,
         "imageUrl": "/images/products/variant-mannol-mannol-grasa-lc-2-alta-temperatura-45-kg-lp-man-008-c4.png",
-        "price": 60.91,
-        "priceEstimate": "$60.91",
+        "price": null,
         "officialSku": "012MN8029"
       },
       {
@@ -19274,8 +18940,7 @@ export const PRODUCTS: Product[] = [
         "volume": "Caneca 5 GL",
         "stock": 10,
         "imageUrl": "/images/products/variant-mannol-mannol-grasa-lc-2-alta-temperatura-45-kg-lp-man-008-c6.png",
-        "price": 207.78,
-        "priceEstimate": "$207.78",
+        "price": null,
         "officialSku": "012MN8116"
       }
     ],
@@ -19305,7 +18970,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL GRASA LC-2 ALTA TEMPERATURA 4.5 KG",
-    "price": 8.7
+    "price": null
   },
   {
     "id": "mannol-mannol-grasa-lc-2-alta-temperatura-18-kg-lp-man-009",
@@ -19332,7 +18997,6 @@ export const PRODUCTS: Product[] = [
       "Bodega": "Despacho directo desde Bodega Pedernales"
     },
     "description": "Producto oficial MANNOL GRASA LC-2 ALTA TEMPERATURA 18 KG garantizado por MANNOL. Formulado bajo los más rigurosos estándares internacionales para protección prolongada.",
-    "priceEstimate": "$207.78",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -19366,7 +19030,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL GRASA LC-2 ALTA TEMPERATURA 18 KG",
-    "price": 207.78
+    "price": null
   },
   {
     "id": "mannol-mannol-grasa-blanca-spray-450gr-lp-man-010",
@@ -19393,7 +19057,6 @@ export const PRODUCTS: Product[] = [
       "Bodega": "Despacho directo desde Bodega Pedernales"
     },
     "description": "Producto oficial MANNOL GRASA BLANCA SPRAY 450GR garantizado por MANNOL. Formulado bajo los más rigurosos estándares internacionales para protección prolongada.",
-    "priceEstimate": "$7.26",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -19427,7 +19090,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL GRASA BLANCA SPRAY 450GR",
-    "price": 7.26
+    "price": null
   },
   {
     "id": "mannol-mannol-motor-flush-professional-ester-450-ml-lp-man-011",
@@ -19454,7 +19117,6 @@ export const PRODUCTS: Product[] = [
       "Bodega": "Despacho directo desde Bodega Pedernales"
     },
     "description": "Producto oficial MANNOL MOTOR FLUSH PROFESSIONAL + ESTER 450 ML garantizado por MANNOL. Formulado bajo los más rigurosos estándares internacionales para protección prolongada.",
-    "priceEstimate": "$4.83",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -19488,7 +19150,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL MOTOR FLUSH PROFESSIONAL + ESTER 450 ML",
-    "price": 4.83
+    "price": null
   },
   {
     "id": "mannol-mannol-kit-limpiador-de-catalizador-500ml-lp-man-012",
@@ -19515,7 +19177,6 @@ export const PRODUCTS: Product[] = [
       "Bodega": "Despacho directo desde Bodega Pedernales"
     },
     "description": "Producto oficial MANNOL KIT LIMPIADOR DE CATALIZADOR 500ML garantizado por MANNOL. Formulado bajo los más rigurosos estándares internacionales para protección prolongada.",
-    "priceEstimate": "$10.13",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -19549,7 +19210,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL KIT LIMPIADOR DE CATALIZADOR 500ML",
-    "price": 10.13
+    "price": null
   },
   {
     "id": "mannol-mannol-aditivo-limpiador-de-catalizador-450-ml-lp-man-013",
@@ -19576,7 +19237,6 @@ export const PRODUCTS: Product[] = [
       "Bodega": "Despacho directo desde Bodega Pedernales"
     },
     "description": "Producto oficial MANNOL ADITIVO LIMPIADOR DE CATALIZADOR 450 ML garantizado por MANNOL. Formulado bajo los más rigurosos estándares internacionales para protección prolongada.",
-    "priceEstimate": "$8.96",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -19610,7 +19270,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL ADITIVO LIMPIADOR DE CATALIZADOR 450 ML",
-    "price": 8.96
+    "price": null
   },
   {
     "id": "mannol-mannol-oil-leak-stop-250-ml-lp-man-014",
@@ -19637,7 +19297,6 @@ export const PRODUCTS: Product[] = [
       "Bodega": "Despacho directo desde Bodega Pedernales"
     },
     "description": "Producto oficial MANNOL OIL LEAK STOP 250 ML garantizado por MANNOL. Formulado bajo los más rigurosos estándares internacionales para protección prolongada.",
-    "priceEstimate": "$6.00",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -19671,7 +19330,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL OIL LEAK STOP 250 ML",
-    "price": 6.0
+    "price": null
   },
   {
     "id": "mannol-mannol-liquido-encendido-ether-450ml-lp-man-015",
@@ -19698,7 +19357,6 @@ export const PRODUCTS: Product[] = [
       "Bodega": "Despacho directo desde Bodega Pedernales"
     },
     "description": "Producto oficial MANNOL LIQUIDO ENCENDIDO ETHER 450ML garantizado por MANNOL. Formulado bajo los más rigurosos estándares internacionales para protección prolongada.",
-    "priceEstimate": "$6.87",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -19732,7 +19390,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL LIQUIDO ENCENDIDO ETHER 450ML",
-    "price": 6.87
+    "price": null
   },
   {
     "id": "mannol-mannol-limpiador-de-zapatas-embragues-cadenas-600ml-lp-man-016",
@@ -19759,7 +19417,6 @@ export const PRODUCTS: Product[] = [
       "Bodega": "Despacho directo desde Bodega Pedernales"
     },
     "description": "Producto oficial MANNOL LIMPIADOR DE ZAPATAS EMBRAGUES CADENAS 600ML garantizado por MANNOL. Formulado bajo los más rigurosos estándares internacionales para protección prolongada.",
-    "priceEstimate": "$4.57",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -19793,7 +19450,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL LIMPIADOR DE ZAPATAS EMBRAGUES CADENAS 600ML",
-    "price": 4.57
+    "price": null
   },
   {
     "id": "mannol-mannol-limpiador-de-neumáticos-en-espuma-650-ml-lp-man-017",
@@ -19820,7 +19477,6 @@ export const PRODUCTS: Product[] = [
       "Bodega": "Despacho directo desde Bodega Pedernales"
     },
     "description": "Producto oficial MANNOL LIMPIADOR DE NEUMÁTICOS EN ESPUMA 650 ML garantizado por MANNOL. Formulado bajo los más rigurosos estándares internacionales para protección prolongada.",
-    "priceEstimate": "$9.22",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -19854,7 +19510,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL LIMPIADOR DE NEUMÁTICOS EN ESPUMA 650 ML",
-    "price": 9.22
+    "price": null
   },
   {
     "id": "mannol-mannol-limpiador-carburador-600-ml-lp-man-018",
@@ -19881,7 +19537,6 @@ export const PRODUCTS: Product[] = [
       "Bodega": "Despacho directo desde Bodega Pedernales"
     },
     "description": "Producto oficial MANNOL LIMPIADOR CARBURADOR 600 ML garantizado por MANNOL. Formulado bajo los más rigurosos estándares internacionales para protección prolongada.",
-    "priceEstimate": "$3.65",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -19915,7 +19570,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL LIMPIADOR CARBURADOR 600 ML",
-    "price": 3.65
+    "price": null
   },
   {
     "id": "mannol-mannol-super-goma-gel-3gr-lp-man-019",
@@ -19942,7 +19597,6 @@ export const PRODUCTS: Product[] = [
       "Bodega": "Despacho directo desde Bodega Pedernales"
     },
     "description": "Producto oficial MANNOL SUPER GOMA GEL 3GR garantizado por MANNOL. Formulado bajo los más rigurosos estándares internacionales para protección prolongada.",
-    "priceEstimate": "$0.61",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -19976,7 +19630,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL SUPER GOMA GEL 3GR",
-    "price": 0.61
+    "price": null
   },
   {
     "id": "mannol-mannol-aditivo-ceramo-ester-250-ml-lp-man-020",
@@ -20003,7 +19657,6 @@ export const PRODUCTS: Product[] = [
       "Bodega": "Despacho directo desde Bodega Pedernales"
     },
     "description": "Producto oficial MANNOL ADITIVO CERAMO ESTER 250 ML garantizado por MANNOL. Formulado bajo los más rigurosos estándares internacionales para protección prolongada.",
-    "priceEstimate": "$18.13",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -20037,7 +19690,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL ADITIVO CERAMO ESTER 250 ML",
-    "price": 18.13
+    "price": null
   },
   {
     "id": "mannol-mannol-limpiador-cuerpo-de-aceleración-mariposa-400ml-lp-man-021",
@@ -20064,7 +19717,6 @@ export const PRODUCTS: Product[] = [
       "Bodega": "Despacho directo desde Bodega Pedernales"
     },
     "description": "Producto oficial MANNOL LIMPIADOR CUERPO DE ACELERACIÓN / MARIPOSA 400ML garantizado por MANNOL. Formulado bajo los más rigurosos estándares internacionales para protección prolongada.",
-    "priceEstimate": "$4.65",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -20098,7 +19750,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL LIMPIADOR CUERPO DE ACELERACIÓN / MARIPOSA 400ML",
-    "price": 4.65
+    "price": null
   },
   {
     "id": "mannol-mannol-lubricante-multiuso-anticorrosivo-400-ml-135oz-lp-man-022",
@@ -20125,7 +19777,6 @@ export const PRODUCTS: Product[] = [
       "Bodega": "Despacho directo desde Bodega Pedernales"
     },
     "description": "Producto oficial MANNOL LUBRICANTE MULTIUSO ANTICORROSIVO 400 ML / 13.5oz garantizado por MANNOL. Formulado bajo los más rigurosos estándares internacionales para protección prolongada.",
-    "priceEstimate": "$5.65",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -20159,7 +19810,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL LUBRICANTE MULTIUSO ANTICORROSIVO 400 ML / 13.5oz",
-    "price": 5.65
+    "price": null
   },
   {
     "id": "mannol-mannol-limpiador-de-contactos-electronico-450-ml-lp-man-023",
@@ -20186,7 +19837,6 @@ export const PRODUCTS: Product[] = [
       "Bodega": "Despacho directo desde Bodega Pedernales"
     },
     "description": "Producto oficial MANNOL LIMPIADOR DE CONTACTOS ELECTRONICO 450 ML garantizado por MANNOL. Formulado bajo los más rigurosos estándares internacionales para protección prolongada.",
-    "priceEstimate": "$4.57",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -20220,7 +19870,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL LIMPIADOR DE CONTACTOS ELECTRONICO 450 ML",
-    "price": 4.57
+    "price": null
   },
   {
     "id": "mannol-mannol-tratamiento-de-bandas-200m-lp-man-024",
@@ -20247,7 +19897,6 @@ export const PRODUCTS: Product[] = [
       "Bodega": "Despacho directo desde Bodega Pedernales"
     },
     "description": "Producto oficial MANNOL TRATAMIENTO DE BANDAS 200M garantizado por MANNOL. Formulado bajo los más rigurosos estándares internacionales para protección prolongada.",
-    "priceEstimate": "$4.43",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -20281,7 +19930,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL TRATAMIENTO DE BANDAS 200M",
-    "price": 4.43
+    "price": null
   },
   {
     "id": "mannol-mannol-motor-flush-350-ml-lp-man-025",
@@ -20308,7 +19957,6 @@ export const PRODUCTS: Product[] = [
       "Bodega": "Despacho directo desde Bodega Pedernales"
     },
     "description": "Producto oficial MANNOL MOTOR FLUSH 350 ML garantizado por MANNOL. Formulado bajo los más rigurosos estándares internacionales para protección prolongada.",
-    "priceEstimate": "$3.26",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -20342,7 +19990,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL MOTOR FLUSH 350 ML",
-    "price": 3.26
+    "price": null
   },
   {
     "id": "mannol-mannol-aditivo-caja-automática-100ml-para-4-litros-lp-man-026",
@@ -20369,7 +20017,6 @@ export const PRODUCTS: Product[] = [
       "Bodega": "Despacho directo desde Bodega Pedernales"
     },
     "description": "Producto oficial MANNOL ADITIVO CAJA AUTOMÁTICA 100ML PARA 4 LITROS garantizado por MANNOL. Formulado bajo los más rigurosos estándares internacionales para protección prolongada.",
-    "priceEstimate": "$4.96",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -20403,7 +20050,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL ADITIVO CAJA AUTOMÁTICA 100ML PARA 4 LITROS",
-    "price": 4.96
+    "price": null
   },
   {
     "id": "mannol-mannol-aditivo-caja-manual-100ml-para-4-litros-lp-man-027",
@@ -20430,7 +20077,6 @@ export const PRODUCTS: Product[] = [
       "Bodega": "Despacho directo desde Bodega Pedernales"
     },
     "description": "Producto oficial MANNOL ADITIVO CAJA MANUAL 100ML PARA 4 LITROS garantizado por MANNOL. Formulado bajo los más rigurosos estándares internacionales para protección prolongada.",
-    "priceEstimate": "$4.09",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -20464,7 +20110,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL ADITIVO CAJA MANUAL 100ML PARA 4 LITROS",
-    "price": 4.09
+    "price": null
   },
   {
     "id": "mannol-mannol-llanta-doctor-450ml-lp-man-028",
@@ -20491,7 +20137,6 @@ export const PRODUCTS: Product[] = [
       "Bodega": "Despacho directo desde Bodega Pedernales"
     },
     "description": "Producto oficial MANNOL LLANTA DOCTOR 450ML garantizado por MANNOL. Formulado bajo los más rigurosos estándares internacionales para protección prolongada.",
-    "priceEstimate": "$5.61",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -20525,7 +20170,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL LLANTA DOCTOR 450ML",
-    "price": 5.61
+    "price": null
   },
   {
     "id": "mannol-mannol-tratamiento-anticorrosion-anticor-1l-cj-x-12-und-lp-man-029",
@@ -20552,7 +20197,6 @@ export const PRODUCTS: Product[] = [
       "Bodega": "Despacho directo desde Bodega Pedernales"
     },
     "description": "Producto oficial MANNOL TRATAMIENTO ANTICORROSION ANTICOR 1L (CJ X 12 UND) garantizado por MANNOL. Formulado bajo los más rigurosos estándares internacionales para protección prolongada.",
-    "priceEstimate": "$13.96",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -20586,7 +20230,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL TRATAMIENTO ANTICORROSION ANTICOR 1L (CJ X 12 UND)",
-    "price": 13.96
+    "price": null
   },
   {
     "id": "mannol-mannol-silicon-gris-85gr-lp-man-030",
@@ -20613,7 +20257,6 @@ export const PRODUCTS: Product[] = [
       "Bodega": "Despacho directo desde Bodega Pedernales"
     },
     "description": "Producto oficial MANNOL SILICON GRIS 85GR garantizado por MANNOL. Formulado bajo los más rigurosos estándares internacionales para protección prolongada.",
-    "priceEstimate": "$4.13",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -20647,7 +20290,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL SILICON GRIS 85GR",
-    "price": 4.13
+    "price": null
   },
   {
     "id": "mannol-mannol-aditivo-sellador-fuga-dirección-hidráulica-250-ml-cj-x-50-und-lp-man-031",
@@ -20674,7 +20317,6 @@ export const PRODUCTS: Product[] = [
       "Bodega": "Despacho directo desde Bodega Pedernales"
     },
     "description": "Producto oficial MANNOL ADITIVO SELLADOR FUGA DIRECCIÓN HIDRÁULICA 250 ML (CJ X 50 UND) garantizado por MANNOL. Formulado bajo los más rigurosos estándares internacionales para protección prolongada.",
-    "priceEstimate": "$5.26",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -20708,7 +20350,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL ADITIVO SELLADOR FUGA DIRECCIÓN HIDRÁULICA 250 ML (CJ X 50 UND)",
-    "price": 5.26
+    "price": null
   },
   {
     "id": "mannol-mannol-trabapernos-fijacion-fuerte-10ml-lp-man-032",
@@ -20735,7 +20377,6 @@ export const PRODUCTS: Product[] = [
       "Bodega": "Despacho directo desde Bodega Pedernales"
     },
     "description": "Producto oficial MANNOL TRABAPERNOS (FIJACION FUERTE) 10ML garantizado por MANNOL. Formulado bajo los más rigurosos estándares internacionales para protección prolongada.",
-    "priceEstimate": "$3.61",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -20769,7 +20410,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL TRABAPERNOS (FIJACION FUERTE) 10ML",
-    "price": 3.61
+    "price": null
   },
   {
     "id": "mannol-mannol-ester-additive-tratamiento-de-aceite-450-ml-y-1lt-lp-man-033",
@@ -20796,7 +20437,6 @@ export const PRODUCTS: Product[] = [
       "Normativa": "Cumple y excede especificaciones API / ACEA / ISO"
     },
     "description": "Línea oficial MANNOL ESTER ADDITIVE / TRATAMIENTO DE ACEITE 450 ML Y 1LT de MANNOL. Disponible en varias presentaciones unificadas (450 ml, 1 Galón / 5L) para cubrir desde el servicio individual hasta el abastecimiento de flotas pesadas.",
-    "priceEstimate": "$8.48",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza según el tamaño requerido.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -20813,8 +20453,7 @@ export const PRODUCTS: Product[] = [
         "volume": "450 ml",
         "stock": 10,
         "imageUrl": "/images/products/variant-mannol-mannol-ester-additive-tratamiento-de-aceite-450-ml-y-1lt-lp-man-033-c3.png",
-        "price": 8.48,
-        "priceEstimate": "$8.48",
+        "price": null,
         "officialSku": "012MN9929-045"
       },
       {
@@ -20824,8 +20463,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Galón / 5L",
         "stock": 10,
         "imageUrl": "/images/products/variant-mannol-mannol-ester-additive-tratamiento-de-aceite-450-ml-y-1lt-lp-man-033-c4.png",
-        "price": 17.52,
-        "priceEstimate": "$17.52",
+        "price": null,
         "officialSku": "012MN9929-1"
       }
     ],
@@ -20855,7 +20493,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL ESTER ADDITIVE / TRATAMIENTO DE ACEITE 450 ML Y 1LT",
-    "price": 8.48
+    "price": null
   },
   {
     "id": "mannol-mannol-diesel-ester-additive-100ml-y-250ml-lp-man-034",
@@ -20882,7 +20520,6 @@ export const PRODUCTS: Product[] = [
       "Normativa": "Cumple y excede especificaciones API / ACEA / ISO"
     },
     "description": "Línea oficial MANNOL DIESEL ESTER ADDITIVE 100ML Y 250ML de MANNOL. Disponible en varias presentaciones unificadas (250 ml, 1 Galón / 5L) para cubrir desde el servicio individual hasta el abastecimiento de flotas pesadas.",
-    "priceEstimate": "$5.57",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza según el tamaño requerido.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -20899,8 +20536,7 @@ export const PRODUCTS: Product[] = [
         "volume": "250 ml",
         "stock": 10,
         "imageUrl": "/images/products/variant-mannol-mannol-diesel-ester-additive-100ml-y-250ml-lp-man-034-c3.png",
-        "price": 5.57,
-        "priceEstimate": "$5.57",
+        "price": null,
         "officialSku": "012MN9930-025"
       },
       {
@@ -20910,8 +20546,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Galón / 5L",
         "stock": 10,
         "imageUrl": "/images/products/variant-mannol-mannol-diesel-ester-additive-100ml-y-250ml-lp-man-034-c4.png",
-        "price": 2.78,
-        "priceEstimate": "$2.78",
+        "price": null,
         "officialSku": "012MN9930-01"
       }
     ],
@@ -20953,7 +20588,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL DIESEL ESTER ADDITIVE 100ML Y 250ML",
-    "price": 5.57
+    "price": null
   },
   {
     "id": "mannol-mannol-limpiador-de-tapiceria-650ml-lp-man-035",
@@ -20980,7 +20615,6 @@ export const PRODUCTS: Product[] = [
       "Bodega": "Despacho directo desde Bodega Pedernales"
     },
     "description": "Producto oficial MANNOL LIMPIADOR DE TAPICERIA 650ML garantizado por MANNOL. Formulado bajo los más rigurosos estándares internacionales para protección prolongada.",
-    "priceEstimate": "$3.78",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -21014,7 +20648,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL LIMPIADOR DE TAPICERIA 650ML",
-    "price": 3.78
+    "price": null
   },
   {
     "id": "mannol-mannol-burning-booster-mejorador-de-combustion-500ml-metalico-lp-man-036",
@@ -21041,7 +20675,6 @@ export const PRODUCTS: Product[] = [
       "Bodega": "Despacho directo desde Bodega Pedernales"
     },
     "description": "Producto oficial MANNOL BURNING BOOSTER / MEJORADOR DE COMBUSTION 500ML METALICO garantizado por MANNOL. Formulado bajo los más rigurosos estándares internacionales para protección prolongada.",
-    "priceEstimate": "$6.83",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -21075,7 +20708,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL BURNING BOOSTER / MEJORADOR DE COMBUSTION 500ML METALICO",
-    "price": 6.83
+    "price": null
   },
   {
     "id": "mannol-mannol-motor-life-extender-reparador-450ml-lp-man-037",
@@ -21102,7 +20735,6 @@ export const PRODUCTS: Product[] = [
       "Bodega": "Despacho directo desde Bodega Pedernales"
     },
     "description": "Producto oficial MANNOL MOTOR LIFE EXTENDER / REPARADOR 450ML garantizado por MANNOL. Formulado bajo los más rigurosos estándares internacionales para protección prolongada.",
-    "priceEstimate": "$7.78",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -21136,7 +20768,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL MOTOR LIFE EXTENDER / REPARADOR 450ML",
-    "price": 7.78
+    "price": null
   },
   {
     "id": "mannol-mannol-limpiador-de-cuero-450ml-lp-man-038",
@@ -21163,7 +20795,6 @@ export const PRODUCTS: Product[] = [
       "Bodega": "Despacho directo desde Bodega Pedernales"
     },
     "description": "Producto oficial MANNOL LIMPIADOR DE CUERO 450ML garantizado por MANNOL. Formulado bajo los más rigurosos estándares internacionales para protección prolongada.",
-    "priceEstimate": "$3.78",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -21197,7 +20828,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL LIMPIADOR DE CUERO 450ML",
-    "price": 3.78
+    "price": null
   },
   {
     "id": "mannol-mannol-benzin-ester-additive-plástico-250ml-lp-man-039",
@@ -21224,7 +20855,6 @@ export const PRODUCTS: Product[] = [
       "Bodega": "Despacho directo desde Bodega Pedernales"
     },
     "description": "Producto oficial MANNOL BENZIN ESTER ADDITIVE PLÁSTICO 250ML garantizado por MANNOL. Formulado bajo los más rigurosos estándares internacionales para protección prolongada.",
-    "priceEstimate": "$5.57",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -21258,7 +20888,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL BENZIN ESTER ADDITIVE PLÁSTICO 250ML",
-    "price": 5.57
+    "price": null
   },
   {
     "id": "mannol-mannol-super-benzin-octane-plus-6-450ml-lp-man-040",
@@ -21285,7 +20915,6 @@ export const PRODUCTS: Product[] = [
       "Bodega": "Despacho directo desde Bodega Pedernales"
     },
     "description": "Producto oficial MANNOL SUPER BENZIN OCTANE PLUS + 6 450ML garantizado por MANNOL. Formulado bajo los más rigurosos estándares internacionales para protección prolongada.",
-    "priceEstimate": "$8.43",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -21319,7 +20948,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL SUPER BENZIN OCTANE PLUS + 6 450ML",
-    "price": 8.43
+    "price": null
   },
   {
     "id": "mannol-mannol-super-diesel-cetane-plus-4-450ml-lp-man-041",
@@ -21346,7 +20975,6 @@ export const PRODUCTS: Product[] = [
       "Bodega": "Despacho directo desde Bodega Pedernales"
     },
     "description": "Producto oficial MANNOL SUPER DIESEL (CETANE PLUS + 4) 450ML garantizado por MANNOL. Formulado bajo los más rigurosos estándares internacionales para protección prolongada.",
-    "priceEstimate": "$7.43",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -21392,7 +21020,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL SUPER DIESEL (CETANE PLUS + 4) 450ML",
-    "price": 7.43
+    "price": null
   },
   {
     "id": "mannol-mannol-diesel-jet-cleaner-250ml-lp-man-042",
@@ -21419,7 +21047,6 @@ export const PRODUCTS: Product[] = [
       "Bodega": "Despacho directo desde Bodega Pedernales"
     },
     "description": "Producto oficial MANNOL DIESEL JET CLEANER 250ML garantizado por MANNOL. Formulado bajo los más rigurosos estándares internacionales para protección prolongada.",
-    "priceEstimate": "$3.13",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -21465,7 +21092,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL DIESEL JET CLEANER 250ML",
-    "price": 3.13
+    "price": null
   },
   {
     "id": "mannol-mannol-injector-cleaner-gasolina-250ml-lp-man-043",
@@ -21492,7 +21119,6 @@ export const PRODUCTS: Product[] = [
       "Bodega": "Despacho directo desde Bodega Pedernales"
     },
     "description": "Producto oficial MANNOL INJECTOR CLEANER GASOLINA 250ML garantizado por MANNOL. Formulado bajo los más rigurosos estándares internacionales para protección prolongada.",
-    "priceEstimate": "$3.35",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -21526,7 +21152,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL INJECTOR CLEANER GASOLINA 250ML",
-    "price": 3.35
+    "price": null
   },
   {
     "id": "mannol-mannol-dpf-cleaner-metal-400ml-lp-man-044",
@@ -21553,7 +21179,6 @@ export const PRODUCTS: Product[] = [
       "Bodega": "Despacho directo desde Bodega Pedernales"
     },
     "description": "Producto oficial MANNOL DPF CLEANER METAL 400ML garantizado por MANNOL. Formulado bajo los más rigurosos estándares internacionales para protección prolongada.",
-    "priceEstimate": "$11.57",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -21587,7 +21212,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL DPF CLEANER METAL 400ML",
-    "price": 11.57
+    "price": null
   },
   {
     "id": "mannol-mannol-limpiador-radiador-250-ml-lp-man-045",
@@ -21614,7 +21239,6 @@ export const PRODUCTS: Product[] = [
       "Bodega": "Despacho directo desde Bodega Pedernales"
     },
     "description": "Producto oficial MANNOL LIMPIADOR RADIADOR 250 ML garantizado por MANNOL. Formulado bajo los más rigurosos estándares internacionales para protección prolongada.",
-    "priceEstimate": "$4.04",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -21648,7 +21272,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL LIMPIADOR RADIADOR 250 ML",
-    "price": 4.04
+    "price": null
   },
   {
     "id": "mannol-mannol-sellador-de-fugas-para-radiador-250ml-lp-man-046",
@@ -21675,7 +21299,6 @@ export const PRODUCTS: Product[] = [
       "Bodega": "Despacho directo desde Bodega Pedernales"
     },
     "description": "Producto oficial MANNOL SELLADOR DE FUGAS PARA RADIADOR 250ML garantizado por MANNOL. Formulado bajo los más rigurosos estándares internacionales para protección prolongada.",
-    "priceEstimate": "$3.96",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -21709,7 +21332,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL SELLADOR DE FUGAS PARA RADIADOR 250ML",
-    "price": 3.96
+    "price": null
   },
   {
     "id": "mannol-mannol-sellador-de-fugas-caja-de-cambios-250ml-lp-man-047",
@@ -21736,7 +21359,6 @@ export const PRODUCTS: Product[] = [
       "Bodega": "Despacho directo desde Bodega Pedernales"
     },
     "description": "Producto oficial MANNOL SELLADOR DE FUGAS CAJA DE CAMBIOS 250ML garantizado por MANNOL. Formulado bajo los más rigurosos estándares internacionales para protección prolongada.",
-    "priceEstimate": "$5.52",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -21770,7 +21392,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL SELLADOR DE FUGAS CAJA DE CAMBIOS 250ML",
-    "price": 5.52
+    "price": null
   },
   {
     "id": "mannol-mannol-limpiador-de-aire-acondicionado-520-ml-lp-man-048",
@@ -21797,7 +21419,6 @@ export const PRODUCTS: Product[] = [
       "Bodega": "Despacho directo desde Bodega Pedernales"
     },
     "description": "Producto oficial MANNOL LIMPIADOR DE AIRE ACONDICIONADO 520 ML garantizado por MANNOL. Formulado bajo los más rigurosos estándares internacionales para protección prolongada.",
-    "priceEstimate": "$4.30",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -21831,7 +21452,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL LIMPIADOR DE AIRE ACONDICIONADO 520 ML",
-    "price": 4.3
+    "price": null
   },
   {
     "id": "mannol-mannol-limpiador-externo-de-motor-spray-500-ml-lp-man-049",
@@ -21858,7 +21479,6 @@ export const PRODUCTS: Product[] = [
       "Bodega": "Despacho directo desde Bodega Pedernales"
     },
     "description": "Producto oficial MANNOL LIMPIADOR EXTERNO DE MOTOR SPRAY 500 ML garantizado por MANNOL. Formulado bajo los más rigurosos estándares internacionales para protección prolongada.",
-    "priceEstimate": "$3.65",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -21892,7 +21512,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL LIMPIADOR EXTERNO DE MOTOR SPRAY 500 ML",
-    "price": 3.65
+    "price": null
   },
   {
     "id": "mannol-mannol-limpia-vidrios-500ml-lp-man-050",
@@ -21919,7 +21539,6 @@ export const PRODUCTS: Product[] = [
       "Bodega": "Despacho directo desde Bodega Pedernales"
     },
     "description": "Producto oficial MANNOL LIMPIA VIDRIOS 500ML garantizado por MANNOL. Formulado bajo los más rigurosos estándares internacionales para protección prolongada.",
-    "priceEstimate": "$3.87",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -21953,7 +21572,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL LIMPIA VIDRIOS 500ML",
-    "price": 3.87
+    "price": null
   },
   {
     "id": "mannol-mannol-limpiador-inyectores-diesel-300-ml-lp-man-051",
@@ -21980,7 +21599,6 @@ export const PRODUCTS: Product[] = [
       "Bodega": "Despacho directo desde Bodega Pedernales"
     },
     "description": "Producto oficial MANNOL LIMPIADOR INYECTORES DIESEL 300 ML garantizado por MANNOL. Formulado bajo los más rigurosos estándares internacionales para protección prolongada.",
-    "priceEstimate": "$3.91",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -22026,7 +21644,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL LIMPIADOR INYECTORES DIESEL 300 ML",
-    "price": 3.91
+    "price": null
   },
   {
     "id": "mannol-mannol-limpia-inyectores-gasolina-300-ml-lp-man-052",
@@ -22053,7 +21671,6 @@ export const PRODUCTS: Product[] = [
       "Bodega": "Despacho directo desde Bodega Pedernales"
     },
     "description": "Producto oficial MANNOL LIMPIA INYECTORES GASOLINA 300 ML garantizado por MANNOL. Formulado bajo los más rigurosos estándares internacionales para protección prolongada.",
-    "priceEstimate": "$3.74",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -22099,7 +21716,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL LIMPIA INYECTORES GASOLINA 300 ML",
-    "price": 3.74
+    "price": null
   },
   {
     "id": "mannol-mannol-aditivo-motor-dr-350-ml-lp-man-053",
@@ -22126,7 +21743,6 @@ export const PRODUCTS: Product[] = [
       "Bodega": "Despacho directo desde Bodega Pedernales"
     },
     "description": "Producto oficial MANNOL ADITIVO MOTOR DR. 350 ML garantizado por MANNOL. Formulado bajo los más rigurosos estándares internacionales para protección prolongada.",
-    "priceEstimate": "$3.74",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -22160,7 +21776,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL ADITIVO MOTOR DR. 350 ML",
-    "price": 3.74
+    "price": null
   },
   {
     "id": "mannol-mannol-aditivo-molibdeno-300-ml-lp-man-054",
@@ -22187,7 +21803,6 @@ export const PRODUCTS: Product[] = [
       "Bodega": "Despacho directo desde Bodega Pedernales"
     },
     "description": "Producto oficial MANNOL ADITIVO MOLIBDENO 300 ML garantizado por MANNOL. Formulado bajo los más rigurosos estándares internacionales para protección prolongada.",
-    "priceEstimate": "$5.52",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -22221,7 +21836,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "MANNOL ADITIVO MOLIBDENO 300 ML",
-    "price": 5.52
+    "price": null
   },
   {
     "id": "abro-abro-sellador-polvo-radiador-ab-404-lp-abr-002",
@@ -22248,7 +21863,6 @@ export const PRODUCTS: Product[] = [
       "Bodega": "Despacho directo desde Bodega Pedernales"
     },
     "description": "Producto oficial ABRO SELLADOR POLVO RADIADOR AB-404 garantizado por ABRO. Formulado bajo los más rigurosos estándares internacionales para protección prolongada.",
-    "priceEstimate": "$0.70",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -22282,7 +21896,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "ABRO SELLADOR POLVO RADIADOR AB-404",
-    "price": 0.7
+    "price": null
   },
   {
     "id": "abro-abro-lubricante-penetrante-ab-80-10oz-lp-abr-003",
@@ -22309,7 +21923,6 @@ export const PRODUCTS: Product[] = [
       "Bodega": "Despacho directo desde Bodega Pedernales"
     },
     "description": "Producto oficial ABRO LUBRICANTE PENETRANTE AB-80 10OZ garantizado por ABRO. Formulado bajo los más rigurosos estándares internacionales para protección prolongada.",
-    "priceEstimate": "$4.04",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -22343,7 +21956,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "ABRO LUBRICANTE PENETRANTE AB-80 10OZ",
-    "price": 4.04
+    "price": null
   },
   {
     "id": "abro-abro-refrigerante-rojo-galon-lp-abr-004",
@@ -22372,7 +21985,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Líquido refrigerante y anticongelante ABRO REFRIGERANTE ROJO GALON garantizado por ABRO. Formulado con inhibidores orgánicos que previenen la corrosión galvánica, la formación de sarro y el recalentamiento en motores que operan bajo condiciones climáticas cálidas como la costa ecuatoriana.",
-    "priceEstimate": "$1.35",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza según el tamaño requerido.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -22389,8 +22001,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Litro",
         "stock": 10,
         "imageUrl": "/images/products/variant-abro-abro-refrigerante-rojo-galon-lp-abr-004-c3.png",
-        "price": 1.35,
-        "priceEstimate": "$1.35",
+        "price": null,
         "officialSku": "102EC-502LT"
       },
       {
@@ -22400,8 +22011,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Galón",
         "stock": 10,
         "imageUrl": "/images/products/variant-abro-abro-refrigerante-rojo-galon-lp-abr-004-c4.png",
-        "price": 3.13,
-        "priceEstimate": "$3.13",
+        "price": null,
         "officialSku": "102EC-502"
       }
     ],
@@ -22455,7 +22065,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "ABRO REFRIGERANTE ROJO GALON",
-    "price": 1.35
+    "price": null
   },
   {
     "id": "abro-abro-refrigerante-verde-galon-lp-abr-005",
@@ -22484,7 +22094,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Líquido refrigerante y anticongelante ABRO REFRIGERANTE VERDE GALON garantizado por ABRO. Formulado con inhibidores orgánicos que previenen la corrosión galvánica, la formación de sarro y el recalentamiento en motores que operan bajo condiciones climáticas cálidas como la costa ecuatoriana.",
-    "priceEstimate": "$1.35",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza según el tamaño requerido.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -22501,8 +22110,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Litro",
         "stock": 10,
         "imageUrl": "/images/products/variant-abro-abro-refrigerante-verde-galon-lp-abr-005-c3.png",
-        "price": 1.35,
-        "priceEstimate": "$1.35",
+        "price": null,
         "officialSku": "102EC-503LT"
       },
       {
@@ -22512,8 +22120,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Galón",
         "stock": 10,
         "imageUrl": "/images/products/variant-abro-abro-refrigerante-verde-galon-lp-abr-005-c4.png",
-        "price": 3.13,
-        "priceEstimate": "$3.13",
+        "price": null,
         "officialSku": "102EC-503"
       }
     ],
@@ -22567,7 +22174,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "ABRO REFRIGERANTE VERDE GALON",
-    "price": 1.35
+    "price": null
   },
   {
     "id": "abro-abro-grasa-3-azul-1lb-envase-plástico-lg-990-lp-abr-006",
@@ -22594,7 +22201,6 @@ export const PRODUCTS: Product[] = [
       "Bodega": "Despacho directo desde Bodega Pedernales"
     },
     "description": "Producto oficial ABRO GRASA # 3 AZUL 1LB ENVASE PLÁSTICO LG-990 garantizado por ABRO. Formulado bajo los más rigurosos estándares internacionales para protección prolongada.",
-    "priceEstimate": "$4.78",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -22628,7 +22234,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "ABRO GRASA # 3 AZUL 1LB ENVASE PLÁSTICO LG-990",
-    "price": 4.78
+    "price": null
   },
   {
     "id": "abro-abro-super-sellador-de-blocks-ss-822-lp-abr-007",
@@ -22655,7 +22261,6 @@ export const PRODUCTS: Product[] = [
       "Bodega": "Despacho directo desde Bodega Pedernales"
     },
     "description": "Producto oficial ABRO SUPER SELLADOR DE BLOCKS SS-822 garantizado por ABRO. Formulado bajo los más rigurosos estándares internacionales para protección prolongada.",
-    "priceEstimate": "$6.47",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -22689,7 +22294,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "ABRO SUPER SELLADOR DE BLOCKS SS-822",
-    "price": 6.47
+    "price": null
   },
   {
     "id": "abro-abro-cinta-electrica-negra-taipe-lp-abr-008",
@@ -22716,7 +22321,6 @@ export const PRODUCTS: Product[] = [
       "Bodega": "Despacho directo desde Bodega Pedernales"
     },
     "description": "Producto oficial ABRO CINTA ELECTRICA NEGRA TAIPE garantizado por ABRO. Formulado bajo los más rigurosos estándares internacionales para protección prolongada.",
-    "priceEstimate": "$0.43",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -22750,7 +22354,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "ABRO CINTA ELECTRICA NEGRA TAIPE",
-    "price": 0.43
+    "price": null
   },
   {
     "id": "abro-abro-cinta-empaque-transparente-48x80yds-lp-abr-009",
@@ -22777,7 +22381,6 @@ export const PRODUCTS: Product[] = [
       "Bodega": "Despacho directo desde Bodega Pedernales"
     },
     "description": "Producto oficial ABRO CINTA EMPAQUE TRANSPARENTE 48X80yds garantizado por ABRO. Formulado bajo los más rigurosos estándares internacionales para protección prolongada.",
-    "priceEstimate": "$1.13",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -22811,7 +22414,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "ABRO CINTA EMPAQUE TRANSPARENTE 48X80yds",
-    "price": 1.13
+    "price": null
   },
   {
     "id": "simoniz-areon-simoniz-uv3-chicle-250-cc-lp-per-002",
@@ -22838,7 +22441,6 @@ export const PRODUCTS: Product[] = [
       "Bodega": "Despacho directo desde Bodega Pedernales"
     },
     "description": "Producto oficial SIMONIZ UV3 CHICLE 250 CC. garantizado por SIMONIZ. Formulado bajo los más rigurosos estándares internacionales para protección prolongada.",
-    "priceEstimate": "$3.91",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -22872,7 +22474,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "SIMONIZ UV3 CHICLE 250 CC.",
-    "price": 3.91
+    "price": null
   },
   {
     "id": "simoniz-areon-simoniz-uv3-citrus-250-cc-lp-per-003",
@@ -22899,7 +22501,6 @@ export const PRODUCTS: Product[] = [
       "Bodega": "Despacho directo desde Bodega Pedernales"
     },
     "description": "Producto oficial SIMONIZ UV3 CITRUS 250 CC. garantizado por SIMONIZ. Formulado bajo los más rigurosos estándares internacionales para protección prolongada.",
-    "priceEstimate": "$3.91",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -22933,7 +22534,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "SIMONIZ UV3 CITRUS 250 CC.",
-    "price": 3.91
+    "price": null
   },
   {
     "id": "simoniz-areon-simoniz-uv3-fresa-250-cc-lp-per-004",
@@ -22960,7 +22561,6 @@ export const PRODUCTS: Product[] = [
       "Bodega": "Despacho directo desde Bodega Pedernales"
     },
     "description": "Producto oficial SIMONIZ UV3 FRESA 250 CC. garantizado por SIMONIZ. Formulado bajo los más rigurosos estándares internacionales para protección prolongada.",
-    "priceEstimate": "$3.91",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -22994,7 +22594,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "SIMONIZ UV3 FRESA 250 CC.",
-    "price": 3.91
+    "price": null
   },
   {
     "id": "simoniz-areon-simoniz-uv3-picadura-tabaco-250-cc-lp-per-005",
@@ -23021,7 +22621,6 @@ export const PRODUCTS: Product[] = [
       "Bodega": "Despacho directo desde Bodega Pedernales"
     },
     "description": "Producto oficial SIMONIZ UV3 PICADURA TABACO 250 CC. garantizado por SIMONIZ. Formulado bajo los más rigurosos estándares internacionales para protección prolongada.",
-    "priceEstimate": "$3.91",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -23055,7 +22654,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "SIMONIZ UV3 PICADURA TABACO 250 CC.",
-    "price": 3.91
+    "price": null
   },
   {
     "id": "simoniz-areon-simoniz-uv3-carro-nuevo-250-cc-lp-per-006",
@@ -23082,7 +22681,6 @@ export const PRODUCTS: Product[] = [
       "Bodega": "Despacho directo desde Bodega Pedernales"
     },
     "description": "Producto oficial SIMONIZ UV3 CARRO NUEVO 250 CC. garantizado por SIMONIZ. Formulado bajo los más rigurosos estándares internacionales para protección prolongada.",
-    "priceEstimate": "$3.91",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -23116,7 +22714,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "SIMONIZ UV3 CARRO NUEVO 250 CC.",
-    "price": 3.91
+    "price": null
   },
   {
     "id": "simoniz-areon-simoniz-cera-300gr-siempre-nuevo-lp-per-007",
@@ -23143,7 +22741,6 @@ export const PRODUCTS: Product[] = [
       "Bodega": "Despacho directo desde Bodega Pedernales"
     },
     "description": "Producto oficial SIMONIZ CERA 300GR SIEMPRE NUEVO garantizado por SIMONIZ. Formulado bajo los más rigurosos estándares internacionales para protección prolongada.",
-    "priceEstimate": "$4.30",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -23177,7 +22774,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "SIMONIZ CERA 300GR SIEMPRE NUEVO",
-    "price": 4.3
+    "price": null
   },
   {
     "id": "simoniz-areon-areon-perfume-black-crystal-lp-per-008",
@@ -23204,7 +22801,6 @@ export const PRODUCTS: Product[] = [
       "Bodega": "Despacho directo desde Bodega Pedernales"
     },
     "description": "Producto oficial AREON PERFUME BLACK CRYSTAL garantizado por AREON. Formulado bajo los más rigurosos estándares internacionales para protección prolongada.",
-    "priceEstimate": "$3.26",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -23238,7 +22834,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "AREON PERFUME BLACK CRYSTAL",
-    "price": 3.26
+    "price": null
   },
   {
     "id": "simoniz-areon-areon-perfume-new-car-lp-per-009",
@@ -23265,7 +22861,6 @@ export const PRODUCTS: Product[] = [
       "Bodega": "Despacho directo desde Bodega Pedernales"
     },
     "description": "Producto oficial AREON PERFUME NEW CAR garantizado por AREON. Formulado bajo los más rigurosos estándares internacionales para protección prolongada.",
-    "priceEstimate": "$3.26",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -23299,7 +22894,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "AREON PERFUME NEW CAR",
-    "price": 3.26
+    "price": null
   },
   {
     "id": "simoniz-areon-areon-mon-display-60-pcs-mix-fragancias-lp-per-010",
@@ -23326,7 +22921,6 @@ export const PRODUCTS: Product[] = [
       "Bodega": "Despacho directo desde Bodega Pedernales"
     },
     "description": "Producto oficial AREON MON DISPLAY 60 PCS MIX FRAGANCIAS garantizado por AREON. Formulado bajo los más rigurosos estándares internacionales para protección prolongada.",
-    "priceEstimate": "$0.87",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -23360,7 +22954,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": false,
     "rawErpName": "AREON MON DISPLAY 60 PCS MIX FRAGANCIAS",
-    "price": 0.87
+    "price": null
   },
   {
     "id": "simoniz-areon-shampoo-cera-para-autos-600ml-lp-per-011",
@@ -23451,7 +23045,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Lubricante automotriz oficial VALVODIESEL SAE 15W40 API CH4 marca VALVOLINE. Formulado para otorgar una película protectora duradera que reduce el desgaste prematuro de pistones, cilindros y rodamientos bajo condiciones de trabajo severo y altas temperaturas ambientales en Pedernales y la provincia de Manabí.",
-    "priceEstimate": "$4.49",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -23515,7 +23108,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "VALVODIESEL SAE 15W40 API CH4",
-    "price": 4.49
+    "price": null
   },
   {
     "id": "valvoline-valvoline-classic-sae-20w50-sp-lp-lur-003-6",
@@ -23545,7 +23138,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Lubricante automotriz oficial VALVOLINE CLASSIC SAE 20W50 SP marca VALVOLINE. Formulado para otorgar una película protectora duradera que reduce el desgaste prematuro de pistones, cilindros y rodamientos bajo condiciones de trabajo severo y altas temperaturas ambientales en Pedernales y la provincia de Manabí.",
-    "priceEstimate": "$4.57",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza según el tamaño requerido.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -23562,8 +23154,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Litro",
         "stock": 10,
         "imageUrl": "/images/products/variant-valvoline-valvoline-classic-sae-20w50-sp-lp-lur-003-6-c3.png",
-        "price": 4.57,
-        "priceEstimate": "$4.57",
+        "price": null,
         "officialSku": "038LUB-PC2050-0025"
       },
       {
@@ -23573,8 +23164,7 @@ export const PRODUCTS: Product[] = [
         "volume": "1 Galón",
         "stock": 10,
         "imageUrl": "/images/products/variant-valvoline-valvoline-classic-sae-20w50-sp-lp-lur-003-6-c4.png",
-        "price": 17.13,
-        "priceEstimate": "$17.13",
+        "price": null,
         "officialSku": "038LUB-PC2050-0100"
       }
     ],
@@ -23616,7 +23206,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "VALVOLINE CLASSIC SAE 20W50 SP",
-    "price": 4.57
+    "price": null
   },
   {
     "id": "valvoline-valvoline-sae-10w30-classic-api-sp-lp-lur-004-5",
@@ -23646,7 +23236,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
     "description": "Lubricante automotriz oficial VALVOLINE SAE 10W30 CLASSIC API SP marca VALVOLINE. Formulado para otorgar una película protectora duradera que reduce el desgaste prematuro de pistones, cilindros y rodamientos bajo condiciones de trabajo severo y altas temperaturas ambientales en Pedernales y la provincia de Manabí.",
-    "priceEstimate": "$4.83",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -23698,7 +23287,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "VALVOLINE SAE 10W30 CLASSIC API SP",
-    "price": 4.83
+    "price": null
   },
   {
     "id": "bosch-bateria-bosch-24-hp-i-s4-64amp-602438-02724hpis4",
@@ -23731,7 +23320,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI para crédito tributario"
     },
     "description": "Batería automotriz BOSCH modelo BATERIA BOSCH 24 HP I S4 64AMP 602438. Equipada con Rejilla troquelada PowerFrame® de alta resistencia y aleación plata-calcio, ofrece una potencia de arranque instantáneo de 600 CCA diseñada para soportar las exigencias eléctricas de vehículos modernos y las altas temperaturas de la costa ecuatoriana. Incluye 18 Meses de Garantía Oficial Escrita y servicio de revisión de alternador y arranque sin costo en nuestro local de Pedernales.",
-    "priceEstimate": "$157.71",
     "priceNote": "Facturación electrónica autorizada por el SRI. Incluye instalación profesional y chequeo de carga en Pedernales.",
     "warranty": "18 a 24 Meses de Garantía",
     "commercialStatus": "VERIFIED",
@@ -23796,7 +23384,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "BATERIA BOSCH 24 HP I S4 64AMP 602438",
-    "price": 157.71
+    "price": null
   },
   {
     "id": "bosch-bateria-bosch-24-hp-s4-64amp-602434-02724hps4",
@@ -23829,7 +23417,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI para crédito tributario"
     },
     "description": "Batería automotriz BOSCH modelo BATERIA BOSCH 24 HP S4 64AMP 602434. Equipada con Rejilla troquelada PowerFrame® de alta resistencia y aleación plata-calcio, ofrece una potencia de arranque instantáneo de 600 CCA diseñada para soportar las exigencias eléctricas de vehículos modernos y las altas temperaturas de la costa ecuatoriana. Incluye 18 Meses de Garantía Oficial Escrita y servicio de revisión de alternador y arranque sin costo en nuestro local de Pedernales.",
-    "priceEstimate": "$157.71",
     "priceNote": "Facturación electrónica autorizada por el SRI. Incluye instalación profesional y chequeo de carga en Pedernales.",
     "warranty": "18 a 24 Meses de Garantía",
     "commercialStatus": "VERIFIED",
@@ -23894,7 +23481,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "BATERIA BOSCH 24 HP S4 64AMP 602434",
-    "price": 157.71
+    "price": null
   },
   {
     "id": "bosch-bateria-bosch-27-hp-i-s4-85amp-602738-02727hpis4",
@@ -23927,7 +23514,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI para crédito tributario"
     },
     "description": "Batería automotriz BOSCH modelo BATERIA BOSCH 27 HP I S4 85AMP 602738. Equipada con Rejilla troquelada PowerFrame® de alta resistencia y aleación plata-calcio, ofrece una potencia de arranque instantáneo de 730 CCA diseñada para soportar las exigencias eléctricas de vehículos modernos y las altas temperaturas de la costa ecuatoriana. Incluye 18 Meses de Garantía Oficial Escrita y servicio de revisión de alternador y arranque sin costo en nuestro local de Pedernales.",
-    "priceEstimate": "$197.02",
     "priceNote": "Facturación electrónica autorizada por el SRI. Incluye instalación profesional y chequeo de carga en Pedernales.",
     "warranty": "18 a 24 Meses de Garantía",
     "commercialStatus": "VERIFIED",
@@ -23986,7 +23572,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "BATERIA BOSCH 27 HP I S4 85AMP 602738",
-    "price": 197.02
+    "price": null
   },
   {
     "id": "bosch-bateria-bosch-27-hp-s4-88amp-602732-02727hps4",
@@ -24019,7 +23605,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI para crédito tributario"
     },
     "description": "Batería automotriz BOSCH modelo BATERIA BOSCH 27 HP S4 88AMP 602732. Equipada con Rejilla troquelada PowerFrame® de alta resistencia y aleación plata-calcio, ofrece una potencia de arranque instantáneo de 730 CCA diseñada para soportar las exigencias eléctricas de vehículos modernos y las altas temperaturas de la costa ecuatoriana. Incluye 18 Meses de Garantía Oficial Escrita y servicio de revisión de alternador y arranque sin costo en nuestro local de Pedernales.",
-    "priceEstimate": "$197.02",
     "priceNote": "Facturación electrónica autorizada por el SRI. Incluye instalación profesional y chequeo de carga en Pedernales.",
     "warranty": "18 a 24 Meses de Garantía",
     "commercialStatus": "VERIFIED",
@@ -24078,7 +23663,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "BATERIA BOSCH 27 HP S4 88AMP 602732",
-    "price": 197.02
+    "price": null
   },
   {
     "id": "bosch-bateria-bosch-34-hp-s4-70amp-603432-02734hps4",
@@ -24111,7 +23696,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI para crédito tributario"
     },
     "description": "Batería automotriz BOSCH modelo BATERIA BOSCH 34 HP S4 70AMP 603432. Equipada con Rejilla troquelada PowerFrame® de alta resistencia y aleación plata-calcio, ofrece una potencia de arranque instantáneo de 650 CCA diseñada para soportar las exigencias eléctricas de vehículos modernos y las altas temperaturas de la costa ecuatoriana. Incluye 18 Meses de Garantía Oficial Escrita y servicio de revisión de alternador y arranque sin costo en nuestro local de Pedernales.",
-    "priceEstimate": "$161.03",
     "priceNote": "Facturación electrónica autorizada por el SRI. Incluye instalación profesional y chequeo de carga en Pedernales.",
     "warranty": "18 a 24 Meses de Garantía",
     "commercialStatus": "VERIFIED",
@@ -24170,7 +23754,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "BATERIA BOSCH 34 HP S4 70AMP 603432",
-    "price": 161.03
+    "price": null
   },
   {
     "id": "bosch-bateria-bosch-42-fe-s3-45amp-304222-02742fes3",
@@ -24203,7 +23787,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI para crédito tributario"
     },
     "description": "Batería automotriz BOSCH modelo BATERIA BOSCH 42 FE S3 45AMP 304222. Equipada con Rejilla troquelada PowerFrame® de alta resistencia y aleación plata-calcio, ofrece una potencia de arranque instantáneo de 460 CCA diseñada para soportar las exigencias eléctricas de vehículos modernos y las altas temperaturas de la costa ecuatoriana. Incluye 18 Meses de Garantía Oficial Escrita y servicio de revisión de alternador y arranque sin costo en nuestro local de Pedernales.",
-    "priceEstimate": "$93.75",
     "priceNote": "Facturación electrónica autorizada por el SRI. Incluye instalación profesional y chequeo de carga en Pedernales.",
     "warranty": "18 a 24 Meses de Garantía",
     "commercialStatus": "VERIFIED",
@@ -24262,7 +23845,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "BATERIA BOSCH 42 FE S3 45AMP 304222",
-    "price": 93.75
+    "price": null
   },
   {
     "id": "bosch-bateria-bosch-42-hp-i-s4-55amp-604236-02742hpis4",
@@ -24295,7 +23878,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI para crédito tributario"
     },
     "description": "Batería automotriz BOSCH modelo BATERIA BOSCH 42 HP I S4 55AMP 604236. Equipada con Rejilla troquelada PowerFrame® de alta resistencia y aleación plata-calcio, ofrece una potencia de arranque instantáneo de 510 CCA diseñada para soportar las exigencias eléctricas de vehículos modernos y las altas temperaturas de la costa ecuatoriana. Incluye 18 Meses de Garantía Oficial Escrita y servicio de revisión de alternador y arranque sin costo en nuestro local de Pedernales.",
-    "priceEstimate": "$130.24",
     "priceNote": "Facturación electrónica autorizada por el SRI. Incluye instalación profesional y chequeo de carga en Pedernales.",
     "warranty": "18 a 24 Meses de Garantía",
     "commercialStatus": "VERIFIED",
@@ -24354,7 +23936,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "BATERIA BOSCH 42 HP I S4 55AMP 604236",
-    "price": 130.24
+    "price": null
   },
   {
     "id": "bosch-bateria-bosch-b65-mp-i-s5-sellada-0277b6548",
@@ -24387,7 +23969,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI para crédito tributario"
     },
     "description": "Batería automotriz BOSCH modelo BATERIA BOSCH B65 MP I S5 SELLADA. Equipada con Rejilla troquelada PowerFrame® de alta resistencia y aleación plata-calcio, ofrece una potencia de arranque instantáneo de 650 CCA diseñada para soportar las exigencias eléctricas de vehículos modernos y las altas temperaturas de la costa ecuatoriana. Incluye 18 Meses de Garantía Oficial Escrita y servicio de revisión de alternador y arranque sin costo en nuestro local de Pedernales.",
-    "priceEstimate": "$236.81",
     "priceNote": "Facturación electrónica autorizada por el SRI. Incluye instalación profesional y chequeo de carga en Pedernales.",
     "warranty": "18 a 24 Meses de Garantía",
     "commercialStatus": "VERIFIED",
@@ -24434,7 +24015,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "BATERIA BOSCH B65 MP I S5 SELLADA",
-    "price": 236.81
+    "price": null
   },
   {
     "id": "bosch-bateria-bosch-n40-fe-s4-43amp-614022-027n40fes4",
@@ -24559,7 +24140,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI para crédito tributario"
     },
     "description": "Batería automotriz BOSCH modelo BATERIA BOSCH NS40 FE F S4 604023. Equipada con Rejilla troquelada PowerFrame® de alta resistencia y aleación plata-calcio, ofrece una potencia de arranque instantáneo de 380 CCA diseñada para soportar las exigencias eléctricas de vehículos modernos y las altas temperaturas de la costa ecuatoriana. Incluye 18 Meses de Garantía Oficial Escrita y servicio de revisión de alternador y arranque sin costo en nuestro local de Pedernales.",
-    "priceEstimate": "$108.00",
     "priceNote": "Facturación electrónica autorizada por el SRI. Incluye instalación profesional y chequeo de carga en Pedernales.",
     "warranty": "18 a 24 Meses de Garantía",
     "commercialStatus": "VERIFIED",
@@ -24618,7 +24198,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "BATERIA BOSCH NS40 FE F S4 604023",
-    "price": 108.0
+    "price": null
   },
   {
     "id": "bosch-bateria-bosch-ns40-fe-i-f-s4-42amp-604027-027ns40feifs4",
@@ -24651,7 +24231,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI para crédito tributario"
     },
     "description": "Batería automotriz BOSCH modelo BATERIA BOSCH NS40 FE I F S4 42AMP 604027. Equipada con Rejilla troquelada PowerFrame® de alta resistencia y aleación plata-calcio, ofrece una potencia de arranque instantáneo de 380 CCA diseñada para soportar las exigencias eléctricas de vehículos modernos y las altas temperaturas de la costa ecuatoriana. Incluye 18 Meses de Garantía Oficial Escrita y servicio de revisión de alternador y arranque sin costo en nuestro local de Pedernales.",
-    "priceEstimate": "$108.00",
     "priceNote": "Facturación electrónica autorizada por el SRI. Incluye instalación profesional y chequeo de carga en Pedernales.",
     "warranty": "18 a 24 Meses de Garantía",
     "commercialStatus": "VERIFIED",
@@ -24710,7 +24289,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "BATERIA BOSCH NS40 FE I F S4 42AMP 604027",
-    "price": 108.0
+    "price": null
   },
   {
     "id": "baterías-ecuador-bateria-ecuador-24-fe-full-equipo-65-amp-03024-fe",
@@ -24743,7 +24322,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI para crédito tributario"
     },
     "description": "Batería automotriz BATERÍAS ECUADOR modelo BATERIA ECUADOR 24 FE FULL EQUIPO 65 AMP. Equipada con Placas de plomo-calcio reforzadas con separadores de polietileno tipo sobre, ofrece una potencia de arranque instantáneo de 550 CCA diseñada para soportar las exigencias eléctricas de vehículos modernos y las altas temperaturas de la costa ecuatoriana. Incluye 18 a 24 Meses de Garantía Nacional y servicio de revisión de alternador y arranque sin costo en nuestro local de Pedernales.",
-    "priceEstimate": "$143.00",
     "priceNote": "Facturación electrónica autorizada por el SRI. Incluye instalación profesional y chequeo de carga en Pedernales.",
     "warranty": "18 a 24 Meses de Garantía",
     "commercialStatus": "VERIFIED",
@@ -24808,7 +24386,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "BATERIA ECUADOR 24 FE FULL EQUIPO 65 AMP",
-    "price": 143.0
+    "price": null
   },
   {
     "id": "baterías-ecuador-bateria-ecuador-24-fe-i-full-equipo-65-amp-03024-fe-i",
@@ -24841,7 +24419,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI para crédito tributario"
     },
     "description": "Batería automotriz BATERÍAS ECUADOR modelo BATERIA ECUADOR 24 FE I FULL EQUIPO 65 AMP. Equipada con Placas de plomo-calcio reforzadas con separadores de polietileno tipo sobre, ofrece una potencia de arranque instantáneo de 550 CCA diseñada para soportar las exigencias eléctricas de vehículos modernos y las altas temperaturas de la costa ecuatoriana. Incluye 18 a 24 Meses de Garantía Nacional y servicio de revisión de alternador y arranque sin costo en nuestro local de Pedernales.",
-    "priceEstimate": "$143.00",
     "priceNote": "Facturación electrónica autorizada por el SRI. Incluye instalación profesional y chequeo de carga en Pedernales.",
     "warranty": "18 a 24 Meses de Garantía",
     "commercialStatus": "VERIFIED",
@@ -24906,7 +24483,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "BATERIA ECUADOR 24 FE I FULL EQUIPO 65 AMP",
-    "price": 143.0
+    "price": null
   },
   {
     "id": "baterías-ecuador-bateria-ecuador-24-hp-i-high-power-85-amp-03024-hp-i",
@@ -24939,7 +24516,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI para crédito tributario"
     },
     "description": "Batería automotriz BATERÍAS ECUADOR modelo BATERIA ECUADOR 24 HP I HIGH POWER 85 AMP. Equipada con Placas de plomo-calcio reforzadas con separadores de polietileno tipo sobre, ofrece una potencia de arranque instantáneo de 600 CCA diseñada para soportar las exigencias eléctricas de vehículos modernos y las altas temperaturas de la costa ecuatoriana. Incluye 18 a 24 Meses de Garantía Nacional y servicio de revisión de alternador y arranque sin costo en nuestro local de Pedernales.",
-    "priceEstimate": "$161.71",
     "priceNote": "Facturación electrónica autorizada por el SRI. Incluye instalación profesional y chequeo de carga en Pedernales.",
     "warranty": "18 a 24 Meses de Garantía",
     "commercialStatus": "VERIFIED",
@@ -25004,7 +24580,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "BATERIA ECUADOR 24 HP I HIGH POWER 85 AMP",
-    "price": 161.71
+    "price": null
   },
   {
     "id": "baterías-ecuador-bateria-ecuador-27-fe-full-equipo-80-amp-03027-fe",
@@ -25037,7 +24613,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI para crédito tributario"
     },
     "description": "Batería automotriz BATERÍAS ECUADOR modelo BATERIA ECUADOR 27 FE FULL EQUIPO 80 AMP. Equipada con Rejilla troquelada PowerFrame® de alta resistencia y aleación plata-calcio, ofrece una potencia de arranque instantáneo de 680 CCA diseñada para soportar las exigencias eléctricas de vehículos modernos y las altas temperaturas de la costa ecuatoriana. Incluye 18 Meses de Garantía Oficial Escrita y servicio de revisión de alternador y arranque sin costo en nuestro local de Pedernales.",
-    "priceEstimate": "$167.79",
     "priceNote": "Facturación electrónica autorizada por el SRI. Incluye instalación profesional y chequeo de carga en Pedernales.",
     "warranty": "18 a 24 Meses de Garantía",
     "commercialStatus": "VERIFIED",
@@ -25096,7 +24671,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "BATERIA ECUADOR 27 FE FULL EQUIPO 80 AMP",
-    "price": 167.79
+    "price": null
   },
   {
     "id": "baterías-ecuador-bateria-ecuador-27-fe-i-full-equipo-80-amp-03027-fe-i",
@@ -25129,7 +24704,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI para crédito tributario"
     },
     "description": "Batería automotriz BATERÍAS ECUADOR modelo BATERIA ECUADOR 27 FE I FULL EQUIPO 80 AMP. Equipada con Rejilla troquelada PowerFrame® de alta resistencia y aleación plata-calcio, ofrece una potencia de arranque instantáneo de 680 CCA diseñada para soportar las exigencias eléctricas de vehículos modernos y las altas temperaturas de la costa ecuatoriana. Incluye 18 Meses de Garantía Oficial Escrita y servicio de revisión de alternador y arranque sin costo en nuestro local de Pedernales.",
-    "priceEstimate": "$167.79",
     "priceNote": "Facturación electrónica autorizada por el SRI. Incluye instalación profesional y chequeo de carga en Pedernales.",
     "warranty": "18 a 24 Meses de Garantía",
     "commercialStatus": "VERIFIED",
@@ -25188,7 +24762,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "BATERIA ECUADOR 27 FE I FULL EQUIPO 80 AMP",
-    "price": 167.79
+    "price": null
   },
   {
     "id": "baterías-ecuador-bateria-ecuador-27-hp-high-power-95-amp-03027-hp",
@@ -25221,7 +24795,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI para crédito tributario"
     },
     "description": "Batería automotriz BATERÍAS ECUADOR modelo BATERIA ECUADOR 27 HP HIGH POWER 95 AMP. Equipada con Rejilla troquelada PowerFrame® de alta resistencia y aleación plata-calcio, ofrece una potencia de arranque instantáneo de 730 CCA diseñada para soportar las exigencias eléctricas de vehículos modernos y las altas temperaturas de la costa ecuatoriana. Incluye 18 Meses de Garantía Oficial Escrita y servicio de revisión de alternador y arranque sin costo en nuestro local de Pedernales.",
-    "priceEstimate": "$201.88",
     "priceNote": "Facturación electrónica autorizada por el SRI. Incluye instalación profesional y chequeo de carga en Pedernales.",
     "warranty": "18 a 24 Meses de Garantía",
     "commercialStatus": "VERIFIED",
@@ -25280,7 +24853,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "BATERIA ECUADOR 27 HP HIGH POWER 95 AMP",
-    "price": 201.88
+    "price": null
   },
   {
     "id": "baterías-ecuador-bateria-ecuador-27-hp-i-high-power-95-amp-03027-hp-i",
@@ -25313,7 +24886,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI para crédito tributario"
     },
     "description": "Batería automotriz BATERÍAS ECUADOR modelo BATERIA ECUADOR 27 HP I HIGH POWER 95 AMP. Equipada con Rejilla troquelada PowerFrame® de alta resistencia y aleación plata-calcio, ofrece una potencia de arranque instantáneo de 730 CCA diseñada para soportar las exigencias eléctricas de vehículos modernos y las altas temperaturas de la costa ecuatoriana. Incluye 18 Meses de Garantía Oficial Escrita y servicio de revisión de alternador y arranque sin costo en nuestro local de Pedernales.",
-    "priceEstimate": "$201.88",
     "priceNote": "Facturación electrónica autorizada por el SRI. Incluye instalación profesional y chequeo de carga en Pedernales.",
     "warranty": "18 a 24 Meses de Garantía",
     "commercialStatus": "VERIFIED",
@@ -25372,7 +24944,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "BATERIA ECUADOR 27 HP I HIGH POWER 95 AMP",
-    "price": 201.88
+    "price": null
   },
   {
     "id": "baterías-ecuador-bateria-ecuador-31-shd-super-heavy-duty-105-amp-03031-shd",
@@ -25405,7 +24977,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI para crédito tributario"
     },
     "description": "Batería automotriz BATERÍAS ECUADOR modelo BATERIA ECUADOR 31 SHD SUPER HEAVY DUTY 105 AMP. Equipada con Placas de plomo-calcio reforzadas con separadores de polietileno tipo sobre, ofrece una potencia de arranque instantáneo de 1000 CCA diseñada para soportar las exigencias eléctricas de vehículos modernos y las altas temperaturas de la costa ecuatoriana. Incluye 18 a 24 Meses de Garantía Nacional y servicio de revisión de alternador y arranque sin costo en nuestro local de Pedernales.",
-    "priceEstimate": "$209.00",
     "priceNote": "Facturación electrónica autorizada por el SRI. Incluye instalación profesional y chequeo de carga en Pedernales.",
     "warranty": "18 a 24 Meses de Garantía",
     "commercialStatus": "VERIFIED",
@@ -25452,7 +25023,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "BATERIA ECUADOR 31 SHD SUPER HEAVY DUTY 105 AMP",
-    "price": 209.0
+    "price": null
   },
   {
     "id": "baterías-ecuador-bateria-ecuador-34-fe-full-equipo-65-amp-03034-fe",
@@ -25485,7 +25056,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI para crédito tributario"
     },
     "description": "Batería automotriz BATERÍAS ECUADOR modelo BATERIA ECUADOR 34 FE FULL EQUIPO 65 AMP. Equipada con Placas de plomo-calcio reforzadas con separadores de polietileno tipo sobre, ofrece una potencia de arranque instantáneo de 600 CCA diseñada para soportar las exigencias eléctricas de vehículos modernos y las altas temperaturas de la costa ecuatoriana. Incluye 18 a 24 Meses de Garantía Nacional y servicio de revisión de alternador y arranque sin costo en nuestro local de Pedernales.",
-    "priceEstimate": "$140.00",
     "priceNote": "Facturación electrónica autorizada por el SRI. Incluye instalación profesional y chequeo de carga en Pedernales.",
     "warranty": "18 a 24 Meses de Garantía",
     "commercialStatus": "VERIFIED",
@@ -25544,7 +25114,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "BATERIA ECUADOR 34 FE FULL EQUIPO 65 AMP",
-    "price": 140.0
+    "price": null
   },
   {
     "id": "baterías-ecuador-bateria-ecuador-34-fe-i-full-equipo-65-amp-03034-fe-i",
@@ -25577,7 +25147,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI para crédito tributario"
     },
     "description": "Batería automotriz BATERÍAS ECUADOR modelo BATERIA ECUADOR 34 FE I FULL EQUIPO 65 AMP. Equipada con Placas de plomo-calcio reforzadas con separadores de polietileno tipo sobre, ofrece una potencia de arranque instantáneo de 600 CCA diseñada para soportar las exigencias eléctricas de vehículos modernos y las altas temperaturas de la costa ecuatoriana. Incluye 18 a 24 Meses de Garantía Nacional y servicio de revisión de alternador y arranque sin costo en nuestro local de Pedernales.",
-    "priceEstimate": "$140.00",
     "priceNote": "Facturación electrónica autorizada por el SRI. Incluye instalación profesional y chequeo de carga en Pedernales.",
     "warranty": "18 a 24 Meses de Garantía",
     "commercialStatus": "VERIFIED",
@@ -25636,7 +25205,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "BATERIA ECUADOR 34 FE I FULL EQUIPO 65 AMP",
-    "price": 140.0
+    "price": null
   },
   {
     "id": "baterías-ecuador-bateria-ecuador-34-hp-high-power-80-amp-03034-hp",
@@ -25669,7 +25238,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI para crédito tributario"
     },
     "description": "Batería automotriz BATERÍAS ECUADOR modelo BATERIA ECUADOR 34 HP HIGH POWER 80 AMP. Equipada con Placas de plomo-calcio reforzadas con separadores de polietileno tipo sobre, ofrece una potencia de arranque instantáneo de 650 CCA diseñada para soportar las exigencias eléctricas de vehículos modernos y las altas temperaturas de la costa ecuatoriana. Incluye 18 a 24 Meses de Garantía Nacional y servicio de revisión de alternador y arranque sin costo en nuestro local de Pedernales.",
-    "priceEstimate": "$164.29",
     "priceNote": "Facturación electrónica autorizada por el SRI. Incluye instalación profesional y chequeo de carga en Pedernales.",
     "warranty": "18 a 24 Meses de Garantía",
     "commercialStatus": "VERIFIED",
@@ -25728,7 +25296,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "BATERIA ECUADOR 34 HP HIGH POWER 80 AMP",
-    "price": 164.29
+    "price": null
   },
   {
     "id": "baterías-ecuador-bateria-ecuador-34-hp-i-high-power-80-amp-03034-hp-i",
@@ -25761,7 +25329,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI para crédito tributario"
     },
     "description": "Batería automotriz BATERÍAS ECUADOR modelo BATERIA ECUADOR 34 HP I HIGH POWER 80 AMP. Equipada con Placas de plomo-calcio reforzadas con separadores de polietileno tipo sobre, ofrece una potencia de arranque instantáneo de 650 CCA diseñada para soportar las exigencias eléctricas de vehículos modernos y las altas temperaturas de la costa ecuatoriana. Incluye 18 a 24 Meses de Garantía Nacional y servicio de revisión de alternador y arranque sin costo en nuestro local de Pedernales.",
-    "priceEstimate": "$164.29",
     "priceNote": "Facturación electrónica autorizada por el SRI. Incluye instalación profesional y chequeo de carga en Pedernales.",
     "warranty": "18 a 24 Meses de Garantía",
     "commercialStatus": "VERIFIED",
@@ -25820,7 +25387,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "BATERIA ECUADOR 34 HP I HIGH POWER 80 AMP",
-    "price": 164.29
+    "price": null
   },
   {
     "id": "baterías-ecuador-bateria-ecuador-36-hp-high-power-50-amp-03036-hp",
@@ -25853,7 +25420,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI para crédito tributario"
     },
     "description": "Batería automotriz BATERÍAS ECUADOR modelo BATERIA ECUADOR 36 HP HIGH POWER 50 AMP. Equipada con Placas de plomo-calcio reforzadas con separadores de polietileno tipo sobre, ofrece una potencia de arranque instantáneo de 600 CCA diseñada para soportar las exigencias eléctricas de vehículos modernos y las altas temperaturas de la costa ecuatoriana. Incluye 18 a 24 Meses de Garantía Nacional y servicio de revisión de alternador y arranque sin costo en nuestro local de Pedernales.",
-    "priceEstimate": "$128.75",
     "priceNote": "Facturación electrónica autorizada por el SRI. Incluye instalación profesional y chequeo de carga en Pedernales.",
     "warranty": "18 a 24 Meses de Garantía",
     "commercialStatus": "VERIFIED",
@@ -25918,7 +25484,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "BATERIA ECUADOR 36 HP HIGH POWER 50 AMP",
-    "price": 128.75
+    "price": null
   },
   {
     "id": "baterías-ecuador-bateria-ecuador-42-fe-full-equipo-55-amp-03042-fe",
@@ -26043,7 +25609,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI para crédito tributario"
     },
     "description": "Batería automotriz BATERÍAS ECUADOR modelo BATERIA ECUADOR 42 HP HIGH POWER 62 AMP. Equipada con Placas de plomo-calcio reforzadas con separadores de polietileno tipo sobre, ofrece una potencia de arranque instantáneo de 510 CCA diseñada para soportar las exigencias eléctricas de vehículos modernos y las altas temperaturas de la costa ecuatoriana. Incluye 18 a 24 Meses de Garantía Nacional y servicio de revisión de alternador y arranque sin costo en nuestro local de Pedernales.",
-    "priceEstimate": "$133.39",
     "priceNote": "Facturación electrónica autorizada por el SRI. Incluye instalación profesional y chequeo de carga en Pedernales.",
     "warranty": "18 a 24 Meses de Garantía",
     "commercialStatus": "VERIFIED",
@@ -26102,7 +25667,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "BATERIA ECUADOR 42 HP HIGH POWER 62 AMP",
-    "price": 133.39
+    "price": null
   },
   {
     "id": "baterías-ecuador-bateria-ecuador-42-hp-i-high-power-62-amp-03042-hp-i",
@@ -26135,7 +25700,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI para crédito tributario"
     },
     "description": "Batería automotriz BATERÍAS ECUADOR modelo BATERIA ECUADOR 42 HP I HIGH POWER 62 AMP. Equipada con Placas de plomo-calcio reforzadas con separadores de polietileno tipo sobre, ofrece una potencia de arranque instantáneo de 510 CCA diseñada para soportar las exigencias eléctricas de vehículos modernos y las altas temperaturas de la costa ecuatoriana. Incluye 18 a 24 Meses de Garantía Nacional y servicio de revisión de alternador y arranque sin costo en nuestro local de Pedernales.",
-    "priceEstimate": "$133.39",
     "priceNote": "Facturación electrónica autorizada por el SRI. Incluye instalación profesional y chequeo de carga en Pedernales.",
     "warranty": "18 a 24 Meses de Garantía",
     "commercialStatus": "VERIFIED",
@@ -26194,7 +25758,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "BATERIA ECUADOR 42 HP I HIGH POWER 62 AMP",
-    "price": 133.39
+    "price": null
   },
   {
     "id": "baterías-ecuador-bateria-ecuador-55-hd-14pl-63amp-servicio-publico-03055-hd",
@@ -26227,7 +25791,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI para crédito tributario"
     },
     "description": "Batería automotriz BATERÍAS ECUADOR modelo BATERIA ECUADOR 55 HD 14PL 63AMP SERVICIO PUBLICO. Equipada con Placas de plomo-calcio reforzadas con separadores de polietileno tipo sobre, ofrece una potencia de arranque instantáneo de 550 CCA diseñada para soportar las exigencias eléctricas de vehículos modernos y las altas temperaturas de la costa ecuatoriana. Incluye 18 a 24 Meses de Garantía Nacional y servicio de revisión de alternador y arranque sin costo en nuestro local de Pedernales.",
-    "priceEstimate": "$128.52",
     "priceNote": "Facturación electrónica autorizada por el SRI. Incluye instalación profesional y chequeo de carga en Pedernales.",
     "warranty": "18 a 24 Meses de Garantía",
     "commercialStatus": "VERIFIED",
@@ -26292,7 +25855,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "BATERIA ECUADOR 55 HD 14PL 63AMP SERVICIO PUBLICO",
-    "price": 128.52
+    "price": null
   },
   {
     "id": "baterías-ecuador-bateria-ecuador-55-hd-i-14pl-63amp-servicio-publico-03055-hd-i",
@@ -26325,7 +25888,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI para crédito tributario"
     },
     "description": "Batería automotriz BATERÍAS ECUADOR modelo BATERIA ECUADOR 55 HD I 14PL 63AMP SERVICIO PUBLICO. Equipada con Placas de plomo-calcio reforzadas con separadores de polietileno tipo sobre, ofrece una potencia de arranque instantáneo de 550 CCA diseñada para soportar las exigencias eléctricas de vehículos modernos y las altas temperaturas de la costa ecuatoriana. Incluye 18 a 24 Meses de Garantía Nacional y servicio de revisión de alternador y arranque sin costo en nuestro local de Pedernales.",
-    "priceEstimate": "$128.52",
     "priceNote": "Facturación electrónica autorizada por el SRI. Incluye instalación profesional y chequeo de carga en Pedernales.",
     "warranty": "18 a 24 Meses de Garantía",
     "commercialStatus": "VERIFIED",
@@ -26390,7 +25952,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "BATERIA ECUADOR 55 HD I 14PL 63AMP SERVICIO PUBLICO",
-    "price": 128.52
+    "price": null
   },
   {
     "id": "baterías-ecuador-bateria-ecuador-65-hp-high-power-65-amp-03065-hp",
@@ -26423,7 +25985,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI para crédito tributario"
     },
     "description": "Batería automotriz BATERÍAS ECUADOR modelo BATERIA ECUADOR 65 HP HIGH POWER 65 AMP. Equipada con Placas de plomo-calcio reforzadas con separadores de polietileno tipo sobre, ofrece una potencia de arranque instantáneo de 600 CCA diseñada para soportar las exigencias eléctricas de vehículos modernos y las altas temperaturas de la costa ecuatoriana. Incluye 18 a 24 Meses de Garantía Nacional y servicio de revisión de alternador y arranque sin costo en nuestro local de Pedernales.",
-    "priceEstimate": "$160.68",
     "priceNote": "Facturación electrónica autorizada por el SRI. Incluye instalación profesional y chequeo de carga en Pedernales.",
     "warranty": "18 a 24 Meses de Garantía",
     "commercialStatus": "VERIFIED",
@@ -26488,7 +26049,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "BATERIA ECUADOR 65 HP HIGH POWER 65 AMP",
-    "price": 160.68
+    "price": null
   },
   {
     "id": "baterías-ecuador-bateria-ecuador-66-hp-high-power-84-amp-03066-hp",
@@ -26521,7 +26082,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI para crédito tributario"
     },
     "description": "Batería automotriz BATERÍAS ECUADOR modelo BATERIA ECUADOR 66 HP HIGH POWER 84 AMP. Equipada con Placas de plomo-calcio reforzadas con separadores de polietileno tipo sobre, ofrece una potencia de arranque instantáneo de 600 CCA diseñada para soportar las exigencias eléctricas de vehículos modernos y las altas temperaturas de la costa ecuatoriana. Incluye 18 a 24 Meses de Garantía Nacional y servicio de revisión de alternador y arranque sin costo en nuestro local de Pedernales.",
-    "priceEstimate": "$179.00",
     "priceNote": "Facturación electrónica autorizada por el SRI. Incluye instalación profesional y chequeo de carga en Pedernales.",
     "warranty": "18 a 24 Meses de Garantía",
     "commercialStatus": "VERIFIED",
@@ -26586,7 +26146,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "BATERIA ECUADOR 66 HP HIGH POWER 84 AMP",
-    "price": 179.0
+    "price": null
   },
   {
     "id": "baterías-ecuador-bateria-ecuador-n100-shd-i-super-heavy-duty-104-amp-030n100-shd-i",
@@ -26619,7 +26179,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI para crédito tributario"
     },
     "description": "Batería automotriz BATERÍAS ECUADOR modelo BATERIA ECUADOR N100 SHD I SUPER HEAVY DUTY 104 AMP. Equipada con Placas de plomo-calcio reforzadas con separadores de polietileno tipo sobre, ofrece una potencia de arranque instantáneo de 850 CCA diseñada para soportar las exigencias eléctricas de vehículos modernos y las altas temperaturas de la costa ecuatoriana. Incluye 18 a 24 Meses de Garantía Nacional y servicio de revisión de alternador y arranque sin costo en nuestro local de Pedernales.",
-    "priceEstimate": "$237.15",
     "priceNote": "Facturación electrónica autorizada por el SRI. Incluye instalación profesional y chequeo de carga en Pedernales.",
     "warranty": "18 a 24 Meses de Garantía",
     "commercialStatus": "VERIFIED",
@@ -26666,7 +26225,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "BATERIA ECUADOR N100 SHD I SUPER HEAVY DUTY 104 AMP",
-    "price": 237.15
+    "price": null
   },
   {
     "id": "baterías-ecuador-bateria-ecuador-n150-shd-super-heavy-duty-160-amp-030n150-shd",
@@ -26699,7 +26258,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI para crédito tributario"
     },
     "description": "Batería automotriz BATERÍAS ECUADOR modelo BATERIA ECUADOR N150 SHD SUPER HEAVY DUTY 160 AMP. Equipada con Placas de plomo-calcio reforzadas con separadores de polietileno tipo sobre, ofrece una potencia de arranque instantáneo de 1200 CCA diseñada para soportar las exigencias eléctricas de vehículos modernos y las altas temperaturas de la costa ecuatoriana. Incluye 18 a 24 Meses de Garantía Nacional y servicio de revisión de alternador y arranque sin costo en nuestro local de Pedernales.",
-    "priceEstimate": "$340.00",
     "priceNote": "Facturación electrónica autorizada por el SRI. Incluye instalación profesional y chequeo de carga en Pedernales.",
     "warranty": "18 a 24 Meses de Garantía",
     "commercialStatus": "VERIFIED",
@@ -26746,7 +26304,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "BATERIA ECUADOR N150 SHD SUPER HEAVY DUTY 160 AMP",
-    "price": 340.0
+    "price": null
   },
   {
     "id": "baterías-ecuador-bateria-ecuador-n40-fe-i-full-equipo-45-amp-030n40-fe-i",
@@ -26779,7 +26337,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI para crédito tributario"
     },
     "description": "Batería automotriz BATERÍAS ECUADOR modelo BATERIA ECUADOR N40 FE I FULL EQUIPO 45 AMP. Equipada con Placas de plomo-calcio reforzadas con separadores de polietileno tipo sobre, ofrece una potencia de arranque instantáneo de 380 CCA diseñada para soportar las exigencias eléctricas de vehículos modernos y las altas temperaturas de la costa ecuatoriana. Incluye 18 a 24 Meses de Garantía Nacional y servicio de revisión de alternador y arranque sin costo en nuestro local de Pedernales.",
-    "priceEstimate": "$109.14",
     "priceNote": "Facturación electrónica autorizada por el SRI. Incluye instalación profesional y chequeo de carga en Pedernales.",
     "warranty": "18 a 24 Meses de Garantía",
     "commercialStatus": "VERIFIED",
@@ -26838,7 +26395,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "BATERIA ECUADOR N40 FE I FULL EQUIPO 45 AMP",
-    "price": 109.14
+    "price": null
   },
   {
     "id": "baterías-ecuador-bateria-ecuador-n40-hp-high-power-50-amp-030n40-hp",
@@ -26963,7 +26520,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI para crédito tributario"
     },
     "description": "Batería automotriz BATERÍAS ECUADOR modelo BATERIA ECUADOR N40 HP I HIGH POWER 50 AMP. Equipada con Placas de plomo-calcio reforzadas con separadores de polietileno tipo sobre, ofrece una potencia de arranque instantáneo de 430 CCA diseñada para soportar las exigencias eléctricas de vehículos modernos y las altas temperaturas de la costa ecuatoriana. Incluye 18 a 24 Meses de Garantía Nacional y servicio de revisión de alternador y arranque sin costo en nuestro local de Pedernales.",
-    "priceEstimate": "$116.91",
     "priceNote": "Facturación electrónica autorizada por el SRI. Incluye instalación profesional y chequeo de carga en Pedernales.",
     "warranty": "18 a 24 Meses de Garantía",
     "commercialStatus": "VERIFIED",
@@ -27022,7 +26578,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "BATERIA ECUADOR N40 HP I HIGH POWER 50 AMP",
-    "price": 116.91
+    "price": null
   },
   {
     "id": "baterías-ecuador-bateria-ecuador-ns40-fe-full-equipo-42-amp-030ns40-fe",
@@ -27055,7 +26611,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI para crédito tributario"
     },
     "description": "Batería automotriz BATERÍAS ECUADOR modelo BATERIA ECUADOR NS40 FE FULL EQUIPO 42 AMP. Equipada con Placas de plomo-calcio reforzadas con separadores de polietileno tipo sobre, ofrece una potencia de arranque instantáneo de 380 CCA diseñada para soportar las exigencias eléctricas de vehículos modernos y las altas temperaturas de la costa ecuatoriana. Incluye 18 a 24 Meses de Garantía Nacional y servicio de revisión de alternador y arranque sin costo en nuestro local de Pedernales.",
-    "priceEstimate": "$93.35",
     "priceNote": "Facturación electrónica autorizada por el SRI. Incluye instalación profesional y chequeo de carga en Pedernales.",
     "warranty": "18 a 24 Meses de Garantía",
     "commercialStatus": "VERIFIED",
@@ -27114,7 +26669,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "BATERIA ECUADOR NS40 FE FULL EQUIPO 42 AMP",
-    "price": 93.35
+    "price": null
   },
   {
     "id": "baterías-ecuador-bateria-ecuador-ns40-fe-i-full-equipo-42-amp-030ns40-fe-i",
@@ -27239,7 +26794,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI para crédito tributario"
     },
     "description": "Batería automotriz BATERÍAS ECUADOR modelo BATERIA ECUADOR NS40 HP HIGH POWER 45 AMP. Equipada con Placas de plomo-calcio reforzadas con separadores de polietileno tipo sobre, ofrece una potencia de arranque instantáneo de 430 CCA diseñada para soportar las exigencias eléctricas de vehículos modernos y las altas temperaturas de la costa ecuatoriana. Incluye 18 a 24 Meses de Garantía Nacional y servicio de revisión de alternador y arranque sin costo en nuestro local de Pedernales.",
-    "priceEstimate": "$110.74",
     "priceNote": "Facturación electrónica autorizada por el SRI. Incluye instalación profesional y chequeo de carga en Pedernales.",
     "warranty": "18 a 24 Meses de Garantía",
     "commercialStatus": "VERIFIED",
@@ -27298,7 +26852,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "BATERIA ECUADOR NS40 HP HIGH POWER 45 AMP",
-    "price": 110.74
+    "price": null
   },
   {
     "id": "bosch-bateria-bosch-42-hp-s4-55amp-604232-42hps4",
@@ -27331,7 +26885,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI para crédito tributario"
     },
     "description": "Batería automotriz BOSCH modelo BATERIA BOSCH 42 HP S4 55AMP 604232. Equipada con Rejilla troquelada PowerFrame® de alta resistencia y aleación plata-calcio, ofrece una potencia de arranque instantáneo de 510 CCA diseñada para soportar las exigencias eléctricas de vehículos modernos y las altas temperaturas de la costa ecuatoriana. Incluye 18 Meses de Garantía Oficial Escrita y servicio de revisión de alternador y arranque sin costo en nuestro local de Pedernales.",
-    "priceEstimate": "$130.24",
     "priceNote": "Facturación electrónica autorizada por el SRI. Incluye instalación profesional y chequeo de carga en Pedernales.",
     "warranty": "18 a 24 Meses de Garantía",
     "commercialStatus": "VERIFIED",
@@ -27390,7 +26943,7 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "BATERIA BOSCH 42 HP S4 55AMP 604232",
-    "price": 130.24
+    "price": null
   },
   {
     "id": "baterías-ecuador-ecovalor-venta-bateria-vehículo-ecovlbat",
@@ -27423,7 +26976,6 @@ export const PRODUCTS: Product[] = [
       "Facturación": "Factura electrónica autorizada por el SRI para crédito tributario"
     },
     "description": "Batería automotriz BATERÍAS ECUADOR modelo ECOVALOR (VENTA BATERIA VEHÍCULO). Equipada con Placas de plomo-calcio reforzadas con separadores de polietileno tipo sobre, ofrece una potencia de arranque instantáneo de 550 CCA diseñada para soportar las exigencias eléctricas de vehículos modernos y las altas temperaturas de la costa ecuatoriana. Incluye 18 a 24 Meses de Garantía Nacional y servicio de revisión de alternador y arranque sin costo en nuestro local de Pedernales.",
-    "priceEstimate": "$0.25",
     "priceNote": "Facturación electrónica autorizada por el SRI. Incluye instalación profesional y chequeo de carga en Pedernales.",
     "warranty": "18 a 24 Meses de Garantía",
     "commercialStatus": "VERIFIED",
@@ -27488,6 +27040,6 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "ECOVALOR (VENTA BATERIA VEHÍCULO)",
-    "price": 0.25
+    "price": null
   }
 ];

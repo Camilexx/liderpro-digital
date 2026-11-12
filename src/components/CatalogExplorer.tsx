@@ -19,7 +19,7 @@ import { PRODUCTS } from "@/data/products";
 
 const ITEMS_PER_PAGE = 24;
 
-type SortOption = "destacados" | "precio-asc" | "precio-desc" | "nombre-asc" | "marca";
+type SortOption = "destacados" | "nombre-asc" | "marca";
 
 const CATEGORIES: { id: string; label: string; icon: string }[] = [
   { id: "todas", label: "Ver Todo (366)", icon: "📦" },
@@ -194,16 +194,6 @@ export default function CatalogExplorer() {
         if (a.isBestSeller && !b.isBestSeller) return -1;
         if (!a.isBestSeller && b.isBestSeller) return 1;
         return a.name.localeCompare(b.name);
-      }
-      if (sortBy === "precio-asc") {
-        const pa = typeof a.price === "number" ? a.price : 999999;
-        const pb = typeof b.price === "number" ? b.price : 999999;
-        return pa - pb;
-      }
-      if (sortBy === "precio-desc") {
-        const pa = typeof a.price === "number" ? a.price : -1;
-        const pb = typeof b.price === "number" ? b.price : -1;
-        return pb - pa;
       }
       if (sortBy === "nombre-asc") {
         return a.name.localeCompare(b.name);
@@ -385,8 +375,6 @@ export default function CatalogExplorer() {
                 className="w-full px-4 py-4 bg-slate-50 border-2 border-slate-200 rounded-2xl text-xs sm:text-sm font-black text-slate-900 focus:outline-none focus:ring-2 focus:ring-[#0A3B8C] focus:bg-white transition-all cursor-pointer"
               >
                 <option value="destacados">⭐ Más Vendidos Primero</option>
-                <option value="precio-asc">💰 Precio: Menor a Mayor</option>
-                <option value="precio-desc">💰 Precio: Mayor a Menor</option>
                 <option value="nombre-asc">🔤 Nombre: A a la Z</option>
                 <option value="marca">🏷️ Ordenar por Marca</option>
               </select>

@@ -17,6 +17,7 @@ import {
   Phone,
 } from "lucide-react";
 import { useQuoteBasket } from "@/context/QuoteBasketContext";
+import { useWhatsAppSelector } from "@/context/WhatsAppSelectorContext";
 import { PRODUCTS } from "@/data/products";
 import { trackEvent } from "@/lib/analytics";
 
@@ -230,6 +231,7 @@ export default function MannolPromosSection() {
   const [highlightedCombo, setHighlightedCombo] = useState<string | null>(null);
   const [addedComboId, setAddedComboId] = useState<string | null>(null);
   const { addItem } = useQuoteBasket();
+  const { openSelector } = useWhatsAppSelector();
 
   const handleQuickVehicleClick = (comboIdx: number, varIdx: number) => {
     const combo = MANNOL_COMBOS[comboIdx];
@@ -249,17 +251,17 @@ export default function MannolPromosSection() {
         ...baseProd,
         id: `combo-${combo.id}-${variant.id}`,
         sku: `COMBO-${variant.id}-${variant.oilSku}`,
-        name: `¡COMBO CAMBIO MANNOL! ${variant.title} (+ Regalo de Cortesía)`,
+        name: `¡COMBO CAMBIO MANNOL! ${variant.title} (+ Regalo MANNOL 6145 Cockpit Care + Esponja)`,
         brand: "MANNOL",
         volume: variant.badge.split("•")[1]?.trim() || "Combo Completo",
         imageUrl: variant.imageUrl,
-        price: variant.totalPrice,
-        priceEstimate: `$${variant.totalPrice.toFixed(2)}`,
+        price: null,
+        priceEstimate: undefined,
       },
       1
     );
     setAddedComboId(`${combo.id}-${variant.id}`);
-    trackEvent("add_mannol_combo", { combo: combo.id, variant: variant.id, price: variant.totalPrice });
+    trackEvent("add_mannol_combo", { combo: combo.id, variant: variant.id });
     setTimeout(() => setAddedComboId(null), 2200);
   };
 
@@ -362,7 +364,7 @@ export default function MannolPromosSection() {
             const isHighlighted = highlightedCombo === combo.id;
             const isAdded = addedComboId === `${combo.id}-${currentVar.id}`;
 
-            const whatsappMessage = `Hola LiderPro Pedernales, quiero pedir el *${combo.headline}* (${currentVar.title} - Precio Oficial: *$${currentVar.totalPrice.toFixed(2)}*) que incluye *Galón/Aceite + Filtro + Regalo de Cortesía* y *Envío Gratis en Pedernales*. Mi vehículo es: `;
+            const whatsappMessage = `¡Hola LiderPro! Vengo de la web y deseo cotizar el *${combo.headline}* (${currentVar.title}) que incluye *Galón/Aceite + Filtro + Regalo de Cortesía (MANNOL 6145 Cockpit Care 1L + Esponja Original)* y *Envío Gratis en Pedernales*. Mi vehículo es: `;
 
             return (
               <div
@@ -449,13 +451,13 @@ export default function MannolPromosSection() {
                                 </span>
                               </div>
                               <span
-                                className={`text-sm font-black shrink-0 px-2 py-0.5 rounded-lg ${
+                                className={`text-[10.5px] font-black shrink-0 px-2 py-1 rounded-lg ${
                                   isSelected
                                     ? "bg-[#FFC500] text-slate-950"
                                     : "bg-slate-800 text-emerald-400"
                                 }`}
                               >
-                                ${v.totalPrice.toFixed(2)}
+                                {isSelected ? "✓ Elegido" : "Elegir"}
                               </span>
                             </button>
                           );
@@ -480,8 +482,8 @@ export default function MannolPromosSection() {
                             <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
                             <span>{currentVar.oilName}</span>
                           </span>
-                          <span className="font-bold text-white shrink-0">
-                            ${currentVar.oilPrice.toFixed(2)}
+                          <span className="text-[10px] font-black text-emerald-400 uppercase shrink-0">
+                            Incluido
                           </span>
                         </div>
 
@@ -490,15 +492,15 @@ export default function MannolPromosSection() {
                             <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
                             <span>{currentVar.filterName}</span>
                           </span>
-                          <span className="font-bold text-white shrink-0">
-                            ${currentVar.filterPrice.toFixed(2)}
+                          <span className="text-[10px] font-black text-emerald-400 uppercase shrink-0">
+                            Incluido
                           </span>
                         </div>
 
                         <div className="flex items-start justify-between gap-2 text-amber-300 font-bold bg-amber-500/10 p-2 rounded-xl border border-amber-500/20">
                           <span className="flex items-start gap-1.5">
                             <Gift className="w-4 h-4 text-[#FFC500] shrink-0 mt-0.5" />
-                            <span>{currentVar.courtesyGift}</span>
+                            <span>Regalo: MANNOL 6145 Cockpit Care 1L + Esponja Original</span>
                           </span>
                           <span className="px-1.5 py-0.5 bg-[#FFC500] text-slate-950 text-[10px] font-black rounded uppercase shrink-0">
                             CORTESÍA
@@ -518,20 +520,20 @@ export default function MannolPromosSection() {
                   </div>
                 </div>
 
-                {/* Price & Action Footer */}
+                {/* Gift & Action Footer — Zero Public Prices */}
                 <div className="p-5 sm:p-6 pt-0 space-y-3">
-                  <div className="bg-gradient-to-r from-slate-900 to-[#061B40] border border-[#FFC500]/40 rounded-2xl p-3.5 flex items-center justify-between">
+                  <div className="bg-gradient-to-r from-slate-900 to-[#061B40] border border-[#FFC500]/40 rounded-2xl p-3.5 flex items-center justify-between gap-2">
                     <div>
                       <span className="text-[10.5px] font-black uppercase tracking-wider text-slate-300 block">
-                        Precio Total Combo Oficial
+                        Cotización Inmediata + Regalo
                       </span>
-                      <span className="text-2xl sm:text-3xl font-black text-[#FFC500]">
-                        ${currentVar.totalPrice.toFixed(2)}
+                      <span className="text-sm sm:text-base font-black text-[#FFC500]">
+                        🎁 Cotizar + Reclamar Regalo
                       </span>
                     </div>
-                    <div className="text-right">
+                    <div className="text-right shrink-0">
                       <span className="px-2.5 py-1 bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 rounded-lg text-[10.5px] font-black block">
-                        ¡Envío Gratis Pedernales!
+                        🚚 ¡Envío Gratis!
                       </span>
                       <span className="text-[10px] text-slate-300 font-medium block mt-1">
                         Factura SRI Incluida
@@ -540,21 +542,25 @@ export default function MannolPromosSection() {
                   </div>
 
                   <div className="grid grid-cols-1 gap-2">
-                    <a
-                      href={`https://wa.me/593983893231?text=${encodeURIComponent(whatsappMessage)}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      onClick={() =>
+                    <button
+                      type="button"
+                      onClick={() => {
                         trackEvent("whatsapp_mannol_combo", {
                           combo: combo.id,
                           variant: currentVar.id,
-                        })
-                      }
-                      className="btn-whatsapp !py-3.5 !px-4 !text-xs sm:!text-sm font-black uppercase tracking-wider rounded-xl flex items-center justify-center gap-2 shadow-lg"
+                        });
+                        openSelector({
+                          itemTitle: `${combo.headline} — ${currentVar.title}`,
+                          customMessage: whatsappMessage,
+                          sku: currentVar.oilSku,
+                          sourceLocation: "mannol_promo_card",
+                        });
+                      }}
+                      className="btn-whatsapp !py-3.5 !px-4 !text-xs sm:!text-sm font-black uppercase tracking-wider rounded-xl flex items-center justify-center gap-2 shadow-lg cursor-pointer"
                     >
                       <MessageCircle className="w-4 h-4 shrink-0" />
-                      <span>Pedir Este Combo por WhatsApp</span>
-                    </a>
+                      <span>🎁 Cotizar + Reclamar Regalo</span>
+                    </button>
 
                     <button
                       type="button"
@@ -599,15 +605,21 @@ export default function MannolPromosSection() {
             </p>
           </div>
 
-          <a
-            href="https://wa.me/593983893231?text=Hola%20LiderPro%20Pedernales%2C%20necesito%20ayuda%20para%20saber%20exactamente%20qu%C3%A9%20Combo%20Cambio%20Mannol%20(Gal%C3%B3n%20de%20aceite%20%2B%20Filtro%20%2B%20Regalo%20de%20cortes%C3%ADa)%20necesita%20mi%20veh%C3%ADculo.%20Mi%20carro%20es%3A%20"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full lg:w-auto py-4 px-7 bg-slate-950 hover:bg-slate-900 text-[#FFC500] font-black text-xs sm:text-sm uppercase tracking-wider rounded-xl flex items-center justify-center gap-2.5 shadow-xl shrink-0 transition-transform hover:scale-102"
+          <button
+            type="button"
+            onClick={() =>
+              openSelector({
+                itemTitle: "Asesoría Combo Cambio MANNOL Exacto",
+                customMessage:
+                  "¡Hola LiderPro! Vengo de la web y necesito ayuda para saber qué ¡Combo Cambio MANNOL! (Galón de aceite + Filtro + Regalo MANNOL 6145 Cockpit Care + Esponja) necesita mi vehículo. Mi carro es: ",
+                sourceLocation: "mannol_promo_bottom_cta",
+              })
+            }
+            className="w-full lg:w-auto py-4 px-7 bg-slate-950 hover:bg-slate-900 text-[#FFC500] font-black text-xs sm:text-sm uppercase tracking-wider rounded-xl flex items-center justify-center gap-2.5 shadow-xl shrink-0 transition-transform hover:scale-102 cursor-pointer"
           >
             <MessageCircle className="w-5 h-5 text-[#25D366] fill-current" />
             <span>Escribir para Saber Mi Combo Exacto</span>
-          </a>
+          </button>
         </div>
       </div>
     </section>

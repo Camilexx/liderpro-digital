@@ -3,8 +3,8 @@
 import { useState } from "react";
 import { MessageCircle, Plus, Check, ShoppingBag } from "lucide-react";
 import { Product, ProductVariant } from "@/data/products";
-import { buildWhatsAppLink } from "@/lib/whatsapp";
 import { useQuoteBasket } from "@/context/QuoteBasketContext";
+import { useWhatsAppSelector } from "@/context/WhatsAppSelectorContext";
 import { trackEvent } from "@/lib/analytics";
 
 interface ProductDetailActionsProps {
@@ -13,6 +13,7 @@ interface ProductDetailActionsProps {
 
 export default function ProductDetailActions({ product }: ProductDetailActionsProps) {
   const { addItem, setIsOpen, items } = useQuoteBasket();
+  const { openSelector } = useWhatsAppSelector();
   const [selectedVariant, setSelectedVariant] = useState<ProductVariant | null>(
     product.variants && product.variants.length > 0 ? product.variants[0] : null
   );
@@ -88,21 +89,21 @@ export default function ProductDetailActions({ product }: ProductDetailActionsPr
       )}
 
       {/* Primary WhatsApp Direct CTA */}
-      <a
-        href={buildWhatsAppLink("product", {
-          brand: product.brand,
-          productName: activeName,
-          presentation: presentation || undefined,
-          sku: activeSku,
-        })}
-        target="_blank"
-        rel="noopener noreferrer"
-        onClick={handleWhatsApp}
-        className="w-full h-13 btn-whatsapp font-black text-xs sm:text-sm uppercase tracking-wider rounded-xl flex items-center justify-center gap-2.5 transition-all active:scale-95 shadow-lg shadow-emerald-950/20"
+      <button
+        type="button"
+        onClick={() => {
+          handleWhatsApp();
+          openSelector({
+            itemTitle: `${activeName}${presentation ? ` (${presentation})` : ""}`,
+            sku: activeSku,
+            sourceLocation: "product_detail_actions",
+          });
+        }}
+        className="w-full h-13 btn-whatsapp font-black text-xs sm:text-sm uppercase tracking-wider rounded-xl flex items-center justify-center gap-2.5 transition-all active:scale-95 shadow-lg shadow-emerald-950/20 cursor-pointer"
       >
         <MessageCircle className="w-5 h-5 fill-black/10" />
-        <span>Cotizar Inmediato por WhatsApp</span>
-      </a>
+        <span>🎁 Cotizar + Reclamar Regalo</span>
+      </button>
 
       {/* Multi-product B2B Quote Basket Action */}
       <div className="flex items-center gap-2">

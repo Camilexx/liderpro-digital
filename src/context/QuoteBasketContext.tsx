@@ -123,22 +123,14 @@ export function QuoteBasketProvider({ children }: { children: React.ReactNode })
 
     items.forEach((it, idx) => {
       const pres = it.product.volume || it.product.plates || "Estándar";
-      const unitP = typeof it.product.price === "number" ? `$${it.product.price.toFixed(2)} c/u` : "Por confirmar";
-      const subP =
-        typeof it.product.price === "number"
-          ? ` | Subtotal: $${(it.product.price * it.quantity).toFixed(2)}`
-          : "";
       lines.push(`${idx + 1}. [Cód: ${it.product.sku}] ${it.product.name}`);
       lines.push(
-        `   Marca: ${it.product.brand} | Presentación: ${pres} | Cant: ${it.quantity} un. (${unitP}${subP})`
+        `   Marca: ${it.product.brand} | Presentación: ${pres} | Cant: ${it.quantity} un.`
       );
     });
 
     lines.push("");
     lines.push(`📦 Total ítems: ${items.length} referencias (${totalUnits} unidades en total)`);
-    if (totalEstimatedPrice > 0) {
-      lines.push(`💰 Total Referencial Lista: $${totalEstimatedPrice.toFixed(2)}`);
-    }
 
     if (customerName.trim()) {
       lines.push(`👤 Cliente / Taller: ${customerName.trim()}`);
@@ -152,7 +144,7 @@ export function QuoteBasketProvider({ children }: { children: React.ReactNode })
 
     lines.push("");
     lines.push(
-      "¿Me confirman por favor si mi pedido aplica a regalo de cortesía del Combo Cambio Mannol y envío gratis en Pedernales?"
+      "¿Me confirman por favor la cotización con IVA y el regalo de cortesía (MANNOL 6145 Cockpit Care + Esponja)?"
     );
 
     trackEvent("basket_whatsapp_quote", {

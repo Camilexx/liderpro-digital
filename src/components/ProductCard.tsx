@@ -38,11 +38,6 @@ export default function ProductCard({ product, priority = false }: ProductCardPr
   const activeNumericPrice = selectedVariant
     ? (selectedVariant.price !== undefined ? selectedVariant.price : product.price)
     : product.price;
-  const isPriced = Boolean(
-    activePrice &&
-    activePrice.includes("$") &&
-    activeNumericPrice !== null
-  );
 
   const inBasket = items.find((it) => it.product.sku === activeSku);
   const isMannolPromoEligible =

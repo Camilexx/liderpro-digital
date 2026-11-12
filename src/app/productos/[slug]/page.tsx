@@ -78,7 +78,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
   const decoded = decodeURIComponent(slug).trim();
   const lower = decoded.toLowerCase();
 
-  let product = PRODUCTS.find((p) => p.slug === decoded || p.slug.toLowerCase() === lower);
+  const product = PRODUCTS.find((p) => p.slug === decoded || p.slug.toLowerCase() === lower);
 
   if (!product) {
     // Smart resolution by SKU, officialSku, or variant SKU (Zero-404 Healing)

@@ -51,11 +51,6 @@ export default function ProductDetailShowcase({ product }: ProductDetailShowcase
   const activeNumericPrice = selectedVariant
     ? (selectedVariant.price !== undefined ? selectedVariant.price : product.price)
     : product.price;
-  const isPriced = Boolean(
-    activePrice &&
-    activePrice.includes("$") &&
-    activeNumericPrice !== null
-  );
 
   const inBasketItem = items.find((it) => it.product.sku === activeSku);
   const variantsList =

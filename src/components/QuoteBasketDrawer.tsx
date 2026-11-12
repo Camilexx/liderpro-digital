@@ -169,7 +169,6 @@ export default function QuoteBasketDrawer() {
               <div className="space-y-3">
                 {items.map((it) => {
                   const pres = it.product.volume || it.product.plates;
-                  const unitPrice = typeof it.product.price === "number" ? it.product.price : null;
                   return (
                     <div
                       key={it.product.sku}

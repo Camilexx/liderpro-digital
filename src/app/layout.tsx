@@ -1,4 +1,4 @@
-import type { Metadata, Viewport } from "next";
+﻿import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import AnnouncementBar from "@/components/AnnouncementBar";
 import Header from "@/components/Header";
@@ -159,7 +159,6 @@ import { WhatsAppSelectorProvider } from "@/context/WhatsAppSelectorContext";
 import QuoteBasketDrawer from "@/components/QuoteBasketDrawer";
 import WhatsAppSelectorModal from "@/components/WhatsAppSelectorModal";
 import MobileBottomBar from "@/components/MobileBottomBar";
-import HermesSalesWidget from "@/components/HermesSalesWidget";
 
 export default function RootLayout({
   children,
@@ -239,7 +238,6 @@ export default function RootLayout({
             <Footer />
             <QuoteBasketDrawer />
             <WhatsAppSelectorModal />
-            <HermesSalesWidget />
             <FloatingWhatsApp />
             <MobileBottomBar />
           </QuoteBasketProvider>

@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useMemo } from "react";
+import Link from "next/link";
 import Image from "next/image";
 import {
   X,
@@ -30,6 +31,40 @@ export default function QuoteBasketDrawer() {
     totalUnits,
   } = useQuoteBasket();
   const { openSelector } = useWhatsAppSelector();
+
+  const [meter, setMeter] = useState({ unlocked: false, hasCombo: false, percent: 0, missing: 35 });
+  const itemsKey = useMemo(
+    () => JSON.stringify(items.map((it) => ({ sku: it.product.sku, qty: it.quantity }))),
+    [items]
+  );
+  useEffect(() => {
+    if (items.length === 0) return;
+    const ctrl = new AbortController();
+    const timer = setTimeout(() => {
+      fetch("/api/quote-meter", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ items: JSON.parse(itemsKey) }),
+        signal: ctrl.signal,
+      })
+        .then((r) => r.json())
+        .then((d) => setMeter(d))
+        .catch(() => {});
+    }, 250);
+    return () => {
+      clearTimeout(timer);
+      ctrl.abort();
+    };
+  }, [itemsKey, items.length]);
+
+  const hasLooseGallon = items.some(
+    (it) =>
+      !it.product.sku.startsWith("COMBO-") &&
+      it.product.brand?.toUpperCase() === "MANNOL" &&
+      /gal[oó]n|caneca/i.test(it.product.volume || "") &&
+      String(it.product.category).toLowerCase().includes("lubric")
+  );
+  const hasFilter = items.some((it) => String(it.product.category).toLowerCase().includes("filtr"));
 
   const [customerName, setCustomerName] = useState("");
   const [city, setCity] = useState("");
@@ -238,11 +273,45 @@ export default function QuoteBasketDrawer() {
                 })}
               </div>
 
+              {/* Medidor de Envío Gratis (valores internos privados) */}
+              <div
+                className={`rounded-2xl p-4 border-2 ${
+                  meter.unlocked
+                    ? "bg-gradient-to-r from-emerald-50 to-amber-50 border-emerald-500"
+                    : "bg-slate-50 border-slate-200"
+                }`}
+              >
+                <p className={`text-xs font-black ${meter.unlocked ? "text-emerald-800" : "text-slate-800"}`}>
+                  {meter.unlocked
+                    ? "✅ ¡ENVÍO GRATIS DESBLOQUEADO EN TU PEDIDO!"
+                    : `🚚 Te faltan $${meter.missing.toFixed(2)} USD en productos (o agregar 1 Combo Cambio MANNOL) para desbloquear tu ENVÍO GRATIS`}
+                </p>
+                <div className="mt-2 h-2.5 w-full rounded-full bg-slate-200 overflow-hidden">
+                  <div
+                    className={`h-full rounded-full transition-all duration-500 ${
+                      meter.unlocked ? "bg-gradient-to-r from-emerald-500 to-[#FACC15]" : "bg-[#0A3B8C]"
+                    }`}
+                    style={{ width: `${meter.percent}%` }}
+                  />
+                </div>
+                <p className="mt-1 text-[10.5px] font-bold text-slate-600">{meter.percent}% hacia envío gratis</p>
+              </div>
+
+              {hasLooseGallon && !hasFilter && (
+                <Link
+                  href="/filtros"
+                  onClick={() => setIsOpen(false)}
+                  className="block rounded-2xl p-3.5 bg-amber-50 border-2 border-[#FACC15] text-[11.5px] font-extrabold text-slate-900 hover:bg-amber-100 transition-colors"
+                >
+                  💡 ¡Añade el Filtro para tu auto y conviértelo en Combo Cambio MANNOL para llevarte GRATIS el Limpiador Cockpit Care 1L + Esponja! <span className="underline">Ver filtros →</span>
+                </Link>
+              )}
+
               {/* Gift Card */}
               <div className="bg-gradient-to-r from-[#09152B] to-[#0A3B8C] text-white rounded-2xl p-4 flex items-center justify-between shadow-md border border-[#FACC15]/40">
                 <div>
                   <span className="text-[10.5px] font-black uppercase tracking-wider text-[#FACC15] block">
-                    🎁 Cotizar + Reclamar Regalo
+                    🎁 Regalo exclusivo en Combo Cambio MANNOL
                   </span>
                   <span className="text-[11px] text-slate-200">
                     Envío gratis en Combos MANNOL o pedidos ≥ $35 USD

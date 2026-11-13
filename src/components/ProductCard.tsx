@@ -40,9 +40,16 @@ export default function ProductCard({ product, priority = false }: ProductCardPr
     : product.price;
 
   const inBasket = items.find((it) => it.product.sku === activeSku);
-  const isMannolPromoEligible =
-    product.brand.toUpperCase() === "MANNOL" &&
-    (product.category === "lubricantes" || product.category === "aditivos");
+  const isMannolOil =
+    product.brand.toUpperCase() === "MANNOL" && product.category === "lubricantes";
+  const isGiftEligible =
+    isMannolOil && /gal[oó]n|caneca|20\s?l/i.test(presentation || "");
+  const isMannolLiter = isMannolOil && !isGiftEligible;
+  const ctaLabel = isGiftEligible
+    ? "🎁 Cotizar en Combo MANNOL"
+    : isMannolLiter
+    ? "💬 Cotizar 1 Litro"
+    : "💬 COTIZAR AHORA";
 
   const handleWhatsApp = () => {
     trackEvent("whatsapp_product", {
@@ -82,7 +89,7 @@ export default function ProductCard({ product, priority = false }: ProductCardPr
       : [];
 
   return (
-    <div className="bg-white rounded-2xl border-2 border-slate-200/90 hover:border-[#0A3B8C] shadow-xs hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between overflow-hidden group">
+    <div className="bg-white rounded-2xl border-2 border-slate-200/90 hover:border-[#0A3B8C] shadow-xs hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-full overflow-hidden group">
       <div>
         {/* Large Institutional Product Image Stage */}
         <div className="relative aspect-square w-full min-h-[245px] sm:min-h-[265px] bg-gradient-to-b from-white via-slate-50/50 to-slate-100/40 p-3 sm:p-4 flex items-center justify-center border-b border-slate-100 overflow-hidden">
@@ -116,7 +123,7 @@ export default function ProductCard({ product, priority = false }: ProductCardPr
                 ⭐ Top Ventas
               </span>
             )}
-            {isMannolPromoEligible && (
+            {isGiftEligible && (
               <span className="px-2 py-0.5 bg-emerald-600/95 text-white font-black text-[9.5px] uppercase tracking-wider rounded-md shadow-xs flex items-center gap-1">
                 <Sparkles className="w-2.5 h-2.5 text-[#FFC500]" />
                 Aplica Combo Mannol
@@ -151,7 +158,7 @@ export default function ProductCard({ product, priority = false }: ProductCardPr
           <div className="bg-[#09152B] border border-[#FACC15]/40 rounded-xl px-3.5 py-2.5 flex items-center justify-between gap-2 text-white">
             <div>
               <span className="block text-[10px] font-extrabold uppercase tracking-wider text-[#FACC15]">
-                🎁 Cotizar + Reclamar Regalo
+                {isGiftEligible ? "✨ Aplica en Combo MANNOL (+ Regalo Cockpit Care)" : "⚡ DISPONIBILIDAD INMEDIATA"}
               </span>
               <span className="text-xs sm:text-sm font-black text-white tracking-tight">
                 {presentation ? `Presentación: ${presentation}` : "Disponible en Bodega"}
@@ -168,11 +175,18 @@ export default function ProductCard({ product, priority = false }: ProductCardPr
             {product.shortSpec}
           </p>
 
-          {/* Interactive Size Selector (Large Touch Buttons with Price Preview) */}
+          {variantsList.length <= 1 && (
+            <ul className="pt-2.5 border-t border-slate-100 space-y-1 text-[12px] font-bold text-slate-700">
+              <li>✔ Garantía Oficial de Fábrica</li>
+              <li>✔ Entrega / Instalación en Pedernales</li>
+            </ul>
+          )}
+
+          {/* Interactive Size Selector */}
           {variantsList.length > 1 && (
             <div className="pt-2.5 pb-1 border-t border-slate-100 space-y-1.5">
               <span className="text-[11px] font-black text-slate-600 uppercase tracking-wider block">
-                Elige el tamaño (clic para ver precio):
+                ELIGE LA PRESENTACIÓN DISPONIBLE:
               </span>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-1.5">
                 {variantsList.map((v) => {
@@ -229,7 +243,7 @@ export default function ProductCard({ product, priority = false }: ProductCardPr
             className="col-span-7 btn-whatsapp !py-3 !px-2.5 !text-[11px] font-black uppercase tracking-tight rounded-xl flex items-center justify-center gap-1.5 shadow-sm min-h-[44px] cursor-pointer"
           >
             <MessageCircle className="w-4 h-4 shrink-0" />
-            <span>🎁 Cotizar + Regalo</span>
+            <span>{ctaLabel}</span>
           </button>
 
           <Link
@@ -277,7 +291,7 @@ export default function ProductCard({ product, priority = false }: ProductCardPr
             onClick={() =>
               openSelector({
                 itemTitle: `${product.name} (${presentation || activeSku})`,
-                customMessage: `¡Hola LiderPro! Vengo de la web y estoy viendo ${product.name} (${presentation || activeSku}). ¿Me ayudan confirmando si aplica a mi vehículo y cómo reclamar mi regalo de cortesía?`,
+                customMessage: `¡Hola LiderPro! Vengo de la web y estoy viendo ${product.name} (${presentation || activeSku}). ¿Me ayudan confirmando si aplica a mi vehículo${isGiftEligible ? " y armar mi Combo Cambio MANNOL con regalo" : ""}?`,
                 sku: activeSku,
                 sourceLocation: "product_card_compatibility",
               })

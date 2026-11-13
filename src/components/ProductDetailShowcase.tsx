@@ -44,6 +44,13 @@ export default function ProductDetailShowcase({ product }: ProductDetailShowcase
     ? selectedVariant.presentation
     : (product.volume || product.plates || undefined);
   const activePresentation = rawPresentation?.replace("1 Galón / 5L", "1 Galón");
+  const isMannolOil = product.brand.toUpperCase() === "MANNOL" && product.category === "lubricantes";
+  const isGiftEligible = isMannolOil && /gal[oó]n|caneca|20\s?l/i.test(activePresentation || "");
+  const ctaLabel = isGiftEligible
+    ? "🎁 Cotizar en Combo MANNOL"
+    : isMannolOil
+    ? "💬 Cotizar 1 Litro"
+    : "💬 COTIZAR AHORA";
 
   const activePrice = selectedVariant
     ? (selectedVariant.priceEstimate !== undefined ? selectedVariant.priceEstimate : product.priceEstimate)
@@ -155,7 +162,7 @@ export default function ProductDetailShowcase({ product }: ProductDetailShowcase
                   <Sparkles className="w-3.5 h-3.5 text-[#0A3B8C]" />
                   Variantes de tamaño disponibles:
                 </span>
-                <span className="text-[11px] text-slate-500">Haz clic para ver su precio</span>
+                <span className="text-[11px] text-slate-500">Selecciona la presentación disponible</span>
               </div>
               <div className="grid grid-cols-3 gap-3">
                 {variantsList.map((v) => {
@@ -227,7 +234,7 @@ export default function ProductDetailShowcase({ product }: ProductDetailShowcase
           <div className="p-4 sm:p-5 rounded-2xl bg-[#09152B] border-2 border-[#FACC15]/60 text-white flex flex-wrap items-center justify-between gap-4 shadow-lg">
             <div>
               <span className="block text-xs font-black uppercase tracking-wider text-[#FACC15]">
-                🎁 Cotizar + Reclamar Regalo ({activePresentation || "Unidad"})
+                {ctaLabel} ({activePresentation || "Unidad"})
               </span>
               <div className="flex items-baseline gap-3 mt-1">
                 <span className="text-xl sm:text-2xl font-black text-white tracking-tight">
@@ -235,7 +242,7 @@ export default function ProductDetailShowcase({ product }: ProductDetailShowcase
                 </span>
               </div>
               <span className="block text-[11px] text-slate-300 font-medium mt-1">
-                ✓ Incluye verificación por vehículo • Regalo MANNOL 6145 Cockpit Care + Esponja en combos/compras ≥ $35
+                ✓ Incluye verificación por vehículo{isGiftEligible ? " • ✨ Aplica en Combo MANNOL (+ Regalo Cockpit Care)" : ""}
               </span>
             </div>
           </div>
@@ -339,7 +346,7 @@ export default function ProductDetailShowcase({ product }: ProductDetailShowcase
                 className="w-full inline-flex items-center justify-center gap-3 py-4 px-6 rounded-2xl bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-700 hover:to-emerald-600 text-white font-black text-sm sm:text-base shadow-md hover:shadow-lg transition-all duration-200 transform hover:-translate-y-0.5 cursor-pointer text-center"
               >
                 <MessageCircle className="w-5 h-5 fill-current" />
-                <span>🎁 Cotizar + Reclamar Regalo (Elegir WhatsApp)</span>
+                <span>{ctaLabel} (Elegir WhatsApp)</span>
               </button>
 
               {/* Secondary Add-to-Quote-Basket + Combo Inquiry */}

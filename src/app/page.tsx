@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import Link from "next/link";
@@ -246,7 +246,7 @@ export default function HomePage() {
                 className="btn-whatsapp !py-3.5 !px-5 text-xs font-black tracking-wider flex items-center justify-center gap-2 text-center shadow-lg shadow-emerald-600/20 cursor-pointer"
               >
                 <MessageCircle className="w-4 h-4" />
-                <span>🎁 COTIZAR + RECLAMAR REGALO</span>
+                <span>💬 COTIZAR CON ASESOR EN LÍNEA</span>
               </button>
             </div>
 

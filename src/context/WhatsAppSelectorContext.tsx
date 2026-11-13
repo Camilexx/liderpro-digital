@@ -9,6 +9,7 @@ export interface WhatsAppSelectorRequest {
   customMessage?: string;
   sourceLocation?: string;
   sku?: string;
+  isComboGift?: boolean;
 }
 
 interface WhatsAppSelectorContextType {

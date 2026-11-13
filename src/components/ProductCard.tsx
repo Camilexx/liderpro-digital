@@ -238,6 +238,7 @@ export default function ProductCard({ product, priority = false }: ProductCardPr
                 itemTitle: `${product.name}${presentation ? ` (${presentation})` : ""}`,
                 sku: activeSku,
                 sourceLocation: "product_card",
+                isComboGift: isGiftEligible,
               });
             }}
             className="col-span-7 btn-whatsapp !py-3 !px-2.5 !text-[11px] font-black uppercase tracking-tight rounded-xl flex items-center justify-center gap-1.5 shadow-sm min-h-[44px] cursor-pointer"
@@ -294,6 +295,7 @@ export default function ProductCard({ product, priority = false }: ProductCardPr
                 customMessage: `¡Hola LiderPro! Vengo de la web y estoy viendo ${product.name} (${presentation || activeSku}). ¿Me ayudan confirmando si aplica a mi vehículo${isGiftEligible ? " y armar mi Combo Cambio MANNOL con regalo" : ""}?`,
                 sku: activeSku,
                 sourceLocation: "product_card_compatibility",
+                isComboGift: isGiftEligible,
               })
             }
             className="w-full py-2.5 px-2.5 text-[11px] font-black uppercase tracking-tight rounded-xl bg-amber-50 hover:bg-[#FFC500] text-amber-950 hover:text-slate-950 border border-amber-300/90 flex items-center justify-center gap-1 transition-all min-h-[40px] cursor-pointer"

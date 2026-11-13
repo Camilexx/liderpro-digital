@@ -25,6 +25,13 @@ export default function WhatsAppSelectorModal() {
 
   const message = request.customMessage || "";
   const lines = [LIDERPRO_WHATSAPP_LINES.matriz, LIDERPRO_WHATSAPP_LINES.despachos];
+  const isComboGift = Boolean(
+    request.isComboGift ||
+      request.sku?.toUpperCase().startsWith("COMBO-") ||
+      /combo\s*(cambio\s*)?mannol/i.test(
+        `${request.itemTitle || ""} ${request.sourceLocation || ""}`
+      )
+  );
 
   const handleSelectLine = (lineId: "matriz" | "despachos") => {
     trackEvent("whatsapp_click", {
@@ -83,17 +90,21 @@ export default function WhatsAppSelectorModal() {
           </button>
         </div>
 
-        {/* Gift & Welcome Banner */}
+        {/* Dynamic Gift / Official Attention Banner */}
         <div className="relative z-10 rounded-2xl bg-[#070B14]/80 border border-white/10 p-3.5 flex items-center gap-3">
           <div className="w-10 h-10 rounded-xl bg-[#FACC15] text-slate-950 flex items-center justify-center shrink-0 shadow-md">
-            <Gift className="w-5 h-5" />
+            {isComboGift ? <Gift className="w-5 h-5" /> : <ShieldCheck className="w-5 h-5" />}
           </div>
           <div className="text-xs leading-snug">
             <span className="font-black text-[#FACC15] block">
-              Cotización Inmediata + Regalo de Cortesía
+              {isComboGift
+                ? "🎁 Cotización Inmediata + Regalo de Cortesía (MANNOL 6145 Cockpit Care)"
+                : "⚡ Atención Oficial y Cotización Inmediata • Verificación técnica por vehículo"}
             </span>
             <span className="text-slate-300">
-              Incluye saludo automático con tu consulta lista y verificación técnica por vehículo.
+              {isComboGift
+                ? "Incluye saludo automático con tu consulta lista y verificación técnica por vehículo."
+                : "Incluye saludo automático con tu consulta lista y stock disponible en Pedernales."}
             </span>
           </div>
         </div>

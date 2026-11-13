@@ -554,6 +554,7 @@ export default function MannolPromosSection() {
                           customMessage: whatsappMessage,
                           sku: currentVar.oilSku,
                           sourceLocation: "mannol_promo_card",
+                          isComboGift: true,
                         });
                       }}
                       className="btn-whatsapp !py-3.5 !px-4 !text-xs sm:!text-sm font-black uppercase tracking-wider rounded-xl flex items-center justify-center gap-2 shadow-lg cursor-pointer"

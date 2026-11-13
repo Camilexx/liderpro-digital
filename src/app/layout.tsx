@@ -24,11 +24,11 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon.png", type: "image/png" },
-      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon.png?v=2", type: "image/png" },
+      { url: "/favicon.ico?v=2", sizes: "any" },
     ],
-    shortcut: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
+    shortcut: "/favicon.ico?v=2",
+    apple: "/apple-touch-icon.png?v=2",
   },
   description:
     "Distribuidor Autorizado Multimarca de lubricantes, baterías, filtros y químicos automotrices e industriales (Baterías Ecuador, Bosch, Mannol, Aroil, Mobil, Motul, Valvoline, Amalie, Advance, ATE, NGK, Denso, Bardahl, Abro). Despacho diario desde Bodega Matriz en Pedernales (Manabí) a las 24 provincias del Ecuador con facturación electrónica SRI.",

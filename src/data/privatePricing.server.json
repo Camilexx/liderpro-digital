@@ -7,7 +7,10 @@
     "category": "refrigerantes",
     "name": "MANNOL Refrigerante Azul Vida Útil 3 Años (1 Litro)",
     "presentation": "1 Litro",
-    "base_price_no_iva": 4.39
+    "base_price_no_iva": 4.39,
+    "price_with_iva_raw": 5.05,
+    "quoted_pvp_iva": 5.5,
+    "excel_code": "012MN4011-1"
   },
   {
     "sku": "012MN4011-5",
@@ -17,7 +20,10 @@
     "category": "refrigerantes",
     "name": "MANNOL Refrigerante Azul Vida Útil 3 Años (1 Galón / 5L)",
     "presentation": "1 Galón / 5L",
-    "base_price_no_iva": 18.48
+    "base_price_no_iva": 18.48,
+    "price_with_iva_raw": 21.25,
+    "quoted_pvp_iva": 21.5,
+    "excel_code": "012MN4011-5"
   },
   {
     "sku": "012MN4012-1",
@@ -27,7 +33,10 @@
     "category": "refrigerantes",
     "name": "MANNOL Refrigerante Rojo Vida Útil 5 Años (1 Litro)",
     "presentation": "1 Litro",
-    "base_price_no_iva": 4.78
+    "base_price_no_iva": 4.78,
+    "price_with_iva_raw": 5.5,
+    "quoted_pvp_iva": 5.5,
+    "excel_code": "012MN4012-1"
   },
   {
     "sku": "012MN4012-5",
@@ -37,7 +46,10 @@
     "category": "refrigerantes",
     "name": "MANNOL Refrigerante Rojo Vida Útil 5 Años (1 Galón / 5L)",
     "presentation": "1 Galón / 5L",
-    "base_price_no_iva": 20.39
+    "base_price_no_iva": 20.39,
+    "price_with_iva_raw": 23.45,
+    "quoted_pvp_iva": 23.5,
+    "excel_code": "012MN4012-5"
   },
   {
     "sku": "012MN4013-1",
@@ -47,7 +59,10 @@
     "category": "refrigerantes",
     "name": "MANNOL Refrigerante Verde Vida Útil 3 Años (1 Litro)",
     "presentation": "1 Litro",
-    "base_price_no_iva": 4.39
+    "base_price_no_iva": 4.39,
+    "price_with_iva_raw": 5.05,
+    "quoted_pvp_iva": 5.5,
+    "excel_code": "012MN4013-1"
   },
   {
     "sku": "012MN4013-5",
@@ -57,7 +72,10 @@
     "category": "refrigerantes",
     "name": "MANNOL Refrigerante Verde Vida Útil 3 Años (1 Galón / 5L)",
     "presentation": "1 Galón / 5L",
-    "base_price_no_iva": 18.48
+    "base_price_no_iva": 18.48,
+    "price_with_iva_raw": 21.25,
+    "quoted_pvp_iva": 21.5,
+    "excel_code": "012MN4013-5"
   },
   {
     "sku": "012MN4016-1",
@@ -67,7 +85,10 @@
     "category": "refrigerantes",
     "name": "MANNOL Refrigerante Naranja Vida Útil 5 Años (1 Litro)",
     "presentation": "1 Litro",
-    "base_price_no_iva": 4.78
+    "base_price_no_iva": 4.78,
+    "price_with_iva_raw": 5.5,
+    "quoted_pvp_iva": 5.5,
+    "excel_code": "012MN4016-1"
   },
   {
     "sku": "012MN4016-5",
@@ -77,7 +98,10 @@
     "category": "refrigerantes",
     "name": "MANNOL Refrigerante Naranja Vida Útil 5 Años (1 Galón / 5L)",
     "presentation": "1 Galón / 5L",
-    "base_price_no_iva": 20.39
+    "base_price_no_iva": 20.39,
+    "price_with_iva_raw": 23.45,
+    "quoted_pvp_iva": 23.5,
+    "excel_code": "012MN4016-5"
   },
   {
     "sku": "012MN7104-1",
@@ -87,7 +111,10 @@
     "category": "lubricantes",
     "name": "MANNOL TS-4 SHPD 15W-40 Extra (1 Litro)",
     "presentation": "1 Litro",
-    "base_price_no_iva": 9.09
+    "base_price_no_iva": 9.09,
+    "price_with_iva_raw": 10.45,
+    "quoted_pvp_iva": 10.5,
+    "excel_code": "012MN7104-1"
   },
   {
     "sku": "012MN7104-5A",
@@ -97,7 +124,10 @@
     "category": "lubricantes",
     "name": "MANNOL TS-4 SHPD 15W-40 Extra (1 Galón / 5L)",
     "presentation": "1 Galón / 5L",
-    "base_price_no_iva": 39.78
+    "base_price_no_iva": 39.78,
+    "price_with_iva_raw": 45.75,
+    "quoted_pvp_iva": 45.9,
+    "excel_code": "012MN7104-5A"
   },
   {
     "sku": "012MN7404-1A",
@@ -107,7 +137,10 @@
     "category": "lubricantes",
     "name": "MANNOL Safari 20W-50 (1 Litro)",
     "presentation": "1 Litro",
-    "base_price_no_iva": 9.3
+    "base_price_no_iva": 9.3,
+    "price_with_iva_raw": 10.7,
+    "quoted_pvp_iva": 10.9,
+    "excel_code": "012MN7404-1A"
   },
   {
     "sku": "012MN7404-4A",
@@ -117,7 +150,10 @@
     "category": "lubricantes",
     "name": "MANNOL Safari 20W-50 (1 Galón / 5L)",
     "presentation": "1 Galón / 5L",
-    "base_price_no_iva": 31.13
+    "base_price_no_iva": 31.13,
+    "price_with_iva_raw": 35.8,
+    "quoted_pvp_iva": 35.9,
+    "excel_code": "012MN7404-4A"
   },
   {
     "sku": "012MN7501-1",
@@ -127,7 +163,10 @@
     "category": "lubricantes",
     "name": "MANNOL Classic 10W-40 (1 Litro)",
     "presentation": "1 Litro",
-    "base_price_no_iva": 9.61
+    "base_price_no_iva": 9.61,
+    "price_with_iva_raw": 11.05,
+    "quoted_pvp_iva": 11.5,
+    "excel_code": "012MN7501-1"
   },
   {
     "sku": "012MN7501-4",
@@ -137,7 +176,10 @@
     "category": "lubricantes",
     "name": "MANNOL Classic 10W-40 (1 Galón / 5L)",
     "presentation": "1 Galón / 5L",
-    "base_price_no_iva": 34.57
+    "base_price_no_iva": 34.57,
+    "price_with_iva_raw": 39.75,
+    "quoted_pvp_iva": 39.9,
+    "excel_code": "012MN7501-4"
   },
   {
     "sku": "012MN7512-1A",
@@ -147,7 +189,10 @@
     "category": "lubricantes",
     "name": "MANNOL Special Plus 10W-30 (1 Litro)",
     "presentation": "1 Litro",
-    "base_price_no_iva": 9.83
+    "base_price_no_iva": 9.83,
+    "price_with_iva_raw": 11.3,
+    "quoted_pvp_iva": 11.5,
+    "excel_code": "012MN7512-1A"
   },
   {
     "sku": "012MN7512-4A",
@@ -157,7 +202,10 @@
     "category": "lubricantes",
     "name": "MANNOL Special Plus 10W-30 (1 Galón / 5L)",
     "presentation": "1 Galón / 5L",
-    "base_price_no_iva": 32.22
+    "base_price_no_iva": 32.22,
+    "price_with_iva_raw": 37.05,
+    "quoted_pvp_iva": 37.5,
+    "excel_code": "012MN7512-4A"
   },
   {
     "sku": "012MN7701-1",
@@ -167,7 +215,10 @@
     "category": "lubricantes",
     "name": "MANNOL Chevrolet Opel O.e.m 5W-30 (1 Litro)",
     "presentation": "1 Litro",
-    "base_price_no_iva": 14.78
+    "base_price_no_iva": 14.78,
+    "price_with_iva_raw": 17.0,
+    "quoted_pvp_iva": 17.0,
+    "excel_code": "012MN7701-1"
   },
   {
     "sku": "LP-LUR-010-C4",
@@ -187,7 +238,10 @@
     "category": "lubricantes",
     "name": "MANNOL Toyota Lexus O.e.m 5W-30 Metálico (1 Litro)",
     "presentation": "1 Litro",
-    "base_price_no_iva": 14.78
+    "base_price_no_iva": 14.78,
+    "price_with_iva_raw": 17.0,
+    "quoted_pvp_iva": 17.0,
+    "excel_code": "012MN7709-1"
   },
   {
     "sku": "012MN7709-4",
@@ -197,7 +251,10 @@
     "category": "lubricantes",
     "name": "MANNOL Toyota Lexus O.e.m 5W-30 Metálico (1 Galón / 5L)",
     "presentation": "1 Galón / 5L",
-    "base_price_no_iva": 54.65
+    "base_price_no_iva": 54.65,
+    "price_with_iva_raw": 62.85,
+    "quoted_pvp_iva": 62.9,
+    "excel_code": "012MN7709-4"
   },
   {
     "sku": "012MN7713-1",
@@ -207,7 +264,10 @@
     "category": "lubricantes",
     "name": "MANNOL Hyundai Kia O.e.m 5W-30 Metálico (1 Litro)",
     "presentation": "1 Litro",
-    "base_price_no_iva": 13.48
+    "base_price_no_iva": 13.48,
+    "price_with_iva_raw": 15.5,
+    "quoted_pvp_iva": 15.5,
+    "excel_code": "012MN7713-1"
   },
   {
     "sku": "012MN7713-4",
@@ -217,7 +277,10 @@
     "category": "lubricantes",
     "name": "MANNOL Hyundai Kia O.e.m 5W-30 Metálico (1 Galón / 5L)",
     "presentation": "1 Galón / 5L",
-    "base_price_no_iva": 46.39
+    "base_price_no_iva": 46.39,
+    "price_with_iva_raw": 53.35,
+    "quoted_pvp_iva": 53.5,
+    "excel_code": "012MN7713-4"
   },
   {
     "sku": "012MN7720-1",
@@ -227,7 +290,10 @@
     "category": "lubricantes",
     "name": "MANNOL Ceramic 5W-30 (1 Litro)",
     "presentation": "1 Litro",
-    "base_price_no_iva": 15.57
+    "base_price_no_iva": 15.57,
+    "price_with_iva_raw": 17.9,
+    "quoted_pvp_iva": 17.9,
+    "excel_code": "012MN7720-1"
   },
   {
     "sku": "012MN7720-4",
@@ -237,7 +303,10 @@
     "category": "lubricantes",
     "name": "MANNOL Ceramic 5W-30 (1 Galón / 5L)",
     "presentation": "1 Galón / 5L",
-    "base_price_no_iva": 52.91
+    "base_price_no_iva": 52.91,
+    "price_with_iva_raw": 60.85,
+    "quoted_pvp_iva": 60.9,
+    "excel_code": "012MN7720-4"
   },
   {
     "sku": "LP-LUR-014-C3",
@@ -257,7 +326,10 @@
     "category": "lubricantes",
     "name": "MANNOL Ceramic Pro 10W-40 (1 Galón / 5L)",
     "presentation": "1 Galón / 5L",
-    "base_price_no_iva": 39.55
+    "base_price_no_iva": 39.55,
+    "price_with_iva_raw": 45.48,
+    "quoted_pvp_iva": 45.5,
+    "excel_code": "012MN7726-5"
   },
   {
     "sku": "LP-LUR-015",
@@ -267,7 +339,8 @@
     "category": "lubricantes",
     "name": "MANNOL 4takt Motorbike 10W-40",
     "presentation": "20 Lt",
-    "base_price_no_iva": 12.52
+    "base_price_no_iva": 12.52,
+    "quoted_pvp_iva": 14.5
   },
   {
     "sku": "LP-LUR-016",
@@ -277,7 +350,8 @@
     "category": "lubricantes",
     "name": "MANNOL 4takt Motorbike 10W-50",
     "presentation": "1 Litro",
-    "base_price_no_iva": 11.43
+    "base_price_no_iva": 11.43,
+    "quoted_pvp_iva": 13.5
   },
   {
     "sku": "LP-LUR-017",
@@ -287,7 +361,8 @@
     "category": "lubricantes",
     "name": "MANNOL Powerbike 15W-50 Metálico",
     "presentation": "1 Litro",
-    "base_price_no_iva": 12.43
+    "base_price_no_iva": 12.43,
+    "quoted_pvp_iva": 14.5
   },
   {
     "sku": "012MN7904-1",
@@ -297,7 +372,10 @@
     "category": "lubricantes",
     "name": "MANNOL Diésel Turbo 5W-40 (1 Litro)",
     "presentation": "1 Litro",
-    "base_price_no_iva": 12.3
+    "base_price_no_iva": 12.3,
+    "price_with_iva_raw": 14.15,
+    "quoted_pvp_iva": 14.5,
+    "excel_code": "012MN7904-1"
   },
   {
     "sku": "012MN7904-5",
@@ -307,7 +385,10 @@
     "category": "lubricantes",
     "name": "MANNOL Diésel Turbo 5W-40 (1 Galón / 5L)",
     "presentation": "1 Galón / 5L",
-    "base_price_no_iva": 52.87
+    "base_price_no_iva": 52.87,
+    "price_with_iva_raw": 60.8,
+    "quoted_pvp_iva": 60.9,
+    "excel_code": "012MN7904-5"
   },
   {
     "sku": "012MN7906-1A",
@@ -317,7 +398,10 @@
     "category": "lubricantes",
     "name": "MANNOL Energy Ultra Jp 5W-20 (1 Litro)",
     "presentation": "1 Litro",
-    "base_price_no_iva": 13.43
+    "base_price_no_iva": 13.43,
+    "price_with_iva_raw": 15.45,
+    "quoted_pvp_iva": 15.5,
+    "excel_code": "012MN7906-1A"
   },
   {
     "sku": "012MN7906-4A",
@@ -327,7 +411,10 @@
     "category": "lubricantes",
     "name": "MANNOL Energy Ultra Jp 5W-20 (1 Galón / 5L)",
     "presentation": "1 Galón / 5L",
-    "base_price_no_iva": 49.09
+    "base_price_no_iva": 49.09,
+    "price_with_iva_raw": 56.45,
+    "quoted_pvp_iva": 56.5,
+    "excel_code": "012MN7906-4A"
   },
   {
     "sku": "012MN7909-1",
@@ -337,7 +424,10 @@
     "category": "lubricantes",
     "name": "MANNOL Diésel TDI 5W-30 (1 Litro)",
     "presentation": "1 Litro",
-    "base_price_no_iva": 14.26
+    "base_price_no_iva": 14.26,
+    "price_with_iva_raw": 16.4,
+    "quoted_pvp_iva": 16.5,
+    "excel_code": "012MN7909-1"
   },
   {
     "sku": "012MN7909-5",
@@ -347,7 +437,10 @@
     "category": "lubricantes",
     "name": "MANNOL Diésel TDI 5W-30 (1 Galón / 5L)",
     "presentation": "1 Galón / 5L",
-    "base_price_no_iva": 61.61
+    "base_price_no_iva": 61.61,
+    "price_with_iva_raw": 70.85,
+    "quoted_pvp_iva": 70.9,
+    "excel_code": "012MN7909-5"
   },
   {
     "sku": "012MN7914-1A",
@@ -357,7 +450,10 @@
     "category": "lubricantes",
     "name": "MANNOL Energy Formula Jp 5W-30 Metálico (1 Litro)",
     "presentation": "1 Litro",
-    "base_price_no_iva": 10.83
+    "base_price_no_iva": 10.83,
+    "price_with_iva_raw": 12.45,
+    "quoted_pvp_iva": 12.5,
+    "excel_code": "012MN7914-1A"
   },
   {
     "sku": "012MN7914-4A",
@@ -367,7 +463,10 @@
     "category": "lubricantes",
     "name": "MANNOL Energy Formula Jp 5W-30 Metálico (1 Galón / 5L)",
     "presentation": "1 Galón / 5L",
-    "base_price_no_iva": 38.09
+    "base_price_no_iva": 38.09,
+    "price_with_iva_raw": 43.8,
+    "quoted_pvp_iva": 43.9,
+    "excel_code": "012MN7914-4A"
   },
   {
     "sku": "012MN7924-1",
@@ -377,7 +476,10 @@
     "category": "lubricantes",
     "name": "MANNOL For Chinese Cars 5W-30 (1 Litro)",
     "presentation": "1 Litro",
-    "base_price_no_iva": 11.96
+    "base_price_no_iva": 11.96,
+    "price_with_iva_raw": 13.75,
+    "quoted_pvp_iva": 13.9,
+    "excel_code": "012MN7924-1"
   },
   {
     "sku": "012MN7924-4",
@@ -387,7 +489,10 @@
     "category": "lubricantes",
     "name": "MANNOL For Chinese Cars 5W-30 (1 Galón / 5L)",
     "presentation": "1 Galón / 5L",
-    "base_price_no_iva": 41.22
+    "base_price_no_iva": 41.22,
+    "price_with_iva_raw": 47.4,
+    "quoted_pvp_iva": 47.5,
+    "excel_code": "012MN7924-4"
   },
   {
     "sku": "012MN8101-1A",
@@ -397,7 +502,10 @@
     "category": "lubricantes",
     "name": "MANNOL FWD 75W-85 Gl4 (1 Litro)",
     "presentation": "1 Litro",
-    "base_price_no_iva": 8.7
+    "base_price_no_iva": 8.7,
+    "price_with_iva_raw": 10.0,
+    "quoted_pvp_iva": 10.0,
+    "excel_code": "012MN8101-1A"
   },
   {
     "sku": "012MN8101-4",
@@ -407,7 +515,10 @@
     "category": "lubricantes",
     "name": "MANNOL FWD 75W-85 Gl4 (1 Galón / 5L)",
     "presentation": "1 Galón / 5L",
-    "base_price_no_iva": 32.35
+    "base_price_no_iva": 32.35,
+    "price_with_iva_raw": 37.2,
+    "quoted_pvp_iva": 37.5,
+    "excel_code": "012MN8101-4"
   },
   {
     "sku": "012MN8105-4",
@@ -417,7 +528,10 @@
     "category": "lubricantes",
     "name": "MANNOL Hypoid LSD 85W-140 Gl5 Ls (deslizamiento Limitado) (1 Galón / 5L)",
     "presentation": "1 Galón / 5L",
-    "base_price_no_iva": 31.65
+    "base_price_no_iva": 31.65,
+    "price_with_iva_raw": 36.4,
+    "quoted_pvp_iva": 36.5,
+    "excel_code": "012MN8105-4"
   },
   {
     "sku": "012MN8105-20",
@@ -427,7 +541,10 @@
     "category": "lubricantes",
     "name": "MANNOL Hypoid LSD 85W-140 Gl5 Ls (deslizamiento Limitado) (Caneca 5 GL)",
     "presentation": "Caneca 5 GL",
-    "base_price_no_iva": 112.09
+    "base_price_no_iva": 112.09,
+    "price_with_iva_raw": 128.9,
+    "quoted_pvp_iva": 128.9,
+    "excel_code": "012MN8105-20"
   },
   {
     "sku": "012MN8106-1",
@@ -437,7 +554,10 @@
     "category": "lubricantes",
     "name": "MANNOL Hypoid Getriebeoel 80W-90 Gl4 Gl5 Ls (deslizamiento Limitado) (1 Litro)",
     "presentation": "1 Litro",
-    "base_price_no_iva": 8.0
+    "base_price_no_iva": 8.0,
+    "price_with_iva_raw": 9.2,
+    "quoted_pvp_iva": 9.5,
+    "excel_code": "012MN8106-1"
   },
   {
     "sku": "012MN8106-4",
@@ -447,7 +567,10 @@
     "category": "lubricantes",
     "name": "MANNOL Hypoid Getriebeoel 80W-90 Gl4 Gl5 Ls (deslizamiento Limitado) (1 Galón / 5L)",
     "presentation": "1 Galón / 5L",
-    "base_price_no_iva": 29.65
+    "base_price_no_iva": 29.65,
+    "price_with_iva_raw": 34.1,
+    "quoted_pvp_iva": 34.5,
+    "excel_code": "012MN8106-4"
   },
   {
     "sku": "012MN8107-4",
@@ -457,7 +580,10 @@
     "category": "lubricantes",
     "name": "MANNOL Universal Getriebeoel 80W-90 Gl4 (1 Galón / 5L)",
     "presentation": "1 Galón / 5L",
-    "base_price_no_iva": 25.52
+    "base_price_no_iva": 25.52,
+    "price_with_iva_raw": 29.35,
+    "quoted_pvp_iva": 29.5,
+    "excel_code": "012MN8107-4"
   },
   {
     "sku": "012MN8107-20",
@@ -467,7 +593,10 @@
     "category": "lubricantes",
     "name": "MANNOL Universal Getriebeoel 80W-90 Gl4 (Caneca 5 GL)",
     "presentation": "Caneca 5 GL",
-    "base_price_no_iva": 90.3
+    "base_price_no_iva": 90.3,
+    "price_with_iva_raw": 103.85,
+    "quoted_pvp_iva": 103.9,
+    "excel_code": "012MN8107-20"
   },
   {
     "sku": "012MN8108-1",
@@ -477,7 +606,10 @@
     "category": "lubricantes",
     "name": "MANNOL Transm. Basic Plus 75W-90 Gl4 (1 Litro)",
     "presentation": "1 Litro",
-    "base_price_no_iva": 10.74
+    "base_price_no_iva": 10.74,
+    "price_with_iva_raw": 12.35,
+    "quoted_pvp_iva": 12.5,
+    "excel_code": "012MN8108-1"
   },
   {
     "sku": "012MN8108-4",
@@ -487,7 +619,10 @@
     "category": "lubricantes",
     "name": "MANNOL Transm. Basic Plus 75W-90 Gl4 (1 Galón / 5L)",
     "presentation": "1 Galón / 5L",
-    "base_price_no_iva": 39.83
+    "base_price_no_iva": 39.83,
+    "price_with_iva_raw": 45.8,
+    "quoted_pvp_iva": 45.9,
+    "excel_code": "012MN8108-4"
   },
   {
     "sku": "LP-LUR-028",
@@ -497,7 +632,10 @@
     "category": "lubricantes",
     "name": "MANNOL O.e.m MTF-3 75w Metalico",
     "presentation": "1 Litro",
-    "base_price_no_iva": 14.39
+    "base_price_no_iva": 14.39,
+    "price_with_iva_raw": 16.55,
+    "quoted_pvp_iva": 16.9,
+    "excel_code": "012MN8115-1"
   },
   {
     "sku": "LP-LUR-029",
@@ -507,7 +645,10 @@
     "category": "lubricantes",
     "name": "MANNOL DCT Fluid Cajas Doble Embrague",
     "presentation": "1 Litro",
-    "base_price_no_iva": 18.87
+    "base_price_no_iva": 18.87,
+    "price_with_iva_raw": 21.7,
+    "quoted_pvp_iva": 21.9,
+    "excel_code": "012MN8202-1"
   },
   {
     "sku": "LP-LUR-030",
@@ -517,7 +658,10 @@
     "category": "lubricantes",
     "name": "MANNOL ATF Dexron Iii",
     "presentation": "1 Litro",
-    "base_price_no_iva": 10.3
+    "base_price_no_iva": 10.3,
+    "price_with_iva_raw": 11.85,
+    "quoted_pvp_iva": 11.9,
+    "excel_code": "012MN8206-1"
   },
   {
     "sku": "LP-LUR-031",
@@ -527,7 +671,10 @@
     "category": "lubricantes",
     "name": "MANNOL ATF Dexron Vi",
     "presentation": "1 Litro",
-    "base_price_no_iva": 14.09
+    "base_price_no_iva": 10.3,
+    "price_with_iva_raw": 11.85,
+    "quoted_pvp_iva": 11.9,
+    "excel_code": "012MN8206-1"
   },
   {
     "sku": "LP-LUR-032",
@@ -537,7 +684,10 @@
     "category": "lubricantes",
     "name": "MANNOL CVT Nissan NISSAN-3",
     "presentation": "1 Litro",
-    "base_price_no_iva": 20.61
+    "base_price_no_iva": 20.61,
+    "price_with_iva_raw": 23.7,
+    "quoted_pvp_iva": 23.9,
+    "excel_code": "012MN8220-1"
   },
   {
     "sku": "LP-LUR-033",
@@ -547,7 +697,10 @@
     "category": "lubricantes",
     "name": "MANNOL ATF ULV",
     "presentation": "1 Litro",
-    "base_price_no_iva": 13.3
+    "base_price_no_iva": 13.3,
+    "price_with_iva_raw": 15.3,
+    "quoted_pvp_iva": 15.5,
+    "excel_code": "012MN8222-1"
   },
   {
     "sku": "LP-LUR-034",
@@ -557,7 +710,10 @@
     "category": "lubricantes",
     "name": "MANNOL Hydro Hv ISO 32 Longlife",
     "presentation": "Caneca 5 GL",
-    "base_price_no_iva": 86.96
+    "base_price_no_iva": 86.96,
+    "price_with_iva_raw": 100.0,
+    "quoted_pvp_iva": 100.0,
+    "excel_code": "MN2201-20"
   },
   {
     "sku": "LP-LUR-035",
@@ -567,7 +723,10 @@
     "category": "lubricantes",
     "name": "MANNOL Hydro Hv ISO 46 Longlife",
     "presentation": "Caneca 5 GL",
-    "base_price_no_iva": 86.96
+    "base_price_no_iva": 86.96,
+    "price_with_iva_raw": 100.0,
+    "quoted_pvp_iva": 100.0,
+    "excel_code": "MN2201-20"
   },
   {
     "sku": "LP-LUR-036",
@@ -577,7 +736,10 @@
     "category": "lubricantes",
     "name": "MANNOL Multifarm STOU 10W-30",
     "presentation": "Caneca 5 GL",
-    "base_price_no_iva": 101.3
+    "base_price_no_iva": 101.3,
+    "price_with_iva_raw": 116.5,
+    "quoted_pvp_iva": 116.5,
+    "excel_code": "MN2501-20"
   },
   {
     "sku": "12MN7916-1",
@@ -587,7 +749,10 @@
     "category": "lubricantes",
     "name": "MANNOL Molibden Green Ultra 5W-30 (1 Litro)",
     "presentation": "1 Litro",
-    "base_price_no_iva": 16.17
+    "base_price_no_iva": 16.17,
+    "price_with_iva_raw": 18.6,
+    "quoted_pvp_iva": 18.9,
+    "excel_code": "12MN7916-1"
   },
   {
     "sku": "12MN7916-4",
@@ -597,7 +762,10 @@
     "category": "lubricantes",
     "name": "MANNOL Molibden Green Ultra 5W-30 (1 Galón / 5L)",
     "presentation": "1 Galón / 5L",
-    "base_price_no_iva": 55.35
+    "base_price_no_iva": 55.35,
+    "price_with_iva_raw": 63.65,
+    "quoted_pvp_iva": 63.9,
+    "excel_code": "12MN7916-4"
   },
   {
     "sku": "LP-LUR-038",
@@ -607,7 +775,8 @@
     "category": "lubricantes",
     "name": "MANNOL TS-5 UHPD 10W-40",
     "presentation": "Caneca 5 GL",
-    "base_price_no_iva": 105.22
+    "base_price_no_iva": 105.22,
+    "quoted_pvp_iva": 121.0
   },
   {
     "sku": "LP-LUR-039",
@@ -617,7 +786,10 @@
     "category": "lubricantes",
     "name": "MANNOL Hydro Hv ISO 68",
     "presentation": "Caneca 5 GL",
-    "base_price_no_iva": 86.96
+    "base_price_no_iva": 86.96,
+    "price_with_iva_raw": 100.0,
+    "quoted_pvp_iva": 100.0,
+    "excel_code": "MN2201-20"
   },
   {
     "sku": "015MD12-15W40",
@@ -627,7 +799,10 @@
     "category": "lubricantes",
     "name": "MOBIL Delvac Mx 15W-40 (1 Litro)",
     "presentation": "1 Litro",
-    "base_price_no_iva": 6.83
+    "base_price_no_iva": 6.83,
+    "price_with_iva_raw": 7.85,
+    "quoted_pvp_iva": 7.9,
+    "excel_code": "015MD12-15W40"
   },
   {
     "sku": "01504MD04-15W40",
@@ -637,7 +812,10 @@
     "category": "lubricantes",
     "name": "MOBIL Delvac Mx 15W-40 (1 Galón)",
     "presentation": "1 Galón",
-    "base_price_no_iva": 24.39
+    "base_price_no_iva": 24.39,
+    "price_with_iva_raw": 28.05,
+    "quoted_pvp_iva": 28.5,
+    "excel_code": "01504MD04-15W40"
   },
   {
     "sku": "015MD5-15W40",
@@ -647,7 +825,10 @@
     "category": "lubricantes",
     "name": "MOBIL Delvac Mx 15W-40 (Caneca 5 GL)",
     "presentation": "Caneca 5 GL",
-    "base_price_no_iva": 94.35
+    "base_price_no_iva": 94.35,
+    "price_with_iva_raw": 108.5,
+    "quoted_pvp_iva": 108.5,
+    "excel_code": "015MD5-15W40"
   },
   {
     "sku": "LP-LUR-003-2",
@@ -657,7 +838,8 @@
     "category": "lubricantes",
     "name": "MOBIL Delvac 1300 Sup 15W-40",
     "presentation": "Caneca 5 GL",
-    "base_price_no_iva": 105.83
+    "base_price_no_iva": 105.83,
+    "quoted_pvp_iva": 121.9
   },
   {
     "sku": "015MS12-10W30",
@@ -667,7 +849,10 @@
     "category": "lubricantes",
     "name": "MOBIL 10W-30 Semi Sintético (1 Litro)",
     "presentation": "1 Litro",
-    "base_price_no_iva": 6.48
+    "base_price_no_iva": 6.48,
+    "price_with_iva_raw": 7.45,
+    "quoted_pvp_iva": 7.5,
+    "excel_code": "015MS12-10W30"
   },
   {
     "sku": "015MS04-10W30",
@@ -677,7 +862,10 @@
     "category": "lubricantes",
     "name": "MOBIL 10W-30 Semi Sintético (1 Galón)",
     "presentation": "1 Galón",
-    "base_price_no_iva": 24.13
+    "base_price_no_iva": 24.13,
+    "price_with_iva_raw": 27.75,
+    "quoted_pvp_iva": 27.9,
+    "excel_code": "015MS04-10W30"
   },
   {
     "sku": "015MS12-20W50",
@@ -687,7 +875,10 @@
     "category": "lubricantes",
     "name": "MOBIL 20W-50 Semi Sintético (1 Litro)",
     "presentation": "1 Litro",
-    "base_price_no_iva": 6.48
+    "base_price_no_iva": 6.48,
+    "price_with_iva_raw": 7.45,
+    "quoted_pvp_iva": 7.5,
+    "excel_code": "015MS12-20W50"
   },
   {
     "sku": "015MS04-20W50",
@@ -697,7 +888,10 @@
     "category": "lubricantes",
     "name": "MOBIL 20W-50 Semi Sintético (1 Galón)",
     "presentation": "1 Galón",
-    "base_price_no_iva": 24.13
+    "base_price_no_iva": 24.13,
+    "price_with_iva_raw": 27.75,
+    "quoted_pvp_iva": 27.9,
+    "excel_code": "015MS04-20W50"
   },
   {
     "sku": "LP-FIL-002",
@@ -707,7 +901,8 @@
     "category": "filtros",
     "name": "Filtro de Aire de Motor Advance — Toyota Hilux 2.7L Fi 16-21 Hilux 2.4L Di 16-21, Fortuner 2.7L Fi 16-21",
     "presentation": "Unidad",
-    "base_price_no_iva": 5.48
+    "base_price_no_iva": 5.48,
+    "quoted_pvp_iva": 6.5
   },
   {
     "sku": "LP-FIL-003",
@@ -717,7 +912,8 @@
     "category": "filtros",
     "name": "Filtro de Aire de Motor Advance — JAC Pick Up T6 2.0 17- 19 Gasolina (prem Aip1068 Xtrag AP-164)",
     "presentation": "Unidad",
-    "base_price_no_iva": 6.26
+    "base_price_no_iva": 6.26,
+    "quoted_pvp_iva": 7.5
   },
   {
     "sku": "LP-FIL-004",
@@ -727,7 +923,8 @@
     "category": "filtros",
     "name": "Filtro de Aire de Motor Advance — Hyundai Tucson 2.0L 04-10, KIA Sportage",
     "presentation": "Unidad",
-    "base_price_no_iva": 3.61
+    "base_price_no_iva": 3.61,
+    "quoted_pvp_iva": 4.5
   },
   {
     "sku": "LP-FIL-005",
@@ -737,7 +934,8 @@
     "category": "filtros",
     "name": "Filtro de Aire de Motor Advance — Hyundai Accent 1.4-1.6 Rio Xcite (xtrag AP-111 Red 28113-1G000)",
     "presentation": "Unidad",
-    "base_price_no_iva": 2.91
+    "base_price_no_iva": 2.91,
+    "quoted_pvp_iva": 3.5
   },
   {
     "sku": "LP-FIL-006",
@@ -747,7 +945,8 @@
     "category": "filtros",
     "name": "Filtro de Aire de Motor Advance — Suzuki Gran Vitara Suzuki 2.0 2.7",
     "presentation": "Unidad",
-    "base_price_no_iva": 2.96
+    "base_price_no_iva": 2.96,
+    "quoted_pvp_iva": 3.5
   },
   {
     "sku": "LP-FIL-007",
@@ -757,7 +956,8 @@
     "category": "filtros",
     "name": "Filtro de Aire de Motor Advance — KIA Soul /12- Soluto/xcite/verna /20",
     "presentation": "Unidad",
-    "base_price_no_iva": 3.26
+    "base_price_no_iva": 3.26,
+    "quoted_pvp_iva": 3.9
   },
   {
     "sku": "AA-10891",
@@ -767,7 +967,8 @@
     "category": "filtros",
     "name": "Filtro de Aire de Motor Advance (AA-10891) — Chevrolet Joy - Aa- 10891",
     "presentation": "Unidad",
-    "base_price_no_iva": 4.0
+    "base_price_no_iva": 4.0,
+    "quoted_pvp_iva": 4.9
   },
   {
     "sku": "LP-FIL-009",
@@ -777,7 +978,8 @@
     "category": "filtros",
     "name": "Filtro de Aire de Motor Advance — Chevrolet Spark GT 2011, Beat - (prem Aip777 Mil MK-92369, Red 96827723)",
     "presentation": "Unidad",
-    "base_price_no_iva": 2.78
+    "base_price_no_iva": 2.78,
+    "quoted_pvp_iva": 3.5
   },
   {
     "sku": "LP-FIL-010",
@@ -787,7 +989,8 @@
     "category": "filtros",
     "name": "Filtro de Aire de Motor Advance — Chevrolet Luv D-MAX 2.4 Gas. Trailblazer /15- (cilindrico)",
     "presentation": "Unidad",
-    "base_price_no_iva": 9.48
+    "base_price_no_iva": 9.48,
+    "quoted_pvp_iva": 10.9
   },
   {
     "sku": "LP-FIL-011",
@@ -797,7 +1000,8 @@
     "category": "filtros",
     "name": "Filtro de Aire de Motor Advance — Zotye T600",
     "presentation": "Unidad",
-    "base_price_no_iva": 5.3
+    "base_price_no_iva": 5.3,
+    "quoted_pvp_iva": 6.5
   },
   {
     "sku": "AA-11113",
@@ -807,7 +1011,8 @@
     "category": "filtros",
     "name": "Filtro de Aire de Motor Advance (AA-11113) — Dongfeng Rich 6 2020 - AA-11113",
     "presentation": "Unidad",
-    "base_price_no_iva": 4.35
+    "base_price_no_iva": 4.35,
+    "quoted_pvp_iva": 5.0
   },
   {
     "sku": "LP-FIL-013",
@@ -817,7 +1022,8 @@
     "category": "filtros",
     "name": "Filtro de Aire de Motor Advance — Renault Logan II 1.4, 1.6 (14-16) 2019, Sandero 1.4 1.6 (14-16), 165469466R",
     "presentation": "Unidad",
-    "base_price_no_iva": 4.52
+    "base_price_no_iva": 4.52,
+    "quoted_pvp_iva": 5.5
   },
   {
     "sku": "LP-FIL-014",
@@ -827,7 +1033,8 @@
     "category": "filtros",
     "name": "Filtro de Aire de Motor Advance — Renault Logan 1.6 /16- Sandero Stepway 1.6 /16- Duster 1.6-2.0 /16- Panelado 165460",
     "presentation": "Unidad",
-    "base_price_no_iva": 4.65
+    "base_price_no_iva": 4.65,
+    "quoted_pvp_iva": 5.5
   },
   {
     "sku": "LP-FIL-015",
@@ -837,7 +1044,8 @@
     "category": "filtros",
     "name": "Filtro de Aire de Motor Advance — Ford Ranger Nueva 2.5 Mazda BT-50 Nueva (red Aip892 Xtrag SR-2072 Red 1WA013Z40) (cil)",
     "presentation": "Unidad",
-    "base_price_no_iva": 7.19
+    "base_price_no_iva": 7.19,
+    "quoted_pvp_iva": 8.5
   },
   {
     "sku": "LP-FIL-016",
@@ -847,7 +1055,8 @@
     "category": "filtros",
     "name": "Filtro de Aire de Motor Advance — Chevrolet Cruze 1.8 /10-16 / Chevrolet Orlando",
     "presentation": "Unidad",
-    "base_price_no_iva": 5.74
+    "base_price_no_iva": 5.74,
+    "quoted_pvp_iva": 6.9
   },
   {
     "sku": "LP-FIL-017",
@@ -857,7 +1066,8 @@
     "category": "filtros",
     "name": "Filtro de Aire de Motor Advance — Chevrolet Spark Moderno 2006-07 (panel) (mk-91485)",
     "presentation": "Unidad",
-    "base_price_no_iva": 2.82
+    "base_price_no_iva": 2.82,
+    "quoted_pvp_iva": 3.5
   },
   {
     "sku": "LP-FIL-018",
@@ -867,7 +1077,8 @@
     "category": "filtros",
     "name": "Filtro de Aire de Motor Advance — Hyundai Accent Rb KIA Rio (prem Aip837 Red 28113-1R100)",
     "presentation": "Unidad",
-    "base_price_no_iva": 2.78
+    "base_price_no_iva": 2.78,
+    "quoted_pvp_iva": 3.5
   },
   {
     "sku": "LP-FIL-019",
@@ -877,7 +1088,8 @@
     "category": "filtros",
     "name": "Filtro de Aire de Motor Advance — Chevrolet Sail",
     "presentation": "Unidad",
-    "base_price_no_iva": 3.09
+    "base_price_no_iva": 3.09,
+    "quoted_pvp_iva": 3.9
   },
   {
     "sku": "AA-25006",
@@ -887,7 +1099,8 @@
     "category": "filtros",
     "name": "Filtro de Aire de Motor Advance (AA-25006) — Great Wall Poer 2.0T Diesel 2022 - AA-25006",
     "presentation": "Unidad",
-    "base_price_no_iva": 5.61
+    "base_price_no_iva": 5.61,
+    "quoted_pvp_iva": 6.5
   },
   {
     "sku": "AA-25011",
@@ -897,7 +1110,8 @@
     "category": "filtros",
     "name": "Filtro de Aire de Motor Advance (AA-25011) — Tank 300 2.0T, 500 2.0T - Aa- 25011",
     "presentation": "Unidad",
-    "base_price_no_iva": 5.52
+    "base_price_no_iva": 5.52,
+    "quoted_pvp_iva": 6.5
   },
   {
     "sku": "LP-FIL-022",
@@ -907,7 +1121,8 @@
     "category": "filtros",
     "name": "Filtro de Aire de Motor Advance — Nissan X-trail /14 Qashqai 2.0 /15- Renault Koleos",
     "presentation": "Unidad",
-    "base_price_no_iva": 5.61
+    "base_price_no_iva": 5.61,
+    "quoted_pvp_iva": 6.5
   },
   {
     "sku": "LP-FIL-023",
@@ -917,7 +1132,8 @@
     "category": "filtros",
     "name": "Filtro de Aire de Motor Advance — Mazda BT-50 2.5 Turbo Diesel B2500 Galant Gas 2000 Diesel 4X2 (mil MK-9021)",
     "presentation": "Unidad",
-    "base_price_no_iva": 4.7
+    "base_price_no_iva": 4.7,
+    "quoted_pvp_iva": 5.5
   },
   {
     "sku": "LP-FIL-024",
@@ -927,7 +1143,8 @@
     "category": "filtros",
     "name": "Filtro de Aire de Motor Advance — Chevrolet Luv D-MAX 3.0 /14- Panelado",
     "presentation": "Unidad",
-    "base_price_no_iva": 4.7
+    "base_price_no_iva": 4.7,
+    "quoted_pvp_iva": 5.5
   },
   {
     "sku": "AA-2662",
@@ -937,7 +1154,8 @@
     "category": "filtros",
     "name": "Filtro de Aire de Motor Advance (AA-2662) — Chevrolet D-MAX 2.0T Diesel 2025 - AA-2662",
     "presentation": "Unidad",
-    "base_price_no_iva": 5.96
+    "base_price_no_iva": 5.96,
+    "quoted_pvp_iva": 6.9
   },
   {
     "sku": "LP-FIL-026",
@@ -947,7 +1165,8 @@
     "category": "filtros",
     "name": "Filtro de Aire de Motor Advance — Hyundai Tucson All New 2.0 Santa Fe 2.5 Sonata 2.0 KIA Sorento 3.5",
     "presentation": "Unidad",
-    "base_price_no_iva": 4.3
+    "base_price_no_iva": 4.3,
+    "quoted_pvp_iva": 5.0
   },
   {
     "sku": "LP-FIL-027",
@@ -957,7 +1176,8 @@
     "category": "filtros",
     "name": "Filtro de Aire de Motor Advance — Hyundai Bus County, Hd65, Hd72 , Hd78 Sello Radial (cilindrico) (mk-94190)",
     "presentation": "Unidad",
-    "base_price_no_iva": 8.61
+    "base_price_no_iva": 8.61,
+    "quoted_pvp_iva": 9.9
   },
   {
     "sku": "LP-FIL-028",
@@ -967,7 +1187,8 @@
     "category": "filtros",
     "name": "Filtro de Aire de Motor Advance — KIA Grand Pregio 2006-2012 (cilindrico)",
     "presentation": "Unidad",
-    "base_price_no_iva": 4.87
+    "base_price_no_iva": 4.87,
+    "quoted_pvp_iva": 5.9
   },
   {
     "sku": "LP-FIL-029",
@@ -977,7 +1198,8 @@
     "category": "filtros",
     "name": "Filtro de Aire de Motor Advance — Great Wall Wingle 5 2.0 Diesel 19, Wingle 7",
     "presentation": "Unidad",
-    "base_price_no_iva": 4.22
+    "base_price_no_iva": 4.22,
+    "quoted_pvp_iva": 4.9
   },
   {
     "sku": "LP-FIL-030",
@@ -987,7 +1209,8 @@
     "category": "filtros",
     "name": "Filtro de Aire de Motor Advance — KIA Picanto R /10-17 (28113-1y100)",
     "presentation": "Unidad",
-    "base_price_no_iva": 3.09
+    "base_price_no_iva": 3.09,
+    "quoted_pvp_iva": 3.9
   },
   {
     "sku": "LP-FIL-031",
@@ -997,7 +1220,8 @@
     "category": "filtros",
     "name": "Filtro de Aire de Motor Advance — Nissan Sentra B-15 Almera Murano Pathfinder 3.0/CHEVROLET Scross (16546-0z000)",
     "presentation": "Unidad",
-    "base_price_no_iva": 3.26
+    "base_price_no_iva": 3.26,
+    "quoted_pvp_iva": 3.9
   },
   {
     "sku": "LP-FIL-032",
@@ -1007,7 +1231,8 @@
     "category": "filtros",
     "name": "Filtro de Aire de Motor Advance — Chevrolet Rodeo 2.6 (redondo)",
     "presentation": "Unidad",
-    "base_price_no_iva": 4.7
+    "base_price_no_iva": 4.7,
+    "quoted_pvp_iva": 5.5
   },
   {
     "sku": "LP-FIL-033",
@@ -1027,7 +1252,8 @@
     "category": "filtros",
     "name": "Filtro de Aire de Motor Advance (AA-54) — Nissan X-trail E-power 1.5 Vc Turbo(e-4orce T33) Qashqai 1.3T Caja X 24 - Aa- 54",
     "presentation": "Unidad",
-    "base_price_no_iva": 5.91
+    "base_price_no_iva": 5.91,
+    "quoted_pvp_iva": 6.9
   },
   {
     "sku": "AA-5827",
@@ -1037,7 +1263,8 @@
     "category": "filtros",
     "name": "Filtro de Aire de Motor Advance (AA-5827) — Volkswagen Golf Jetta Skoda Octavia Audi A3 1.8T - AA-5827 (mk-5827)",
     "presentation": "Unidad",
-    "base_price_no_iva": 5.61
+    "base_price_no_iva": 5.61,
+    "quoted_pvp_iva": 6.5
   },
   {
     "sku": "LP-FIL-036",
@@ -1047,7 +1274,8 @@
     "category": "filtros",
     "name": "Filtro de Aire de Motor Advance — Mazda BT-50 Toyota Hilux 2.5-2.7 /-09 / Fortunerjac 2.8 (cilindrico)",
     "presentation": "Unidad",
-    "base_price_no_iva": 5.35
+    "base_price_no_iva": 5.35,
+    "quoted_pvp_iva": 6.5
   },
   {
     "sku": "LP-FIL-037",
@@ -1057,7 +1285,8 @@
     "category": "filtros",
     "name": "Filtro de Aire de Motor Advance — KIA Picanto New 2017 (red 28113-G6000 Xtraguard Ca-g6000)",
     "presentation": "Unidad",
-    "base_price_no_iva": 4.39
+    "base_price_no_iva": 4.39,
+    "quoted_pvp_iva": 5.5
   },
   {
     "sku": "LP-FIL-038",
@@ -1067,7 +1296,8 @@
     "category": "filtros",
     "name": "Filtro de Aire de Motor Advance — Isuzu Npr 3,9 Turbo Nhr Nkr 8941560520 (cilindrico) (mk-5070)",
     "presentation": "Unidad",
-    "base_price_no_iva": 10.78
+    "base_price_no_iva": 10.78,
+    "quoted_pvp_iva": 12.5
   },
   {
     "sku": "AA-6127",
@@ -1077,7 +1307,8 @@
     "category": "filtros",
     "name": "Filtro de Aire de Motor Advance (AA-6127) — Chevrolet D-MAX 2.5 3.5 Tdi (aa-6127/sr-550/aip682/8-97147860910) (cilindrico)",
     "presentation": "Unidad",
-    "base_price_no_iva": 4.22
+    "base_price_no_iva": 4.22,
+    "quoted_pvp_iva": 4.9
   },
   {
     "sku": "LP-FIL-040",
@@ -1087,7 +1318,8 @@
     "category": "filtros",
     "name": "Filtro de Aire de Motor Advance — Mazda BT-50 Gasolina 2200 Iny Ford Ranger 2.2 2.6 2008",
     "presentation": "Unidad",
-    "base_price_no_iva": 2.78
+    "base_price_no_iva": 2.78,
+    "quoted_pvp_iva": 3.5
   },
   {
     "sku": "LP-FIL-041",
@@ -1097,7 +1329,8 @@
     "category": "filtros",
     "name": "Filtro de Aire de Motor Advance — Chevrolet Vitara 1.6 /97-01 (cuadrado)",
     "presentation": "Unidad",
-    "base_price_no_iva": 5.17
+    "base_price_no_iva": 5.17,
+    "quoted_pvp_iva": 6.0
   },
   {
     "sku": "LP-FIL-042",
@@ -1107,7 +1340,8 @@
     "category": "filtros",
     "name": "Filtro de Aire de Motor Advance — Nissan Sentra B14 Renault Duster (prem Aip515 Xtrag AP-103 Red 16546-73C10)",
     "presentation": "Unidad",
-    "base_price_no_iva": 3.0
+    "base_price_no_iva": 3.0,
+    "quoted_pvp_iva": 3.5
   },
   {
     "sku": "LP-FIL-043",
@@ -1117,7 +1351,8 @@
     "category": "filtros",
     "name": "Filtro de Aire de Motor Advance — Chevrolet Vitara Spts Iny",
     "presentation": "Unidad",
-    "base_price_no_iva": 3.26
+    "base_price_no_iva": 3.26,
+    "quoted_pvp_iva": 3.9
   },
   {
     "sku": "LP-FIL-044",
@@ -1127,7 +1362,8 @@
     "category": "filtros",
     "name": "Filtro de Aire de Motor Advance — Chevrolet Rodeo 3.2, Trooper 3.2, Luv 2.2, 2.3, 3.2",
     "presentation": "Unidad",
-    "base_price_no_iva": 3.61
+    "base_price_no_iva": 3.61,
+    "quoted_pvp_iva": 4.5
   },
   {
     "sku": "LP-FIL-045",
@@ -1137,7 +1373,8 @@
     "category": "filtros",
     "name": "Filtro de Aire de Motor Advance — Chevrolet Gran Vitara 3PTAS(PREM Aip513 Xtrag WA-8069 Red 25311970)",
     "presentation": "Unidad",
-    "base_price_no_iva": 2.78
+    "base_price_no_iva": 2.78,
+    "quoted_pvp_iva": 3.5
   },
   {
     "sku": "LP-FIL-046",
@@ -1147,7 +1384,8 @@
     "category": "filtros",
     "name": "Filtro de Aire de Motor Advance — Suzuki Gran Vitara Suzuki 2.4 78K00",
     "presentation": "Unidad",
-    "base_price_no_iva": 4.35
+    "base_price_no_iva": 4.35,
+    "quoted_pvp_iva": 5.0
   },
   {
     "sku": "LP-FIL-047",
@@ -1157,7 +1395,8 @@
     "category": "filtros",
     "name": "Filtro de Aire de Motor Advance — Hyundai Tucson IX KIA Sportage R 11-12 Creta - (mk-29766 Prem Aip767",
     "presentation": "Unidad",
-    "base_price_no_iva": 3.09
+    "base_price_no_iva": 3.09,
+    "quoted_pvp_iva": 3.9
   },
   {
     "sku": "LP-FIL-048",
@@ -1167,7 +1406,8 @@
     "category": "filtros",
     "name": "Filtro de Aire de Motor Advance — Renault Logan/sandero/duster/megane C1858/1",
     "presentation": "Unidad",
-    "base_price_no_iva": 3.43
+    "base_price_no_iva": 3.43,
+    "quoted_pvp_iva": 4.0
   },
   {
     "sku": "LP-FIL-049",
@@ -1177,7 +1417,8 @@
     "category": "filtros",
     "name": "Filtro de Aire de Motor Advance — KIA Rio X Line /18 GT Limited Sport",
     "presentation": "Unidad",
-    "base_price_no_iva": 4.13
+    "base_price_no_iva": 4.13,
+    "quoted_pvp_iva": 4.9
   },
   {
     "sku": "LP-FIL-050",
@@ -1187,7 +1428,8 @@
     "category": "filtros",
     "name": "Filtro de Aire de Motor Advance — Great Wall Wingle /22",
     "presentation": "Unidad",
-    "base_price_no_iva": 6.26
+    "base_price_no_iva": 6.26,
+    "quoted_pvp_iva": 7.5
   },
   {
     "sku": "LP-FIL-051",
@@ -1197,7 +1439,8 @@
     "category": "filtros",
     "name": "Filtro de Aire de Motor Advance — Zx Auto-grand Tiger-wingle A38010 1109101-K08-A1",
     "presentation": "Unidad",
-    "base_price_no_iva": 3.09
+    "base_price_no_iva": 3.09,
+    "quoted_pvp_iva": 3.9
   },
   {
     "sku": "AA-9123",
@@ -1207,7 +1450,8 @@
     "category": "filtros",
     "name": "Filtro de Aire de Motor Advance (AA-9123) — Chery Tiggo 2 Pro 1.5L - AA-9123",
     "presentation": "Unidad",
-    "base_price_no_iva": 5.35
+    "base_price_no_iva": 5.35,
+    "quoted_pvp_iva": 6.5
   },
   {
     "sku": "AA-9124",
@@ -1217,7 +1461,8 @@
     "category": "filtros",
     "name": "Filtro de Aire de Motor Advance (AA-9124) — Chery Arrizo 5 1.5 - Aa- 9124",
     "presentation": "Unidad",
-    "base_price_no_iva": 4.87
+    "base_price_no_iva": 4.87,
+    "quoted_pvp_iva": 5.9
   },
   {
     "sku": "AA-9322",
@@ -1227,7 +1472,8 @@
     "category": "filtros",
     "name": "Filtro de Aire de Motor Advance (AA-9322) — Chevrolet Sail 1.5L 17-21 (aa-9322, Aip1018, Ap143, 90799322)",
     "presentation": "Unidad",
-    "base_price_no_iva": 3.43
+    "base_price_no_iva": 3.43,
+    "quoted_pvp_iva": 4.0
   },
   {
     "sku": "LP-FIL-055",
@@ -1237,7 +1483,8 @@
     "category": "filtros",
     "name": "Filtro de Aire de Motor Advance — KIA Cerato 1.6 05-09 Hyundai Elantra 1.6 00-06 Cuupe Tiburon 02-08 - Aa9392",
     "presentation": "Unidad",
-    "base_price_no_iva": 3.91
+    "base_price_no_iva": 3.91,
+    "quoted_pvp_iva": 4.5
   },
   {
     "sku": "AA-9476",
@@ -1257,7 +1504,8 @@
     "category": "filtros",
     "name": "Filtro de Aire de Motor Advance — Hyundai Getz 1.3 2002 (mk-24086)",
     "presentation": "Unidad",
-    "base_price_no_iva": 3.26
+    "base_price_no_iva": 3.26,
+    "quoted_pvp_iva": 3.9
   },
   {
     "sku": "LP-FIL-058",
@@ -1267,7 +1515,8 @@
     "category": "filtros",
     "name": "Filtro de Aire de Motor Advance — Volkswagen Jetta IV 2.0 /11, Skoda Octavia 1.4 -2.0 Fsi /07 (cilindrico)",
     "presentation": "Unidad",
-    "base_price_no_iva": 7.04
+    "base_price_no_iva": 7.04,
+    "quoted_pvp_iva": 8.5
   },
   {
     "sku": "LP-FIL-059",
@@ -1277,7 +1526,8 @@
     "category": "filtros",
     "name": "Filtro de Aire de Motor Advance — Isuzu Npr 11-19 Nhr Reward 11-18 Nmr 11-14 Nqr 11-18 NLR 11-18 JAC Hfc1035 (cil)",
     "presentation": "Unidad",
-    "base_price_no_iva": 14.11
+    "base_price_no_iva": 14.11,
+    "quoted_pvp_iva": 16.5
   },
   {
     "sku": "LP-FIL-060",
@@ -1287,7 +1537,8 @@
     "category": "filtros",
     "name": "Filtro de Aire de Motor Advance — Chevrolet Aveo Chy Taxi",
     "presentation": "Unidad",
-    "base_price_no_iva": 2.17
+    "base_price_no_iva": 2.17,
+    "quoted_pvp_iva": 2.5
   },
   {
     "sku": "AA-994",
@@ -1297,7 +1548,8 @@
     "category": "filtros",
     "name": "Filtro de Aire de Motor Advance (AA-994) — Renault Logan, Sandero - AA-994 (mk-9074)",
     "presentation": "Unidad",
-    "base_price_no_iva": 5.0
+    "base_price_no_iva": 5.0,
+    "quoted_pvp_iva": 5.9
   },
   {
     "sku": "LP-FIL-065",
@@ -1307,7 +1559,8 @@
     "category": "filtros",
     "name": "Filtro de Aire de Motor Advance — KIA Cerato /13- Hyundai Elantra 1.6 /07-11 I30 1.6 /09-10 Koup 2.0 /10-17",
     "presentation": "Unidad",
-    "base_price_no_iva": 3.0
+    "base_price_no_iva": 3.0,
+    "quoted_pvp_iva": 3.5
   },
   {
     "sku": "AA-3038",
@@ -1327,7 +1580,10 @@
     "category": "filtros",
     "name": "Filtro de Combustible Advance (AO-10127) — KIA Pregio H 100 Terracan Carnival Diesel K2700 H-350",
     "presentation": "Unidad",
-    "base_price_no_iva": 2.91
+    "base_price_no_iva": 2.91,
+    "price_with_iva_raw": 3.35,
+    "quoted_pvp_iva": 3.5,
+    "excel_code": "078AO-10127"
   },
   {
     "sku": "078AO-1539",
@@ -1337,7 +1593,10 @@
     "category": "filtros",
     "name": "Filtro de Aceite Advance (AO-1539) — Chevrolet D-MAX 3.0 02-16 D-MAX 2.5 02-12, Ford Escape 2.0 01-04",
     "presentation": "Unidad",
-    "base_price_no_iva": 2.17
+    "base_price_no_iva": 2.17,
+    "price_with_iva_raw": 2.5,
+    "quoted_pvp_iva": 2.5,
+    "excel_code": "078AO-1539"
   },
   {
     "sku": "078AO-2",
@@ -1347,7 +1606,10 @@
     "category": "filtros",
     "name": "Filtro de Combustible Advance (AO-2) — Ford F150-escape-explorer V8 Iny. Wingle Diesel 2.0 (ph-820)",
     "presentation": "Unidad",
-    "base_price_no_iva": 2.65
+    "base_price_no_iva": 2.65,
+    "price_with_iva_raw": 3.05,
+    "quoted_pvp_iva": 3.5,
+    "excel_code": "078AO-2"
   },
   {
     "sku": "078AO-2841",
@@ -1357,7 +1619,10 @@
     "category": "filtros",
     "name": "Filtro de Aceite Advance (AO-2841) — Chevrolet Sail/van N200-n300/spark Gt/beat Premier (10000km) (sh4444)",
     "presentation": "Unidad",
-    "base_price_no_iva": 2.17
+    "base_price_no_iva": 2.17,
+    "price_with_iva_raw": 2.5,
+    "quoted_pvp_iva": 2.5,
+    "excel_code": "078AO-2841"
   },
   {
     "sku": "078AO-2849",
@@ -1367,7 +1632,10 @@
     "category": "filtros",
     "name": "Filtro de Aceite Advance (AO-2849) — Mazda 1.6-2.0-2.2-2.6/BT-50 Gas/ford Courier 2.0-2.2 Wingle 5 Gas",
     "presentation": "Unidad",
-    "base_price_no_iva": 2.17
+    "base_price_no_iva": 2.17,
+    "price_with_iva_raw": 2.5,
+    "quoted_pvp_iva": 2.5,
+    "excel_code": "078AO-2849"
   },
   {
     "sku": "078AO-2863",
@@ -1377,7 +1645,10 @@
     "category": "filtros",
     "name": "Filtro de Combustible Advance (AO-2863) — Chevrolet Luv 2.5 Diesel/great Wall/haval H5 2.5/WINGLE 2.8/CAMION Jack (ph7325)",
     "presentation": "Unidad",
-    "base_price_no_iva": 3.52
+    "base_price_no_iva": 3.52,
+    "price_with_iva_raw": 4.05,
+    "quoted_pvp_iva": 4.5,
+    "excel_code": "078AO-2863"
   },
   {
     "sku": "078AO-2870",
@@ -1387,7 +1658,10 @@
     "category": "filtros",
     "name": "Filtro de Aceite Advance (AO-2870) — Mercedes 190 Skoda Fabia I Felicia Super B Volkswagen Crossfox Gol Golf Polo",
     "presentation": "Unidad",
-    "base_price_no_iva": 2.52
+    "base_price_no_iva": 2.52,
+    "price_with_iva_raw": 2.9,
+    "quoted_pvp_iva": 2.9,
+    "excel_code": "078AO-2870"
   },
   {
     "sku": "078AO-2879",
@@ -1397,7 +1671,10 @@
     "category": "filtros",
     "name": "Filtro de Aceite Advance (AO-2879) — Nissan Navara, Jeep. Land Rover. Lada, Dodge, Fiat Antiguos (ph-43)",
     "presentation": "Unidad",
-    "base_price_no_iva": 3.12
+    "base_price_no_iva": 3.12,
+    "price_with_iva_raw": 3.59,
+    "quoted_pvp_iva": 3.9,
+    "excel_code": "078AO-2879"
   },
   {
     "sku": "078AO-4967",
@@ -1407,7 +1684,10 @@
     "category": "filtros",
     "name": "Filtro de Aceite Advance (AO-4967) — Chevrolet Spark Life 1.0L 06-19/TOYOTA Rav 4/CHANGAN Alsvin 1.5L",
     "presentation": "Unidad",
-    "base_price_no_iva": 2.17
+    "base_price_no_iva": 2.17,
+    "price_with_iva_raw": 2.5,
+    "quoted_pvp_iva": 2.5,
+    "excel_code": "078AO-4967"
   },
   {
     "sku": "078AO-50710",
@@ -1417,7 +1697,10 @@
     "category": "filtros",
     "name": "Filtro de Aceite Advance (AO-50710) — Chevrolet Luv D-MAX /14",
     "presentation": "Unidad",
-    "base_price_no_iva": 2.17
+    "base_price_no_iva": 2.17,
+    "price_with_iva_raw": 2.5,
+    "quoted_pvp_iva": 2.5,
+    "excel_code": "078AO-50710"
   },
   {
     "sku": "078AO-7317",
@@ -1427,7 +1710,10 @@
     "category": "filtros",
     "name": "Filtro de Aceite Advance (AO-7317) — Fiat Palio Fiorino Civic Accord KIA I10 Cerato (ph2867)",
     "presentation": "Unidad",
-    "base_price_no_iva": 2.17
+    "base_price_no_iva": 2.17,
+    "price_with_iva_raw": 2.5,
+    "quoted_pvp_iva": 2.5,
+    "excel_code": "078AO-7317"
   },
   {
     "sku": "078AO-8",
@@ -1437,7 +1723,10 @@
     "category": "filtros",
     "name": "Filtro de Combustible Advance (AO-8) — Ford/dodge/toyota Stout/hilux/land Cruiser/mazda BT-50 Diesel PH-8",
     "presentation": "Unidad",
-    "base_price_no_iva": 2.87
+    "base_price_no_iva": 2.87,
+    "price_with_iva_raw": 3.3,
+    "quoted_pvp_iva": 3.5,
+    "excel_code": "078AO-8"
   },
   {
     "sku": "079AOE-10246",
@@ -1447,7 +1736,10 @@
     "category": "filtros",
     "name": "Filtro de Aceite Advance (079AOE-10246) — Chevrolet Cruze 1.8L / Tracker 1.8L 16V 13-19 / (elemento)",
     "presentation": "Unidad",
-    "base_price_no_iva": 2.88
+    "base_price_no_iva": 2.88,
+    "price_with_iva_raw": 3.31,
+    "quoted_pvp_iva": 3.5,
+    "excel_code": "079AOE-10246"
   },
   {
     "sku": "080AO-1",
@@ -1457,7 +1749,10 @@
     "category": "filtros",
     "name": "Filtro de Combustible Advance (AO-1) — Mazda BT-50 Diesel",
     "presentation": "Unidad",
-    "base_price_no_iva": 3.17
+    "base_price_no_iva": 3.17,
+    "price_with_iva_raw": 3.65,
+    "quoted_pvp_iva": 3.9,
+    "excel_code": "080AO-1"
   },
   {
     "sku": "080AO-1051",
@@ -1467,7 +1762,10 @@
     "category": "filtros",
     "name": "Filtro de Combustible Advance (AO-1051) — Chevrolet D-MAX 2.0T Diesel 2025 - AO-1051 24.00 Unidad 5,00",
     "presentation": "Unidad",
-    "base_price_no_iva": 2.17
+    "base_price_no_iva": 2.17,
+    "price_with_iva_raw": 2.5,
+    "quoted_pvp_iva": 2.5,
+    "excel_code": "080AO-1051"
   },
   {
     "sku": "080AO-10600",
@@ -1477,7 +1775,10 @@
     "category": "filtros",
     "name": "Filtro de Aceite Advance (AO-10600) — Volkswagen Tiguan 2.0 /07- Amarok Gas. Passat 1.8 /07- Audi 2.0 Con Rosca Macho",
     "presentation": "Unidad",
-    "base_price_no_iva": 5.43
+    "base_price_no_iva": 5.43,
+    "price_with_iva_raw": 6.25,
+    "quoted_pvp_iva": 6.5,
+    "excel_code": "080AO-10600"
   },
   {
     "sku": "080AO-1302",
@@ -1487,7 +1788,10 @@
     "category": "filtros",
     "name": "Filtro de Aceite Advance (AO-1302) — Mitsubishi Canter/fuso/hino Fb-fc/hd 55/HD 65 C161",
     "presentation": "Unidad",
-    "base_price_no_iva": 4.35
+    "base_price_no_iva": 4.35,
+    "price_with_iva_raw": 5.0,
+    "quoted_pvp_iva": 5.0,
+    "excel_code": "080AO-1302"
   },
   {
     "sku": "080AO-1314",
@@ -1497,7 +1801,10 @@
     "category": "filtros",
     "name": "Filtro de Aceite Advance (AO-1314) — Hino Fb1817, Fd2220, Fd2320, Fe3020, Sg3320, Sg3325 ()",
     "presentation": "Unidad",
-    "base_price_no_iva": 7.13
+    "base_price_no_iva": 7.13,
+    "price_with_iva_raw": 8.2,
+    "quoted_pvp_iva": 8.5,
+    "excel_code": "080AO-1314"
   },
   {
     "sku": "080AO-1318",
@@ -1507,7 +1814,10 @@
     "category": "filtros",
     "name": "Filtro de Aceite Advance (AO-1318) — Hino Dutro /09",
     "presentation": "Unidad",
-    "base_price_no_iva": 4.83
+    "base_price_no_iva": 4.83,
+    "price_with_iva_raw": 5.55,
+    "quoted_pvp_iva": 5.9,
+    "excel_code": "080AO-1318"
   },
   {
     "sku": "080AO-1321",
@@ -1517,7 +1827,10 @@
     "category": "filtros",
     "name": "Filtro de Aceite Advance (AO-1321) — Hino 300 Dutro 07-12 300 Euro Dutro 512 616 616DC 716 816",
     "presentation": "Unidad",
-    "base_price_no_iva": 7.26
+    "base_price_no_iva": 7.26,
+    "price_with_iva_raw": 8.35,
+    "quoted_pvp_iva": 8.5,
+    "excel_code": "080AO-1321"
   },
   {
     "sku": "080AO-1513",
@@ -1527,7 +1840,10 @@
     "category": "filtros",
     "name": "Filtro de Aceite Advance (AO-1513) — Iz FTR Fsr Fvr 98/99 ( Sakura C1513 / Hard 8-94396-375-4)",
     "presentation": "Unidad",
-    "base_price_no_iva": 9.39
+    "base_price_no_iva": 9.39,
+    "price_with_iva_raw": 10.8,
+    "quoted_pvp_iva": 10.9,
+    "excel_code": "080AO-1513"
   },
   {
     "sku": "080AO-1522",
@@ -1537,7 +1853,10 @@
     "category": "filtros",
     "name": "Filtro de Aceite Advance (AO-1522) — Isz Npr Nkr 98-MOTOR 4B",
     "presentation": "Unidad",
-    "base_price_no_iva": 8.83
+    "base_price_no_iva": 8.83,
+    "price_with_iva_raw": 10.15,
+    "quoted_pvp_iva": 10.5,
+    "excel_code": "080AO-1522"
   },
   {
     "sku": "080AO-2801",
@@ -1547,7 +1866,10 @@
     "category": "filtros",
     "name": "Filtro de Combustible Advance (AO-2801) — Great Wall Wingle 2.8 Diesel Mahindra Pick Up Scorpio JAC Hfc 1040K M20 1.5",
     "presentation": "Unidad",
-    "base_price_no_iva": 2.65
+    "base_price_no_iva": 2.65,
+    "price_with_iva_raw": 3.05,
+    "quoted_pvp_iva": 3.5,
+    "excel_code": "080AO-2801"
   },
   {
     "sku": "080AO-2825",
@@ -1557,7 +1879,10 @@
     "category": "filtros",
     "name": "Filtro de Aceite Advance (AO-2825) — Dt1.2-1.5 Nissan Sentra /92-98 Toyota /68-84 Hilux Stout Nissan Datsun",
     "presentation": "Unidad",
-    "base_price_no_iva": 2.17
+    "base_price_no_iva": 2.17,
+    "price_with_iva_raw": 2.5,
+    "quoted_pvp_iva": 2.5,
+    "excel_code": "080AO-2825"
   },
   {
     "sku": "080AO-2841ST",
@@ -1567,7 +1892,10 @@
     "category": "filtros",
     "name": "Filtro de Aceite Advance (AO-2841ST) — (medio Filtrante 100% Sintetico 15000 Km.) Chevrole Cavalier, Groove, Sail, N2",
     "presentation": "Unidad",
-    "base_price_no_iva": 2.61
+    "base_price_no_iva": 2.61,
+    "price_with_iva_raw": 3.0,
+    "quoted_pvp_iva": 3.0,
+    "excel_code": "080AO-2841ST"
   },
   {
     "sku": "080AO-2849ST",
@@ -1577,7 +1905,10 @@
     "category": "filtros",
     "name": "Filtro de Aceite Advance (AO-2849ST) — (medio Filtrante 100% Sintetico 15000 Km.) JAC T8 Mazda 1.6 1.8 B2000 - 1.600",
     "presentation": "Unidad",
-    "base_price_no_iva": 3.04
+    "base_price_no_iva": 3.04,
+    "price_with_iva_raw": 3.5,
+    "quoted_pvp_iva": 3.5,
+    "excel_code": "080AO-2849ST"
   },
   {
     "sku": "080AO-2870ST",
@@ -1587,7 +1918,10 @@
     "category": "filtros",
     "name": "Filtro de Aceite Advance (AO-2870ST) — (medio Filtrante 100% Sintetico 15000 Km.) Audi, Skoda, Volkswagen (doble Valv",
     "presentation": "Unidad",
-    "base_price_no_iva": 3.48
+    "base_price_no_iva": 3.48,
+    "price_with_iva_raw": 4.0,
+    "quoted_pvp_iva": 4.0,
+    "excel_code": "080AO-2870ST"
   },
   {
     "sku": "080AO-3387",
@@ -1597,7 +1931,10 @@
     "category": "filtros",
     "name": "Filtro de Aceite Advance (AO-3387) — Chevrolet Aveo/corsa/optra/luv 2.2-2.4/D-MAX (ph-2862)",
     "presentation": "Unidad",
-    "base_price_no_iva": 2.17
+    "base_price_no_iva": 2.17,
+    "price_with_iva_raw": 2.5,
+    "quoted_pvp_iva": 2.5,
+    "excel_code": "080AO-3387"
   },
   {
     "sku": "080AO-3387ST",
@@ -1607,7 +1944,10 @@
     "category": "filtros",
     "name": "Filtro de Aceite Advance (AO-3387ST) — (medio Filtrante 100% Sintetico 15000 Km.) Chevrolet, Daewoo, Fiat - AO-3387ST",
     "presentation": "Unidad",
-    "base_price_no_iva": 2.61
+    "base_price_no_iva": 2.61,
+    "price_with_iva_raw": 3.0,
+    "quoted_pvp_iva": 3.0,
+    "excel_code": "080AO-3387ST"
   },
   {
     "sku": "080AO-3593",
@@ -1617,7 +1957,10 @@
     "category": "filtros",
     "name": "Filtro de Aceite Advance (AO-3593) — Chevrolet Luv 3.2/D-MAX 3.5/HYUNDAI/KIA/TUCSON/SPORTAGE/GREAT Wall/trooper",
     "presentation": "Unidad",
-    "base_price_no_iva": 2.17
+    "base_price_no_iva": 2.17,
+    "price_with_iva_raw": 2.5,
+    "quoted_pvp_iva": 2.5,
+    "excel_code": "080AO-3593"
   },
   {
     "sku": "080AO-3593ST",
@@ -1627,7 +1970,10 @@
     "category": "filtros",
     "name": "Filtro de Aceite Advance (AO-3593ST) — (medio Filtrante 100% Sintetico 15000 Km.) Chevrolet, Great Wall, Hyundai, KIA",
     "presentation": "Unidad",
-    "base_price_no_iva": 2.61
+    "base_price_no_iva": 2.61,
+    "price_with_iva_raw": 3.0,
+    "quoted_pvp_iva": 3.0,
+    "excel_code": "080AO-3593ST"
   },
   {
     "sku": "080AO-3614",
@@ -1637,7 +1983,10 @@
     "category": "filtros",
     "name": "Filtro de Aceite Advance (AO-3614) — Chevrolet Forsa I-ii/grand Vitara/jinmy/vitara/daihatsu Terios 1.3 (ph966b)",
     "presentation": "Unidad",
-    "base_price_no_iva": 2.17
+    "base_price_no_iva": 2.17,
+    "price_with_iva_raw": 2.5,
+    "quoted_pvp_iva": 2.5,
+    "excel_code": "080AO-3614"
   },
   {
     "sku": "080AO-3614ST",
@@ -1647,7 +1996,10 @@
     "category": "filtros",
     "name": "Filtro de Aire de Motor Advance (AO-3614ST) — Medio Filtrante 100 Sintetico 15000 Km. Chery Chevrolet Dongfeng Faw Ford Jetour",
     "presentation": "Unidad",
-    "base_price_no_iva": 2.61
+    "base_price_no_iva": 2.61,
+    "price_with_iva_raw": 3.0,
+    "quoted_pvp_iva": 3.0,
+    "excel_code": "080AO-3614ST"
   },
   {
     "sku": "080AO-3675",
@@ -1657,7 +2009,10 @@
     "category": "filtros",
     "name": "Filtro de Aceite Advance (AO-3675) — Chevrolet Trailblazer-silverado 2000-CHEYENNE 2000 (plb3675) PH-59 Ph3429a",
     "presentation": "Unidad",
-    "base_price_no_iva": 2.48
+    "base_price_no_iva": 2.48,
+    "price_with_iva_raw": 2.85,
+    "quoted_pvp_iva": 2.9,
+    "excel_code": "080AO-3675"
   },
   {
     "sku": "080AO-3830",
@@ -1667,7 +2022,10 @@
     "category": "filtros",
     "name": "Filtro de Aceite Advance (AO-3830) — Mitsubishi Canter, Hyundai Hd55, Hd65, Hd72, Hd78 Doble Filtracion C- 5816 Caj",
     "presentation": "Unidad",
-    "base_price_no_iva": 5.19
+    "base_price_no_iva": 5.19,
+    "price_with_iva_raw": 5.97,
+    "quoted_pvp_iva": 6.0,
+    "excel_code": "080AO-3830"
   },
   {
     "sku": "080AO-3985",
@@ -1677,7 +2035,10 @@
     "category": "filtros",
     "name": "Filtro de Aceite Advance (AO-3985) — Renault Clio/scenic/megane/logan/twingo Con Tuerca",
     "presentation": "Unidad",
-    "base_price_no_iva": 2.17
+    "base_price_no_iva": 2.17,
+    "price_with_iva_raw": 2.5,
+    "quoted_pvp_iva": 2.5,
+    "excel_code": "080AO-3985"
   },
   {
     "sku": "080AO-4386ST",
@@ -1697,7 +2058,10 @@
     "category": "filtros",
     "name": "Filtro de Aceite Advance (AO-4952) — Mg, Zotye T600 1.5, Chevrolet Tahoe, Silverado, Trail Blazer Ext - AO-4952",
     "presentation": "Unidad",
-    "base_price_no_iva": 2.22
+    "base_price_no_iva": 2.22,
+    "price_with_iva_raw": 2.55,
+    "quoted_pvp_iva": 2.9,
+    "excel_code": "080AO-4952"
   },
   {
     "sku": "080AO-500-1",
@@ -1707,7 +2071,10 @@
     "category": "filtros",
     "name": "Filtro de Aceite Advance (AO-500-1) — Ford Edge, Explorer, Expedition, F-150 Caja X 40 - AO-500/1",
     "presentation": "Unidad",
-    "base_price_no_iva": 2.98
+    "base_price_no_iva": 2.98,
+    "price_with_iva_raw": 3.43,
+    "quoted_pvp_iva": 3.5,
+    "excel_code": "080AO-500-1"
   },
   {
     "sku": "080AO-500ST",
@@ -1727,7 +2094,10 @@
     "category": "filtros",
     "name": "Filtro de Aceite Advance (AO-50710-1) — Chevrolet D-MAX 2014 Caja X 40- AO-50710/1",
     "presentation": "Unidad",
-    "base_price_no_iva": 2.95
+    "base_price_no_iva": 2.95,
+    "price_with_iva_raw": 3.39,
+    "quoted_pvp_iva": 3.5,
+    "excel_code": "080AO-50710-1"
   },
   {
     "sku": "080AO-5190",
@@ -1737,7 +2107,10 @@
     "category": "filtros",
     "name": "Filtro de Aceite Advance (AO-5190) — Chevrolet Nhr, Nkr M26x1,5 Dual (8-94360427-1)",
     "presentation": "Unidad",
-    "base_price_no_iva": 4.48
+    "base_price_no_iva": 4.48,
+    "price_with_iva_raw": 5.15,
+    "quoted_pvp_iva": 5.5,
+    "excel_code": "080AO-5190"
   },
   {
     "sku": "080AO-6102",
@@ -1747,7 +2120,10 @@
     "category": "filtros",
     "name": "Filtro de Aceite Advance (AO-6102) — Ud Trucks Fd6t (c-270, C12.00 6102, Uj1034, Sc270) - AO-6100",
     "presentation": "Unidad",
-    "base_price_no_iva": 7.85
+    "base_price_no_iva": 7.85,
+    "price_with_iva_raw": 9.02,
+    "quoted_pvp_iva": 9.5,
+    "excel_code": "080AO-6102"
   },
   {
     "sku": "080AO-6607",
@@ -1757,7 +2133,10 @@
     "category": "filtros",
     "name": "Filtro de Aceite Advance (AO-6607) — Fiat Uno Fire 1.3 Honda Accord 2.3 Atos Prime 1.1 KIA Cerato Forte 1.6 Tiida",
     "presentation": "Unidad",
-    "base_price_no_iva": 2.17
+    "base_price_no_iva": 2.17,
+    "price_with_iva_raw": 2.5,
+    "quoted_pvp_iva": 2.5,
+    "excel_code": "080AO-6607"
   },
   {
     "sku": "080AO-6607ST",
@@ -1767,7 +2146,10 @@
     "category": "filtros",
     "name": "Filtro de Aceite Advance (AO-6607ST) — (medio Filtrante 100% Sintetico 15000 Km.) Hyundai, Kia, Foton, Great Wall, Ha",
     "presentation": "Unidad",
-    "base_price_no_iva": 2.61
+    "base_price_no_iva": 2.61,
+    "price_with_iva_raw": 3.0,
+    "quoted_pvp_iva": 3.0,
+    "excel_code": "080AO-6607ST"
   },
   {
     "sku": "080AO-667-1",
@@ -1787,7 +2169,10 @@
     "category": "filtros",
     "name": "Filtro de Aceite Advance (AO-7317ST) — (medio Filtrante 100% Sintetico 15000 Km.) Great Wall,hyundai, Kia, Mitsubishi",
     "presentation": "Unidad",
-    "base_price_no_iva": 2.61
+    "base_price_no_iva": 2.61,
+    "price_with_iva_raw": 3.0,
+    "quoted_pvp_iva": 3.0,
+    "excel_code": "080AO-7317ST"
   },
   {
     "sku": "080AO-9566",
@@ -1797,7 +2182,10 @@
     "category": "filtros",
     "name": "Filtro de Aceite Advance (AO-9566) — Toyota Hilux 2.7 Fortuner 2.7 (ml-20004)",
     "presentation": "Unidad",
-    "base_price_no_iva": 2.57
+    "base_price_no_iva": 2.57,
+    "price_with_iva_raw": 2.95,
+    "quoted_pvp_iva": 3.0,
+    "excel_code": "080AO-9566"
   },
   {
     "sku": "080AO-9617",
@@ -1807,7 +2195,10 @@
     "category": "filtros",
     "name": "Filtro de Aceite Advance (AO-9617) — Dongfeng Df 140 Dfm 210 Ford Cargo 815E (ml-55081) C-5713 Lf645 HPH-9617",
     "presentation": "Unidad",
-    "base_price_no_iva": 6.26
+    "base_price_no_iva": 6.26,
+    "price_with_iva_raw": 7.2,
+    "quoted_pvp_iva": 7.5,
+    "excel_code": "080AO-9617"
   },
   {
     "sku": "080AOE-11651ST",
@@ -1817,7 +2208,10 @@
     "category": "filtros",
     "name": "Filtro de Aceite Advance (AOE-11651ST) — Elemento (medio Filtrante 100% Sintetico 15.000 Km.) Ford Ranger, Mazda BT-50 E",
     "presentation": "Unidad",
-    "base_price_no_iva": 3.12
+    "base_price_no_iva": 3.12,
+    "price_with_iva_raw": 3.59,
+    "quoted_pvp_iva": 3.9,
+    "excel_code": "080AOE-11651ST"
   },
   {
     "sku": "080AOE-11724ST",
@@ -1827,7 +2221,10 @@
     "category": "filtros",
     "name": "Filtro de Aceite Advance (AOE-11724ST) — Elemento (medio Filtrante 100% Sintetico 15000 Km.) Chevrolet Trailblazer 2.8",
     "presentation": "Unidad",
-    "base_price_no_iva": 3.83
+    "base_price_no_iva": 3.83,
+    "price_with_iva_raw": 4.4,
+    "quoted_pvp_iva": 4.5,
+    "excel_code": "080AOE-11724ST"
   },
   {
     "sku": "080AOE-1501",
@@ -1837,7 +2234,10 @@
     "category": "filtros",
     "name": "Filtro de Aceite Advance (AOE-1501) — Isuzu Npr Nml 2 Nmr (elemento)",
     "presentation": "Unidad",
-    "base_price_no_iva": 2.74
+    "base_price_no_iva": 2.74,
+    "price_with_iva_raw": 3.15,
+    "quoted_pvp_iva": 3.5,
+    "excel_code": "080AOE-1501"
   },
   {
     "sku": "080AOE-486ST",
@@ -1847,7 +2247,10 @@
     "category": "filtros",
     "name": "Filtro de Aceite Advance (AOE-486ST) — Elemento (medio Filtrante 100% Sintetico 15000 Km.) Haval All New H6 2.0T 2022",
     "presentation": "Unidad",
-    "base_price_no_iva": 4.39
+    "base_price_no_iva": 4.39,
+    "price_with_iva_raw": 5.05,
+    "quoted_pvp_iva": 5.5,
+    "excel_code": "080AOE-486ST"
   },
   {
     "sku": "080AOE-9229-1",
@@ -1877,7 +2280,10 @@
     "category": "filtros",
     "name": "Filtro de Combustible Advance (AOE-9540) — Nissan Urvan Diesel, Nissan Frontier (elemento)",
     "presentation": "Unidad",
-    "base_price_no_iva": 2.48
+    "base_price_no_iva": 2.48,
+    "price_with_iva_raw": 2.85,
+    "quoted_pvp_iva": 2.9,
+    "excel_code": "080AOE-9540"
   },
   {
     "sku": "080AOE-9974ST",
@@ -1887,7 +2293,10 @@
     "category": "filtros",
     "name": "Filtro de Aceite Advance (AOE-9974ST) — Elemento (medio Filtrante 100% Sintetico 15.000 Km.) Great Wall Poer 2.0T Dies",
     "presentation": "Unidad",
-    "base_price_no_iva": 3.13
+    "base_price_no_iva": 3.13,
+    "price_with_iva_raw": 3.6,
+    "quoted_pvp_iva": 3.9,
+    "excel_code": "080AOE-9974ST"
   },
   {
     "sku": "AO-3985ST",
@@ -1897,7 +2306,10 @@
     "category": "filtros",
     "name": "Filtro de Aceite Advance (AO-3985ST) — Sandero Stepway;ssangyong Tivoli 1.6 Con Tuerca - AO-3985ST",
     "presentation": "Unidad",
-    "base_price_no_iva": 2.61
+    "base_price_no_iva": 2.61,
+    "price_with_iva_raw": 3.0,
+    "quoted_pvp_iva": 3.0,
+    "excel_code": "AO-3985ST"
   },
   {
     "sku": "078AC-1401",
@@ -1907,7 +2319,10 @@
     "category": "filtros",
     "name": "Filtro de Cabina (A/C) Advance (AC-1401) — Chevrolet Gran Vitara 1.6-2.0 /03-15",
     "presentation": "Unidad",
-    "base_price_no_iva": 4.48
+    "base_price_no_iva": 4.48,
+    "price_with_iva_raw": 5.15,
+    "quoted_pvp_iva": 5.5,
+    "excel_code": "078AC-1401"
   },
   {
     "sku": "078AC-30020",
@@ -1917,7 +2332,10 @@
     "category": "filtros",
     "name": "Filtro de Cabina (A/C) Advance (AC-30020) — Volkswagen Bora Jetta Tiguan Skoda Fabia 1.AC-30020,2 1.4 16V 1.4 8V Superb Octavia",
     "presentation": "Unidad",
-    "base_price_no_iva": 7.04
+    "base_price_no_iva": 7.04,
+    "price_with_iva_raw": 8.1,
+    "quoted_pvp_iva": 8.5,
+    "excel_code": "078AC-30020"
   },
   {
     "sku": "080AC- 4418",
@@ -1927,7 +2345,10 @@
     "category": "filtros",
     "name": "Filtro de Cabina (A/C) Advance (AC- 4418) — Chery Tiggo 2 Pro 1.5 2023",
     "presentation": "Unidad",
-    "base_price_no_iva": 3.96
+    "base_price_no_iva": 3.96,
+    "price_with_iva_raw": 4.55,
+    "quoted_pvp_iva": 4.9,
+    "excel_code": "080AC- 4418"
   },
   {
     "sku": "080AC-10245-2",
@@ -1937,7 +2358,10 @@
     "category": "filtros",
     "name": "Filtro de Cabina (A/C) Advance (AC-10245-2) — Hyundai Getz (2 Componentes) - AC-10245- 2",
     "presentation": "Unidad",
-    "base_price_no_iva": 5.0
+    "base_price_no_iva": 5.0,
+    "price_with_iva_raw": 5.75,
+    "quoted_pvp_iva": 5.9,
+    "excel_code": "080AC-10245-2"
   },
   {
     "sku": "080AC-11105",
@@ -1947,7 +2371,10 @@
     "category": "filtros",
     "name": "Filtro de Cabina (A/C) Advance (AC-11105) — Zotye T600 - AC-11105",
     "presentation": "Unidad",
-    "base_price_no_iva": 3.49
+    "base_price_no_iva": 3.49,
+    "price_with_iva_raw": 4.01,
+    "quoted_pvp_iva": 4.5,
+    "excel_code": "080AC-11105"
   },
   {
     "sku": "080AC-1114",
@@ -1957,7 +2384,10 @@
     "category": "filtros",
     "name": "Filtro de Cabina (A/C) Advance (AC-1114) — Toyota Yaris-corolla-highlander",
     "presentation": "Unidad",
-    "base_price_no_iva": 3.14
+    "base_price_no_iva": 3.14,
+    "price_with_iva_raw": 3.61,
+    "quoted_pvp_iva": 3.9,
+    "excel_code": "080AC-1114"
   },
   {
     "sku": "080AC-12775",
@@ -1967,7 +2397,10 @@
     "category": "filtros",
     "name": "Filtro de Cabina (A/C) Advance (AC-12775) — Subaru Forester 2.0L, WRX 2.T - AC-12775",
     "presentation": "Unidad",
-    "base_price_no_iva": 3.83
+    "base_price_no_iva": 3.83,
+    "price_with_iva_raw": 4.4,
+    "quoted_pvp_iva": 4.5,
+    "excel_code": "080AC-12775"
   },
   {
     "sku": "080AC-14050",
@@ -1977,7 +2410,10 @@
     "category": "filtros",
     "name": "Filtro de Cabina (A/C) Advance (AC-14050) — Chevrolet Gran Vitara Suzuki (xtrag AC-108 Red 95861-64J00)",
     "presentation": "Unidad",
-    "base_price_no_iva": 4.39
+    "base_price_no_iva": 4.39,
+    "price_with_iva_raw": 5.05,
+    "quoted_pvp_iva": 5.5,
+    "excel_code": "080AC-14050"
   },
   {
     "sku": "080AC-14051",
@@ -1987,7 +2423,10 @@
     "category": "filtros",
     "name": "Filtro de Cabina (A/C) Advance (AC-14051) — Chevrolet Grand Vitara Suzuki Next 2.0, 2.4 /15-19 Marco De Plastico",
     "presentation": "Unidad",
-    "base_price_no_iva": 6.22
+    "base_price_no_iva": 6.22,
+    "price_with_iva_raw": 7.15,
+    "quoted_pvp_iva": 7.5,
+    "excel_code": "080AC-14051"
   },
   {
     "sku": "080AC-17140",
@@ -1997,7 +2436,10 @@
     "category": "filtros",
     "name": "Filtro de Cabina (A/C) Advance (AC-17140) — Ford Ranger Mazda BT-50 2015",
     "presentation": "Unidad",
-    "base_price_no_iva": 5.43
+    "base_price_no_iva": 5.43,
+    "price_with_iva_raw": 6.25,
+    "quoted_pvp_iva": 6.5,
+    "excel_code": "080AC-17140"
   },
   {
     "sku": "080AC-18120",
@@ -2007,7 +2449,10 @@
     "category": "filtros",
     "name": "Filtro de Cabina (A/C) Advance (AC-18120) — Chevrolet Luv D-MAX 3.0 /14 X-trail Classic L200 ASX Outlander",
     "presentation": "Unidad",
-    "base_price_no_iva": 4.91
+    "base_price_no_iva": 4.91,
+    "price_with_iva_raw": 5.65,
+    "quoted_pvp_iva": 5.9,
+    "excel_code": "080AC-18120"
   },
   {
     "sku": "080AC-22010",
@@ -2017,7 +2462,10 @@
     "category": "filtros",
     "name": "Filtro de Cabina (A/C) Advance (AC-22010) — Chevrolet D-MAX Diesel 2.5-3.0 /05 Versa /17-18 - Ac22010",
     "presentation": "Unidad",
-    "base_price_no_iva": 4.91
+    "base_price_no_iva": 4.91,
+    "price_with_iva_raw": 5.65,
+    "quoted_pvp_iva": 5.9,
+    "excel_code": "080AC-22010"
   },
   {
     "sku": "080AC-25091",
@@ -2027,7 +2475,10 @@
     "category": "filtros",
     "name": "Filtro de Cabina (A/C) Advance (AC-25091) — Nissan Frontier NP300 2,5 2019, Dongfeng Rich 6 - AC-25091",
     "presentation": "Unidad",
-    "base_price_no_iva": 4.91
+    "base_price_no_iva": 4.91,
+    "price_with_iva_raw": 5.65,
+    "quoted_pvp_iva": 5.9,
+    "excel_code": "080AC-25091"
   },
   {
     "sku": "080AC-2807",
@@ -2047,7 +2498,10 @@
     "category": "filtros",
     "name": "Filtro de Cabina (A/C) Advance (AC-2808) — Hyundai I10 Grand I10 KIA Picanto Chevrolet Spark (mc-94242)",
     "presentation": "Unidad",
-    "base_price_no_iva": 2.96
+    "base_price_no_iva": 2.96,
+    "price_with_iva_raw": 3.4,
+    "quoted_pvp_iva": 3.5,
+    "excel_code": "080AC-2808"
   },
   {
     "sku": "080AC-28151",
@@ -2057,7 +2511,10 @@
     "category": "filtros",
     "name": "Filtro de Cabina (A/C) Advance (AC-28151) — Hyundai Santa Fe 2.7 2006-2001, 2.4 09-12 - AC-28110",
     "presentation": "Unidad",
-    "base_price_no_iva": 4.48
+    "base_price_no_iva": 4.48,
+    "price_with_iva_raw": 5.15,
+    "quoted_pvp_iva": 5.5,
+    "excel_code": "080AC-28151"
   },
   {
     "sku": "080AC-28160",
@@ -2067,7 +2524,10 @@
     "category": "filtros",
     "name": "Filtro de Cabina (A/C) Advance (AC-28160) — Hyundai Accent III 1.4, 1.6 2005-2010 - AC-28160",
     "presentation": "Unidad",
-    "base_price_no_iva": 3.74
+    "base_price_no_iva": 3.74,
+    "price_with_iva_raw": 4.3,
+    "quoted_pvp_iva": 4.5,
+    "excel_code": "080AC-28160"
   },
   {
     "sku": "080AC-28261",
@@ -2077,7 +2537,10 @@
     "category": "filtros",
     "name": "Filtro de Cabina (A/C) Advance (AC-28261) — KIA Rio X Line, GT , Seltos 2020 - Creta 2022 AC-28261",
     "presentation": "Unidad",
-    "base_price_no_iva": 2.51
+    "base_price_no_iva": 2.51,
+    "price_with_iva_raw": 2.89,
+    "quoted_pvp_iva": 2.9,
+    "excel_code": "080AC-28261"
   },
   {
     "sku": "080AC-4403-2",
@@ -2087,7 +2550,10 @@
     "category": "filtros",
     "name": "Filtro de Cabina (A/C) Advance (AC-4403-2) — Great Wall Wingle 7/20",
     "presentation": "Unidad",
-    "base_price_no_iva": 4.91
+    "base_price_no_iva": 4.91,
+    "price_with_iva_raw": 5.65,
+    "quoted_pvp_iva": 5.9,
+    "excel_code": "080AC-4403-2"
   },
   {
     "sku": "080AC-4408",
@@ -2097,7 +2563,10 @@
     "category": "filtros",
     "name": "Filtro de Cabina (A/C) Advance (AC-4408) — Jetour X70 1.5T, X70 Coupe 1.6T - AC-4408",
     "presentation": "Unidad",
-    "base_price_no_iva": 4.91
+    "base_price_no_iva": 4.91,
+    "price_with_iva_raw": 5.65,
+    "quoted_pvp_iva": 5.9,
+    "excel_code": "080AC-4408"
   },
   {
     "sku": "080AC-4412",
@@ -2107,7 +2576,10 @@
     "category": "filtros",
     "name": "Filtro de Cabina (A/C) Advance (AC-4412) — Great Wall Poer 2.0 Gasolina Diesel - Ac- 4412",
     "presentation": "Unidad",
-    "base_price_no_iva": 4.65
+    "base_price_no_iva": 4.65,
+    "price_with_iva_raw": 5.35,
+    "quoted_pvp_iva": 5.5,
+    "excel_code": "080AC-4412"
   },
   {
     "sku": "080AC-4426",
@@ -2117,7 +2589,8 @@
     "category": "filtros",
     "name": "Filtro de Cabina (A/C) Advance (AC-4426) — (ac-18120) MG 5 1.5, Chevrolet Luv D-MAX 3.0 2014, X-trail Classic, L200, ASX",
     "presentation": "Unidad",
-    "base_price_no_iva": 4.91
+    "base_price_no_iva": 4.91,
+    "quoted_pvp_iva": 5.9
   },
   {
     "sku": "080AC-49030",
@@ -2127,7 +2600,10 @@
     "category": "filtros",
     "name": "Filtro de Cabina (A/C) Advance (AC-49030) — Great Wall Wingle 2.2 2.4 2.8 10",
     "presentation": "Unidad",
-    "base_price_no_iva": 4.26
+    "base_price_no_iva": 4.26,
+    "price_with_iva_raw": 4.9,
+    "quoted_pvp_iva": 4.9,
+    "excel_code": "080AC-49030"
   },
   {
     "sku": "080AC-65210",
@@ -2137,7 +2613,10 @@
     "category": "filtros",
     "name": "Filtro de Cabina (A/C) Advance (AC-65210) — Chevrolet Orlando Cruze Spark GT Tracker Cavalier - AC-65210",
     "presentation": "Unidad",
-    "base_price_no_iva": 5.04
+    "base_price_no_iva": 5.04,
+    "price_with_iva_raw": 5.8,
+    "quoted_pvp_iva": 5.9,
+    "excel_code": "080AC-65210"
   },
   {
     "sku": "080AC-65220",
@@ -2147,7 +2626,10 @@
     "category": "filtros",
     "name": "Filtro de Cabina (A/C) Advance (AC-65220) — Chevrolet Spark GT 2017 Beat Active 2019",
     "presentation": "Unidad",
-    "base_price_no_iva": 2.51
+    "base_price_no_iva": 2.51,
+    "price_with_iva_raw": 2.89,
+    "quoted_pvp_iva": 2.9,
+    "excel_code": "080AC-65220"
   },
   {
     "sku": "080AC-65340",
@@ -2157,7 +2639,10 @@
     "category": "filtros",
     "name": "Filtro de Cabina (A/C) Advance (AC-65340) — Chevrolet Trail Blazer 2.8 LTZ 17- Colorado - AC-65340",
     "presentation": "Unidad",
-    "base_price_no_iva": 5.17
+    "base_price_no_iva": 5.17,
+    "price_with_iva_raw": 5.95,
+    "quoted_pvp_iva": 6.0,
+    "excel_code": "080AC-65340"
   },
   {
     "sku": "080AC-9858",
@@ -2167,7 +2652,10 @@
     "category": "filtros",
     "name": "Filtro de Cabina (A/C) Advance (AC-9858) — Chevrolet Sail",
     "presentation": "Unidad",
-    "base_price_no_iva": 3.13
+    "base_price_no_iva": 3.13,
+    "price_with_iva_raw": 3.6,
+    "quoted_pvp_iva": 3.9,
+    "excel_code": "080AC-9858"
   },
   {
     "sku": "078AFP-012",
@@ -2177,7 +2665,10 @@
     "category": "filtros",
     "name": "Filtro de Combustible Advance (AFP-012) — Universal",
     "presentation": "Unidad",
-    "base_price_no_iva": 1.3
+    "base_price_no_iva": 1.3,
+    "price_with_iva_raw": 1.5,
+    "quoted_pvp_iva": 1.5,
+    "excel_code": "078AFP-012"
   },
   {
     "sku": "078AFP-079",
@@ -2187,7 +2678,10 @@
     "category": "filtros",
     "name": "Filtro de Combustible Advance (AFP-079) — Volkswagen Golf, Jetta, Skoda Octavia - Chery Tiggo 2, Fullwin 2012",
     "presentation": "Unidad",
-    "base_price_no_iva": 3.52
+    "base_price_no_iva": 3.52,
+    "price_with_iva_raw": 4.05,
+    "quoted_pvp_iva": 4.5,
+    "excel_code": "078AFP-079"
   },
   {
     "sku": "078AFP-179",
@@ -2197,7 +2691,10 @@
     "category": "filtros",
     "name": "Filtro de Combustible Advance (AFP-179) — Great Wall Haval H5/wingle 2.0/HYUNDAI Tucson Diesel/jinbei/mahindra/zx Auto G",
     "presentation": "Unidad",
-    "base_price_no_iva": 4.35
+    "base_price_no_iva": 4.35,
+    "price_with_iva_raw": 5.0,
+    "quoted_pvp_iva": 5.0,
+    "excel_code": "078AFP-179"
   },
   {
     "sku": "078AFP-5138",
@@ -2207,7 +2704,10 @@
     "category": "filtros",
     "name": "Filtro de Combustible Advance (AFP-5138) — Chevrolet Nhr, Npr, D-max2.5-3.0, Great Wall Wingle Diesel 2.0,2.8/ Hino Gd GH",
     "presentation": "Unidad",
-    "base_price_no_iva": 2.65
+    "base_price_no_iva": 2.65,
+    "price_with_iva_raw": 3.05,
+    "quoted_pvp_iva": 3.5,
+    "excel_code": "078AFP-5138"
   },
   {
     "sku": "078AFP-523",
@@ -2217,7 +2717,10 @@
     "category": "filtros",
     "name": "Filtro de Combustible Advance (AFP-523) — Chevrolet Gran Vitara 3-5 Ptas Mazda 323 (mf-5982 Prem Flp368 Red 15410-65D00",
     "presentation": "Unidad",
-    "base_price_no_iva": 2.48
+    "base_price_no_iva": 2.48,
+    "price_with_iva_raw": 2.85,
+    "quoted_pvp_iva": 2.9,
+    "excel_code": "078AFP-523"
   },
   {
     "sku": "079AFE-1509",
@@ -2227,7 +2730,10 @@
     "category": "filtros",
     "name": "Filtro de Combustible Advance (079AFE-1509) — Chevrolet Nmr-ftr-fvr-nqr-npr(2014) (elemento)",
     "presentation": "Unidad",
-    "base_price_no_iva": 4.22
+    "base_price_no_iva": 4.22,
+    "price_with_iva_raw": 4.85,
+    "quoted_pvp_iva": 4.9,
+    "excel_code": "079AFE-1509"
   },
   {
     "sku": "079AFE-268",
@@ -2237,7 +2743,10 @@
     "category": "filtros",
     "name": "Filtro de Combustible Advance (079AFE-268) — Toyota Hilux 2.7 Diesel Hiace 3.0 (elemento)",
     "presentation": "Unidad",
-    "base_price_no_iva": 2.74
+    "base_price_no_iva": 2.74,
+    "price_with_iva_raw": 3.15,
+    "quoted_pvp_iva": 3.5,
+    "excel_code": "079AFE-268"
   },
   {
     "sku": "079AFP-1511",
@@ -2247,7 +2756,10 @@
     "category": "filtros",
     "name": "Filtro de Combustible Advance (079AFP-1511) — Chevrolet D-MAX 3.0 Diesel /-13 Trampa De Agua",
     "presentation": "Unidad",
-    "base_price_no_iva": 3.04
+    "base_price_no_iva": 3.04,
+    "price_with_iva_raw": 3.5,
+    "quoted_pvp_iva": 3.5,
+    "excel_code": "079AFP-1511"
   },
   {
     "sku": "080AFE-15130",
@@ -2257,7 +2769,10 @@
     "category": "filtros",
     "name": "Filtro de Combustible Advance (AFE-15130) — Isuzu Frr Fsr FTR Fvr - Series Forward 11- 19 Mt134s 17-18 Sec. (elem)",
     "presentation": "Unidad",
-    "base_price_no_iva": 5.96
+    "base_price_no_iva": 5.96,
+    "price_with_iva_raw": 6.85,
+    "quoted_pvp_iva": 6.9,
+    "excel_code": "080AFE-15130"
   },
   {
     "sku": "080AFE-295-1",
@@ -2267,7 +2782,10 @@
     "category": "filtros",
     "name": "Filtro de Combustible Advance (AFE-295-1) — Great Wall Poer 2.0 Diesel 4D20M (elemento)",
     "presentation": "Unidad",
-    "base_price_no_iva": 5.3
+    "base_price_no_iva": 5.3,
+    "price_with_iva_raw": 6.1,
+    "quoted_pvp_iva": 6.5,
+    "excel_code": "080AFE-295-1"
   },
   {
     "sku": "080AFE-296-1",
@@ -2277,7 +2795,10 @@
     "category": "filtros",
     "name": "Filtro de Combustible Advance (AFE-296-1) — Great Wall Poer 2.0 Diesel 4D20M 2DA Generacion Long Life Filter",
     "presentation": "Unidad",
-    "base_price_no_iva": 12.52
+    "base_price_no_iva": 12.52,
+    "price_with_iva_raw": 14.4,
+    "quoted_pvp_iva": 14.5,
+    "excel_code": "080AFE-296-1"
   },
   {
     "sku": "080AFE-297",
@@ -2287,7 +2808,10 @@
     "category": "filtros",
     "name": "Filtro de Combustible Advance (AFE-297) — Chevrolet D-MAX 2.0T Diesel 2025 - Afe- 297",
     "presentation": "Unidad",
-    "base_price_no_iva": 7.41
+    "base_price_no_iva": 7.41,
+    "price_with_iva_raw": 8.52,
+    "quoted_pvp_iva": 8.9,
+    "excel_code": "080AFE-297"
   },
   {
     "sku": "080AFE-385",
@@ -2297,7 +2821,10 @@
     "category": "filtros",
     "name": "Filtro de Combustible Advance (AFE-385) — Ford Ranger 3.2 Tdci, Ranger Courier Xl 2.2L, New BT-50 II 3.2",
     "presentation": "Unidad",
-    "base_price_no_iva": 4.61
+    "base_price_no_iva": 4.61,
+    "price_with_iva_raw": 5.3,
+    "quoted_pvp_iva": 5.5,
+    "excel_code": "080AFE-385"
   },
   {
     "sku": "080AFI-9303",
@@ -2307,7 +2834,10 @@
     "category": "filtros",
     "name": "Filtro de Combustible Advance (AFI-9303) — Sumergible Hyundai Getz, Matrix, Santa Fe 2002",
     "presentation": "Unidad",
-    "base_price_no_iva": 13.39
+    "base_price_no_iva": 13.39,
+    "price_with_iva_raw": 15.4,
+    "quoted_pvp_iva": 15.5,
+    "excel_code": "080AFI-9303"
   },
   {
     "sku": "080AFI-9307",
@@ -2317,7 +2847,10 @@
     "category": "filtros",
     "name": "Filtro de Combustible Advance (AFI-9307) — Sumergible KIA Rio Xcite, New Accent (mf-48737)",
     "presentation": "Unidad",
-    "base_price_no_iva": 12.65
+    "base_price_no_iva": 12.65,
+    "price_with_iva_raw": 14.55,
+    "quoted_pvp_iva": 14.9,
+    "excel_code": "080AFI-9307"
   },
   {
     "sku": "080AFP-023",
@@ -2327,7 +2860,10 @@
     "category": "filtros",
     "name": "Filtro de Combustible Advance (AFP-023) — Mitsubishi L200 Sportero Diesel Lukas Cav926 Nueva Foton Cs Y Cs2",
     "presentation": "Unidad",
-    "base_price_no_iva": 2.35
+    "base_price_no_iva": 2.35,
+    "price_with_iva_raw": 2.7,
+    "quoted_pvp_iva": 2.9,
+    "excel_code": "080AFP-023"
   },
   {
     "sku": "080AFP-046",
@@ -2337,7 +2873,10 @@
     "category": "filtros",
     "name": "Filtro de Combustible Advance (AFP-046) — KIA Pregio, Besta, Carens, H100 Terracan Diesel Chevrolet NLR (mf-4886)",
     "presentation": "Unidad",
-    "base_price_no_iva": 3.91
+    "base_price_no_iva": 3.91,
+    "price_with_iva_raw": 4.5,
+    "quoted_pvp_iva": 4.5,
+    "excel_code": "080AFP-046"
   },
   {
     "sku": "080AFP-072",
@@ -2347,7 +2886,10 @@
     "category": "filtros",
     "name": "Filtro de Combustible Advance (AFP-072) — Renault Clio Twingo Megane Scenic Peugeot 206 Berlingo",
     "presentation": "Unidad",
-    "base_price_no_iva": 2.78
+    "base_price_no_iva": 2.78,
+    "price_with_iva_raw": 3.2,
+    "quoted_pvp_iva": 3.5,
+    "excel_code": "080AFP-072"
   },
   {
     "sku": "080AFP-083",
@@ -2357,7 +2899,10 @@
     "category": "filtros",
     "name": "Filtro de Combustible Advance (AFP-083) — Mazda BT-50 Crdi, BT-50 Tdi / Mitsubishi Montero Sport / Nissan Frontier T",
     "presentation": "Unidad",
-    "base_price_no_iva": 4.22
+    "base_price_no_iva": 4.22,
+    "price_with_iva_raw": 4.85,
+    "quoted_pvp_iva": 4.9,
+    "excel_code": "080AFP-083"
   },
   {
     "sku": "080AFP-1020",
@@ -2367,7 +2912,10 @@
     "category": "filtros",
     "name": "Filtro de Combustible Advance (AFP-1020) — Mitsubishi Canter 3.5- Intercoooler Hd Hyundai Hd72 (sam Sfc352 Prem Flp3",
     "presentation": "Unidad",
-    "base_price_no_iva": 2.95
+    "base_price_no_iva": 2.95,
+    "price_with_iva_raw": 3.39,
+    "quoted_pvp_iva": 3.5,
+    "excel_code": "080AFP-1020"
   },
   {
     "sku": "080AFP-140",
@@ -2377,7 +2925,10 @@
     "category": "filtros",
     "name": "Filtro de Combustible Advance (AFP-140) — Great Wall Wingle 2.0-2.8 JAC T6 2.8 Foton Iveco Mahindra",
     "presentation": "Unidad",
-    "base_price_no_iva": 4.48
+    "base_price_no_iva": 4.48,
+    "price_with_iva_raw": 5.15,
+    "quoted_pvp_iva": 5.5,
+    "excel_code": "080AFP-140"
   },
   {
     "sku": "080AFP-202",
@@ -2387,7 +2938,10 @@
     "category": "filtros",
     "name": "Filtro de Combustible Advance (AFP-202) — Nissan 2400 4X4 Sentra Iny Curvo (10y00)",
     "presentation": "Unidad",
-    "base_price_no_iva": 2.17
+    "base_price_no_iva": 2.17,
+    "price_with_iva_raw": 2.5,
+    "quoted_pvp_iva": 2.5,
+    "excel_code": "080AFP-202"
   },
   {
     "sku": "080AFP-203",
@@ -2397,7 +2951,10 @@
     "category": "filtros",
     "name": "Filtro de Combustible Advance (AFP-203) — Chevrolet Vitara AFP-203 (mf-94925)",
     "presentation": "Unidad",
-    "base_price_no_iva": 3.74
+    "base_price_no_iva": 3.74,
+    "price_with_iva_raw": 4.3,
+    "quoted_pvp_iva": 4.5,
+    "excel_code": "080AFP-203"
   },
   {
     "sku": "080AFP-31120",
@@ -2407,7 +2964,10 @@
     "category": "filtros",
     "name": "Filtro de Combustible Advance (AFP-31120) — Toyota Hilux 2.7 Gas (punta A Punta Sin Base) (mf-64951) (mf-41570)",
     "presentation": "Unidad",
-    "base_price_no_iva": 2.74
+    "base_price_no_iva": 2.74,
+    "price_with_iva_raw": 3.15,
+    "quoted_pvp_iva": 3.5,
+    "excel_code": "080AFP-31120"
   },
   {
     "sku": "080AFP-3627",
@@ -2417,7 +2977,10 @@
     "category": "filtros",
     "name": "Filtro de Combustible Advance (AFP-3627) — Chevrolet Nhr Npr D-MAX Dies Daihatsu Delta",
     "presentation": "Unidad",
-    "base_price_no_iva": 2.43
+    "base_price_no_iva": 2.43,
+    "price_with_iva_raw": 2.8,
+    "quoted_pvp_iva": 2.9,
+    "excel_code": "080AFP-3627"
   },
   {
     "sku": "080AFP-4102",
@@ -2427,7 +2990,10 @@
     "category": "filtros",
     "name": "Filtro de Combustible Advance (AFP-4102) — Foton Aumark Dongfeng Fc5704 Fc5504 Fp586f Ff42000 Ff5018 (mf-4102)",
     "presentation": "Unidad",
-    "base_price_no_iva": 3.3
+    "base_price_no_iva": 3.3,
+    "price_with_iva_raw": 3.8,
+    "quoted_pvp_iva": 3.9,
+    "excel_code": "080AFP-4102"
   },
   {
     "sku": "080AFP-4183",
@@ -2437,7 +3003,10 @@
     "category": "filtros",
     "name": "Filtro de Combustible Advance (AFP-4183) — JAC T6 Diesel, Vlv,man,case, Rover,/new Holland,lindner,fiat",
     "presentation": "Unidad",
-    "base_price_no_iva": 6.65
+    "base_price_no_iva": 6.65,
+    "price_with_iva_raw": 7.65,
+    "quoted_pvp_iva": 7.9,
+    "excel_code": "080AFP-4183"
   },
   {
     "sku": "080AFP-555",
@@ -2447,7 +3016,10 @@
     "category": "filtros",
     "name": "Filtro de Combustible Advance (AFP-555) — Chevrolet Corsa 1.4-1.6-1.8/D-MAX 2.4-3.5/ZAFIRA/M4/GREAT Wall C30",
     "presentation": "Unidad",
-    "base_price_no_iva": 2.17
+    "base_price_no_iva": 2.17,
+    "price_with_iva_raw": 2.5,
+    "quoted_pvp_iva": 2.5,
+    "excel_code": "080AFP-555"
   },
   {
     "sku": "080AFP-5612",
@@ -2457,7 +3029,10 @@
     "category": "filtros",
     "name": "Filtro de Combustible Advance (AFP-5612) — Filter Daf, Foton, JAC (fc-5725, Sff2241, Psc75, Lff5485) - AFP-5612",
     "presentation": "Unidad",
-    "base_price_no_iva": 5.5
+    "base_price_no_iva": 5.5,
+    "price_with_iva_raw": 6.32,
+    "quoted_pvp_iva": 6.5,
+    "excel_code": "080AFP-5612"
   },
   {
     "sku": "080AFP-573",
@@ -2467,7 +3042,10 @@
     "category": "filtros",
     "name": "Filtro de Combustible Advance (AFP-573) — Chevrolet Chevytaxi Lanos Spark Matiz Aveo Optra",
     "presentation": "Unidad",
-    "base_price_no_iva": 2.17
+    "base_price_no_iva": 2.17,
+    "price_with_iva_raw": 2.5,
+    "quoted_pvp_iva": 2.5,
+    "excel_code": "080AFP-573"
   },
   {
     "sku": "080AFP-704",
@@ -2477,7 +3055,10 @@
     "category": "filtros",
     "name": "Filtro de Combustible Advance (AFP-704) — Mazda BT-50 Gasolina, 2200 Iny Ford Ranger 2.2, 2.6 2008 (red Je45-20-490a",
     "presentation": "Unidad",
-    "base_price_no_iva": 2.52
+    "base_price_no_iva": 2.52,
+    "price_with_iva_raw": 2.9,
+    "quoted_pvp_iva": 2.9,
+    "excel_code": "080AFP-704"
   },
   {
     "sku": "080AFP-874",
@@ -2487,7 +3068,10 @@
     "category": "filtros",
     "name": "Filtro de Combustible Advance (AFP-874) — Chevrolet Trail Blazer 5.3L Antigua Gasolina (mf-6397) - AFP-874",
     "presentation": "Unidad",
-    "base_price_no_iva": 4.04
+    "base_price_no_iva": 4.04,
+    "price_with_iva_raw": 4.65,
+    "quoted_pvp_iva": 4.9,
+    "excel_code": "080AFP-874"
   },
   {
     "sku": "080AFP-876",
@@ -2497,7 +3081,10 @@
     "category": "filtros",
     "name": "Filtro de Combustible Advance (AFP-876) — Chevrolet Sail 1.4L 12-18",
     "presentation": "Unidad",
-    "base_price_no_iva": 2.65
+    "base_price_no_iva": 2.65,
+    "price_with_iva_raw": 3.05,
+    "quoted_pvp_iva": 3.5,
+    "excel_code": "080AFP-876"
   },
   {
     "sku": "080AFP-877",
@@ -2507,7 +3094,10 @@
     "category": "filtros",
     "name": "Filtro de Combustible Advance (AFP-877) — Chevrolet Sail 1.5 2018, Cavalier 2019 (mf-72809 Prem Flp482 Red 90872178",
     "presentation": "Unidad",
-    "base_price_no_iva": 2.78
+    "base_price_no_iva": 2.78,
+    "price_with_iva_raw": 3.2,
+    "quoted_pvp_iva": 3.5,
+    "excel_code": "080AFP-877"
   },
   {
     "sku": "080AFP-974",
@@ -2517,7 +3107,10 @@
     "category": "filtros",
     "name": "Filtro de Combustible Advance (AFP-974) — Chevrolet Luv, Trooper, Rodeo, Peugeot 306, Wingle 2.4 2.2L Fi N200",
     "presentation": "Unidad",
-    "base_price_no_iva": 2.17
+    "base_price_no_iva": 2.17,
+    "price_with_iva_raw": 2.5,
+    "quoted_pvp_iva": 2.5,
+    "excel_code": "080AFP-974"
   },
   {
     "sku": "080AFS-1212",
@@ -2527,7 +3120,10 @@
     "category": "filtros",
     "name": "Filtro de Combustible Advance (AFS-1212) — Camc H08 440, 380, Cabezal 300, 14M3 Motor Cummins Ism380, Foton Aumark",
     "presentation": "Unidad",
-    "base_price_no_iva": 7.04
+    "base_price_no_iva": 7.04,
+    "price_with_iva_raw": 8.1,
+    "quoted_pvp_iva": 8.5,
+    "excel_code": "080AFS-1212"
   },
   {
     "sku": "080AFS-127-1",
@@ -2537,7 +3133,10 @@
     "category": "filtros",
     "name": "Filtro de Combustible Advance (AFS-127-1) — Volkswagen 17210, Mb 1721, Hino Gd, Gh, Fc Con Valvula (separador)",
     "presentation": "Unidad",
-    "base_price_no_iva": 8.65
+    "base_price_no_iva": 8.65,
+    "price_with_iva_raw": 9.95,
+    "quoted_pvp_iva": 10.0,
+    "excel_code": "080AFS-127-1"
   },
   {
     "sku": "080AFS-1306",
@@ -2547,7 +3146,10 @@
     "category": "filtros",
     "name": "Filtro de Combustible Advance (AFS-1306) — Hino Gd Fuel/ R60t ( Separador)",
     "presentation": "Unidad",
-    "base_price_no_iva": 6.95
+    "base_price_no_iva": 6.95,
+    "price_with_iva_raw": 7.99,
+    "quoted_pvp_iva": 8.0,
+    "excel_code": "080AFS-1306"
   },
   {
     "sku": "080AFS-193",
@@ -2557,7 +3159,10 @@
     "category": "filtros",
     "name": "Filtro de Combustible Advance (AFS-193) — Dongfeng Captain E-513, E-613 (fsp0120) (separador)",
     "presentation": "Unidad",
-    "base_price_no_iva": 4.43
+    "base_price_no_iva": 4.43,
+    "price_with_iva_raw": 5.1,
+    "quoted_pvp_iva": 5.5,
+    "excel_code": "080AFS-193"
   },
   {
     "sku": "080AFS-194-1",
@@ -2567,7 +3172,10 @@
     "category": "filtros",
     "name": "Filtro de Combustible Advance (AFS-194-1) — Rich 6 2.5CC Diesel 20 - (separador)",
     "presentation": "Unidad",
-    "base_price_no_iva": 4.39
+    "base_price_no_iva": 4.39,
+    "price_with_iva_raw": 5.05,
+    "quoted_pvp_iva": 5.5,
+    "excel_code": "080AFS-194-1"
   },
   {
     "sku": "080AFS-7912",
@@ -2577,7 +3185,10 @@
     "category": "filtros",
     "name": "Filtro de Combustible Advance (AFS-7912) — Isuzu Nkr Nmr Npr Nqr Mercedez Series Reward /11 (separador)",
     "presentation": "Unidad",
-    "base_price_no_iva": 7.83
+    "base_price_no_iva": 7.83,
+    "price_with_iva_raw": 9.0,
+    "quoted_pvp_iva": 9.0,
+    "excel_code": "080AFS-7912"
   },
   {
     "sku": "016AM-75676-56",
@@ -2587,7 +3198,10 @@
     "category": "lubricantes",
     "name": "AMALIE 10W-30 Synt Blend SN (1 Litro)",
     "presentation": "1 Litro",
-    "base_price_no_iva": 6.96
+    "base_price_no_iva": 6.96,
+    "price_with_iva_raw": 8.0,
+    "quoted_pvp_iva": 8.0,
+    "excel_code": "016AM-75676-56"
   },
   {
     "sku": "016AM-75677-36",
@@ -2597,7 +3211,10 @@
     "category": "lubricantes",
     "name": "AMALIE 10W-30 Synt Blend SN (1 Galón)",
     "presentation": "1 Galón",
-    "base_price_no_iva": 25.65
+    "base_price_no_iva": 25.65,
+    "price_with_iva_raw": 29.5,
+    "quoted_pvp_iva": 29.5,
+    "excel_code": "016AM-75677-36"
   },
   {
     "sku": "016AM-75696-56",
@@ -2607,7 +3224,10 @@
     "category": "lubricantes",
     "name": "AMALIE 20W-50 Synt Blend SN (1 Litro)",
     "presentation": "1 Litro",
-    "base_price_no_iva": 6.96
+    "base_price_no_iva": 6.96,
+    "price_with_iva_raw": 8.0,
+    "quoted_pvp_iva": 8.0,
+    "excel_code": "016AM-75696-56"
   },
   {
     "sku": "016AM-75697-36",
@@ -2617,7 +3237,10 @@
     "category": "lubricantes",
     "name": "AMALIE 20W-50 Synt Blend SN (1 Galón)",
     "presentation": "1 Galón",
-    "base_price_no_iva": 25.65
+    "base_price_no_iva": 25.65,
+    "price_with_iva_raw": 29.5,
+    "quoted_pvp_iva": 29.5,
+    "excel_code": "016AM-75697-36"
   },
   {
     "sku": "LP-LUR-002-4",
@@ -2627,7 +3250,8 @@
     "category": "lubricantes",
     "name": "MOTUL Moto 5000 10W-40 Semisintetico Ambar",
     "presentation": "1 Litro",
-    "base_price_no_iva": 6.96
+    "base_price_no_iva": 6.96,
+    "quoted_pvp_iva": 8.0
   },
   {
     "sku": "LP-LUR-003-4",
@@ -2637,7 +3261,8 @@
     "category": "lubricantes",
     "name": "MOTUL Moto 5100 15W-50 Semisintetico Ester Ambar",
     "presentation": "1 Litro",
-    "base_price_no_iva": 8.7
+    "base_price_no_iva": 8.7,
+    "quoted_pvp_iva": 10.0
   },
   {
     "sku": "LP-LUR-004-3",
@@ -2647,7 +3272,8 @@
     "category": "lubricantes",
     "name": "MOTUL Moto 5000 20W-50 Semi Sintético",
     "presentation": "1 Lt",
-    "base_price_no_iva": 7.83
+    "base_price_no_iva": 7.83,
+    "quoted_pvp_iva": 9.0
   },
   {
     "sku": "0368AR00030",
@@ -2657,7 +3283,10 @@
     "category": "lubricantes",
     "name": "AROIL Racing 10W-30 SN (1 Litro)",
     "presentation": "1 Litro",
-    "base_price_no_iva": 4.04
+    "base_price_no_iva": 4.04,
+    "price_with_iva_raw": 4.65,
+    "quoted_pvp_iva": 4.9,
+    "excel_code": "0368AR00030"
   },
   {
     "sku": "0368AR00001",
@@ -2667,7 +3296,10 @@
     "category": "lubricantes",
     "name": "AROIL Racing 10W-30 SN (1 Galón)",
     "presentation": "1 Galón",
-    "base_price_no_iva": 12.7
+    "base_price_no_iva": 12.7,
+    "price_with_iva_raw": 14.6,
+    "quoted_pvp_iva": 14.9,
+    "excel_code": "0368AR00001"
   },
   {
     "sku": "0368AR00031",
@@ -2677,7 +3309,10 @@
     "category": "lubricantes",
     "name": "AROIL Racing 20W-50 SN (1 Litro)",
     "presentation": "1 Litro",
-    "base_price_no_iva": 4.04
+    "base_price_no_iva": 4.04,
+    "price_with_iva_raw": 4.65,
+    "quoted_pvp_iva": 4.9,
+    "excel_code": "0368AR00031"
   },
   {
     "sku": "0368AR00005",
@@ -2687,7 +3322,10 @@
     "category": "lubricantes",
     "name": "AROIL Racing 20W-50 SN (1 Galón)",
     "presentation": "1 Galón",
-    "base_price_no_iva": 14.35
+    "base_price_no_iva": 14.35,
+    "price_with_iva_raw": 16.5,
+    "quoted_pvp_iva": 16.5,
+    "excel_code": "0368AR00005"
   },
   {
     "sku": "0368AR00032",
@@ -2697,7 +3335,10 @@
     "category": "lubricantes",
     "name": "AROIL Super 40 Sl/cf (1 Litro)",
     "presentation": "1 Litro",
-    "base_price_no_iva": 3.3
+    "base_price_no_iva": 3.3,
+    "price_with_iva_raw": 3.8,
+    "quoted_pvp_iva": 3.9,
+    "excel_code": "0368AR00032"
   },
   {
     "sku": "0368AR00009",
@@ -2707,7 +3348,10 @@
     "category": "lubricantes",
     "name": "AROIL Super 40 Sl/cf (1 Galón)",
     "presentation": "1 Galón",
-    "base_price_no_iva": 12.48
+    "base_price_no_iva": 12.48,
+    "price_with_iva_raw": 14.35,
+    "quoted_pvp_iva": 14.5,
+    "excel_code": "0368AR00009"
   },
   {
     "sku": "0368AR10031",
@@ -2717,7 +3361,10 @@
     "category": "lubricantes",
     "name": "AROIL 15W-40 CI-4 (1 Litro)",
     "presentation": "1 Litro",
-    "base_price_no_iva": 3.96
+    "base_price_no_iva": 3.96,
+    "price_with_iva_raw": 4.55,
+    "quoted_pvp_iva": 4.9,
+    "excel_code": "0368AR10031"
   },
   {
     "sku": "0368AR10001",
@@ -2727,7 +3374,10 @@
     "category": "lubricantes",
     "name": "AROIL 15W-40 CI-4 (1 Galón)",
     "presentation": "1 Galón",
-    "base_price_no_iva": 15.26
+    "base_price_no_iva": 15.26,
+    "price_with_iva_raw": 17.55,
+    "quoted_pvp_iva": 17.9,
+    "excel_code": "0368AR10001"
   },
   {
     "sku": "0368AR10003",
@@ -2737,7 +3387,10 @@
     "category": "lubricantes",
     "name": "AROIL 15W-40 CI-4 (Caneca 5 GL)",
     "presentation": "Caneca 5 GL",
-    "base_price_no_iva": 62.61
+    "base_price_no_iva": 62.61,
+    "price_with_iva_raw": 72.0,
+    "quoted_pvp_iva": 72.0,
+    "excel_code": "0368AR10003"
   },
   {
     "sku": "0368AR10032",
@@ -2747,7 +3400,10 @@
     "category": "lubricantes",
     "name": "AROIL 25W-60 CF (1 Litro)",
     "presentation": "1 Litro",
-    "base_price_no_iva": 3.87
+    "base_price_no_iva": 3.87,
+    "price_with_iva_raw": 4.45,
+    "quoted_pvp_iva": 4.5,
+    "excel_code": "0368AR10032"
   },
   {
     "sku": "0368AR10008",
@@ -2757,7 +3413,10 @@
     "category": "lubricantes",
     "name": "AROIL 25W-60 CF (1 Galón)",
     "presentation": "1 Galón",
-    "base_price_no_iva": 13.52
+    "base_price_no_iva": 13.52,
+    "price_with_iva_raw": 15.55,
+    "quoted_pvp_iva": 15.9,
+    "excel_code": "0368AR10008"
   },
   {
     "sku": "0368AR10010",
@@ -2767,7 +3426,10 @@
     "category": "lubricantes",
     "name": "AROIL 25W-60 CF (Caneca 5 GL)",
     "presentation": "Caneca 5 GL",
-    "base_price_no_iva": 59.91
+    "base_price_no_iva": 59.91,
+    "price_with_iva_raw": 68.9,
+    "quoted_pvp_iva": 68.9,
+    "excel_code": "0368AR10010"
   },
   {
     "sku": "LP-LUR-007-2",
@@ -2777,7 +3439,8 @@
     "category": "lubricantes",
     "name": "AROIL Diésel 40 CF",
     "presentation": "Caneca 5 GL",
-    "base_price_no_iva": 62.61
+    "base_price_no_iva": 62.61,
+    "quoted_pvp_iva": 72.0
   },
   {
     "sku": "LP-LUR-009-2",
@@ -2787,7 +3450,8 @@
     "category": "lubricantes",
     "name": "AROIL 4T 20W-50 SL Jaso Ma2",
     "presentation": "1 Litro",
-    "base_price_no_iva": 4.04
+    "base_price_no_iva": 4.04,
+    "quoted_pvp_iva": 4.9
   },
   {
     "sku": "0368AR40038",
@@ -2797,7 +3461,10 @@
     "category": "lubricantes",
     "name": "AROIL 75W-85 GL-5 (1 Litro)",
     "presentation": "1 Litro",
-    "base_price_no_iva": 4.35
+    "base_price_no_iva": 4.35,
+    "price_with_iva_raw": 5.0,
+    "quoted_pvp_iva": 5.0,
+    "excel_code": "0368AR40038"
   },
   {
     "sku": "0368AR40001",
@@ -2807,7 +3474,10 @@
     "category": "lubricantes",
     "name": "AROIL 75W-85 GL-5 (1 Galón)",
     "presentation": "1 Galón",
-    "base_price_no_iva": 14.87
+    "base_price_no_iva": 14.87,
+    "price_with_iva_raw": 17.1,
+    "quoted_pvp_iva": 17.5,
+    "excel_code": "0368AR40001"
   },
   {
     "sku": "0368AR40039",
@@ -2817,7 +3487,10 @@
     "category": "lubricantes",
     "name": "AROIL 80W-90 GL-5 (1 Litro)",
     "presentation": "1 Litro",
-    "base_price_no_iva": 3.96
+    "base_price_no_iva": 3.96,
+    "price_with_iva_raw": 4.55,
+    "quoted_pvp_iva": 4.9,
+    "excel_code": "0368AR40039"
   },
   {
     "sku": "0368AR40005",
@@ -2827,7 +3500,10 @@
     "category": "lubricantes",
     "name": "AROIL 80W-90 GL-5 (1 Galón)",
     "presentation": "1 Galón",
-    "base_price_no_iva": 14.61
+    "base_price_no_iva": 14.61,
+    "price_with_iva_raw": 16.8,
+    "quoted_pvp_iva": 16.9,
+    "excel_code": "0368AR40005"
   },
   {
     "sku": "0368AR40040",
@@ -2837,7 +3513,10 @@
     "category": "lubricantes",
     "name": "AROIL 85W-140 GL-5 (1 Litro)",
     "presentation": "1 Litro",
-    "base_price_no_iva": 4.78
+    "base_price_no_iva": 4.78,
+    "price_with_iva_raw": 5.5,
+    "quoted_pvp_iva": 5.5,
+    "excel_code": "0368AR40040"
   },
   {
     "sku": "0368AR40009",
@@ -2847,7 +3526,10 @@
     "category": "lubricantes",
     "name": "AROIL 85W-140 GL-5 (1 Galón)",
     "presentation": "1 Galón",
-    "base_price_no_iva": 16.91
+    "base_price_no_iva": 16.91,
+    "price_with_iva_raw": 19.45,
+    "quoted_pvp_iva": 19.5,
+    "excel_code": "0368AR40009"
   },
   {
     "sku": "0368AR40041",
@@ -2857,7 +3539,10 @@
     "category": "lubricantes",
     "name": "AROIL 90 GL-4 (1 Litro)",
     "presentation": "1 Litro",
-    "base_price_no_iva": 4.04
+    "base_price_no_iva": 4.04,
+    "price_with_iva_raw": 4.65,
+    "quoted_pvp_iva": 4.9,
+    "excel_code": "0368AR40041"
   },
   {
     "sku": "0368AR40013",
@@ -2867,7 +3552,10 @@
     "category": "lubricantes",
     "name": "AROIL 90 GL-4 (1 Galón)",
     "presentation": "1 Galón",
-    "base_price_no_iva": 13.87
+    "base_price_no_iva": 13.87,
+    "price_with_iva_raw": 15.95,
+    "quoted_pvp_iva": 16.0,
+    "excel_code": "0368AR40013"
   },
   {
     "sku": "0368AR40014",
@@ -2877,7 +3565,10 @@
     "category": "lubricantes",
     "name": "AROIL 90 GL-4 (Caneca 5 GL)",
     "presentation": "Caneca 5 GL",
-    "base_price_no_iva": 65.3
+    "base_price_no_iva": 65.3,
+    "price_with_iva_raw": 75.1,
+    "quoted_pvp_iva": 75.5,
+    "excel_code": "0368AR40014"
   },
   {
     "sku": "0368AR40042",
@@ -2887,7 +3578,10 @@
     "category": "lubricantes",
     "name": "AROIL 140 GL-4 (1 Litro)",
     "presentation": "1 Litro",
-    "base_price_no_iva": 4.04
+    "base_price_no_iva": 4.04,
+    "price_with_iva_raw": 4.65,
+    "quoted_pvp_iva": 4.9,
+    "excel_code": "0368AR40042"
   },
   {
     "sku": "0368AR40017",
@@ -2897,7 +3591,10 @@
     "category": "lubricantes",
     "name": "AROIL 140 GL-4 (1 Galón)",
     "presentation": "1 Galón",
-    "base_price_no_iva": 15.39
+    "base_price_no_iva": 15.39,
+    "price_with_iva_raw": 17.7,
+    "quoted_pvp_iva": 17.9,
+    "excel_code": "0368AR40017"
   },
   {
     "sku": "0368AR40018",
@@ -2907,7 +3604,10 @@
     "category": "lubricantes",
     "name": "AROIL 140 GL-4 (Caneca 5 GL)",
     "presentation": "Caneca 5 GL",
-    "base_price_no_iva": 72.52
+    "base_price_no_iva": 72.52,
+    "price_with_iva_raw": 83.4,
+    "quoted_pvp_iva": 83.5,
+    "excel_code": "0368AR40018"
   },
   {
     "sku": "LP-LUR-015-2",
@@ -2917,7 +3617,10 @@
     "category": "lubricantes",
     "name": "AROIL ATF Diii",
     "presentation": "1 Litro",
-    "base_price_no_iva": 4.57
+    "base_price_no_iva": 4.57,
+    "price_with_iva_raw": 5.25,
+    "quoted_pvp_iva": 5.5,
+    "excel_code": "0368AR40045"
   },
   {
     "sku": "LP-LUR-016-2",
@@ -2927,7 +3630,10 @@
     "category": "lubricantes",
     "name": "AROIL Aw ISO 68 Rojo",
     "presentation": "Caneca 5 GL",
-    "base_price_no_iva": 53.3
+    "base_price_no_iva": 53.3,
+    "price_with_iva_raw": 61.3,
+    "quoted_pvp_iva": 61.5,
+    "excel_code": "0368AR50006"
   },
   {
     "sku": "LP-LUR-017-2",
@@ -2937,7 +3643,8 @@
     "category": "lubricantes",
     "name": "AROIL Tracfluid 10W-30",
     "presentation": "Caneca 5 GL",
-    "base_price_no_iva": 63.74
+    "base_price_no_iva": 63.74,
+    "quoted_pvp_iva": 73.5
   },
   {
     "sku": "LP-LUR-018-2",
@@ -2947,7 +3654,10 @@
     "category": "lubricantes",
     "name": "AROIL ISO 68 Ambar Bld",
     "presentation": "Caneca 5 GL",
-    "base_price_no_iva": 36.53
+    "base_price_no_iva": 36.53,
+    "price_with_iva_raw": 42.01,
+    "quoted_pvp_iva": 42.5,
+    "excel_code": "AROIL AMBAR 0368BF00002"
   },
   {
     "sku": "LP-MAN-002",
@@ -2957,7 +3667,10 @@
     "category": "aditivos",
     "name": "MANNOL Aditivo Limpia Parabrisas Concentrado 250ml",
     "presentation": "250Ml",
-    "base_price_no_iva": 4.0
+    "base_price_no_iva": 4.0,
+    "price_with_iva_raw": 4.6,
+    "quoted_pvp_iva": 4.9,
+    "excel_code": "012MN5022"
   },
   {
     "sku": "LP-MAN-003",
@@ -2967,7 +3680,10 @@
     "category": "aditivos",
     "name": "MANNOL Limpiador Protector UV3 Cockpit Care Apple",
     "presentation": "1 Litro",
-    "base_price_no_iva": 4.35
+    "base_price_no_iva": 4.35,
+    "price_with_iva_raw": 5.0,
+    "quoted_pvp_iva": 5.0,
+    "excel_code": "012MN6145"
   },
   {
     "sku": "LP-MAN-004",
@@ -2977,7 +3693,10 @@
     "category": "aditivos",
     "name": "MANNOL Limpiador Protector UV3 Cockpit Care Vainilla",
     "presentation": "1 Litro",
-    "base_price_no_iva": 4.35
+    "base_price_no_iva": 4.35,
+    "price_with_iva_raw": 5.0,
+    "quoted_pvp_iva": 5.0,
+    "excel_code": "012MN6149"
   },
   {
     "sku": "LP-MAN-005",
@@ -2987,7 +3706,10 @@
     "category": "aditivos",
     "name": "MANNOL Grasa Chain Lube Para Cadenas 200ml",
     "presentation": "200Ml",
-    "base_price_no_iva": 3.26
+    "base_price_no_iva": 3.26,
+    "price_with_iva_raw": 3.75,
+    "quoted_pvp_iva": 3.9,
+    "excel_code": "012MN7901"
   },
   {
     "sku": "LP-MAN-006",
@@ -2997,7 +3719,10 @@
     "category": "aditivos",
     "name": "MANNOL Chain Cleaner / Limpiador De Cadenas 400ml",
     "presentation": "400Ml",
-    "base_price_no_iva": 3.7
+    "base_price_no_iva": 3.7,
+    "price_with_iva_raw": 4.25,
+    "quoted_pvp_iva": 4.5,
+    "excel_code": "012MN7904"
   },
   {
     "sku": "LP-MAN-007",
@@ -3007,7 +3732,10 @@
     "category": "aditivos",
     "name": "MANNOL Grasa De Litio Multiuso 800 Grs Ep2",
     "presentation": "800 Grs",
-    "base_price_no_iva": 8.7
+    "base_price_no_iva": 8.7,
+    "price_with_iva_raw": 10.0,
+    "quoted_pvp_iva": 10.0,
+    "excel_code": "012MN8028-08"
   },
   {
     "sku": "012MN8028-08",
@@ -3017,7 +3745,10 @@
     "category": "aditivos",
     "name": "MANNOL Grasa LC-2 Alta Temperatura 4.5 Kg (800 g)",
     "presentation": "800 g",
-    "base_price_no_iva": 8.7
+    "base_price_no_iva": 8.7,
+    "price_with_iva_raw": 10.0,
+    "quoted_pvp_iva": 10.0,
+    "excel_code": "012MN8028-08"
   },
   {
     "sku": "012MN8029",
@@ -3027,7 +3758,10 @@
     "category": "aditivos",
     "name": "MANNOL Grasa LC-2 Alta Temperatura 4.5 Kg (4.5 Kg)",
     "presentation": "4.5 Kg",
-    "base_price_no_iva": 60.91
+    "base_price_no_iva": 60.91,
+    "price_with_iva_raw": 70.05,
+    "quoted_pvp_iva": 70.5,
+    "excel_code": "012MN8029"
   },
   {
     "sku": "012MN8116",
@@ -3037,7 +3771,10 @@
     "category": "aditivos",
     "name": "MANNOL Grasa LC-2 Alta Temperatura 4.5 Kg (Caneca 18 Kg)",
     "presentation": "Caneca 18 Kg",
-    "base_price_no_iva": 207.78
+    "base_price_no_iva": 207.78,
+    "price_with_iva_raw": 238.95,
+    "quoted_pvp_iva": 239.0,
+    "excel_code": "012MN8116"
   },
   {
     "sku": "LP-MAN-009",
@@ -3047,7 +3784,10 @@
     "category": "aditivos",
     "name": "MANNOL Grasa LC-2 Alta Temperatura 18 Kg",
     "presentation": "18 Kg",
-    "base_price_no_iva": 207.78
+    "base_price_no_iva": 207.78,
+    "price_with_iva_raw": 238.95,
+    "quoted_pvp_iva": 239.0,
+    "excel_code": "012MN8116"
   },
   {
     "sku": "LP-MAN-010",
@@ -3057,7 +3797,10 @@
     "category": "aditivos",
     "name": "MANNOL Grasa Blanca Spray 450gr",
     "presentation": "450Gr",
-    "base_price_no_iva": 7.26
+    "base_price_no_iva": 7.26,
+    "price_with_iva_raw": 8.35,
+    "quoted_pvp_iva": 8.5,
+    "excel_code": "012MN8121"
   },
   {
     "sku": "LP-MAN-011",
@@ -3067,7 +3810,10 @@
     "category": "aditivos",
     "name": "MANNOL Motor Flush Professional + Ester 450 Ml",
     "presentation": "450 Ml",
-    "base_price_no_iva": 4.83
+    "base_price_no_iva": 4.83,
+    "price_with_iva_raw": 5.55,
+    "quoted_pvp_iva": 5.9,
+    "excel_code": "012MN9009-045"
   },
   {
     "sku": "LP-MAN-012",
@@ -3077,7 +3823,10 @@
     "category": "aditivos",
     "name": "MANNOL Kit Limpiador De Catalizador 500ml",
     "presentation": "500Ml",
-    "base_price_no_iva": 10.13
+    "base_price_no_iva": 10.13,
+    "price_with_iva_raw": 11.65,
+    "quoted_pvp_iva": 11.9,
+    "excel_code": "012MN9201"
   },
   {
     "sku": "LP-MAN-013",
@@ -3087,7 +3836,10 @@
     "category": "aditivos",
     "name": "MANNOL Aditivo Limpiador De Catalizador 450 Ml",
     "presentation": "450 Ml",
-    "base_price_no_iva": 8.96
+    "base_price_no_iva": 8.96,
+    "price_with_iva_raw": 10.3,
+    "quoted_pvp_iva": 10.5,
+    "excel_code": "012MN9202-045"
   },
   {
     "sku": "LP-MAN-014",
@@ -3097,7 +3849,10 @@
     "category": "aditivos",
     "name": "MANNOL Oil Leak Stop 250 Ml",
     "presentation": "250 Ml",
-    "base_price_no_iva": 6.0
+    "base_price_no_iva": 6.0,
+    "price_with_iva_raw": 6.9,
+    "quoted_pvp_iva": 6.9,
+    "excel_code": "012MN9423-025"
   },
   {
     "sku": "LP-MAN-015",
@@ -3107,7 +3862,10 @@
     "category": "aditivos",
     "name": "MANNOL Líquido Encendido Ether 450ml",
     "presentation": "450Ml",
-    "base_price_no_iva": 6.87
+    "base_price_no_iva": 6.87,
+    "price_with_iva_raw": 7.9,
+    "quoted_pvp_iva": 7.9,
+    "excel_code": "012MN9669"
   },
   {
     "sku": "LP-MAN-016",
@@ -3117,7 +3875,10 @@
     "category": "aditivos",
     "name": "MANNOL Limpiador De Zapatas Embragues Cadenas 600ml",
     "presentation": "600Ml",
-    "base_price_no_iva": 4.57
+    "base_price_no_iva": 4.57,
+    "price_with_iva_raw": 5.25,
+    "quoted_pvp_iva": 5.5,
+    "excel_code": "012MN9672"
   },
   {
     "sku": "LP-MAN-017",
@@ -3127,7 +3888,10 @@
     "category": "aditivos",
     "name": "MANNOL Limpiador De Neumáticos En Espuma 650 Ml",
     "presentation": "650 Ml",
-    "base_price_no_iva": 9.22
+    "base_price_no_iva": 9.22,
+    "price_with_iva_raw": 10.6,
+    "quoted_pvp_iva": 10.9,
+    "excel_code": "012MN9673"
   },
   {
     "sku": "LP-MAN-018",
@@ -3137,7 +3901,10 @@
     "category": "aditivos",
     "name": "MANNOL Limpiador Carburador 600 Ml",
     "presentation": "600 Ml",
-    "base_price_no_iva": 3.65
+    "base_price_no_iva": 3.65,
+    "price_with_iva_raw": 4.2,
+    "quoted_pvp_iva": 4.5,
+    "excel_code": "012MN9770"
   },
   {
     "sku": "LP-MAN-019",
@@ -3147,7 +3914,10 @@
     "category": "aditivos",
     "name": "MANNOL Super Goma Gel 3gr",
     "presentation": "3Gr",
-    "base_price_no_iva": 0.61
+    "base_price_no_iva": 0.61,
+    "price_with_iva_raw": 0.7,
+    "quoted_pvp_iva": 0.9,
+    "excel_code": "012MN9822"
   },
   {
     "sku": "LP-MAN-020",
@@ -3157,7 +3927,10 @@
     "category": "aditivos",
     "name": "MANNOL Aditivo Ceramo Ester 250 Ml",
     "presentation": "250 Ml",
-    "base_price_no_iva": 18.13
+    "base_price_no_iva": 18.13,
+    "price_with_iva_raw": 20.85,
+    "quoted_pvp_iva": 20.9,
+    "excel_code": "012MN9829-025"
   },
   {
     "sku": "LP-MAN-021",
@@ -3167,7 +3940,10 @@
     "category": "aditivos",
     "name": "MANNOL Limpiador Cuerpo De Aceleración / Mariposa 400ml",
     "presentation": "400Ml",
-    "base_price_no_iva": 4.65
+    "base_price_no_iva": 4.65,
+    "price_with_iva_raw": 5.35,
+    "quoted_pvp_iva": 5.5,
+    "excel_code": "012MN9873"
   },
   {
     "sku": "LP-MAN-022",
@@ -3177,7 +3953,10 @@
     "category": "aditivos",
     "name": "MANNOL Lubricante Multiuso Anticorrosivo 400 Ml / 13.5oz",
     "presentation": "400 Ml",
-    "base_price_no_iva": 5.65
+    "base_price_no_iva": 5.65,
+    "price_with_iva_raw": 6.5,
+    "quoted_pvp_iva": 6.5,
+    "excel_code": "012MN9892"
   },
   {
     "sku": "LP-MAN-023",
@@ -3187,7 +3966,10 @@
     "category": "aditivos",
     "name": "MANNOL Limpiador De Contactos Electronico 450 Ml",
     "presentation": "450 Ml",
-    "base_price_no_iva": 4.57
+    "base_price_no_iva": 4.57,
+    "price_with_iva_raw": 5.25,
+    "quoted_pvp_iva": 5.5,
+    "excel_code": "012MN9893"
   },
   {
     "sku": "LP-MAN-024",
@@ -3197,7 +3979,10 @@
     "category": "aditivos",
     "name": "MANNOL Tratamiento De Bandas 200m",
     "presentation": "1 Litro",
-    "base_price_no_iva": 4.43
+    "base_price_no_iva": 4.43,
+    "price_with_iva_raw": 5.1,
+    "quoted_pvp_iva": 5.5,
+    "excel_code": "012MN9897"
   },
   {
     "sku": "LP-MAN-025",
@@ -3207,7 +3992,10 @@
     "category": "aditivos",
     "name": "MANNOL Motor Flush 350 Ml",
     "presentation": "350 Ml",
-    "base_price_no_iva": 3.26
+    "base_price_no_iva": 3.26,
+    "price_with_iva_raw": 3.75,
+    "quoted_pvp_iva": 3.9,
+    "excel_code": "012MN9900"
   },
   {
     "sku": "LP-MAN-026",
@@ -3217,7 +4005,10 @@
     "category": "aditivos",
     "name": "MANNOL Aditivo Caja Automática 100ml Para 4 Litros",
     "presentation": "100Ml",
-    "base_price_no_iva": 4.96
+    "base_price_no_iva": 4.96,
+    "price_with_iva_raw": 5.7,
+    "quoted_pvp_iva": 5.9,
+    "excel_code": "012MN9902-01"
   },
   {
     "sku": "LP-MAN-027",
@@ -3227,7 +4018,10 @@
     "category": "aditivos",
     "name": "MANNOL Aditivo Caja Manual 100ml Para 4 Litros",
     "presentation": "100Ml",
-    "base_price_no_iva": 4.09
+    "base_price_no_iva": 4.09,
+    "price_with_iva_raw": 4.7,
+    "quoted_pvp_iva": 4.9,
+    "excel_code": "012MN9903-01"
   },
   {
     "sku": "LP-MAN-028",
@@ -3237,7 +4031,10 @@
     "category": "aditivos",
     "name": "MANNOL Llanta Doctor 450ml",
     "presentation": "450Ml",
-    "base_price_no_iva": 5.61
+    "base_price_no_iva": 5.61,
+    "price_with_iva_raw": 6.45,
+    "quoted_pvp_iva": 6.5,
+    "excel_code": "012MN9906"
   },
   {
     "sku": "LP-MAN-029",
@@ -3247,7 +4044,10 @@
     "category": "aditivos",
     "name": "MANNOL Tratamiento Anticorrosion Anticor 1l ()",
     "presentation": "1 Litro",
-    "base_price_no_iva": 13.96
+    "base_price_no_iva": 13.96,
+    "price_with_iva_raw": 16.05,
+    "quoted_pvp_iva": 16.5,
+    "excel_code": "012MN9909"
   },
   {
     "sku": "LP-MAN-030",
@@ -3257,7 +4057,10 @@
     "category": "aditivos",
     "name": "MANNOL Silicon Gris 85gr",
     "presentation": "85Gr",
-    "base_price_no_iva": 4.13
+    "base_price_no_iva": 4.13,
+    "price_with_iva_raw": 4.75,
+    "quoted_pvp_iva": 4.9,
+    "excel_code": "012MN9911"
   },
   {
     "sku": "LP-MAN-031",
@@ -3267,7 +4070,10 @@
     "category": "aditivos",
     "name": "MANNOL Aditivo Sellador Fuga Dirección Hidráulica 250 Ml ()",
     "presentation": "250 Ml",
-    "base_price_no_iva": 5.26
+    "base_price_no_iva": 5.26,
+    "price_with_iva_raw": 6.05,
+    "quoted_pvp_iva": 6.5,
+    "excel_code": "012MN9923-025"
   },
   {
     "sku": "LP-MAN-032",
@@ -3277,7 +4083,10 @@
     "category": "aditivos",
     "name": "MANNOL Trabapernos (fijacion Fuerte) 10ml",
     "presentation": "10Ml",
-    "base_price_no_iva": 3.61
+    "base_price_no_iva": 3.61,
+    "price_with_iva_raw": 4.15,
+    "quoted_pvp_iva": 4.5,
+    "excel_code": "012MN9927"
   },
   {
     "sku": "012MN9929-045",
@@ -3287,7 +4096,10 @@
     "category": "aditivos",
     "name": "MANNOL Ester Additive / Tratamiento De Aceite 450 Ml Y 1lt (450 ml)",
     "presentation": "450 ml",
-    "base_price_no_iva": 8.48
+    "base_price_no_iva": 8.48,
+    "price_with_iva_raw": 9.75,
+    "quoted_pvp_iva": 9.9,
+    "excel_code": "012MN9929-045"
   },
   {
     "sku": "012MN9929-1",
@@ -3297,7 +4109,10 @@
     "category": "aditivos",
     "name": "MANNOL Ester Additive / Tratamiento De Aceite 450 Ml Y 1lt (1 Litro)",
     "presentation": "1 Litro",
-    "base_price_no_iva": 17.52
+    "base_price_no_iva": 17.52,
+    "price_with_iva_raw": 20.15,
+    "quoted_pvp_iva": 20.5,
+    "excel_code": "012MN9929-1"
   },
   {
     "sku": "012MN9930-025",
@@ -3307,7 +4122,10 @@
     "category": "aditivos",
     "name": "MANNOL Diésel Ester Additive 100ml Y 250ml (250 ml)",
     "presentation": "250 ml",
-    "base_price_no_iva": 5.57
+    "base_price_no_iva": 5.57,
+    "price_with_iva_raw": 6.4,
+    "quoted_pvp_iva": 6.5,
+    "excel_code": "012MN9930-025"
   },
   {
     "sku": "012MN9930-01",
@@ -3317,7 +4135,10 @@
     "category": "aditivos",
     "name": "MANNOL Diésel Ester Additive 100ml Y 250ml (100 ml)",
     "presentation": "100 ml",
-    "base_price_no_iva": 2.78
+    "base_price_no_iva": 2.78,
+    "price_with_iva_raw": 3.2,
+    "quoted_pvp_iva": 3.5,
+    "excel_code": "012MN9930-01"
   },
   {
     "sku": "LP-MAN-035",
@@ -3327,7 +4148,10 @@
     "category": "aditivos",
     "name": "MANNOL Limpiador De Tapiceria 650ml",
     "presentation": "650Ml",
-    "base_price_no_iva": 3.78
+    "base_price_no_iva": 3.78,
+    "price_with_iva_raw": 4.35,
+    "quoted_pvp_iva": 4.5,
+    "excel_code": "012MN9931"
   },
   {
     "sku": "LP-MAN-036",
@@ -3337,7 +4161,10 @@
     "category": "aditivos",
     "name": "MANNOL Burning Booster / Mejorador De Combustion 500ml Metalico",
     "presentation": "500Ml",
-    "base_price_no_iva": 6.83
+    "base_price_no_iva": 6.83,
+    "price_with_iva_raw": 7.85,
+    "quoted_pvp_iva": 7.9,
+    "excel_code": "012MN9939-05"
   },
   {
     "sku": "LP-MAN-037",
@@ -3347,7 +4174,10 @@
     "category": "aditivos",
     "name": "MANNOL Motor Life Extender / Reparador 450ml",
     "presentation": "450Ml",
-    "base_price_no_iva": 7.78
+    "base_price_no_iva": 7.78,
+    "price_with_iva_raw": 8.95,
+    "quoted_pvp_iva": 9.0,
+    "excel_code": "012MN9943"
   },
   {
     "sku": "LP-MAN-038",
@@ -3357,7 +4187,10 @@
     "category": "aditivos",
     "name": "MANNOL Limpiador De Cuero 450ml",
     "presentation": "450Ml",
-    "base_price_no_iva": 3.78
+    "base_price_no_iva": 3.78,
+    "price_with_iva_raw": 4.35,
+    "quoted_pvp_iva": 4.5,
+    "excel_code": "012MN9944"
   },
   {
     "sku": "LP-MAN-039",
@@ -3367,7 +4200,10 @@
     "category": "aditivos",
     "name": "MANNOL Benzin Ester Additive Plástico 250ml",
     "presentation": "250Ml",
-    "base_price_no_iva": 5.57
+    "base_price_no_iva": 5.57,
+    "price_with_iva_raw": 6.4,
+    "quoted_pvp_iva": 6.5,
+    "excel_code": "012MN9950-025"
   },
   {
     "sku": "LP-MAN-040",
@@ -3377,7 +4213,10 @@
     "category": "aditivos",
     "name": "MANNOL Super Benzin Octane Plus + 6 450ml",
     "presentation": "450Ml",
-    "base_price_no_iva": 8.43
+    "base_price_no_iva": 8.43,
+    "price_with_iva_raw": 9.7,
+    "quoted_pvp_iva": 9.9,
+    "excel_code": "012MN9954-045"
   },
   {
     "sku": "LP-MAN-041",
@@ -3387,7 +4226,10 @@
     "category": "aditivos",
     "name": "MANNOL Super Diésel (cetane Plus + 4) 450ml",
     "presentation": "450Ml",
-    "base_price_no_iva": 7.43
+    "base_price_no_iva": 7.43,
+    "price_with_iva_raw": 8.55,
+    "quoted_pvp_iva": 8.9,
+    "excel_code": "012MN9955-045"
   },
   {
     "sku": "LP-MAN-042",
@@ -3397,7 +4239,10 @@
     "category": "aditivos",
     "name": "MANNOL Diésel Jet Cleaner 250ml",
     "presentation": "250Ml",
-    "base_price_no_iva": 3.13
+    "base_price_no_iva": 3.13,
+    "price_with_iva_raw": 3.6,
+    "quoted_pvp_iva": 3.9,
+    "excel_code": "012MN9956-025"
   },
   {
     "sku": "LP-MAN-043",
@@ -3407,7 +4252,10 @@
     "category": "aditivos",
     "name": "MANNOL Injector Cleaner Gasolina 250ml",
     "presentation": "250Ml",
-    "base_price_no_iva": 3.35
+    "base_price_no_iva": 3.35,
+    "price_with_iva_raw": 3.85,
+    "quoted_pvp_iva": 3.9,
+    "excel_code": "012MN9957-025"
   },
   {
     "sku": "LP-MAN-044",
@@ -3417,7 +4265,10 @@
     "category": "aditivos",
     "name": "MANNOL Dpf Cleaner Metal 400ml",
     "presentation": "400Ml",
-    "base_price_no_iva": 11.57
+    "base_price_no_iva": 11.57,
+    "price_with_iva_raw": 13.3,
+    "quoted_pvp_iva": 13.5,
+    "excel_code": "012MN9958"
   },
   {
     "sku": "LP-MAN-045",
@@ -3427,7 +4278,10 @@
     "category": "aditivos",
     "name": "MANNOL Limpiador Radiador 250 Ml",
     "presentation": "250 Ml",
-    "base_price_no_iva": 4.04
+    "base_price_no_iva": 4.04,
+    "price_with_iva_raw": 4.65,
+    "quoted_pvp_iva": 4.9,
+    "excel_code": "012MN9965"
   },
   {
     "sku": "LP-MAN-046",
@@ -3437,7 +4291,10 @@
     "category": "aditivos",
     "name": "MANNOL Sellador De Fugas Para Radiador 250ml",
     "presentation": "250Ml",
-    "base_price_no_iva": 3.96
+    "base_price_no_iva": 3.96,
+    "price_with_iva_raw": 4.55,
+    "quoted_pvp_iva": 4.9,
+    "excel_code": "012MN9966-025"
   },
   {
     "sku": "LP-MAN-047",
@@ -3447,7 +4304,10 @@
     "category": "aditivos",
     "name": "MANNOL Sellador De Fugas Caja De Cambios 250ml",
     "presentation": "250Ml",
-    "base_price_no_iva": 5.52
+    "base_price_no_iva": 5.52,
+    "price_with_iva_raw": 6.35,
+    "quoted_pvp_iva": 6.5,
+    "excel_code": "012MN9968-025"
   },
   {
     "sku": "LP-MAN-048",
@@ -3457,7 +4317,10 @@
     "category": "aditivos",
     "name": "MANNOL Limpiador De Aire Acondicionado 520 Ml",
     "presentation": "520 Ml",
-    "base_price_no_iva": 4.3
+    "base_price_no_iva": 4.3,
+    "price_with_iva_raw": 4.95,
+    "quoted_pvp_iva": 5.0,
+    "excel_code": "012MN9971"
   },
   {
     "sku": "LP-MAN-049",
@@ -3467,7 +4330,10 @@
     "category": "aditivos",
     "name": "MANNOL Limpiador Externo De Motor Spray 500 Ml",
     "presentation": "500 Ml",
-    "base_price_no_iva": 3.65
+    "base_price_no_iva": 3.65,
+    "price_with_iva_raw": 4.2,
+    "quoted_pvp_iva": 4.5,
+    "excel_code": "012MN9973"
   },
   {
     "sku": "LP-MAN-050",
@@ -3477,7 +4343,10 @@
     "category": "aditivos",
     "name": "MANNOL Limpia Vidrios 500ml",
     "presentation": "500Ml",
-    "base_price_no_iva": 3.87
+    "base_price_no_iva": 3.87,
+    "price_with_iva_raw": 4.45,
+    "quoted_pvp_iva": 4.5,
+    "excel_code": "012MN9974"
   },
   {
     "sku": "LP-MAN-051",
@@ -3487,7 +4356,10 @@
     "category": "aditivos",
     "name": "MANNOL Limpiador Inyectores Diésel 300 Ml",
     "presentation": "300 Ml",
-    "base_price_no_iva": 3.91
+    "base_price_no_iva": 3.91,
+    "price_with_iva_raw": 4.5,
+    "quoted_pvp_iva": 4.5,
+    "excel_code": "012MN9980"
   },
   {
     "sku": "LP-MAN-052",
@@ -3497,7 +4369,10 @@
     "category": "aditivos",
     "name": "MANNOL Limpia Inyectores Gasolina 300 Ml",
     "presentation": "300 Ml",
-    "base_price_no_iva": 3.74
+    "base_price_no_iva": 3.74,
+    "price_with_iva_raw": 4.3,
+    "quoted_pvp_iva": 4.5,
+    "excel_code": "012MN9981"
   },
   {
     "sku": "LP-MAN-053",
@@ -3507,7 +4382,10 @@
     "category": "aditivos",
     "name": "MANNOL Aditivo Motor Dr. 350 Ml",
     "presentation": "350 Ml",
-    "base_price_no_iva": 3.74
+    "base_price_no_iva": 3.74,
+    "price_with_iva_raw": 4.3,
+    "quoted_pvp_iva": 4.5,
+    "excel_code": "012MN9990"
   },
   {
     "sku": "LP-MAN-054",
@@ -3517,7 +4395,10 @@
     "category": "aditivos",
     "name": "MANNOL Aditivo Molibdeno 300 Ml",
     "presentation": "300 Ml",
-    "base_price_no_iva": 5.52
+    "base_price_no_iva": 5.52,
+    "price_with_iva_raw": 6.35,
+    "quoted_pvp_iva": 6.5,
+    "excel_code": "012MN9991"
   },
   {
     "sku": "LP-ABR-002",
@@ -3527,7 +4408,10 @@
     "category": "aditivos",
     "name": "ABRO Sellador Polvo Radiador AB-404",
     "presentation": "1 Litro",
-    "base_price_no_iva": 0.7
+    "base_price_no_iva": 0.7,
+    "price_with_iva_raw": 0.8,
+    "quoted_pvp_iva": 0.9,
+    "excel_code": "10270.03.008"
   },
   {
     "sku": "LP-ABR-003",
@@ -3537,7 +4421,10 @@
     "category": "aditivos",
     "name": "ABRO Lubricante Penetrante AB-80 10oz",
     "presentation": "10Oz",
-    "base_price_no_iva": 4.04
+    "base_price_no_iva": 4.04,
+    "price_with_iva_raw": 4.65,
+    "quoted_pvp_iva": 4.9,
+    "excel_code": "10270.03.017"
   },
   {
     "sku": "102EC-502LT",
@@ -3547,7 +4434,10 @@
     "category": "refrigerantes",
     "name": "ABRO Refrigerante Rojo Galon (1 Litro)",
     "presentation": "1 Litro",
-    "base_price_no_iva": 1.35
+    "base_price_no_iva": 1.35,
+    "price_with_iva_raw": 1.55,
+    "quoted_pvp_iva": 1.9,
+    "excel_code": "102EC-502LT"
   },
   {
     "sku": "102EC-502",
@@ -3557,7 +4447,10 @@
     "category": "refrigerantes",
     "name": "ABRO Refrigerante Rojo Galon (1 Galón)",
     "presentation": "1 Galón",
-    "base_price_no_iva": 3.13
+    "base_price_no_iva": 3.13,
+    "price_with_iva_raw": 3.6,
+    "quoted_pvp_iva": 3.9,
+    "excel_code": "102EC-502"
   },
   {
     "sku": "102EC-503LT",
@@ -3567,7 +4460,10 @@
     "category": "refrigerantes",
     "name": "ABRO Refrigerante Verde Galon (1 Litro)",
     "presentation": "1 Litro",
-    "base_price_no_iva": 1.35
+    "base_price_no_iva": 1.35,
+    "price_with_iva_raw": 1.55,
+    "quoted_pvp_iva": 1.9,
+    "excel_code": "102EC-503LT"
   },
   {
     "sku": "102EC-503",
@@ -3577,7 +4473,10 @@
     "category": "refrigerantes",
     "name": "ABRO Refrigerante Verde Galon (1 Galón)",
     "presentation": "1 Galón",
-    "base_price_no_iva": 3.13
+    "base_price_no_iva": 3.13,
+    "price_with_iva_raw": 3.6,
+    "quoted_pvp_iva": 3.9,
+    "excel_code": "102EC-503"
   },
   {
     "sku": "LP-ABR-006",
@@ -3587,7 +4486,10 @@
     "category": "aditivos",
     "name": "ABRO Grasa # 3 Azul 1lb Envase Plástico LG-990",
     "presentation": "1 Litro",
-    "base_price_no_iva": 4.78
+    "base_price_no_iva": 4.78,
+    "price_with_iva_raw": 5.5,
+    "quoted_pvp_iva": 5.5,
+    "excel_code": "102LG990EVP"
   },
   {
     "sku": "LP-ABR-007",
@@ -3597,7 +4499,10 @@
     "category": "aditivos",
     "name": "ABRO Super Sellador De Blocks SS-822",
     "presentation": "1 Litro",
-    "base_price_no_iva": 6.47
+    "base_price_no_iva": 6.47,
+    "price_with_iva_raw": 7.44,
+    "quoted_pvp_iva": 7.5,
+    "excel_code": "102SS822"
   },
   {
     "sku": "LP-ABR-008",
@@ -3607,7 +4512,10 @@
     "category": "aditivos",
     "name": "ABRO Cinta Electrica Negra Taipe",
     "presentation": "1 Litro",
-    "base_price_no_iva": 0.43
+    "base_price_no_iva": 0.43,
+    "price_with_iva_raw": 0.5,
+    "quoted_pvp_iva": 0.5,
+    "excel_code": "15170.03.025"
   },
   {
     "sku": "LP-ABR-009",
@@ -3617,7 +4525,10 @@
     "category": "aditivos",
     "name": "ABRO Cinta Empaque Transparente 48x80yds",
     "presentation": "1 Litro",
-    "base_price_no_iva": 1.13
+    "base_price_no_iva": 1.13,
+    "price_with_iva_raw": 1.3,
+    "quoted_pvp_iva": 1.5,
+    "excel_code": "15170.03.039"
   },
   {
     "sku": "LP-PER-002",
@@ -3627,7 +4538,10 @@
     "category": "aditivos",
     "name": "Simoniz UV3 Chicle 250 Cc.",
     "presentation": "250 Cc",
-    "base_price_no_iva": 3.91
+    "base_price_no_iva": 3.91,
+    "price_with_iva_raw": 4.5,
+    "quoted_pvp_iva": 4.5,
+    "excel_code": "1213027CH"
   },
   {
     "sku": "LP-PER-003",
@@ -3637,7 +4551,10 @@
     "category": "aditivos",
     "name": "Simoniz UV3 Citrus 250 Cc.",
     "presentation": "250 Cc",
-    "base_price_no_iva": 3.91
+    "base_price_no_iva": 3.91,
+    "price_with_iva_raw": 4.5,
+    "quoted_pvp_iva": 4.5,
+    "excel_code": "1213027CT"
   },
   {
     "sku": "LP-PER-004",
@@ -3647,7 +4564,10 @@
     "category": "aditivos",
     "name": "Simoniz UV3 Fresa 250 Cc.",
     "presentation": "250 Cc",
-    "base_price_no_iva": 3.91
+    "base_price_no_iva": 3.91,
+    "price_with_iva_raw": 4.5,
+    "quoted_pvp_iva": 4.5,
+    "excel_code": "1213027FR"
   },
   {
     "sku": "LP-PER-005",
@@ -3657,7 +4577,10 @@
     "category": "aditivos",
     "name": "Simoniz UV3 Picadura Tabaco 250 Cc.",
     "presentation": "250 Cc",
-    "base_price_no_iva": 3.91
+    "base_price_no_iva": 3.91,
+    "price_with_iva_raw": 4.5,
+    "quoted_pvp_iva": 4.5,
+    "excel_code": "1213027PT"
   },
   {
     "sku": "LP-PER-006",
@@ -3667,7 +4590,10 @@
     "category": "aditivos",
     "name": "Simoniz UV3 Carro Nuevo 250 Cc.",
     "presentation": "250 Cc",
-    "base_price_no_iva": 3.91
+    "base_price_no_iva": 3.91,
+    "price_with_iva_raw": 4.5,
+    "quoted_pvp_iva": 4.5,
+    "excel_code": "1213027SP"
   },
   {
     "sku": "LP-PER-007",
@@ -3677,7 +4603,10 @@
     "category": "aditivos",
     "name": "Simoniz Cera 300gr Siempre Nuevo",
     "presentation": "300Gr",
-    "base_price_no_iva": 4.3
+    "base_price_no_iva": 4.3,
+    "price_with_iva_raw": 4.95,
+    "quoted_pvp_iva": 5.0,
+    "excel_code": "1214020"
   },
   {
     "sku": "LP-PER-008",
@@ -3687,7 +4616,10 @@
     "category": "aditivos",
     "name": "Areon Perfume Black Crystal",
     "presentation": "1 Litro",
-    "base_price_no_iva": 3.26
+    "base_price_no_iva": 3.26,
+    "price_with_iva_raw": 3.75,
+    "quoted_pvp_iva": 3.9,
+    "excel_code": "122APC06"
   },
   {
     "sku": "LP-PER-009",
@@ -3697,7 +4629,10 @@
     "category": "aditivos",
     "name": "Areon Perfume New Car",
     "presentation": "1 Litro",
-    "base_price_no_iva": 3.26
+    "base_price_no_iva": 3.26,
+    "price_with_iva_raw": 3.75,
+    "quoted_pvp_iva": 3.9,
+    "excel_code": "122APC11"
   },
   {
     "sku": "LP-PER-010",
@@ -3707,7 +4642,10 @@
     "category": "aditivos",
     "name": "Areon Mon Display 60 Pcs Mix Fragancias",
     "presentation": "1 Litro",
-    "base_price_no_iva": 0.87
+    "base_price_no_iva": 0.87,
+    "price_with_iva_raw": 1.0,
+    "quoted_pvp_iva": 1.0,
+    "excel_code": "122PACKMA60"
   },
   {
     "sku": "LP-PER-011",
@@ -3727,7 +4665,8 @@
     "category": "lubricantes",
     "name": "Valvodiesel SAE 15W-40 API Ch4",
     "presentation": "1 Litro",
-    "base_price_no_iva": 4.49
+    "base_price_no_iva": 4.49,
+    "quoted_pvp_iva": 5.5
   },
   {
     "sku": "038LUB-PC2050-0025",
@@ -3737,7 +4676,10 @@
     "category": "lubricantes",
     "name": "VALVOLINE Classic SAE 20W-50 SP (1 Litro)",
     "presentation": "1 Litro",
-    "base_price_no_iva": 4.57
+    "base_price_no_iva": 4.57,
+    "price_with_iva_raw": 5.26,
+    "quoted_pvp_iva": 5.5,
+    "excel_code": "038LUB-PC2050-0025"
   },
   {
     "sku": "038LUB-PC2050-0100",
@@ -3747,7 +4689,10 @@
     "category": "lubricantes",
     "name": "VALVOLINE Classic SAE 20W-50 SP (1 Galón)",
     "presentation": "1 Galón",
-    "base_price_no_iva": 17.13
+    "base_price_no_iva": 17.13,
+    "price_with_iva_raw": 19.7,
+    "quoted_pvp_iva": 19.9,
+    "excel_code": "038LUB-PC2050-0100"
   },
   {
     "sku": "LP-LUR-004-5",
@@ -3757,7 +4702,8 @@
     "category": "lubricantes",
     "name": "VALVOLINE SAE 10W-30 Classic API SP",
     "presentation": "1 Litro",
-    "base_price_no_iva": 4.83
+    "base_price_no_iva": 4.83,
+    "quoted_pvp_iva": 5.9
   },
   {
     "sku": "02724HPIS4",
@@ -3767,7 +4713,10 @@
     "category": "baterias",
     "name": "Batería Bosch 24 HP I S4 (64 Amp)",
     "presentation": "64Ah",
-    "base_price_no_iva": 157.71
+    "base_price_no_iva": 157.71,
+    "price_with_iva_raw": 181.37,
+    "quoted_pvp_iva": 181.5,
+    "excel_code": "02724HPIS4"
   },
   {
     "sku": "02724HPS4",
@@ -3777,7 +4726,10 @@
     "category": "baterias",
     "name": "Batería Bosch 24 HP S4 (64 Amp)",
     "presentation": "64Ah",
-    "base_price_no_iva": 157.71
+    "base_price_no_iva": 157.71,
+    "price_with_iva_raw": 181.37,
+    "quoted_pvp_iva": 181.5,
+    "excel_code": "02724HPS4"
   },
   {
     "sku": "02727HPIS4",
@@ -3787,7 +4739,10 @@
     "category": "baterias",
     "name": "Batería Bosch 27 HP I S4 (85 Amp)",
     "presentation": "85Ah",
-    "base_price_no_iva": 197.02
+    "base_price_no_iva": 197.02,
+    "price_with_iva_raw": 226.57,
+    "quoted_pvp_iva": 226.9,
+    "excel_code": "02727HPIS4"
   },
   {
     "sku": "02727HPS4",
@@ -3797,7 +4752,10 @@
     "category": "baterias",
     "name": "Batería Bosch 27 HP S4 (88 Amp)",
     "presentation": "88Ah",
-    "base_price_no_iva": 197.02
+    "base_price_no_iva": 197.02,
+    "price_with_iva_raw": 226.57,
+    "quoted_pvp_iva": 226.9,
+    "excel_code": "02727HPS4"
   },
   {
     "sku": "02734HPS4",
@@ -3807,7 +4765,10 @@
     "category": "baterias",
     "name": "Batería Bosch 34 HP S4 (70 Amp)",
     "presentation": "70Ah",
-    "base_price_no_iva": 161.03
+    "base_price_no_iva": 161.03,
+    "price_with_iva_raw": 185.18,
+    "quoted_pvp_iva": 185.5,
+    "excel_code": "02734HPS4"
   },
   {
     "sku": "02742FES3",
@@ -3817,7 +4778,10 @@
     "category": "baterias",
     "name": "Batería Bosch 42 FE S3 (45 Amp)",
     "presentation": "45Ah",
-    "base_price_no_iva": 93.75
+    "base_price_no_iva": 93.75,
+    "price_with_iva_raw": 107.81,
+    "quoted_pvp_iva": 107.9,
+    "excel_code": "02742FES3"
   },
   {
     "sku": "02742HPIS4",
@@ -3827,7 +4791,10 @@
     "category": "baterias",
     "name": "Batería Bosch 42 HP I S4 (55 Amp)",
     "presentation": "55Ah",
-    "base_price_no_iva": 130.24
+    "base_price_no_iva": 130.24,
+    "price_with_iva_raw": 149.78,
+    "quoted_pvp_iva": 149.9,
+    "excel_code": "02742HPIS4"
   },
   {
     "sku": "0277B6548",
@@ -3837,7 +4804,10 @@
     "category": "baterias",
     "name": "Batería Bosch B65 MP I S5 SELLADA",
     "presentation": "65Ah",
-    "base_price_no_iva": 236.81
+    "base_price_no_iva": 236.81,
+    "price_with_iva_raw": 272.33,
+    "quoted_pvp_iva": 272.5,
+    "excel_code": "0277B6548"
   },
   {
     "sku": "027N40FES4",
@@ -3857,7 +4827,10 @@
     "category": "baterias",
     "name": "Batería Bosch NS40 FE F S4",
     "presentation": "65Ah",
-    "base_price_no_iva": 108.0
+    "base_price_no_iva": 108.0,
+    "price_with_iva_raw": 124.2,
+    "quoted_pvp_iva": 124.5,
+    "excel_code": "027NS40FEFS4"
   },
   {
     "sku": "027NS40FEIFS4",
@@ -3867,7 +4840,10 @@
     "category": "baterias",
     "name": "Batería Bosch NS40 FE I F S4 (42 Amp)",
     "presentation": "42Ah",
-    "base_price_no_iva": 108.0
+    "base_price_no_iva": 108.0,
+    "price_with_iva_raw": 124.2,
+    "quoted_pvp_iva": 124.5,
+    "excel_code": "027NS40FEIFS4"
   },
   {
     "sku": "03024-FE",
@@ -3877,7 +4853,10 @@
     "category": "baterias",
     "name": "Batería Ecuador 24 FE — Full Equipo (65 Amp)",
     "presentation": "65Ah",
-    "base_price_no_iva": 143.0
+    "base_price_no_iva": 143.0,
+    "price_with_iva_raw": 164.45,
+    "quoted_pvp_iva": 164.5,
+    "excel_code": "03024-FE"
   },
   {
     "sku": "03024-FE-I",
@@ -3887,7 +4866,10 @@
     "category": "baterias",
     "name": "Batería Ecuador 24 FE I — Full Equipo (65 Amp)",
     "presentation": "65Ah",
-    "base_price_no_iva": 143.0
+    "base_price_no_iva": 143.0,
+    "price_with_iva_raw": 164.45,
+    "quoted_pvp_iva": 164.5,
+    "excel_code": "03024-FE-I"
   },
   {
     "sku": "03024-HP-I",
@@ -3897,7 +4879,10 @@
     "category": "baterias",
     "name": "Batería Ecuador 24 HP I — High Power Tapa Roja (85 Amp)",
     "presentation": "85Ah",
-    "base_price_no_iva": 161.71
+    "base_price_no_iva": 161.71,
+    "price_with_iva_raw": 185.97,
+    "quoted_pvp_iva": 186.0,
+    "excel_code": "03024-HP-I"
   },
   {
     "sku": "03027-FE",
@@ -3907,7 +4892,10 @@
     "category": "baterias",
     "name": "Batería Ecuador 27 FE — Full Equipo (80 Amp)",
     "presentation": "80Ah",
-    "base_price_no_iva": 167.79
+    "base_price_no_iva": 167.79,
+    "price_with_iva_raw": 192.96,
+    "quoted_pvp_iva": 193.0,
+    "excel_code": "03027-FE"
   },
   {
     "sku": "03027-FE-I",
@@ -3917,7 +4905,10 @@
     "category": "baterias",
     "name": "Batería Ecuador 27 FE I — Full Equipo (80 Amp)",
     "presentation": "80Ah",
-    "base_price_no_iva": 167.79
+    "base_price_no_iva": 167.79,
+    "price_with_iva_raw": 192.96,
+    "quoted_pvp_iva": 193.0,
+    "excel_code": "03027-FE-I"
   },
   {
     "sku": "03027-HP",
@@ -3927,7 +4918,10 @@
     "category": "baterias",
     "name": "Batería Ecuador 27 HP — High Power Tapa Roja (95 Amp)",
     "presentation": "95Ah",
-    "base_price_no_iva": 201.88
+    "base_price_no_iva": 201.88,
+    "price_with_iva_raw": 232.16,
+    "quoted_pvp_iva": 232.5,
+    "excel_code": "03027-HP"
   },
   {
     "sku": "03027-HP-I",
@@ -3937,7 +4931,10 @@
     "category": "baterias",
     "name": "Batería Ecuador 27 HP I — High Power Tapa Roja (95 Amp)",
     "presentation": "95Ah",
-    "base_price_no_iva": 201.88
+    "base_price_no_iva": 201.88,
+    "price_with_iva_raw": 232.16,
+    "quoted_pvp_iva": 232.5,
+    "excel_code": "03027-HP-I"
   },
   {
     "sku": "03031-SHD",
@@ -3947,7 +4944,10 @@
     "category": "baterias",
     "name": "Batería Ecuador 31 SHD — Super Heavy Duty (105 Amp)",
     "presentation": "105Ah",
-    "base_price_no_iva": 209.0
+    "base_price_no_iva": 209.0,
+    "price_with_iva_raw": 240.35,
+    "quoted_pvp_iva": 240.5,
+    "excel_code": "03031-SHD"
   },
   {
     "sku": "03034-FE",
@@ -3957,7 +4957,10 @@
     "category": "baterias",
     "name": "Batería Ecuador 34 FE — Full Equipo (65 Amp)",
     "presentation": "65Ah",
-    "base_price_no_iva": 140.0
+    "base_price_no_iva": 140.0,
+    "price_with_iva_raw": 161.0,
+    "quoted_pvp_iva": 161.0,
+    "excel_code": "03034-FE"
   },
   {
     "sku": "03034-FE-I",
@@ -3967,7 +4970,10 @@
     "category": "baterias",
     "name": "Batería Ecuador 34 FE I — Full Equipo (65 Amp)",
     "presentation": "65Ah",
-    "base_price_no_iva": 140.0
+    "base_price_no_iva": 140.0,
+    "price_with_iva_raw": 161.0,
+    "quoted_pvp_iva": 161.0,
+    "excel_code": "03034-FE-I"
   },
   {
     "sku": "03034-HP",
@@ -3977,7 +4983,10 @@
     "category": "baterias",
     "name": "Batería Ecuador 34 HP — High Power Tapa Roja (80 Amp)",
     "presentation": "80Ah",
-    "base_price_no_iva": 164.29
+    "base_price_no_iva": 164.29,
+    "price_with_iva_raw": 188.93,
+    "quoted_pvp_iva": 189.0,
+    "excel_code": "03034-HP"
   },
   {
     "sku": "03034-HP-I",
@@ -3987,7 +4996,10 @@
     "category": "baterias",
     "name": "Batería Ecuador 34 HP I — High Power Tapa Roja (80 Amp)",
     "presentation": "80Ah",
-    "base_price_no_iva": 164.29
+    "base_price_no_iva": 164.29,
+    "price_with_iva_raw": 188.93,
+    "quoted_pvp_iva": 189.0,
+    "excel_code": "03034-HP-I"
   },
   {
     "sku": "03036-HP",
@@ -3997,7 +5009,10 @@
     "category": "baterias",
     "name": "Batería Ecuador 36 HP — High Power Tapa Roja (50 Amp)",
     "presentation": "50Ah",
-    "base_price_no_iva": 128.75
+    "base_price_no_iva": 128.75,
+    "price_with_iva_raw": 148.06,
+    "quoted_pvp_iva": 148.5,
+    "excel_code": "03036-HP"
   },
   {
     "sku": "03042-FE",
@@ -4017,7 +5032,10 @@
     "category": "baterias",
     "name": "Batería Ecuador 42 HP — High Power Tapa Roja (62 Amp)",
     "presentation": "62Ah",
-    "base_price_no_iva": 133.39
+    "base_price_no_iva": 133.39,
+    "price_with_iva_raw": 153.4,
+    "quoted_pvp_iva": 153.5,
+    "excel_code": "03042-HP"
   },
   {
     "sku": "03042-HP-I",
@@ -4027,7 +5045,10 @@
     "category": "baterias",
     "name": "Batería Ecuador 42 HP I — High Power Tapa Roja (62 Amp)",
     "presentation": "62Ah",
-    "base_price_no_iva": 133.39
+    "base_price_no_iva": 133.39,
+    "price_with_iva_raw": 153.4,
+    "quoted_pvp_iva": 153.5,
+    "excel_code": "03042-HP-I"
   },
   {
     "sku": "03055-HD",
@@ -4037,7 +5058,10 @@
     "category": "baterias",
     "name": "Batería Ecuador 55 HD 14PL SERVICIO PUBLICO — Maxi Power (63 Amp)",
     "presentation": "63Ah",
-    "base_price_no_iva": 128.52
+    "base_price_no_iva": 128.52,
+    "price_with_iva_raw": 147.8,
+    "quoted_pvp_iva": 147.9,
+    "excel_code": "03055-HD"
   },
   {
     "sku": "03055-HD-I",
@@ -4047,7 +5071,10 @@
     "category": "baterias",
     "name": "Batería Ecuador 55 HD I 14PL SERVICIO PUBLICO — Maxi Power (63 Amp)",
     "presentation": "63Ah",
-    "base_price_no_iva": 128.52
+    "base_price_no_iva": 128.52,
+    "price_with_iva_raw": 147.8,
+    "quoted_pvp_iva": 147.9,
+    "excel_code": "03055-HD-I"
   },
   {
     "sku": "03065-HP",
@@ -4057,7 +5084,10 @@
     "category": "baterias",
     "name": "Batería Ecuador 65 HP — High Power Tapa Roja (65 Amp)",
     "presentation": "65Ah",
-    "base_price_no_iva": 160.68
+    "base_price_no_iva": 160.68,
+    "price_with_iva_raw": 184.78,
+    "quoted_pvp_iva": 184.9,
+    "excel_code": "03065-HP"
   },
   {
     "sku": "03066-HP",
@@ -4067,7 +5097,10 @@
     "category": "baterias",
     "name": "Batería Ecuador 66 HP — High Power Tapa Roja (84 Amp)",
     "presentation": "84Ah",
-    "base_price_no_iva": 179.0
+    "base_price_no_iva": 179.0,
+    "price_with_iva_raw": 205.85,
+    "quoted_pvp_iva": 205.9,
+    "excel_code": "03066-HP"
   },
   {
     "sku": "030N100-SHD-I",
@@ -4077,7 +5110,10 @@
     "category": "baterias",
     "name": "Batería Ecuador N100 SHD I — Super Heavy Duty (104 Amp)",
     "presentation": "104Ah",
-    "base_price_no_iva": 237.15
+    "base_price_no_iva": 237.15,
+    "price_with_iva_raw": 272.72,
+    "quoted_pvp_iva": 272.9,
+    "excel_code": "030N100-SHD-I"
   },
   {
     "sku": "030N150-SHD",
@@ -4087,7 +5123,10 @@
     "category": "baterias",
     "name": "Batería Ecuador N150 SHD — Super Heavy Duty (160 Amp)",
     "presentation": "160Ah",
-    "base_price_no_iva": 340.0
+    "base_price_no_iva": 340.0,
+    "price_with_iva_raw": 391.0,
+    "quoted_pvp_iva": 391.0,
+    "excel_code": "030N150-SHD"
   },
   {
     "sku": "030N40-FE-I",
@@ -4097,7 +5136,10 @@
     "category": "baterias",
     "name": "Batería Ecuador N40 FE I — Full Equipo (45 Amp)",
     "presentation": "45Ah",
-    "base_price_no_iva": 109.14
+    "base_price_no_iva": 109.14,
+    "price_with_iva_raw": 125.51,
+    "quoted_pvp_iva": 125.9,
+    "excel_code": "030N40-FE-I"
   },
   {
     "sku": "030N40-HP",
@@ -4117,7 +5159,10 @@
     "category": "baterias",
     "name": "Batería Ecuador N40 HP I — High Power Tapa Roja (50 Amp)",
     "presentation": "50Ah",
-    "base_price_no_iva": 116.91
+    "base_price_no_iva": 116.91,
+    "price_with_iva_raw": 134.45,
+    "quoted_pvp_iva": 134.5,
+    "excel_code": "030N40-HP-I"
   },
   {
     "sku": "030NS40-FE",
@@ -4127,7 +5172,10 @@
     "category": "baterias",
     "name": "Batería Ecuador NS40 FE — Full Equipo (42 Amp)",
     "presentation": "42Ah",
-    "base_price_no_iva": 93.35
+    "base_price_no_iva": 93.35,
+    "price_with_iva_raw": 107.35,
+    "quoted_pvp_iva": 107.5,
+    "excel_code": "030NS40-FE"
   },
   {
     "sku": "030NS40-FE-I",
@@ -4147,7 +5195,10 @@
     "category": "baterias",
     "name": "Batería Ecuador NS40 HP — High Power Tapa Roja (45 Amp)",
     "presentation": "45Ah",
-    "base_price_no_iva": 110.74
+    "base_price_no_iva": 110.74,
+    "price_with_iva_raw": 127.35,
+    "quoted_pvp_iva": 127.5,
+    "excel_code": "030NS40-HP"
   },
   {
     "sku": "42HPS4",
@@ -4157,7 +5208,10 @@
     "category": "baterias",
     "name": "Batería Bosch 42 HP S4 (55 Amp)",
     "presentation": "55Ah",
-    "base_price_no_iva": 130.24
+    "base_price_no_iva": 130.24,
+    "price_with_iva_raw": 149.78,
+    "quoted_pvp_iva": 149.9,
+    "excel_code": "42HPS4"
   },
   {
     "sku": "ECOVLBAT",
@@ -4167,7 +5221,10 @@
     "category": "baterias",
     "name": "Batería Ecuador ECOVALOR (VENTA BATERIA VEHÍCULO) — Maxi Power",
     "presentation": "65Ah",
-    "base_price_no_iva": 0.25
+    "base_price_no_iva": 0.25,
+    "price_with_iva_raw": 0.29,
+    "quoted_pvp_iva": 0.5,
+    "excel_code": "ECOVLBAT"
   },
   {
     "sku": "COMBO-MANNOL-1A",
@@ -4175,7 +5232,8 @@
     "category": "combos",
     "name": "¡Combo Cambio MANNOL! 1A Classic 10W-40 (Galón) + Filtro Advance + Regalo",
     "presentation": "Galón + Filtro + MANNOL 6145 + Esponja",
-    "base_price_no_iva": 36.74
+    "base_price_no_iva": 36.96,
+    "quoted_pvp_iva": 42.5
   },
   {
     "sku": "COMBO-MANNOL-1B",
@@ -4183,7 +5241,8 @@
     "category": "combos",
     "name": "¡Combo Cambio MANNOL! 1B Energy Formula JP 5W-30 (Galón) + Filtro Advance + Regalo",
     "presentation": "Galón + Filtro + MANNOL 6145 + Esponja",
-    "base_price_no_iva": 40.26
+    "base_price_no_iva": 40.43,
+    "quoted_pvp_iva": 46.5
   },
   {
     "sku": "COMBO-MANNOL-1C",
@@ -4191,7 +5250,8 @@
     "category": "combos",
     "name": "¡Combo Cambio MANNOL! 1C Safari 20W-50 (Galón) + Filtro Advance + Regalo",
     "presentation": "Galón + Filtro + MANNOL 6145 + Esponja",
-    "base_price_no_iva": 33.3
+    "base_price_no_iva": 33.48,
+    "quoted_pvp_iva": 38.5
   },
   {
     "sku": "COMBO-MANNOL-2A",
@@ -4199,7 +5259,8 @@
     "category": "combos",
     "name": "¡Combo Cambio MANNOL! 2A TS-4 15W-40 (7 Litros) + Filtro + Regalo",
     "presentation": "7 Litros + Filtro + MANNOL 6145 + Esponja",
-    "base_price_no_iva": 62.09
+    "base_price_no_iva": 60.43,
+    "quoted_pvp_iva": 69.5
   },
   {
     "sku": "COMBO-MANNOL-2B",
@@ -4207,7 +5268,8 @@
     "category": "combos",
     "name": "¡Combo Cambio MANNOL! 2B Diesel Turbo 5W-40 (7 Litros) + Filtro + Regalo",
     "presentation": "7 Litros + Filtro + MANNOL 6145 + Esponja",
-    "base_price_no_iva": 81.6
+    "base_price_no_iva": 80.43,
+    "quoted_pvp_iva": 92.5
   },
   {
     "sku": "COMBO-MANNOL-2C",
@@ -4215,7 +5277,8 @@
     "category": "combos",
     "name": "¡Combo Cambio MANNOL! 2C Classic 10W-40 (6 Litros) + Filtro + Regalo",
     "presentation": "6 Litros + Filtro + MANNOL 6145 + Esponja",
-    "base_price_no_iva": 56.4
+    "base_price_no_iva": 57.3,
+    "quoted_pvp_iva": 65.9
   },
   {
     "sku": "COMBO-MANNOL-3A",
@@ -4223,7 +5286,8 @@
     "category": "combos",
     "name": "¡Combo Cambio MANNOL! 3A TS-4 15W-40 (Caneca 20L) + Filtro Pesado + Regalo",
     "presentation": "Caneca 20L + Filtro + MANNOL 6145 + Esponja",
-    "base_price_no_iva": 108.69
+    "base_price_no_iva": 108.7,
+    "quoted_pvp_iva": 125.0
   },
   {
     "sku": "COMBO-MANNOL-3B",
@@ -4231,6 +5295,16 @@
     "category": "combos",
     "name": "¡Combo Cambio MANNOL! 3B TS-5 UHPD 10W-40 (Caneca 20L) + Filtro Pesado + Regalo",
     "presentation": "Caneca 20L + Filtro + MANNOL 6145 + Esponja",
-    "base_price_no_iva": 111.74
+    "base_price_no_iva": 111.74,
+    "quoted_pvp_iva": 128.5
+  },
+  {
+    "sku": "COMBO-MANNOL-3C",
+    "brand": "MANNOL",
+    "category": "combos",
+    "name": "¡Combo Cambio MANNOL! 3C Hydro HV ISO 68 (Caneca 20L) + Complemento + Regalo",
+    "presentation": "Caneca 20L + Complemento + MANNOL 6145 + Esponja",
+    "base_price_no_iva": 92.61,
+    "quoted_pvp_iva": 106.5
   }
 ]

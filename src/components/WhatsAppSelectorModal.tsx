@@ -1,19 +1,22 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { X, MessageCircle, Gift, ShieldCheck, ArrowUpRight, Sparkles } from "lucide-react";
 import { useWhatsAppSelector } from "@/context/WhatsAppSelectorContext";
 import {
   LIDERPRO_WHATSAPP_LINES,
   buildLineWhatsAppUrl,
+  isEcuadorBusinessHours,
 } from "@/lib/dual_whatsapp_router";
 import { trackEvent } from "@/lib/analytics";
 
 export default function WhatsAppSelectorModal() {
   const { isOpen, request, closeSelector } = useWhatsAppSelector();
+  const [inBusinessHours, setInBusinessHours] = useState<boolean>(true);
 
   useEffect(() => {
     if (!isOpen) return;
+    setInBusinessHours(isEcuadorBusinessHours());
     const onKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") closeSelector();
     };
@@ -113,6 +116,28 @@ export default function WhatsAppSelectorModal() {
         <div className="space-y-3 relative z-10">
           {lines.map((line) => {
             const href = buildLineWhatsAppUrl(line.id, message);
+            const isMatriz = line.id === "matriz";
+            const isDespachos = line.id === "despachos";
+            const badgeText = inBusinessHours
+              ? isMatriz
+                ? "🟢 En línea ahora • Atención en Mostrador Local (Horario Comercial)"
+                : "🟢 En línea ahora • Atención 24/7 & Despachos"
+              : isMatriz
+                ? "🕒 Horario de local: Lun-Sáb 08:00 a 18:00 (Deja tu mensaje)"
+                : "🟢 ACTIVO AHORA 24/7 • Cotización Inmediata";
+
+            const cardClass =
+              !inBusinessHours && isDespachos
+                ? "group block rounded-2xl p-4 bg-[#22C55E]/10 hover:bg-[#22C55E]/20 border-2 border-[#22C55E] ring-2 ring-[#22C55E]/40 transition-all duration-200 shadow-[0_0_25px_rgba(34,197,94,0.28)]"
+                : !inBusinessHours && isMatriz
+                  ? "group block rounded-2xl p-4 bg-[#070B14]/70 hover:bg-white/5 border border-white/10 transition-all duration-200 shadow-lg opacity-85"
+                  : "group block rounded-2xl p-4 bg-[#070B14]/90 hover:bg-[#22C55E]/15 border border-white/15 hover:border-[#22C55E] transition-all duration-200 shadow-lg";
+
+            const badgeClass =
+              !inBusinessHours && isMatriz
+                ? "inline-block text-[10px] font-bold text-amber-300 tracking-wide"
+                : "inline-block text-[10px] font-black text-[#22C55E] tracking-wide";
+
             return (
               <a
                 key={line.id}
@@ -120,7 +145,7 @@ export default function WhatsAppSelectorModal() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => handleSelectLine(line.id)}
-                className="group block rounded-2xl p-4 bg-[#070B14]/90 hover:bg-[#22C55E]/15 border border-white/15 hover:border-[#22C55E] transition-all duration-200 shadow-lg"
+                className={cardClass}
               >
                 <div className="flex items-center justify-between gap-3">
                   <div className="flex items-start gap-3">
@@ -128,9 +153,7 @@ export default function WhatsAppSelectorModal() {
                       <MessageCircle className="w-6 h-6 fill-slate-950/10" />
                     </div>
                     <div className="space-y-1">
-                      <span className="inline-block text-[10px] font-black text-[#22C55E] tracking-wide">
-                        {line.statusBadge}
-                      </span>
+                      <span className={badgeClass}>{badgeText}</span>
                       <h3 className="text-sm font-black text-white group-hover:text-[#FACC15] transition-colors leading-snug">
                         {line.label}
                       </h3>

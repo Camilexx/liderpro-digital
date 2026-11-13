@@ -25,6 +25,7 @@ import {
   Phone,
 } from "lucide-react";
 import ProductCard from "@/components/ProductCard";
+import { toCardProduct } from "@/lib/productCardDto";
 import MannolPromosSection from "@/components/MannolPromosSection";
 import EmergencyBanner from "@/components/EmergencyBanner";
 import LocationsLogisticsSection from "@/components/LocationsLogisticsSection";
@@ -346,7 +347,7 @@ export default function HomePage() {
       </section>
 
       {/* 02: FRANJA INSTITUCIONAL DE MARCAS OFICIALES (Brand Showcase) */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 animate-fade-up">
+      <section className="w-full max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-10 animate-fade-up">
         <div className="bg-white border border-slate-200/90 rounded-3xl p-6 sm:p-8 lg:p-10 space-y-6 shadow-sm">
           {/* Institutional Heading */}
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-4 border-b border-slate-100">
@@ -409,7 +410,7 @@ export default function HomePage() {
       <MannolPromosSection />
 
       {/* 03: PRODUCTOS FLAGSHIP CON MAYOR ROTACIÓN EN MOSTRADOR PEDERNALES: MANNOL Y BATERÍAS ECUADOR */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 animate-fade-up">
+      <section className="w-full max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-10 animate-fade-up">
         <div className="bg-gradient-to-br from-white via-slate-50/70 to-blue-50/30 border border-slate-200/90 rounded-3xl p-6 sm:p-8 lg:p-10 space-y-8 shadow-sm">
           {/* Header Row */}
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-5 pb-5 border-b border-slate-200/70">
@@ -565,9 +566,9 @@ export default function HomePage() {
           </div>
 
           {/* Products Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-2">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5 pt-2">
             {displayedBestSellers.map((prod, idx) => (
-              <ProductCard key={prod.id} product={prod} priority={idx < 4} />
+              <ProductCard key={prod.id} product={toCardProduct(prod)} priority={idx < 4} />
             ))}
           </div>
 
@@ -599,7 +600,7 @@ export default function HomePage() {
       </section>
 
       {/* 04: SELECTOR TÁCTIL POR TIPO DE VEHÍCULO + CATÁLOGO MULTIMARCA CURADO */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 animate-fade-up">
+      <section className="w-full max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-10 space-y-6 animate-fade-up">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
           <div>
             <span className="text-xs font-black uppercase tracking-wider text-[#0A3B8C]">
@@ -703,16 +704,16 @@ export default function HomePage() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5">
             {filteredProducts.map((prod) => (
-              <ProductCard key={prod.id} product={prod} />
+              <ProductCard key={prod.id} product={toCardProduct(prod)} />
             ))}
           </div>
         </div>
       </section>
 
       {/* 05: TERMINAL DE COMPATIBILIDAD VEHICULAR & BUSCADOR RÁPIDO */}
-      <section id="buscador" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="buscador" className="w-full max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-10">
         <div className="bg-gradient-to-br from-slate-900 via-[#061B40] to-slate-950 text-white rounded-3xl p-6 sm:p-10 border border-[#0A3B8C]/40 shadow-xl space-y-6">
           <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
             <div className="space-y-3 max-w-2xl text-left">
@@ -772,7 +773,7 @@ export default function HomePage() {
       </section>
 
       {/* 06: PILARES INSTITUCIONALES LIDERPRO — ¿Por qué elegirnos? */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="w-full max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-10">
         <div className="bg-white border border-slate-200/90 rounded-3xl p-6 sm:p-10 space-y-8 shadow-sm">
           <div className="text-center max-w-2xl mx-auto space-y-2">
             <span className="text-xs font-bold uppercase tracking-wider text-brand-primary">
@@ -786,7 +787,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5">
             <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-3">
               <div className="w-10 h-10 rounded-xl bg-blue-100/80 text-[#0A3B8C] flex items-center justify-center">
                 <ShieldCheck className="w-5 h-5" />
@@ -831,7 +832,7 @@ export default function HomePage() {
       </section>
 
       {/* 07: B2B / CAMARONERAS / FLOTAS / CANECAS BANNER */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="w-full max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-10">
         <div className="rounded-3xl border border-slate-800 bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950 text-white p-7 sm:p-10 flex flex-col lg:flex-row items-center justify-between gap-6 shadow-xl">
           <div className="space-y-2.5 max-w-2xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-amber-400/15 border border-amber-400/30 rounded-full text-xs font-bold text-amber-300 uppercase tracking-wider">
@@ -870,7 +871,7 @@ export default function HomePage() {
       </section>
 
       {/* 08: EXPLORA POR CATEGORÍA TÉCNICA */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="w-full max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-10">
         <div className="mb-5 space-y-1">
           <span className="text-xs font-bold uppercase tracking-wider text-slate-500">
             Líneas Oficiales en Stock
@@ -980,7 +981,7 @@ export default function HomePage() {
       </section>
 
       {/* 09: EMERGENCY BATTERY COMMAND CENTER */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="w-full max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-10">
         <EmergencyBanner />
       </section>
 
@@ -991,7 +992,7 @@ export default function HomePage() {
       <TestimonialsSection />
 
       {/* 12: GUIDES (Editorial selection) */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="w-full max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-10">
         <div className="flex items-baseline justify-between mb-6">
           <div>
             <span className="text-xs font-bold uppercase tracking-wider text-slate-500">
@@ -1051,7 +1052,7 @@ export default function HomePage() {
       <FAQSection />
 
       {/* 14: FINAL HIGH-CONVERSION CTA BANNER */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="w-full max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-10">
         <div className="bg-gradient-to-br from-[#061B40] via-slate-950 to-black text-white rounded-3xl p-8 sm:p-14 text-center space-y-6 border border-[#0A3B8C]/40 shadow-2xl relative overflow-hidden">
           <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#0A3B8C] via-[#FFC500] to-[#0A3B8C]" />
 

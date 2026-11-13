@@ -17,7 +17,7 @@ import {
 import ProductCard from "@/components/ProductCard";
 import { PRODUCTS } from "@/data/products";
 
-const ITEMS_PER_PAGE = 24;
+const ITEMS_PER_PAGE = 25;
 
 type SortOption = "destacados" | "nombre-asc" | "marca";
 
@@ -541,7 +541,7 @@ export default function CatalogExplorer() {
 
       {/* Product Grid */}
       {paginatedProducts.length > 0 ? (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5">
           {paginatedProducts.map((prod) => (
             <ProductCard key={prod.id} product={prod} />
           ))}

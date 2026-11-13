@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 
 export default function ProductsPage() {
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-10">
+    <div className="w-full max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-10 py-10 space-y-10">
       {/* Page Header */}
       <div className="bg-white p-6 sm:p-10 rounded-3xl border border-slate-200 shadow-sm space-y-5">
         <div className="max-w-3xl space-y-3">

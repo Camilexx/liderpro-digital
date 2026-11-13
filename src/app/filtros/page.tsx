@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 
 export default function FiltersPage() {
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-12">
+    <div className="w-full max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-10 py-10 space-y-12">
       {/* Institutional Hero Banner */}
       <div className="bg-gradient-to-r from-[#061B40] via-slate-900 to-[#0A3B8C] text-white p-6 sm:p-12 rounded-3xl border border-[#0A3B8C]/40 shadow-xl relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />

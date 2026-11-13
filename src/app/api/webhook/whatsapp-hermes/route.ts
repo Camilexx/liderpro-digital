@@ -15,8 +15,23 @@ interface PrivateCatalogItem {
 
 const CATALOG = privateCatalog as PrivateCatalogItem[];
 const NVIDIA_ENDPOINT = "https://integrate.api.nvidia.com/v1/chat/completions";
-const PRIMARY_MODEL = "nvidia/nemotron-3-ultra-550b-a55b";
-const FALLBACK_MODEL = "nvidia/nemotron-3.5-lightning-30b-a3b";
+const PRIMARY_MODEL = "nvidia/nemotron-3.5-bolt-e4b";
+const FALLBACK_MODEL = "nvidia/nemotron-3-ultra-550b-a55b";
+
+// Deduplicación en memoria de los últimos 200 message.id de WhatsApp para evitar reintentos duplicados de Meta
+const PROCESSED_MESSAGE_IDS = new Set<string>();
+const CORE_COMBO_SKUS = ["COMBO-MANNOL-1A", "COMBO-MANNOL-2A", "COMBO-MANNOL-3A"];
+
+function markMessageProcessed(messageId: string): boolean {
+  if (!messageId) return true;
+  if (PROCESSED_MESSAGE_IDS.has(messageId)) return false;
+  PROCESSED_MESSAGE_IDS.add(messageId);
+  if (PROCESSED_MESSAGE_IDS.size > 200) {
+    const oldest = PROCESSED_MESSAGE_IDS.values().next().value;
+    if (oldest) PROCESSED_MESSAGE_IDS.delete(oldest);
+  }
+  return true;
+}
 
 function searchCatalogContext(query: string, limit = 6): string {
   const q = query.trim().toLowerCase();
@@ -24,6 +39,7 @@ function searchCatalogContext(query: string, limit = 6): string {
   const scored: { score: number; item: PrivateCatalogItem }[] = [];
 
   for (const item of CATALOG) {
+    if (item.sku.startsWith("COMBO-")) continue;
     const haystack = `${item.sku || ""} ${item.brand || ""} ${item.name || ""} ${item.category || ""}`.toLowerCase();
     let score = tokens.reduce((acc, t) => (haystack.includes(t) ? acc + 1 : acc), 0);
     if (q && haystack.includes(q)) score += 3;
@@ -31,10 +47,9 @@ function searchCatalogContext(query: string, limit = 6): string {
   }
 
   scored.sort((a, b) => b.score - a.score);
-  const picked =
-    scored.length > 0
-      ? scored.slice(0, limit).map((s) => s.item)
-      : CATALOG.filter((c) => c.sku.startsWith("COMBO-MANNOL-")).slice(0, 4);
+  const topProducts = scored.slice(0, limit).map((s) => s.item);
+  const coreCombos = CATALOG.filter((c) => CORE_COMBO_SKUS.includes(c.sku));
+  const picked = [...topProducts, ...coreCombos];
 
   return picked
     .map((m) => {
@@ -49,10 +64,10 @@ function searchCatalogContext(query: string, limit = 6): string {
 
 function getNvidiaKeys(): string[] {
   return [
-    process.env.NVIDIA_API_KEY,
     process.env.NVIDIA_API_KEY_2,
     process.env.NVIDIA_API_KEY_3,
     process.env.NVIDIA_API_KEY_4,
+    process.env.NVIDIA_API_KEY,
   ]
     .map((k) => (k || "").trim())
     .filter(Boolean);
@@ -71,24 +86,27 @@ async function generateHermesReply(userText: string): Promise<string> {
   }
 
   const systemPrompt = [
-    "Eres Hermes, el Asesor Técnico Automotriz IA 24/7 oficial de LíderPro Pedernales (Ecuador) en la Línea 2 (+593 96 748 9002).",
-    "REGLAS ESTRICTAS:",
-    "1. Si el cliente no ha indicado marca, modelo y año de su vehículo, pídelos amablemente.",
-    "2. Recomienda exactamente los productos existentes del catálogo (MANNOL, Advance, Baterías Ecuador, Bosch).",
-    "3. Los precios en el contexto YA incluyen IVA 15% y redondeo comercial. NUNCA menciones costos ni precios sin IVA.",
-    "4. En ¡Combo Cambio MANNOL! o compras >= $35 USD, incluye regalo MANNOL 6145 Cockpit Care 1L + Esponja y Envío Gratis.",
-    "5. Responde de forma concisa, clara y profesional para WhatsApp.",
-    `\nCONTEXTO INTERNO DE CATÁLOGO (YA CON IVA 15%):\n${catalogContext}`,
+    "Eres Hermes, asesor automotriz IA 24/7 de LíderPro Pedernales (Ecuador) en Línea 2 (+593 96 748 9002).",
+    "REGLAS:",
+    "1. Responde conciso (máx 4 líneas) para WhatsApp.",
+    "2. Pide marca, modelo y año si faltan.",
+    "3. Cita SIEMPRE el precio exacto con centavos del contexto (YA incluye IVA 15%; NUNCA redondees ni menciones costos).",
+    "4. En ¡Combo Cambio MANNOL! o >= $35 USD incluye regalo MANNOL 6145 Cockpit Care 1L + Esponja y 🚚 Envío Gratis.",
+    `\nPRODUCTOS RELEVANTES + COMBOS (IVA 15% INC.):\n${catalogContext}`,
   ].join("\n");
 
   for (const model of [PRIMARY_MODEL, FALLBACK_MODEL]) {
     for (const apiKey of keys) {
+      const controller = new AbortController();
+      const timer = setTimeout(() => controller.abort(), 7500);
       try {
         const res = await fetch(NVIDIA_ENDPOINT, {
           method: "POST",
+          signal: controller.signal,
           headers: {
             Authorization: `Bearer ${apiKey}`,
             "Content-Type": "application/json",
+            "User-Agent": "LiderPro-Hermes/1.0",
           },
           body: JSON.stringify({
             model,
@@ -97,10 +115,11 @@ async function generateHermesReply(userText: string): Promise<string> {
               { role: "user", content: userText },
             ],
             temperature: 0.15,
-            max_tokens: 900,
+            max_tokens: 320,
             chat_template_kwargs: { enable_thinking: false },
           }),
         });
+        clearTimeout(timer);
         if (!res.ok) continue;
         const data = (await res.json()) as {
           choices?: { message?: { content?: string; reasoning_content?: string } }[];
@@ -169,7 +188,7 @@ export async function POST(req: NextRequest) {
         changes?: Array<{
           value?: {
             metadata?: { phone_number_id?: string; display_phone_number?: string };
-            messages?: Array<{ from?: string; type?: string; text?: { body?: string } }>;
+            messages?: Array<{ id?: string; from?: string; type?: string; text?: { body?: string } }>;
           };
         }>;
       }>;
@@ -193,6 +212,7 @@ export async function POST(req: NextRequest) {
 
         for (const msg of value?.messages || []) {
           if (msg.type === "text" && msg.from && msg.text?.body) {
+            if (msg.id && !markMessageProcessed(msg.id)) continue;
             const reply = await generateHermesReply(msg.text.body);
             await sendMetaWhatsAppReply(phoneId || configured247Id, msg.from, reply);
           }

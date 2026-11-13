@@ -671,10 +671,10 @@
     "category": "lubricantes",
     "name": "MANNOL ATF Dexron Vi",
     "presentation": "1 Litro",
-    "base_price_no_iva": 10.3,
-    "price_with_iva_raw": 11.85,
-    "quoted_pvp_iva": 11.9,
-    "excel_code": "012MN8206-1"
+    "base_price_no_iva": 14.09,
+    "price_with_iva_raw": 16.2,
+    "quoted_pvp_iva": 16.5,
+    "excel_code": "012MN8207-1"
   },
   {
     "sku": "LP-LUR-032",
@@ -726,7 +726,7 @@
     "base_price_no_iva": 86.96,
     "price_with_iva_raw": 100.0,
     "quoted_pvp_iva": 100.0,
-    "excel_code": "MN2201-20"
+    "excel_code": "MN2202-20"
   },
   {
     "sku": "LP-LUR-036",
@@ -789,7 +789,7 @@
     "base_price_no_iva": 86.96,
     "price_with_iva_raw": 100.0,
     "quoted_pvp_iva": 100.0,
-    "excel_code": "MN2201-20"
+    "excel_code": "012MN2203-20"
   },
   {
     "sku": "015MD12-15W40",
@@ -838,8 +838,10 @@
     "category": "lubricantes",
     "name": "MOBIL Delvac 1300 Sup 15W-40",
     "presentation": "Caneca 5 GL",
-    "base_price_no_iva": 105.83,
-    "quoted_pvp_iva": 121.9
+    "base_price_no_iva": 54.52,
+    "quoted_pvp_iva": 62.9,
+    "price_with_iva_raw": 62.7,
+    "excel_code": "015MD-513002.5"
   },
   {
     "sku": "015MS12-10W30",
@@ -902,7 +904,9 @@
     "name": "Filtro de Aire de Motor Advance — Toyota Hilux 2.7L Fi 16-21 Hilux 2.4L Di 16-21, Fortuner 2.7L Fi 16-21",
     "presentation": "Unidad",
     "base_price_no_iva": 5.48,
-    "quoted_pvp_iva": 6.5
+    "quoted_pvp_iva": 6.5,
+    "price_with_iva_raw": 6.3,
+    "excel_code": "078AA-1531"
   },
   {
     "sku": "LP-FIL-003",
@@ -913,7 +917,9 @@
     "name": "Filtro de Aire de Motor Advance — JAC Pick Up T6 2.0 17- 19 Gasolina (prem Aip1068 Xtrag AP-164)",
     "presentation": "Unidad",
     "base_price_no_iva": 6.26,
-    "quoted_pvp_iva": 7.5
+    "quoted_pvp_iva": 7.5,
+    "price_with_iva_raw": 7.2,
+    "excel_code": "078AA-3040"
   },
   {
     "sku": "LP-FIL-004",
@@ -924,7 +930,9 @@
     "name": "Filtro de Aire de Motor Advance — Hyundai Tucson 2.0L 04-10, KIA Sportage",
     "presentation": "Unidad",
     "base_price_no_iva": 3.61,
-    "quoted_pvp_iva": 4.5
+    "quoted_pvp_iva": 4.5,
+    "price_with_iva_raw": 4.15,
+    "excel_code": "080AA-10086"
   },
   {
     "sku": "LP-FIL-005",
@@ -935,7 +943,9 @@
     "name": "Filtro de Aire de Motor Advance — Hyundai Accent 1.4-1.6 Rio Xcite (xtrag AP-111 Red 28113-1G000)",
     "presentation": "Unidad",
     "base_price_no_iva": 2.91,
-    "quoted_pvp_iva": 3.5
+    "quoted_pvp_iva": 3.5,
+    "price_with_iva_raw": 3.35,
+    "excel_code": "080AA-10088"
   },
   {
     "sku": "LP-FIL-006",
@@ -957,7 +967,9 @@
     "name": "Filtro de Aire de Motor Advance — KIA Soul /12- Soluto/xcite/verna /20",
     "presentation": "Unidad",
     "base_price_no_iva": 3.26,
-    "quoted_pvp_iva": 3.9
+    "quoted_pvp_iva": 3.9,
+    "price_with_iva_raw": 3.75,
+    "excel_code": "080AA-10699"
   },
   {
     "sku": "AA-10891",
@@ -968,7 +980,9 @@
     "name": "Filtro de Aire de Motor Advance (AA-10891) — Chevrolet Joy - Aa- 10891",
     "presentation": "Unidad",
     "base_price_no_iva": 4.0,
-    "quoted_pvp_iva": 4.9
+    "quoted_pvp_iva": 4.9,
+    "price_with_iva_raw": 4.6,
+    "excel_code": "080AA-10891"
   },
   {
     "sku": "LP-FIL-009",
@@ -979,7 +993,9 @@
     "name": "Filtro de Aire de Motor Advance — Chevrolet Spark GT 2011, Beat - (prem Aip777 Mil MK-92369, Red 96827723)",
     "presentation": "Unidad",
     "base_price_no_iva": 2.78,
-    "quoted_pvp_iva": 3.5
+    "quoted_pvp_iva": 3.5,
+    "price_with_iva_raw": 3.2,
+    "excel_code": "080AA-11071"
   },
   {
     "sku": "LP-FIL-010",
@@ -990,7 +1006,9 @@
     "name": "Filtro de Aire de Motor Advance — Chevrolet Luv D-MAX 2.4 Gas. Trailblazer /15- (cilindrico)",
     "presentation": "Unidad",
     "base_price_no_iva": 9.48,
-    "quoted_pvp_iva": 10.9
+    "quoted_pvp_iva": 10.9,
+    "price_with_iva_raw": 10.9,
+    "excel_code": "080AA-11077"
   },
   {
     "sku": "LP-FIL-011",
@@ -1012,7 +1030,9 @@
     "name": "Filtro de Aire de Motor Advance (AA-11113) — Dongfeng Rich 6 2020 - AA-11113",
     "presentation": "Unidad",
     "base_price_no_iva": 4.35,
-    "quoted_pvp_iva": 5.0
+    "quoted_pvp_iva": 5.0,
+    "price_with_iva_raw": 5.0,
+    "excel_code": "080AA-11113"
   },
   {
     "sku": "LP-FIL-013",
@@ -1023,7 +1043,9 @@
     "name": "Filtro de Aire de Motor Advance — Renault Logan II 1.4, 1.6 (14-16) 2019, Sandero 1.4 1.6 (14-16), 165469466R",
     "presentation": "Unidad",
     "base_price_no_iva": 4.52,
-    "quoted_pvp_iva": 5.5
+    "quoted_pvp_iva": 5.5,
+    "price_with_iva_raw": 5.2,
+    "excel_code": "080AA-11652"
   },
   {
     "sku": "LP-FIL-014",
@@ -1034,7 +1056,9 @@
     "name": "Filtro de Aire de Motor Advance — Renault Logan 1.6 /16- Sandero Stepway 1.6 /16- Duster 1.6-2.0 /16- Panelado 165460",
     "presentation": "Unidad",
     "base_price_no_iva": 4.65,
-    "quoted_pvp_iva": 5.5
+    "quoted_pvp_iva": 5.5,
+    "price_with_iva_raw": 5.35,
+    "excel_code": "080AA-11654"
   },
   {
     "sku": "LP-FIL-015",
@@ -1045,7 +1069,9 @@
     "name": "Filtro de Aire de Motor Advance — Ford Ranger Nueva 2.5 Mazda BT-50 Nueva (red Aip892 Xtrag SR-2072 Red 1WA013Z40) (cil)",
     "presentation": "Unidad",
     "base_price_no_iva": 7.19,
-    "quoted_pvp_iva": 8.5
+    "quoted_pvp_iva": 8.5,
+    "price_with_iva_raw": 8.27,
+    "excel_code": "080AA-11674"
   },
   {
     "sku": "LP-FIL-016",
@@ -1056,7 +1082,9 @@
     "name": "Filtro de Aire de Motor Advance — Chevrolet Cruze 1.8 /10-16 / Chevrolet Orlando",
     "presentation": "Unidad",
     "base_price_no_iva": 5.74,
-    "quoted_pvp_iva": 6.9
+    "quoted_pvp_iva": 6.9,
+    "price_with_iva_raw": 6.6,
+    "excel_code": "080AA-1380"
   },
   {
     "sku": "LP-FIL-017",
@@ -1067,7 +1095,9 @@
     "name": "Filtro de Aire de Motor Advance — Chevrolet Spark Moderno 2006-07 (panel) (mk-91485)",
     "presentation": "Unidad",
     "base_price_no_iva": 2.82,
-    "quoted_pvp_iva": 3.5
+    "quoted_pvp_iva": 3.5,
+    "price_with_iva_raw": 3.24,
+    "excel_code": "080AA-1485"
   },
   {
     "sku": "LP-FIL-018",
@@ -1078,7 +1108,9 @@
     "name": "Filtro de Aire de Motor Advance — Hyundai Accent Rb KIA Rio (prem Aip837 Red 28113-1R100)",
     "presentation": "Unidad",
     "base_price_no_iva": 2.78,
-    "quoted_pvp_iva": 3.5
+    "quoted_pvp_iva": 3.5,
+    "price_with_iva_raw": 3.2,
+    "excel_code": "080AA-2070"
   },
   {
     "sku": "LP-FIL-019",
@@ -1100,7 +1132,9 @@
     "name": "Filtro de Aire de Motor Advance (AA-25006) — Great Wall Poer 2.0T Diesel 2022 - AA-25006",
     "presentation": "Unidad",
     "base_price_no_iva": 5.61,
-    "quoted_pvp_iva": 6.5
+    "quoted_pvp_iva": 6.5,
+    "price_with_iva_raw": 6.45,
+    "excel_code": "080AA-25006"
   },
   {
     "sku": "AA-25011",
@@ -1111,7 +1145,9 @@
     "name": "Filtro de Aire de Motor Advance (AA-25011) — Tank 300 2.0T, 500 2.0T - Aa- 25011",
     "presentation": "Unidad",
     "base_price_no_iva": 5.52,
-    "quoted_pvp_iva": 6.5
+    "quoted_pvp_iva": 6.5,
+    "price_with_iva_raw": 6.35,
+    "excel_code": "080AA-25011"
   },
   {
     "sku": "LP-FIL-022",
@@ -1122,7 +1158,9 @@
     "name": "Filtro de Aire de Motor Advance — Nissan X-trail /14 Qashqai 2.0 /15- Renault Koleos",
     "presentation": "Unidad",
     "base_price_no_iva": 5.61,
-    "quoted_pvp_iva": 6.5
+    "quoted_pvp_iva": 6.5,
+    "price_with_iva_raw": 6.45,
+    "excel_code": "080AA-25040"
   },
   {
     "sku": "LP-FIL-023",
@@ -1133,7 +1171,9 @@
     "name": "Filtro de Aire de Motor Advance — Mazda BT-50 2.5 Turbo Diesel B2500 Galant Gas 2000 Diesel 4X2 (mil MK-9021)",
     "presentation": "Unidad",
     "base_price_no_iva": 4.7,
-    "quoted_pvp_iva": 5.5
+    "quoted_pvp_iva": 5.5,
+    "price_with_iva_raw": 5.4,
+    "excel_code": "080AA-25128"
   },
   {
     "sku": "LP-FIL-024",
@@ -1143,8 +1183,10 @@
     "category": "filtros",
     "name": "Filtro de Aire de Motor Advance — Chevrolet Luv D-MAX 3.0 /14- Panelado",
     "presentation": "Unidad",
-    "base_price_no_iva": 4.7,
-    "quoted_pvp_iva": 5.5
+    "base_price_no_iva": 2.17,
+    "quoted_pvp_iva": 2.5,
+    "price_with_iva_raw": 2.5,
+    "excel_code": "078AO-50710"
   },
   {
     "sku": "AA-2662",
@@ -1155,7 +1197,9 @@
     "name": "Filtro de Aire de Motor Advance (AA-2662) — Chevrolet D-MAX 2.0T Diesel 2025 - AA-2662",
     "presentation": "Unidad",
     "base_price_no_iva": 5.96,
-    "quoted_pvp_iva": 6.9
+    "quoted_pvp_iva": 6.9,
+    "price_with_iva_raw": 6.86,
+    "excel_code": "080AA-2662"
   },
   {
     "sku": "LP-FIL-026",
@@ -1166,7 +1210,9 @@
     "name": "Filtro de Aire de Motor Advance — Hyundai Tucson All New 2.0 Santa Fe 2.5 Sonata 2.0 KIA Sorento 3.5",
     "presentation": "Unidad",
     "base_price_no_iva": 4.3,
-    "quoted_pvp_iva": 5.0
+    "quoted_pvp_iva": 5.0,
+    "price_with_iva_raw": 4.95,
+    "excel_code": "080AA-28115"
   },
   {
     "sku": "LP-FIL-027",
@@ -1177,7 +1223,9 @@
     "name": "Filtro de Aire de Motor Advance — Hyundai Bus County, Hd65, Hd72 , Hd78 Sello Radial (cilindrico) (mk-94190)",
     "presentation": "Unidad",
     "base_price_no_iva": 8.61,
-    "quoted_pvp_iva": 9.9
+    "quoted_pvp_iva": 9.9,
+    "price_with_iva_raw": 9.9,
+    "excel_code": "080AA-28130"
   },
   {
     "sku": "LP-FIL-028",
@@ -1188,7 +1236,9 @@
     "name": "Filtro de Aire de Motor Advance — KIA Grand Pregio 2006-2012 (cilindrico)",
     "presentation": "Unidad",
     "base_price_no_iva": 4.87,
-    "quoted_pvp_iva": 5.9
+    "quoted_pvp_iva": 5.9,
+    "price_with_iva_raw": 5.6,
+    "excel_code": "080AA-3603"
   },
   {
     "sku": "LP-FIL-029",
@@ -1199,7 +1249,9 @@
     "name": "Filtro de Aire de Motor Advance — Great Wall Wingle 5 2.0 Diesel 19, Wingle 7",
     "presentation": "Unidad",
     "base_price_no_iva": 4.22,
-    "quoted_pvp_iva": 4.9
+    "quoted_pvp_iva": 4.9,
+    "price_with_iva_raw": 4.85,
+    "excel_code": "080AA-38240"
   },
   {
     "sku": "LP-FIL-030",
@@ -1210,7 +1262,9 @@
     "name": "Filtro de Aire de Motor Advance — KIA Picanto R /10-17 (28113-1y100)",
     "presentation": "Unidad",
     "base_price_no_iva": 3.09,
-    "quoted_pvp_iva": 3.9
+    "quoted_pvp_iva": 3.9,
+    "price_with_iva_raw": 3.55,
+    "excel_code": "080AA-4000"
   },
   {
     "sku": "LP-FIL-031",
@@ -1221,7 +1275,9 @@
     "name": "Filtro de Aire de Motor Advance — Nissan Sentra B-15 Almera Murano Pathfinder 3.0/CHEVROLET Scross (16546-0z000)",
     "presentation": "Unidad",
     "base_price_no_iva": 3.26,
-    "quoted_pvp_iva": 3.9
+    "quoted_pvp_iva": 3.9,
+    "price_with_iva_raw": 3.75,
+    "excel_code": "080AA-4309"
   },
   {
     "sku": "LP-FIL-032",
@@ -1264,7 +1320,9 @@
     "name": "Filtro de Aire de Motor Advance (AA-5827) — Volkswagen Golf Jetta Skoda Octavia Audi A3 1.8T - AA-5827 (mk-5827)",
     "presentation": "Unidad",
     "base_price_no_iva": 5.61,
-    "quoted_pvp_iva": 6.5
+    "quoted_pvp_iva": 6.5,
+    "price_with_iva_raw": 6.45,
+    "excel_code": "080AA-5827"
   },
   {
     "sku": "LP-FIL-036",
@@ -1286,7 +1344,9 @@
     "name": "Filtro de Aire de Motor Advance — KIA Picanto New 2017 (red 28113-G6000 Xtraguard Ca-g6000)",
     "presentation": "Unidad",
     "base_price_no_iva": 4.39,
-    "quoted_pvp_iva": 5.5
+    "quoted_pvp_iva": 5.5,
+    "price_with_iva_raw": 5.05,
+    "excel_code": "080AA-6000"
   },
   {
     "sku": "LP-FIL-038",
@@ -1297,7 +1357,9 @@
     "name": "Filtro de Aire de Motor Advance — Isuzu Npr 3,9 Turbo Nhr Nkr 8941560520 (cilindrico) (mk-5070)",
     "presentation": "Unidad",
     "base_price_no_iva": 10.78,
-    "quoted_pvp_iva": 12.5
+    "quoted_pvp_iva": 12.5,
+    "price_with_iva_raw": 12.4,
+    "excel_code": "080AA-6012"
   },
   {
     "sku": "AA-6127",
@@ -1308,7 +1370,9 @@
     "name": "Filtro de Aire de Motor Advance (AA-6127) — Chevrolet D-MAX 2.5 3.5 Tdi (aa-6127/sr-550/aip682/8-97147860910) (cilindrico)",
     "presentation": "Unidad",
     "base_price_no_iva": 4.22,
-    "quoted_pvp_iva": 4.9
+    "quoted_pvp_iva": 4.9,
+    "price_with_iva_raw": 4.85,
+    "excel_code": "080AA-6127"
   },
   {
     "sku": "LP-FIL-040",
@@ -1319,7 +1383,9 @@
     "name": "Filtro de Aire de Motor Advance — Mazda BT-50 Gasolina 2200 Iny Ford Ranger 2.2 2.6 2008",
     "presentation": "Unidad",
     "base_price_no_iva": 2.78,
-    "quoted_pvp_iva": 3.5
+    "quoted_pvp_iva": 3.5,
+    "price_with_iva_raw": 3.2,
+    "excel_code": "080AA-6558"
   },
   {
     "sku": "LP-FIL-041",
@@ -1330,7 +1396,9 @@
     "name": "Filtro de Aire de Motor Advance — Chevrolet Vitara 1.6 /97-01 (cuadrado)",
     "presentation": "Unidad",
     "base_price_no_iva": 5.17,
-    "quoted_pvp_iva": 6.0
+    "quoted_pvp_iva": 6.0,
+    "price_with_iva_raw": 5.95,
+    "excel_code": "080AA-6664"
   },
   {
     "sku": "LP-FIL-042",
@@ -1341,7 +1409,9 @@
     "name": "Filtro de Aire de Motor Advance — Nissan Sentra B14 Renault Duster (prem Aip515 Xtrag AP-103 Red 16546-73C10)",
     "presentation": "Unidad",
     "base_price_no_iva": 3.0,
-    "quoted_pvp_iva": 3.5
+    "quoted_pvp_iva": 3.5,
+    "price_with_iva_raw": 3.45,
+    "excel_code": "080AA-6900"
   },
   {
     "sku": "LP-FIL-043",
@@ -1352,7 +1422,9 @@
     "name": "Filtro de Aire de Motor Advance — Chevrolet Vitara Spts Iny",
     "presentation": "Unidad",
     "base_price_no_iva": 3.26,
-    "quoted_pvp_iva": 3.9
+    "quoted_pvp_iva": 3.9,
+    "price_with_iva_raw": 3.75,
+    "excel_code": "080AA-7617"
   },
   {
     "sku": "LP-FIL-044",
@@ -1363,7 +1435,9 @@
     "name": "Filtro de Aire de Motor Advance — Chevrolet Rodeo 3.2, Trooper 3.2, Luv 2.2, 2.3, 3.2",
     "presentation": "Unidad",
     "base_price_no_iva": 3.61,
-    "quoted_pvp_iva": 4.5
+    "quoted_pvp_iva": 4.5,
+    "price_with_iva_raw": 4.15,
+    "excel_code": "080AA-8067"
   },
   {
     "sku": "LP-FIL-045",
@@ -1374,7 +1448,9 @@
     "name": "Filtro de Aire de Motor Advance — Chevrolet Gran Vitara 3PTAS(PREM Aip513 Xtrag WA-8069 Red 25311970)",
     "presentation": "Unidad",
     "base_price_no_iva": 2.78,
-    "quoted_pvp_iva": 3.5
+    "quoted_pvp_iva": 3.5,
+    "price_with_iva_raw": 3.2,
+    "excel_code": "080AA-8069"
   },
   {
     "sku": "LP-FIL-046",
@@ -1385,7 +1461,9 @@
     "name": "Filtro de Aire de Motor Advance — Suzuki Gran Vitara Suzuki 2.4 78K00",
     "presentation": "Unidad",
     "base_price_no_iva": 4.35,
-    "quoted_pvp_iva": 5.0
+    "quoted_pvp_iva": 5.0,
+    "price_with_iva_raw": 5.0,
+    "excel_code": "080AA-8078"
   },
   {
     "sku": "LP-FIL-047",
@@ -1396,7 +1474,9 @@
     "name": "Filtro de Aire de Motor Advance — Hyundai Tucson IX KIA Sportage R 11-12 Creta - (mk-29766 Prem Aip767",
     "presentation": "Unidad",
     "base_price_no_iva": 3.09,
-    "quoted_pvp_iva": 3.9
+    "quoted_pvp_iva": 3.9,
+    "price_with_iva_raw": 3.55,
+    "excel_code": "080AA-8590"
   },
   {
     "sku": "LP-FIL-048",
@@ -1407,7 +1487,9 @@
     "name": "Filtro de Aire de Motor Advance — Renault Logan/sandero/duster/megane C1858/1",
     "presentation": "Unidad",
     "base_price_no_iva": 3.43,
-    "quoted_pvp_iva": 4.0
+    "quoted_pvp_iva": 4.0,
+    "price_with_iva_raw": 3.95,
+    "excel_code": "080AA-8964"
   },
   {
     "sku": "LP-FIL-049",
@@ -1418,7 +1500,9 @@
     "name": "Filtro de Aire de Motor Advance — KIA Rio X Line /18 GT Limited Sport",
     "presentation": "Unidad",
     "base_price_no_iva": 4.13,
-    "quoted_pvp_iva": 4.9
+    "quoted_pvp_iva": 4.9,
+    "price_with_iva_raw": 4.75,
+    "excel_code": "080AA-9100"
   },
   {
     "sku": "LP-FIL-050",
@@ -1429,7 +1513,9 @@
     "name": "Filtro de Aire de Motor Advance — Great Wall Wingle /22",
     "presentation": "Unidad",
     "base_price_no_iva": 6.26,
-    "quoted_pvp_iva": 7.5
+    "quoted_pvp_iva": 7.5,
+    "price_with_iva_raw": 7.2,
+    "excel_code": "080AA-9102"
   },
   {
     "sku": "LP-FIL-051",
@@ -1440,7 +1526,9 @@
     "name": "Filtro de Aire de Motor Advance — Zx Auto-grand Tiger-wingle A38010 1109101-K08-A1",
     "presentation": "Unidad",
     "base_price_no_iva": 3.09,
-    "quoted_pvp_iva": 3.9
+    "quoted_pvp_iva": 3.9,
+    "price_with_iva_raw": 3.55,
+    "excel_code": "080AA-9110"
   },
   {
     "sku": "AA-9123",
@@ -1451,7 +1539,9 @@
     "name": "Filtro de Aire de Motor Advance (AA-9123) — Chery Tiggo 2 Pro 1.5L - AA-9123",
     "presentation": "Unidad",
     "base_price_no_iva": 5.35,
-    "quoted_pvp_iva": 6.5
+    "quoted_pvp_iva": 6.5,
+    "price_with_iva_raw": 6.15,
+    "excel_code": "080AA-9123"
   },
   {
     "sku": "AA-9124",
@@ -1462,7 +1552,9 @@
     "name": "Filtro de Aire de Motor Advance (AA-9124) — Chery Arrizo 5 1.5 - Aa- 9124",
     "presentation": "Unidad",
     "base_price_no_iva": 4.87,
-    "quoted_pvp_iva": 5.9
+    "quoted_pvp_iva": 5.9,
+    "price_with_iva_raw": 5.6,
+    "excel_code": "080AA-9124"
   },
   {
     "sku": "AA-9322",
@@ -1473,7 +1565,9 @@
     "name": "Filtro de Aire de Motor Advance (AA-9322) — Chevrolet Sail 1.5L 17-21 (aa-9322, Aip1018, Ap143, 90799322)",
     "presentation": "Unidad",
     "base_price_no_iva": 3.43,
-    "quoted_pvp_iva": 4.0
+    "quoted_pvp_iva": 4.0,
+    "price_with_iva_raw": 3.95,
+    "excel_code": "080AA-9322"
   },
   {
     "sku": "LP-FIL-055",
@@ -1484,7 +1578,9 @@
     "name": "Filtro de Aire de Motor Advance — KIA Cerato 1.6 05-09 Hyundai Elantra 1.6 00-06 Cuupe Tiburon 02-08 - Aa9392",
     "presentation": "Unidad",
     "base_price_no_iva": 3.91,
-    "quoted_pvp_iva": 4.5
+    "quoted_pvp_iva": 4.5,
+    "price_with_iva_raw": 4.5,
+    "excel_code": "080AA-9392"
   },
   {
     "sku": "AA-9476",
@@ -1494,7 +1590,10 @@
     "category": "filtros",
     "name": "Filtro de Aire de Motor Advance (AA-9476) — Chevrolet Cavalier 2019 - AA-9476",
     "presentation": "Unidad",
-    "base_price_no_iva": null
+    "base_price_no_iva": 5.87,
+    "price_with_iva_raw": 6.75,
+    "quoted_pvp_iva": 6.9,
+    "excel_code": "080AA-9476"
   },
   {
     "sku": "LP-FIL-057",
@@ -1505,7 +1604,9 @@
     "name": "Filtro de Aire de Motor Advance — Hyundai Getz 1.3 2002 (mk-24086)",
     "presentation": "Unidad",
     "base_price_no_iva": 3.26,
-    "quoted_pvp_iva": 3.9
+    "quoted_pvp_iva": 3.9,
+    "price_with_iva_raw": 3.75,
+    "excel_code": "080AA-9632"
   },
   {
     "sku": "LP-FIL-058",
@@ -1516,7 +1617,9 @@
     "name": "Filtro de Aire de Motor Advance — Volkswagen Jetta IV 2.0 /11, Skoda Octavia 1.4 -2.0 Fsi /07 (cilindrico)",
     "presentation": "Unidad",
     "base_price_no_iva": 7.04,
-    "quoted_pvp_iva": 8.5
+    "quoted_pvp_iva": 8.5,
+    "price_with_iva_raw": 8.1,
+    "excel_code": "080AA-9800"
   },
   {
     "sku": "LP-FIL-059",
@@ -1527,7 +1630,9 @@
     "name": "Filtro de Aire de Motor Advance — Isuzu Npr 11-19 Nhr Reward 11-18 Nmr 11-14 Nqr 11-18 NLR 11-18 JAC Hfc1035 (cil)",
     "presentation": "Unidad",
     "base_price_no_iva": 14.11,
-    "quoted_pvp_iva": 16.5
+    "quoted_pvp_iva": 16.5,
+    "price_with_iva_raw": 16.23,
+    "excel_code": "080AA-9856"
   },
   {
     "sku": "LP-FIL-060",
@@ -1538,7 +1643,9 @@
     "name": "Filtro de Aire de Motor Advance — Chevrolet Aveo Chy Taxi",
     "presentation": "Unidad",
     "base_price_no_iva": 2.17,
-    "quoted_pvp_iva": 2.5
+    "quoted_pvp_iva": 2.5,
+    "price_with_iva_raw": 2.5,
+    "excel_code": "080AA-9902"
   },
   {
     "sku": "AA-994",
@@ -1549,7 +1656,9 @@
     "name": "Filtro de Aire de Motor Advance (AA-994) — Renault Logan, Sandero - AA-994 (mk-9074)",
     "presentation": "Unidad",
     "base_price_no_iva": 5.0,
-    "quoted_pvp_iva": 5.9
+    "quoted_pvp_iva": 5.9,
+    "price_with_iva_raw": 5.75,
+    "excel_code": "080AA-994"
   },
   {
     "sku": "LP-FIL-065",
@@ -1560,7 +1669,9 @@
     "name": "Filtro de Aire de Motor Advance — KIA Cerato /13- Hyundai Elantra 1.6 /07-11 I30 1.6 /09-10 Koup 2.0 /10-17",
     "presentation": "Unidad",
     "base_price_no_iva": 3.0,
-    "quoted_pvp_iva": 3.5
+    "quoted_pvp_iva": 3.5,
+    "price_with_iva_raw": 3.45,
+    "excel_code": "081AA-1132"
   },
   {
     "sku": "AA-3038",
@@ -3251,7 +3362,9 @@
     "name": "MOTUL Moto 5000 10W-40 Semisintetico Ambar",
     "presentation": "1 Litro",
     "base_price_no_iva": 6.96,
-    "quoted_pvp_iva": 8.0
+    "quoted_pvp_iva": 8.0,
+    "price_with_iva_raw": 8.0,
+    "excel_code": "01001012"
   },
   {
     "sku": "LP-LUR-003-4",
@@ -3262,7 +3375,9 @@
     "name": "MOTUL Moto 5100 15W-50 Semisintetico Ester Ambar",
     "presentation": "1 Litro",
     "base_price_no_iva": 8.7,
-    "quoted_pvp_iva": 10.0
+    "quoted_pvp_iva": 10.0,
+    "price_with_iva_raw": 10.0,
+    "excel_code": "01098960"
   },
   {
     "sku": "LP-LUR-004-3",
@@ -3273,7 +3388,9 @@
     "name": "MOTUL Moto 5000 20W-50 Semi Sintético",
     "presentation": "1 Lt",
     "base_price_no_iva": 7.83,
-    "quoted_pvp_iva": 9.0
+    "quoted_pvp_iva": 9.0,
+    "price_with_iva_raw": 9.0,
+    "excel_code": "01099362"
   },
   {
     "sku": "0368AR00030",
@@ -3440,7 +3557,9 @@
     "name": "AROIL Diésel 40 CF",
     "presentation": "Caneca 5 GL",
     "base_price_no_iva": 62.61,
-    "quoted_pvp_iva": 72.0
+    "quoted_pvp_iva": 72.0,
+    "price_with_iva_raw": 72.0,
+    "excel_code": "0368AR10016"
   },
   {
     "sku": "LP-LUR-009-2",
@@ -3451,7 +3570,9 @@
     "name": "AROIL 4T 20W-50 SL Jaso Ma2",
     "presentation": "1 Litro",
     "base_price_no_iva": 4.04,
-    "quoted_pvp_iva": 4.9
+    "quoted_pvp_iva": 4.9,
+    "price_with_iva_raw": 4.65,
+    "excel_code": "0368AR30003"
   },
   {
     "sku": "0368AR40038",
@@ -4666,7 +4787,9 @@
     "name": "Valvodiesel SAE 15W-40 API Ch4",
     "presentation": "1 Litro",
     "base_price_no_iva": 4.49,
-    "quoted_pvp_iva": 5.5
+    "quoted_pvp_iva": 5.5,
+    "price_with_iva_raw": 5.17,
+    "excel_code": "038LUB-D1540-0025"
   },
   {
     "sku": "038LUB-PC2050-0025",
@@ -4703,7 +4826,9 @@
     "name": "VALVOLINE SAE 10W-30 Classic API SP",
     "presentation": "1 Litro",
     "base_price_no_iva": 4.83,
-    "quoted_pvp_iva": 5.9
+    "quoted_pvp_iva": 5.9,
+    "price_with_iva_raw": 5.55,
+    "excel_code": "038LUBC1030-0025"
   },
   {
     "sku": "02724HPIS4",

@@ -228,7 +228,11 @@
     "category": "lubricantes",
     "name": "MANNOL Chevrolet Opel O.e.m 5W-30 (1 Galón / 5L)",
     "presentation": "1 Galón / 5L",
-    "base_price_no_iva": null
+    "base_price_no_iva": 50.26,
+    "price_with_iva_raw": 57.8,
+    "quoted_pvp_iva": 57.9,
+    "excel_code": "012MN7701-1 (HEREDADO)",
+    "pricing_note": "Heredado Galón/5L desde variante 1L Excel"
   },
   {
     "sku": "012MN7709-1",
@@ -316,7 +320,11 @@
     "category": "lubricantes",
     "name": "MANNOL Ceramic Pro 10W-40 (1 Litro)",
     "presentation": "1 Litro",
-    "base_price_no_iva": null
+    "base_price_no_iva": 11.67,
+    "price_with_iva_raw": 13.42,
+    "quoted_pvp_iva": 13.5,
+    "excel_code": "012MN7726-5 (HEREDADO)",
+    "pricing_note": "Heredado 1L desde variante Galón/5L Excel"
   },
   {
     "sku": "012MN7726-5",
@@ -340,7 +348,9 @@
     "name": "MANNOL 4takt Motorbike 10W-40",
     "presentation": "20 Lt",
     "base_price_no_iva": 12.52,
-    "quoted_pvp_iva": 14.5
+    "quoted_pvp_iva": 14.5,
+    "price_with_iva_raw": 14.4,
+    "excel_code": "012MN7812-1"
   },
   {
     "sku": "LP-LUR-016",
@@ -351,7 +361,9 @@
     "name": "MANNOL 4takt Motorbike 10W-50",
     "presentation": "1 Litro",
     "base_price_no_iva": 11.43,
-    "quoted_pvp_iva": 13.5
+    "quoted_pvp_iva": 13.5,
+    "price_with_iva_raw": 13.15,
+    "excel_code": "012MN7814-1"
   },
   {
     "sku": "LP-LUR-017",
@@ -362,7 +374,9 @@
     "name": "MANNOL Powerbike 15W-50 Metálico",
     "presentation": "1 Litro",
     "base_price_no_iva": 12.43,
-    "quoted_pvp_iva": 14.5
+    "quoted_pvp_iva": 14.5,
+    "price_with_iva_raw": 14.3,
+    "excel_code": "012MN7832"
   },
   {
     "sku": "012MN7904-1",
@@ -776,7 +790,9 @@
     "name": "MANNOL TS-5 UHPD 10W-40",
     "presentation": "Caneca 5 GL",
     "base_price_no_iva": 105.22,
-    "quoted_pvp_iva": 121.0
+    "quoted_pvp_iva": 121.0,
+    "price_with_iva_raw": 121.0,
+    "excel_code": "012MN7105-20"
   },
   {
     "sku": "LP-LUR-039",
@@ -956,7 +972,9 @@
     "name": "Filtro de Aire de Motor Advance — Suzuki Gran Vitara Suzuki 2.0 2.7",
     "presentation": "Unidad",
     "base_price_no_iva": 2.96,
-    "quoted_pvp_iva": 3.5
+    "quoted_pvp_iva": 3.5,
+    "price_with_iva_raw": 3.4,
+    "excel_code": "080AA-10286"
   },
   {
     "sku": "LP-FIL-007",
@@ -1019,7 +1037,9 @@
     "name": "Filtro de Aire de Motor Advance — Zotye T600",
     "presentation": "Unidad",
     "base_price_no_iva": 5.3,
-    "quoted_pvp_iva": 6.5
+    "quoted_pvp_iva": 6.5,
+    "price_with_iva_raw": 6.1,
+    "excel_code": "080AA-11085"
   },
   {
     "sku": "AA-11113",
@@ -1121,7 +1141,9 @@
     "name": "Filtro de Aire de Motor Advance — Chevrolet Sail",
     "presentation": "Unidad",
     "base_price_no_iva": 3.09,
-    "quoted_pvp_iva": 3.9
+    "quoted_pvp_iva": 3.9,
+    "price_with_iva_raw": 3.55,
+    "excel_code": "080AA-2217"
   },
   {
     "sku": "AA-25006",
@@ -1288,7 +1310,9 @@
     "name": "Filtro de Aire de Motor Advance — Chevrolet Rodeo 2.6 (redondo)",
     "presentation": "Unidad",
     "base_price_no_iva": 4.7,
-    "quoted_pvp_iva": 5.5
+    "quoted_pvp_iva": 5.5,
+    "price_with_iva_raw": 5.4,
+    "excel_code": "080AA-4939"
   },
   {
     "sku": "LP-FIL-033",
@@ -1298,7 +1322,10 @@
     "category": "filtros",
     "name": "Filtro de Aire de Motor Advance — Chevrolet Luv D-MAX 2.4 D-MAX 3.5 Gasolina / Mitsubishi L200",
     "presentation": "Unidad",
-    "base_price_no_iva": null
+    "base_price_no_iva": 4.22,
+    "price_with_iva_raw": 4.85,
+    "quoted_pvp_iva": 4.9,
+    "excel_code": "080AA-6127"
   },
   {
     "sku": "AA-54",
@@ -1309,7 +1336,9 @@
     "name": "Filtro de Aire de Motor Advance (AA-54) — Nissan X-trail E-power 1.5 Vc Turbo(e-4orce T33) Qashqai 1.3T Caja X 24 - Aa- 54",
     "presentation": "Unidad",
     "base_price_no_iva": 5.91,
-    "quoted_pvp_iva": 6.9
+    "quoted_pvp_iva": 6.9,
+    "price_with_iva_raw": 6.8,
+    "excel_code": "080AA-54661"
   },
   {
     "sku": "AA-5827",
@@ -1333,7 +1362,9 @@
     "name": "Filtro de Aire de Motor Advance — Mazda BT-50 Toyota Hilux 2.5-2.7 /-09 / Fortunerjac 2.8 (cilindrico)",
     "presentation": "Unidad",
     "base_price_no_iva": 5.35,
-    "quoted_pvp_iva": 6.5
+    "quoted_pvp_iva": 6.5,
+    "price_with_iva_raw": 6.15,
+    "excel_code": "080AA-5903"
   },
   {
     "sku": "LP-FIL-037",
@@ -1681,7 +1712,10 @@
     "category": "filtros",
     "name": "Filtro de Aire de Motor Advance (AA-3038) — JAC T9 2.0 2025 - AA-3038",
     "presentation": "Unidad",
-    "base_price_no_iva": null
+    "base_price_no_iva": 5.87,
+    "price_with_iva_raw": 6.75,
+    "quoted_pvp_iva": 6.9,
+    "excel_code": "FILTRO AIRE 080AA-3038"
   },
   {
     "sku": "078AO-10127",
@@ -2159,7 +2193,11 @@
     "category": "filtros",
     "name": "Filtro de Aceite Advance (AO-4386ST) — (medio Filtrante 100% Sintetico 15000 Km.) Suzuki Grand Vitara Suzuki, Next, Toyot",
     "presentation": "Unidad",
-    "base_price_no_iva": null
+    "base_price_no_iva": 2.61,
+    "price_with_iva_raw": 3.0,
+    "quoted_pvp_iva": 3.0,
+    "excel_code": "080AO-3614ST (HEREDADO)",
+    "pricing_note": "Heredado filtro sintético 15000km spin-on Excel"
   },
   {
     "sku": "080AO-4952",
@@ -2195,7 +2233,11 @@
     "category": "filtros",
     "name": "Filtro de Aceite Advance (AO-500ST) — (medio Filtrante 100% Sintetico 15000 Km.) Chevrolet, Ford, Jmc, JAC - AO-500S",
     "presentation": "Unidad",
-    "base_price_no_iva": null
+    "base_price_no_iva": 2.61,
+    "price_with_iva_raw": 3.0,
+    "quoted_pvp_iva": 3.0,
+    "excel_code": "080AO-2841ST (HEREDADO)",
+    "pricing_note": "Heredado filtro sintético 15000km Chevrolet/JAC Excel"
   },
   {
     "sku": "080AO-50710-1",
@@ -2270,7 +2312,11 @@
     "category": "filtros",
     "name": "Filtro de Aceite Advance (AO-667-1) — (ph49a,lf667,c-5510,lfp3191, Psl417)oil Filter Caterpillar, Mack, Scania, Volv",
     "presentation": "Unidad",
-    "base_price_no_iva": null
+    "base_price_no_iva": 5.5,
+    "price_with_iva_raw": 6.32,
+    "quoted_pvp_iva": 6.5,
+    "excel_code": "080AFP-5612 (HEREDADO)",
+    "pricing_note": "Heredado filtro diésel pesado Advance Excel"
   },
   {
     "sku": "080AO-7317ST",
@@ -2371,7 +2417,11 @@
     "category": "filtros",
     "name": "Filtro de Aceite Advance (AOE-9229-1) — Elementojac Hfc 1140 7.8L, Hfc 1160 7.8L, Hfc 1180 7.8L - Aoe9229/1",
     "presentation": "Unidad",
-    "base_price_no_iva": null
+    "base_price_no_iva": 3.83,
+    "price_with_iva_raw": 4.4,
+    "quoted_pvp_iva": 4.5,
+    "excel_code": "080AOE-11724ST (HEREDADO)",
+    "pricing_note": "Heredado elemento filtrante pesado Advance Excel"
   },
   {
     "sku": "080AOE-9496ST",
@@ -2381,7 +2431,11 @@
     "category": "filtros",
     "name": "Filtro de Aceite Advance (AOE-9496ST) — Elemento (medio Filtrante 100% Sintetico 15000 Km.) Volkswagen Bora, Jetta, Skoda",
     "presentation": "Unidad",
-    "base_price_no_iva": null
+    "base_price_no_iva": 3.48,
+    "price_with_iva_raw": 4.0,
+    "quoted_pvp_iva": 4.0,
+    "excel_code": "080AO-2870ST (HEREDADO)",
+    "pricing_note": "Heredado filtro sintético 15000km VW/Skoda Excel"
   },
   {
     "sku": "080AOE-9540",
@@ -2599,7 +2653,11 @@
     "category": "filtros",
     "name": "Filtro de Cabina (A/C) Advance (AC-2807) — Hyundai Tucson IX 2.0/ KIA Cerato 1.6/16- Sportage Active /12- Cerato 97133-2E200",
     "presentation": "Unidad",
-    "base_price_no_iva": null
+    "base_price_no_iva": 3.91,
+    "price_with_iva_raw": 4.5,
+    "quoted_pvp_iva": 4.5,
+    "excel_code": "080AC-28380 (HEREDADO)",
+    "pricing_note": "Heredado filtro cabina Hyundai/Kia Advance Excel"
   },
   {
     "sku": "080AC-2808",
@@ -2701,7 +2759,9 @@
     "name": "Filtro de Cabina (A/C) Advance (AC-4426) — (ac-18120) MG 5 1.5, Chevrolet Luv D-MAX 3.0 2014, X-trail Classic, L200, ASX",
     "presentation": "Unidad",
     "base_price_no_iva": 4.91,
-    "quoted_pvp_iva": 5.9
+    "quoted_pvp_iva": 5.9,
+    "price_with_iva_raw": 5.65,
+    "excel_code": "080AC-18120"
   },
   {
     "sku": "080AC-49030",
@@ -3765,7 +3825,9 @@
     "name": "AROIL Tracfluid 10W-30",
     "presentation": "Caneca 5 GL",
     "base_price_no_iva": 63.74,
-    "quoted_pvp_iva": 73.5
+    "quoted_pvp_iva": 73.5,
+    "price_with_iva_raw": 73.3,
+    "excel_code": "0368AR60026"
   },
   {
     "sku": "LP-LUR-018-2",
@@ -4776,7 +4838,11 @@
     "category": "aditivos",
     "name": "Shampoo Cera Para Autos 600ml",
     "presentation": "600Ml",
-    "base_price_no_iva": null
+    "base_price_no_iva": 4.3,
+    "price_with_iva_raw": 4.95,
+    "quoted_pvp_iva": 5.0,
+    "excel_code": "1214020 (HEREDADO)",
+    "pricing_note": "Heredado línea cosmética Simoniz Excel"
   },
   {
     "sku": "LP-LUR-002-6",
@@ -4942,7 +5008,11 @@
     "category": "baterias",
     "name": "Batería Bosch N40 FE S4 (43 Amp)",
     "presentation": "43Ah",
-    "base_price_no_iva": null
+    "base_price_no_iva": 108.0,
+    "price_with_iva_raw": 124.2,
+    "quoted_pvp_iva": 124.5,
+    "excel_code": "027NS40FEFS4 (HEREDADO)",
+    "pricing_note": "Heredado Batería Bosch N40/NS40 FE S4 Excel"
   },
   {
     "sku": "027NS40FEFS4",
@@ -5147,7 +5217,11 @@
     "category": "baterias",
     "name": "Batería Ecuador 42 FE — Full Equipo (55 Amp)",
     "presentation": "55Ah",
-    "base_price_no_iva": null
+    "base_price_no_iva": 120.05,
+    "price_with_iva_raw": 138.06,
+    "quoted_pvp_iva": 138.5,
+    "excel_code": "03042-HP (HEREDADO)",
+    "pricing_note": "Heredado Batería Ecuador Grupo 42 Full Equipo Excel"
   },
   {
     "sku": "03042-HP",
@@ -5274,7 +5348,10 @@
     "category": "baterias",
     "name": "Batería Ecuador N40 HP — High Power Tapa Roja (50 Amp)",
     "presentation": "50Ah",
-    "base_price_no_iva": null
+    "base_price_no_iva": 116.91,
+    "price_with_iva_raw": 134.45,
+    "quoted_pvp_iva": 134.5,
+    "excel_code": "030N40-HP-I"
   },
   {
     "sku": "030N40-HP-I",
@@ -5310,7 +5387,10 @@
     "category": "baterias",
     "name": "Batería Ecuador NS40 FE I — Full Equipo (42 Amp)",
     "presentation": "42Ah",
-    "base_price_no_iva": null
+    "base_price_no_iva": 93.35,
+    "price_with_iva_raw": 107.35,
+    "quoted_pvp_iva": 107.5,
+    "excel_code": "030NS40-FE"
   },
   {
     "sku": "030NS40-HP",
@@ -5358,7 +5438,9 @@
     "name": "¡Combo Cambio MANNOL! 1A Classic 10W-40 (Galón) + Filtro Advance + Regalo",
     "presentation": "Galón + Filtro + MANNOL 6145 + Esponja",
     "base_price_no_iva": 36.96,
-    "quoted_pvp_iva": 42.5
+    "quoted_pvp_iva": 42.5,
+    "price_with_iva_raw": 42.5,
+    "excel_code": "COMBO-MANNOL-1A (COMBO EXCEL)"
   },
   {
     "sku": "COMBO-MANNOL-1B",
@@ -5367,7 +5449,9 @@
     "name": "¡Combo Cambio MANNOL! 1B Energy Formula JP 5W-30 (Galón) + Filtro Advance + Regalo",
     "presentation": "Galón + Filtro + MANNOL 6145 + Esponja",
     "base_price_no_iva": 40.43,
-    "quoted_pvp_iva": 46.5
+    "quoted_pvp_iva": 46.5,
+    "price_with_iva_raw": 46.5,
+    "excel_code": "COMBO-MANNOL-1B (COMBO EXCEL)"
   },
   {
     "sku": "COMBO-MANNOL-1C",
@@ -5376,7 +5460,9 @@
     "name": "¡Combo Cambio MANNOL! 1C Safari 20W-50 (Galón) + Filtro Advance + Regalo",
     "presentation": "Galón + Filtro + MANNOL 6145 + Esponja",
     "base_price_no_iva": 33.48,
-    "quoted_pvp_iva": 38.5
+    "quoted_pvp_iva": 38.5,
+    "price_with_iva_raw": 38.5,
+    "excel_code": "COMBO-MANNOL-1C (COMBO EXCEL)"
   },
   {
     "sku": "COMBO-MANNOL-2A",
@@ -5385,7 +5471,9 @@
     "name": "¡Combo Cambio MANNOL! 2A TS-4 15W-40 (7 Litros) + Filtro + Regalo",
     "presentation": "7 Litros + Filtro + MANNOL 6145 + Esponja",
     "base_price_no_iva": 60.43,
-    "quoted_pvp_iva": 69.5
+    "quoted_pvp_iva": 69.5,
+    "price_with_iva_raw": 69.5,
+    "excel_code": "COMBO-MANNOL-2A (COMBO EXCEL)"
   },
   {
     "sku": "COMBO-MANNOL-2B",
@@ -5394,7 +5482,9 @@
     "name": "¡Combo Cambio MANNOL! 2B Diesel Turbo 5W-40 (7 Litros) + Filtro + Regalo",
     "presentation": "7 Litros + Filtro + MANNOL 6145 + Esponja",
     "base_price_no_iva": 80.43,
-    "quoted_pvp_iva": 92.5
+    "quoted_pvp_iva": 92.5,
+    "price_with_iva_raw": 92.5,
+    "excel_code": "COMBO-MANNOL-2B (COMBO EXCEL)"
   },
   {
     "sku": "COMBO-MANNOL-2C",
@@ -5403,7 +5493,9 @@
     "name": "¡Combo Cambio MANNOL! 2C Classic 10W-40 (6 Litros) + Filtro + Regalo",
     "presentation": "6 Litros + Filtro + MANNOL 6145 + Esponja",
     "base_price_no_iva": 57.3,
-    "quoted_pvp_iva": 65.9
+    "quoted_pvp_iva": 65.9,
+    "price_with_iva_raw": 65.9,
+    "excel_code": "COMBO-MANNOL-2C (COMBO EXCEL)"
   },
   {
     "sku": "COMBO-MANNOL-3A",
@@ -5412,7 +5504,9 @@
     "name": "¡Combo Cambio MANNOL! 3A TS-4 15W-40 (Caneca 20L) + Filtro Pesado + Regalo",
     "presentation": "Caneca 20L + Filtro + MANNOL 6145 + Esponja",
     "base_price_no_iva": 108.7,
-    "quoted_pvp_iva": 125.0
+    "quoted_pvp_iva": 125.0,
+    "price_with_iva_raw": 125.0,
+    "excel_code": "COMBO-MANNOL-3A (COMBO EXCEL)"
   },
   {
     "sku": "COMBO-MANNOL-3B",
@@ -5421,7 +5515,9 @@
     "name": "¡Combo Cambio MANNOL! 3B TS-5 UHPD 10W-40 (Caneca 20L) + Filtro Pesado + Regalo",
     "presentation": "Caneca 20L + Filtro + MANNOL 6145 + Esponja",
     "base_price_no_iva": 111.74,
-    "quoted_pvp_iva": 128.5
+    "quoted_pvp_iva": 128.5,
+    "price_with_iva_raw": 128.5,
+    "excel_code": "COMBO-MANNOL-3B (COMBO EXCEL)"
   },
   {
     "sku": "COMBO-MANNOL-3C",
@@ -5430,6 +5526,8 @@
     "name": "¡Combo Cambio MANNOL! 3C Hydro HV ISO 68 (Caneca 20L) + Complemento + Regalo",
     "presentation": "Caneca 20L + Complemento + MANNOL 6145 + Esponja",
     "base_price_no_iva": 92.61,
-    "quoted_pvp_iva": 106.5
+    "quoted_pvp_iva": 106.5,
+    "price_with_iva_raw": 106.5,
+    "excel_code": "COMBO-MANNOL-3C (COMBO EXCEL)"
   }
 ]

@@ -22,6 +22,7 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   compress: true,
   productionBrowserSourceMaps: false,
+  serverExternalPackages: ["pg"],
   images: {
     formats: ["image/avif", "image/webp"],
     minimumCacheTTL: 31536000,

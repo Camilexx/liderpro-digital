@@ -1,22 +1,37 @@
-import privatePricing from "@/data/privatePricing.server.json";
 import { META_CONFIG } from "@/data/metaConfig";
-
-export interface CatalogPricingItem {
-  sku: string;
-  brand?: string;
-  category?: string;
-  name: string;
-  presentation?: string;
-  base_price_no_iva?: number;
-  price_with_iva_raw?: number;
-  quoted_pvp_iva?: number;
-  excel_code?: string;
-  pricing_note?: string;
-}
+import {
+  buildDeterministicQuotePlan,
+  extractCityFromText,
+  extractCustomerType,
+  extractVehicleFromText,
+  formatVehicleLabel,
+  FREE_SHIPPING_THRESHOLD_USD,
+  mergeVehicleProfiles,
+  type DeterministicQuotePlan,
+  type HermesIntentTag,
+} from "@/lib/hermesCatalog";
+import {
+  getCustomer,
+  getDbStorageMode,
+  getRecentMessages,
+  insertMessage,
+  upsertCustomer,
+  type ChannelType,
+  type CustomerType,
+  type VehicleProfile,
+} from "@/lib/hermesDb";
 
 export interface ChatTurn {
   role: "user" | "assistant";
   content: string;
+}
+
+export interface HermesReplyOptions {
+  sessionId?: string;
+  channel?: ChannelType;
+  customerName?: string | null;
+  timeoutMs?: number;
+  persist?: boolean;
 }
 
 export interface HermesResult {
@@ -26,102 +41,28 @@ export interface HermesResult {
   latencyMs: number;
   matchedSkus: string[];
   catalogSize: number;
+  sessionId: string;
+  messageId: number | null;
+  activeVehicle: VehicleProfile | null;
+  city: string | null;
+  customerType: CustomerType;
+  quotedTotalUsd: number | null;
+  intentTag: HermesIntentTag;
+  dbStorageMode: "postgres" | "local_fallback";
 }
 
-const CATALOG = privatePricing as CatalogPricingItem[];
 const NVIDIA_CHAT_URL = "https://integrate.api.nvidia.com/v1/chat/completions";
 const HERMES_MODEL = "nvidia/nemotron-3.5-bolt-e4b";
-const FREE_SHIPPING_THRESHOLD = 35;
+const CATALOG_SIZE = 426;
 
 export const HERMES_SYSTEM_PROMPT =
-  "Eres HERMES, Especialista Senior en Repuestos, Baterías, Lubricantes MANNOL y Filtros Advance de LíderPro Pedernales (Atención 24/7 al +593 96 748 9002). " +
-  "Reglas estrictas:\n" +
-  "1) NUNCA digas que un producto no tiene precio: SIEMPRE cotiza con el campo PVP_IVA_INCLUDED del catálogo privado proporcionado (precios ya incluyen IVA 15% y redondeo comercial .00/.50/.90).\n" +
-  "2) Si preguntan por envío gratis: indica claramente que en Pedernales el envío es GRATIS desde $35 USD (y calcula exactamente cuánto falta si dan un monto, o usa un Combo de referencia) y que hacemos envíos seguros a todo el Ecuador el mismo día.\n" +
-  "3) Si preguntan por cambios de aceite o combos (especialmente Aveo, D-Max, 4x4 Diésel o MANNOL): recomienda el Combo Cambio MANNOL correspondiente e informa que incluye GRATIS el Filtro Advance, Limpiador UV3 Cockpit Care (MANNOL 6145) y Esponja de microfibra.\n" +
-  "4) Mantén formato limpio tipo WhatsApp (negritas con *asteriscos*, viñetas cortas, máximo 110 palabras), incluye factura electrónica SRI autorizada y garantía oficial.";
-
-function normalizeText(value: string): string {
-  return (value || "")
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .toLowerCase();
-}
-
-const QUERY_EXPANSIONS: Array<{ test: RegExp; extra: string[] }> = [
-  { test: /aveo|sail|corsa|spark|chevrolet/i, extra: ["10w-40", "10w40", "5w-30", "3387", "combo-mannol-1", "mannol"] },
-  { test: /d-?max|hilux|l200|4x4|diesel|camioneta/i, extra: ["15w-40", "15w40", "5w-40", "1539", "combo-mannol-2", "bateria", "ecuador", "bosch", "24", "27", "34"] },
-  { test: /bateria|bat|amp|arranque/i, extra: ["bateria", "ecuador", "bosch", "hp", "fe", "24", "27", "34", "42"] },
-  { test: /combo|regalo|mannol/i, extra: ["combo-mannol", "6145", "regalo", "esponja"] },
-  { test: /filtro/i, extra: ["advance", "080aa", "080ao", "078ao", "080ac"] },
-];
-
-export function searchCatalogMatches(query: string, limit = 8): CatalogPricingItem[] {
-  const qNorm = normalizeText(query);
-  const rawTokens = qNorm
-    .split(/[^a-z0-9.\-]+/)
-    .filter((t) => t.length >= 2 && !["para", "con", "del", "las", "los", "que", "por", "como", "falta", "cuanto", "precio", "cotizar"].includes(t));
-
-  const expandedTokens = [...rawTokens];
-  for (const exp of QUERY_EXPANSIONS) {
-    if (exp.test.test(qNorm)) {
-      expandedTokens.push(...exp.extra);
-    }
-  }
-  const uniqueTokens = Array.from(new Set(expandedTokens));
-
-  const scored: Array<{ score: number; item: CatalogPricingItem }> = [];
-  for (const item of CATALOG) {
-    const skuNorm = normalizeText(item.sku);
-    const nameNorm = normalizeText(item.name);
-    const brandNorm = normalizeText(item.brand || "");
-    const catNorm = normalizeText(item.category || "");
-    const presNorm = normalizeText(item.presentation || "");
-    const hay = `${skuNorm} ${nameNorm} ${brandNorm} ${catNorm} ${presNorm}`;
-
-    let score = 0;
-    for (const tok of rawTokens) {
-      if (skuNorm === tok || skuNorm.includes(tok)) score += 6;
-      else if (nameNorm.includes(tok)) score += 4;
-      else if (hay.includes(tok)) score += 2;
-    }
-    for (const tok of uniqueTokens) {
-      if (!rawTokens.includes(tok) && hay.includes(tok)) {
-        score += 1.5;
-      }
-    }
-    if (item.sku.startsWith("COMBO-") && /combo|regalo|aceite|aveo|4x4|diesel|mannol/.test(qNorm)) {
-      score += 3.5;
-    }
-    if (score > 0) {
-      scored.push({ score, item });
-    }
-  }
-
-  scored.sort((a, b) => b.score - a.score);
-  const top = scored.slice(0, limit).map((x) => x.item);
-  if (top.length === 0) {
-    // Fallback representativo (Combos MANNOL + Baterías populares)
-    return CATALOG.filter(
-      (x) =>
-        x.sku.startsWith("COMBO-MANNOL-1") ||
-        x.sku.startsWith("COMBO-MANNOL-2") ||
-        x.sku === "03024-HP-I" ||
-        x.sku === "03042-HP"
-    ).slice(0, limit);
-  }
-  return top;
-}
-
-export function formatCatalogContext(items: CatalogPricingItem[]): string {
-  return items
-    .map((item) => {
-      const pvp = Number(item.quoted_pvp_iva ?? 0).toFixed(2);
-      const base = Number(item.base_price_no_iva ?? 0).toFixed(2);
-      return `- SKU:${item.sku} | ${item.name} (${item.presentation || "Unidad"}) | PVP_IVA_INCLUDED=$${pvp} | BaseSinIVA=$${base}`;
-    })
-    .join("\n");
-}
+  "Eres HERMES, asesor automotriz ecuatoriano de LíderPro Pedernales (Atención 24/7 al +593 96 748 9002). " +
+  "Reglas inquebrantables:\n" +
+  "1) Tono natural, cercano y breve (2 a 4 líneas máximo en WhatsApp, sin sonar robótico ni usar 'Como asistente de IA').\n" +
+  "2) PROHIBIDO sumar precios, recalcular IVA o inventar cifras: usa ÚNICAMENTE los precios unitarios con IVA y totales ya calculados en el bloque [CALCULADORA EXACTA].\n" +
+  "3) Máximo 2 opciones exactas por respuesta (ej. Semisintético vs. Sintético, o Batería Ecuador vs. Bosch).\n" +
+  "4) En Combos MANNOL menciona el regalo incluido (*Cockpit Care + Esponja*) y en baterías en Pedernales destaca la *Instalación a Domicilio 100% GRATIS*.\n" +
+  "5) Si el cliente pide un producto que NO está en [CALCULADORA EXACTA] (ej. llantas, pastillas, parabrisas), dilo con honestidad sin inventar SKUs.";
 
 function getNvidiaKeys(): string[] {
   return [
@@ -134,135 +75,385 @@ function getNvidiaKeys(): string[] {
     .filter(Boolean);
 }
 
-export function buildDeterministicHermesReply(query: string, matches: CatalogPricingItem[]): string {
-  const qNorm = normalizeText(query);
+function hydrateContextFromHistory(history: ChatTurn[]): {
+  vehicle: VehicleProfile | null;
+  city: string | null;
+  customerType: CustomerType;
+  recentText: string;
+} {
+  let vehicle: VehicleProfile | null = null;
+  let city: string | null = null;
+  let customerType: CustomerType = "particular";
+  const parts: string[] = [];
 
-  // Caso especial: consulta sobre envío gratis
-  if (/envio gratis|cuanto falta|delivery|domicilio|flete/.test(qNorm)) {
-    const amountMatch = query.match(/(\d+(?:[.,]\d+)?)/);
-    if (amountMatch && !/20\d\d|4x4/.test(amountMatch[1])) {
-      const current = parseFloat(amountMatch[1].replace(",", "."));
-      if (!Number.isNaN(current) && current > 0 && current < FREE_SHIPPING_THRESHOLD) {
-        const diff = (FREE_SHIPPING_THRESHOLD - current).toFixed(2);
-        return (
-          `🚚 *Envío GRATIS en Pedernales* desde *$35.00*\n\n` +
-          `Con tu pedido de *$${current.toFixed(2)}*, te faltan solo *$${diff}* para activar *delivery 100% gratis* en Pedernales.\n` +
-          `💡 Puedes completarlo con un *Filtro Advance* (desde *$2.50*) o un *Limpiador UV3 MANNOL* (*$5.00*).\n\n` +
-          `📦 Envíos nacionales el mismo día vía Servientrega / transporte con factura electrónica SRI.`
-        );
-      }
+  for (const turn of history) {
+    if (!turn?.content) continue;
+    parts.push(turn.content);
+    if (turn.role === "user") {
+      const { profile } = extractVehicleFromText(turn.content);
+      vehicle = mergeVehicleProfiles(vehicle, profile);
+      const c = extractCityFromText(turn.content);
+      if (c) city = c;
+      customerType = extractCustomerType(turn.content, customerType);
     }
-    return (
-      `🚚 *Política de Envío GRATIS — LíderPro Pedernales*\n\n` +
-      `• *Pedernales urbano:* ¡Envío *GRATIS* en pedidos desde *$35.00 USD*! (Por ejemplo, cualquiera de nuestros Combos Cambio MANNOL desde *$38.50* ya califica automático).\n` +
-      `• *Todo Ecuador:* Despacho el mismo día desde Bodega Pedernales por Servientrega o encomienda segura.\n\n` +
-      `¿De cuánto es tu carrito actual o qué repuesto buscas para calcularlo exacto?`
-    );
   }
 
-  const lines = matches.slice(0, 4).map((m) => {
-    const pvp = Number(m.quoted_pvp_iva ?? 0).toFixed(2);
-    const giftNote = m.sku.startsWith("COMBO-") ? " _(incluye Filtro + MANNOL 6145 + Esponja GRATIS)_" : "";
-    return `• *${m.name}*: *$${pvp}* (IVA inc.)${giftNote}`;
-  });
+  return {
+    vehicle,
+    city,
+    customerType,
+    recentText: parts.join("\n"),
+  };
+}
 
-  const best = matches[0];
-  const qualifiesFree = Number(best?.quoted_pvp_iva ?? 0) >= FREE_SHIPPING_THRESHOLD;
-  const shippingLine = qualifiesFree
-    ? `✅ Califica para *Envío GRATIS en Pedernales* (+$${FREE_SHIPPING_THRESHOLD}) y factura SRI.`
-    : `🚚 Envío GRATIS en Pedernales desde *$${FREE_SHIPPING_THRESHOLD}.00* | Factura electrónica SRI incluida.`;
+export function renderHumanDeterministicReply(plan: DeterministicQuotePlan): string {
+  const vehicleStr = formatVehicleLabel(plan.detectedVehicle);
+  const cityStr = plan.detectedCity || "Pedernales";
+
+  switch (plan.intentTag) {
+    case "pregunta_ilogica":
+      return (
+        `¡Para nada recomendable, mi estimado! ${plan.ilologicalReason || "Eso dañaría gravemente el motor."}\n` +
+        `Si me pasas la *marca, modelo y año* de tu vehículo, te cotizo enseguida el lubricante exacto con *IVA incluido* y tu combo *MANNOL con Cockpit Care + Esponja gratis*.`
+      );
+
+    case "producto_sin_stock":
+      return (
+        `Con gusto te atiendo, pero por ahora no manejamos *${plan.requestedProductWithoutStock || "ese repuesto"}* en nuestro inventario.\n` +
+        `En *LíderPro Pedernales* nos especializamos en *baterías Bosch y Ecuador* (instalación a domicilio gratis en Pedernales), *lubricantes/combos MANNOL* y *filtros Advance*. ¿Te cotizo algo de eso?`
+      );
+
+    case "fuera_de_tema":
+      return (
+        `¡Jaja por acá solo servimos energía y protección para tu carro! 😄\n` +
+        `Cuando necesites batería a domicilio gratis en Pedernales o combo de aceite *MANNOL con regalo* (y envío nacional SRI), dime tu vehículo y al toque lo cotizamos.`
+      );
+
+    case "consulta_precio_sin_vehiculo":
+      return (
+        `¡Con todo gusto! Para darte el precio exacto con IVA y el regalo ideal, cuéntame en una línea: ¿para qué *marca, modelo y año* de vehículo lo buscas${plan.missingFieldHint?.includes("diésel") ? " (gasolina o diésel)" : ""}?`
+      );
+
+    case "envio_delivery":
+      if (plan.primaryTotalUsd !== null && plan.shippingDeltaUsd !== null) {
+        return (
+          `Para *envío GRATIS en Pedernales* el mínimo es *$${FREE_SHIPPING_THRESHOLD_USD}.00*: con tu compra de *$${plan.primaryTotalUsd.toFixed(2)}* solo te faltan *$${plan.shippingDeltaUsd.toFixed(2)}* (ej. un *Limpiador UV3 Cockpit Care* a *$5.00*).\n` +
+          `También hacemos envíos diarios a todo el Ecuador con factura SRI. ¿Qué artículo sumamos?`
+        );
+      }
+      return (
+        `En *Pedernales* el envío es *100% GRATIS* desde *$${FREE_SHIPPING_THRESHOLD_USD}.00* (y la *instalación de baterías a domicilio es GRATIS*), además despachamos el mismo día a todo Ecuador con factura SRI.\n` +
+        `Dime tu vehículo y ciudad y te paso la cotización exacta.`
+      );
+
+    case "bateria_y_combo": {
+      const opt1 = plan.options[0];
+      const opt2 = plan.options[1];
+      if (!opt1) break;
+      const lines: string[] = [
+        `¡Listo! Para tu *${vehicleStr || "vehículo"}* en *${cityStr}* (con *Cockpit Care + Esponja GRATIS* en el combo e *instalación de batería a domicilio 100% GRATIS en Pedernales*):`,
+        `• *Opción 1 (${opt1.items.map((i) => `${i.name} $${i.unitPriceIva.toFixed(2)}`).join(" + ")})* → Total exacto: *$${opt1.totalUsd.toFixed(2)}* (IVA inc.)`,
+      ];
+      if (opt2) {
+        lines.push(
+          `• *Opción 2 (${opt2.items.map((i) => `${i.name} $${i.unitPriceIva.toFixed(2)}`).join(" + ")})* → Total exacto: *$${opt2.totalUsd.toFixed(2)}* (IVA inc.)`
+        );
+      }
+      lines.push(`Envío gratis y factura SRI incluidos. ¿Con cuál opción te agendamos el domicilio?`);
+      return lines.join("\n");
+    }
+
+    case "bateria_domicilio": {
+      const opt1 = plan.options[0];
+      const opt2 = plan.options[1];
+      if (!opt1) break;
+      const installNote =
+        !plan.detectedCity || plan.detectedCity.toLowerCase() === "pedernales"
+          ? "con *Instalación a Domicilio 100% GRATIS en Pedernales*"
+          : `con envío seguro a *${cityStr}*`;
+      const lines: string[] = [
+        `Para tu *${vehicleStr || "vehículo"}* tengo estas 2 baterías exactas (${installNote} y factura SRI):`,
+        `• *${opt1.items[0].name}*: *$${opt1.totalUsd.toFixed(2)}* (IVA inc.)`,
+      ];
+      if (opt2) {
+        lines.push(`• *${opt2.items[0].name}*: *$${opt2.totalUsd.toFixed(2)}* (IVA inc.)`);
+      }
+      lines.push(`¿Confirmamos cuál te llevamos ahora?`);
+      return lines.join("\n");
+    }
+
+    case "combo_lubricante":
+    case "cotizacion_vehiculo": {
+      const opt1 = plan.options[0];
+      const opt2 = plan.options[1];
+      if (!opt1) break;
+      const lines: string[] = [
+        `¡Excelente máquina! Para tu *${vehicleStr || "vehículo"}* te recomiendo estas 2 opciones con IVA y *Cockpit Care + Esponja GRATIS*:`,
+        `• *${opt1.label}:* ${opt1.items[0].name} → *$${opt1.totalUsd.toFixed(2)}*`,
+      ];
+      if (opt2) {
+        lines.push(`• *${opt2.label}:* ${opt2.items[0].name} → *$${opt2.totalUsd.toFixed(2)}*`);
+      }
+      lines.push(
+        `Incluye envío gratis en Pedernales (y envíos el mismo día a todo Ecuador). ¿Prefieres semisintético, sintético o sumamos batería?`
+      );
+      return lines.join("\n");
+    }
+
+    case "filtro_refrigerante_aditivo": {
+      if (plan.options.length > 0) {
+        const lines = plan.options.slice(0, 2).map((o) => `• *${o.items[0].name}*: *$${o.totalUsd.toFixed(2)}* (IVA inc.)`);
+        return (
+          `Tengo disponibles en bodega Pedernales:\n${lines.join("\n")}\n` +
+          `Envío gratis en Pedernales desde *$35.00* y factura SRI. ¿Confirmamos para tu vehículo?`
+        );
+      }
+      break;
+    }
+
+    case "saludo":
+      return (
+        `¡Hola! Qué gusto saludarte desde *LíderPro Pedernales* (${META_CONFIG.line247Display}) 👋\n` +
+        `Dime la *marca, modelo y año* de tu vehículo para cotizarte tu *Combo MANNOL* (con Cockpit Care + Esponja gratis) o *batería con instalación a domicilio gratis en Pedernales*.`
+      );
+
+    default:
+      break;
+  }
 
   return (
-    `¡Hola! Te saluda *Hermes de LíderPro Pedernales* (24/7 ${META_CONFIG.line247Display}) 👋\n\n` +
-    `Opciones exactas de bodega:\n${lines.join("\n")}\n\n` +
-    `${shippingLine}\n` +
-    `¿Confirmamos despacho o te verifico la aplicación exacta para tu vehículo?`
+    `¡Con gusto te ayudo desde *LíderPro Pedernales*! Para darte el precio exacto con IVA y garantía de bodega, indícame la *marca, modelo y año* de tu vehículo y qué repuesto (batería, combo de aceite MANNOL o filtro) necesitas.`
   );
+}
+
+function buildCalculatorPromptBlock(plan: DeterministicQuotePlan): string {
+  const vehicleStr = formatVehicleLabel(plan.detectedVehicle) || "No especificado aún";
+  const cityStr = plan.detectedCity || "No especificada (hub Pedernales)";
+  const lines = [
+    `[FICHA ACTIVA] Vehículo: ${vehicleStr} | Ciudad: ${cityStr} | Perfil: ${plan.detectedCustomerType} | Intención: ${plan.intentTag}`,
+  ];
+  if (plan.options.length > 0) {
+    lines.push("[CALCULADORA EXACTA — USA ÚNICAMENTE ESTAS CIFRAS Y MÁXIMO 2 OPCIONES]:");
+    plan.options.slice(0, 2).forEach((opt, i) => {
+      const detail = opt.items.map((it) => `${it.sku}: ${it.name} = $${it.unitPriceIva.toFixed(2)}`).join(" + ");
+      lines.push(
+        `Opción ${i + 1} (${opt.label}): ${detail} => TOTAL_EXACTO_CON_IVA=$${opt.totalUsd.toFixed(2)}` +
+          `${opt.includesMannolGift ? " | REGALO=Cockpit Care + Esponja GRATIS" : ""}` +
+          `${opt.includesFreeBatteryInstallPedernales ? " | BENEFICIO=Instalación de Batería a Domicilio 100% GRATIS en Pedernales" : ""}`
+      );
+    });
+  }
+  return lines.join("\n");
+}
+
+function validateLlmPricingIntegrity(llmReply: string, plan: DeterministicQuotePlan): boolean {
+  if (!llmReply || llmReply.length < 15) return false;
+  if (/como modelo de lenguaje|asistente de ia|inteligencia artificial|no tengo acceso a precios/i.test(llmReply)) {
+    return false;
+  }
+  const allowedAmounts = new Set<string>(["35", "35.00", "15"]);
+  for (const opt of plan.options) {
+    allowedAmounts.add(opt.totalUsd.toFixed(2));
+    allowedAmounts.add(String(opt.totalUsd));
+    for (const it of opt.items) {
+      allowedAmounts.add(it.unitPriceIva.toFixed(2));
+      allowedAmounts.add(String(it.unitPriceIva));
+    }
+  }
+  if (plan.primaryTotalUsd !== null) {
+    allowedAmounts.add(plan.primaryTotalUsd.toFixed(2));
+  }
+  if (plan.shippingDeltaUsd !== null) {
+    allowedAmounts.add(plan.shippingDeltaUsd.toFixed(2));
+  }
+
+  // Cada precio en USD citado por el LLM debe estar autorizado por la calculadora TypeScript
+  const matches = llmReply.matchAll(/\$\s*(\d+(?:\.\d{1,2})?)/g);
+  for (const m of matches) {
+    const num = Number(m[1]);
+    if (!Number.isFinite(num)) return false;
+    const formatted = num.toFixed(2);
+    if (!allowedAmounts.has(formatted) && !allowedAmounts.has(String(num))) {
+      return false;
+    }
+  }
+
+  // Verificar si debía mencionar regalo MANNOL o total esperado cuando hay opciones
+  if (plan.options.length > 0 && plan.primaryTotalUsd !== null) {
+    const primaryStr = `$${plan.primaryTotalUsd.toFixed(2)}`;
+    const altStr = `$${plan.primaryTotalUsd}`;
+    if (!llmReply.includes(primaryStr) && !llmReply.includes(altStr)) {
+      return false;
+    }
+  }
+  if (plan.options.some((o) => o.includesFreeBatteryInstallPedernales)) {
+    if (!/domicilio|instalaci[oó]n/i.test(llmReply) || !/gratis/i.test(llmReply)) {
+      return false;
+    }
+  }
+
+  return true;
 }
 
 export async function generateHermesReply(
   userText: string,
   history: ChatTurn[] = [],
-  options: { timeoutMs?: number } = {}
+  options: HermesReplyOptions = {}
 ): Promise<HermesResult> {
   const startedAt = Date.now();
-  const matches = searchCatalogMatches(userText, 7);
-  const catalogContext = formatCatalogContext(matches);
-  const keys = getNvidiaKeys();
-  const timeoutMs = options.timeoutMs ?? 2100;
+  const cleanUserText = (userText || "").trim();
+  const sessionId = (options.sessionId || `anon-${Date.now()}`).trim();
+  const channel: ChannelType = options.channel || "demo_web";
+  const shouldPersist = options.persist !== false;
+  const timeoutMs = options.timeoutMs ?? 4800;
 
-  if (keys.length === 0) {
-    const reply = buildDeterministicHermesReply(userText, matches);
-    return {
-      reply,
-      model: "hermes-catalog-rag-fast",
-      usedFallback: true,
-      latencyMs: Date.now() - startedAt,
-      matchedSkus: matches.map((m) => m.sku),
-      catalogSize: CATALOG.length,
-    };
+  // 1. Recuperar memoria persistente de cliente + últimos mensajes de BD
+  const [persistedCustomer, dbRecentMsgs] = await Promise.all([
+    shouldPersist ? getCustomer(sessionId) : Promise.resolve(null),
+    shouldPersist ? getRecentMessages(sessionId, 8) : Promise.resolve([]),
+  ]);
+
+  const combinedHistory: ChatTurn[] =
+    dbRecentMsgs.length > 0
+      ? dbRecentMsgs.map((m) => ({ role: m.role, content: m.content }))
+      : history;
+
+  const hydratedHistory = hydrateContextFromHistory(combinedHistory);
+
+  const persistedVehicle = persistedCustomer?.activeVehicle || hydratedHistory.vehicle;
+  const persistedCity = persistedCustomer?.city || hydratedHistory.city;
+  const persistedCustomerType = persistedCustomer?.customerType || hydratedHistory.customerType;
+
+  // 2. Plan determinístico con calculadora TypeScript + escudo anti-trolls
+  const plan = buildDeterministicQuotePlan({
+    userText: cleanUserText,
+    persistedVehicle,
+    persistedCity,
+    persistedCustomerType,
+    recentHistoryText: hydratedHistory.recentText,
+  });
+
+  // 3. Actualizar ficha fija del cliente en BD inmediatamente
+  let savedVehicle = plan.detectedVehicle;
+  let savedCity = plan.detectedCity;
+  let savedType = plan.detectedCustomerType;
+  if (shouldPersist) {
+    const updatedCustomer = await upsertCustomer({
+      phoneOrSession: sessionId,
+      name: options.customerName ?? undefined,
+      activeVehicle: plan.detectedVehicle ?? undefined,
+      city: plan.detectedCity ?? undefined,
+      customerType: plan.detectedCustomerType,
+    });
+    savedVehicle = updatedCustomer.activeVehicle;
+    savedCity = updatedCustomer.city;
+    savedType = updatedCustomer.customerType;
+
+    await insertMessage({
+      sessionId,
+      channel,
+      role: "user",
+      content: cleanUserText,
+      intentTag: plan.intentTag,
+    });
   }
 
-  const recentTurns = history
-    .slice(-4)
-    .filter((h) => h.content.trim().length > 0)
-    .map((h) => ({ role: h.role, content: h.content.slice(0, 400) }));
+  // 4. Casos de guardrail estricto / respuestas rápidas directas para CERO errores
+  const deterministicDirectIntents = new Set<HermesIntentTag>([
+    "pregunta_ilogica",
+    "producto_sin_stock",
+    "fuera_de_tema",
+    "consulta_precio_sin_vehiculo",
+    "saludo",
+  ]);
 
-  const userPrompt =
-    `Catálogo privado vigente (426/426 SKUs verificados con IVA):\n${catalogContext}\n\n` +
-    `Mensaje del cliente:\n${userText}\n\n` +
-    `Responde como Hermes en formato WhatsApp corto, cordial y preciso usando únicamente los precios PVP_IVA_INCLUDED del catálogo.`;
+  let finalReply = renderHumanDeterministicReply(plan);
+  let usedModel = "hermes-deterministic-ts";
+  let usedFallback = true;
 
-  // Try up to 2 rotated NVIDIA keys within strict budget (< 2.5s total)
-  for (let i = 0; i < Math.min(2, keys.length); i++) {
-    const apiKey = keys[i];
-    const remainingBudget = Math.max(800, timeoutMs - (Date.now() - startedAt));
-    try {
-      const resp = await fetch(NVIDIA_CHAT_URL, {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${apiKey}`,
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          model: HERMES_MODEL,
-          messages: [
-            { role: "system", content: HERMES_SYSTEM_PROMPT },
-            ...recentTurns,
-            { role: "user", content: userPrompt },
-          ],
-          temperature: 0.2,
-          max_tokens: 340,
-        }),
-        signal: AbortSignal.timeout(remainingBudget),
-      });
+  const keys = getNvidiaKeys();
+  if (!deterministicDirectIntents.has(plan.intentTag) && keys.length > 0 && plan.options.length > 0) {
+    const calcBlock = buildCalculatorPromptBlock(plan);
+    const recentTurns = combinedHistory
+      .slice(-4)
+      .filter((h) => h.content.trim().length > 0)
+      .map((h) => ({ role: h.role, content: h.content.slice(0, 350) }));
 
-      if (!resp.ok) continue;
-      const data = (await resp.json()) as {
-        choices?: Array<{ message?: { content?: string } }>;
-      };
-      const content = (data.choices?.[0]?.message?.content || "").trim();
-      if (content) {
-        return {
-          reply: content,
-          model: HERMES_MODEL,
-          usedFallback: false,
-          latencyMs: Date.now() - startedAt,
-          matchedSkus: matches.map((m) => m.sku),
-          catalogSize: CATALOG.length,
+    const userPrompt =
+      `${calcBlock}\n\n` +
+      `Mensaje actual del cliente:\n${cleanUserText}\n\n` +
+      `Redacta la respuesta de WhatsApp en 2 a 4 líneas naturales usando exactamente las cifras de [CALCULADORA EXACTA].`;
+
+    for (let i = 0; i < Math.min(2, keys.length); i++) {
+      const apiKey = keys[i];
+      const remainingBudget = Math.max(900, timeoutMs - (Date.now() - startedAt));
+      try {
+        const resp = await fetch(NVIDIA_CHAT_URL, {
+          method: "POST",
+          headers: {
+            Authorization: `Bearer ${apiKey}`,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            model: HERMES_MODEL,
+            messages: [
+              { role: "system", content: HERMES_SYSTEM_PROMPT },
+              ...recentTurns,
+              { role: "user", content: userPrompt },
+            ],
+            temperature: 0.25,
+            max_tokens: 260,
+          }),
+          signal: AbortSignal.timeout(remainingBudget),
+        });
+        if (!resp.ok) continue;
+        const data = (await resp.json()) as {
+          choices?: Array<{ message?: { content?: string } }>;
         };
+        const candidate = (data.choices?.[0]?.message?.content || "").trim();
+        if (validateLlmPricingIntegrity(candidate, plan)) {
+          finalReply = candidate;
+          usedModel = HERMES_MODEL;
+          usedFallback = false;
+          break;
+        }
+      } catch {
+        // Reintenta con la siguiente key o cae limpio al redactor determinístico TS
       }
-    } catch {
-      // Fall through cleanly to next key or deterministic <5ms catalog responder
     }
   }
 
+  const latencyMs = Date.now() - startedAt;
+  let assistantMessageId: number | null = null;
+
+  if (shouldPersist) {
+    const storedAssistant = await insertMessage({
+      sessionId,
+      channel,
+      role: "assistant",
+      content: finalReply,
+      skusUsed: plan.matchedSkus,
+      quotedTotalUsd: plan.primaryTotalUsd,
+      latencyMs,
+      intentTag: plan.intentTag,
+    });
+    assistantMessageId = storedAssistant.id;
+  }
+
   return {
-    reply: buildDeterministicHermesReply(userText, matches),
-    model: "hermes-catalog-rag-fast",
-    usedFallback: true,
-    latencyMs: Date.now() - startedAt,
-    matchedSkus: matches.map((m) => m.sku),
-    catalogSize: CATALOG.length,
+    reply: finalReply,
+    model: usedModel,
+    usedFallback,
+    latencyMs,
+    matchedSkus: plan.matchedSkus,
+    catalogSize: CATALOG_SIZE,
+    sessionId,
+    messageId: assistantMessageId,
+    activeVehicle: savedVehicle,
+    city: savedCity,
+    customerType: savedType,
+    quotedTotalUsd: plan.primaryTotalUsd,
+    intentTag: plan.intentTag,
+    dbStorageMode: getDbStorageMode(),
   };
 }

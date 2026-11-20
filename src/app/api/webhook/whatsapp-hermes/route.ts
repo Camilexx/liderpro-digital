@@ -2,6 +2,9 @@ import { NextRequest, NextResponse } from "next/server";
 import { META_CONFIG } from "@/data/metaConfig";
 import { generateHermesReply } from "@/lib/hermesEngine";
 
+export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
+
 // Deduplicación simple en memoria para evitar reintentos duplicados de Meta en instancias cálidas
 const processedIds = new Set<string>();
 
@@ -83,6 +86,7 @@ interface MetaChangeItem {
     from?: { id?: string; username?: string; name?: string };
     metadata?: { phone_number_id?: string; display_phone_number?: string };
     messages?: Array<{ id?: string; from?: string; type?: string; text?: { body?: string } }>;
+    contacts?: Array<{ wa_id?: string; profile?: { name?: string } }>;
   };
 }
 
@@ -93,10 +97,10 @@ interface MetaWebhookEntry {
 }
 
 /**
- * Webhook Omnicanal Meta Graph API v21.0:
+ * Webhook Omnicanal Meta Graph API v21.0 con memoria persistente Postgres:
  *  - object === "whatsapp_business_account": WhatsApp Línea 24/7 (+593 96 748 9002)
  *  - object === "instagram": Instagram DMs + Comentarios (respuesta pública + DM privado)
- *  - object === "page": Facebook Page Messenger + Comentarios en pauta/feed (respuesta pública + Private Reply con wa.me/593967489002)
+ *  - object === "page": Facebook Page Messenger + Comentarios en pauta/feed
  */
 export async function POST(req: NextRequest) {
   try {
@@ -122,7 +126,11 @@ export async function POST(req: NextRequest) {
           if (!senderId || !text) continue;
           if (!markProcessed(`ig_dm:${ev.message?.mid || senderId + text}`)) continue;
 
-          const hermes = await generateHermesReply(text);
+          const hermes = await generateHermesReply(text, [], {
+            sessionId: `ig:${senderId}`,
+            channel: "instagram",
+            timeoutMs: 4800,
+          });
           const dmText = `${hermes.reply}\n\n📲 Cierre directo 24/7 por WhatsApp: ${META_CONFIG.line247WaLink}`;
           await postMetaGraph("me/messages", igToken, {
             recipient: { id: senderId },
@@ -139,7 +147,12 @@ export async function POST(req: NextRequest) {
           if (!commentId || !text || (entryId && fromId === entryId)) continue;
           if (!markProcessed(`ig_comment:${commentId}`)) continue;
 
-          const hermes = await generateHermesReply(text);
+          const hermes = await generateHermesReply(text, [], {
+            sessionId: `ig:${fromId || commentId}`,
+            channel: "instagram",
+            customerName: v?.from?.username || null,
+            timeoutMs: 4800,
+          });
           await postMetaGraph(`${commentId}/replies`, igToken, {
             message: buildPublicCommentAck("Instagram"),
           });
@@ -162,7 +175,11 @@ export async function POST(req: NextRequest) {
           if (!senderId || !text) continue;
           if (!markProcessed(`fb_dm:${ev.message?.mid || senderId + text}`)) continue;
 
-          const hermes = await generateHermesReply(text);
+          const hermes = await generateHermesReply(text, [], {
+            sessionId: `fb:${senderId}`,
+            channel: "messenger",
+            timeoutMs: 4800,
+          });
           const dmText = `${hermes.reply}\n\n📲 Atención directa 24/7: ${META_CONFIG.line247WaLink}`;
           await postMetaGraph("me/messages", fbToken, {
             recipient: { id: senderId },
@@ -180,7 +197,12 @@ export async function POST(req: NextRequest) {
           if (!commentId || !text || (entryId && fromId === entryId)) continue;
           if (!markProcessed(`fb_comment:${commentId}`)) continue;
 
-          const hermes = await generateHermesReply(text);
+          const hermes = await generateHermesReply(text, [], {
+            sessionId: `fb:${fromId || commentId}`,
+            channel: "messenger",
+            customerName: v?.from?.name || null,
+            timeoutMs: 4800,
+          });
           await postMetaGraph(`${commentId}/comments`, fbToken, {
             message: buildPublicCommentAck("Facebook"),
           });
@@ -204,10 +226,22 @@ export async function POST(req: NextRequest) {
         if (displayPhone.endsWith(META_CONFIG.matrizDigits)) continue;
         if (META_CONFIG.phoneNumberId247 && phoneId && phoneId !== META_CONFIG.phoneNumberId247) continue;
 
+        const contactNameByWaId = new Map<string, string>();
+        for (const c of value?.contacts || []) {
+          if (c.wa_id && c.profile?.name) {
+            contactNameByWaId.set(c.wa_id, c.profile.name);
+          }
+        }
+
         for (const msg of value?.messages || []) {
           if (msg.type === "text" && msg.from && msg.text?.body) {
             if (msg.id && !markProcessed(`wa:${msg.id}`)) continue;
-            const hermes = await generateHermesReply(msg.text.body);
+            const hermes = await generateHermesReply(msg.text.body, [], {
+              sessionId: `wa:${msg.from}`,
+              channel: "whatsapp",
+              customerName: contactNameByWaId.get(msg.from) || null,
+              timeoutMs: 4800,
+            });
             await sendMetaWhatsAppReply(phoneId || META_CONFIG.phoneNumberId247, msg.from, hermes.reply);
           }
         }

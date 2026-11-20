@@ -6,6 +6,11 @@ import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import "./globals.css";
 
+const SITE_URL = "https://www.liderpropedernales.com";
+const META_DOMAIN_VERIFICATION =
+  process.env.NEXT_PUBLIC_FACEBOOK_DOMAIN_VERIFICATION ||
+  "bo4ijpc9x02pok57gb9d9d8k6xf5p8";
+
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
@@ -14,9 +19,14 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://liderpro-digital.vercel.app"),
+  metadataBase: new URL(SITE_URL),
   alternates: {
     canonical: "./",
+  },
+  verification: {
+    other: {
+      "facebook-domain-verification": META_DOMAIN_VERIFICATION,
+    },
   },
   title: {
     default: "LiderPro Pedernales — Distribuidor Autorizado Multimarca | Ecuador",
@@ -54,7 +64,7 @@ export const metadata: Metadata = {
     title: "LiderPro Ecuador — Distribuidor Autorizado Multimarca",
     description:
       "Baterías Ecuador, Bosch, Mannol, Aroil, Motul, Mobil, Valvoline, Amalie y Advance. Despacho nacional diario a las 24 provincias desde nuestra Bodega Matriz en Pedernales.",
-    url: "https://liderpro-digital.vercel.app",
+    url: SITE_URL,
     siteName: "LiderPro Ecuador",
     locale: "es_EC",
     type: "website",
@@ -81,14 +91,14 @@ const structuredData = {
   "@graph": [
     {
       "@type": "AutoPartsStore",
-      "@id": "https://liderpro-digital.vercel.app/#organization",
+      "@id": `${SITE_URL}/#organization`,
       "name": "LiderPro Ecuador",
       "alternateName": "LiderPro Productos Automotrices",
       "description":
         "Distribuidor Autorizado Multimarca de lubricantes, baterías, filtros y repuestos automotrices con Sede Central y Bodega Matriz en Pedernales, Manabí, y cobertura logística a las 24 provincias del Ecuador con facturación electrónica SRI.",
-      "url": "https://liderpro-digital.vercel.app",
-      "logo": "https://liderpro-digital.vercel.app/images/logo.png",
-      "image": "https://liderpro-digital.vercel.app/images/hero/local-pedernales.jpg",
+      "url": SITE_URL,
+      "logo": `${SITE_URL}/images/logo.png`,
+      "image": `${SITE_URL}/images/hero/local-pedernales.jpg`,
       "telephone": ["+593967489002", "+593983893231"],
       "priceRange": "$$",
       "currenciesAccepted": "USD",
@@ -139,15 +149,15 @@ const structuredData = {
     },
     {
       "@type": "WebSite",
-      "@id": "https://liderpro-digital.vercel.app/#website",
-      "url": "https://liderpro-digital.vercel.app",
+      "@id": `${SITE_URL}/#website`,
+      "url": SITE_URL,
       "name": "LiderPro Ecuador — Catálogo Oficial Multimarca",
       "publisher": {
-        "@id": "https://liderpro-digital.vercel.app/#organization",
+        "@id": `${SITE_URL}/#organization`,
       },
       "potentialAction": {
         "@type": "SearchAction",
-        "target": "https://liderpro-digital.vercel.app/encuentra-tu-producto?q={search_term_string}",
+        "target": `${SITE_URL}/encuentra-tu-producto?q={search_term_string}`,
         "query-input": "required name=search_term_string",
       },
     },

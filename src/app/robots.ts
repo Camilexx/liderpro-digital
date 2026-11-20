@@ -7,6 +7,6 @@ export default function Robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/api/"],
     },
-    sitemap: "https://liderpro-digital.vercel.app/sitemap.xml",
+    sitemap: "https://www.liderpropedernales.com/sitemap.xml",
   };
 }

@@ -3,7 +3,7 @@ import { PRODUCTS } from "@/data/products";
 import { EDUCATIONAL_ARTICLES } from "@/data/articles";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://liderpro-digital.vercel.app";
+  const baseUrl = "https://www.liderpropedernales.com";
 
   const staticRoutes = [
     "",

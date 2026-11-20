@@ -1,13 +1,27 @@
 import crypto from "node:crypto";
 import { NextRequest, NextResponse } from "next/server";
-import { generateAndSaveWeeklyAudit } from "@/lib/hermesDb";
+import {
+  generateAndSaveWeeklyAudit,
+  getAdminDashboardSnapshot,
+  updateOrderStatus,
+  type OrderStatus,
+} from "@/lib/hermesDb";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
+function safeEqual(aStr: string, bStr: string): boolean {
+  const a = Buffer.from(aStr, "utf8");
+  const b = Buffer.from(bStr, "utf8");
+  if (a.length !== b.length) return false;
+  return crypto.timingSafeEqual(a, b);
+}
+
 function isAuthorizedAdmin(req: NextRequest): { configured: boolean; authorized: boolean } {
-  const expectedKey = (process.env.HERMES_ADMIN_KEY || "").trim();
-  if (!expectedKey) {
+  const adminKey = (process.env.HERMES_ADMIN_KEY || "").trim();
+  const cronSecret = (process.env.CRON_SECRET || "").trim();
+
+  if (!adminKey && !cronSecret) {
     return { configured: false, authorized: false };
   }
 
@@ -22,36 +36,54 @@ function isAuthorizedAdmin(req: NextRequest): { configured: boolean; authorized:
     return { configured: true, authorized: false };
   }
 
-  const a = Buffer.from(expectedKey, "utf8");
-  const b = Buffer.from(candidate, "utf8");
-  if (a.length !== b.length) {
-    return { configured: true, authorized: false };
+  if (adminKey && safeEqual(adminKey, candidate)) {
+    return { configured: true, authorized: true };
   }
-  return { configured: true, authorized: crypto.timingSafeEqual(a, b) };
+  if (cronSecret && bearerKey && safeEqual(cronSecret, bearerKey)) {
+    return { configured: true, authorized: true };
+  }
+
+  return { configured: true, authorized: false };
 }
 
-async function handleAuditRequest(req: NextRequest, daysParam: number) {
-  const auth = isAuthorizedAdmin(req);
-  if (!auth.configured) {
+function authErrorResponse(configured: boolean) {
+  if (!configured) {
     return NextResponse.json(
       { ok: false, error: "HERMES_ADMIN_KEY no está configurada en las variables de entorno del servidor." },
       { status: 503 }
     );
   }
-  if (!auth.authorized) {
-    return NextResponse.json({ ok: false, error: "No autorizado." }, { status: 401 });
-  }
-
-  const audit = await generateAndSaveWeeklyAudit(daysParam);
-  return NextResponse.json({ ok: true, audit }, { status: 200 });
+  return NextResponse.json({ ok: false, error: "No autorizado." }, { status: 401 });
 }
 
 export async function GET(req: NextRequest) {
   try {
+    const auth = isAuthorizedAdmin(req);
+    if (!auth.configured || !auth.authorized) {
+      return authErrorResponse(auth.configured);
+    }
+
     const { searchParams } = new URL(req.url);
     const daysRaw = Number(searchParams.get("days") || "7");
     const days = Number.isFinite(daysRaw) ? daysRaw : 7;
-    return await handleAuditRequest(req, days);
+    const view = (searchParams.get("view") || "").toLowerCase();
+
+    if (view === "dashboard") {
+      const channel = (searchParams.get("channel") || "all").toLowerCase();
+      const onlyFix = searchParams.get("onlyFix") === "1" || searchParams.get("onlyFix") === "true";
+      const dashboard = await getAdminDashboardSnapshot({ channel, onlyFix, days });
+      return NextResponse.json({ ok: true, dashboard }, { status: 200 });
+    }
+
+    const notifyTelegram =
+      searchParams.get("cron") === "1" ||
+      searchParams.get("notify") === "1" ||
+      req.headers.get("x-vercel-cron") === "1";
+
+    const { report, telegramSent } = await generateAndSaveWeeklyAudit(days, {
+      notifyTelegram,
+    });
+    return NextResponse.json({ ok: true, audit: report, telegramSent }, { status: 200 });
   } catch {
     return NextResponse.json(
       { ok: false, error: "No se pudo generar la auditoría semanal de Hermes." },
@@ -62,19 +94,66 @@ export async function GET(req: NextRequest) {
 
 export async function POST(req: NextRequest) {
   try {
+    const auth = isAuthorizedAdmin(req);
+    if (!auth.configured || !auth.authorized) {
+      return authErrorResponse(auth.configured);
+    }
+
     let days = 7;
+    let notifyTelegram = true;
     try {
-      const body = (await req.json()) as { days?: number };
+      const body = (await req.json()) as { days?: number; notifyTelegram?: boolean };
       if (typeof body?.days === "number" && Number.isFinite(body.days)) {
         days = body.days;
       }
+      if (typeof body?.notifyTelegram === "boolean") {
+        notifyTelegram = body.notifyTelegram;
+      }
     } catch {
-      // Body vacío permitido, usa default 7 días
+      // Body vacío usa valores por defecto
     }
-    return await handleAuditRequest(req, days);
+
+    const { report, telegramSent } = await generateAndSaveWeeklyAudit(days, {
+      notifyTelegram,
+    });
+    return NextResponse.json({ ok: true, audit: report, telegramSent }, { status: 200 });
   } catch {
     return NextResponse.json(
       { ok: false, error: "No se pudo generar la auditoría semanal de Hermes." },
+      { status: 500 }
+    );
+  }
+}
+
+export async function PATCH(req: NextRequest) {
+  try {
+    const auth = isAuthorizedAdmin(req);
+    if (!auth.configured || !auth.authorized) {
+      return authErrorResponse(auth.configured);
+    }
+
+    const body = (await req.json()) as { orderId?: number | string; status?: string };
+    const orderId = Number(body.orderId);
+    const validStatuses: OrderStatus[] = ["pending_dispatch", "dispatched", "completed", "cancelled"];
+    const nextStatus = validStatuses.includes(body.status as OrderStatus)
+      ? (body.status as OrderStatus)
+      : null;
+
+    if (!Number.isFinite(orderId) || orderId <= 0 || !nextStatus) {
+      return NextResponse.json(
+        { ok: false, error: "Se requieren 'orderId' y 'status' válido." },
+        { status: 400 }
+      );
+    }
+
+    const res = await updateOrderStatus(orderId, nextStatus);
+    if (!res.ok) {
+      return NextResponse.json({ ok: false, error: "Pedido no encontrado." }, { status: 404 });
+    }
+    return NextResponse.json({ ok: true, order: res.order }, { status: 200 });
+  } catch {
+    return NextResponse.json(
+      { ok: false, error: "No se pudo actualizar el estado del pedido." },
       { status: 500 }
     );
   }

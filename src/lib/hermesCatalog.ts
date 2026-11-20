@@ -1,6 +1,11 @@
 import privatePricing from "@/data/privatePricing.server.json";
 import { VEHICLE_DATABASE, type VehicleMake, type VehicleModelItem } from "@/data/vehicles";
-import type { CustomerType, VehicleProfile } from "@/lib/hermesDb";
+import type {
+  CustomerType,
+  LastQuoteSnapshot,
+  QuotedOptionSnapshot,
+  VehicleProfile,
+} from "@/lib/hermesDb";
 
 export interface CatalogPricingItem {
   sku: string;
@@ -24,6 +29,9 @@ export type HermesIntentTag =
   | "bateria_y_combo"
   | "combo_lubricante"
   | "filtro_refrigerante_aditivo"
+  | "cierre_pedido_pendiente_datos"
+  | "pedido_confirmado"
+  | "info_operativa"
   | "envio_delivery"
   | "b2b_flota"
   | "producto_sin_stock"
@@ -32,19 +40,17 @@ export type HermesIntentTag =
   | "saludo"
   | "general";
 
-export interface QuoteOption {
-  label: string;
-  items: Array<{
-    sku: string;
-    name: string;
-    brand?: string;
-    presentation?: string;
-    unitPriceIva: number;
-  }>;
-  totalUsd: number;
-  includesMannolGift: boolean;
-  includesFreeBatteryInstallPedernales: boolean;
+export interface QuoteOption extends QuotedOptionSnapshot {
   qualifiesFreeShipping: boolean;
+}
+
+export interface OrderCaptureExtraction {
+  isConfirmingOrder: boolean;
+  selectedOptionIndex: number | null;
+  customerName: string | null;
+  deliveryAddress: string | null;
+  paymentMethod: string | null;
+  missingFields: Array<"Nombre" | "Dirección/Referencia" | "Forma de pago">;
 }
 
 export interface DeterministicQuotePlan {
@@ -61,6 +67,8 @@ export interface DeterministicQuotePlan {
   matchedSkus: string[];
   primaryTotalUsd: number | null;
   shippingDeltaUsd: number | null;
+  orderCapture: OrderCaptureExtraction | null;
+  confirmedOption: QuotedOptionSnapshot | null;
 }
 
 const CATALOG = privatePricing as CatalogPricingItem[];
@@ -71,10 +79,44 @@ for (const item of CATALOG) {
 
 export const FREE_SHIPPING_THRESHOLD_USD = 35;
 
-/**
- * Redondeo comercial oficial hacia arriba de LíderPro Pedernales:
- * .00 / .50 / .90 / siguiente entero.
- */
+const HUMAN_PRODUCT_NAMES: Record<string, string> = {
+  "COMBO-MANNOL-1A": "Combo MANNOL Classic 10W-40 (galón) + filtro Advance + Cockpit Care con esponja de regalo",
+  "COMBO-MANNOL-1B": "Combo MANNOL Energy 5W-30 sintético (galón) + filtro Advance + Cockpit Care con esponja de regalo",
+  "COMBO-MANNOL-1C": "Combo MANNOL Safari 20W-50 (galón) + filtro Advance + Cockpit Care con esponja de regalo",
+  "COMBO-MANNOL-2A": "Combo MANNOL TS-4 15W-40 (7 litros) + filtro Advance + Cockpit Care con esponja de regalo",
+  "COMBO-MANNOL-2B": "Combo MANNOL Diesel Turbo 5W-40 sintético (7 litros) + filtro Advance + Cockpit Care con esponja de regalo",
+  "COMBO-MANNOL-2C": "Combo MANNOL Classic 10W-40 (6 litros) + filtro Advance + Cockpit Care con esponja de regalo",
+  "COMBO-MANNOL-3A": "Combo MANNOL TS-4 15W-40 (caneca 20L) + filtro pesado + Cockpit Care con esponja de regalo",
+  "COMBO-MANNOL-3B": "Combo MANNOL TS-5 10W-40 (caneca 20L) + filtro pesado + Cockpit Care con esponja de regalo",
+  "COMBO-MANNOL-3C": "Combo MANNOL Hydro HV ISO 68 (caneca 20L) + complemento + Cockpit Care con esponja de regalo",
+  "03027-HP": "Batería Ecuador Grupo 27 High Power 95 Amp (Tapa Roja)",
+  "03027-HP-I": "Batería Ecuador Grupo 27 High Power I 95 Amp (Tapa Roja)",
+  "02727HPS4": "Batería Bosch Grupo 27 S4 88 Amp",
+  "02727HPIS4": "Batería Bosch Grupo 27 S4 85 Amp",
+  "03024-HP-I": "Batería Ecuador Grupo 24 High Power 85 Amp (Tapa Roja)",
+  "03024-FE": "Batería Ecuador Grupo 24 Full Equipo 65 Amp",
+  "02724HPIS4": "Batería Bosch Grupo 24 S4 64 Amp",
+  "02724HPS4": "Batería Bosch Grupo 24 S4 64 Amp",
+  "03034-FE": "Batería Ecuador Grupo 34 Full Equipo 65 Amp",
+  "03042-FE": "Batería Ecuador Grupo 42 Full Equipo 55 Amp",
+  "02742HPIS4": "Batería Bosch Grupo 42 S4 55 Amp",
+  "03031-SHD": "Batería Ecuador Grupo 31 Super Heavy Duty 105 Amp",
+  "030N100-SHD-I": "Batería Ecuador N100 Super Heavy Duty 104 Amp",
+  "030N150-SHD": "Batería Ecuador N150 Super Heavy Duty 160 Amp",
+};
+
+export function formatHumanProductName(sku: string, rawName: string): string {
+  const mapped = HUMAN_PRODUCT_NAMES[sku.toUpperCase()];
+  if (mapped) return mapped;
+  return rawName
+    .replace(/[¡!]/g, "")
+    .replace(/\s*—\s*/g, " ")
+    .replace(/\s*\(HEREDADO\)/gi, "")
+    .replace(/\s{2,}/g, " ")
+    .trim();
+}
+
+/** Redondeo comercial oficial hacia arriba: .00 / .50 / .90 / siguiente entero */
 export function commercialCeil(value: number): number {
   if (!Number.isFinite(value) || value <= 0) return 0;
   const cents = Math.round(value * 100);
@@ -218,7 +260,7 @@ const VEHICLE_ALIAS_RULES: VehicleAliasRule[] = [
 ];
 
 const UNMAPPED_VEHICLE_REGEX =
-  /\b(prado|land\s*cruiser|rush|agya|raize|captiva|groove|trailblazer|blazer|sorento|sonata|elantra|creta|santa\s*fe|tucson\s*ix|changan|cs35|cs55|geely|coolray|dfsk|glory|l200|montero|asx|outlander|kicks|note|pathfinder|kwid|koleos|cx[-\s]?30|tiggo\s*[3478]|arr[iz]zo|jetour\s*dashing)\b/i;
+  /\b(prado|land\s*cruiser|rush|agya|raize|captiva|groove|trailblazer|blazer|sorento|sonata|elantra|creta|santa\s*fe|tucson\s*ix|changan|cs35|cs55|geely|coolray|dfsk|glory|l200|montero|asx|outlander|kicks|note|pathfinder|kwid|koleos|cx[-\s]?30|tiggo\s*[3478]|arrizzo|jetour\s*dashing)\b/i;
 
 function findVehicleDbEntry(makeHint: string, modelKeyword: string): { make: string; model: VehicleModelItem } | null {
   const mNorm = normalizeText(makeHint);
@@ -254,8 +296,6 @@ export function extractVehicleFromText(text: string): {
   matchedEntry: { make: string; model: VehicleModelItem } | null;
 } {
   const norm = normalizeText(text);
-
-  // Año 1995 - 2026 (evita confundir 10w40, 20w50, etc.)
   const yearMatch = norm.match(/\b(199\d|20[0-2]\d)\b/);
   const year = yearMatch ? Number(yearMatch[1]) : undefined;
 
@@ -298,7 +338,6 @@ export function extractVehicleFromText(text: string): {
     };
   }
 
-  // Si solo dio año o combustible para actualizar un vehículo previo
   if (year || fuel || engine) {
     return {
       profile: {
@@ -318,7 +357,6 @@ export function mergeVehicleProfiles(
   incoming: VehicleProfile | null
 ): VehicleProfile | null {
   if (!incoming) return previous;
-  // Si el usuario nombró explícitamente otro modelo distinto, reemplazamos la ficha
   if (incoming.model && previous?.model && incoming.model !== previous.model) {
     return incoming;
   }
@@ -339,7 +377,6 @@ export function mergeVehicleProfiles(
 }
 
 function detectOutOfStockRequest(norm: string): string | null {
-  // Excluir aditivos/líquidos que SÍ vendemos antes de marcar fuera de stock
   const isCleaningSpray = /\b(limpiador|aditivo|spray|liquido|liquido de frenos)\b/.test(norm);
   if (!isCleaningSpray && /\b(llantas?|neumaticos?|cauchos?|rin(?:es)?\s*\d*|aros?)\b/.test(norm)) {
     return "llantas / neumáticos";
@@ -367,16 +404,16 @@ function detectOutOfStockRequest(norm: string): string | null {
 
 function detectIllogicalQuestion(norm: string): string | null {
   if (/aceite\s+(de\s+)?(cocina|comestible|vegetal|oliva|girasol|soya|maiz|palma|frituras?)/.test(norm) || /manteca/.test(norm)) {
-    return "El aceite de cocina pierde toda película lubricante sobre los 90 °C, se carboniza y funde cojinetes y anillos en minutos.";
+    return "El aceite de cocina pierde su película lubricante sobre los 90 °C, se carboniza y funde cojinetes y anillos en minutos.";
   }
   if (/(mezclar|echar|poner|usar).*(agua\s+(normal|de\s+llave|salada)|coca\s?cola|cerveza|jugo|vinagre).*(motor|aceite|radiador|bateria)/.test(norm)) {
     return "Mezclar líquidos domésticos con lubricantes o refrigerantes genera lodos, cavitación y corrosión interna severa.";
   }
   if (/(gasolina.*(en\s+motor\s+diesel|carro\s+diesel)|diesel.*(en\s+carro\s+(a\s+)?gasolina|motor\s+gasolina))/.test(norm)) {
-    return "Cruzar gasolina y diésel daña de inmediato inyectores, bomba de alta presión y detonación de cámara.";
+    return "Cruzar gasolina y diésel daña de inmediato inyectores, bomba de alta presión y cámara.";
   }
   if (/(orina|acido\s+de\s+limon|sal).*bateria/.test(norm)) {
-    return "Agregar soluciones caseras destruye las placas de plomo y sulfata irreversiblemente las celdas de la batería.";
+    return "Agregar soluciones caseras destruye las placas de plomo y sulfata irreversiblemente la batería.";
   }
   return null;
 }
@@ -399,7 +436,7 @@ function buildSingleItemQuoteOption(
     items: [
       {
         sku: item.sku,
-        name: item.name,
+        name: formatHumanProductName(item.sku, item.name),
         brand: item.brand,
         presentation: item.presentation,
         unitPriceIva: price,
@@ -434,14 +471,14 @@ function pickMaxTwoLubricantCombos(
   } else if (isDiesel) {
     skus = ["COMBO-MANNOL-2A", "COMBO-MANNOL-2B"];
     labels = [
-      "Opción 1 (Trabajo Diésel 15W-40 Semisintético/Mineral)",
+      "Opción 1 (Trabajo Diésel 15W-40 Semisintético)",
       "Opción 2 (Full Sintético 5W-40 Turbo Diésel)",
     ];
   } else if (vehicle?.year && vehicle.year <= 2012) {
     skus = ["COMBO-MANNOL-1A", "COMBO-MANNOL-1C"];
     labels = [
       "Opción 1 (Semisintético 10W-40)",
-      "Opción 2 (Alto Kilometraje / Mineral 20W-50)",
+      "Opción 2 (Alto Kilometraje 20W-50)",
     ];
   } else {
     skus = ["COMBO-MANNOL-1A", "COMBO-MANNOL-1B"];
@@ -458,29 +495,75 @@ function pickMaxTwoLubricantCombos(
     .filter((x): x is QuoteOption => x !== null);
 }
 
+type BatterySegment = "heavy_commercial" | "pickup_4x4_diesel_large_suv" | "compact_sedan";
+
+function classifyBatterySegment(
+  vehicle: VehicleProfile | null,
+  customerType: CustomerType,
+  norm: string
+): BatterySegment {
+  const combined = normalizeText(`${formatVehicleLabel(vehicle)} ${norm}`);
+
+  if (
+    customerType === "camaronera" ||
+    /\b(hino|dutro|serie\s*300|serie\s*500|nhr|npr|nqr|ftr|fvr|hfc|camion|furgon|camaronera|maquinaria|caterpillar|cummins|perkins|yanmar|bomba|grupo\s*31|n100|n150|4d|8d)\b/.test(
+      combined
+    )
+  ) {
+    return "heavy_commercial";
+  }
+
+  if (
+    vehicle?.fuel === "diésel" ||
+    /\b(d-?max|hilux|fortuner|frontier|np300|navara|bt-?50|ranger|f-?150|l200|montero|prado|land\s*cruiser|sorento|santa\s*fe|wingle|poer|rich\s*6|amarok|h-?100|porter|4x4|pickup|camioneta|suv\s*grande|diesel|turbo\s*diesel)\b/.test(
+      combined
+    )
+  ) {
+    return "pickup_4x4_diesel_large_suv";
+  }
+
+  return "compact_sedan";
+}
+
 function pickMaxTwoBatteries(
   vehicle: VehicleProfile | null,
   matchedEntry: { make: string; model: VehicleModelItem } | null,
   city: string | null,
+  customerType: CustomerType,
   norm: string
 ): QuoteOption[] {
-  const recSkus = (matchedEntry?.model.recommendedCategories.baterias || []).filter((s) => s !== "ECOVLBAT");
   const isPedernales = !city || normalizeText(city) === "pedernales";
+  const segment = classifyBatterySegment(vehicle, customerType, norm);
 
   let candidateSkus: string[] = [];
-  if (recSkus.length > 0) {
-    const ecBat = recSkus.find((s) => s.startsWith("030") && BY_SKU.has(s));
-    const boschBat = recSkus.find((s) => !s.startsWith("030") && BY_SKU.has(s));
-    if (ecBat) candidateSkus.push(ecBat);
-    if (boschBat && boschBat !== ecBat) candidateSkus.push(boschBat);
-  }
 
-  if (candidateSkus.length === 0) {
-    const isSmallCar =
-      /yaris|picanto|grand i10|swift|jimny|spark|aveo|sail|rio|accent/.test(
-        normalizeText(formatVehicleLabel(vehicle) + " " + norm)
+  if (segment === "heavy_commercial") {
+    // Camiones / Maquinaria / Camaroneras: Grupo 31 / N100 / N150 Heavy Duty
+    candidateSkus = /\b(n150|160\s*amp|8d|4d)\b/.test(norm)
+      ? ["030N150-SHD", "030N100-SHD-I"]
+      : ["03031-SHD", "030N100-SHD-I"];
+  } else if (segment === "pickup_4x4_diesel_large_suv") {
+    // Pickups / 4x4 Diésel / SUVs grandes: ESTRICTAMENTE 85-95 Amp (Grupo 27 o mínimo 24 High Power 85A), NUNCA 64-65 Amp
+    const wantsGroup24Hp = /\bgrupo\s*24\b|\b24\s*hp\b/.test(norm);
+    candidateSkus = wantsGroup24Hp
+      ? ["03024-HP-I", "02727HPIS4"]
+      : ["03027-HP", "02727HPS4"];
+  } else {
+    // Autos sedán / compactos gasolina (55-65 Amp)
+    const recSkus = (matchedEntry?.model.recommendedCategories.baterias || []).filter((s) => s !== "ECOVLBAT");
+    const smallPreferred = recSkus.filter((s) =>
+      ["03034-FE", "03042-FE", "03024-FE", "02742HPIS4", "02724HPS4", "02724HPIS4", "02734HPS4"].includes(s)
+    );
+    const ecBat = smallPreferred.find((s) => s.startsWith("030") && BY_SKU.has(s));
+    const boschBat = smallPreferred.find((s) => !s.startsWith("030") && BY_SKU.has(s));
+    if (ecBat) candidateSkus.push(ecBat);
+    if (boschBat) candidateSkus.push(boschBat);
+    if (candidateSkus.length < 2) {
+      const isCompact42 = /\b(aveo|sail|spark|corsa|picanto|rio|accent|grand\s*i10|yaris|swift|onix)\b/.test(
+        normalizeText(`${formatVehicleLabel(vehicle)} ${norm}`)
       );
-    candidateSkus = isSmallCar ? ["03034-FE", "02742HPIS4"] : ["03024-FE", "02724HPIS4"];
+      candidateSkus = isCompact42 ? ["03034-FE", "02742HPIS4"] : ["03024-FE", "02724HPS4"];
+    }
   }
 
   return candidateSkus
@@ -500,7 +583,13 @@ function searchFreeformCatalog(query: string, limit = 2): CatalogPricingItem[] {
   const qNorm = normalizeText(query);
   const tokens = qNorm
     .split(/[^a-z0-9.-]+/)
-    .filter((t) => t.length >= 2 && !["para", "con", "del", "las", "los", "que", "por", "como", "tienen", "precio", "cuanto", "vale", "cuesta"].includes(t));
+    .filter(
+      (t) =>
+        t.length >= 2 &&
+        !["para", "con", "del", "las", "los", "que", "por", "como", "tienen", "precio", "cuanto", "vale", "cuesta"].includes(
+          t
+        )
+    );
 
   const scored: Array<{ score: number; item: CatalogPricingItem }> = [];
   for (const item of CATALOG) {
@@ -517,14 +606,106 @@ function searchFreeformCatalog(query: string, limit = 2): CatalogPricingItem[] {
   return scored.slice(0, limit).map((s) => s.item);
 }
 
+export function extractOrderDetailsFromText(
+  userText: string,
+  lastQuote: LastQuoteSnapshot | null
+): OrderCaptureExtraction | null {
+  const qNorm = normalizeText(userText);
+  const hasPendingOption =
+    typeof lastQuote?.selectedOptionIndex === "number" && lastQuote.selectedOptionIndex >= 0;
+
+  const confirmRegex =
+    /\b(mandame|enviame|envia|despachame|quiero la|me quedo con|tomo la|confirmo|acept[oa]|perfecto|listo|agendame|traeme|pido la|elijo la)\b/i;
+  const optionExplicitRegex =
+    /\b(opcion\s*[12]|primera\s+opcion|segunda\s+opcion|la\s+1\b|la\s+2\b|el\s+primero|el\s+segundo|semisintetico|sintetico|bateria\s+ecuador|bateria\s+bosch)\b/i;
+
+  const isConfirming = confirmRegex.test(qNorm) || (Boolean(lastQuote?.options?.length) && optionExplicitRegex.test(qNorm));
+
+  // Extraer nombre, dirección y forma de pago
+  let customerName: string | null = null;
+  const nameMatch = userText.match(
+    /(?:soy|me llamo|mi nombre es|a nombre de|nombre\s*:?)\s+([A-ZÁÉÍÓÚÑa-záéíóúñ]+(?:\s+[A-ZÁÉÍÓÚÑa-záéíóúñ]+){0,2})/i
+  );
+  if (nameMatch?.[1]) {
+    customerName = nameMatch[1]
+      .replace(/\b(y|con|en|por|para|pago|transferencia|efectivo)\b.*$/i, "")
+      .trim();
+  }
+
+  let deliveryAddress: string | null = null;
+  const addrMatch = userText.match(
+    /(?:en la|a la|en el|al sector|direccion\s*:?|calle|avenida|av\.?|barrio|sector|cdla\.?|ciudadela|frente a|km\s*\d+)\s+([^,;\n]{4,90})/i
+  );
+  if (addrMatch?.[0]) {
+    deliveryAddress = addrMatch[0]
+      .replace(/^(a la|en la|en el)\s+/i, "")
+      .replace(/\b(pago\s+(en|por|con)|soy\s+).*$/i, "")
+      .trim();
+  }
+
+  let paymentMethod: string | null = null;
+  if (/transferencia/i.test(qNorm)) {
+    const bankMatch = userText.match(/(transferencia(?:\s+(?:a|al|por|en))?(?:\s+banco)?\s+(?:pichincha|guayaquil|pac[ií]fico|produbanco))/i);
+    paymentMethod = bankMatch ? bankMatch[1].trim() : "Transferencia bancaria";
+  } else if (/efectivo|contra\s*entrega|en\s+mano/i.test(qNorm)) {
+    paymentMethod = "Efectivo contra entrega";
+  } else if (/tarjeta|deuna|de una/i.test(qNorm)) {
+    paymentMethod = /deuna|de una/i.test(qNorm) ? "Deuna / Transferencia" : "Tarjeta / Transferencia";
+  }
+
+  const providedOrderFields = Boolean(customerName || deliveryAddress || paymentMethod);
+  if (!isConfirming && !(hasPendingOption && providedOrderFields)) {
+    return null;
+  }
+
+  if (!lastQuote || !Array.isArray(lastQuote.options) || lastQuote.options.length === 0) {
+    return null;
+  }
+
+  let selectedIdx: number | null =
+    typeof lastQuote.selectedOptionIndex === "number" ? lastQuote.selectedOptionIndex : null;
+
+  if (/\b(opcion\s*2|segunda|la\s*2|el\s*segundo|sintetico|bosch)\b/.test(qNorm) && lastQuote.options.length > 1) {
+    selectedIdx = 1;
+  } else if (/\b(opcion\s*1|primera|la\s*1|el\s*primero|semisintetico|ecuador)\b/.test(qNorm)) {
+    selectedIdx = 0;
+  } else if (selectedIdx === null && lastQuote.options.length === 1) {
+    selectedIdx = 0;
+  } else if (selectedIdx === null && isConfirming) {
+    selectedIdx = 0;
+  }
+
+  const missingFields: OrderCaptureExtraction["missingFields"] = [];
+  if (!customerName) missingFields.push("Nombre");
+  if (!deliveryAddress) missingFields.push("Dirección/Referencia");
+  if (!paymentMethod) missingFields.push("Forma de pago");
+
+  return {
+    isConfirmingOrder: true,
+    selectedOptionIndex: selectedIdx,
+    customerName,
+    deliveryAddress,
+    paymentMethod,
+    missingFields,
+  };
+}
+
 export function buildDeterministicQuotePlan(params: {
   userText: string;
   persistedVehicle: VehicleProfile | null;
   persistedCity: string | null;
   persistedCustomerType: CustomerType;
+  persistedLastQuote: LastQuoteSnapshot | null;
   recentHistoryText?: string;
 }): DeterministicQuotePlan {
-  const { userText, persistedVehicle, persistedCity, persistedCustomerType, recentHistoryText = "" } = params;
+  const {
+    userText,
+    persistedVehicle,
+    persistedCity,
+    persistedCustomerType,
+    persistedLastQuote,
+    recentHistoryText = "",
+  } = params;
   const qNorm = normalizeText(userText);
 
   const cityFound = extractCityFromText(userText);
@@ -538,7 +719,46 @@ export function buildDeterministicQuotePlan(params: {
   const hasKnownVehicle = Boolean(effectiveVehicle?.model || effectiveVehicle?.unmappedLabel);
   const hasAutoTerm =
     hasKnownVehicle ||
-    /\b(aceite|lubricante|bateria|filtro|refrigerante|coolant|aditivo|combo|mannol|bosch|ecuador|motor|carro|camioneta|vehiculo|auto|moto|diesel|gasolina|viscosidad|10w|5w|15w|20w|envio|domicilio|pedernales|sri|factura)\b/.test(qNorm);
+    /\b(aceite|lubricante|bateria|filtro|refrigerante|coolant|aditivo|combo|mannol|bosch|ecuador|motor|carro|camioneta|vehiculo|auto|moto|diesel|gasolina|viscosidad|10w|5w|15w|20w|envio|domicilio|pedernales|sri|factura|pago|transferencia|efectivo)\b/.test(
+      qNorm
+    );
+
+  // 0. Detección prioritaria de confirmación / cierre de venta sobre la cotización previa
+  const orderCapture = extractOrderDetailsFromText(userText, persistedLastQuote);
+  if (orderCapture && persistedLastQuote) {
+    const idx = Math.max(0, Math.min(persistedLastQuote.options.length - 1, orderCapture.selectedOptionIndex ?? 0));
+    const chosen = persistedLastQuote.options[idx];
+    if (orderCapture.missingFields.length === 0) {
+      return {
+        intentTag: "pedido_confirmado",
+        needsVehicleDetails: false,
+        detectedVehicle: effectiveVehicle,
+        matchedModelEntry: effectiveDbEntry,
+        detectedCity,
+        detectedCustomerType,
+        options: [{ ...chosen, qualifiesFreeShipping: chosen.totalUsd >= FREE_SHIPPING_THRESHOLD_USD }],
+        matchedSkus: chosen.items.map((i) => i.sku),
+        primaryTotalUsd: chosen.totalUsd,
+        shippingDeltaUsd: null,
+        orderCapture,
+        confirmedOption: chosen,
+      };
+    }
+    return {
+      intentTag: "cierre_pedido_pendiente_datos",
+      needsVehicleDetails: false,
+      detectedVehicle: effectiveVehicle,
+      matchedModelEntry: effectiveDbEntry,
+      detectedCity,
+      detectedCustomerType,
+      options: [{ ...chosen, qualifiesFreeShipping: chosen.totalUsd >= FREE_SHIPPING_THRESHOLD_USD }],
+      matchedSkus: chosen.items.map((i) => i.sku),
+      primaryTotalUsd: chosen.totalUsd,
+      shippingDeltaUsd: null,
+      orderCapture,
+      confirmedOption: chosen,
+    };
+  }
 
   // 1. Escudo anti-preguntas ilógicas (prioritario incluso si menciona 5W-30)
   const illogicalReason = detectIllogicalQuestion(qNorm);
@@ -555,10 +775,12 @@ export function buildDeterministicQuotePlan(params: {
       matchedSkus: [],
       primaryTotalUsd: null,
       shippingDeltaUsd: null,
+      orderCapture: null,
+      confirmedOption: null,
     };
   }
 
-  // 2. Productos fuera de inventario (llantas, pastillas, parabrisas, amortiguadores, etc.)
+  // 2. Productos fuera de inventario
   const oosTerm = detectOutOfStockRequest(qNorm);
   if (oosTerm) {
     return {
@@ -573,6 +795,8 @@ export function buildDeterministicQuotePlan(params: {
       matchedSkus: [],
       primaryTotalUsd: null,
       shippingDeltaUsd: null,
+      orderCapture: null,
+      confirmedOption: null,
     };
   }
 
@@ -589,18 +813,51 @@ export function buildDeterministicQuotePlan(params: {
       matchedSkus: [],
       primaryTotalUsd: null,
       shippingDeltaUsd: null,
+      orderCapture: null,
+      confirmedOption: null,
     };
   }
 
   const wantsBattery = /\b(bateria|baterias|bat|arranque|amperaje|amp)\b/.test(qNorm);
   const wantsOilOrCombo =
-    /\b(aceite|lubricante|cambio de aceite|combo|mannol|sintetic[oa]|semisintetic[oa]|mineral|5w-?30|10w-?40|15w-?40|5w-?40|20w-?50|caneca)\b/.test(qNorm);
+    /\b(aceite|lubricante|cambio de aceite|combo|mannol|sintetic[oa]|semisintetic[oa]|mineral|5w-?30|10w-?40|15w-?40|5w-?40|20w-?50|caneca)\b/.test(
+      qNorm
+    );
   const wantsFilterOrFluid = /\b(filtro|refrigerante|coolant|aditivo|limpiador|liquido de frenos)\b/.test(qNorm);
-  const wantsShipping = /\b(envio gratis|cuanto falta|delivery|domicilio|flete|envian|envio a)\b/.test(qNorm);
-  const isAdditiveJoin = /\b(y cuanto seria con|mas bateria|junto con|agregar|sumale|con la bateria|con bateria|tambien una bateria)\b/.test(qNorm);
-  const historyHadComboOrOil = /\b(combo-mannol|combo cambio|15w-40|5w-40|10w-40|5w-30|20w-50|cockpit care)\b/i.test(recentHistoryText);
+  const wantsOperationalInfo =
+    /\b(ubicados|ubicacion|donde quedan|direccion|horario|atienden|pagos|transferencia|pichincha|guayaquil|pacifico|efectivo|sri|factura)\b/.test(
+      qNorm
+    );
+  const wantsShipping = /\b(envio gratis|cuanto falta|delivery|domicilio|flete|envian|envio a|cooperativa|courier)\b/.test(
+    qNorm
+  );
+  const isAdditiveJoin =
+    /\b(y cuanto seria con|y con bateria|mas bateria|junto con|agregar|sumale|con la bateria|con bateria|tambien una bateria)\b/.test(
+      qNorm
+    );
+  const historyHadComboOrOil = /\b(combo|mannol|15w-40|5w-40|10w-40|5w-30|20w-50|cockpit care)\b/i.test(
+    recentHistoryText
+  );
 
-  // 4. Envío gratis / cuánto falta con monto explícito
+  // 4. Info operativa (ubicación, formas de pago, horario) cuando no está cotizando producto puntual
+  if (wantsOperationalInfo && !wantsBattery && !wantsOilOrCombo && !hasKnownVehicle) {
+    return {
+      intentTag: "info_operativa",
+      needsVehicleDetails: false,
+      detectedVehicle: effectiveVehicle,
+      matchedModelEntry: effectiveDbEntry,
+      detectedCity,
+      detectedCustomerType,
+      options: [],
+      matchedSkus: [],
+      primaryTotalUsd: null,
+      shippingDeltaUsd: null,
+      orderCapture: null,
+      confirmedOption: null,
+    };
+  }
+
+  // 5. Envío gratis / cuánto falta con monto explícito
   if (wantsShipping && !wantsBattery && !wantsOilOrCombo && !hasKnownVehicle) {
     const amtMatch = userText.match(/(\d+(?:[.,]\d+)?)/);
     if (amtMatch && !/20\d\d|4x4/.test(amtMatch[1])) {
@@ -617,6 +874,8 @@ export function buildDeterministicQuotePlan(params: {
           matchedSkus: [],
           primaryTotalUsd: Number(val.toFixed(2)),
           shippingDeltaUsd: Number((FREE_SHIPPING_THRESHOLD_USD - val).toFixed(2)),
+          orderCapture: null,
+          confirmedOption: null,
         };
       }
     }
@@ -631,10 +890,12 @@ export function buildDeterministicQuotePlan(params: {
       matchedSkus: [],
       primaryTotalUsd: null,
       shippingDeltaUsd: null,
+      orderCapture: null,
+      confirmedOption: null,
     };
   }
 
-  // 5. Filtro embudado: cliente pide aceite, combo, batería o filtro SIN dar vehículo ni tener vehículo guardado
+  // 6. Filtro embudado si falta el vehículo
   if (!hasKnownVehicle && (wantsOilOrCombo || wantsBattery || wantsFilterOrFluid)) {
     const missingHint = wantsBattery
       ? "la marca, modelo y año de tu vehículo"
@@ -651,20 +912,22 @@ export function buildDeterministicQuotePlan(params: {
       matchedSkus: [],
       primaryTotalUsd: null,
       shippingDeltaUsd: null,
+      orderCapture: null,
+      confirmedOption: null,
     };
   }
 
-  // 6. Consulta combinada (Combo MANNOL + Batería) — ej. Turno 2 "¿y cuánto sería con batería a domicilio en Pedernales?"
+  // 7. Consulta combinada (Combo MANNOL + Batería)
   if (hasKnownVehicle && wantsBattery && (wantsOilOrCombo || isAdditiveJoin || historyHadComboOrOil)) {
     const oilOptions = pickMaxTwoLubricantCombos(effectiveVehicle, detectedCustomerType, qNorm);
-    const batOptions = pickMaxTwoBatteries(effectiveVehicle, effectiveDbEntry, detectedCity, qNorm);
+    const batOptions = pickMaxTwoBatteries(effectiveVehicle, effectiveDbEntry, detectedCity, detectedCustomerType, qNorm);
 
     const combinedOptions: QuoteOption[] = [];
     if (oilOptions.length > 0 && batOptions.length > 0) {
       const opt1Items = [...oilOptions[0].items, ...batOptions[0].items];
       const opt1Total = sumExactPricesIva(opt1Items.map((i) => i.unitPriceIva));
       combinedOptions.push({
-        label: "Opción 1 (Combo Semisintético/Trabajo + Batería Ecuador)",
+        label: "Opción 1 (Combo Semisintético + Batería Ecuador)",
         items: opt1Items,
         totalUsd: opt1Total,
         includesMannolGift: true,
@@ -699,12 +962,14 @@ export function buildDeterministicQuotePlan(params: {
       matchedSkus: skus,
       primaryTotalUsd: finalOptions[0]?.totalUsd ?? null,
       shippingDeltaUsd: null,
+      orderCapture: null,
+      confirmedOption: null,
     };
   }
 
-  // 7. Solo Batería (con vehículo conocido o persistido)
+  // 8. Solo Batería (con vehículo conocido o persistido)
   if (wantsBattery && hasKnownVehicle) {
-    const batOptions = pickMaxTwoBatteries(effectiveVehicle, effectiveDbEntry, detectedCity, qNorm);
+    const batOptions = pickMaxTwoBatteries(effectiveVehicle, effectiveDbEntry, detectedCity, detectedCustomerType, qNorm);
     const skus = Array.from(new Set(batOptions.flatMap((o) => o.items.map((i) => i.sku))));
     return {
       intentTag: "bateria_domicilio",
@@ -717,10 +982,12 @@ export function buildDeterministicQuotePlan(params: {
       matchedSkus: skus,
       primaryTotalUsd: batOptions[0]?.totalUsd ?? null,
       shippingDeltaUsd: null,
+      orderCapture: null,
+      confirmedOption: null,
     };
   }
 
-  // 8. Vehículo identificado (con o sin palabra "aceite"): recomienda máx. 2 combos MANNOL exactos
+  // 9. Vehículo identificado: máximo 2 Combos MANNOL
   if (hasKnownVehicle && (!wantsFilterOrFluid || wantsOilOrCombo)) {
     const oilOptions = pickMaxTwoLubricantCombos(effectiveVehicle, detectedCustomerType, qNorm);
     const skus = Array.from(new Set(oilOptions.flatMap((o) => o.items.map((i) => i.sku))));
@@ -735,17 +1002,27 @@ export function buildDeterministicQuotePlan(params: {
       matchedSkus: skus,
       primaryTotalUsd: oilOptions[0]?.totalUsd ?? null,
       shippingDeltaUsd: null,
+      orderCapture: null,
+      confirmedOption: null,
     };
   }
 
-  // 9. Filtros / Refrigerantes / Aditivos con búsqueda específica (máx. 2 opciones)
+  // 10. Filtros / Refrigerantes / Aditivos específicos
   if (wantsFilterOrFluid) {
     const matches = searchFreeformCatalog(userText, 2);
     const options: QuoteOption[] = matches.map((m, idx) => {
       const price = resolveCatalogPriceIva(m);
       return {
         label: idx === 0 ? "Opción 1" : "Opción 2",
-        items: [{ sku: m.sku, name: m.name, brand: m.brand, presentation: m.presentation, unitPriceIva: price }],
+        items: [
+          {
+            sku: m.sku,
+            name: formatHumanProductName(m.sku, m.name),
+            brand: m.brand,
+            presentation: m.presentation,
+            unitPriceIva: price,
+          },
+        ],
         totalUsd: price,
         includesMannolGift: false,
         includesFreeBatteryInstallPedernales: false,
@@ -763,10 +1040,12 @@ export function buildDeterministicQuotePlan(params: {
       matchedSkus: matches.map((m) => m.sku),
       primaryTotalUsd: options[0]?.totalUsd ?? null,
       shippingDeltaUsd: null,
+      orderCapture: null,
+      confirmedOption: null,
     };
   }
 
-  // 10. Saludo inicial o consulta abierta
+  // 11. Saludo / general
   const isGreeting = /^(hola|buenos dias|buenas tardes|buenas noches|saludos|que tal|hey)\b/.test(qNorm) && qNorm.length < 40;
   return {
     intentTag: isGreeting ? "saludo" : "general",
@@ -780,5 +1059,7 @@ export function buildDeterministicQuotePlan(params: {
     matchedSkus: [],
     primaryTotalUsd: null,
     shippingDeltaUsd: null,
+    orderCapture: null,
+    confirmedOption: null,
   };
 }

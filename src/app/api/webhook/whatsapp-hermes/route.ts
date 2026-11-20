@@ -240,6 +240,7 @@ export async function POST(req: NextRequest) {
               sessionId: `wa:${msg.from}`,
               channel: "whatsapp",
               customerName: contactNameByWaId.get(msg.from) || null,
+              customerPhone: msg.from,
               timeoutMs: 4800,
             });
             await sendMetaWhatsAppReply(phoneId || META_CONFIG.phoneNumberId247, msg.from, hermes.reply);

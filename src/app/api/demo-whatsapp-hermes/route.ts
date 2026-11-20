@@ -56,6 +56,8 @@ export async function POST(req: NextRequest) {
         quotedTotalUsd: result.quotedTotalUsd,
         intentTag: result.intentTag,
         dbStorageMode: result.dbStorageMode,
+        orderCreated: result.orderCreated,
+        order: result.order,
         channel: "whatsapp_demo_hermes_24_7",
       },
       { status: 200 }

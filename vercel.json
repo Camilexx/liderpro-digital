@@ -2,6 +2,12 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": true,
   "trailingSlash": false,
+  "crons": [
+    {
+      "path": "/api/admin/hermes-audit?cron=1",
+      "schedule": "0 1 * * 1"
+    }
+  ],
   "redirects": [
     { "source": "/index.html", "destination": "/", "permanent": true },
     { "source": "/catalogo", "destination": "/productos", "permanent": true },

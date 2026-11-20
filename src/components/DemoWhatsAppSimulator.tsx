@@ -40,11 +40,13 @@ interface MessageItem {
   qaFlag?: "good" | "fix" | null;
   qaNote?: string | null;
   qaSaving?: boolean;
+  orderId?: number | null;
 }
 
 const SUGGESTION_PROMPTS = [
   "Tengo una D-Max 2019 diésel",
-  "¿y cuánto sería con batería a domicilio en Pedernales?",
+  "¿y con batería a domicilio en Pedernales?",
+  "Perfecto, mándame la opción 1 a la calle Eloy Alfaro, pago por transferencia Banco Pichincha, soy Carlos",
   "precio del aceite",
   "¿puedo mezclar aceite de cocina con 5W-30?",
   "¿tienen llantas rin 17?",
@@ -191,6 +193,8 @@ export default function DemoWhatsAppSimulator() {
         city?: string | null;
         quotedTotalUsd?: number | null;
         intentTag?: string | null;
+        orderCreated?: boolean;
+        order?: { id: number } | null;
       };
 
       if (data.sessionId && data.sessionId !== sessionId) {
@@ -227,6 +231,7 @@ export default function DemoWhatsAppSimulator() {
           city: data.city ?? cityState,
           quotedTotalUsd: data.quotedTotalUsd ?? null,
           intentTag: data.intentTag ?? null,
+          orderId: data.orderCreated && data.order?.id ? data.order.id : null,
           qaFlag: null,
           qaNote: null,
         },
@@ -458,6 +463,11 @@ export default function DemoWhatsAppSimulator() {
                         {typeof msg.quotedTotalUsd === "number" && (
                           <span className="rounded bg-amber-50 px-1.5 py-0.5 font-semibold text-amber-800">
                             Total ref: ${msg.quotedTotalUsd.toFixed(2)}
+                          </span>
+                        )}
+                        {typeof msg.orderId === "number" && (
+                          <span className="rounded bg-emerald-600 px-1.5 py-0.5 font-semibold text-white">
+                            Pedido #{msg.orderId} creado
                           </span>
                         )}
                       </div>

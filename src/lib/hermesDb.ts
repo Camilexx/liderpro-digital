@@ -6,6 +6,7 @@ import { Pool, type PoolConfig } from "pg";
 export type CustomerType = "particular" | "camaronera" | "taller";
 export type ChannelType = "whatsapp" | "demo_web" | "instagram" | "messenger";
 export type QaFlag = "good" | "fix";
+export type OrderStatus = "pending_dispatch" | "dispatched" | "completed" | "cancelled";
 
 export interface VehicleProfile {
   make?: string;
@@ -17,12 +18,34 @@ export interface VehicleProfile {
   unmappedLabel?: string;
 }
 
+export interface QuotedOptionSnapshot {
+  label: string;
+  items: Array<{
+    sku: string;
+    name: string;
+    brand?: string;
+    presentation?: string;
+    unitPriceIva: number;
+  }>;
+  totalUsd: number;
+  includesMannolGift: boolean;
+  includesFreeBatteryInstallPedernales: boolean;
+}
+
+export interface LastQuoteSnapshot {
+  intentTag: string;
+  options: QuotedOptionSnapshot[];
+  selectedOptionIndex?: number | null;
+  updatedAt: string;
+}
+
 export interface CustomerRecord {
   phoneOrSession: string;
   name: string | null;
   activeVehicle: VehicleProfile | null;
   city: string | null;
   customerType: CustomerType;
+  lastQuote: LastQuoteSnapshot | null;
   updatedAt: string;
 }
 
@@ -41,12 +64,32 @@ export interface StoredMessageRecord {
   createdAt: string;
 }
 
+export interface OrderRecord {
+  id: number;
+  sessionId: string;
+  customerName: string | null;
+  phone: string | null;
+  vehicle: VehicleProfile | null;
+  itemsJson: Array<{
+    sku: string;
+    name: string;
+    unitPriceIva: number;
+    qty?: number;
+  }>;
+  totalUsd: number;
+  deliveryAddress: string | null;
+  paymentMethod: string | null;
+  status: OrderStatus;
+  createdAt: string;
+}
+
 export interface UpsertCustomerInput {
   phoneOrSession: string;
   name?: string | null;
   activeVehicle?: VehicleProfile | null;
   city?: string | null;
   customerType?: CustomerType;
+  lastQuote?: LastQuoteSnapshot | null;
 }
 
 export interface InsertMessageInput {
@@ -60,6 +103,23 @@ export interface InsertMessageInput {
   intentTag?: string | null;
   qaFlag?: QaFlag | null;
   qaNote?: string | null;
+}
+
+export interface InsertOrderInput {
+  sessionId: string;
+  customerName: string | null;
+  phone: string | null;
+  vehicle: VehicleProfile | null;
+  itemsJson: Array<{
+    sku: string;
+    name: string;
+    unitPriceIva: number;
+    qty?: number;
+  }>;
+  totalUsd: number;
+  deliveryAddress: string | null;
+  paymentMethod: string | null;
+  status?: OrderStatus;
 }
 
 export interface OutOfStockRankItem {
@@ -96,11 +156,38 @@ export interface WeeklyAuditReport {
   recommendations: string[];
 }
 
+export interface AdminChatTurnItem {
+  messageId: number;
+  sessionId: string;
+  channel: ChannelType;
+  customerName: string | null;
+  activeVehicle: VehicleProfile | null;
+  city: string | null;
+  userPrompt: string | null;
+  hermesReply: string;
+  skusUsed: string[];
+  quotedTotalUsd: number | null;
+  latencyMs: number | null;
+  intentTag: string | null;
+  qaFlag: QaFlag | null;
+  qaNote: string | null;
+  createdAt: string;
+}
+
+export interface AdminDashboardSnapshot {
+  storageMode: "postgres" | "local_fallback";
+  orders: OrderRecord[];
+  chatTurns: AdminChatTurnItem[];
+  audit: WeeklyAuditReport;
+}
+
 interface FallbackStoreData {
   nextMessageId: number;
   nextAuditId: number;
+  nextOrderId: number;
   customers: Record<string, CustomerRecord>;
   messages: StoredMessageRecord[];
+  orders: OrderRecord[];
   weeklyAudits: Array<{
     id: number;
     periodStart: string;
@@ -140,8 +227,10 @@ function loadFallbackStore(): FallbackStoreData {
   const empty: FallbackStoreData = {
     nextMessageId: 1,
     nextAuditId: 1,
+    nextOrderId: 1,
     customers: {},
     messages: [],
+    orders: [],
     weeklyAudits: [],
   };
 
@@ -151,14 +240,16 @@ function loadFallbackStore(): FallbackStoreData {
       g.__hermesFallbackStore = {
         nextMessageId: Number(parsed.nextMessageId || 1),
         nextAuditId: Number(parsed.nextAuditId || 1),
+        nextOrderId: Number(parsed.nextOrderId || 1),
         customers: parsed.customers || {},
         messages: Array.isArray(parsed.messages) ? parsed.messages.slice(-4000) : [],
+        orders: Array.isArray(parsed.orders) ? parsed.orders.slice(-500) : [],
         weeklyAudits: Array.isArray(parsed.weeklyAudits) ? parsed.weeklyAudits.slice(-50) : [],
       };
       return g.__hermesFallbackStore;
     }
   } catch {
-    // Si el JSON temporal estuviera dañado, iniciar limpio en memoria
+    // Inicia store limpio en memoria si el temporal está corrupto
   }
 
   g.__hermesFallbackStore = empty;
@@ -171,7 +262,7 @@ function persistFallbackStore(store: FallbackStoreData): void {
     fs.writeFileSync(tmp, JSON.stringify(store), "utf8");
     fs.renameSync(tmp, FALLBACK_FILE_PATH);
   } catch {
-    // En entornos serverless read-only se mantiene en memoria cálida sin fallar
+    // Mantiene estado en memoria cálida si disco no permite escritura
   }
 }
 
@@ -203,8 +294,11 @@ async function getPool(): Promise<Pool | null> {
           active_vehicle JSONB,
           city TEXT,
           customer_type TEXT NOT NULL DEFAULT 'particular',
+          last_quote JSONB,
           updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
         );
+
+        ALTER TABLE customers ADD COLUMN IF NOT EXISTS last_quote JSONB;
 
         CREATE TABLE IF NOT EXISTS messages (
           id BIGSERIAL PRIMARY KEY,
@@ -227,6 +321,23 @@ async function getPool(): Promise<Pool | null> {
           ON messages (created_at DESC);
         CREATE INDEX IF NOT EXISTS idx_hermes_messages_qa_flag
           ON messages (qa_flag) WHERE qa_flag IS NOT NULL;
+
+        CREATE TABLE IF NOT EXISTS orders (
+          id BIGSERIAL PRIMARY KEY,
+          session_id TEXT NOT NULL,
+          customer_name TEXT,
+          phone TEXT,
+          vehicle JSONB,
+          items_json JSONB NOT NULL DEFAULT '[]'::jsonb,
+          total_usd NUMERIC(10, 2) NOT NULL DEFAULT 0,
+          delivery_address TEXT,
+          payment_method TEXT,
+          status TEXT NOT NULL DEFAULT 'pending_dispatch',
+          created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+        );
+
+        CREATE INDEX IF NOT EXISTS idx_hermes_orders_status_created
+          ON orders (status, created_at DESC);
 
         CREATE TABLE IF NOT EXISTS weekly_audits (
           id BIGSERIAL PRIMARY KEY,
@@ -258,6 +369,7 @@ function mapPgCustomerRow(row: Record<string, unknown>): CustomerRecord {
     activeVehicle: (row.active_vehicle as VehicleProfile | null) ?? null,
     city: typeof row.city === "string" ? row.city : null,
     customerType: (row.customer_type as CustomerType) || "particular",
+    lastQuote: (row.last_quote as LastQuoteSnapshot | null) ?? null,
     updatedAt: row.updated_at ? new Date(String(row.updated_at)).toISOString() : new Date().toISOString(),
   };
 }
@@ -271,13 +383,65 @@ function mapPgMessageRow(row: Record<string, unknown>): StoredMessageRecord {
     role: row.role === "assistant" ? "assistant" : "user",
     content: String(row.content || ""),
     skusUsed: rawSkus,
-    quotedTotalUsd: row.quoted_total_usd !== null && row.quoted_total_usd !== undefined ? Number(row.quoted_total_usd) : null,
-    latencyMs: row.latency_ms !== null && row.latency_ms !== undefined ? Number(row.latency_ms) : null,
+    quotedTotalUsd:
+      row.quoted_total_usd !== null && row.quoted_total_usd !== undefined
+        ? Number(row.quoted_total_usd)
+        : null,
+    latencyMs:
+      row.latency_ms !== null && row.latency_ms !== undefined ? Number(row.latency_ms) : null,
     intentTag: typeof row.intent_tag === "string" ? row.intent_tag : null,
     qaFlag: row.qa_flag === "good" || row.qa_flag === "fix" ? row.qa_flag : null,
     qaNote: typeof row.qa_note === "string" ? row.qa_note : null,
     createdAt: row.created_at ? new Date(String(row.created_at)).toISOString() : new Date().toISOString(),
   };
+}
+
+function mapPgOrderRow(row: Record<string, unknown>): OrderRecord {
+  const rawItems = Array.isArray(row.items_json)
+    ? (row.items_json as OrderRecord["itemsJson"])
+    : [];
+  const rawStatus = String(row.status || "pending_dispatch");
+  const status: OrderStatus =
+    rawStatus === "dispatched" || rawStatus === "completed" || rawStatus === "cancelled"
+      ? rawStatus
+      : "pending_dispatch";
+
+  return {
+    id: Number(row.id),
+    sessionId: String(row.session_id || ""),
+    customerName: typeof row.customer_name === "string" ? row.customer_name : null,
+    phone: typeof row.phone === "string" ? row.phone : null,
+    vehicle: (row.vehicle as VehicleProfile | null) ?? null,
+    itemsJson: rawItems,
+    totalUsd: Number(row.total_usd || 0),
+    deliveryAddress: typeof row.delivery_address === "string" ? row.delivery_address : null,
+    paymentMethod: typeof row.payment_method === "string" ? row.payment_method : null,
+    status,
+    createdAt: row.created_at ? new Date(String(row.created_at)).toISOString() : new Date().toISOString(),
+  };
+}
+
+export async function sendTelegramAlert(text: string): Promise<boolean> {
+  const token = (process.env.TELEGRAM_BOT_TOKEN || "").trim();
+  const chatId = (process.env.TELEGRAM_CHAT_ID || "").trim();
+  if (!token || !chatId || !text.trim()) return false;
+
+  try {
+    const resp = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        chat_id: chatId,
+        text: text.slice(0, 3900),
+        parse_mode: "Markdown",
+        disable_web_page_preview: true,
+      }),
+      signal: AbortSignal.timeout(3500),
+    });
+    return resp.ok;
+  } catch {
+    return false;
+  }
 }
 
 export async function getCustomer(phoneOrSession: string): Promise<CustomerRecord | null> {
@@ -288,7 +452,7 @@ export async function getCustomer(phoneOrSession: string): Promise<CustomerRecor
     const pool = await getPool();
     if (pool) {
       const { rows } = await pool.query<Record<string, unknown>>(
-        `SELECT phone_or_session, name, active_vehicle, city, customer_type, updated_at
+        `SELECT phone_or_session, name, active_vehicle, city, customer_type, last_quote, updated_at
          FROM customers WHERE phone_or_session = $1 LIMIT 1`,
         [key]
       );
@@ -315,18 +479,27 @@ export async function upsertCustomer(input: UpsertCustomerInput): Promise<Custom
       const nextVehicle = input.activeVehicle !== undefined ? input.activeVehicle : existing?.activeVehicle ?? null;
       const nextCity = input.city !== undefined ? input.city : existing?.city ?? null;
       const nextType: CustomerType = input.customerType || existing?.customerType || "particular";
+      const nextLastQuote = input.lastQuote !== undefined ? input.lastQuote : existing?.lastQuote ?? null;
 
       const { rows } = await pool.query<Record<string, unknown>>(
-        `INSERT INTO customers (phone_or_session, name, active_vehicle, city, customer_type, updated_at)
-         VALUES ($1, $2, $3::jsonb, $4, $5, NOW())
+        `INSERT INTO customers (phone_or_session, name, active_vehicle, city, customer_type, last_quote, updated_at)
+         VALUES ($1, $2, $3::jsonb, $4, $5, $6::jsonb, NOW())
          ON CONFLICT (phone_or_session) DO UPDATE SET
            name = COALESCE(EXCLUDED.name, customers.name),
            active_vehicle = COALESCE(EXCLUDED.active_vehicle, customers.active_vehicle),
            city = COALESCE(EXCLUDED.city, customers.city),
            customer_type = COALESCE(EXCLUDED.customer_type, customers.customer_type),
+           last_quote = COALESCE(EXCLUDED.last_quote, customers.last_quote),
            updated_at = NOW()
-         RETURNING phone_or_session, name, active_vehicle, city, customer_type, updated_at`,
-        [key, nextName, nextVehicle ? JSON.stringify(nextVehicle) : null, nextCity, nextType]
+         RETURNING phone_or_session, name, active_vehicle, city, customer_type, last_quote, updated_at`,
+        [
+          key,
+          nextName,
+          nextVehicle ? JSON.stringify(nextVehicle) : null,
+          nextCity,
+          nextType,
+          nextLastQuote ? JSON.stringify(nextLastQuote) : null,
+        ]
       );
       if (rows.length > 0) return mapPgCustomerRow(rows[0]);
     }
@@ -342,6 +515,7 @@ export async function upsertCustomer(input: UpsertCustomerInput): Promise<Custom
     activeVehicle: input.activeVehicle !== undefined ? input.activeVehicle : prev?.activeVehicle ?? null,
     city: input.city !== undefined ? input.city : prev?.city ?? null,
     customerType: input.customerType || prev?.customerType || "particular",
+    lastQuote: input.lastQuote !== undefined ? input.lastQuote : prev?.lastQuote ?? null,
     updatedAt: nowIso,
   };
   store.customers[key] = record;
@@ -377,12 +551,14 @@ export async function getRecentMessages(sessionId: string, limit = 12): Promise<
 
 export async function insertMessage(input: InsertMessageInput): Promise<StoredMessageRecord> {
   const skus = Array.isArray(input.skusUsed) ? input.skusUsed : [];
-  const total = typeof input.quotedTotalUsd === "number" && Number.isFinite(input.quotedTotalUsd)
-    ? Number(input.quotedTotalUsd.toFixed(2))
-    : null;
-  const latency = typeof input.latencyMs === "number" && Number.isFinite(input.latencyMs)
-    ? Math.max(0, Math.round(input.latencyMs))
-    : null;
+  const total =
+    typeof input.quotedTotalUsd === "number" && Number.isFinite(input.quotedTotalUsd)
+      ? Number(input.quotedTotalUsd.toFixed(2))
+      : null;
+  const latency =
+    typeof input.latencyMs === "number" && Number.isFinite(input.latencyMs)
+      ? Math.max(0, Math.round(input.latencyMs))
+      : null;
 
   try {
     const pool = await getPool();
@@ -473,10 +649,146 @@ export async function updateMessageQaFeedback(
   return { ok: true, updated: found };
 }
 
+export async function insertOrder(input: InsertOrderInput): Promise<{ order: OrderRecord; telegramSent: boolean }> {
+  const total = Number(Number(input.totalUsd || 0).toFixed(2));
+  const status: OrderStatus = input.status || "pending_dispatch";
+  let savedOrder: OrderRecord | null = null;
+
+  try {
+    const pool = await getPool();
+    if (pool) {
+      const { rows } = await pool.query<Record<string, unknown>>(
+        `INSERT INTO orders (
+           session_id, customer_name, phone, vehicle, items_json,
+           total_usd, delivery_address, payment_method, status, created_at
+         )
+         VALUES ($1, $2, $3, $4::jsonb, $5::jsonb, $6, $7, $8, $9, NOW())
+         RETURNING id, session_id, customer_name, phone, vehicle, items_json,
+                   total_usd, delivery_address, payment_method, status, created_at`,
+        [
+          input.sessionId.trim(),
+          input.customerName,
+          input.phone,
+          input.vehicle ? JSON.stringify(input.vehicle) : null,
+          JSON.stringify(input.itemsJson || []),
+          total,
+          input.deliveryAddress,
+          input.paymentMethod,
+          status,
+        ]
+      );
+      if (rows.length > 0) {
+        savedOrder = mapPgOrderRow(rows[0]);
+      }
+    }
+  } catch (err) {
+    console.warn("[HermesDB] insertOrder fallback:", err instanceof Error ? err.message : String(err));
+  }
+
+  if (!savedOrder) {
+    const store = loadFallbackStore();
+    savedOrder = {
+      id: store.nextOrderId++,
+      sessionId: input.sessionId.trim(),
+      customerName: input.customerName,
+      phone: input.phone,
+      vehicle: input.vehicle,
+      itemsJson: input.itemsJson || [],
+      totalUsd: total,
+      deliveryAddress: input.deliveryAddress,
+      paymentMethod: input.paymentMethod,
+      status,
+      createdAt: new Date().toISOString(),
+    };
+    store.orders.push(savedOrder);
+    if (store.orders.length > 500) {
+      store.orders = store.orders.slice(-500);
+    }
+    persistFallbackStore(store);
+  }
+
+  const vStr = savedOrder.vehicle
+    ? [savedOrder.vehicle.make, savedOrder.vehicle.model, savedOrder.vehicle.year, savedOrder.vehicle.fuel]
+        .filter(Boolean)
+        .join(" ")
+    : "No especificado";
+  const itemsList = savedOrder.itemsJson.map((i) => `• ${i.name} ($${Number(i.unitPriceIva).toFixed(2)})`).join("\n");
+  const alertText =
+    `🚨 *NUEVO PEDIDO HERMES #${savedOrder.id} — DESPACHO INMEDIATO*\n` +
+    `👤 *Cliente:* ${savedOrder.customerName || "Por confirmar"} (${savedOrder.phone || savedOrder.sessionId})\n` +
+    `🚗 *Vehículo:* ${vStr}\n` +
+    `📍 *Dirección:* ${savedOrder.deliveryAddress || "Por confirmar"}\n` +
+    `💳 *Pago:* ${savedOrder.paymentMethod || "Por confirmar"}\n` +
+    `🛒 *Items:*\n${itemsList}\n` +
+    `💵 *Total c/IVA:* *$${savedOrder.totalUsd.toFixed(2)}*`;
+
+  const telegramSent = await sendTelegramAlert(alertText);
+  return { order: savedOrder, telegramSent };
+}
+
+export async function listOrders(limit = 60): Promise<OrderRecord[]> {
+  try {
+    const pool = await getPool();
+    if (pool) {
+      const { rows } = await pool.query<Record<string, unknown>>(
+        `SELECT id, session_id, customer_name, phone, vehicle, items_json,
+                total_usd, delivery_address, payment_method, status, created_at
+         FROM orders
+         ORDER BY CASE WHEN status = 'pending_dispatch' THEN 0 ELSE 1 END, created_at DESC, id DESC
+         LIMIT $1`,
+        [limit]
+      );
+      return rows.map(mapPgOrderRow);
+    }
+  } catch (err) {
+    console.warn("[HermesDB] listOrders fallback:", err instanceof Error ? err.message : String(err));
+  }
+
+  const store = loadFallbackStore();
+  return [...store.orders]
+    .sort((a, b) => {
+      const pa = a.status === "pending_dispatch" ? 0 : 1;
+      const pb = b.status === "pending_dispatch" ? 0 : 1;
+      if (pa !== pb) return pa - pb;
+      return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
+    })
+    .slice(0, limit);
+}
+
+export async function updateOrderStatus(
+  orderId: number,
+  status: OrderStatus
+): Promise<{ ok: boolean; order?: OrderRecord }> {
+  try {
+    const pool = await getPool();
+    if (pool) {
+      const { rows } = await pool.query<Record<string, unknown>>(
+        `UPDATE orders
+         SET status = $2
+         WHERE id = $1
+         RETURNING id, session_id, customer_name, phone, vehicle, items_json,
+                   total_usd, delivery_address, payment_method, status, created_at`,
+        [orderId, status]
+      );
+      if (rows.length > 0) return { ok: true, order: mapPgOrderRow(rows[0]) };
+      return { ok: false };
+    }
+  } catch (err) {
+    console.warn("[HermesDB] updateOrderStatus fallback:", err instanceof Error ? err.message : String(err));
+  }
+
+  const store = loadFallbackStore();
+  const found = store.orders.find((o) => o.id === orderId);
+  if (!found) return { ok: false };
+  found.status = status;
+  persistFallbackStore(store);
+  return { ok: true, order: found };
+}
+
 const OUT_OF_STOCK_PATTERNS: Array<{ label: string; regex: RegExp }> = [
-  { label: "Llantas / Neumáticos", regex: /\b(llantas?|neumaticos?|cauchos?|rin(?:es)?\s*\d*)\b/i },
+  { label: "Llantas / Neumáticos", regex: /\b(llantas?|neumaticos?|cauchos?|rin(?:es)?\s*\d*|aros?)\b/i },
   { label: "Pastillas / Zapatas / Discos de Freno", regex: /\b(pastillas?|balatas?|zapatas?|discos?\s+de\s+freno|tambores?)\b/i },
-  { label: "Parabrisas / Vidrios", regex: /\b(parabrisas?|vidrios?|plumillas?|limpiaparabrisas?)\b/i },
+  { label: "Parabrisas / Vidrios / Plumillas", regex: /\b(parabrisas?|vidrios?|plumillas?|limpiaparabrisas?)\b/i },
   { label: "Amortiguadores / Suspensión", regex: /\b(amortiguador(?:es)?|terminales?|rotulas?|bujes?|mesas?|suspension)\b/i },
   { label: "Bujías / Encendido", regex: /\b(bujias?|bobinas?|cables?\s+de\s+bujia)\b/i },
   { label: "Embrague / Kit de Clutch", regex: /\b(embrague|clutch|prensa|collarin)\b/i },
@@ -527,49 +839,46 @@ function buildAuditRecommendations(params: {
     );
     if (hasPriceComplaint) {
       recs.push(
-        "Revisar los casos marcados en [Corregir] con mención de precio/total y ajustar las reglas de emparejamiento de combos."
+        "Revisar los casos marcados en [Corregir] con mención de precio/total y ajustar reglas de emparejamiento."
       );
     }
     if (hasVehicleComplaint) {
       recs.push(
-        "Reforzar sinónimos de carrocería/motor en VEHICLE_SYNONYMS para las fallas vehiculares reportadas en QA."
+        "Reforzar sinónimos vehiculares y grupos de amperaje en src/lib/hermesCatalog.ts."
       );
     }
     recs.push(
-      `Auditar ${params.flaggedFailures.length} respuesta(s) marcada(s) con [⚠️ Corregir] y añadir ejemplos few-shot al prompt si persiste el patrón.`
+      `Auditar ${params.flaggedFailures.length} respuesta(s) marcada(s) con [⚠️ Corregir] y ajustar reglas si persiste el patrón.`
     );
   }
 
-  if (params.avgLatencyMs !== null && params.avgLatencyMs > 2500) {
+  if (params.avgLatencyMs !== null && params.avgLatencyMs > 3000) {
     recs.push(
-      `Latencia promedio en ${params.avgLatencyMs} ms; considerar optimizar timeout de NVIDIA NIM o mantener caché de fichas frecuentes.`
+      `Latencia promedio en ${params.avgLatencyMs} ms; revisar tiempo de respuesta del proveedor LLM.`
     );
   }
 
   if (recs.length === 0) {
     recs.push(
       params.totalChats === 0
-        ? "Sin volumen suficiente en los últimos 7 días; ejecutar pruebas en /demo-whatsapp y campañas locales para recolectar telemetría."
-        : "Operación estable esta semana: 0 fallos QA críticos registrados. Mantener seguimiento semanal de términos sin stock."
+        ? "Sin volumen suficiente en los últimos 7 días; ejecutar pruebas en /demo-whatsapp o esperar tráfico orgánico."
+        : "Operación estable esta semana: 0 fallos QA críticos registrados."
     );
   }
 
   return recs;
 }
 
-export async function generateAndSaveWeeklyAudit(days = 7): Promise<WeeklyAuditReport> {
-  const safeDays = Math.max(1, Math.min(90, Math.round(days)));
-  const periodEnd = new Date();
-  const periodStart = new Date(periodEnd.getTime() - safeDays * 24 * 60 * 60 * 1000);
-
-  let messages: StoredMessageRecord[] = [];
-  let customers: CustomerRecord[] = [];
-  let storageMode: "postgres" | "local_fallback" = "local_fallback";
-
+async function loadMessagesAndCustomersSince(
+  periodStart: Date
+): Promise<{
+  storageMode: "postgres" | "local_fallback";
+  messages: StoredMessageRecord[];
+  customers: CustomerRecord[];
+}> {
   try {
     const pool = await getPool();
     if (pool) {
-      storageMode = "postgres";
       const msgRes = await pool.query<Record<string, unknown>>(
         `SELECT id, session_id, channel, role, content, skus_used, quoted_total_usd,
                 latency_ms, intent_tag, qa_flag, qa_note, created_at
@@ -578,33 +887,43 @@ export async function generateAndSaveWeeklyAudit(days = 7): Promise<WeeklyAuditR
          ORDER BY created_at ASC, id ASC`,
         [periodStart.toISOString()]
       );
-      messages = msgRes.rows.map(mapPgMessageRow);
-
       const custRes = await pool.query<Record<string, unknown>>(
-        `SELECT phone_or_session, name, active_vehicle, city, customer_type, updated_at
-         FROM customers
-         WHERE updated_at >= $1`,
-        [periodStart.toISOString()]
+        `SELECT phone_or_session, name, active_vehicle, city, customer_type, last_quote, updated_at
+         FROM customers`
       );
-      customers = custRes.rows.map(mapPgCustomerRow);
+      return {
+        storageMode: "postgres",
+        messages: msgRes.rows.map(mapPgMessageRow),
+        customers: custRes.rows.map(mapPgCustomerRow),
+      };
     }
   } catch (err) {
-    console.warn("[HermesDB] weekly audit fallback:", err instanceof Error ? err.message : String(err));
+    console.warn("[HermesDB] loadMessagesAndCustomersSince fallback:", err instanceof Error ? err.message : String(err));
   }
 
-  if (storageMode === "local_fallback") {
-    const store = loadFallbackStore();
-    const minTs = periodStart.getTime();
-    messages = store.messages.filter((m) => new Date(m.createdAt).getTime() >= minTs);
-    customers = Object.values(store.customers).filter((c) => new Date(c.updatedAt).getTime() >= minTs);
-  }
+  const store = loadFallbackStore();
+  const minTs = periodStart.getTime();
+  return {
+    storageMode: "local_fallback",
+    messages: store.messages.filter((m) => new Date(m.createdAt).getTime() >= minTs),
+    customers: Object.values(store.customers),
+  };
+}
 
+function buildWeeklyAuditFromData(params: {
+  storageMode: "postgres" | "local_fallback";
+  messages: StoredMessageRecord[];
+  customers: CustomerRecord[];
+  periodStart: Date;
+  periodEnd: Date;
+  safeDays: number;
+}): WeeklyAuditReport {
+  const { storageMode, messages, customers, periodStart, periodEnd, safeDays } = params;
   const sessionSet = new Set<string>();
   const channelsBreakdown: Record<string, number> = {};
   const intentsBreakdown: Record<string, number> = {};
   const latencies: number[] = [];
 
-  // Map previous user message per session for failure inspection
   const lastUserBySession = new Map<string, string>();
   const flaggedFailures: FlaggedFailureItem[] = [];
   const oosBuckets = new Map<string, { count: number; samples: string[] }>();
@@ -630,24 +949,24 @@ export async function generateAndSaveWeeklyAudit(days = 7): Promise<WeeklyAuditR
         }
         oosBuckets.set(term, cur);
       }
-    } else if (m.role === "assistant") {
-      if (m.qaFlag === "fix") {
-        flaggedFailures.push({
-          messageId: m.id,
-          sessionId: m.sessionId,
-          channel: m.channel,
-          userPrompt: lastUserBySession.get(m.sessionId) || null,
-          hermesReply: m.content,
-          qaNote: m.qaNote,
-          intentTag: m.intentTag,
-          createdAt: m.createdAt,
-        });
-      }
+    } else if (m.role === "assistant" && m.qaFlag === "fix") {
+      flaggedFailures.push({
+        messageId: m.id,
+        sessionId: m.sessionId,
+        channel: m.channel,
+        userPrompt: lastUserBySession.get(m.sessionId) || null,
+        hermesReply: m.content,
+        qaNote: m.qaNote,
+        intentTag: m.intentTag,
+        createdAt: m.createdAt,
+      });
     }
   }
 
   const unmappedCounts = new Map<string, number>();
+  const minTs = periodStart.getTime();
   for (const c of customers) {
+    if (new Date(c.updatedAt).getTime() < minTs) continue;
     const unmapped = c.activeVehicle?.unmappedLabel?.trim();
     if (unmapped) {
       unmappedCounts.set(unmapped, (unmappedCounts.get(unmapped) || 0) + 1);
@@ -673,7 +992,7 @@ export async function generateAndSaveWeeklyAudit(days = 7): Promise<WeeklyAuditR
     avgLatencyMs,
   });
 
-  const report: WeeklyAuditReport = {
+  return {
     auditId: null,
     storageMode,
     periodStart: periodStart.toISOString(),
@@ -689,6 +1008,25 @@ export async function generateAndSaveWeeklyAudit(days = 7): Promise<WeeklyAuditR
     unmappedVehicles,
     recommendations,
   };
+}
+
+export async function generateAndSaveWeeklyAudit(
+  days = 7,
+  options: { notifyTelegram?: boolean } = {}
+): Promise<{ report: WeeklyAuditReport; telegramSent: boolean }> {
+  const safeDays = Math.max(1, Math.min(90, Math.round(days)));
+  const periodEnd = new Date();
+  const periodStart = new Date(periodEnd.getTime() - safeDays * 24 * 60 * 60 * 1000);
+
+  const { storageMode, messages, customers } = await loadMessagesAndCustomersSince(periodStart);
+  const report = buildWeeklyAuditFromData({
+    storageMode,
+    messages,
+    customers,
+    periodStart,
+    periodEnd,
+    safeDays,
+  });
 
   try {
     const pool = await getPool();
@@ -719,27 +1057,113 @@ export async function generateAndSaveWeeklyAudit(days = 7): Promise<WeeklyAuditR
       if (rows.length > 0) {
         report.auditId = Number(rows[0].id);
       }
-      return report;
     }
   } catch (err) {
     console.warn("[HermesDB] insert weekly_audits fallback:", err instanceof Error ? err.message : String(err));
   }
 
-  const store = loadFallbackStore();
-  const auditId = store.nextAuditId++;
-  report.auditId = auditId;
-  store.weeklyAudits.push({
-    id: auditId,
-    periodStart: report.periodStart,
-    periodEnd: report.periodEnd,
-    totalChats: report.totalChats,
-    report,
-    createdAt: new Date().toISOString(),
-  });
-  if (store.weeklyAudits.length > 50) {
-    store.weeklyAudits = store.weeklyAudits.slice(-50);
+  if (report.auditId === null && report.storageMode === "local_fallback") {
+    const store = loadFallbackStore();
+    const auditId = store.nextAuditId++;
+    report.auditId = auditId;
+    store.weeklyAudits.push({
+      id: auditId,
+      periodStart: report.periodStart,
+      periodEnd: report.periodEnd,
+      totalChats: report.totalChats,
+      report,
+      createdAt: new Date().toISOString(),
+    });
+    if (store.weeklyAudits.length > 50) {
+      store.weeklyAudits = store.weeklyAudits.slice(-50);
+    }
+    persistFallbackStore(store);
   }
-  persistFallbackStore(store);
 
-  return report;
+  let telegramSent = false;
+  if (options.notifyTelegram) {
+    const topOos = report.outOfStockRanking
+      .slice(0, 3)
+      .map((o) => `• ${o.term}: ${o.count}`)
+      .join("\n") || "• Ninguno";
+    const tgText =
+      `📊 *AUDITORÍA SEMANAL HERMES (${safeDays} días)*\n` +
+      `• *Chats activos:* ${report.totalChats} (${report.totalMessages} mensajes)\n` +
+      `• *Alertas [⚠️ Corregir]:* ${report.flaggedFailures.length}\n` +
+      `• *Latencia promedio:* ${report.avgLatencyMs ?? "N/D"} ms\n` +
+      `• *Top sin stock:*\n${topOos}\n` +
+      `• *Recomendación:* ${report.recommendations[0] || "Sin novedades"}`;
+    telegramSent = await sendTelegramAlert(tgText);
+  }
+
+  return { report, telegramSent };
+}
+
+export async function getAdminDashboardSnapshot(params: {
+  channel?: string;
+  onlyFix?: boolean;
+  days?: number;
+} = {}): Promise<AdminDashboardSnapshot> {
+  const safeDays = Math.max(1, Math.min(90, Math.round(params.days || 7)));
+  const periodEnd = new Date();
+  const periodStart = new Date(periodEnd.getTime() - safeDays * 24 * 60 * 60 * 1000);
+
+  const [{ storageMode, messages, customers }, orders] = await Promise.all([
+    loadMessagesAndCustomersSince(periodStart),
+    listOrders(60),
+  ]);
+
+  const customerByKey = new Map<string, CustomerRecord>();
+  for (const c of customers) customerByKey.set(c.phoneOrSession, c);
+
+  const audit = buildWeeklyAuditFromData({
+    storageMode,
+    messages,
+    customers,
+    periodStart,
+    periodEnd,
+    safeDays,
+  });
+
+  const lastUserBySession = new Map<string, string>();
+  const turns: AdminChatTurnItem[] = [];
+
+  for (const m of messages) {
+    if (m.role === "user") {
+      lastUserBySession.set(m.sessionId, m.content);
+      continue;
+    }
+    const cust = customerByKey.get(m.sessionId);
+    turns.push({
+      messageId: m.id,
+      sessionId: m.sessionId,
+      channel: m.channel,
+      customerName: cust?.name ?? null,
+      activeVehicle: cust?.activeVehicle ?? null,
+      city: cust?.city ?? null,
+      userPrompt: lastUserBySession.get(m.sessionId) || null,
+      hermesReply: m.content,
+      skusUsed: m.skusUsed,
+      quotedTotalUsd: m.quotedTotalUsd,
+      latencyMs: m.latencyMs,
+      intentTag: m.intentTag,
+      qaFlag: m.qaFlag,
+      qaNote: m.qaNote,
+      createdAt: m.createdAt,
+    });
+  }
+
+  const chFilter = (params.channel || "all").toLowerCase();
+  const filteredTurns = turns
+    .filter((t) => (chFilter === "all" ? true : t.channel === chFilter))
+    .filter((t) => (params.onlyFix ? t.qaFlag === "fix" : true))
+    .reverse()
+    .slice(0, 120);
+
+  return {
+    storageMode,
+    orders,
+    chatTurns: filteredTurns,
+    audit,
+  };
 }

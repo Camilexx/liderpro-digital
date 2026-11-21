@@ -26,8 +26,18 @@ export interface QuotedOptionSnapshot {
     brand?: string;
     presentation?: string;
     unitPriceIva: number;
+    listPriceIva?: number;
+    isBattery?: boolean;
+    batteryBrand?: "ecuador" | "bosch";
+    priceWithTradeIn?: number;
+    priceWithoutTradeIn?: number;
+    discountPctWithTradeIn?: number;
+    discountPctWithoutTradeIn?: number;
   }>;
   totalUsd: number;
+  hasBattery?: boolean;
+  totalWithTradeInUsd?: number;
+  totalWithoutTradeInUsd?: number;
   includesMannolGift: boolean;
   includesFreeBatteryInstallPedernales: boolean;
 }
@@ -36,6 +46,7 @@ export interface LastQuoteSnapshot {
   intentTag: string;
   options: QuotedOptionSnapshot[];
   selectedOptionIndex?: number | null;
+  batteryTradeIn?: boolean | null;
   updatedAt: string;
 }
 

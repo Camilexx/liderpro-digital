@@ -47,10 +47,11 @@ export interface QuoteOption extends QuotedOptionSnapshot {
 export interface OrderCaptureExtraction {
   isConfirmingOrder: boolean;
   selectedOptionIndex: number | null;
+  batteryTradeIn: boolean | null;
   customerName: string | null;
   deliveryAddress: string | null;
   paymentMethod: string | null;
-  missingFields: Array<"Nombre" | "Dirección/Referencia" | "Forma de pago">;
+  missingFields: Array<"Nombre" | "Dirección/Referencia" | "Forma de pago" | "Entrega de batería usada (Sí/No)">;
 }
 
 export interface DeterministicQuotePlan {
@@ -98,6 +99,7 @@ const HUMAN_PRODUCT_NAMES: Record<string, string> = {
   "02724HPIS4": "Batería Bosch Grupo 24 S4 64 Amp",
   "02724HPS4": "Batería Bosch Grupo 24 S4 64 Amp",
   "03034-FE": "Batería Ecuador Grupo 34 Full Equipo 65 Amp",
+  "02734HPS4": "Batería Bosch Grupo 34 S4 70 Amp",
   "03042-FE": "Batería Ecuador Grupo 42 Full Equipo 55 Amp",
   "02742HPIS4": "Batería Bosch Grupo 42 S4 55 Amp",
   "03031-SHD": "Batería Ecuador Grupo 31 Super Heavy Duty 105 Amp",
@@ -430,7 +432,8 @@ function buildSingleItemQuoteOption(
   includesFreeBatteryInstallPedernales: boolean
 ): QuoteOption | null {
   if (!item || item.sku === "ECOVLBAT") return null;
-  const price = resolveCatalogPriceIva(item);
+  const batteryPricing = computeBatteryDiscountPricing(item);
+  const price = batteryPricing ? batteryPricing.priceWithTradeIn : resolveCatalogPriceIva(item);
   return {
     label,
     items: [
@@ -440,13 +443,94 @@ function buildSingleItemQuoteOption(
         brand: item.brand,
         presentation: item.presentation,
         unitPriceIva: price,
+        ...(batteryPricing
+          ? {
+              listPriceIva: batteryPricing.listPriceIva,
+              isBattery: true,
+              batteryBrand: batteryPricing.batteryBrand,
+              priceWithTradeIn: batteryPricing.priceWithTradeIn,
+              priceWithoutTradeIn: batteryPricing.priceWithoutTradeIn,
+              discountPctWithTradeIn: batteryPricing.discountPctWithTradeIn,
+              discountPctWithoutTradeIn: batteryPricing.discountPctWithoutTradeIn,
+            }
+          : {}),
       },
     ],
     totalUsd: price,
+    ...(batteryPricing
+      ? {
+          hasBattery: true,
+          totalWithTradeInUsd: batteryPricing.priceWithTradeIn,
+          totalWithoutTradeInUsd: batteryPricing.priceWithoutTradeIn,
+        }
+      : {}),
     includesMannolGift,
     includesFreeBatteryInstallPedernales,
     qualifiesFreeShipping: price >= FREE_SHIPPING_THRESHOLD_USD,
   };
+}
+
+export interface BatteryDiscountPricing {
+  listPriceIva: number;
+  batteryBrand: "ecuador" | "bosch";
+  discountPctWithTradeIn: number;
+  discountPctWithoutTradeIn: number;
+  priceWithTradeIn: number;
+  priceWithoutTradeIn: number;
+}
+
+export function computeBatteryDiscountPricing(item: CatalogPricingItem): BatteryDiscountPricing | null {
+  if (!item || !item.sku || item.sku === "ECOVLBAT") return null;
+  const skuUpper = item.sku.toUpperCase();
+  const brandNorm = normalizeText(item.brand || "");
+  const catNorm = normalizeText(item.category || "");
+  const nameNorm = normalizeText(item.name || "");
+  const isBattery =
+    catNorm === "baterias" ||
+    /\bbateria\b/.test(nameNorm) ||
+    skuUpper.startsWith("030") ||
+    skuUpper.startsWith("027") ||
+    skuUpper === "42HPS4";
+  if (!isBattery) return null;
+
+  const isEcuador = brandNorm.includes("ecuador") || skuUpper.startsWith("030");
+  const isBosch = brandNorm.includes("bosch") || skuUpper.startsWith("027") || skuUpper === "42HPS4";
+  if (!isEcuador && !isBosch) return null;
+
+  const listPriceIva = resolveCatalogPriceIva(item);
+  if (listPriceIva <= 0) return null;
+
+  const batteryBrand: "ecuador" | "bosch" = isEcuador ? "ecuador" : "bosch";
+  const discountPctWithTradeIn = isEcuador ? 35 : 25;
+  const discountPctWithoutTradeIn = isEcuador ? 30 : 20;
+
+  return {
+    listPriceIva,
+    batteryBrand,
+    discountPctWithTradeIn,
+    discountPctWithoutTradeIn,
+    priceWithTradeIn: commercialCeil(listPriceIva * (1 - discountPctWithTradeIn / 100)),
+    priceWithoutTradeIn: commercialCeil(listPriceIva * (1 - discountPctWithoutTradeIn / 100)),
+  };
+}
+
+export function extractBatteryTradeInFromText(text: string): boolean | null {
+  const qNorm = normalizeText(text);
+  if (
+    /\b(no\s+(?:tengo|entrego|voy\s+a\s+entregar|llevo|dejo|doy).{0,24}(?:usada|vieja|bateria)|sin\s+(?:entregar|dejar|dar)?\s*(?:la\s+)?(?:bateria\s+)?(?:usada|vieja)|no\s+entrego\b|sin\s+usada\b|no\s+tengo\s+bateria\s+usada|sin\s+entregar\s+bateria)\b/.test(
+      qNorm
+    )
+  ) {
+    return false;
+  }
+  if (
+    /\b((?:si|s[ií])\s+(?:tengo|entrego|voy\s+a\s+entregar|llevo|dejo|doy)|entrego\s+(?:la\s+|mi\s+)?(?:bateria\s+)?(?:usada|vieja)|con\s+(?:entrega\s+de\s+)?(?:bateria\s+)?(?:usada|vieja)|a\s+cambio\s+de\s+(?:la\s+)?usada)\b/.test(
+      qNorm
+    )
+  ) {
+    return true;
+  }
+  return null;
 }
 
 function pickMaxTwoLubricantCombos(
@@ -550,19 +634,23 @@ function pickMaxTwoBatteries(
       : ["03027-HP", "02727HPS4"];
   } else {
     // Autos sedán / compactos gasolina (55-65 Amp)
-    const recSkus = (matchedEntry?.model.recommendedCategories.baterias || []).filter((s) => s !== "ECOVLBAT");
-    const smallPreferred = recSkus.filter((s) =>
-      ["03034-FE", "03042-FE", "03024-FE", "02742HPIS4", "02724HPS4", "02724HPIS4", "02734HPS4"].includes(s)
+    const isCompact42 = /\b(spark|beat|aveo|sail|corsa|picanto|rio|accent|grand\s*i10|yaris|swift|onix)\b/.test(
+      normalizeText(`${formatVehicleLabel(vehicle)} ${norm}`)
     );
-    const ecBat = smallPreferred.find((s) => s.startsWith("030") && BY_SKU.has(s));
-    const boschBat = smallPreferred.find((s) => !s.startsWith("030") && BY_SKU.has(s));
-    if (ecBat) candidateSkus.push(ecBat);
-    if (boschBat) candidateSkus.push(boschBat);
-    if (candidateSkus.length < 2) {
-      const isCompact42 = /\b(aveo|sail|spark|corsa|picanto|rio|accent|grand\s*i10|yaris|swift|onix)\b/.test(
-        normalizeText(`${formatVehicleLabel(vehicle)} ${norm}`)
+    if (isCompact42 && BY_SKU.has("03042-FE") && BY_SKU.has("02742HPIS4")) {
+      candidateSkus = ["03042-FE", "02742HPIS4"];
+    } else {
+      const recSkus = (matchedEntry?.model.recommendedCategories.baterias || []).filter((s) => s !== "ECOVLBAT");
+      const smallPreferred = recSkus.filter((s) =>
+        ["03042-FE", "03034-FE", "03024-FE", "02742HPIS4", "02724HPS4", "02724HPIS4", "02734HPS4"].includes(s)
       );
-      candidateSkus = isCompact42 ? ["03034-FE", "02742HPIS4"] : ["03024-FE", "02724HPS4"];
+      const ecBat = smallPreferred.find((s) => s.startsWith("030") && BY_SKU.has(s));
+      const boschBat = smallPreferred.find((s) => !s.startsWith("030") && BY_SKU.has(s));
+      if (ecBat) candidateSkus.push(ecBat);
+      if (boschBat) candidateSkus.push(boschBat);
+      if (candidateSkus.length < 2) {
+        candidateSkus = isCompact42 ? ["03042-FE", "02742HPIS4"] : ["03024-FE", "02724HPS4"];
+      }
     }
   }
 
@@ -654,7 +742,10 @@ export function extractOrderDetailsFromText(
   }
 
   const providedOrderFields = Boolean(customerName || deliveryAddress || paymentMethod);
-  if (!isConfirming && !(hasPendingOption && providedOrderFields)) {
+  const batteryTradeIn = extractBatteryTradeInFromText(userText) ?? lastQuote?.batteryTradeIn ?? null;
+  const quoteHasBattery = Boolean(lastQuote?.options?.some((o) => o.hasBattery || o.items.some((i) => i.isBattery)));
+
+  if (!isConfirming && !(hasPendingOption && (providedOrderFields || (quoteHasBattery && batteryTradeIn !== null)))) {
     return null;
   }
 
@@ -675,7 +766,13 @@ export function extractOrderDetailsFromText(
     selectedIdx = 0;
   }
 
+  const chosenForMissing = selectedIdx !== null ? lastQuote.options[selectedIdx] : lastQuote.options[0];
+  const chosenHasBattery = Boolean(
+    chosenForMissing?.hasBattery || chosenForMissing?.items.some((i) => i.isBattery)
+  );
+
   const missingFields: OrderCaptureExtraction["missingFields"] = [];
+  if (chosenHasBattery && batteryTradeIn === null) missingFields.push("Entrega de batería usada (Sí/No)");
   if (!customerName) missingFields.push("Nombre");
   if (!deliveryAddress) missingFields.push("Dirección/Referencia");
   if (!paymentMethod) missingFields.push("Forma de pago");
@@ -683,6 +780,7 @@ export function extractOrderDetailsFromText(
   return {
     isConfirmingOrder: true,
     selectedOptionIndex: selectedIdx,
+    batteryTradeIn,
     customerName,
     deliveryAddress,
     paymentMethod,
@@ -727,7 +825,29 @@ export function buildDeterministicQuotePlan(params: {
   const orderCapture = extractOrderDetailsFromText(userText, persistedLastQuote);
   if (orderCapture && persistedLastQuote) {
     const idx = Math.max(0, Math.min(persistedLastQuote.options.length - 1, orderCapture.selectedOptionIndex ?? 0));
-    const chosen = persistedLastQuote.options[idx];
+    const rawChosen = persistedLastQuote.options[idx];
+    const resolvedItems = rawChosen.items.map((it) => {
+      if (it.isBattery && orderCapture.batteryTradeIn !== null) {
+        const appliedPrice = orderCapture.batteryTradeIn
+          ? (it.priceWithTradeIn ?? it.unitPriceIva)
+          : (it.priceWithoutTradeIn ?? it.unitPriceIva);
+        const tradeSuffix = orderCapture.batteryTradeIn
+          ? " (entregando batería usada)"
+          : " (sin entregar batería usada)";
+        return {
+          ...it,
+          name: it.name.includes("batería usada") ? it.name : `${it.name}${tradeSuffix}`,
+          unitPriceIva: appliedPrice,
+        };
+      }
+      return it;
+    });
+    const resolvedTotal = sumExactPricesIva(resolvedItems.map((i) => i.unitPriceIva));
+    const chosen: QuotedOptionSnapshot = {
+      ...rawChosen,
+      items: resolvedItems,
+      totalUsd: resolvedTotal,
+    };
     if (orderCapture.missingFields.length === 0) {
       return {
         intentTag: "pedido_confirmado",
@@ -925,27 +1045,43 @@ export function buildDeterministicQuotePlan(params: {
     const combinedOptions: QuoteOption[] = [];
     if (oilOptions.length > 0 && batOptions.length > 0) {
       const opt1Items = [...oilOptions[0].items, ...batOptions[0].items];
-      const opt1Total = sumExactPricesIva(opt1Items.map((i) => i.unitPriceIva));
+      const opt1With = sumExactPricesIva(
+        opt1Items.map((i) => (i.isBattery ? (i.priceWithTradeIn ?? i.unitPriceIva) : i.unitPriceIva))
+      );
+      const opt1Without = sumExactPricesIva(
+        opt1Items.map((i) => (i.isBattery ? (i.priceWithoutTradeIn ?? i.unitPriceIva) : i.unitPriceIva))
+      );
       combinedOptions.push({
         label: "Opción 1 (Combo Semisintético + Batería Ecuador)",
         items: opt1Items,
-        totalUsd: opt1Total,
+        totalUsd: opt1With,
+        hasBattery: true,
+        totalWithTradeInUsd: opt1With,
+        totalWithoutTradeInUsd: opt1Without,
         includesMannolGift: true,
         includesFreeBatteryInstallPedernales: !detectedCity || normalizeText(detectedCity) === "pedernales",
-        qualifiesFreeShipping: opt1Total >= FREE_SHIPPING_THRESHOLD_USD,
+        qualifiesFreeShipping: opt1With >= FREE_SHIPPING_THRESHOLD_USD,
       });
 
       const bat2 = batOptions[1] || batOptions[0];
       const oil2 = oilOptions[1] || oilOptions[0];
       const opt2Items = [...oil2.items, ...bat2.items];
-      const opt2Total = sumExactPricesIva(opt2Items.map((i) => i.unitPriceIva));
+      const opt2With = sumExactPricesIva(
+        opt2Items.map((i) => (i.isBattery ? (i.priceWithTradeIn ?? i.unitPriceIva) : i.unitPriceIva))
+      );
+      const opt2Without = sumExactPricesIva(
+        opt2Items.map((i) => (i.isBattery ? (i.priceWithoutTradeIn ?? i.unitPriceIva) : i.unitPriceIva))
+      );
       combinedOptions.push({
         label: "Opción 2 (Combo Full Sintético + Batería Bosch)",
         items: opt2Items,
-        totalUsd: opt2Total,
+        totalUsd: opt2With,
+        hasBattery: true,
+        totalWithTradeInUsd: opt2With,
+        totalWithoutTradeInUsd: opt2Without,
         includesMannolGift: true,
         includesFreeBatteryInstallPedernales: !detectedCity || normalizeText(detectedCity) === "pedernales",
-        qualifiesFreeShipping: opt2Total >= FREE_SHIPPING_THRESHOLD_USD,
+        qualifiesFreeShipping: opt2With >= FREE_SHIPPING_THRESHOLD_USD,
       });
     }
 

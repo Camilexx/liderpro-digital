@@ -1,6 +1,7 @@
 import { META_CONFIG } from "@/data/metaConfig";
 import {
   buildDeterministicQuotePlan,
+  extractBatteryTradeInFromText,
   extractCityFromText,
   extractCustomerType,
   extractVehicleFromText,
@@ -68,9 +69,9 @@ export const HERMES_SYSTEM_PROMPT =
   "- Pagos: Efectivo contra entrega en Pedernales, transferencia bancaria (Banco Pichincha / Guayaquil / Pacífico) y factura electrónica SRI en todas las ventas.\n" +
   "- Despachos: Entrega e instalación de baterías a domicilio 100% gratis en Pedernales; envíos el mismo día a El Carmen, Jama, Cojimíes, Santo Domingo y todo Ecuador por cooperativa o courier.\n" +
   "Reglas estrictas:\n" +
-  "1) Tono ecuatoriano natural, cálido y directo en 3 a 4 líneas máximo (no sobre-expliques ni uses frases robóticas).\n" +
+  "1) Tono ecuatoriano natural, cálido y directo en 3 a 5 líneas máximo (no sobre-expliques ni uses frases robóticas).\n" +
   "2) PROHIBIDO sumar precios, recalcular IVA o inventar cifras: usa únicamente los precios exactos y nombres limpios de [CALCULADORA EXACTA] (cero signos de exclamación raros en nombres de combos).\n" +
-  "3) Máximo 2 opciones exactas por mensaje. En combos MANNOL menciona el regalo incluido (Cockpit Care con esponja de regalo) y en baterías en Pedernales destaca instalación a domicilio 100% gratis.\n" +
+  "3) Máximo 2 opciones exactas por mensaje. En combos MANNOL menciona el regalo incluido (Cockpit Care con esponja de regalo). En toda cotización de batería (sola o con combo), muestra claramente AMBOS precios finales (*entregando tu batería usada* vs. *sin entregar batería usada*), destaca instalación gratis a domicilio en Pedernales y pregunta si entrega la batería usada.\n" +
   "4) Si piden un producto que no manejamos (llantas, pastillas, parabrisas), dilo con honestidad sin alucinar SKUs.";
 
 function getNvidiaKeys(): string[] {
@@ -110,6 +111,11 @@ function hydrateContextFromHistory(
       if (c) city = c;
       customerType = extractCustomerType(turn.content, customerType);
 
+      const tradeInFlag = extractBatteryTradeInFromText(turn.content);
+      if (tradeInFlag !== null && rebuiltLastQuote) {
+        rebuiltLastQuote = { ...rebuiltLastQuote, batteryTradeIn: tradeInFlag };
+      }
+
       if (!persistedLastQuote) {
         const turnPlan = buildDeterministicQuotePlan({
           userText: turn.content,
@@ -126,9 +132,17 @@ function hydrateContextFromHistory(
               label: o.label,
               items: o.items,
               totalUsd: o.totalUsd,
+              ...(o.hasBattery
+                ? {
+                    hasBattery: true,
+                    totalWithTradeInUsd: o.totalWithTradeInUsd,
+                    totalWithoutTradeInUsd: o.totalWithoutTradeInUsd,
+                  }
+                : {}),
               includesMannolGift: o.includesMannolGift,
               includesFreeBatteryInstallPedernales: o.includesFreeBatteryInstallPedernales,
             })),
+            batteryTradeIn: turnPlan.orderCapture?.batteryTradeIn ?? rebuiltLastQuote?.batteryTradeIn ?? null,
             updatedAt: new Date().toISOString(),
           };
         }
@@ -170,11 +184,14 @@ export function renderHumanDeterministicReply(
 
     case "cierre_pedido_pendiente_datos": {
       const chosen = plan.confirmedOption;
-      const totalStr = chosen ? `$${chosen.totalUsd.toFixed(2)}` : "";
       const missing = plan.orderCapture?.missingFields.join(", ") || "Nombre, Dirección exacta y Forma de pago";
+      const priceText =
+        chosen?.hasBattery && plan.orderCapture?.batteryTradeIn === null && chosen.totalWithTradeInUsd && chosen.totalWithoutTradeInUsd
+          ? `*$${chosen.totalWithTradeInUsd.toFixed(2)}* entregando tu batería usada o *$${chosen.totalWithoutTradeInUsd.toFixed(2)}* sin entregar batería usada (IVA inc.)`
+          : `*$${(chosen?.totalUsd ?? 0).toFixed(2)}* con IVA`;
       return (
-        `¡Excelente elección! Separamos *${chosen?.items.map((i) => i.name).join(" + ")}* (*${totalStr}* con IVA).\n` +
-        `Para sacarlo a despacho de inmediato, pásame por favor: *${missing}* (efectivo contra entrega en Pedernales o transferencia Pichincha/Guayaquil/Pacífico).`
+        `¡Excelente elección! Separamos *${chosen?.items.map((i) => i.name).join(" + ")}* (${priceText}).\n` +
+        `Para sacarlo a despacho e instalación gratis en Pedernales de inmediato, pásame por favor: *${missing}* (efectivo contra entrega en Pedernales o transferencia Pichincha/Guayaquil/Pacífico).`
       );
     }
 
@@ -223,16 +240,23 @@ export function renderHumanDeterministicReply(
       const opt1 = plan.options[0];
       const opt2 = plan.options[1];
       if (!opt1) break;
+      const formatComboBatLine = (idx: number, opt: typeof opt1) => {
+        const names = opt.items.map((i) => i.name).join(" + ");
+        if (opt.hasBattery && opt.totalWithTradeInUsd && opt.totalWithoutTradeInUsd) {
+          return `• *Opción ${idx}:* ${names} → *$${opt.totalWithTradeInUsd.toFixed(2)}* (entregando tu batería usada) | *$${opt.totalWithoutTradeInUsd.toFixed(2)}* (sin entregar batería usada)`;
+        }
+        return `• *Opción ${idx}:* ${names} → Total *$${opt.totalUsd.toFixed(2)}*`;
+      };
       const lines: string[] = [
-        `Para tu *${vehicleStr || "vehículo"}* en *${cityStr}* (incluye *Cockpit Care con esponja de regalo* e *instalación de batería a domicilio 100% gratis en Pedernales*):`,
-        `• *Opción 1:* ${opt1.items.map((i) => `${i.name} ($${i.unitPriceIva.toFixed(2)})`).join(" + ")} → Total *$${opt1.totalUsd.toFixed(2)}*`,
+        `Para tu *${vehicleStr || "vehículo"}* en *${cityStr}* (IVA inc., incluye *Cockpit Care con esponja de regalo* e *instalación gratis a domicilio en Pedernales*):`,
+        formatComboBatLine(1, opt1),
       ];
       if (opt2) {
-        lines.push(
-          `• *Opción 2:* ${opt2.items.map((i) => `${i.name} ($${i.unitPriceIva.toFixed(2)})`).join(" + ")} → Total *$${opt2.totalUsd.toFixed(2)}*`
-        );
+        lines.push(formatComboBatLine(2, opt2));
       }
-      lines.push(`Pagas en efectivo o transferencia (Pichincha/Guayaquil/Pacífico) con factura SRI. ¿Cuál te enviamos?`);
+      lines.push(
+        `Pagas en efectivo o transferencia (Pichincha/Guayaquil/Pacífico) con factura SRI. ¿Cuál opción prefieres y entregas tu batería usada?`
+      );
       return lines.join("\n");
     }
 
@@ -242,16 +266,30 @@ export function renderHumanDeterministicReply(
       if (!opt1) break;
       const installNote =
         !plan.detectedCity || plan.detectedCity.toLowerCase() === "pedernales"
-          ? "con *instalación a domicilio 100% gratis en Pedernales*"
-          : `con envío el mismo día a *${cityStr}*`;
+          ? "con *instalación gratis a domicilio en Pedernales*"
+          : `con envío el mismo día a *${cityStr}* (e instalación gratis a domicilio en Pedernales)`;
+      const formatBatLine = (idx: number, opt: typeof opt1) => {
+        const it = opt.items[0];
+        if (it?.isBattery && it.priceWithTradeIn && it.priceWithoutTradeIn) {
+          const dWith = it.discountPctWithTradeIn ?? 0;
+          const dWithout = it.discountPctWithoutTradeIn ?? 0;
+          return (
+            `• *Opción ${idx}:* ${it.name} → *$${it.priceWithTradeIn.toFixed(2)}* entregando tu batería usada (-${dWith}%)` +
+            ` | *$${it.priceWithoutTradeIn.toFixed(2)}* sin entregar batería usada (-${dWithout}%)`
+          );
+        }
+        return `• *Opción ${idx}:* ${it.name} → *$${opt.totalUsd.toFixed(2)}*`;
+      };
       const lines: string[] = [
-        `Para tu *${vehicleStr || "vehículo"}* te recomiendo estas 2 baterías ${installNote} (IVA inc.):`,
-        `• *Opción 1:* ${opt1.items[0].name} → *$${opt1.totalUsd.toFixed(2)}*`,
+        `Para tu *${vehicleStr || "vehículo"}* te recomiendo estas 2 baterías con descuento oficial vigente (IVA inc.), ${installNote}:`,
+        formatBatLine(1, opt1),
       ];
       if (opt2) {
-        lines.push(`• *Opción 2:* ${opt2.items[0].name} → *$${opt2.totalUsd.toFixed(2)}*`);
+        lines.push(formatBatLine(2, opt2));
       }
-      lines.push(`¿Confirmamos cuál te despachamos?`);
+      lines.push(
+        `Incluye garantía de fábrica y factura SRI. ¿Cuál prefieres y nos confirmas si entregas tu batería usada para registrar tu pedido?`
+      );
       return lines.join("\n");
     }
 
@@ -305,15 +343,43 @@ function buildCalculatorPromptBlock(plan: DeterministicQuotePlan): string {
   if (plan.options.length > 0) {
     lines.push("[CALCULADORA EXACTA — USA ÚNICAMENTE ESTAS CIFRAS Y MÁXIMO 2 OPCIONES]:");
     plan.options.slice(0, 2).forEach((opt, i) => {
-      const detail = opt.items.map((it) => `${it.name} ($${it.unitPriceIva.toFixed(2)})`).join(" + ");
-      lines.push(
-        `Opción ${i + 1}: ${detail} => TOTAL_EXACTO_CON_IVA=$${opt.totalUsd.toFixed(2)}` +
-          `${opt.includesMannolGift ? " | REGALO=Cockpit Care con esponja de regalo" : ""}` +
-          `${opt.includesFreeBatteryInstallPedernales ? " | BENEFICIO=Instalación de batería a domicilio 100% gratis en Pedernales" : ""}`
-      );
+      if (opt.hasBattery && opt.totalWithTradeInUsd && opt.totalWithoutTradeInUsd) {
+        const batItem = opt.items.find((x) => x.isBattery);
+        const detail = opt.items
+          .map((it) =>
+            it.isBattery && it.priceWithTradeIn && it.priceWithoutTradeIn
+              ? `${it.name} (PVP lista $${(it.listPriceIva ?? it.unitPriceIva).toFixed(2)}; con usada $${it.priceWithTradeIn.toFixed(2)} [-${it.discountPctWithTradeIn ?? 0}%] / sin usada $${it.priceWithoutTradeIn.toFixed(2)} [-${it.discountPctWithoutTradeIn ?? 0}%])`
+              : `${it.name} ($${it.unitPriceIva.toFixed(2)})`
+          )
+          .join(" + ");
+        lines.push(
+          `Opción ${i + 1}: ${detail} => CON_BATERIA_USADA=$${opt.totalWithTradeInUsd.toFixed(2)} (-${batItem?.discountPctWithTradeIn ?? 0}%) | SIN_BATERIA_USADA=$${opt.totalWithoutTradeInUsd.toFixed(2)} (-${batItem?.discountPctWithoutTradeIn ?? 0}%)` +
+            `${opt.includesMannolGift ? " | REGALO=Cockpit Care con esponja de regalo" : ""}` +
+            `${opt.includesFreeBatteryInstallPedernales ? " | BENEFICIO=Instalación de batería gratis a domicilio en Pedernales" : ""}`
+        );
+      } else {
+        const detail = opt.items.map((it) => `${it.name} ($${it.unitPriceIva.toFixed(2)})`).join(" + ");
+        lines.push(
+          `Opción ${i + 1}: ${detail} => TOTAL_EXACTO_CON_IVA=$${opt.totalUsd.toFixed(2)}` +
+            `${opt.includesMannolGift ? " | REGALO=Cockpit Care con esponja de regalo" : ""}` +
+            `${opt.includesFreeBatteryInstallPedernales ? " | BENEFICIO=Instalación de batería gratis a domicilio en Pedernales" : ""}`
+        );
+      }
     });
+    if (plan.options.some((o) => o.hasBattery)) {
+      lines.push(
+        "PREGUNTA_OBLIGATORIA=Mostrar AMBOS precios exactos (entregando batería usada y sin entregar batería usada), instalación gratis en Pedernales, y preguntar si entrega la batería usada."
+      );
+    }
   }
   return lines.join("\n");
+}
+
+function containsUsdAmount(text: string, amount: number): boolean {
+  const exact = `$${amount.toFixed(2)}`;
+  if (text.includes(exact)) return true;
+  if (Number.isInteger(amount) && text.includes(`$${amount}`)) return true;
+  return false;
 }
 
 function validateLlmPricingIntegrity(llmReply: string, plan: DeterministicQuotePlan): boolean {
@@ -332,13 +398,33 @@ function validateLlmPricingIntegrity(llmReply: string, plan: DeterministicQuoteP
     return false;
   }
 
-  const allowedAmounts = new Set<string>(["35", "35.00", "15"]);
+  const allowedAmounts = new Set<string>(["35", "35.00", "15", "20", "25", "30", "35"]);
   for (const opt of plan.options) {
     allowedAmounts.add(opt.totalUsd.toFixed(2));
     allowedAmounts.add(String(opt.totalUsd));
+    if (opt.totalWithTradeInUsd) {
+      allowedAmounts.add(opt.totalWithTradeInUsd.toFixed(2));
+      allowedAmounts.add(String(opt.totalWithTradeInUsd));
+    }
+    if (opt.totalWithoutTradeInUsd) {
+      allowedAmounts.add(opt.totalWithoutTradeInUsd.toFixed(2));
+      allowedAmounts.add(String(opt.totalWithoutTradeInUsd));
+    }
     for (const it of opt.items) {
       allowedAmounts.add(it.unitPriceIva.toFixed(2));
       allowedAmounts.add(String(it.unitPriceIva));
+      if (it.priceWithTradeIn) {
+        allowedAmounts.add(it.priceWithTradeIn.toFixed(2));
+        allowedAmounts.add(String(it.priceWithTradeIn));
+      }
+      if (it.priceWithoutTradeIn) {
+        allowedAmounts.add(it.priceWithoutTradeIn.toFixed(2));
+        allowedAmounts.add(String(it.priceWithoutTradeIn));
+      }
+      if (it.listPriceIva) {
+        allowedAmounts.add(it.listPriceIva.toFixed(2));
+        allowedAmounts.add(String(it.listPriceIva));
+      }
     }
   }
   if (plan.primaryTotalUsd !== null) allowedAmounts.add(plan.primaryTotalUsd.toFixed(2));
@@ -354,11 +440,16 @@ function validateLlmPricingIntegrity(llmReply: string, plan: DeterministicQuoteP
   }
 
   if (plan.options.length > 0 && plan.primaryTotalUsd !== null) {
-    if (
-      !llmReply.includes(`$${plan.primaryTotalUsd.toFixed(2)}`) &&
-      !llmReply.includes(`$${plan.primaryTotalUsd}`)
-    ) {
+    if (!containsUsdAmount(llmReply, plan.primaryTotalUsd)) {
       return false;
+    }
+  }
+  const hasAnyBattery = plan.options.some((o) => o.hasBattery);
+  if (hasAnyBattery) {
+    if (!/usada/i.test(llmReply)) return false;
+    for (const opt of plan.options.slice(0, 2)) {
+      if (opt.totalWithTradeInUsd && !containsUsdAmount(llmReply, opt.totalWithTradeInUsd)) return false;
+      if (opt.totalWithoutTradeInUsd && !containsUsdAmount(llmReply, opt.totalWithoutTradeInUsd)) return false;
     }
   }
   if (plan.options.some((o) => o.includesFreeBatteryInstallPedernales)) {
@@ -453,16 +544,25 @@ export async function generateHermesReply(
         label: o.label,
         items: o.items,
         totalUsd: o.totalUsd,
+        ...(o.hasBattery
+          ? {
+              hasBattery: true,
+              totalWithTradeInUsd: o.totalWithTradeInUsd,
+              totalWithoutTradeInUsd: o.totalWithoutTradeInUsd,
+            }
+          : {}),
         includesMannolGift: o.includesMannolGift,
         includesFreeBatteryInstallPedernales: o.includesFreeBatteryInstallPedernales,
       })),
       selectedOptionIndex: null,
+      batteryTradeIn: extractBatteryTradeInFromText(cleanUserText) ?? persistedLastQuote?.batteryTradeIn ?? null,
       updatedAt: new Date().toISOString(),
     };
   } else if (plan.intentTag === "cierre_pedido_pendiente_datos" && persistedLastQuote) {
     nextLastQuote = {
       ...persistedLastQuote,
       selectedOptionIndex: plan.orderCapture?.selectedOptionIndex ?? 0,
+      batteryTradeIn: plan.orderCapture?.batteryTradeIn ?? persistedLastQuote.batteryTradeIn ?? null,
       updatedAt: new Date().toISOString(),
     };
   } else if (plan.intentTag === "pedido_confirmado") {
@@ -542,7 +642,7 @@ export async function generateHermesReply(
               { role: "user", content: userPrompt },
             ],
             temperature: 0.25,
-            max_tokens: 260,
+            max_tokens: 360,
           }),
           signal: AbortSignal.timeout(remainingBudget),
         });

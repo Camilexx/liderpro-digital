@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Scale, ArrowLeft } from "lucide-react";
+import { BUSINESS_CONFIG } from "@/data/businessConfig";
 
 export const metadata: Metadata = {
   title: "Términos y Condiciones de Venta y Servicio | LiderPro Ecuador",
@@ -53,7 +54,7 @@ export default function TerminosPage() {
               1. Identidad de la Empresa y Ámbito de Aplicación
             </h2>
             <p>
-              LiderPro Ecuador opera como Distribuidor Autorizado Multimarca de lubricantes, baterías, filtros y repuestos automotrices con Sede Central y Hub Logístico en la ciudad de Pedernales, Provincia de Manabí, República del Ecuador. Estas condiciones regulan la relación comercial entre LiderPro y sus clientes finales, talleres mecánicos, cooperativas y empresas B2B.
+              LiderPro Ecuador (operado legalmente bajo la razón social <strong>{BUSINESS_CONFIG.legalName}</strong>) opera como Distribuidor Autorizado Multimarca de lubricantes, baterías, filtros y repuestos automotrices con Sede Central y Hub Logístico en la ciudad de Pedernales, Provincia de Manabí, República del Ecuador. Estas condiciones regulan la relación comercial entre LiderPro y sus clientes finales, talleres mecánicos, cooperativas y empresas B2B.
             </p>
           </div>
 

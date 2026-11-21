@@ -10,6 +10,7 @@ export interface CommercialDataField<T = string> {
 
 export interface BusinessConfig {
   name: string;
+  legalName: string;
   slogan: string;
   heroHeadline: string;
   heroSubtitle: string;
@@ -69,6 +70,8 @@ export interface BusinessConfig {
 
 export const BUSINESS_CONFIG: BusinessConfig = {
   name: "LiderPro",
+  // TEMPORARY: Meta Business Verification — remove/revert after approval
+  legalName: "MOSQUERA ROBLES ADRIAN RODOLFO",
   slogan: "Distribuidor Autorizado Multimarca desde Pedernales para Todo el Ecuador.",
   heroHeadline: "Distribuidor Autorizado Multimarca para Tu Vehículo y Flota.",
   heroSubtitle:

@@ -4,6 +4,7 @@ import AnnouncementBar from "@/components/AnnouncementBar";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import { BUSINESS_CONFIG } from "@/data/businessConfig";
 import "./globals.css";
 
 const SITE_URL = "https://www.liderpropedernales.com";
@@ -59,7 +60,7 @@ export const metadata: Metadata = {
     "liderpro pedernales manabi",
     "baterias camaroneras ecuador",
   ],
-  authors: [{ name: "LiderPro Digital" }],
+  authors: [{ name: BUSINESS_CONFIG.legalName }, { name: "LiderPro Digital" }],
   openGraph: {
     title: "LiderPro Ecuador — Distribuidor Autorizado Multimarca",
     description:
@@ -93,6 +94,7 @@ const structuredData = {
       "@type": "AutoPartsStore",
       "@id": `${SITE_URL}/#organization`,
       "name": "LiderPro Ecuador",
+      "legalName": BUSINESS_CONFIG.legalName,
       "alternateName": "LiderPro Productos Automotrices",
       "description":
         "Distribuidor Autorizado Multimarca de lubricantes, baterías, filtros y repuestos automotrices con Sede Central y Bodega Matriz en Pedernales, Manabí, y cobertura logística a las 24 provincias del Ecuador con facturación electrónica SRI.",

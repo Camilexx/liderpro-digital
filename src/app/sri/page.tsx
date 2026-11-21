@@ -9,6 +9,7 @@ import {
   Receipt
 } from "lucide-react";
 import { buildWhatsAppLink } from "@/lib/whatsapp";
+import { BUSINESS_CONFIG } from "@/data/businessConfig";
 
 export const metadata: Metadata = {
   title: "Facturación Electrónica SRI & Cumplimiento Tributario | LiderPro Ecuador",
@@ -97,6 +98,10 @@ export default function SriPage() {
               <div>
                 <span className="text-slate-400 block font-medium">Nombre Comercial:</span>
                 <span className="text-slate-900 font-bold text-sm">LiderPro Ecuador</span>
+              </div>
+              <div>
+                <span className="text-slate-400 block font-medium">Razón Social / Titular Legal:</span>
+                <span className="text-slate-900 font-bold text-sm">{BUSINESS_CONFIG.legalName}</span>
               </div>
               <div>
                 <span className="text-slate-400 block font-medium">Actividad Económica:</span>

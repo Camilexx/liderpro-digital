@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Lock, ArrowLeft, CheckCircle2 } from "lucide-react";
+import { BUSINESS_CONFIG } from "@/data/businessConfig";
 
 export const metadata: Metadata = {
   title: "Política de Privacidad y Protección de Datos Personales (LOPDP) | LiderPro Ecuador",
@@ -53,7 +54,7 @@ export default function PrivacidadPage() {
               1. Responsable del Tratamiento de los Datos
             </h2>
             <p>
-              El responsable del tratamiento de los datos personales recopilados es <strong>LiderPro Ecuador</strong>, con domicilio principal y Hub de Operaciones en la ciudad de Pedernales, Provincia de Manabí, República del Ecuador.
+              El responsable del tratamiento de los datos personales recopilados es <strong>LiderPro Ecuador</strong> (Razón Social / Titular Legal: <strong>{BUSINESS_CONFIG.legalName}</strong>), con domicilio principal y Hub de Operaciones en la ciudad de Pedernales, Provincia de Manabí, República del Ecuador.
             </p>
           </div>
 

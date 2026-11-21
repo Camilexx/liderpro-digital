@@ -49,6 +49,11 @@ export default function Footer() {
             <p className="text-slate-300 max-w-md leading-relaxed text-[11.5px]">
               {BUSINESS_CONFIG.legalNotice}
             </p>
+            {/* TEMPORARY: Meta Business Verification */}
+            <p className="text-slate-200 max-w-md leading-relaxed text-xs font-semibold">
+              Razón Social / Titular Legal:{" "}
+              <span className="text-white">{BUSINESS_CONFIG.legalName}</span>
+            </p>
 
             {/* Social Media Section */}
             <div className="pt-2">
@@ -214,7 +219,7 @@ export default function Footer() {
 
         {/* Bottom */}
         <div className="mt-12 pt-6 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-400">
-          <p>© {new Date().getFullYear()} LiderPro Ecuador. Distribuidor Autorizado Multimarca. Todos los derechos reservados.</p>
+          <p>© {new Date().getFullYear()} LiderPro Ecuador — {BUSINESS_CONFIG.legalName}. Distribuidor Autorizado Multimarca. Todos los derechos reservados.</p>
           <div className="flex flex-wrap gap-x-4 gap-y-1">
             <Link href="/garantias" className="hover:text-[#FFC500]">Garantías</Link>
             <Link href="/sri" className="hover:text-[#FFC500]">Facturación SRI</Link>

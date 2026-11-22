@@ -259,10 +259,40 @@ function buildLiveCustomerContextBlock(
   const cart = ctx.commercialState.cartItems || [];
   if (cart.length > 0) {
     const total = sumExactPricesIva(cart.flatMap((i) => Array(Math.max(1, i.qty || 1)).fill(i.unitPriceIva)));
+    const hasBat = cart.some((i) => i.isBattery && i.priceWithTradeIn && i.priceWithoutTradeIn);
+    const totalConUsada = hasBat
+      ? sumExactPricesIva(
+          cart.flatMap((i) =>
+            Array(Math.max(1, i.qty || 1)).fill(
+              i.isBattery && i.priceWithTradeIn ? i.priceWithTradeIn : i.unitPriceIva
+            )
+          )
+        )
+      : total;
+    const totalSinUsada = hasBat
+      ? sumExactPricesIva(
+          cart.flatMap((i) =>
+            Array(Math.max(1, i.qty || 1)).fill(
+              i.isBattery && i.priceWithoutTradeIn ? i.priceWithoutTradeIn : i.unitPriceIva
+            )
+          )
+        )
+      : total;
     const cartSummary = cart
-      .map((i) => `${i.qty}x ${i.name} [SKU: ${i.sku}] ($${i.unitPriceIva.toFixed(2)} c/u)`)
+      .map((i) => {
+        const batNote =
+          i.isBattery && i.priceWithTradeIn && i.priceWithoutTradeIn
+            ? ` [con usada: $${i.priceWithTradeIn.toFixed(2)} | sin usada: $${i.priceWithoutTradeIn.toFixed(2)}]`
+            : "";
+        return `${i.qty}x ${i.name} [SKU: ${i.sku}] ($${i.unitPriceIva.toFixed(2)} c/u${batNote})`;
+      })
       .join(" | ");
-    lines.push(`- Carrito actual persistido: ${cartSummary} => Total exacto c/IVA: $${total.toFixed(2)}`);
+    lines.push(
+      `- Carrito actual persistido: ${cartSummary} => Total exacto c/IVA: $${total.toFixed(2)}` +
+        (hasBat
+          ? ` (Total exacto carrito CON batería usada: $${totalConUsada.toFixed(2)} | Total exacto carrito SIN batería usada: $${totalSinUsada.toFixed(2)} — USA SIEMPRE ESTAS CIFRAS REDONDEADAS, NUNCA MULTIPLIQUES PORCENTAJES MENTALMENTE)`
+          : "")
+    );
   } else {
     lines.push("- Carrito actual persistido: Vacío");
   }
@@ -350,17 +380,29 @@ function collectAllowedPrices(ctx: MiloToolExecutionContext, recentAssistantMsgs
   const cart = ctx.commercialState.cartItems || [];
   if (cart.length > 0) {
     const prices: number[] = [];
+    const pricesWithTi: number[] = [];
+    const pricesWithoutTi: number[] = [];
     for (const item of cart) {
       allowed.add(Number(item.unitPriceIva.toFixed(2)));
       if (item.listPriceIva) allowed.add(Number(item.listPriceIva.toFixed(2)));
       if (item.priceWithTradeIn) allowed.add(Number(item.priceWithTradeIn.toFixed(2)));
       if (item.priceWithoutTradeIn) allowed.add(Number(item.priceWithoutTradeIn.toFixed(2)));
-      const sub = Number((item.unitPriceIva * Math.max(1, item.qty || 1)).toFixed(2));
+      if (item.priceWithTradeIn && item.priceWithoutTradeIn) {
+        allowed.add(Number(Math.abs(item.priceWithoutTradeIn - item.priceWithTradeIn).toFixed(2)));
+      }
+      const qty = Math.max(1, item.qty || 1);
+      const sub = Number((item.unitPriceIva * qty).toFixed(2));
       allowed.add(sub);
-      for (let i = 0; i < Math.max(1, item.qty || 1); i++) prices.push(item.unitPriceIva);
+      for (let i = 0; i < qty; i++) {
+        prices.push(item.unitPriceIva);
+        pricesWithTi.push(item.isBattery && item.priceWithTradeIn ? item.priceWithTradeIn : item.unitPriceIva);
+        pricesWithoutTi.push(item.isBattery && item.priceWithoutTradeIn ? item.priceWithoutTradeIn : item.unitPriceIva);
+      }
     }
     const total = sumExactPricesIva(prices);
     allowed.add(total);
+    allowed.add(sumExactPricesIva(pricesWithTi));
+    allowed.add(sumExactPricesIva(pricesWithoutTi));
     if (total < FREE_SHIPPING_THRESHOLD_USD) {
       allowed.add(Number((FREE_SHIPPING_THRESHOLD_USD - total).toFixed(2)));
     }

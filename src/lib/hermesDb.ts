@@ -8,6 +8,7 @@ export type ChannelType = "whatsapp" | "demo_web" | "instagram" | "messenger";
 export type QaFlag = "good" | "fix";
 export type OrderStatus = "pending_dispatch" | "dispatched" | "completed" | "cancelled";
 export type SalesStage = "descubrimiento" | "cotizacion" | "objecion" | "cierre" | "pedido_confirmado";
+export type EscalationUrgency = "alta" | "media" | "baja";
 
 export interface CartItem {
   sku: string;
@@ -17,6 +18,11 @@ export interface CartItem {
   unitPriceIva: number;
   qty: number;
   subCategory?: string;
+  isBattery?: boolean;
+  batteryTradeIn?: boolean | null;
+  listPriceIva?: number;
+  priceWithTradeIn?: number;
+  priceWithoutTradeIn?: number;
 }
 
 export interface CommercialState {
@@ -25,7 +31,29 @@ export interface CommercialState {
   batteryTradeIn: boolean | null;
   salesStage: SalesStage;
   lastSuggestedItems: CartItem[];
+  lastRecommendedSkus?: string[];
   updatedAt?: string;
+}
+
+export interface HumanEscalationRecord {
+  sessionId: string;
+  customerName: string | null;
+  activeVehicle: VehicleProfile | null;
+  city: string | null;
+  customerType: CustomerType;
+  reason: string;
+  summary: string | null;
+  urgency: EscalationUrgency;
+  escalatedAt: string;
+}
+
+export interface VehicleSpecCacheEntry {
+  cacheKey: string;
+  vehicleLabel: string;
+  queryText: string;
+  specSummary: string;
+  sourceLabel: string | null;
+  createdAt: string;
 }
 
 export interface VehicleProfile {
@@ -78,6 +106,11 @@ export interface CustomerRecord {
   customerType: CustomerType;
   lastQuote: LastQuoteSnapshot | null;
   commercialState: CommercialState | null;
+  needsHuman?: boolean;
+  escalationReason?: string | null;
+  escalationSummary?: string | null;
+  escalationUrgency?: EscalationUrgency | null;
+  escalatedAt?: string | null;
   updatedAt: string;
 }
 
@@ -210,6 +243,7 @@ export interface AdminChatTurnItem {
 export interface AdminDashboardSnapshot {
   storageMode: "postgres" | "local_fallback";
   orders: OrderRecord[];
+  escalations: HumanEscalationRecord[];
   chatTurns: AdminChatTurnItem[];
   audit: WeeklyAuditReport;
 }
@@ -221,6 +255,7 @@ interface FallbackStoreData {
   customers: Record<string, CustomerRecord>;
   messages: StoredMessageRecord[];
   orders: OrderRecord[];
+  vehicleSpecCache?: Record<string, VehicleSpecCacheEntry>;
   weeklyAudits: Array<{
     id: number;
     periodStart: string;
@@ -333,6 +368,23 @@ async function getPool(): Promise<Pool | null> {
 
         ALTER TABLE customers ADD COLUMN IF NOT EXISTS last_quote JSONB;
         ALTER TABLE customers ADD COLUMN IF NOT EXISTS commercial_state JSONB;
+        ALTER TABLE customers ADD COLUMN IF NOT EXISTS needs_human BOOLEAN NOT NULL DEFAULT FALSE;
+        ALTER TABLE customers ADD COLUMN IF NOT EXISTS escalation_reason TEXT;
+        ALTER TABLE customers ADD COLUMN IF NOT EXISTS escalation_summary TEXT;
+        ALTER TABLE customers ADD COLUMN IF NOT EXISTS escalation_urgency TEXT;
+        ALTER TABLE customers ADD COLUMN IF NOT EXISTS escalated_at TIMESTAMPTZ;
+
+        CREATE INDEX IF NOT EXISTS idx_hermes_customers_needs_human
+          ON customers (needs_human, escalated_at DESC) WHERE needs_human = TRUE;
+
+        CREATE TABLE IF NOT EXISTS vehicle_spec_cache (
+          cache_key TEXT PRIMARY KEY,
+          vehicle_label TEXT NOT NULL,
+          query_text TEXT NOT NULL,
+          spec_summary TEXT NOT NULL,
+          source_label TEXT,
+          created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+        );
 
         CREATE TABLE IF NOT EXISTS messages (
           id BIGSERIAL PRIMARY KEY,
@@ -397,6 +449,9 @@ async function getPool(): Promise<Pool | null> {
 }
 
 function mapPgCustomerRow(row: Record<string, unknown>): CustomerRecord {
+  const rawUrg = String(row.escalation_urgency || "").toLowerCase();
+  const escalationUrgency: EscalationUrgency | null =
+    rawUrg === "alta" || rawUrg === "media" || rawUrg === "baja" ? rawUrg : null;
   return {
     phoneOrSession: String(row.phone_or_session || ""),
     name: typeof row.name === "string" ? row.name : null,
@@ -405,6 +460,11 @@ function mapPgCustomerRow(row: Record<string, unknown>): CustomerRecord {
     customerType: (row.customer_type as CustomerType) || "particular",
     lastQuote: (row.last_quote as LastQuoteSnapshot | null) ?? null,
     commercialState: (row.commercial_state as CommercialState | null) ?? null,
+    needsHuman: Boolean(row.needs_human),
+    escalationReason: typeof row.escalation_reason === "string" ? row.escalation_reason : null,
+    escalationSummary: typeof row.escalation_summary === "string" ? row.escalation_summary : null,
+    escalationUrgency,
+    escalatedAt: row.escalated_at ? new Date(String(row.escalated_at)).toISOString() : null,
     updatedAt: row.updated_at ? new Date(String(row.updated_at)).toISOString() : new Date().toISOString(),
   };
 }
@@ -487,7 +547,8 @@ export async function getCustomer(phoneOrSession: string): Promise<CustomerRecor
     const pool = await getPool();
     if (pool) {
       const { rows } = await pool.query<Record<string, unknown>>(
-        `SELECT phone_or_session, name, active_vehicle, city, customer_type, last_quote, commercial_state, updated_at
+        `SELECT phone_or_session, name, active_vehicle, city, customer_type, last_quote, commercial_state,
+                needs_human, escalation_reason, escalation_summary, escalation_urgency, escalated_at, updated_at
          FROM customers WHERE phone_or_session = $1 LIMIT 1`,
         [key]
       );
@@ -565,7 +626,7 @@ export async function upsertCustomer(input: UpsertCustomerInput): Promise<Custom
   return record;
 }
 
-export async function getRecentMessages(sessionId: string, limit = 20): Promise<StoredMessageRecord[]> {
+export async function getRecentMessages(sessionId: string, limit = 30): Promise<StoredMessageRecord[]> {
   const key = sessionId.trim();
   if (!key) return [];
 
@@ -931,7 +992,8 @@ async function loadMessagesAndCustomersSince(
         [periodStart.toISOString()]
       );
       const custRes = await pool.query<Record<string, unknown>>(
-        `SELECT phone_or_session, name, active_vehicle, city, customer_type, last_quote, commercial_state, updated_at
+        `SELECT phone_or_session, name, active_vehicle, city, customer_type, last_quote, commercial_state,
+                needs_human, escalation_reason, escalation_summary, escalation_urgency, escalated_at, updated_at
          FROM customers`
       );
       return {
@@ -1203,10 +1265,209 @@ export async function getAdminDashboardSnapshot(params: {
     .reverse()
     .slice(0, 120);
 
+  const escalations: HumanEscalationRecord[] = customers
+    .filter((c) => Boolean(c.needsHuman))
+    .map((c) => ({
+      sessionId: c.phoneOrSession,
+      customerName: c.name,
+      activeVehicle: c.activeVehicle,
+      city: c.city,
+      customerType: c.customerType,
+      reason: c.escalationReason || "Escalamiento solicitado",
+      summary: c.escalationSummary || null,
+      urgency: c.escalationUrgency || "alta",
+      escalatedAt: c.escalatedAt || c.updatedAt,
+    }))
+    .sort((a, b) => new Date(b.escalatedAt).getTime() - new Date(a.escalatedAt).getTime());
+
   return {
     storageMode,
     orders,
+    escalations,
     chatTurns: filteredTurns,
     audit,
   };
+}
+
+export async function flagCustomerHumanEscalation(input: {
+  phoneOrSession: string;
+  reason: string;
+  summary: string;
+  urgency: EscalationUrgency;
+  customerName?: string | null;
+  city?: string | null;
+}): Promise<{ ok: boolean; telegramSent: boolean }> {
+  const key = input.phoneOrSession.trim();
+  if (!key) return { ok: false, telegramSent: false };
+  const safeReason = input.reason.trim().slice(0, 260) || "Atención de asesor humano";
+  const safeSummary = input.summary.trim().slice(0, 600);
+  const safeUrgency: EscalationUrgency =
+    input.urgency === "alta" || input.urgency === "media" || input.urgency === "baja"
+      ? input.urgency
+      : "alta";
+  const nowIso = new Date().toISOString();
+
+  try {
+    const pool = await getPool();
+    if (pool) {
+      await pool.query(
+        `INSERT INTO customers (
+           phone_or_session, name, city, needs_human, escalation_reason,
+           escalation_summary, escalation_urgency, escalated_at, updated_at
+         )
+         VALUES ($1, $2, $3, TRUE, $4, $5, $6, NOW(), NOW())
+         ON CONFLICT (phone_or_session) DO UPDATE SET
+           name = COALESCE(EXCLUDED.name, customers.name),
+           city = COALESCE(EXCLUDED.city, customers.city),
+           needs_human = TRUE,
+           escalation_reason = EXCLUDED.escalation_reason,
+           escalation_summary = EXCLUDED.escalation_summary,
+           escalation_urgency = EXCLUDED.escalation_urgency,
+           escalated_at = NOW(),
+           updated_at = NOW()`,
+        [key, input.customerName ?? null, input.city ?? null, safeReason, safeSummary, safeUrgency]
+      );
+    } else {
+      const store = loadFallbackStore();
+      const prev = store.customers[key];
+      store.customers[key] = {
+        phoneOrSession: key,
+        name: input.customerName ?? prev?.name ?? null,
+        activeVehicle: prev?.activeVehicle ?? null,
+        city: input.city ?? prev?.city ?? null,
+        customerType: prev?.customerType ?? "particular",
+        lastQuote: prev?.lastQuote ?? null,
+        commercialState: prev?.commercialState ?? null,
+        needsHuman: true,
+        escalationReason: safeReason,
+        escalationSummary: safeSummary,
+        escalationUrgency: safeUrgency,
+        escalatedAt: nowIso,
+        updatedAt: nowIso,
+      };
+      persistFallbackStore(store);
+    }
+  } catch (err) {
+    console.warn("[HermesDB] flagCustomerHumanEscalation fallback:", err instanceof Error ? err.message : String(err));
+  }
+
+  const urgEmoji = safeUrgency === "alta" ? "🔴" : safeUrgency === "media" ? "🟠" : "🟡";
+  const tgText =
+    `🚨 *ESCALAMIENTO HUMANO MILO (${urgEmoji} ${safeUrgency.toUpperCase()})*\n` +
+    `• *Cliente/Sesión:* ${input.customerName || "Sin nombre"} (${key})\n` +
+    (input.city ? `• *Ciudad:* ${input.city}\n` : "") +
+    `• *Motivo:* ${safeReason}\n` +
+    `• *Resumen:* ${safeSummary}\n` +
+    `👉 Atender desde /admin-hermes o WhatsApp Pedernales.`;
+  const telegramSent = await sendTelegramAlert(tgText);
+  return { ok: true, telegramSent };
+}
+
+export async function resolveCustomerHumanEscalation(phoneOrSession: string): Promise<{ ok: boolean }> {
+  const key = phoneOrSession.trim();
+  if (!key) return { ok: false };
+
+  try {
+    const pool = await getPool();
+    if (pool) {
+      const res = await pool.query(
+        `UPDATE customers
+         SET needs_human = FALSE,
+             escalation_reason = NULL,
+             escalation_summary = NULL,
+             escalation_urgency = NULL,
+             escalated_at = NULL,
+             updated_at = NOW()
+         WHERE phone_or_session = $1`,
+        [key]
+      );
+      return { ok: (res.rowCount ?? 0) > 0 };
+    }
+  } catch (err) {
+    console.warn("[HermesDB] resolveCustomerHumanEscalation fallback:", err instanceof Error ? err.message : String(err));
+  }
+
+  const store = loadFallbackStore();
+  if (store.customers[key]) {
+    store.customers[key].needsHuman = false;
+    store.customers[key].escalationReason = null;
+    store.customers[key].escalationSummary = null;
+    store.customers[key].escalationUrgency = null;
+    store.customers[key].escalatedAt = null;
+    persistFallbackStore(store);
+    return { ok: true };
+  }
+  return { ok: false };
+}
+
+export async function getCachedVehicleSpec(cacheKey: string): Promise<VehicleSpecCacheEntry | null> {
+  const key = cacheKey.trim().toLowerCase().slice(0, 180);
+  if (!key) return null;
+  try {
+    const pool = await getPool();
+    if (pool) {
+      const { rows } = await pool.query<Record<string, unknown>>(
+        `SELECT cache_key, vehicle_label, query_text, spec_summary, source_label, created_at
+         FROM vehicle_spec_cache
+         WHERE cache_key = $1
+         LIMIT 1`,
+        [key]
+      );
+      if (rows.length > 0) {
+        const r = rows[0];
+        return {
+          cacheKey: String(r.cache_key),
+          vehicleLabel: String(r.vehicle_label),
+          queryText: String(r.query_text),
+          specSummary: String(r.spec_summary),
+          sourceLabel: typeof r.source_label === "string" ? r.source_label : null,
+          createdAt: r.created_at ? new Date(String(r.created_at)).toISOString() : new Date().toISOString(),
+        };
+      }
+      return null;
+    }
+  } catch {
+    // fallback below
+  }
+  const store = loadFallbackStore();
+  return store.vehicleSpecCache?.[key] || null;
+}
+
+export async function setCachedVehicleSpec(entry: {
+  cacheKey: string;
+  vehicleLabel: string;
+  queryText: string;
+  specSummary: string;
+  sourceLabel?: string | null;
+}): Promise<void> {
+  const key = entry.cacheKey.trim().toLowerCase().slice(0, 180);
+  if (!key || !entry.specSummary.trim()) return;
+  try {
+    const pool = await getPool();
+    if (pool) {
+      await pool.query(
+        `INSERT INTO vehicle_spec_cache (cache_key, vehicle_label, query_text, spec_summary, source_label, created_at)
+         VALUES ($1, $2, $3, $4, $5, NOW())
+         ON CONFLICT (cache_key) DO UPDATE SET
+           spec_summary = EXCLUDED.spec_summary,
+           source_label = EXCLUDED.source_label,
+           created_at = NOW()`,
+        [key, entry.vehicleLabel.slice(0, 120), entry.queryText.slice(0, 160), entry.specSummary.slice(0, 900), entry.sourceLabel ?? null]
+      );
+      return;
+    }
+  } catch {
+    // fallback below
+  }
+  const store = loadFallbackStore();
+  if (!store.vehicleSpecCache) store.vehicleSpecCache = {};
+  store.vehicleSpecCache[key] = {
+    cacheKey: key,
+    vehicleLabel: entry.vehicleLabel,
+    queryText: entry.queryText,
+    specSummary: entry.specSummary,
+    sourceLabel: entry.sourceLabel ?? null,
+    createdAt: new Date().toISOString(),
+  };
+  persistFallbackStore(store);
 }

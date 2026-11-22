@@ -1,9 +1,16 @@
 import { NextRequest, NextResponse } from "next/server";
 import { META_CONFIG } from "@/data/metaConfig";
+import {
+  AUDIO_FALLBACK_REPLY_ES,
+  downloadMetaWhatsAppMedia,
+  isAudioTranscriptionConfigured,
+  transcribeAudioBuffer,
+} from "@/lib/audioTranscriber";
 import { generateHermesReply } from "@/lib/hermesEngine";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
+export const maxDuration = 30;
 
 // Deduplicación simple en memoria para evitar reintentos duplicados de Meta en instancias cálidas
 const processedIds = new Set<string>();
@@ -85,7 +92,13 @@ interface MetaChangeItem {
     message?: string;
     from?: { id?: string; username?: string; name?: string };
     metadata?: { phone_number_id?: string; display_phone_number?: string };
-    messages?: Array<{ id?: string; from?: string; type?: string; text?: { body?: string } }>;
+    messages?: Array<{
+      id?: string;
+      from?: string;
+      type?: string;
+      text?: { body?: string };
+      audio?: { id?: string; mime_type?: string };
+    }>;
     contacts?: Array<{ wa_id?: string; profile?: { name?: string } }>;
   };
 }
@@ -234,16 +247,47 @@ export async function POST(req: NextRequest) {
         }
 
         for (const msg of value?.messages || []) {
-          if (msg.type === "text" && msg.from && msg.text?.body) {
+          if (!msg.from) continue;
+          const targetPhoneId = phoneId || META_CONFIG.phoneNumberId247;
+
+          if (msg.type === "text" && msg.text?.body) {
             if (msg.id && !markProcessed(`wa:${msg.id}`)) continue;
             const hermes = await generateHermesReply(msg.text.body, [], {
               sessionId: `wa:${msg.from}`,
               channel: "whatsapp",
               customerName: contactNameByWaId.get(msg.from) || null,
               customerPhone: msg.from,
-              timeoutMs: 4800,
+              timeoutMs: 14000,
             });
-            await sendMetaWhatsAppReply(phoneId || META_CONFIG.phoneNumberId247, msg.from, hermes.reply);
+            await sendMetaWhatsAppReply(targetPhoneId, msg.from, hermes.reply);
+            continue;
+          }
+
+          if (msg.type === "audio") {
+            if (msg.id && !markProcessed(`wa:${msg.id}`)) continue;
+            let replyText = AUDIO_FALLBACK_REPLY_ES;
+
+            if (msg.audio?.id && waToken && isAudioTranscriptionConfigured()) {
+              const dl = await downloadMetaWhatsAppMedia(msg.audio.id, waToken);
+              if (dl.ok && dl.buffer) {
+                const tr = await transcribeAudioBuffer({
+                  buffer: dl.buffer,
+                  mimeType: dl.mimeType || msg.audio.mime_type || "audio/ogg",
+                });
+                if (tr.ok && tr.text) {
+                  const hermes = await generateHermesReply(tr.text, [], {
+                    sessionId: `wa:${msg.from}`,
+                    channel: "whatsapp",
+                    customerName: contactNameByWaId.get(msg.from) || null,
+                    customerPhone: msg.from,
+                    timeoutMs: 14000,
+                  });
+                  replyText = hermes.reply;
+                }
+              }
+            }
+
+            await sendMetaWhatsAppReply(targetPhoneId, msg.from, replyText);
           }
         }
       }

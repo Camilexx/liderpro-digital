@@ -11,6 +11,7 @@ import {
   LogOut,
   MessageSquare,
   Package,
+  PhoneCall,
   RefreshCw,
   ShoppingBag,
   Truck,
@@ -72,9 +73,22 @@ interface WeeklyAuditReport {
   recommendations: string[];
 }
 
+interface HumanEscalationRecord {
+  sessionId: string;
+  customerName: string | null;
+  activeVehicle: VehicleProfile | null;
+  city: string | null;
+  customerType: string;
+  reason: string;
+  summary: string | null;
+  urgency: "alta" | "media" | "baja";
+  escalatedAt: string;
+}
+
 interface DashboardSnapshot {
   storageMode: "postgres" | "local_fallback";
   orders: OrderRecord[];
+  escalations: HumanEscalationRecord[];
   chatTurns: ChatTurnItem[];
   audit: WeeklyAuditReport;
 }
@@ -227,6 +241,26 @@ export default function AdminHermesDashboard() {
     }
   }
 
+  async function handleResolveEscalation(sessionId: string) {
+    if (!adminKey) return;
+    try {
+      const resp = await fetch("/api/admin/hermes-audit", {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+          "x-hermes-admin-key": adminKey,
+        },
+        body: JSON.stringify({ action: "resolve_escalation", sessionId }),
+      });
+      if (resp.ok) {
+        setAuditToast(`Escalamiento de ${sessionId} marcado como resuelto.`);
+        await loadDashboard(adminKey, channelFilter, onlyFix);
+      }
+    } catch {
+      // Silencio seguro
+    }
+  }
+
   function handleLogout() {
     sessionStorage.removeItem(STORAGE_KEY_NAME);
     setAdminKey("");
@@ -296,6 +330,7 @@ export default function AdminHermesDashboard() {
 
   const pendingOrders = (snapshot?.orders || []).filter((o) => o.status === "pending_dispatch");
   const allOrders = snapshot?.orders || [];
+  const escalations = snapshot?.escalations || [];
   const audit = snapshot?.audit;
 
   return (
@@ -362,7 +397,21 @@ export default function AdminHermesDashboard() {
         )}
 
         {/* KPIs */}
-        <section className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+        <section className="grid grid-cols-2 gap-3 sm:grid-cols-5">
+          <div
+            className={`rounded-xl border p-3.5 shadow-sm ${
+              escalations.length > 0
+                ? "border-red-400 bg-red-600 text-white"
+                : "border-slate-200 bg-white text-slate-900"
+            }`}
+          >
+            <div className="flex items-center justify-between text-xs font-semibold uppercase tracking-wide opacity-90">
+              <span>Escalamientos</span>
+              <PhoneCall className={`h-4 w-4 ${escalations.length > 0 ? "text-white" : "text-red-600"}`} />
+            </div>
+            <p className="mt-1.5 text-2xl font-extrabold">{escalations.length}</p>
+          </div>
+
           <div
             className={`rounded-xl border p-3.5 shadow-sm ${
               pendingOrders.length > 0
@@ -402,6 +451,78 @@ export default function AdminHermesDashboard() {
               {(audit?.outOfStockRanking || []).reduce((acc, i) => acc + i.count, 0)}
             </p>
           </div>
+        </section>
+
+        {/* SECCIÓN 0: ALERTAS DE ESCALAMIENTO HUMANO (PRIORIDAD ROJA ARRIBA) */}
+        <section
+          className={`rounded-2xl border shadow-sm ${
+            escalations.length > 0 ? "border-red-400 bg-red-50/70" : "border-slate-200 bg-white"
+          }`}
+        >
+          <div className="flex items-center justify-between border-b border-red-200/70 px-4 py-3">
+            <div className="flex items-center gap-2">
+              <PhoneCall className="h-5 w-5 text-red-600" />
+              <h2 className="text-sm font-bold text-slate-900 sm:text-base">
+                Alertas de Escalamiento Humano ({escalations.length})
+              </h2>
+            </div>
+            {escalations.length > 0 && (
+              <span className="animate-pulse rounded-full bg-red-600 px-2.5 py-0.5 text-[11px] font-bold text-white">
+                {escalations.length} REQUIERE{escalations.length > 1 ? "N" : ""} ASESOR
+              </span>
+            )}
+          </div>
+
+          {escalations.length === 0 ? (
+            <p className="px-4 py-5 text-center text-xs text-slate-500">
+              Sin chats pendientes de escalamiento humano en este momento.
+            </p>
+          ) : (
+            <div className="divide-y divide-red-200/60">
+              {escalations.map((esc) => (
+                <div
+                  key={esc.sessionId}
+                  className="flex flex-col gap-3 border-l-4 border-l-red-600 bg-white/90 p-4 sm:flex-row sm:items-center sm:justify-between"
+                >
+                  <div className="space-y-1 text-xs">
+                    <div className="flex flex-wrap items-center gap-2">
+                      <span
+                        className={`rounded-full px-2 py-0.5 text-[11px] font-bold uppercase ${
+                          esc.urgency === "alta"
+                            ? "bg-red-600 text-white"
+                            : esc.urgency === "media"
+                            ? "bg-amber-500 text-white"
+                            : "bg-slate-700 text-white"
+                        }`}
+                      >
+                        Urgencia {esc.urgency}
+                      </span>
+                      <span className="font-mono text-[11px] text-slate-600">{esc.sessionId}</span>
+                      <span className="text-slate-500">{formatDateEc(esc.escalatedAt)}</span>
+                    </div>
+                    <p className="text-sm font-bold text-red-950">
+                      {esc.customerName || "Cliente"} — {esc.reason}
+                    </p>
+                    {esc.summary && <p className="text-slate-700">{esc.summary}</p>}
+                    <p className="text-slate-500">
+                      <strong>Ficha:</strong> {formatVehicle(esc.activeVehicle, esc.city)} •{" "}
+                      <strong>Tipo:</strong> {esc.customerType}
+                    </p>
+                  </div>
+                  <div className="flex shrink-0 items-center">
+                    <button
+                      type="button"
+                      onClick={() => void handleResolveEscalation(esc.sessionId)}
+                      className="inline-flex items-center gap-1.5 rounded-lg bg-emerald-600 px-3 py-1.5 text-xs font-semibold text-white shadow-sm hover:bg-emerald-700"
+                    >
+                      <CheckCircle2 className="h-3.5 w-3.5" />
+                      <span>Marcar Resuelto</span>
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
         </section>
 
         {/* SECCIÓN 1: PEDIDOS PENDIENTES DE DESPACHO (PRIORIDAD ROJA ARRIBA) */}

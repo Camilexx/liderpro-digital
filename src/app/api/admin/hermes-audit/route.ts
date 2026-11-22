@@ -3,6 +3,7 @@ import { NextRequest, NextResponse } from "next/server";
 import {
   generateAndSaveWeeklyAudit,
   getAdminDashboardSnapshot,
+  resolveCustomerHumanEscalation,
   updateOrderStatus,
   type OrderStatus,
 } from "@/lib/hermesDb";
@@ -132,7 +133,25 @@ export async function PATCH(req: NextRequest) {
       return authErrorResponse(auth.configured);
     }
 
-    const body = (await req.json()) as { orderId?: number | string; status?: string };
+    const body = (await req.json()) as {
+      action?: string;
+      sessionId?: string;
+      orderId?: number | string;
+      status?: string;
+    };
+
+    if (body.action === "resolve_escalation") {
+      const targetSession = typeof body.sessionId === "string" ? body.sessionId.trim() : "";
+      if (!targetSession) {
+        return NextResponse.json(
+          { ok: false, error: "Se requiere 'sessionId' para resolver el escalamiento." },
+          { status: 400 }
+        );
+      }
+      const res = await resolveCustomerHumanEscalation(targetSession);
+      return NextResponse.json({ ok: true, resolved: res.ok, sessionId: targetSession }, { status: 200 });
+    }
+
     const orderId = Number(body.orderId);
     const validStatuses: OrderStatus[] = ["pending_dispatch", "dispatched", "completed", "cancelled"];
     const nextStatus = validStatuses.includes(body.status as OrderStatus)

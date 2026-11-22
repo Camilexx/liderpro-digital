@@ -4,6 +4,7 @@ import { generateHermesReply, type ChatTurn } from "@/lib/hermesEngine";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
+export const maxDuration = 30;
 
 function generateDemoSessionId(): string {
   return `demo-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
@@ -36,7 +37,7 @@ export async function POST(req: NextRequest) {
       sessionId,
       channel: "demo_web",
       customerName: typeof body.customerName === "string" ? body.customerName.trim().slice(0, 80) : null,
-      timeoutMs: 4800,
+      timeoutMs: 18000,
     });
 
     return NextResponse.json(
@@ -54,10 +55,12 @@ export async function POST(req: NextRequest) {
         city: result.city,
         customerType: result.customerType,
         quotedTotalUsd: result.quotedTotalUsd,
+        cartTotalUsd: result.cartTotalUsd ?? null,
         intentTag: result.intentTag,
         dbStorageMode: result.dbStorageMode,
         orderCreated: result.orderCreated,
         order: result.order,
+        escalatedToHuman: Boolean(result.escalatedToHuman),
         channel: "whatsapp_demo_milo_24_7",
       },
       { status: 200 }

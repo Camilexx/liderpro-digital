@@ -1,0 +1,1034 @@
+import {
+  computeBatteryDiscountPricing,
+  extractCityFromText,
+  extractCustomerType,
+  extractVehicleFromText,
+  formatHumanProductName,
+  formatVehicleLabel,
+  FREE_SHIPPING_THRESHOLD_USD,
+  getCatalogItemBySku,
+  mergeVehicleProfiles,
+  normalizeText,
+  pickMaxTwoBatteries,
+  pickMaxTwoLubricantCombos,
+  resolveCatalogPriceIva,
+  resolveDbEntryForProfile,
+  sumExactPricesIva,
+  type HermesIntentTag,
+} from "@/lib/hermesCatalog";
+import {
+  flagCustomerHumanEscalation,
+  getCachedVehicleSpec,
+  insertOrder,
+  setCachedVehicleSpec,
+  type CartItem,
+  type CommercialState,
+  type CustomerType,
+  type EscalationUrgency,
+  type OrderRecord,
+  type VehicleProfile,
+} from "@/lib/hermesDb";
+import {
+  getIndexedCatalogEntry,
+  MILO_FULL_CATALOG_INDEX,
+  resolveMulticategoryCatalogQuery,
+  type IndexedCatalogEntry,
+} from "@/lib/miloCatalogIndex";
+
+export interface MiloToolExecutionContext {
+  sessionId: string;
+  customerName: string | null;
+  customerPhone: string | null;
+  activeVehicle: VehicleProfile | null;
+  city: string | null;
+  customerType: CustomerType;
+  commercialState: CommercialState;
+  observedPricesUsd: Set<number>;
+  matchedSkus: Set<string>;
+  createdOrder: OrderRecord | null;
+  escalatedToHuman: boolean;
+  intentTag: HermesIntentTag;
+  toolsUsed: string[];
+}
+
+export interface OpenAIToolDefinition {
+  type: "function";
+  function: {
+    name: string;
+    description: string;
+    parameters: Record<string, unknown>;
+  };
+}
+
+export const MILO_OPENAI_TOOLS: OpenAIToolDefinition[] = [
+  {
+    type: "function",
+    function: {
+      name: "buscar_en_catalogo",
+      description:
+        "Busca uno o MÚLTIPLES productos en el mismo turno dentro del catálogo real de LíderPro Pedernales (426 SKUs). " +
+        "Devuelve SKUs exactos, descripción técnica, precios exactos con IVA (y descuentos de batería Ecuador 35%/30% y Bosch 25%/20%) y productos fuera de stock.",
+      parameters: {
+        type: "object",
+        properties: {
+          consultas: {
+            type: "array",
+            items: { type: "string" },
+            description:
+              "Lista de consultas a buscar en paralelo (ej. ['limpia inyectores gasolina', 'combo aceite y filtro Aveo 2015'] o ['bateria Chery Tiggo 7 Pro', 'aceite 5W-30']).",
+          },
+          vehiculo: {
+            type: "string",
+            description: "Opcional: marca, modelo, año y combustible del vehículo mencionado.",
+          },
+        },
+        required: ["consultas"],
+      },
+    },
+  },
+  {
+    type: "function",
+    function: {
+      name: "gestionar_carrito",
+      description:
+        "Mantiene el carrito real multi-producto del cliente y calcula el desglose y total EXACTO con IVA en TypeScript. " +
+        "Úsalo cuando el cliente pida armar un combo completo, sumar productos, quitar algo o saber el total consolidado.",
+      parameters: {
+        type: "object",
+        properties: {
+          accion: {
+            type: "string",
+            enum: ["add", "remove", "set", "clear", "summary"],
+            description:
+              "'add' suma ítems al carrito actual; 'set' reemplaza el carrito con la lista exacta; 'remove' quita SKUs; 'clear' vacía; 'summary' devuelve el resumen actual.",
+          },
+          items: {
+            type: "array",
+            items: {
+              type: "object",
+              properties: {
+                sku: { type: "string", description: "SKU exacto devuelto por buscar_en_catalogo" },
+                qty: { type: "number", description: "Cantidad (default 1)" },
+                battery_trade_in: {
+                  type: "boolean",
+                  description: "Solo para baterías: true si entrega batería usada, false si NO entrega usada.",
+                },
+              },
+              required: ["sku"],
+            },
+          },
+        },
+        required: ["accion"],
+      },
+    },
+  },
+  {
+    type: "function",
+    function: {
+      name: "consultar_especificacion_vehiculo_web",
+      description:
+        "Consulta técnica controlada (base local + búsqueda web ligera cacheada en Postgres) ÚNICAMENTE para confirmar viscosidad de aceite, litros de cárter o grupo de batería de un vehículo poco común que no esté detallado aún. PROHIBIDO consultar precios o tiendas externas.",
+      parameters: {
+        type: "object",
+        properties: {
+          vehiculo: { type: "string", description: "Ej: 'Chery Tiggo 7 Pro 2023' o 'Volkswagen Gol 2010'" },
+          consulta_tecnica: {
+            type: "string",
+            description: "Ej: 'viscosidad aceite motor litros y grupo bateria'",
+          },
+        },
+        required: ["vehiculo", "consulta_tecnica"],
+      },
+    },
+  },
+  {
+    type: "function",
+    function: {
+      name: "registrar_pedido",
+      description:
+        "Registra un pedido confirmado en Postgres usando el carrito real del cliente. " +
+        "Úsalo SOLO cuando el cliente confirme que quiere pedir y ya dio su nombre, dirección/ciudad/retiro y forma de pago.",
+      parameters: {
+        type: "object",
+        properties: {
+          nombre_cliente: { type: "string", description: "Nombre del cliente" },
+          telefono: { type: "string", description: "Teléfono de contacto si lo indicó" },
+          ciudad: { type: "string", description: "Ciudad de entrega (default Pedernales si es local)" },
+          tipo_entrega: {
+            type: "string",
+            enum: ["domicilio_pedernales", "retiro_tienda_pedernales", "envio_cooperativa_nacional"],
+            description: "Modalidad de entrega",
+          },
+          direccion_o_terminal: {
+            type: "string",
+            description: "Dirección exacta en Pedernales, 'Retiro en tienda Vía al Carmen', o cooperativa/terminal/Servientrega/Tramaco",
+          },
+          cedula_o_ruc: { type: "string", description: "Cédula o RUC si el cliente la dio (para envío nacional o factura)" },
+          metodo_pago: {
+            type: "string",
+            description: "Efectivo o transferencia (Banco Pichincha, Banco Guayaquil o Banco del Pacífico)",
+          },
+          items: {
+            type: "array",
+            description: "Opcional si el carrito ya tiene los ítems; lista de {sku, qty, battery_trade_in?} para confirmar.",
+            items: {
+              type: "object",
+              properties: {
+                sku: { type: "string" },
+                qty: { type: "number" },
+                battery_trade_in: { type: "boolean" },
+              },
+              required: ["sku"],
+            },
+          },
+        },
+        required: ["nombre_cliente", "tipo_entrega", "direccion_o_terminal", "metodo_pago"],
+      },
+    },
+  },
+  {
+    type: "function",
+    function: {
+      name: "escalar_a_asesor_humano",
+      description:
+        "Marca el chat con alerta prioritaria en /admin-hermes y notifica a un asesor humano en Pedernales (y Telegram). " +
+        "Úsalo cuando el cliente pida hablar con un encargado/persona, pida crédito a 30 días o descuento mayorista fuera de tabla (ej. 20-40 canecas), muestre frustración o haga una consulta técnica incierta.",
+      parameters: {
+        type: "object",
+        properties: {
+          motivo: { type: "string", description: "Motivo corto (ej. 'Cotización mayorista 40 canecas + crédito 30 días')" },
+          resumen_corto: { type: "string", description: "Resumen claro de lo que necesita el cliente para el asesor humano" },
+          urgencia: { type: "string", enum: ["alta", "media", "baja"] },
+        },
+        required: ["motivo", "resumen_corto", "urgencia"],
+      },
+    },
+  },
+];
+
+/** Normaliza jerga y faltas ortográficas comunes de Ecuador (Costa/Manabí y Sierra) */
+export function expandEcuadorianColloquialisms(text: string): string {
+  return normalizeText(text)
+    .replace(/\b(votando|botando|echando)\s+umo\b/g, "botando humo")
+    .replace(/\bumo\b/g, "humo")
+    .replace(/\bfull\s+gaso(?:lina)?\b/g, "mucha gasolina traga gasolina")
+    .replace(/\bgaso\b/g, "gasolina")
+    .replace(/\baceitada\b/g, "cambio de aceite")
+    .replace(/\b(?:bajada|descargada|muerta|sin\s+carga)\b/g, "bateria bajada")
+    .replace(/\bahogado\b/g, "inyectores cuerpo de aceleracion")
+    .replace(/\bcascabelea|pistonea\b/g, "cascabeleo octanaje gasolina")
+    .replace(/\broles\b/g, "rodamientos roles")
+    .replace(/\bcanekas?\b/g, "caneca 20 litros");
+}
+
+function recordPrice(ctx: MiloToolExecutionContext, price: number | null | undefined): void {
+  if (typeof price === "number" && Number.isFinite(price) && price > 0) {
+    ctx.observedPricesUsd.add(Number(price.toFixed(2)));
+  }
+}
+
+interface CatalogCandidatePayload {
+  sku: string;
+  name: string;
+  brand: string;
+  presentation: string;
+  subCategory: string;
+  priceIva: number;
+  functionSummary: string;
+  isBattery?: boolean;
+  batteryBrand?: "ecuador" | "bosch";
+  listPriceIva?: number;
+  priceWithTradeIn?: number;
+  discountPctWithTradeIn?: number;
+  priceWithoutTradeIn?: number;
+  discountPctWithoutTradeIn?: number;
+  freeInstallPedernales?: boolean;
+  includesAdvanceFilterAndGift?: boolean;
+}
+
+function toCandidatePayload(entry: IndexedCatalogEntry): CatalogCandidatePayload {
+  const raw = getCatalogItemBySku(entry.sku);
+  const bat = raw ? computeBatteryDiscountPricing(raw) : null;
+  const humanName = formatHumanProductName(entry.sku, entry.name);
+  const isCombo = entry.subCategory === "combos_mannol" || entry.sku.toUpperCase().startsWith("COMBO-MANNOL-");
+  return {
+    sku: entry.sku,
+    name: humanName,
+    brand: entry.brand,
+    presentation: entry.presentation,
+    subCategory: entry.subCategory,
+    priceIva: bat ? bat.priceWithTradeIn : entry.priceIva,
+    functionSummary: entry.functionSummary,
+    ...(bat
+      ? {
+          isBattery: true,
+          batteryBrand: bat.batteryBrand,
+          listPriceIva: bat.listPriceIva,
+          priceWithTradeIn: bat.priceWithTradeIn,
+          discountPctWithTradeIn: bat.discountPctWithTradeIn,
+          priceWithoutTradeIn: bat.priceWithoutTradeIn,
+          discountPctWithoutTradeIn: bat.discountPctWithoutTradeIn,
+          freeInstallPedernales: true,
+        }
+      : {}),
+    ...(isCombo ? { includesAdvanceFilterAndGift: true } : {}),
+  };
+}
+
+function detectOutOfStockForSingleQuery(norm: string): string | null {
+  const isSprayOrAdditive = /\b(spray|limpiador|limpia\s+frenos|aditivo|espuma|tratamiento|sellador|refrigerante)\b/.test(norm);
+  if (/\bliquido\s+de\s+frenos?\b|\bdot\s*[34]\b|\baceite\s+de\s+frenos?\b/.test(norm)) {
+    return "líquido de frenos (DOT 3 / DOT 4)";
+  }
+  if (!isSprayOrAdditive && /\b(pastillas?|balatas?|discos?\s+de\s+freno)\b/.test(norm)) {
+    return "pastillas / discos de freno";
+  }
+  if (!isSprayOrAdditive && /\b(llantas?|neumaticos?|cauchos?|aros?|rines?)\b/.test(norm)) {
+    return "llantas / neumáticos";
+  }
+  if (/\b(bujias?|bobinas?|cables?\s+de\s+bujia)\b/.test(norm)) {
+    return "bujías / encendido";
+  }
+  if (/\b(amortiguador(?:es)?|rotulas?|terminales?|suspension)\b/.test(norm)) {
+    return "amortiguadores / suspensión";
+  }
+  if (!isSprayOrAdditive && /\b(clutch|embrague|collarin|prensa)\b/.test(norm)) {
+    return "kit de embrague";
+  }
+  return null;
+}
+
+function searchFreeTextRetailCatalog(query: string, limit = 5): IndexedCatalogEntry[] {
+  const expanded = expandEcuadorianColloquialisms(query);
+  const stop = new Set([
+    "para", "con", "sin", "del", "las", "los", "una", "uno", "unos", "unas", "que", "como", "cual", "mejor",
+    "carro", "auto", "vehiculo", "motor", "precio", "cuesta", "tienen", "necesito", "quiero", "bueno", "buena",
+    "aveo", "hilux", "dmax", "sail", "spark", "sportage", "tucson", "tiggo", "chery", "toyota", "chevrolet",
+    "kia", "hyundai", "nissan", "volkswagen", "gol", "2010", "2015", "2020", "2023", "2024", "2025",
+  ]);
+  const tokens = expanded
+    .replace(/[^a-z0-9.\-\s]/g, " ")
+    .split(/\s+/)
+    .filter((t) => t.length >= 2 && !stop.has(t));
+
+  const wantsViscosity = expanded.match(/\b(\d{1,2}w[-\s]?\d{2})\b/i)?.[1]?.replace(/\s+/g, "-") || null;
+  const wantsIso = expanded.match(/\biso\s*(32|46|68)\b/i)?.[1] || null;
+  const wantsCaneca = /\b(caneca|20\s*l|20l|balde|18\s*kg)\b/.test(expanded);
+  const wantsGalon = /\b(galon|4\s*l|5\s*l|4l|5l)\b/.test(expanded);
+
+  const scored: Array<{ entry: IndexedCatalogEntry; score: number }> = [];
+  for (const entry of MILO_FULL_CATALOG_INDEX) {
+    if (!entry.isRetail) continue;
+    let score = 0;
+    const nameNorm = normalizeText(entry.name);
+    const presNorm = normalizeText(entry.presentation);
+
+    if (wantsViscosity) {
+      if (nameNorm.includes(wantsViscosity.toLowerCase())) score += 24;
+      else if (entry.subCategory === "lubricantes_motor" || entry.subCategory === "transmision_caja") score -= 6;
+    }
+    if (wantsIso) {
+      if (nameNorm.includes(`iso ${wantsIso}`) || nameNorm.includes(`iso${wantsIso}`) || nameNorm.includes(wantsIso)) {
+        score += 26;
+      }
+    }
+    if (wantsCaneca && /20\s*l|18\s*kg|caneca|balde/.test(`${nameNorm} ${presNorm}`)) score += 10;
+    if (wantsGalon && /galon|4\s*l|5\s*l|3\.78/.test(`${nameNorm} ${presNorm}`)) score += 8;
+
+    for (const tok of tokens) {
+      if (entry.sku.toLowerCase() === tok) score += 30;
+      else if (nameNorm.includes(tok)) score += 9;
+      else if (entry.searchNorm.includes(tok)) score += 4;
+    }
+
+    if (score >= 8) {
+      if (entry.brand.toUpperCase() === "MANNOL") score += 2;
+      scored.push({ entry, score });
+    }
+  }
+
+  return scored
+    .sort((a, b) => b.score - a.score || a.entry.priceIva - b.entry.priceIva)
+    .slice(0, limit)
+    .map((s) => s.entry);
+}
+
+function searchSingleQuery(
+  rawQuery: string,
+  ctx: MiloToolExecutionContext
+): {
+  consulta: string;
+  enStock: boolean;
+  nota?: string;
+  recomendacionPrincipal?: CatalogCandidatePayload | null;
+  candidatos: CatalogCandidatePayload[];
+} {
+  const expanded = expandEcuadorianColloquialisms(rawQuery);
+  const oos = detectOutOfStockForSingleQuery(expanded);
+  if (oos) {
+    return {
+      consulta: rawQuery,
+      enStock: false,
+      nota: `Actualmente NO manejamos ${oos} en bodega. Dilo con honestidad sin inventar productos.`,
+      candidatos: [],
+    };
+  }
+
+  // Update vehicle if mentioned inside query
+  const extracted = extractVehicleFromText(rawQuery);
+  if (extracted.profile) {
+    ctx.activeVehicle = mergeVehicleProfiles(ctx.activeVehicle, extracted.profile);
+  }
+  const matchedEntry = extracted.matchedEntry || resolveDbEntryForProfile(ctx.activeVehicle);
+
+  const asksBattery = /\b(bateria|acumulador|amperios?|grupo\s*(24|27|31|34|42)|n100|n150|bajada)\b/.test(expanded);
+  const asksHydraulic = /\b(hidraulic|iso\s*(32|46|68)|stou)\b/.test(expanded);
+  const asksTransmission = /\b(caja|transmision|atf|cvt|dexron|diferencial|corona|75w|80w-90|85w-140)\b/.test(expanded);
+  const asksOilOrCombo =
+    !asksHydraulic &&
+    !asksTransmission &&
+    (/\b(combo|cambio\s+de\s+aceite|aceite\s+(?:de\s+)?motor|aceite\s+y\s+filtro|lubricante)\b/.test(expanded) ||
+      (/\baceite\b/.test(expanded) && !/\b(frenos?|cocina|oliva|caja|transmision|hidraulic)\b/.test(expanded)));
+  const asksFilterOnly =
+    /\bfiltro\b/.test(expanded) && !asksOilOrCombo && !asksBattery && !/\bparticulas|dpf\b/.test(expanded);
+
+  const candidates: CatalogCandidatePayload[] = [];
+  const seenSkus = new Set<string>();
+  const pushCandidate = (c: CatalogCandidatePayload) => {
+    const key = c.sku.toUpperCase();
+    if (seenSkus.has(key) || key === "ECOVLBAT") return;
+    seenSkus.add(key);
+    candidates.push(c);
+    ctx.matchedSkus.add(c.sku);
+    recordPrice(ctx, c.priceIva);
+    if (c.listPriceIva) recordPrice(ctx, c.listPriceIva);
+    if (c.priceWithTradeIn) recordPrice(ctx, c.priceWithTradeIn);
+    if (c.priceWithoutTradeIn) recordPrice(ctx, c.priceWithoutTradeIn);
+  };
+
+  if (asksBattery) {
+    const batOptions = pickMaxTwoBatteries(ctx.activeVehicle, matchedEntry, ctx.city, ctx.customerType, expanded);
+    for (const opt of batOptions) {
+      const it = opt.items[0];
+      if (!it) continue;
+      const idx = getIndexedCatalogEntry(it.sku);
+      if (idx) pushCandidate(toCandidatePayload(idx));
+    }
+    const primary = candidates[0] || null;
+    return {
+      consulta: rawQuery,
+      enStock: candidates.length > 0,
+      nota:
+        "Descuentos oficiales vigentes sobre PVP con IVA: Baterías Ecuador 35% entregando usada / 30% sin usada; Bosch 25% entregando usada / 20% sin usada. Instalación GRATIS a domicilio en Pedernales + revisión de alternador.",
+      recomendacionPrincipal: primary,
+      candidatos: candidates,
+    };
+  }
+
+  if (asksOilOrCombo) {
+    // 1. Official MANNOL combos (already include Advance oil filter + Cockpit Care gift!)
+    const wantsSpecificViscosity = expanded.match(/\b(0w-20|5w-20|5w-30|5w-40|10w-30|10w-40|15w-40|20w-50)\b/i)?.[1];
+    const combos = pickMaxTwoLubricantCombos(ctx.activeVehicle, ctx.customerType, expanded);
+    for (const opt of combos) {
+      const it = opt.items[0];
+      if (!it) continue;
+      const idx = getIndexedCatalogEntry(it.sku);
+      if (idx) pushCandidate(toCandidatePayload(idx));
+    }
+    // 2. If user asked a specific viscosity/brand or modern turbo engine (e.g. 5W-30 / 0W-20 / Tiggo 7 Pro), also include standalone matches
+    const freeMatches = searchFreeTextRetailCatalog(rawQuery, 4).filter(
+      (e) => e.subCategory === "lubricantes_motor" || e.subCategory === "combos_mannol"
+    );
+    for (const m of freeMatches) {
+      if (candidates.length >= 5) break;
+      pushCandidate(toCandidatePayload(m));
+    }
+    // Pick best winner: for newer cars (>= 2016) or 5W-30 request prefer synthetic 1B/2B, else balanced 1A/2A
+    const preferSynthetic =
+      (ctx.activeVehicle?.year && ctx.activeVehicle.year >= 2016) ||
+      Boolean(wantsSpecificViscosity && /5w-30|5w-40|0w-20/i.test(wantsSpecificViscosity)) ||
+      /tiggo\s*[478]|turbo|sintetic/i.test(`${formatVehicleLabel(ctx.activeVehicle)} ${expanded}`);
+    const primary =
+      (preferSynthetic
+        ? candidates.find((c) => /1B|2B|5W-30|5W-40|0W-20/i.test(`${c.sku} ${c.name}`))
+        : candidates[0]) ||
+      candidates[0] ||
+      null;
+
+    return {
+      consulta: rawQuery,
+      enStock: candidates.length > 0,
+      nota:
+        "IMPORTANTE: Cada Combo MANNOL YA incluye el aceite + filtro de aceite Advance + Cockpit Care con esponja de regalo (NO cobres un filtro de aceite aparte si el cliente lleva un Combo MANNOL). Aclaración: vendemos el kit/productos completos (no hacemos mano de obra de taller mecánico).",
+      recomendacionPrincipal: primary,
+      candidatos: candidates,
+    };
+  }
+
+  // Multicategory + free text search across all 425 retail SKUs
+  const multi = resolveMulticategoryCatalogQuery(expanded, ctx.activeVehicle);
+  for (const item of (multi?.items || []).slice(0, 4)) {
+    pushCandidate(toCandidatePayload(item));
+  }
+  for (const item of searchFreeTextRetailCatalog(rawQuery, 4)) {
+    if (candidates.length >= 5) break;
+    pushCandidate(toCandidatePayload(item));
+  }
+
+  // Best single recommendation heuristic (e.g., LP-MAN-052 for injector cleaner gasolina, LP-MAN-011 for motor flush)
+  let primary = candidates[0] || null;
+  if (/inyector|humo\s+negro|traga\s+gasolina|ahogado/.test(expanded) && !/diesel/.test(expanded)) {
+    primary =
+      candidates.find((c) => c.sku.toUpperCase() === "LP-MAN-052") ||
+      candidates.find((c) => c.sku.toUpperCase() === "LP-MAN-036") ||
+      primary;
+  } else if (/flush|limpiar.*motor|lavado\s+interno/.test(expanded)) {
+    primary = candidates.find((c) => c.sku.toUpperCase() === "LP-MAN-011") || primary;
+  }
+
+  return {
+    consulta: rawQuery,
+    enStock: candidates.length > 0,
+    nota: asksFilterOnly
+      ? "Si el cliente ya lleva un Combo MANNOL de aceite, el filtro de aceite Advance ya viene incluido gratis dentro del combo."
+      : multi?.note || undefined,
+    recomendacionPrincipal: primary,
+    candidatos: candidates,
+  };
+}
+
+function computeCartTotals(cartItems: CartItem[], defaultTradeIn: boolean | null) {
+  let hasBattery = false;
+  let batteryTradeInPending = false;
+  const pricesNormal: number[] = [];
+  const pricesWithTradeIn: number[] = [];
+  const pricesWithoutTradeIn: number[] = [];
+
+  for (const item of cartItems) {
+    const qty = Math.max(1, Math.round(item.qty || 1));
+    if (item.isBattery && item.priceWithTradeIn && item.priceWithoutTradeIn) {
+      hasBattery = true;
+      const ti = item.batteryTradeIn !== undefined && item.batteryTradeIn !== null ? item.batteryTradeIn : defaultTradeIn;
+      if (ti === null) batteryTradeInPending = true;
+      const chosen = ti === false ? item.priceWithoutTradeIn : item.priceWithTradeIn;
+      for (let i = 0; i < qty; i++) {
+        pricesNormal.push(chosen);
+        pricesWithTradeIn.push(item.priceWithTradeIn);
+        pricesWithoutTradeIn.push(item.priceWithoutTradeIn);
+      }
+    } else {
+      for (let i = 0; i < qty; i++) {
+        pricesNormal.push(item.unitPriceIva);
+        pricesWithTradeIn.push(item.unitPriceIva);
+        pricesWithoutTradeIn.push(item.unitPriceIva);
+      }
+    }
+  }
+
+  const totalUsd = sumExactPricesIva(pricesNormal);
+  const totalWithTradeInUsd = hasBattery ? sumExactPricesIva(pricesWithTradeIn) : totalUsd;
+  const totalWithoutTradeInUsd = hasBattery ? sumExactPricesIva(pricesWithoutTradeIn) : totalUsd;
+  const qualifiesFreeShipping = hasBattery || totalUsd >= FREE_SHIPPING_THRESHOLD_USD;
+  const missingForFreeShipping = qualifiesFreeShipping
+    ? 0
+    : Number((FREE_SHIPPING_THRESHOLD_USD - totalUsd).toFixed(2));
+
+  return {
+    totalUsd,
+    hasBattery,
+    batteryTradeInPending,
+    totalWithTradeInUsd,
+    totalWithoutTradeInUsd,
+    qualifiesFreeShipping,
+    missingForFreeShipping,
+  };
+}
+
+function buildValidatedCartItem(
+  sku: string,
+  qty = 1,
+  batteryTradeIn?: boolean | null
+): CartItem | null {
+  const cleanSku = (sku || "").trim().toUpperCase();
+  if (!cleanSku || cleanSku === "ECOVLBAT") return null;
+  const raw = getCatalogItemBySku(cleanSku);
+  const idx = getIndexedCatalogEntry(cleanSku);
+  if (!raw || raw.retail_hidden) return null;
+
+  const bat = computeBatteryDiscountPricing(raw);
+  const safeQty = Math.max(1, Math.min(200, Math.round(Number(qty) || 1)));
+  const unitPriceIva = bat
+    ? batteryTradeIn === false
+      ? bat.priceWithoutTradeIn
+      : bat.priceWithTradeIn
+    : resolveCatalogPriceIva(raw);
+
+  return {
+    sku: raw.sku,
+    name: formatHumanProductName(raw.sku, raw.name),
+    brand: raw.brand || idx?.brand,
+    presentation: raw.presentation || idx?.presentation,
+    unitPriceIva,
+    qty: safeQty,
+    subCategory: idx?.subCategory,
+    ...(bat
+      ? {
+          isBattery: true,
+          batteryTradeIn: batteryTradeIn ?? null,
+          listPriceIva: bat.listPriceIva,
+          priceWithTradeIn: bat.priceWithTradeIn,
+          priceWithoutTradeIn: bat.priceWithoutTradeIn,
+        }
+      : {}),
+  };
+}
+
+const CURATED_ECUADOR_VEHICLE_SPECS: Array<{
+  regex: RegExp;
+  label: string;
+  specSummary: string;
+}> = [
+  {
+    regex: /tiggo\s*7(?:\s*pro)?/i,
+    label: "Chery Tiggo 7 / Tiggo 7 Pro (1.5T Gasolina)",
+    specSummary:
+      "Aceite motor recomendado: 5W-30 100% Sintético (norma API SP / ACEA C2/C3), capacidad ~4.5 a 4.7 litros con filtro. " +
+      "Batería habitual: Grupo 42 / DIN55 (55–65 Ah, 12V — verificar polaridad de bornes al instalar).",
+  },
+  {
+    regex: /tiggo\s*[348]/i,
+    label: "Chery Tiggo 3 / 4 / 8 (Gasolina / Turbo)",
+    specSummary:
+      "Aceite motor recomendado: 5W-30 100% Sintético (o 10W-40 semisintético en motores aspirados >100.000 km), ~4.0 a 4.7 litros con filtro. " +
+      "Batería habitual: Grupo 42 o Grupo 24 (55–65 Ah, 12V — verificar polaridad al instalar).",
+  },
+  {
+    regex: /\b(volkswagen|vw)?\s*gol\b/i,
+    label: "Volkswagen Gol (1.6 Gasolina)",
+    specSummary:
+      "Aceite motor recomendado: 10W-40 Semisintético o 5W-40 Sintético (norma VW 502.00 / API SN), capacidad ~4.0 litros con filtro. " +
+      "Batería habitual: Grupo 42 (55–60 Ah, 12V).",
+  },
+  {
+    regex: /coolray|geely/i,
+    label: "Geely Coolray (1.5T Gasolina)",
+    specSummary:
+      "Aceite motor recomendado: 5W-30 o 0W-20 100% Sintético API SP, capacidad ~4.5 a 5.5 litros según versión. " +
+      "Batería habitual: Grupo 42 / DIN60 (60 Ah, 12V).",
+  },
+  {
+    regex: /jetour\s*dashing/i,
+    label: "Jetour Dashing (1.5T / 1.6T Gasolina)",
+    specSummary:
+      "Aceite motor recomendado: 5W-30 100% Sintético API SP, capacidad ~4.5 a 4.8 litros con filtro. " +
+      "Batería habitual: Grupo 42 / DIN60 (60 Ah, 12V).",
+  },
+  {
+    regex: /changan\s*(cs35|cs55|alsvin)/i,
+    label: "Changan CS35 / CS55 / Alsvin (Gasolina)",
+    specSummary:
+      "Aceite motor recomendado: 5W-30 100% Sintético API SP (4.0 a 4.5 litros con filtro). " +
+      "Batería habitual: Grupo 42 (55–60 Ah, 12V).",
+  },
+  {
+    regex: /prado|land\s*cruiser/i,
+    label: "Toyota Land Cruiser Prado",
+    specSummary:
+      "Aceite motor: Diésel 3.0/2.8 -> 15W-40 o 5W-40 Turbo Diésel (~7.0–7.5 L); Gasolina 4.0 V6 -> 5W-30 Sintético (~6.0 L). " +
+      "Batería habitual: Grupo 27 (85–95 Ah, 12V).",
+  },
+  {
+    regex: /l200|montero/i,
+    label: "Mitsubishi L200 / Montero Sport (Diésel)",
+    specSummary:
+      "Aceite motor recomendado: 15W-40 Semisintético o 5W-40 Full Sintético Diésel (~6.5 a 7.5 L con filtro). " +
+      "Batería habitual: Grupo 27 (85–95 Ah, 12V).",
+  },
+];
+
+function scrubWebSnippet(raw: string): string {
+  return raw
+    .replace(/\$?\s*\d+(?:[.,]\d+)?\s*(?:usd|eur|pesos|dolares|\$)/gi, "")
+    .replace(/https?:\/\/\S+/gi, "")
+    .replace(/\s{2,}/g, " ")
+    .trim()
+    .slice(0, 380);
+}
+
+async function runControlledWebSpecLookup(vehiculo: string, consulta: string): Promise<{
+  snippet: string | null;
+  source: string | null;
+}> {
+  const cleanVeh = vehiculo.replace(/[^\w\s.\-]/g, " ").trim().slice(0, 80);
+  const cleanQ = consulta
+    .replace(/\b(precio|valor|costo|tienda|comprar|mercado\s*libre|amazon|ebay)\b/gi, "")
+    .replace(/[^\w\s.\-]/g, " ")
+    .trim()
+    .slice(0, 80);
+  const query = `${cleanVeh} ${cleanQ || "engine oil viscosity battery group"}`.trim();
+
+  try {
+    const ddgUrl = `https://api.duckduckgo.com/?q=${encodeURIComponent(query)}&format=json&no_html=1&skip_disambig=1`;
+    const ddgResp = await fetch(ddgUrl, { signal: AbortSignal.timeout(2400) });
+    if (ddgResp.ok) {
+      const ddg = (await ddgResp.json()) as {
+        AbstractText?: string;
+        RelatedTopics?: Array<{ Text?: string }>;
+      };
+      const combined = [ddg.AbstractText || "", ...(ddg.RelatedTopics || []).slice(0, 2).map((t) => t.Text || "")]
+        .join(" ")
+        .trim();
+      const scrubbed = scrubWebSnippet(combined);
+      if (scrubbed.length >= 40 && /\b(0w|5w|10w|15w|liter|litro|engine|motor|turbo|battery|bateria|ah)\b/i.test(scrubbed)) {
+        return { snippet: scrubbed, source: "duckduckgo_tecnico" };
+      }
+    }
+  } catch {
+    // Strict 2.4s timeout guard
+  }
+
+  try {
+    const wikiUrl = `https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=${encodeURIComponent(
+      cleanVeh
+    )}&srlimit=1&format=json&utf8=1`;
+    const wikiResp = await fetch(wikiUrl, { signal: AbortSignal.timeout(2200) });
+    if (wikiResp.ok) {
+      const wj = (await wikiResp.json()) as {
+        query?: { search?: Array<{ title?: string; snippet?: string }> };
+      };
+      const first = wj.query?.search?.[0];
+      if (first?.snippet) {
+        const plain = scrubWebSnippet(first.snippet.replace(/<[^>]+>/g, " "));
+        if (plain.length >= 30) {
+          return { snippet: `${first.title || cleanVeh}: ${plain}`, source: "wikipedia_tecnico" };
+        }
+      }
+    }
+  } catch {
+    // Strict 2.2s timeout guard
+  }
+
+  return { snippet: null, source: null };
+}
+
+export async function executeMiloToolCall(
+  toolName: string,
+  rawArgs: Record<string, unknown>,
+  ctx: MiloToolExecutionContext
+): Promise<Record<string, unknown>> {
+  ctx.toolsUsed.push(toolName);
+
+  // 1. buscar_en_catalogo
+  if (toolName === "buscar_en_catalogo") {
+    const vehArg = typeof rawArgs.vehiculo === "string" ? rawArgs.vehiculo.trim() : "";
+    if (vehArg) {
+      const ex = extractVehicleFromText(vehArg);
+      if (ex.profile) ctx.activeVehicle = mergeVehicleProfiles(ctx.activeVehicle, ex.profile);
+    }
+
+    const rawConsultas = Array.isArray(rawArgs.consultas)
+      ? rawArgs.consultas.map((q) => String(q || "").trim()).filter(Boolean).slice(0, 6)
+      : typeof rawArgs.consulta === "string" && rawArgs.consulta.trim()
+      ? [rawArgs.consulta.trim()]
+      : [];
+
+    if (rawConsultas.length === 0) {
+      return { ok: false, error: "Debes pasar al menos una consulta en 'consultas'." };
+    }
+
+    const resultados = rawConsultas.map((q) => searchSingleQuery(q, ctx));
+    const allSkus = resultados.flatMap((r) => r.candidatos.map((c) => c.sku));
+    if (allSkus.length > 0) {
+      ctx.commercialState.lastRecommendedSkus = Array.from(new Set(allSkus)).slice(0, 12);
+    }
+
+    const anyBattery = resultados.some((r) => r.candidatos.some((c) => c.isBattery));
+    const anyCombo = resultados.some((r) => r.candidatos.some((c) => c.includesAdvanceFilterAndGift));
+    if (anyBattery && anyCombo) ctx.intentTag = "bateria_y_combo";
+    else if (anyBattery) ctx.intentTag = "bateria_domicilio";
+    else if (anyCombo) ctx.intentTag = "combo_lubricante";
+    else if (resultados.every((r) => !r.enStock)) ctx.intentTag = "producto_sin_stock";
+    else ctx.intentTag = "milo_multicategoria";
+
+    return {
+      ok: true,
+      vehiculoActivo: formatVehicleLabel(ctx.activeVehicle) || null,
+      resultados,
+    };
+  }
+
+  // 2. gestionar_carrito
+  if (toolName === "gestionar_carrito") {
+    const accion = String(rawArgs.accion || "summary").toLowerCase();
+    const rawItems = Array.isArray(rawArgs.items)
+      ? (rawArgs.items as Array<{ sku?: string; qty?: number; battery_trade_in?: boolean }>)
+      : [];
+
+    let nextCart = [...(ctx.commercialState.cartItems || [])];
+    const warnings: string[] = [];
+
+    if (accion === "clear") {
+      nextCart = [];
+    } else if (accion === "remove") {
+      const toRemove = new Set(rawItems.map((i) => String(i.sku || "").trim().toUpperCase()));
+      nextCart = nextCart.filter((c) => !toRemove.has(c.sku.toUpperCase()));
+    } else if (accion === "set" || accion === "add") {
+      if (accion === "set") nextCart = [];
+      for (const reqItem of rawItems) {
+        const ti = typeof reqItem.battery_trade_in === "boolean" ? reqItem.battery_trade_in : ctx.commercialState.batteryTradeIn;
+        if (typeof reqItem.battery_trade_in === "boolean") {
+          ctx.commercialState.batteryTradeIn = reqItem.battery_trade_in;
+        }
+        const validated = buildValidatedCartItem(String(reqItem.sku || ""), reqItem.qty ?? 1, ti);
+        if (!validated) {
+          warnings.push(`SKU inválido o no disponible: ${String(reqItem.sku || "")}`);
+          continue;
+        }
+        const existingIdx = nextCart.findIndex((c) => c.sku.toUpperCase() === validated.sku.toUpperCase());
+        if (existingIdx >= 0) {
+          nextCart[existingIdx] = {
+            ...validated,
+            qty: accion === "add" ? nextCart[existingIdx].qty + validated.qty : validated.qty,
+          };
+        } else {
+          nextCart.push(validated);
+        }
+      }
+
+      // Evitar doble cobro de filtro de aceite si ya lleva un Combo MANNOL que lo incluye
+      const hasMannolCombo = nextCart.some((i) => i.sku.toUpperCase().startsWith("COMBO-MANNOL-"));
+      if (hasMannolCombo) {
+        const beforeLen = nextCart.length;
+        nextCart = nextCart.filter((i) => {
+          const isOilFilter = i.subCategory === "filtros" && /aceite|^078ao-|^080ao-/i.test(`${i.sku} ${i.name}`);
+          return !isOilFilter;
+        });
+        if (nextCart.length < beforeLen) {
+          warnings.push("Se omitió el filtro de aceite suelto porque el Combo MANNOL ya incluye filtro Advance + Cockpit Care.");
+        }
+      }
+    }
+
+    ctx.commercialState.cartItems = nextCart;
+    const totals = computeCartTotals(nextCart, ctx.commercialState.batteryTradeIn);
+    for (const item of nextCart) {
+      ctx.matchedSkus.add(item.sku);
+      recordPrice(ctx, item.unitPriceIva);
+      if (item.priceWithTradeIn) recordPrice(ctx, item.priceWithTradeIn);
+      if (item.priceWithoutTradeIn) recordPrice(ctx, item.priceWithoutTradeIn);
+    }
+    recordPrice(ctx, totals.totalUsd);
+    recordPrice(ctx, totals.totalWithTradeInUsd);
+    recordPrice(ctx, totals.totalWithoutTradeInUsd);
+    if (totals.missingForFreeShipping > 0) recordPrice(ctx, totals.missingForFreeShipping);
+    ctx.intentTag = "resumen_carrito";
+
+    return {
+      ok: true,
+      accion,
+      carrito: nextCart.map((i) => ({
+        sku: i.sku,
+        name: i.name,
+        qty: i.qty,
+        unitPriceIva: i.unitPriceIva,
+        subtotalIva: Number((i.unitPriceIva * i.qty).toFixed(2)),
+        ...(i.isBattery
+          ? {
+              isBattery: true,
+              priceWithTradeIn: i.priceWithTradeIn,
+              priceWithoutTradeIn: i.priceWithoutTradeIn,
+              batteryTradeIn: i.batteryTradeIn ?? ctx.commercialState.batteryTradeIn,
+            }
+          : {}),
+      })),
+      totalUsd: totals.totalUsd,
+      hasBattery: totals.hasBattery,
+      batteryTradeInConfirmado: !totals.batteryTradeInPending,
+      ...(totals.hasBattery
+        ? {
+            totalConBateriaUsadaUsd: totals.totalWithTradeInUsd,
+            totalSinBateriaUsadaUsd: totals.totalWithoutTradeInUsd,
+          }
+        : {}),
+      envioGratisPedernales: totals.qualifiesFreeShipping,
+      faltanteParaEnvioGratisUsd: totals.missingForFreeShipping,
+      ...(warnings.length > 0 ? { notas: warnings } : {}),
+    };
+  }
+
+  // 3. consultar_especificacion_vehiculo_web
+  if (toolName === "consultar_especificacion_vehiculo_web") {
+    const vehiculo = String(rawArgs.vehiculo || formatVehicleLabel(ctx.activeVehicle) || "").trim();
+    const consulta = String(rawArgs.consulta_tecnica || "viscosidad aceite litros bateria").trim();
+    if (!vehiculo) {
+      return { ok: false, error: "Indica marca y modelo del vehículo." };
+    }
+
+    const extracted = extractVehicleFromText(vehiculo);
+    if (extracted.profile) {
+      ctx.activeVehicle = mergeVehicleProfiles(ctx.activeVehicle, extracted.profile);
+    }
+    if (extracted.matchedEntry) {
+      const m = extracted.matchedEntry.model;
+      const enginesText = Array.isArray(m.engines) ? m.engines.join(", ") : "";
+      const lubText = (m.recommendedCategories.lubricantes || []).join(", ");
+      const batText = (m.recommendedCategories.baterias || []).join(", ");
+      return {
+        ok: true,
+        source: "base_local_liderpro",
+        vehiculo: `${extracted.matchedEntry.make} ${m.model}`,
+        especificacion: `Motores: ${enginesText || "estándar"}. Aceite/mantenimiento: ${lubText || "consultar catálogo"}. Baterías sugeridas: ${batText || "consultar catálogo"}.`,
+      };
+    }
+
+    const cacheKey = normalizeText(`${vehiculo}|${consulta}`).replace(/\s+/g, " ").trim();
+    const cached = await getCachedVehicleSpec(cacheKey);
+    if (cached) {
+      return {
+        ok: true,
+        source: `cache_postgres:${cached.sourceLabel || "tecnico"}`,
+        vehiculo: cached.vehicleLabel,
+        especificacion: cached.specSummary,
+      };
+    }
+
+    const curated = CURATED_ECUADOR_VEHICLE_SPECS.find((c) => c.regex.test(vehiculo));
+    const webRes = await runControlledWebSpecLookup(vehiculo, consulta);
+
+    const specSummary = curated
+      ? `${curated.specSummary}${webRes.snippet ? ` (Referencia web: ${webRes.snippet})` : ""}`
+      : webRes.snippet ||
+        `No se obtuvo ficha exacta de fábrica en línea para ${vehiculo}. Como guía segura: confirmar en el manual o tapa de llenado la viscosidad (habitualmente 5W-30 sintético en motores modernos a gasolina o 15W-40/5W-40 en diésel) y verificar polaridad y tamaño de la bandeja de batería antes de instalar.`;
+
+    const sourceLabel = curated
+      ? webRes.source
+        ? `referencia_ecuador+${webRes.source}`
+        : "referencia_tecnica_ecuador"
+      : webRes.source || "guia_segura_taller";
+
+    await setCachedVehicleSpec({
+      cacheKey,
+      vehicleLabel: curated?.label || vehiculo,
+      queryText: consulta,
+      specSummary,
+      sourceLabel,
+    });
+
+    return {
+      ok: true,
+      source: sourceLabel,
+      vehiculo: curated?.label || vehiculo,
+      especificacion: specSummary,
+    };
+  }
+
+  // 4. registrar_pedido
+  if (toolName === "registrar_pedido") {
+    const nombre = String(rawArgs.nombre_cliente || ctx.customerName || "").trim();
+    const telefono = String(rawArgs.telefono || ctx.customerPhone || "").trim() || null;
+    const ciudad = String(rawArgs.ciudad || ctx.city || "").trim() || extractCityFromText(String(rawArgs.direccion_o_terminal || "")) || "Pedernales";
+    const tipoEntrega = String(rawArgs.tipo_entrega || "domicilio_pedernales").trim();
+    const direccionRaw = String(rawArgs.direccion_o_terminal || "").trim();
+    const cedula = String(rawArgs.cedula_o_ruc || "").trim();
+    const metodoPago = String(rawArgs.metodo_pago || "").trim();
+
+    if (Array.isArray(rawArgs.items) && rawArgs.items.length > 0 && ctx.commercialState.cartItems.length === 0) {
+      await executeMiloToolCall("gestionar_carrito", { accion: "set", items: rawArgs.items }, ctx);
+    }
+
+    const cart = ctx.commercialState.cartItems || [];
+    const missing: string[] = [];
+    if (cart.length === 0) missing.push("Productos en el carrito (usa gestionar_carrito primero)");
+    if (!nombre) missing.push("Nombre completo del cliente");
+    if (!direccionRaw && tipoEntrega !== "retiro_tienda_pedernales") missing.push("Dirección exacta o terminal/cooperativa");
+    if (!metodoPago) missing.push("Forma de pago (efectivo o transferencia Pichincha/Guayaquil/Pacífico)");
+
+    const totals = computeCartTotals(cart, ctx.commercialState.batteryTradeIn);
+    if (totals.batteryTradeInPending) {
+      missing.push("Confirmar si entrega la batería usada (Sí/No)");
+    }
+
+    if (missing.length > 0) {
+      ctx.intentTag = "cierre_pedido_pendiente_datos";
+      return {
+        ok: false,
+        camposFaltantes: missing,
+        totalActualUsd: totals.totalUsd,
+      };
+    }
+
+    const deliveryLabel =
+      tipoEntrega === "retiro_tienda_pedernales"
+        ? `Retiro en bodega Pedernales (Vía al Carmen)${cedula ? ` | CI/RUC: ${cedula}` : ""}`
+        : tipoEntrega === "envio_cooperativa_nacional"
+        ? `Envío nacional a ${ciudad}: ${direccionRaw}${cedula ? ` | CI/RUC: ${cedula}` : ""}`
+        : `${direccionRaw}${normalizeText(direccionRaw).includes(normalizeText(ciudad)) ? "" : `, ${ciudad}`}${cedula ? ` | CI/RUC: ${cedula}` : ""}`;
+
+    const { order } = await insertOrder({
+      sessionId: ctx.sessionId,
+      customerName: nombre,
+      phone: telefono,
+      vehicle: ctx.activeVehicle,
+      itemsJson: cart.map((i) => ({
+        sku: i.sku,
+        name: i.name,
+        unitPriceIva: i.unitPriceIva,
+        qty: i.qty,
+      })),
+      totalUsd: totals.totalUsd,
+      deliveryAddress: deliveryLabel,
+      paymentMethod: metodoPago,
+      status: "pending_dispatch",
+    });
+
+    ctx.customerName = nombre;
+    ctx.city = ciudad;
+    ctx.commercialState.salesStage = "pedido_confirmado";
+    ctx.createdOrder = order;
+    ctx.intentTag = "pedido_confirmado";
+    recordPrice(ctx, order.totalUsd);
+
+    return {
+      ok: true,
+      orderId: order.id,
+      customerName: nombre,
+      ciudad,
+      deliveryAddress: deliveryLabel,
+      paymentMethod: metodoPago,
+      totalUsd: order.totalUsd,
+      items: order.itemsJson,
+    };
+  }
+
+  // 5. escalar_a_asesor_humano
+  if (toolName === "escalar_a_asesor_humano") {
+    const motivo = String(rawArgs.motivo || "Atención de asesor humano solicitada").trim();
+    const resumen = String(rawArgs.resumen_corto || motivo).trim();
+    const rawUrg = String(rawArgs.urgencia || "alta").toLowerCase();
+    const urgency: EscalationUrgency = rawUrg === "media" || rawUrg === "baja" ? rawUrg : "alta";
+
+    ctx.customerType = extractCustomerType(`${motivo} ${resumen}`, ctx.customerType);
+    const esc = await flagCustomerHumanEscalation({
+      phoneOrSession: ctx.sessionId,
+      reason: motivo,
+      summary: resumen,
+      urgency,
+      customerName: ctx.customerName,
+      city: ctx.city,
+    });
+
+    ctx.escalatedToHuman = true;
+    ctx.intentTag = "escalamiento_humano";
+
+    return {
+      ok: true,
+      escalated: true,
+      telegramNotified: esc.telegramSent,
+      urgencia: urgency,
+      instrucciones:
+        "Confirma con calidez al cliente que ya escalaste su solicitud a un asesor humano / encargado en Pedernales para que lo contacte enseguida. PROHIBIDO inventar precios mayoristas, plazos de crédito o descuentos no autorizados.",
+    };
+  }
+
+  return { ok: false, error: `Herramienta desconocida: ${toolName}` };
+}

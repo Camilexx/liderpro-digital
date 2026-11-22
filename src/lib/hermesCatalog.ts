@@ -45,6 +45,7 @@ export type HermesIntentTag =
   | "info_operativa"
   | "envio_delivery"
   | "b2b_flota"
+  | "escalamiento_humano"
   | "producto_sin_stock"
   | "pregunta_ilogica"
   | "fuera_de_tema"
@@ -271,10 +272,10 @@ const VEHICLE_ALIAS_RULES: VehicleAliasRule[] = [
   { make: "Mazda", modelKeyword: "Mazda 3", regex: /\b(mazda\s*[23]|cx[-\s]?5)\b/i, defaultFuel: "gasolina" },
   { make: "Suzuki", modelKeyword: "Grand Vitara", regex: /\b(grand\s*vitara|vitara\s*sz)\b/i, defaultFuel: "gasolina" },
   { make: "Suzuki", modelKeyword: "Swift", regex: /\b(swift|jimny)\b/i, defaultFuel: "gasolina" },
-  { make: "Volkswagen / Renault", modelKeyword: "Amarok", regex: /\b(amarok|gol|jetta|bora)\b/i },
+  { make: "Volkswagen / Renault", modelKeyword: "Amarok", regex: /\bamarok\b/i, defaultFuel: "diésel" },
   { make: "Volkswagen / Renault", modelKeyword: "Duster", regex: /\b(duster|logan|sandero)\b/i, defaultFuel: "gasolina" },
   { make: "Dongfeng / Chery / Jetour", modelKeyword: "Rich 6", regex: /\brich\s*6\b/i, defaultFuel: "diésel" },
-  { make: "Dongfeng / Chery / Jetour", modelKeyword: "Tiggo 2", regex: /\b(tiggo\s*2|x70|jetour)\b/i, defaultFuel: "gasolina" },
+  { make: "Dongfeng / Chery / Jetour", modelKeyword: "Tiggo 2", regex: /\b(tiggo\s*2|x70)\b/i, defaultFuel: "gasolina" },
   { make: "Hino", modelKeyword: "Dutro", regex: /\b(hino|dutro|serie\s*300)\b/i, defaultFuel: "diésel" },
   { make: "Hino", modelKeyword: "Serie 500", regex: /\b(serie\s*500)\b/i, defaultFuel: "diésel" },
   { make: "Motos Multimarca", modelKeyword: "Pulsar", regex: /\bpulsar\b/i, defaultFuel: "moto" },
@@ -284,7 +285,7 @@ const VEHICLE_ALIAS_RULES: VehicleAliasRule[] = [
 ];
 
 const UNMAPPED_VEHICLE_REGEX =
-  /\b(prado|land\s*cruiser|rush|agya|raize|captiva|groove|trailblazer|blazer|sorento|sonata|elantra|creta|santa\s*fe|tucson\s*ix|changan|cs35|cs55|geely|coolray|dfsk|glory|l200|montero|asx|outlander|kicks|note|pathfinder|kwid|koleos|cx[-\s]?30|tiggo\s*[3478]|arrizzo|jetour\s*dashing)\b/i;
+  /\b((?:chery\s+)?tiggo\s*[3478](?:\s*pro(?:\s*max)?)?|(?:volkswagen|vw)\s+(?:gol|polo|jetta|bora|virtus|t-?cross|taos)|\bgol\b(?:\s+sedan)?|jetta|bora|polo|virtus|prado|land\s*cruiser|rush|agya|raize|captiva|groove|trailblazer|blazer|sorento|sonata|elantra|creta|santa\s*fe|tucson\s*ix|changan\s*(?:cs\d+|alsvin|hunter)?|cs35|cs55|geely\s*(?:coolray|gx3)?|coolray|dfsk\s*(?:glory\s*\d*)?|glory\s*\d*|l200|montero|asx|outlander|kicks|note|pathfinder|kwid|koleos|cx[-\s]?30|arrizo\s*\d*|jetour\s*(?:dashing|x70|t2)?)\b/i;
 
 function findVehicleDbEntry(makeHint: string, modelKeyword: string): { make: string; model: VehicleModelItem } | null {
   const mNorm = normalizeText(makeHint);
@@ -560,7 +561,7 @@ export function extractBatteryTradeInFromText(text: string): boolean | null {
   return null;
 }
 
-function pickMaxTwoLubricantCombos(
+export function pickMaxTwoLubricantCombos(
   vehicle: VehicleProfile | null,
   customerType: CustomerType,
   norm: string
@@ -636,7 +637,7 @@ function classifyBatterySegment(
   return "compact_sedan";
 }
 
-function pickMaxTwoBatteries(
+export function pickMaxTwoBatteries(
   vehicle: VehicleProfile | null,
   matchedEntry: { make: string; model: VehicleModelItem } | null,
   city: string | null,
@@ -656,7 +657,7 @@ function pickMaxTwoBatteries(
     const wantsGroup24Hp = /\bgrupo\s*24\b|\b24\s*hp\b/.test(norm);
     candidateSkus = wantsGroup24Hp ? ["03024-HP-I", "02727HPIS4"] : ["03027-HP", "02727HPS4"];
   } else {
-    const isCompact42 = /\b(spark|beat|aveo|sail|corsa|picanto|rio|accent|grand\s*i10|yaris|swift|onix)\b/.test(
+    const isCompact42 = /\b(spark|beat|aveo|sail|corsa|picanto|rio|accent|grand\s*i10|yaris|swift|onix|gol|polo|jetta|bora|virtus|tiggo\s*[2347]|groove|coolray|kicks|kwid|soluto)\b/.test(
       normalizeText(`${formatVehicleLabel(vehicle)} ${norm}`)
     );
     if (isCompact42 && BY_SKU.has("03042-FE") && BY_SKU.has("02742HPIS4")) {

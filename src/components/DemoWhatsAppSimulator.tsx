@@ -7,6 +7,8 @@ import {
   CheckCheck,
   Database,
   Lock,
+  Mic,
+  MicOff,
   RotateCcw,
   Send,
   ShieldCheck,
@@ -14,6 +16,22 @@ import {
   ThumbsUp,
   Zap,
 } from "lucide-react";
+
+interface BrowserSpeechRecognitionEvent {
+  results: ArrayLike<ArrayLike<{ transcript: string }>>;
+}
+
+interface BrowserSpeechRecognition {
+  lang: string;
+  interimResults: boolean;
+  maxAlternatives: number;
+  continuous: boolean;
+  onresult: ((ev: BrowserSpeechRecognitionEvent) => void) | null;
+  onerror: (() => void) | null;
+  onend: (() => void) | null;
+  start: () => void;
+  stop: () => void;
+}
 
 interface VehicleSnapshot {
   make?: string;
@@ -41,6 +59,7 @@ interface MessageItem {
   qaNote?: string | null;
   qaSaving?: boolean;
   orderId?: number | null;
+  escalatedToHuman?: boolean;
 }
 
 const SUGGESTION_PROMPTS = [
@@ -127,8 +146,70 @@ export default function DemoWhatsAppSimulator() {
   const [fixNoteDraft, setFixNoteDraft] = useState("");
   const [activeVehicleState, setActiveVehicleState] = useState<VehicleSnapshot | null>(null);
   const [cityState, setCityState] = useState<string | null>(null);
+  const [speechSupported, setSpeechSupported] = useState(false);
+  const [isListening, setIsListening] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+  const recognitionRef = useRef<BrowserSpeechRecognition | null>(null);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const w = window as unknown as {
+        SpeechRecognition?: new () => BrowserSpeechRecognition;
+        webkitSpeechRecognition?: new () => BrowserSpeechRecognition;
+      };
+      setSpeechSupported(Boolean(w.SpeechRecognition || w.webkitSpeechRecognition));
+    }
+    return () => {
+      try {
+        recognitionRef.current?.stop();
+      } catch {
+        // ignore cleanup errors
+      }
+    };
+  }, []);
+
+  function handleToggleVoiceDictation() {
+    if (!speechSupported || isSending) return;
+    if (isListening) {
+      try {
+        recognitionRef.current?.stop();
+      } catch {
+        // ignore
+      }
+      setIsListening(false);
+      return;
+    }
+
+    const w = window as unknown as {
+      SpeechRecognition?: new () => BrowserSpeechRecognition;
+      webkitSpeechRecognition?: new () => BrowserSpeechRecognition;
+    };
+    const SpeechCtor = w.SpeechRecognition || w.webkitSpeechRecognition;
+    if (!SpeechCtor) return;
+
+    try {
+      const rec = new SpeechCtor();
+      rec.lang = "es-EC";
+      rec.interimResults = false;
+      rec.maxAlternatives = 1;
+      rec.continuous = false;
+      rec.onresult = (ev) => {
+        const transcript = ev.results?.[0]?.[0]?.transcript?.trim();
+        if (transcript) {
+          setInput((prev) => (prev.trim() ? `${prev.trim()} ${transcript}` : transcript));
+          inputRef.current?.focus();
+        }
+      };
+      rec.onerror = () => setIsListening(false);
+      rec.onend = () => setIsListening(false);
+      recognitionRef.current = rec;
+      setIsListening(true);
+      rec.start();
+    } catch {
+      setIsListening(false);
+    }
+  }
 
   useEffect(() => {
     if (scrollRef.current) {
@@ -187,6 +268,7 @@ export default function DemoWhatsAppSimulator() {
         intentTag?: string | null;
         orderCreated?: boolean;
         order?: { id: number } | null;
+        escalatedToHuman?: boolean;
       };
 
       if (data.sessionId && data.sessionId !== sessionId) {
@@ -224,6 +306,7 @@ export default function DemoWhatsAppSimulator() {
           quotedTotalUsd: data.quotedTotalUsd ?? null,
           intentTag: data.intentTag ?? null,
           orderId: data.orderCreated && data.order?.id ? data.order.id : null,
+          escalatedToHuman: Boolean(data.escalatedToHuman),
           qaFlag: null,
           qaNote: null,
         },
@@ -462,6 +545,11 @@ export default function DemoWhatsAppSimulator() {
                             Pedido #{msg.orderId} creado
                           </span>
                         )}
+                        {msg.escalatedToHuman && (
+                          <span className="rounded bg-red-600 px-1.5 py-0.5 font-semibold text-white">
+                            🚨 Escalado a asesor humano
+                          </span>
+                        )}
                       </div>
 
                       <div className="flex items-center gap-1.5">
@@ -588,10 +676,30 @@ export default function DemoWhatsAppSimulator() {
             type="text"
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            placeholder="Escribe cualquier consulta libre (ej. Aditivos humo negro, Hilux 2020, ISO 68)..."
+            placeholder={
+              isListening
+                ? "Escuchando tu consulta en español (es-EC)..."
+                : "Escribe o dicta tu consulta (ej. humo negro, Aveo 2015, batería Chery Tiggo 7)..."
+            }
             aria-label="Escribe tu mensaje libre para Milo"
             className="flex-1 rounded-full border border-transparent bg-white px-4 py-2.5 text-sm text-[#111B21] placeholder-[#667781] shadow-sm focus:border-[#00A884] focus:outline-none"
           />
+          {speechSupported && (
+            <button
+              type="button"
+              onClick={handleToggleVoiceDictation}
+              disabled={isSending}
+              title={isListening ? "Detener dictado por voz" : "Dictar consulta por voz (es-EC)"}
+              aria-label={isListening ? "Detener dictado por voz" : "Dictar consulta por voz"}
+              className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-full shadow-md transition active:scale-95 disabled:opacity-50 ${
+                isListening
+                  ? "animate-pulse bg-red-600 text-white hover:bg-red-700"
+                  : "bg-white text-[#54656F] hover:bg-slate-100"
+              }`}
+            >
+              {isListening ? <MicOff className="h-5 w-5" /> : <Mic className="h-5 w-5" />}
+            </button>
+          )}
           <button
             type="submit"
             disabled={isSending || !input.trim()}

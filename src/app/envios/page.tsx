@@ -348,7 +348,7 @@ export default function ShippingPage() {
               href="/productos"
               className="btn-secondary !px-8 !py-4 text-xs font-black uppercase tracking-wider rounded-xl border border-slate-700 hover:border-slate-500 text-white w-full sm:w-auto justify-center"
             >
-              <span>Explorar Catálogo Completo (366 Ítems)</span>
+              <span>Explorar Catálogo Completo (365 Ítems)</span>
             </Link>
           </div>
 

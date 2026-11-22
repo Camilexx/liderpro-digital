@@ -58,7 +58,7 @@ export async function POST(req: NextRequest) {
         dbStorageMode: result.dbStorageMode,
         orderCreated: result.orderCreated,
         order: result.order,
-        channel: "whatsapp_demo_hermes_24_7",
+        channel: "whatsapp_demo_milo_24_7",
       },
       { status: 200 }
     );
@@ -66,7 +66,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json(
       {
         ok: false,
-        error: "No se pudo procesar la consulta en el simulador de Hermes.",
+        error: "No se pudo procesar la consulta con Milo.",
       },
       { status: 500 }
     );

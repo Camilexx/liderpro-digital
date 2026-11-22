@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import DemoWhatsAppSimulator from "@/components/DemoWhatsAppSimulator";
 
 export const metadata: Metadata = {
-  title: "Simulador WhatsApp Business 24/7 — LíderPro Pedernales",
-  description: "Entorno privado de demostración para Meta Business Review.",
+  title: "Milo • Asesor Automotriz de LíderPro Pedernales (WhatsApp 24/7)",
+  description: "Simulador conversacional de Milo, asesor automotriz de LíderPro Pedernales.",
   robots: {
     index: false,
     follow: false,

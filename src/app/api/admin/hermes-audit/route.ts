@@ -86,7 +86,7 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ ok: true, audit: report, telegramSent }, { status: 200 });
   } catch {
     return NextResponse.json(
-      { ok: false, error: "No se pudo generar la auditoría semanal de Hermes." },
+      { ok: false, error: "No se pudo generar la auditoría semanal de Milo." },
       { status: 500 }
     );
   }
@@ -119,7 +119,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ ok: true, audit: report, telegramSent }, { status: 200 });
   } catch {
     return NextResponse.json(
-      { ok: false, error: "No se pudo generar la auditoría semanal de Hermes." },
+      { ok: false, error: "No se pudo generar la auditoría semanal de Milo." },
       { status: 500 }
     );
   }

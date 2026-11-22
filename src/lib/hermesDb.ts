@@ -7,6 +7,26 @@ export type CustomerType = "particular" | "camaronera" | "taller";
 export type ChannelType = "whatsapp" | "demo_web" | "instagram" | "messenger";
 export type QaFlag = "good" | "fix";
 export type OrderStatus = "pending_dispatch" | "dispatched" | "completed" | "cancelled";
+export type SalesStage = "descubrimiento" | "cotizacion" | "objecion" | "cierre" | "pedido_confirmado";
+
+export interface CartItem {
+  sku: string;
+  name: string;
+  brand?: string;
+  presentation?: string;
+  unitPriceIva: number;
+  qty: number;
+  subCategory?: string;
+}
+
+export interface CommercialState {
+  cartItems: CartItem[];
+  discussedCategories: string[];
+  batteryTradeIn: boolean | null;
+  salesStage: SalesStage;
+  lastSuggestedItems: CartItem[];
+  updatedAt?: string;
+}
 
 export interface VehicleProfile {
   make?: string;
@@ -57,6 +77,7 @@ export interface CustomerRecord {
   city: string | null;
   customerType: CustomerType;
   lastQuote: LastQuoteSnapshot | null;
+  commercialState: CommercialState | null;
   updatedAt: string;
 }
 
@@ -101,6 +122,7 @@ export interface UpsertCustomerInput {
   city?: string | null;
   customerType?: CustomerType;
   lastQuote?: LastQuoteSnapshot | null;
+  commercialState?: CommercialState | null;
 }
 
 export interface InsertMessageInput {
@@ -310,6 +332,7 @@ async function getPool(): Promise<Pool | null> {
         );
 
         ALTER TABLE customers ADD COLUMN IF NOT EXISTS last_quote JSONB;
+        ALTER TABLE customers ADD COLUMN IF NOT EXISTS commercial_state JSONB;
 
         CREATE TABLE IF NOT EXISTS messages (
           id BIGSERIAL PRIMARY KEY,
@@ -381,6 +404,7 @@ function mapPgCustomerRow(row: Record<string, unknown>): CustomerRecord {
     city: typeof row.city === "string" ? row.city : null,
     customerType: (row.customer_type as CustomerType) || "particular",
     lastQuote: (row.last_quote as LastQuoteSnapshot | null) ?? null,
+    commercialState: (row.commercial_state as CommercialState | null) ?? null,
     updatedAt: row.updated_at ? new Date(String(row.updated_at)).toISOString() : new Date().toISOString(),
   };
 }
@@ -463,7 +487,7 @@ export async function getCustomer(phoneOrSession: string): Promise<CustomerRecor
     const pool = await getPool();
     if (pool) {
       const { rows } = await pool.query<Record<string, unknown>>(
-        `SELECT phone_or_session, name, active_vehicle, city, customer_type, last_quote, updated_at
+        `SELECT phone_or_session, name, active_vehicle, city, customer_type, last_quote, commercial_state, updated_at
          FROM customers WHERE phone_or_session = $1 LIMIT 1`,
         [key]
       );
@@ -490,19 +514,23 @@ export async function upsertCustomer(input: UpsertCustomerInput): Promise<Custom
       const nextVehicle = input.activeVehicle !== undefined ? input.activeVehicle : existing?.activeVehicle ?? null;
       const nextCity = input.city !== undefined ? input.city : existing?.city ?? null;
       const nextType: CustomerType = input.customerType || existing?.customerType || "particular";
+      const clearLastQuote = input.lastQuote === null;
       const nextLastQuote = input.lastQuote !== undefined ? input.lastQuote : existing?.lastQuote ?? null;
+      const nextCommercialState =
+        input.commercialState !== undefined ? input.commercialState : existing?.commercialState ?? null;
 
       const { rows } = await pool.query<Record<string, unknown>>(
-        `INSERT INTO customers (phone_or_session, name, active_vehicle, city, customer_type, last_quote, updated_at)
-         VALUES ($1, $2, $3::jsonb, $4, $5, $6::jsonb, NOW())
+        `INSERT INTO customers (phone_or_session, name, active_vehicle, city, customer_type, last_quote, commercial_state, updated_at)
+         VALUES ($1, $2, $3::jsonb, $4, $5, $6::jsonb, $7::jsonb, NOW())
          ON CONFLICT (phone_or_session) DO UPDATE SET
            name = COALESCE(EXCLUDED.name, customers.name),
            active_vehicle = COALESCE(EXCLUDED.active_vehicle, customers.active_vehicle),
            city = COALESCE(EXCLUDED.city, customers.city),
            customer_type = COALESCE(EXCLUDED.customer_type, customers.customer_type),
-           last_quote = COALESCE(EXCLUDED.last_quote, customers.last_quote),
+           last_quote = CASE WHEN $8 THEN NULL ELSE COALESCE(EXCLUDED.last_quote, customers.last_quote) END,
+           commercial_state = COALESCE(EXCLUDED.commercial_state, customers.commercial_state),
            updated_at = NOW()
-         RETURNING phone_or_session, name, active_vehicle, city, customer_type, last_quote, updated_at`,
+         RETURNING phone_or_session, name, active_vehicle, city, customer_type, last_quote, commercial_state, updated_at`,
         [
           key,
           nextName,
@@ -510,6 +538,8 @@ export async function upsertCustomer(input: UpsertCustomerInput): Promise<Custom
           nextCity,
           nextType,
           nextLastQuote ? JSON.stringify(nextLastQuote) : null,
+          nextCommercialState ? JSON.stringify(nextCommercialState) : null,
+          clearLastQuote,
         ]
       );
       if (rows.length > 0) return mapPgCustomerRow(rows[0]);
@@ -527,6 +557,7 @@ export async function upsertCustomer(input: UpsertCustomerInput): Promise<Custom
     city: input.city !== undefined ? input.city : prev?.city ?? null,
     customerType: input.customerType || prev?.customerType || "particular",
     lastQuote: input.lastQuote !== undefined ? input.lastQuote : prev?.lastQuote ?? null,
+    commercialState: input.commercialState !== undefined ? input.commercialState : prev?.commercialState ?? null,
     updatedAt: nowIso,
   };
   store.customers[key] = record;
@@ -534,7 +565,7 @@ export async function upsertCustomer(input: UpsertCustomerInput): Promise<Custom
   return record;
 }
 
-export async function getRecentMessages(sessionId: string, limit = 12): Promise<StoredMessageRecord[]> {
+export async function getRecentMessages(sessionId: string, limit = 20): Promise<StoredMessageRecord[]> {
   const key = sessionId.trim();
   if (!key) return [];
 
@@ -725,7 +756,7 @@ export async function insertOrder(input: InsertOrderInput): Promise<{ order: Ord
     : "No especificado";
   const itemsList = savedOrder.itemsJson.map((i) => `• ${i.name} ($${Number(i.unitPriceIva).toFixed(2)})`).join("\n");
   const alertText =
-    `🚨 *NUEVO PEDIDO HERMES #${savedOrder.id} — DESPACHO INMEDIATO*\n` +
+    `🚨 *NUEVO PEDIDO MILO #${savedOrder.id} — DESPACHO INMEDIATO*\n` +
     `👤 *Cliente:* ${savedOrder.customerName || "Por confirmar"} (${savedOrder.phone || savedOrder.sessionId})\n` +
     `🚗 *Vehículo:* ${vStr}\n` +
     `📍 *Dirección:* ${savedOrder.deliveryAddress || "Por confirmar"}\n` +
@@ -797,6 +828,7 @@ export async function updateOrderStatus(
 }
 
 const OUT_OF_STOCK_PATTERNS: Array<{ label: string; regex: RegExp }> = [
+  { label: "Líquido de Frenos DOT", regex: /\b(liquido\s+de\s+frenos?|dot\s*[345])\b/i },
   { label: "Llantas / Neumáticos", regex: /\b(llantas?|neumaticos?|cauchos?|rin(?:es)?\s*\d*|aros?)\b/i },
   { label: "Pastillas / Zapatas / Discos de Freno", regex: /\b(pastillas?|balatas?|zapatas?|discos?\s+de\s+freno|tambores?)\b/i },
   { label: "Parabrisas / Vidrios / Plumillas", regex: /\b(parabrisas?|vidrios?|plumillas?|limpiaparabrisas?)\b/i },
@@ -899,7 +931,7 @@ async function loadMessagesAndCustomersSince(
         [periodStart.toISOString()]
       );
       const custRes = await pool.query<Record<string, unknown>>(
-        `SELECT phone_or_session, name, active_vehicle, city, customer_type, last_quote, updated_at
+        `SELECT phone_or_session, name, active_vehicle, city, customer_type, last_quote, commercial_state, updated_at
          FROM customers`
       );
       return {
@@ -1098,7 +1130,7 @@ export async function generateAndSaveWeeklyAudit(
       .map((o) => `• ${o.term}: ${o.count}`)
       .join("\n") || "• Ninguno";
     const tgText =
-      `📊 *AUDITORÍA SEMANAL HERMES (${safeDays} días)*\n` +
+      `📊 *AUDITORÍA SEMANAL MILO (${safeDays} días)*\n` +
       `• *Chats activos:* ${report.totalChats} (${report.totalMessages} mensajes)\n` +
       `• *Alertas [⚠️ Corregir]:* ${report.flaggedFailures.length}\n` +
       `• *Latencia promedio:* ${report.avgLatencyMs ?? "N/D"} ms\n` +

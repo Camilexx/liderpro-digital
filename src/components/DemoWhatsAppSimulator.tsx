@@ -44,12 +44,13 @@ interface MessageItem {
 }
 
 const SUGGESTION_PROMPTS = [
-  "Tengo una D-Max 2019 diésel",
-  "¿y con batería a domicilio en Pedernales?",
-  "Perfecto, mándame la opción 1 a la calle Eloy Alfaro, pago por transferencia Banco Pichincha, soy Carlos",
-  "precio del aceite",
+  "Hola, mi carro bota humo negro y está tragando gasolina, qué aditivo recomiendan?",
+  "Buenas, venden grasa para rodamientos y líquido de frenos?",
+  "Tengo una Hilux 2020 diésel",
+  "Necesito aceite hidráulico ISO 68 en caneca de 20 litros para camaronera",
+  "¿Cuánto cuesta el MANNOL Motor Flush Professional + Ester 450ml?",
   "¿puedo mezclar aceite de cocina con 5W-30?",
-  "¿tienen llantas rin 17?",
+  "¿tienen pastillas de freno?",
 ];
 
 function createFreshSessionId(): string {
@@ -87,10 +88,10 @@ function buildWelcomeMessage(): MessageItem {
     sender: "hermes",
     text:
       "¡Hola! Bienvenido a *LíderPro Pedernales* (+593 96 748 9002) 👋\n\n" +
-      "Soy *Hermes*, tu asesor en repuestos, *baterías Bosch y Ecuador* (instalación a domicilio 100% gratis en Pedernales), *combos MANNOL con Cockpit Care + Esponja gratis* y *filtros Advance*.\n\n" +
-      "Escríbeme libremente tu vehículo (marca, modelo y año) o cualquier consulta para cotizarte al instante con *IVA incluido*.",
+      "Soy *Milo*, tu asesor automotriz en *aditivos, refrigerantes, grasas, aceites de motor/transmisión, hidráulicos, estética UV3, filtros Advance y baterías Bosch/Ecuador* (instalación gratis a domicilio en Pedernales).\n\n" +
+      "Cuéntame qué necesita tu vehículo o qué producto buscas y te cotizo al instante con *IVA incluido*.",
     time: nowTime(),
-    model: "hermes-online",
+    model: "milo-online",
   };
 }
 
@@ -159,14 +160,6 @@ export default function DemoWhatsAppSimulator() {
       time: nowTime(),
     };
 
-    const nextHistory = messages
-      .filter((m) => m.id !== "welcome-1")
-      .slice(-8)
-      .map((m) => ({
-        role: m.sender === "user" ? ("user" as const) : ("assistant" as const),
-        content: m.text,
-      }));
-
     setMessages((prev) => [...prev, userMsg]);
     setInput("");
     setIsSending(true);
@@ -178,7 +171,6 @@ export default function DemoWhatsAppSimulator() {
         body: JSON.stringify({
           sessionId,
           message: trimmed,
-          history: nextHistory,
         }),
       });
       const data = (await resp.json()) as {
@@ -242,7 +234,7 @@ export default function DemoWhatsAppSimulator() {
         {
           id: `err-${Date.now()}`,
           sender: "hermes",
-          text: "Error temporal de red al consultar a Hermes. Por favor intenta nuevamente.",
+          text: "Error temporal de red al consultar a Milo. Por favor intenta nuevamente.",
           time: nowTime(),
         },
       ]);
@@ -313,7 +305,7 @@ export default function DemoWhatsAppSimulator() {
             </div>
             <div className="min-w-0">
               <h1 className="truncate text-sm font-bold tracking-tight sm:text-base">
-                LíderPro Pedernales • (+593 96 748 9002)
+                Milo • Asesor Automotriz de LíderPro Pedernales
               </h1>
               <p className="flex items-center gap-1.5 truncate text-xs text-emerald-100/95">
                 <span className="inline-block h-2 w-2 shrink-0 rounded-full bg-[#25D366]" />
@@ -323,7 +315,7 @@ export default function DemoWhatsAppSimulator() {
                   <>
                     <span>En línea</span>
                     <span className="hidden text-emerald-200/75 sm:inline">
-                      • Hermes IA • 426 SKUs c/IVA
+                      • +593 96 748 9002 • 426 SKUs c/IVA
                     </span>
                   </>
                 )}
@@ -596,8 +588,8 @@ export default function DemoWhatsAppSimulator() {
             type="text"
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            placeholder="Escribe cualquier consulta libre (ej. Tengo una D-Max 2019 diésel)..."
-            aria-label="Escribe tu mensaje libre para Hermes"
+            placeholder="Escribe cualquier consulta libre (ej. Aditivos humo negro, Hilux 2020, ISO 68)..."
+            aria-label="Escribe tu mensaje libre para Milo"
             className="flex-1 rounded-full border border-transparent bg-white px-4 py-2.5 text-sm text-[#111B21] placeholder-[#667781] shadow-sm focus:border-[#00A884] focus:outline-none"
           />
           <button

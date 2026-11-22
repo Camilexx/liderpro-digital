@@ -931,7 +931,7 @@ export const PRODUCTS: Product[] = [
     "id": "mannol-mannol-chevrolet-opel-oem-5w30-lp-lur-010",
     "sku": "LP-LUR-010",
     "slug": "mannol-mannol-chevrolet-opel-oem-5w30-lp-lur-010",
-    "name": "MANNOL Chevrolet Opel O.e.m 5W-30",
+    "name": "MANNOL Chevrolet Opel OEM 5W-30",
     "brand": "MANNOL",
     "category": "lubricantes",
     "applicationType": "autos",
@@ -966,7 +966,7 @@ export const PRODUCTS: Product[] = [
     "variants": [
       {
         "sku": "LP-LUR-010-C3",
-        "name": "MANNOL Chevrolet Opel O.e.m 5W-30 (1 Litro)",
+        "name": "MANNOL Chevrolet Opel OEM 5W-30 (1 Litro)",
         "presentation": "1 Litro",
         "volume": "1 Litro",
         "stock": 10,
@@ -976,7 +976,7 @@ export const PRODUCTS: Product[] = [
       },
       {
         "sku": "LP-LUR-010-C4",
-        "name": "MANNOL Chevrolet Opel O.e.m 5W-30 (1 Galón / 5L)",
+        "name": "MANNOL Chevrolet Opel OEM 5W-30 (1 Galón / 5L)",
         "presentation": "1 Galón / 5L",
         "volume": "1 Galón / 5L",
         "stock": 10,
@@ -1041,7 +1041,7 @@ export const PRODUCTS: Product[] = [
     "id": "mannol-mannol-toyota-lexus-oem-5w30-metálico-lp-lur-011",
     "sku": "LP-LUR-011",
     "slug": "mannol-mannol-toyota-lexus-oem-5w30-metálico-lp-lur-011",
-    "name": "MANNOL Toyota Lexus O.e.m 5W-30 Metálico",
+    "name": "MANNOL Toyota Lexus OEM 5W-30 Metálico",
     "brand": "MANNOL",
     "category": "lubricantes",
     "applicationType": "autos",
@@ -1076,7 +1076,7 @@ export const PRODUCTS: Product[] = [
     "variants": [
       {
         "sku": "LP-LUR-011-C3",
-        "name": "MANNOL Toyota Lexus O.e.m 5W-30 Metálico (1 Litro)",
+        "name": "MANNOL Toyota Lexus OEM 5W-30 Metálico (1 Litro)",
         "presentation": "1 Litro",
         "volume": "1 Litro",
         "stock": 10,
@@ -1086,7 +1086,7 @@ export const PRODUCTS: Product[] = [
       },
       {
         "sku": "LP-LUR-011-C4",
-        "name": "MANNOL Toyota Lexus O.e.m 5W-30 Metálico (1 Galón / 5L)",
+        "name": "MANNOL Toyota Lexus OEM 5W-30 Metálico (1 Galón / 5L)",
         "presentation": "1 Galón / 5L",
         "volume": "1 Galón / 5L",
         "stock": 10,
@@ -1151,7 +1151,7 @@ export const PRODUCTS: Product[] = [
     "id": "mannol-mannol-hyundai-kia-oem-5w30-metálico-lp-lur-012",
     "sku": "LP-LUR-012",
     "slug": "mannol-mannol-hyundai-kia-oem-5w30-metálico-lp-lur-012",
-    "name": "MANNOL Hyundai Kia O.e.m 5W-30 Metálico",
+    "name": "MANNOL Hyundai Kia OEM 5W-30 Metálico",
     "brand": "MANNOL",
     "category": "lubricantes",
     "applicationType": "autos",
@@ -1186,7 +1186,7 @@ export const PRODUCTS: Product[] = [
     "variants": [
       {
         "sku": "LP-LUR-012-C3",
-        "name": "MANNOL Hyundai Kia O.e.m 5W-30 Metálico (1 Litro)",
+        "name": "MANNOL Hyundai Kia OEM 5W-30 Metálico (1 Litro)",
         "presentation": "1 Litro",
         "volume": "1 Litro",
         "stock": 10,
@@ -1196,7 +1196,7 @@ export const PRODUCTS: Product[] = [
       },
       {
         "sku": "LP-LUR-012-C4",
-        "name": "MANNOL Hyundai Kia O.e.m 5W-30 Metálico (1 Galón / 5L)",
+        "name": "MANNOL Hyundai Kia OEM 5W-30 Metálico (1 Galón / 5L)",
         "presentation": "1 Galón / 5L",
         "volume": "1 Galón / 5L",
         "stock": 10,
@@ -1469,17 +1469,17 @@ export const PRODUCTS: Product[] = [
     "id": "mannol-mannol-cj-x-20-lt-4takt-motorbike-10w40-lp-lur-015",
     "sku": "LP-LUR-015",
     "slug": "mannol-mannol-cj-x-20-lt-4takt-motorbike-10w40-lp-lur-015",
-    "name": "MANNOL 4takt Motorbike 10W-40",
+    "name": "MANNOL 4-Takt Motorbike 10W-40",
     "brand": "MANNOL",
     "category": "lubricantes",
     "applicationType": "motos",
-    "volume": "20 Lt",
+    "volume": "1 Litro",
     "plates": null,
-    "shortSpec": "MANNOL • Viscosidad: 10W40 • 20 Lt • Cumple Normativa API • Máxima Protección",
+    "shortSpec": "MANNOL • Viscosidad: 10W-40 • 1 Litro • Cumple Normativa API • Máxima Protección",
     "specifications": {
       "Marca": "MANNOL",
-      "Viscosidad SAE / Grado": "10W40",
-      "Presentaciones": "20 Lt",
+      "Viscosidad SAE / Grado": "10W-40",
+      "Presentaciones": "1 Litro",
       "Clasificación API / ACEA": "API Aprobado Oficial (Cumple especificaciones de fábrica)",
       "Garantía": "100% Producto Original Sellado de Fábrica",
       "Aplicación": "Motor a Gasolina / Diésel según especificación técnica"
@@ -1492,7 +1492,7 @@ export const PRODUCTS: Product[] = [
       "Procedencia": "Distribución Autorizada Liderpro Pedernales",
       "Facturación": "Factura electrónica autorizada por el SRI"
     },
-    "description": "Lubricante automotriz oficial MANNOL CJ X 20 LT 4TAKT MOTORBIKE 10W40 marca MANNOL. Formulado para otorgar una película protectora duradera que reduce el desgaste prematuro de pistones, cilindros y rodamientos bajo condiciones de trabajo severo y altas temperaturas ambientales en Pedernales y la provincia de Manabí.",
+    "description": "Lubricante oficial MANNOL 4-Takt Motorbike 10W-40 (1 Litro). Formulado para otorgar una película protectora duradera en motos 4 tiempos con embrague húmedo bajo altas temperaturas en Pedernales y la provincia de Manabí.",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -1544,16 +1544,16 @@ export const PRODUCTS: Product[] = [
     "id": "mannol-mannol-cj-x-20-und-4takt-motorbike-10w50-lp-lur-016",
     "sku": "LP-LUR-016",
     "slug": "mannol-mannol-cj-x-20-und-4takt-motorbike-10w50-lp-lur-016",
-    "name": "MANNOL 4takt Motorbike 10W-50",
+    "name": "MANNOL 4-Takt Motorbike 10W-50",
     "brand": "MANNOL",
     "category": "lubricantes",
     "applicationType": "motos",
     "volume": "1 Litro",
     "plates": null,
-    "shortSpec": "MANNOL • Viscosidad: 15W-40 • 1 Litro • Cumple Normativa API • Máxima Protección",
+    "shortSpec": "MANNOL • Viscosidad: 10W-50 • 1 Litro • Cumple Normativa API • Máxima Protección",
     "specifications": {
       "Marca": "MANNOL",
-      "Viscosidad SAE / Grado": "15W-40",
+      "Viscosidad SAE / Grado": "10W-50",
       "Presentaciones": "1 Litro",
       "Clasificación API / ACEA": "API Aprobado Oficial (Cumple especificaciones de fábrica)",
       "Garantía": "100% Producto Original Sellado de Fábrica",
@@ -1625,10 +1625,10 @@ export const PRODUCTS: Product[] = [
     "applicationType": "motos",
     "volume": "1 Litro",
     "plates": null,
-    "shortSpec": "MANNOL • Viscosidad: 15W-40 • 1 Litro • Cumple Normativa API • Máxima Protección",
+    "shortSpec": "MANNOL • Viscosidad: 15W-50 • 1 Litro • Cumple Normativa API • Máxima Protección",
     "specifications": {
       "Marca": "MANNOL",
-      "Viscosidad SAE / Grado": "15W-40",
+      "Viscosidad SAE / Grado": "15W-50",
       "Presentaciones": "1 Litro",
       "Clasificación API / ACEA": "API Aprobado Oficial (Cumple especificaciones de fábrica)",
       "Garantía": "100% Producto Original Sellado de Fábrica",
@@ -1700,10 +1700,10 @@ export const PRODUCTS: Product[] = [
     "applicationType": "pesado",
     "volume": "1 Litro",
     "plates": null,
-    "shortSpec": "MANNOL • Viscosidad: 15W-40 • 2 presentaciones disponibles (1 Litro, 1 Galón / 5L) • Cumple Normativa API • Máxima Protección",
+    "shortSpec": "MANNOL • Viscosidad: 5W-40 • 2 presentaciones disponibles (1 Litro, 1 Galón / 5L) • Cumple Normativa API • Máxima Protección",
     "specifications": {
       "Marca": "MANNOL",
-      "Viscosidad SAE / Grado": "15W-40",
+      "Viscosidad SAE / Grado": "5W-40",
       "Presentaciones": "2 presentaciones disponibles (1 Litro, 1 Galón / 5L)",
       "Clasificación API / ACEA": "API Aprobado Oficial (Cumple especificaciones de fábrica)",
       "Garantía": "100% Producto Original Sellado de Fábrica",
@@ -2226,7 +2226,7 @@ export const PRODUCTS: Product[] = [
     "id": "mannol-mannol-fwd-75w85-gl4-lp-lur-023",
     "sku": "LP-LUR-023",
     "slug": "mannol-mannol-fwd-75w85-gl4-lp-lur-023",
-    "name": "MANNOL FWD 75W-85 Gl4",
+    "name": "MANNOL FWD 75W-85 GL-4",
     "brand": "MANNOL",
     "category": "lubricantes",
     "applicationType": "camionetas",
@@ -2261,7 +2261,7 @@ export const PRODUCTS: Product[] = [
     "variants": [
       {
         "sku": "LP-LUR-023-C3",
-        "name": "MANNOL FWD 75W-85 Gl4 (1 Litro)",
+        "name": "MANNOL FWD 75W-85 GL-4 (1 Litro)",
         "presentation": "1 Litro",
         "volume": "1 Litro",
         "stock": 10,
@@ -2271,7 +2271,7 @@ export const PRODUCTS: Product[] = [
       },
       {
         "sku": "LP-LUR-023-C4",
-        "name": "MANNOL FWD 75W-85 Gl4 (1 Galón / 5L)",
+        "name": "MANNOL FWD 75W-85 GL-4 (1 Galón / 5L)",
         "presentation": "1 Galón / 5L",
         "volume": "1 Galón / 5L",
         "stock": 10,
@@ -2330,7 +2330,7 @@ export const PRODUCTS: Product[] = [
     "id": "mannol-mannol-hypoid-lsd-85w140-gl5-ls-deslizamiento-limitado-lp-lur-024",
     "sku": "LP-LUR-024",
     "slug": "mannol-mannol-hypoid-lsd-85w140-gl5-ls-deslizamiento-limitado-lp-lur-024",
-    "name": "MANNOL Hypoid LSD 85W-140 Gl5 Ls (deslizamiento Limitado)",
+    "name": "MANNOL Hypoid LSD 85W-140 GL-5 Ls (deslizamiento Limitado)",
     "brand": "MANNOL",
     "category": "lubricantes",
     "applicationType": "pesado",
@@ -2365,7 +2365,7 @@ export const PRODUCTS: Product[] = [
     "variants": [
       {
         "sku": "LP-LUR-024-C4",
-        "name": "MANNOL Hypoid LSD 85W-140 Gl5 Ls (deslizamiento Limitado) (1 Galón / 5L)",
+        "name": "MANNOL Hypoid LSD 85W-140 GL-5 Ls (deslizamiento Limitado) (1 Galón / 5L)",
         "presentation": "1 Galón / 5L",
         "volume": "1 Galón / 5L",
         "stock": 10,
@@ -2375,7 +2375,7 @@ export const PRODUCTS: Product[] = [
       },
       {
         "sku": "LP-LUR-024-C5",
-        "name": "MANNOL Hypoid LSD 85W-140 Gl5 Ls (deslizamiento Limitado) (Caneca 5 GL)",
+        "name": "MANNOL Hypoid LSD 85W-140 GL-5 Ls (deslizamiento Limitado) (Caneca 5 GL)",
         "presentation": "Caneca 5 GL",
         "volume": "Caneca 5 GL",
         "stock": 10,
@@ -2422,7 +2422,7 @@ export const PRODUCTS: Product[] = [
     "id": "mannol-mannol-hypoid-getriebeoel-80w90-gl4-gl5-ls-deslizamiento-limitado-lp-lur-025",
     "sku": "LP-LUR-025",
     "slug": "mannol-mannol-hypoid-getriebeoel-80w90-gl4-gl5-ls-deslizamiento-limitado-lp-lur-025",
-    "name": "MANNOL Hypoid Getriebeoel 80W-90 Gl4 Gl5 Ls (deslizamiento Limitado)",
+    "name": "MANNOL Hypoid Getriebeoel 80W-90 GL-4 GL-5 Ls (deslizamiento Limitado)",
     "brand": "MANNOL",
     "category": "lubricantes",
     "applicationType": "camionetas",
@@ -2457,7 +2457,7 @@ export const PRODUCTS: Product[] = [
     "variants": [
       {
         "sku": "LP-LUR-025-C3",
-        "name": "MANNOL Hypoid Getriebeoel 80W-90 Gl4 Gl5 Ls (deslizamiento Limitado) (1 Litro)",
+        "name": "MANNOL Hypoid Getriebeoel 80W-90 GL-4 GL-5 Ls (deslizamiento Limitado) (1 Litro)",
         "presentation": "1 Litro",
         "volume": "1 Litro",
         "stock": 10,
@@ -2467,7 +2467,7 @@ export const PRODUCTS: Product[] = [
       },
       {
         "sku": "LP-LUR-025-C4",
-        "name": "MANNOL Hypoid Getriebeoel 80W-90 Gl4 Gl5 Ls (deslizamiento Limitado) (1 Galón / 5L)",
+        "name": "MANNOL Hypoid Getriebeoel 80W-90 GL-4 GL-5 Ls (deslizamiento Limitado) (1 Galón / 5L)",
         "presentation": "1 Galón / 5L",
         "volume": "1 Galón / 5L",
         "stock": 10,
@@ -2526,7 +2526,7 @@ export const PRODUCTS: Product[] = [
     "id": "mannol-mannol-universal-getriebeoel-80w90-gl4-lp-lur-026",
     "sku": "LP-LUR-026",
     "slug": "mannol-mannol-universal-getriebeoel-80w90-gl4-lp-lur-026",
-    "name": "MANNOL Universal Getriebeoel 80W-90 Gl4",
+    "name": "MANNOL Universal Getriebeoel 80W-90 GL-4",
     "brand": "MANNOL",
     "category": "lubricantes",
     "applicationType": "camionetas",
@@ -2561,7 +2561,7 @@ export const PRODUCTS: Product[] = [
     "variants": [
       {
         "sku": "LP-LUR-026-C4",
-        "name": "MANNOL Universal Getriebeoel 80W-90 Gl4 (1 Galón / 5L)",
+        "name": "MANNOL Universal Getriebeoel 80W-90 GL-4 (1 Galón / 5L)",
         "presentation": "1 Galón / 5L",
         "volume": "1 Galón / 5L",
         "stock": 10,
@@ -2571,7 +2571,7 @@ export const PRODUCTS: Product[] = [
       },
       {
         "sku": "LP-LUR-026-C5",
-        "name": "MANNOL Universal Getriebeoel 80W-90 Gl4 (Caneca 5 GL)",
+        "name": "MANNOL Universal Getriebeoel 80W-90 GL-4 (Caneca 5 GL)",
         "presentation": "Caneca 5 GL",
         "volume": "Caneca 5 GL",
         "stock": 10,
@@ -2630,7 +2630,7 @@ export const PRODUCTS: Product[] = [
     "id": "mannol-mannol-transm-basic-plus-75w90-gl4-lp-lur-027",
     "sku": "LP-LUR-027",
     "slug": "mannol-mannol-transm-basic-plus-75w90-gl4-lp-lur-027",
-    "name": "MANNOL Transm. Basic Plus 75W-90 Gl4",
+    "name": "MANNOL Transm. Basic Plus 75W-90 GL-4",
     "brand": "MANNOL",
     "category": "lubricantes",
     "applicationType": "camionetas",
@@ -2665,7 +2665,7 @@ export const PRODUCTS: Product[] = [
     "variants": [
       {
         "sku": "LP-LUR-027-C3",
-        "name": "MANNOL Transm. Basic Plus 75W-90 Gl4 (1 Litro)",
+        "name": "MANNOL Transm. Basic Plus 75W-90 GL-4 (1 Litro)",
         "presentation": "1 Litro",
         "volume": "1 Litro",
         "stock": 10,
@@ -2675,7 +2675,7 @@ export const PRODUCTS: Product[] = [
       },
       {
         "sku": "LP-LUR-027-C4",
-        "name": "MANNOL Transm. Basic Plus 75W-90 Gl4 (1 Galón / 5L)",
+        "name": "MANNOL Transm. Basic Plus 75W-90 GL-4 (1 Galón / 5L)",
         "presentation": "1 Galón / 5L",
         "volume": "1 Galón / 5L",
         "stock": 10,
@@ -2734,7 +2734,7 @@ export const PRODUCTS: Product[] = [
     "id": "mannol-mannol-oem-mtf-3-75w-metalico-lp-lur-028",
     "sku": "LP-LUR-028",
     "slug": "mannol-mannol-oem-mtf-3-75w-metalico-lp-lur-028",
-    "name": "MANNOL O.e.m MTF-3 75w Metalico",
+    "name": "MANNOL OEM MTF-3 75w Metalico",
     "brand": "MANNOL",
     "category": "lubricantes",
     "applicationType": "pesado",
@@ -2872,7 +2872,7 @@ export const PRODUCTS: Product[] = [
     "id": "mannol-mannol-atf-dexron-iii-lp-lur-030",
     "sku": "LP-LUR-030",
     "slug": "mannol-mannol-atf-dexron-iii-lp-lur-030",
-    "name": "MANNOL ATF Dexron Iii",
+    "name": "MANNOL ATF Dexron III",
     "brand": "MANNOL",
     "category": "lubricantes",
     "applicationType": "pesado",
@@ -2941,7 +2941,7 @@ export const PRODUCTS: Product[] = [
     "id": "mannol-mannol-atf-dexron-vi-lp-lur-031",
     "sku": "LP-LUR-031",
     "slug": "mannol-mannol-atf-dexron-vi-lp-lur-031",
-    "name": "MANNOL ATF Dexron Vi",
+    "name": "MANNOL ATF Dexron VI",
     "brand": "MANNOL",
     "category": "lubricantes",
     "applicationType": "pesado",
@@ -3292,10 +3292,10 @@ export const PRODUCTS: Product[] = [
     "applicationType": "pesado",
     "volume": "Caneca 5 GL",
     "plates": null,
-    "shortSpec": "MANNOL • Viscosidad: 15W-40 • Caneca 5 GL • Cumple Normativa API • Máxima Protección",
+    "shortSpec": "MANNOL • Viscosidad: 10W-30 • Caneca 5 GL • Cumple Normativa API • Máxima Protección",
     "specifications": {
       "Marca": "MANNOL",
-      "Viscosidad SAE / Grado": "15W-40",
+      "Viscosidad SAE / Grado": "10W-30",
       "Presentaciones": "Caneca 5 GL",
       "Clasificación API / ACEA": "API Aprobado Oficial (Cumple especificaciones de fábrica)",
       "Garantía": "100% Producto Original Sellado de Fábrica",
@@ -9293,7 +9293,7 @@ export const PRODUCTS: Product[] = [
     "id": "advance-filtro-aceite-hino-fb1817-fd2220-fd2320-fe3020-sg3320-sg3325-advance-080ao-1314",
     "sku": "080AO-1314",
     "slug": "advance-filtro-aceite-hino-fb1817-fd2220-fd2320-fe3020-sg3320-sg3325-advance-080ao-1314",
-    "name": "Filtro de Aceite Advance (AO-1314) — Hino Fb1817, Fd2220, Fd2320, Fe3020, Sg3320, Sg3325 ()",
+    "name": "Filtro de Aceite Advance (AO-1314) — Hino Fb1817, Fd2220, Fd2320, Fe3020, Sg3320, Sg3325",
     "brand": "ADVANCE",
     "category": "filtros",
     "applicationType": "pesado",
@@ -16891,10 +16891,10 @@ export const PRODUCTS: Product[] = [
     "applicationType": "motos",
     "volume": "1 Litro",
     "plates": null,
-    "shortSpec": "MOTUL • Viscosidad: 15W-40 • 1 Litro • Cumple Normativa API • Máxima Protección",
+    "shortSpec": "MOTUL • Viscosidad: 15W-50 • 1 Litro • Cumple Normativa API • Máxima Protección",
     "specifications": {
       "Marca": "MOTUL",
-      "Viscosidad SAE / Grado": "15W-40",
+      "Viscosidad SAE / Grado": "15W-50",
       "Presentaciones": "1 Litro",
       "Clasificación API / ACEA": "API Aprobado Oficial (Cumple especificaciones de fábrica)",
       "Garantía": "100% Producto Original Sellado de Fábrica",
@@ -18587,12 +18587,12 @@ export const PRODUCTS: Product[] = [
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": "1 Litro",
+    "volume": "250 ml",
     "plates": null,
-    "shortSpec": "MANNOL • Cuidado & Rendimiento Automotriz • Presentación: 1 Litro • Máxima Calidad",
+    "shortSpec": "MANNOL • Cuidado & Rendimiento Automotriz • Presentación: 250 ml • Máxima Calidad",
     "specifications": {
       "Tipo": "Cuidado & Rendimiento Automotriz",
-      "Presentación": "1 Litro",
+      "Presentación": "250 ml",
       "Marca": "MANNOL",
       "Garantía": "100% Sellado de Fábrica"
     },
@@ -18647,12 +18647,12 @@ export const PRODUCTS: Product[] = [
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": "1 Litro",
+    "volume": "250 ml",
     "plates": null,
-    "shortSpec": "MANNOL • Cuidado & Rendimiento Automotriz • Presentación: 1 Litro • Máxima Calidad",
+    "shortSpec": "MANNOL • Cuidado & Rendimiento Automotriz • Presentación: 250 ml • Máxima Calidad",
     "specifications": {
       "Tipo": "Cuidado & Rendimiento Automotriz",
-      "Presentación": "1 Litro",
+      "Presentación": "250 ml",
       "Marca": "MANNOL",
       "Garantía": "100% Sellado de Fábrica"
     },
@@ -18823,7 +18823,7 @@ export const PRODUCTS: Product[] = [
     "id": "mannol-mannol-grasa-de-litio-multiuso-800-grs-ep2-lp-man-007",
     "sku": "LP-MAN-007",
     "slug": "mannol-mannol-grasa-de-litio-multiuso-800-grs-ep2-lp-man-007",
-    "name": "MANNOL Grasa De Litio Multiuso 800 Grs Ep2",
+    "name": "MANNOL Grasa De Litio Multiuso 800 g Ep2",
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "autos",
@@ -18883,27 +18883,27 @@ export const PRODUCTS: Product[] = [
     "id": "mannol-mannol-grasa-lc-2-alta-temperatura-45-kg-lp-man-008",
     "sku": "LP-MAN-008",
     "slug": "mannol-mannol-grasa-lc-2-alta-temperatura-45-kg-lp-man-008",
-    "name": "MANNOL Grasa LC-2 Alta Temperatura 4.5 Kg",
+    "name": "MANNOL Grasa LC-2 Alta Temperatura",
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "800 g",
     "plates": null,
-    "shortSpec": "MANNOL • Cuidado & Rendimiento Automotriz • Tamaños: 800 g, 1 Galón / 5L, Caneca 5 GL • Calidad Certificada",
+    "shortSpec": "MANNOL • Cuidado & Rendimiento Automotriz • Tamaños: 800 g, 4.5 Kg, Caneca 18 Kg • Calidad Certificada",
     "specifications": {
       "Tipo": "Cuidado & Rendimiento Automotriz",
       "Marca": "MANNOL",
-      "Variantes": "3 tamaños (800 g, 1 Galón / 5L, Caneca 5 GL)",
+      "Variantes": "3 tamaños (800 g, 4.5 Kg, Caneca 18 Kg)",
       "Garantía": "100% Sellado de Fábrica"
     },
     "fullSpecs": {
       "Línea": "Cuidado & Rendimiento Automotriz",
       "SKU": "LP-MAN-008",
-      "Presentaciones Disponibles": "800 g, 1 Galón / 5L, Caneca 5 GL",
+      "Presentaciones Disponibles": "800 g, 4.5 Kg, Caneca 18 Kg",
       "Procedencia": "Distribución Oficial Autorizada Liderpro",
       "Normativa": "Cumple y excede especificaciones API / ACEA / ISO"
     },
-    "description": "Línea oficial MANNOL GRASA LC-2 ALTA TEMPERATURA 4.5 KG de MANNOL. Disponible en varias presentaciones unificadas (800 g, 1 Galón / 5L, Caneca 5 GL) para cubrir desde el servicio individual hasta el abastecimiento de flotas pesadas.",
+    "description": "Línea oficial MANNOL Grasa LC-2 Alta Temperatura de MANNOL. Disponible en presentaciones de 800 g, 4.5 Kg y Caneca 18 Kg para servicio liviano, maquinaria agrícola y abastecimiento de flotas pesadas.",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza según el tamaño requerido.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -18915,7 +18915,7 @@ export const PRODUCTS: Product[] = [
     "variants": [
       {
         "sku": "LP-MAN-008-C3",
-        "name": "MANNOL Grasa LC-2 Alta Temperatura 4.5 Kg (800 g)",
+        "name": "MANNOL Grasa LC-2 Alta Temperatura (800 g)",
         "presentation": "800 g",
         "volume": "800 g",
         "stock": 10,
@@ -18925,9 +18925,9 @@ export const PRODUCTS: Product[] = [
       },
       {
         "sku": "LP-MAN-008-C4",
-        "name": "MANNOL Grasa LC-2 Alta Temperatura 4.5 Kg (4.5 Kg)",
+        "name": "MANNOL Grasa LC-2 Alta Temperatura (4.5 Kg)",
         "presentation": "4.5 Kg",
-        "volume": "1 Galón / 5L",
+        "volume": "4.5 Kg",
         "stock": 10,
         "imageUrl": "/images/products/variant-mannol-mannol-grasa-lc-2-alta-temperatura-45-kg-lp-man-008-c4.png",
         "price": null,
@@ -18935,9 +18935,9 @@ export const PRODUCTS: Product[] = [
       },
       {
         "sku": "LP-MAN-008-C6",
-        "name": "MANNOL Grasa LC-2 Alta Temperatura 4.5 Kg (Caneca 18 Kg)",
+        "name": "MANNOL Grasa LC-2 Alta Temperatura (Caneca 18 Kg)",
         "presentation": "Caneca 18 Kg",
-        "volume": "Caneca 5 GL",
+        "volume": "Caneca 18 Kg",
         "stock": 10,
         "imageUrl": "/images/products/variant-mannol-mannol-grasa-lc-2-alta-temperatura-45-kg-lp-man-008-c6.png",
         "price": null,
@@ -18953,7 +18953,7 @@ export const PRODUCTS: Product[] = [
       }
     ],
     "features": [
-      "Selección de tamaño en 1 clic: 800 g, 1 Galón / 5L, Caneca 5 GL",
+      "Selección de tamaño en 1 clic: 800 g, 4.5 Kg, Caneca 18 Kg",
       "Formulación de alta gama para máxima protección del motor",
       "Envases originales sellados de fábrica con precinto de seguridad",
       "Disponibilidad inmediata para retiro en tienda o despacho nacional"
@@ -18961,7 +18961,7 @@ export const PRODUCTS: Product[] = [
     "faqs": [
       {
         "question": "¿Cómo elijo el tamaño que necesito?",
-        "answer": "Puedes alternar entre 800 g, 1 Galón / 5L, Caneca 5 GL directamente en esta ficha o cotizarnos por WhatsApp indicando el tamaño deseado."
+        "answer": "Puedes alternar entre 800 g, 4.5 Kg, Caneca 18 Kg directamente en esta ficha o cotizarnos por WhatsApp indicando el tamaño deseado."
       },
       {
         "question": "¿Tienen stock para canecas y por mayor?",
@@ -19036,7 +19036,7 @@ export const PRODUCTS: Product[] = [
     "id": "mannol-mannol-grasa-blanca-spray-450gr-lp-man-010",
     "sku": "LP-MAN-010",
     "slug": "mannol-mannol-grasa-blanca-spray-450gr-lp-man-010",
-    "name": "MANNOL Grasa Blanca Spray 450gr",
+    "name": "MANNOL Grasa Blanca Spray 450 g",
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "autos",
@@ -19096,7 +19096,7 @@ export const PRODUCTS: Product[] = [
     "id": "mannol-mannol-motor-flush-professional-ester-450-ml-lp-man-011",
     "sku": "LP-MAN-011",
     "slug": "mannol-mannol-motor-flush-professional-ester-450-ml-lp-man-011",
-    "name": "MANNOL Motor Flush Professional + Ester 450 Ml",
+    "name": "MANNOL Motor Flush Professional + Ester 450 ml",
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "motos",
@@ -19216,7 +19216,7 @@ export const PRODUCTS: Product[] = [
     "id": "mannol-mannol-aditivo-limpiador-de-catalizador-450-ml-lp-man-013",
     "sku": "LP-MAN-013",
     "slug": "mannol-mannol-aditivo-limpiador-de-catalizador-450-ml-lp-man-013",
-    "name": "MANNOL Aditivo Limpiador De Catalizador 450 Ml",
+    "name": "MANNOL Aditivo Limpiador De Catalizador 450 ml",
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "autos",
@@ -19276,7 +19276,7 @@ export const PRODUCTS: Product[] = [
     "id": "mannol-mannol-oil-leak-stop-250-ml-lp-man-014",
     "sku": "LP-MAN-014",
     "slug": "mannol-mannol-oil-leak-stop-250-ml-lp-man-014",
-    "name": "MANNOL Oil Leak Stop 250 Ml",
+    "name": "MANNOL Oil Leak Stop 250 ml",
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "autos",
@@ -19456,7 +19456,7 @@ export const PRODUCTS: Product[] = [
     "id": "mannol-mannol-limpiador-de-neumáticos-en-espuma-650-ml-lp-man-017",
     "sku": "LP-MAN-017",
     "slug": "mannol-mannol-limpiador-de-neumáticos-en-espuma-650-ml-lp-man-017",
-    "name": "MANNOL Limpiador De Neumáticos En Espuma 650 Ml",
+    "name": "MANNOL Limpiador De Neumáticos En Espuma 650 ml",
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "autos",
@@ -19516,7 +19516,7 @@ export const PRODUCTS: Product[] = [
     "id": "mannol-mannol-limpiador-carburador-600-ml-lp-man-018",
     "sku": "LP-MAN-018",
     "slug": "mannol-mannol-limpiador-carburador-600-ml-lp-man-018",
-    "name": "MANNOL Limpiador Carburador 600 Ml",
+    "name": "MANNOL Limpiador Carburador 600 ml",
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "autos",
@@ -19576,7 +19576,7 @@ export const PRODUCTS: Product[] = [
     "id": "mannol-mannol-super-goma-gel-3gr-lp-man-019",
     "sku": "LP-MAN-019",
     "slug": "mannol-mannol-super-goma-gel-3gr-lp-man-019",
-    "name": "MANNOL Super Goma Gel 3gr",
+    "name": "MANNOL Super Goma Gel 3 g",
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "autos",
@@ -19636,7 +19636,7 @@ export const PRODUCTS: Product[] = [
     "id": "mannol-mannol-aditivo-ceramo-ester-250-ml-lp-man-020",
     "sku": "LP-MAN-020",
     "slug": "mannol-mannol-aditivo-ceramo-ester-250-ml-lp-man-020",
-    "name": "MANNOL Aditivo Ceramo Ester 250 Ml",
+    "name": "MANNOL Aditivo Ceramo Ester 250 ml",
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "autos",
@@ -19756,7 +19756,7 @@ export const PRODUCTS: Product[] = [
     "id": "mannol-mannol-lubricante-multiuso-anticorrosivo-400-ml-135oz-lp-man-022",
     "sku": "LP-MAN-022",
     "slug": "mannol-mannol-lubricante-multiuso-anticorrosivo-400-ml-135oz-lp-man-022",
-    "name": "MANNOL Lubricante Multiuso Anticorrosivo 400 Ml / 13.5oz",
+    "name": "MANNOL Lubricante Multiuso Anticorrosivo 400 ml / 13.5oz",
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "autos",
@@ -19816,7 +19816,7 @@ export const PRODUCTS: Product[] = [
     "id": "mannol-mannol-limpiador-de-contactos-electronico-450-ml-lp-man-023",
     "sku": "LP-MAN-023",
     "slug": "mannol-mannol-limpiador-de-contactos-electronico-450-ml-lp-man-023",
-    "name": "MANNOL Limpiador De Contactos Electronico 450 Ml",
+    "name": "MANNOL Limpiador De Contactos Electronico 450 ml",
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "autos",
@@ -19876,16 +19876,16 @@ export const PRODUCTS: Product[] = [
     "id": "mannol-mannol-tratamiento-de-bandas-200m-lp-man-024",
     "sku": "LP-MAN-024",
     "slug": "mannol-mannol-tratamiento-de-bandas-200m-lp-man-024",
-    "name": "MANNOL Tratamiento De Bandas 200m",
+    "name": "MANNOL Tratamiento De Bandas 200 ml",
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": "1 Litro",
+    "volume": "200 ml",
     "plates": null,
-    "shortSpec": "MANNOL • Cuidado & Rendimiento Automotriz • Presentación: 1 Litro • Máxima Calidad",
+    "shortSpec": "MANNOL • Cuidado & Rendimiento Automotriz • Presentación: 200 ml • Máxima Calidad",
     "specifications": {
       "Tipo": "Cuidado & Rendimiento Automotriz",
-      "Presentación": "1 Litro",
+      "Presentación": "200 ml",
       "Marca": "MANNOL",
       "Garantía": "100% Sellado de Fábrica"
     },
@@ -19896,7 +19896,7 @@ export const PRODUCTS: Product[] = [
       "Origen": "Producto Oficial Importado con Certificación SRI",
       "Bodega": "Despacho directo desde Bodega Pedernales"
     },
-    "description": "Producto oficial MANNOL TRATAMIENTO DE BANDAS 200M garantizado por MANNOL. Formulado bajo los más rigurosos estándares internacionales para protección prolongada.",
+    "description": "Producto oficial MANNOL TRATAMIENTO DE BANDAS 200 ML garantizado por MANNOL. Formulado bajo los más rigurosos estándares internacionales para protección prolongada.",
     "priceNote": "Facturación electrónica autorizada por el SRI. Precios de mayorista y consumidor final.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -19936,7 +19936,7 @@ export const PRODUCTS: Product[] = [
     "id": "mannol-mannol-motor-flush-350-ml-lp-man-025",
     "sku": "LP-MAN-025",
     "slug": "mannol-mannol-motor-flush-350-ml-lp-man-025",
-    "name": "MANNOL Motor Flush 350 Ml",
+    "name": "MANNOL Motor Flush 350 ml",
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "motos",
@@ -20176,7 +20176,7 @@ export const PRODUCTS: Product[] = [
     "id": "mannol-mannol-tratamiento-anticorrosion-anticor-1l-cj-x-12-und-lp-man-029",
     "sku": "LP-MAN-029",
     "slug": "mannol-mannol-tratamiento-anticorrosion-anticor-1l-cj-x-12-und-lp-man-029",
-    "name": "MANNOL Tratamiento Anticorrosion Anticor 1l ()",
+    "name": "MANNOL Tratamiento Anticorrosion Anticor 1 Litro",
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "autos",
@@ -20236,7 +20236,7 @@ export const PRODUCTS: Product[] = [
     "id": "mannol-mannol-silicon-gris-85gr-lp-man-030",
     "sku": "LP-MAN-030",
     "slug": "mannol-mannol-silicon-gris-85gr-lp-man-030",
-    "name": "MANNOL Silicon Gris 85gr",
+    "name": "MANNOL Silicon Gris 85 g",
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "autos",
@@ -20296,16 +20296,16 @@ export const PRODUCTS: Product[] = [
     "id": "mannol-mannol-aditivo-sellador-fuga-dirección-hidráulica-250-ml-cj-x-50-und-lp-man-031",
     "sku": "LP-MAN-031",
     "slug": "mannol-mannol-aditivo-sellador-fuga-dirección-hidráulica-250-ml-cj-x-50-und-lp-man-031",
-    "name": "MANNOL Aditivo Sellador Fuga Dirección Hidráulica 250 Ml ()",
+    "name": "MANNOL Aditivo Sellador Fuga Dirección Hidráulica 250 ml",
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": "250 Ml",
+    "volume": "250 ml",
     "plates": null,
-    "shortSpec": "MANNOL • Cuidado & Rendimiento Automotriz • Presentación: 250 Ml • Máxima Calidad",
+    "shortSpec": "MANNOL • Cuidado & Rendimiento Automotriz • Presentación: 250 ml • Máxima Calidad",
     "specifications": {
       "Tipo": "Cuidado & Rendimiento Automotriz",
-      "Presentación": "250 Ml",
+      "Presentación": "250 ml",
       "Marca": "MANNOL",
       "Garantía": "100% Sellado de Fábrica"
     },
@@ -20416,27 +20416,27 @@ export const PRODUCTS: Product[] = [
     "id": "mannol-mannol-ester-additive-tratamiento-de-aceite-450-ml-y-1lt-lp-man-033",
     "sku": "LP-MAN-033",
     "slug": "mannol-mannol-ester-additive-tratamiento-de-aceite-450-ml-y-1lt-lp-man-033",
-    "name": "MANNOL Ester Additive / Tratamiento De Aceite 450 Ml Y 1lt",
+    "name": "MANNOL Ester Additive / Tratamiento De Aceite",
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "autos",
     "volume": "450 ml",
     "plates": null,
-    "shortSpec": "MANNOL • Cuidado & Rendimiento Automotriz • Tamaños: 450 ml, 1 Galón / 5L • Calidad Certificada",
+    "shortSpec": "MANNOL • Cuidado & Rendimiento Automotriz • Tamaños: 450 ml, 1 Litro • Calidad Certificada",
     "specifications": {
       "Tipo": "Cuidado & Rendimiento Automotriz",
       "Marca": "MANNOL",
-      "Variantes": "2 tamaños (450 ml, 1 Galón / 5L)",
+      "Variantes": "2 tamaños (450 ml, 1 Litro)",
       "Garantía": "100% Sellado de Fábrica"
     },
     "fullSpecs": {
       "Línea": "Cuidado & Rendimiento Automotriz",
       "SKU": "LP-MAN-033",
-      "Presentaciones Disponibles": "450 ml, 1 Galón / 5L",
+      "Presentaciones Disponibles": "450 ml, 1 Litro",
       "Procedencia": "Distribución Oficial Autorizada Liderpro",
       "Normativa": "Cumple y excede especificaciones API / ACEA / ISO"
     },
-    "description": "Línea oficial MANNOL ESTER ADDITIVE / TRATAMIENTO DE ACEITE 450 ML Y 1LT de MANNOL. Disponible en varias presentaciones unificadas (450 ml, 1 Galón / 5L) para cubrir desde el servicio individual hasta el abastecimiento de flotas pesadas.",
+    "description": "Línea oficial MANNOL Ester Additive / Tratamiento de Aceite. Disponible en 450 ml y 1 Litro para protección antifricción en motores de gasolina y diésel.",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza según el tamaño requerido.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -20448,7 +20448,7 @@ export const PRODUCTS: Product[] = [
     "variants": [
       {
         "sku": "LP-MAN-033-C3",
-        "name": "MANNOL Ester Additive / Tratamiento De Aceite 450 Ml Y 1lt (450 ml)",
+        "name": "MANNOL Ester Additive / Tratamiento De Aceite (450 ml)",
         "presentation": "450 ml",
         "volume": "450 ml",
         "stock": 10,
@@ -20458,9 +20458,9 @@ export const PRODUCTS: Product[] = [
       },
       {
         "sku": "LP-MAN-033-C4",
-        "name": "MANNOL Ester Additive / Tratamiento De Aceite 450 Ml Y 1lt (1 Litro)",
+        "name": "MANNOL Ester Additive / Tratamiento De Aceite (1 Litro)",
         "presentation": "1 Litro",
-        "volume": "1 Galón / 5L",
+        "volume": "1 Litro",
         "stock": 10,
         "imageUrl": "/images/products/variant-mannol-mannol-ester-additive-tratamiento-de-aceite-450-ml-y-1lt-lp-man-033-c4.png",
         "price": null,
@@ -20476,7 +20476,7 @@ export const PRODUCTS: Product[] = [
       }
     ],
     "features": [
-      "Selección de tamaño en 1 clic: 450 ml, 1 Galón / 5L",
+      "Selección de tamaño en 1 clic: 450 ml, 1 Litro",
       "Formulación de alta gama para máxima protección del motor",
       "Envases originales sellados de fábrica con precinto de seguridad",
       "Disponibilidad inmediata para retiro en tienda o despacho nacional"
@@ -20484,7 +20484,7 @@ export const PRODUCTS: Product[] = [
     "faqs": [
       {
         "question": "¿Cómo elijo el tamaño que necesito?",
-        "answer": "Puedes alternar entre 450 ml, 1 Galón / 5L directamente en esta ficha o cotizarnos por WhatsApp indicando el tamaño deseado."
+        "answer": "Puedes alternar entre 450 ml, 1 Litro directamente en esta ficha o cotizarnos por WhatsApp indicando el tamaño deseado."
       },
       {
         "question": "¿Tienen stock para canecas y por mayor?",
@@ -20499,27 +20499,27 @@ export const PRODUCTS: Product[] = [
     "id": "mannol-mannol-diesel-ester-additive-100ml-y-250ml-lp-man-034",
     "sku": "LP-MAN-034",
     "slug": "mannol-mannol-diesel-ester-additive-100ml-y-250ml-lp-man-034",
-    "name": "MANNOL Diésel Ester Additive 100ml Y 250ml",
+    "name": "MANNOL Diésel Ester Additive",
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "camionetas",
     "volume": "250 ml",
     "plates": null,
-    "shortSpec": "MANNOL • Cuidado & Rendimiento Automotriz • Tamaños: 250 ml, 1 Galón / 5L • Calidad Certificada",
+    "shortSpec": "MANNOL • Cuidado & Rendimiento Automotriz • Tamaños: 250 ml, 100 ml • Calidad Certificada",
     "specifications": {
       "Tipo": "Cuidado & Rendimiento Automotriz",
       "Marca": "MANNOL",
-      "Variantes": "2 tamaños (250 ml, 1 Galón / 5L)",
+      "Variantes": "2 tamaños (250 ml, 100 ml)",
       "Garantía": "100% Sellado de Fábrica"
     },
     "fullSpecs": {
       "Línea": "Cuidado & Rendimiento Automotriz",
       "SKU": "LP-MAN-034",
-      "Presentaciones Disponibles": "250 ml, 1 Galón / 5L",
+      "Presentaciones Disponibles": "250 ml, 100 ml",
       "Procedencia": "Distribución Oficial Autorizada Liderpro",
       "Normativa": "Cumple y excede especificaciones API / ACEA / ISO"
     },
-    "description": "Línea oficial MANNOL DIESEL ESTER ADDITIVE 100ML Y 250ML de MANNOL. Disponible en varias presentaciones unificadas (250 ml, 1 Galón / 5L) para cubrir desde el servicio individual hasta el abastecimiento de flotas pesadas.",
+    "description": "Línea oficial MANNOL Diésel Ester Additive de MANNOL. Disponible en presentaciones de 250 ml y 100 ml para proteger sistemas Common Rail y bombas diésel.",
     "priceNote": "Facturación electrónica autorizada por el SRI. Cotiza según el tamaño requerido.",
     "warranty": "Garantía Total de Autenticidad",
     "commercialStatus": "VERIFIED",
@@ -20531,7 +20531,7 @@ export const PRODUCTS: Product[] = [
     "variants": [
       {
         "sku": "LP-MAN-034-C3",
-        "name": "MANNOL Diésel Ester Additive 100ml Y 250ml (250 ml)",
+        "name": "MANNOL Diésel Ester Additive (250 ml)",
         "presentation": "250 ml",
         "volume": "250 ml",
         "stock": 10,
@@ -20541,9 +20541,9 @@ export const PRODUCTS: Product[] = [
       },
       {
         "sku": "LP-MAN-034-C4",
-        "name": "MANNOL Diésel Ester Additive 100ml Y 250ml (100 ml)",
+        "name": "MANNOL Diésel Ester Additive (100 ml)",
         "presentation": "100 ml",
-        "volume": "1 Galón / 5L",
+        "volume": "100 ml",
         "stock": 10,
         "imageUrl": "/images/products/variant-mannol-mannol-diesel-ester-additive-100ml-y-250ml-lp-man-034-c4.png",
         "price": null,
@@ -20571,7 +20571,7 @@ export const PRODUCTS: Product[] = [
       }
     ],
     "features": [
-      "Selección de tamaño en 1 clic: 250 ml, 1 Galón / 5L",
+      "Selección de tamaño en 1 clic: 250 ml, 100 ml",
       "Formulación de alta gama para máxima protección del motor",
       "Envases originales sellados de fábrica con precinto de seguridad",
       "Disponibilidad inmediata para retiro en tienda o despacho nacional"
@@ -20579,7 +20579,7 @@ export const PRODUCTS: Product[] = [
     "faqs": [
       {
         "question": "¿Cómo elijo el tamaño que necesito?",
-        "answer": "Puedes alternar entre 250 ml, 1 Galón / 5L directamente en esta ficha o cotizarnos por WhatsApp indicando el tamaño deseado."
+        "answer": "Puedes alternar entre 250 ml, 100 ml directamente en esta ficha o cotizarnos por WhatsApp indicando el tamaño deseado."
       },
       {
         "question": "¿Tienen stock para canecas y por mayor?",
@@ -21218,7 +21218,7 @@ export const PRODUCTS: Product[] = [
     "id": "mannol-mannol-limpiador-radiador-250-ml-lp-man-045",
     "sku": "LP-MAN-045",
     "slug": "mannol-mannol-limpiador-radiador-250-ml-lp-man-045",
-    "name": "MANNOL Limpiador Radiador 250 Ml",
+    "name": "MANNOL Limpiador Radiador 250 ml",
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "autos",
@@ -21398,7 +21398,7 @@ export const PRODUCTS: Product[] = [
     "id": "mannol-mannol-limpiador-de-aire-acondicionado-520-ml-lp-man-048",
     "sku": "LP-MAN-048",
     "slug": "mannol-mannol-limpiador-de-aire-acondicionado-520-ml-lp-man-048",
-    "name": "MANNOL Limpiador De Aire Acondicionado 520 Ml",
+    "name": "MANNOL Limpiador De Aire Acondicionado 520 ml",
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "autos",
@@ -21458,7 +21458,7 @@ export const PRODUCTS: Product[] = [
     "id": "mannol-mannol-limpiador-externo-de-motor-spray-500-ml-lp-man-049",
     "sku": "LP-MAN-049",
     "slug": "mannol-mannol-limpiador-externo-de-motor-spray-500-ml-lp-man-049",
-    "name": "MANNOL Limpiador Externo De Motor Spray 500 Ml",
+    "name": "MANNOL Limpiador Externo De Motor Spray 500 ml",
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "motos",
@@ -21578,7 +21578,7 @@ export const PRODUCTS: Product[] = [
     "id": "mannol-mannol-limpiador-inyectores-diesel-300-ml-lp-man-051",
     "sku": "LP-MAN-051",
     "slug": "mannol-mannol-limpiador-inyectores-diesel-300-ml-lp-man-051",
-    "name": "MANNOL Limpiador Inyectores Diésel 300 Ml",
+    "name": "MANNOL Limpiador Inyectores Diésel 300 ml",
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "camionetas",
@@ -21650,7 +21650,7 @@ export const PRODUCTS: Product[] = [
     "id": "mannol-mannol-limpia-inyectores-gasolina-300-ml-lp-man-052",
     "sku": "LP-MAN-052",
     "slug": "mannol-mannol-limpia-inyectores-gasolina-300-ml-lp-man-052",
-    "name": "MANNOL Limpia Inyectores Gasolina 300 Ml",
+    "name": "MANNOL Limpia Inyectores Gasolina 300 ml",
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "camionetas",
@@ -21722,7 +21722,7 @@ export const PRODUCTS: Product[] = [
     "id": "mannol-mannol-aditivo-motor-dr-350-ml-lp-man-053",
     "sku": "LP-MAN-053",
     "slug": "mannol-mannol-aditivo-motor-dr-350-ml-lp-man-053",
-    "name": "MANNOL Aditivo Motor Dr. 350 Ml",
+    "name": "MANNOL Aditivo Motor Dr. 350 ml",
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "motos",
@@ -21782,7 +21782,7 @@ export const PRODUCTS: Product[] = [
     "id": "mannol-mannol-aditivo-molibdeno-300-ml-lp-man-054",
     "sku": "LP-MAN-054",
     "slug": "mannol-mannol-aditivo-molibdeno-300-ml-lp-man-054",
-    "name": "MANNOL Aditivo Molibdeno 300 Ml",
+    "name": "MANNOL Aditivo Molibdeno 300 ml",
     "brand": "MANNOL",
     "category": "aditivos",
     "applicationType": "autos",
@@ -21846,12 +21846,12 @@ export const PRODUCTS: Product[] = [
     "brand": "ABRO",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": "1 Litro",
+    "volume": "Tubo 20 g",
     "plates": null,
-    "shortSpec": "ABRO • Selladores, Grasas y Cintas • Presentación: 1 Litro • Máxima Calidad",
+    "shortSpec": "ABRO • Selladores, Grasas y Cintas • Presentación: Tubo 20 g • Máxima Calidad",
     "specifications": {
       "Tipo": "Selladores, Grasas y Cintas",
-      "Presentación": "1 Litro",
+      "Presentación": "Tubo 20 g",
       "Marca": "ABRO",
       "Garantía": "100% Sellado de Fábrica"
     },
@@ -21962,7 +21962,7 @@ export const PRODUCTS: Product[] = [
     "id": "abro-abro-refrigerante-rojo-galon-lp-abr-004",
     "sku": "LP-ABR-004",
     "slug": "abro-abro-refrigerante-rojo-galon-lp-abr-004",
-    "name": "ABRO Refrigerante Rojo Galon",
+    "name": "ABRO Refrigerante Rojo",
     "brand": "ABRO",
     "category": "refrigerantes",
     "applicationType": "autos",
@@ -21996,7 +21996,7 @@ export const PRODUCTS: Product[] = [
     "variants": [
       {
         "sku": "LP-ABR-004-C3",
-        "name": "ABRO Refrigerante Rojo Galon (1 Litro)",
+        "name": "ABRO Refrigerante Rojo (1 Litro)",
         "presentation": "1 Litro",
         "volume": "1 Litro",
         "stock": 10,
@@ -22006,7 +22006,7 @@ export const PRODUCTS: Product[] = [
       },
       {
         "sku": "LP-ABR-004-C4",
-        "name": "ABRO Refrigerante Rojo Galon (1 Galón)",
+        "name": "ABRO Refrigerante Rojo (1 Galón)",
         "presentation": "1 Galón",
         "volume": "1 Galón",
         "stock": 10,
@@ -22071,7 +22071,7 @@ export const PRODUCTS: Product[] = [
     "id": "abro-abro-refrigerante-verde-galon-lp-abr-005",
     "sku": "LP-ABR-005",
     "slug": "abro-abro-refrigerante-verde-galon-lp-abr-005",
-    "name": "ABRO Refrigerante Verde Galon",
+    "name": "ABRO Refrigerante Verde",
     "brand": "ABRO",
     "category": "refrigerantes",
     "applicationType": "autos",
@@ -22105,7 +22105,7 @@ export const PRODUCTS: Product[] = [
     "variants": [
       {
         "sku": "LP-ABR-005-C3",
-        "name": "ABRO Refrigerante Verde Galon (1 Litro)",
+        "name": "ABRO Refrigerante Verde (1 Litro)",
         "presentation": "1 Litro",
         "volume": "1 Litro",
         "stock": 10,
@@ -22115,7 +22115,7 @@ export const PRODUCTS: Product[] = [
       },
       {
         "sku": "LP-ABR-005-C4",
-        "name": "ABRO Refrigerante Verde Galon (1 Galón)",
+        "name": "ABRO Refrigerante Verde (1 Galón)",
         "presentation": "1 Galón",
         "volume": "1 Galón",
         "stock": 10,
@@ -22180,16 +22180,16 @@ export const PRODUCTS: Product[] = [
     "id": "abro-abro-grasa-3-azul-1lb-envase-plástico-lg-990-lp-abr-006",
     "sku": "LP-ABR-006",
     "slug": "abro-abro-grasa-3-azul-1lb-envase-plástico-lg-990-lp-abr-006",
-    "name": "ABRO Grasa # 3 Azul 1lb Envase Plástico LG-990",
+    "name": "ABRO Grasa # 3 Azul 1 lb Envase Plástico LG-990",
     "brand": "ABRO",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": "1 Litro",
+    "volume": "1 lb (454 g)",
     "plates": null,
-    "shortSpec": "ABRO • Selladores, Grasas y Cintas • Presentación: 1 Litro • Máxima Calidad",
+    "shortSpec": "ABRO • Selladores, Grasas y Cintas • Presentación: 1 lb (454 g) • Máxima Calidad",
     "specifications": {
       "Tipo": "Selladores, Grasas y Cintas",
-      "Presentación": "1 Litro",
+      "Presentación": "1 lb (454 g)",
       "Marca": "ABRO",
       "Garantía": "100% Sellado de Fábrica"
     },
@@ -22244,12 +22244,12 @@ export const PRODUCTS: Product[] = [
     "brand": "ABRO",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": "1 Litro",
+    "volume": "473 ml",
     "plates": null,
-    "shortSpec": "ABRO • Selladores, Grasas y Cintas • Presentación: 1 Litro • Máxima Calidad",
+    "shortSpec": "ABRO • Selladores, Grasas y Cintas • Presentación: 473 ml • Máxima Calidad",
     "specifications": {
       "Tipo": "Selladores, Grasas y Cintas",
-      "Presentación": "1 Litro",
+      "Presentación": "473 ml",
       "Marca": "ABRO",
       "Garantía": "100% Sellado de Fábrica"
     },
@@ -22304,12 +22304,12 @@ export const PRODUCTS: Product[] = [
     "brand": "ABRO",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": "1 Litro",
+    "volume": "Rollo",
     "plates": null,
-    "shortSpec": "ABRO • Selladores, Grasas y Cintas • Presentación: 1 Litro • Máxima Calidad",
+    "shortSpec": "ABRO • Selladores, Grasas y Cintas • Presentación: Rollo • Máxima Calidad",
     "specifications": {
       "Tipo": "Selladores, Grasas y Cintas",
-      "Presentación": "1 Litro",
+      "Presentación": "Rollo",
       "Marca": "ABRO",
       "Garantía": "100% Sellado de Fábrica"
     },
@@ -22364,12 +22364,12 @@ export const PRODUCTS: Product[] = [
     "brand": "ABRO",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": "1 Litro",
+    "volume": "Rollo 48mm x 80 yds",
     "plates": null,
-    "shortSpec": "ABRO • Selladores, Grasas y Cintas • Presentación: 1 Litro • Máxima Calidad",
+    "shortSpec": "ABRO • Selladores, Grasas y Cintas • Presentación: Rollo 48mm x 80 yds • Máxima Calidad",
     "specifications": {
       "Tipo": "Selladores, Grasas y Cintas",
-      "Presentación": "1 Litro",
+      "Presentación": "Rollo 48mm x 80 yds",
       "Marca": "ABRO",
       "Garantía": "100% Sellado de Fábrica"
     },
@@ -22720,7 +22720,7 @@ export const PRODUCTS: Product[] = [
     "id": "simoniz-areon-simoniz-cera-300gr-siempre-nuevo-lp-per-007",
     "sku": "LP-PER-007",
     "slug": "simoniz-areon-simoniz-cera-300gr-siempre-nuevo-lp-per-007",
-    "name": "Simoniz Cera 300gr Siempre Nuevo",
+    "name": "Simoniz Cera 300 g Siempre Nuevo",
     "brand": "SIMONIZ",
     "category": "aditivos",
     "applicationType": "autos",
@@ -22784,12 +22784,12 @@ export const PRODUCTS: Product[] = [
     "brand": "AREON",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": "1 Litro",
+    "volume": "Unidad",
     "plates": null,
-    "shortSpec": "AREON • Ambientadores y Cosmética • Presentación: 1 Litro • Máxima Calidad",
+    "shortSpec": "AREON • Ambientadores y Cosmética • Presentación: Unidad • Máxima Calidad",
     "specifications": {
       "Tipo": "Ambientadores y Cosmética",
-      "Presentación": "1 Litro",
+      "Presentación": "Unidad",
       "Marca": "AREON",
       "Garantía": "100% Sellado de Fábrica"
     },
@@ -22844,12 +22844,12 @@ export const PRODUCTS: Product[] = [
     "brand": "AREON",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": "1 Litro",
+    "volume": "Unidad",
     "plates": null,
-    "shortSpec": "AREON • Ambientadores y Cosmética • Presentación: 1 Litro • Máxima Calidad",
+    "shortSpec": "AREON • Ambientadores y Cosmética • Presentación: Unidad • Máxima Calidad",
     "specifications": {
       "Tipo": "Ambientadores y Cosmética",
-      "Presentación": "1 Litro",
+      "Presentación": "Unidad",
       "Marca": "AREON",
       "Garantía": "100% Sellado de Fábrica"
     },
@@ -22904,12 +22904,12 @@ export const PRODUCTS: Product[] = [
     "brand": "AREON",
     "category": "aditivos",
     "applicationType": "autos",
-    "volume": "1 Litro",
+    "volume": "Display 60 Unidades",
     "plates": null,
-    "shortSpec": "AREON • Ambientadores y Cosmética • Presentación: 1 Litro • Máxima Calidad",
+    "shortSpec": "AREON • Ambientadores y Cosmética • Presentación: Display 60 Unidades • Máxima Calidad",
     "specifications": {
       "Tipo": "Ambientadores y Cosmética",
-      "Presentación": "1 Litro",
+      "Presentación": "Display 60 Unidades",
       "Marca": "AREON",
       "Garantía": "100% Sellado de Fábrica"
     },
@@ -26943,103 +26943,6 @@ export const PRODUCTS: Product[] = [
     ],
     "isBestSeller": true,
     "rawErpName": "BATERIA BOSCH 42 HP S4 55AMP 604232",
-    "price": null
-  },
-  {
-    "id": "baterías-ecuador-ecovalor-venta-bateria-vehículo-ecovlbat",
-    "sku": "ECOVLBAT",
-    "slug": "baterías-ecuador-ecovalor-venta-bateria-vehículo-ecovlbat",
-    "name": "Batería Ecuador ECOVALOR (VENTA BATERIA VEHÍCULO) — Maxi Power",
-    "brand": "BATERÍAS ECUADOR",
-    "category": "baterias",
-    "applicationType": "autos",
-    "volume": null,
-    "plates": "65Ah",
-    "shortSpec": "BATERÍAS ECUADOR • Grupo 24 • 65Ah 12V • CCA 550A • Borne Positivo Derecho (+ Der) • 18 a 24 Meses de Garantía Nacional",
-    "specifications": {
-      "Marca": "BATERÍAS ECUADOR",
-      "Grupo BCI / Formato": "Grupo 24",
-      "Capacidad Nominal": "65 Ah",
-      "Arranque en Frío (CCA)": "550 A (-18°C)",
-      "Voltaje": "12V",
-      "Polaridad": "Borne Positivo Derecho (+ Der)",
-      "Tecnología Interna": "Placas de plomo-calcio reforzadas con separadores de polietileno tipo sobre",
-      "Mantenimiento": "100% Libre de Mantenimiento con ojo visor óptico",
-      "Garantía": "18 a 24 Meses de Garantía Nacional"
-    },
-    "fullSpecs": {
-      "Línea Comercial": "Baterías Automotrices BATERÍAS ECUADOR",
-      "SKU Oficial": "ECOVLBAT",
-      "Capacidad de Reserva (RC)": "104 Minutos",
-      "Procedencia": "Distribución Oficial Autorizada Liderpro Pedernales",
-      "Servicio Postventa": "Instalación técnica y diagnóstico computarizado de carga gratis en local físico",
-      "Facturación": "Factura electrónica autorizada por el SRI para crédito tributario"
-    },
-    "description": "Batería automotriz BATERÍAS ECUADOR modelo ECOVALOR (VENTA BATERIA VEHÍCULO). Equipada con Placas de plomo-calcio reforzadas con separadores de polietileno tipo sobre, ofrece una potencia de arranque instantáneo de 550 CCA diseñada para soportar las exigencias eléctricas de vehículos modernos y las altas temperaturas de la costa ecuatoriana. Incluye 18 a 24 Meses de Garantía Nacional y servicio de revisión de alternador y arranque sin costo en nuestro local de Pedernales.",
-    "priceNote": "Facturación electrónica autorizada por el SRI. Incluye instalación profesional y chequeo de carga en Pedernales.",
-    "warranty": "18 a 24 Meses de Garantía",
-    "commercialStatus": "VERIFIED",
-    "inStock": true,
-    "stockStatusText": "Disponible en Bodega Pedernales",
-    "dispatchIndicator": "Despacho Inmediato",
-    "primaryOriginRecommendation": "Pedernales",
-    "imageUrl": "/images/products/baterias-ecuador-real.png",
-    "compatibleVehicles": [
-      {
-        "make": "Toyota",
-        "model": "Hilux 2.7 Gasolina",
-        "yearRange": "2006-2024",
-        "engine": "2.7L 2TR-FE Gasolina"
-      },
-      {
-        "make": "Toyota",
-        "model": "Fortuner 2.7 Gasolina",
-        "yearRange": "2007-2024",
-        "engine": "2.7L 2TR-FE Gasolina"
-      },
-      {
-        "make": "Chevrolet",
-        "model": "D-Max 2.4 Gasolina",
-        "yearRange": "2006-2016",
-        "engine": "2.4L C24SE Gasolina"
-      },
-      {
-        "make": "Mazda",
-        "model": "BT-50 2.2 / 2.6 Gasolina",
-        "yearRange": "2007-2015",
-        "engine": "2.2L / 2.6L Gasolina"
-      },
-      {
-        "make": "Hyundai",
-        "model": "Tucson 2.0 Gasolina",
-        "yearRange": "2005-2022",
-        "engine": "2.0L Beta / Nu Gasolina"
-      },
-      {
-        "make": "Kia",
-        "model": "Sportage Active / R 2.0",
-        "yearRange": "2006-2022",
-        "engine": "2.0L Gasolina"
-      }
-    ],
-    "features": [
-      "Potencia de arranque superior (550 CCA) garantizada en frío y calor",
-      "Polaridad técnica: Borne Positivo Derecho (+ Der)",
-      "Construcción sellada a prueba de derrames y vibraciones extremas",
-      "18 a 24 Meses de Garantía Nacional con respaldo directo en Pedernales y a nivel nacional"
-    ],
-    "faqs": [
-      {
-        "question": "¿Cuál es la polaridad correcta para mi vehículo?",
-        "answer": "Este modelo cuenta con Borne Positivo Derecho (+ Der). Si tienes dudas, escríbenos por WhatsApp con una foto de la batería instalada en tu vehículo y te confirmaremos en segundos."
-      },
-      {
-        "question": "¿Entregan factura electrónica?",
-        "answer": "Sí, emitimos factura electrónica autorizada por el SRI en todas las compras para empresas, flotas y clientes particulares."
-      }
-    ],
-    "isBestSeller": true,
-    "rawErpName": "ECOVALOR (VENTA BATERIA VEHÍCULO)",
     "price": null
   }
 ];

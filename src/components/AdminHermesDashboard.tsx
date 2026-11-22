@@ -244,8 +244,8 @@ export default function AdminHermesDashboard() {
               <Lock className="h-5 w-5" />
             </div>
             <div>
-              <h1 className="text-lg font-bold text-white">Panel Admin Hermes • LíderPro</h1>
-              <p className="text-xs text-slate-400">Acceso privado con HERMES_ADMIN_KEY</p>
+              <h1 className="text-lg font-bold text-white">Panel Admin Milo • LíderPro</h1>
+              <p className="text-xs text-slate-400">Acceso privado de operaciones</p>
             </div>
           </div>
 
@@ -305,7 +305,7 @@ export default function AdminHermesDashboard() {
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3">
           <div>
             <h1 className="text-base font-bold sm:text-lg">
-              LíderPro Pedernales • Torre de Control Hermes
+              LíderPro Pedernales • Torre de Control Milo
             </h1>
             <p className="flex items-center gap-2 text-xs text-slate-300">
               <Database className="h-3.5 w-3.5 text-emerald-400" />
@@ -453,6 +453,8 @@ export default function AdminHermesDashboard() {
                             ? "🔴 Pendiente despacho"
                             : order.status === "dispatched"
                             ? "🚚 En camino"
+                            : order.status === "cancelled"
+                            ? "⚪ Cancelado"
                             : "✅ Entregado"}
                         </span>
                         <span className="text-slate-500">{formatDateEc(order.createdAt)}</span>
@@ -657,7 +659,7 @@ export default function AdminHermesDashboard() {
                   )}
 
                   <div className="whitespace-pre-wrap rounded-lg border border-emerald-100 bg-emerald-50/40 px-3 py-2 text-slate-900">
-                    <strong className="text-emerald-800">Hermes:</strong> {turn.hermesReply}
+                    <strong className="text-emerald-800">Milo:</strong> {turn.hermesReply}
                   </div>
 
                   <div className="flex flex-wrap items-center gap-2 text-[11px] text-slate-500">

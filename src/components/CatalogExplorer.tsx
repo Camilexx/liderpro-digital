@@ -22,14 +22,12 @@ const ITEMS_PER_PAGE = 25;
 type SortOption = "destacados" | "nombre-asc" | "marca";
 
 const CATEGORIES: { id: string; label: string; icon: string }[] = [
-  { id: "todas", label: "Ver Todo (366)", icon: "📦" },
+  { id: "todas", label: `Ver Todo (${PRODUCTS.length})`, icon: "📦" },
   { id: "lubricantes", label: "Aceites de Motor", icon: "🛢️" },
   { id: "baterias", label: "Baterías", icon: "🔋" },
   { id: "filtros", label: "Filtros", icon: "⚙️" },
   { id: "refrigerantes", label: "Refrigerantes", icon: "❄️" },
   { id: "aditivos", label: "Aditivos y Grasas", icon: "🧪" },
-  { id: "bujias", label: "Bujías", icon: "⚡" },
-  { id: "frenos", label: "Líquido de Frenos", icon: "🛑" },
 ];
 
 const ADULT_QUICK_BUTTONS = [
@@ -574,7 +572,7 @@ export default function CatalogExplorer() {
               onClick={handleResetFilters}
               className="w-full sm:w-auto btn-secondary !py-4 !px-6 text-xs sm:text-sm font-black uppercase tracking-wider cursor-pointer"
             >
-              Ver Todo el Catálogo (366)
+              Ver Todo el Catálogo ({PRODUCTS.length})
             </button>
           </div>
         </div>

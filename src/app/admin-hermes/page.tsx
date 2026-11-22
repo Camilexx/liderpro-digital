@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import AdminHermesDashboard from "@/components/AdminHermesDashboard";
 
 export const metadata: Metadata = {
-  title: "Admin Hermes IA — Pedidos y Auditoría | LíderPro Pedernales",
+  title: "Admin Milo IA — Pedidos y Auditoría | LíderPro Pedernales",
   description: "Panel operativo privado de despacho, historial omnicanal y auditoría semanal.",
   robots: {
     index: false,

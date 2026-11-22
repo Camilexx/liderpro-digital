@@ -386,6 +386,14 @@ async function getPool(): Promise<Pool | null> {
           created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
         );
 
+        CREATE TABLE IF NOT EXISTS webhook_dedup (
+          dedup_key TEXT PRIMARY KEY,
+          created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+        );
+
+        CREATE INDEX IF NOT EXISTS idx_hermes_webhook_dedup_created
+          ON webhook_dedup (created_at);
+
         CREATE TABLE IF NOT EXISTS messages (
           id BIGSERIAL PRIMARY KEY,
           session_id TEXT NOT NULL,
@@ -1470,4 +1478,44 @@ export async function setCachedVehicleSpec(entry: {
     createdAt: new Date().toISOString(),
   };
   persistFallbackStore(store);
+}
+
+const warmWebhookDedup = new Set<string>();
+
+/**
+ * Reclama de forma atómica un ID de mensaje de Meta (idempotencia en memoria + Neon Postgres)
+ * para evitar dobles respuestas ante reintentos o ráfagas de entrega.
+ * Devuelve true solo la primera vez que se observa `dedupKey`.
+ */
+export async function claimWebhookMessageId(dedupKey: string): Promise<boolean> {
+  const key = (dedupKey || "").trim().slice(0, 180);
+  if (!key) return true;
+
+  if (warmWebhookDedup.has(key)) return false;
+  warmWebhookDedup.add(key);
+  if (warmWebhookDedup.size > 2500) {
+    const first = warmWebhookDedup.values().next().value;
+    if (first) warmWebhookDedup.delete(first);
+  }
+
+  try {
+    const pool = await getPool();
+    if (pool) {
+      const { rows } = await pool.query<{ dedup_key: string }>(
+        `INSERT INTO webhook_dedup (dedup_key, created_at)
+         VALUES ($1, NOW())
+         ON CONFLICT (dedup_key) DO NOTHING
+         RETURNING dedup_key`,
+        [key]
+      );
+      if (Math.random() < 0.02) {
+        void pool.query(`DELETE FROM webhook_dedup WHERE created_at < NOW() - INTERVAL '7 days'`).catch(() => {});
+      }
+      return rows.length > 0;
+    }
+  } catch {
+    // Si Postgres no responde, la deduplicación en memoria cálida sigue protegiendo esta instancia
+  }
+
+  return true;
 }

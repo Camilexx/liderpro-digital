@@ -66,6 +66,21 @@ export interface BusinessConfig {
     facebook: string;
     tiktok: string;
   };
+  bankTransfer: {
+    status: CommercialTruthStatus;
+    acceptedBanks: string[];
+    publicInstructionsFallback: string;
+  };
+}
+
+/**
+ * Lee datos bancarios oficiales desde variable de entorno opcional (BANK_TRANSFER_DETAILS).
+ * Si no está configurada, devuelve null para que Milo jamás invente ni prometa enviar cuentas en el mismo turno.
+ */
+export function getConfiguredBankTransferDetails(): string | null {
+  if (typeof process === "undefined" || !process.env) return null;
+  const raw = (process.env.BANK_TRANSFER_DETAILS || "").trim();
+  return raw.length > 0 ? raw : null;
 }
 
 export const BUSINESS_CONFIG: BusinessConfig = {
@@ -146,5 +161,11 @@ export const BUSINESS_CONFIG: BusinessConfig = {
     instagram: "https://www.instagram.com/liderpropedernales?srtk=MWRqOWcxd2w4YXMyeg==",
     facebook: "https://www.facebook.com/share/1CHEkuMeis/",
     tiktok: "https://www.tiktok.com/@lider.pro.pederna?_r=1&_t=ZS-9AOnTysHvDI",
+  },
+  bankTransfer: {
+    status: "PENDING_VERIFICATION",
+    acceptedBanks: ["Banco Pichincha", "Banco Guayaquil", "Banco del Pacífico"],
+    publicInstructionsFallback:
+      "Apenas te confirme el registro del pedido, nuestro equipo de mostrador te envía por aquí el número de cuenta oficial de Banco Pichincha, Banco Guayaquil o Banco del Pacífico para tu transferencia.",
   },
 };

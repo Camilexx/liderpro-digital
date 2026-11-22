@@ -353,13 +353,57 @@ function searchFreeTextRetailCatalog(query: string, limit = 5): IndexedCatalogEn
     .map((s) => s.entry);
 }
 
+interface OilCapacityTopUpInfo {
+  litersLabel: string;
+  needsExtraLiters: number;
+  preferred1LSkus: string[];
+}
+
+function resolveVehicleOilCapacityTopUp(
+  vehicle: VehicleProfile | null,
+  queryNorm: string,
+  primaryComboSku: string
+): OilCapacityTopUpInfo | null {
+  // Combos 2A/2B/2C (6L-7L) y 3A/3B (20L) ya cubren motores grandes/diésel
+  if (!/^COMBO-MANNOL-1[ABC]$/i.test(primaryComboSku)) return null;
+
+  const combined = normalizeText(`${formatVehicleLabel(vehicle)} ${queryNorm}`);
+  const is10w40 = /1A$/i.test(primaryComboSku);
+
+  if (/\b(tiggo\s*7|tiggo\s*8|coolray|geely|jetour\s*dashing|changan\s*cs55)\b/.test(combined)) {
+    return {
+      litersLabel: "4.5 a 4.7 litros con filtro",
+      needsExtraLiters: 1,
+      preferred1LSkus: is10w40 ? ["012MN7501-1"] : ["012MN7924-1", "012MN7914-1A"],
+    };
+  }
+  if (/\b(fortuner|prado|land\s*cruiser|f-?150|trailblazer|blazer|pathfinder|santa\s*fe|sorento|outlander)\b/.test(combined)) {
+    return {
+      litersLabel: "5.0 a 6.0 litros con filtro",
+      needsExtraLiters: 2,
+      preferred1LSkus: is10w40 ? ["012MN7501-1"] : ["012MN7709-1", "012MN7914-1A"],
+    };
+  }
+  if (/\b(x-?trail|rav\s*4|cx-?5|captiva|tiggo\s*4|grand\s*vitara)\b/.test(combined)) {
+    return {
+      litersLabel: "4.3 a 4.7 litros con filtro",
+      needsExtraLiters: 1,
+      preferred1LSkus: is10w40 ? ["012MN7501-1"] : ["012MN7914-1A", "012MN7713-1"],
+    };
+  }
+  return null;
+}
+
 function searchSingleQuery(
   rawQuery: string,
   ctx: MiloToolExecutionContext
 ): {
   consulta: string;
   enStock: boolean;
+  requiereVehiculo?: boolean;
   nota?: string;
+  alertaLitraje?: string;
+  litroAdicionalRecomendado?: CatalogCandidatePayload | null;
   recomendacionPrincipal?: CatalogCandidatePayload | null;
   candidatos: CatalogCandidatePayload[];
 } {
@@ -380,6 +424,7 @@ function searchSingleQuery(
     ctx.activeVehicle = mergeVehicleProfiles(ctx.activeVehicle, extracted.profile);
   }
   const matchedEntry = extracted.matchedEntry || resolveDbEntryForProfile(ctx.activeVehicle);
+  const hasKnownVehicle = Boolean(ctx.activeVehicle?.model || ctx.activeVehicle?.unmappedLabel);
 
   const asksBattery = /\b(bateria|acumulador|amperios?|grupo\s*(24|27|31|34|42)|n100|n150|bajada)\b/.test(expanded);
   const asksHydraulic = /\b(hidraulic|iso\s*(32|46|68)|stou)\b/.test(expanded);
@@ -391,6 +436,20 @@ function searchSingleQuery(
       (/\baceite\b/.test(expanded) && !/\b(frenos?|cocina|oliva|caja|transmision|hidraulic)\b/.test(expanded)));
   const asksFilterOnly =
     /\bfiltro\b/.test(expanded) && !asksOilOrCombo && !asksBattery && !/\bparticulas|dpf\b/.test(expanded);
+
+  // REGLA DURA V4.1: Prohibido cotizar filtros (aire, aceite, combustible, cabina) sin conocer el vehículo
+  if (asksFilterOnly && !hasKnownVehicle) {
+    return {
+      consulta: rawQuery,
+      enStock: false,
+      requiereVehiculo: true,
+      nota:
+        "BLOQUEADO: Todavía NO conoces marca, modelo ni año del vehículo del cliente. " +
+        "PROHIBIDO cotizar un filtro específico o mencionar un precio de filtro antes de saber qué vehículo es. " +
+        "Pregunta primero marca, modelo y año del carro.",
+      candidatos: [],
+    };
+  }
 
   const candidates: CatalogCandidatePayload[] = [];
   const seenSkus = new Set<string>();
@@ -419,7 +478,7 @@ function searchSingleQuery(
       consulta: rawQuery,
       enStock: candidates.length > 0,
       nota:
-        "Descuentos oficiales vigentes sobre PVP con IVA: Baterías Ecuador 35% entregando usada / 30% sin usada; Bosch 25% entregando usada / 20% sin usada. Instalación GRATIS a domicilio en Pedernales + revisión de alternador.",
+        "Descuentos oficiales vigentes sobre PVP con IVA: Baterías Ecuador 35% entregando usada / 30% sin usada; Bosch 25% entregando usada / 20% sin usada. Instalación + revisión de alternador 100% GRATIS a domicilio en Pedernales.",
       recomendacionPrincipal: primary,
       candidatos: candidates,
     };
@@ -455,22 +514,48 @@ function searchSingleQuery(
       candidates[0] ||
       null;
 
+    // VERIFICACIÓN DE LITRAJE > 4.0L (V4.1): detectar si el galón de 4L queda corto y ofrecer 1L extra exacto
+    let alertaLitraje: string | undefined;
+    let litroAdicionalRecomendado: CatalogCandidatePayload | null = null;
+    if (primary) {
+      const cap = resolveVehicleOilCapacityTopUp(ctx.activeVehicle, expanded, primary.sku);
+      if (cap && cap.needsExtraLiters > 0) {
+        for (const topSku of cap.preferred1LSkus) {
+          const entry1L = getIndexedCatalogEntry(topSku);
+          if (entry1L) {
+            litroAdicionalRecomendado = toCandidatePayload(entry1L);
+            pushCandidate(litroAdicionalRecomendado);
+            break;
+          }
+        }
+        if (litroAdicionalRecomendado) {
+          alertaLitraje =
+            `ATENCIÓN LITRAJE (> 4.0L): Este motor lleva ${cap.litersLabel}. ` +
+            `El combo trae galón (4L), así que faltará ${cap.needsExtraLiters} litro(s) adicional(es) para completar el cambio sin quedarse corto en la lubricadora. ` +
+            `DEBES avisar al cliente y ofrecer sumar ${cap.needsExtraLiters}x ${litroAdicionalRecomendado.name} [SKU: ${litroAdicionalRecomendado.sku}] a $${litroAdicionalRecomendado.priceIva.toFixed(2)} c/IVA (inclúyelo en gestionar_carrito si arma el combo completo).`;
+        }
+      }
+    }
+
     return {
       consulta: rawQuery,
       enStock: candidates.length > 0,
       nota:
         "IMPORTANTE: Cada Combo MANNOL YA incluye el aceite + filtro de aceite Advance + Cockpit Care con esponja de regalo (NO cobres un filtro de aceite aparte si el cliente lleva un Combo MANNOL). Aclaración: vendemos el kit/productos completos (no hacemos mano de obra de taller mecánico).",
+      ...(alertaLitraje ? { alertaLitraje, litroAdicionalRecomendado } : {}),
       recomendacionPrincipal: primary,
       candidatos: candidates,
     };
   }
 
-  // Multicategory + free text search across all 425 retail SKUs
+  // Multicategory + free text search across all 425 retail SKUs (ocultar filtros si aún no se conoce vehículo)
   const multi = resolveMulticategoryCatalogQuery(expanded, ctx.activeVehicle);
   for (const item of (multi?.items || []).slice(0, 4)) {
+    if (!hasKnownVehicle && item.subCategory === "filtros") continue;
     pushCandidate(toCandidatePayload(item));
   }
   for (const item of searchFreeTextRetailCatalog(rawQuery, 4)) {
+    if (!hasKnownVehicle && item.subCategory === "filtros") continue;
     if (candidates.length >= 5) break;
     pushCandidate(toCandidatePayload(item));
   }
@@ -592,14 +677,14 @@ const CURATED_ECUADOR_VEHICLE_SPECS: Array<{
     regex: /tiggo\s*7(?:\s*pro)?/i,
     label: "Chery Tiggo 7 / Tiggo 7 Pro (1.5T Gasolina)",
     specSummary:
-      "Aceite motor recomendado: 5W-30 100% Sintético (norma API SP / ACEA C2/C3), capacidad ~4.5 a 4.7 litros con filtro. " +
+      "Aceite motor recomendado: 5W-30 100% Sintético (norma API SP / ACEA C2/C3), capacidad ~4.5 a 4.7 litros con filtro (SUPERIOR AL GALÓN DE 4L: requiere sumar 1 litro adicional de 5W-30 para completar el cambio sin quedarse corto). " +
       "Batería habitual: Grupo 42 / DIN55 (55–65 Ah, 12V — verificar polaridad de bornes al instalar).",
   },
   {
     regex: /tiggo\s*[348]/i,
     label: "Chery Tiggo 3 / 4 / 8 (Gasolina / Turbo)",
     specSummary:
-      "Aceite motor recomendado: 5W-30 100% Sintético (o 10W-40 semisintético en motores aspirados >100.000 km), ~4.0 a 4.7 litros con filtro. " +
+      "Aceite motor recomendado: 5W-30 100% Sintético (o 10W-40 semisintético en motores aspirados >100.000 km), ~4.3 a 4.7 litros con filtro (supera el galón de 4L en versiones 1.5T/2.0: ofrecer 1 litro adicional de 5W-30). " +
       "Batería habitual: Grupo 42 o Grupo 24 (55–65 Ah, 12V — verificar polaridad al instalar).",
   },
   {
@@ -613,14 +698,14 @@ const CURATED_ECUADOR_VEHICLE_SPECS: Array<{
     regex: /coolray|geely/i,
     label: "Geely Coolray (1.5T Gasolina)",
     specSummary:
-      "Aceite motor recomendado: 5W-30 o 0W-20 100% Sintético API SP, capacidad ~4.5 a 5.5 litros según versión. " +
+      "Aceite motor recomendado: 5W-30 o 0W-20 100% Sintético API SP, capacidad ~4.5 a 5.5 litros según versión (supera el galón de 4L: ofrecer 1 a 2 litros adicionales). " +
       "Batería habitual: Grupo 42 / DIN60 (60 Ah, 12V).",
   },
   {
     regex: /jetour\s*dashing/i,
     label: "Jetour Dashing (1.5T / 1.6T Gasolina)",
     specSummary:
-      "Aceite motor recomendado: 5W-30 100% Sintético API SP, capacidad ~4.5 a 4.8 litros con filtro. " +
+      "Aceite motor recomendado: 5W-30 100% Sintético API SP, capacidad ~4.5 a 4.8 litros con filtro (supera el galón de 4L: ofrecer 1 litro adicional de 5W-30). " +
       "Batería habitual: Grupo 42 / DIN60 (60 Ah, 12V).",
   },
   {
@@ -805,6 +890,23 @@ export async function executeMiloToolCall(
         });
         if (nextCart.length < beforeLen) {
           warnings.push("Se omitió el filtro de aceite suelto porque el Combo MANNOL ya incluye filtro Advance + Cockpit Care.");
+        }
+      }
+
+      // Aviso de litraje (> 4.0L) si el carrito lleva un Combo de galón (4L) sin envase de 1L adicional
+      const combo1Item = nextCart.find((i) => /^COMBO-MANNOL-1[ABC]$/i.test(i.sku));
+      const hasExtra1L = nextCart.some((i) => /1\s*litro|1\s*lt|\b1l\b/i.test(`${i.presentation || ""} ${i.name}`));
+      if (combo1Item && !hasExtra1L) {
+        const cap = resolveVehicleOilCapacityTopUp(ctx.activeVehicle, "", combo1Item.sku);
+        if (cap && cap.needsExtraLiters > 0) {
+          const topEntry = cap.preferred1LSkus.map((s) => getIndexedCatalogEntry(s)).find(Boolean);
+          if (topEntry) {
+            recordPrice(ctx, topEntry.priceIva);
+            ctx.matchedSkus.add(topEntry.sku);
+            warnings.push(
+              `ALERTA LITRAJE: Este vehículo requiere ${cap.litersLabel} (supera el galón de 4L). Avisa al cliente y ofrece sumar ${cap.needsExtraLiters}x ${formatHumanProductName(topEntry.sku, topEntry.name)} [SKU: ${topEntry.sku}] ($${topEntry.priceIva.toFixed(2)} c/IVA) para completar el cambio.`
+            );
+          }
         }
       }
     }

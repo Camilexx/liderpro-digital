@@ -780,7 +780,7 @@ export async function generateHermesReply(
     const userPrompt =
       `${calcBlock}\n\n` +
       `Mensaje actual del cliente:\n${cleanUserText}\n\n` +
-      `Responde como Milo en 2 a 4 líneas naturales usando exactamente las cifras con IVA de [CALCULADORA EXACTA] y manteniendo el foco estricto en lo que pidió el cliente.`;
+      `Responde como Milo en 2 a 4 líneas naturales usando exactamente las cifras con IVA de [CALCULADORA EXACTA]. ${recentTurns.length > 0 ? "Ya están en conversación activa: no saludes con '¡Hola!' ni repitas el horario salvo que lo pidan." : ""}`;
 
     for (let i = 0; i < Math.min(2, keys.length); i++) {
       const apiKey = keys[i];

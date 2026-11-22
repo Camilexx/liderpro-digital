@@ -351,9 +351,13 @@ export function getCatalogSubcategoryCounts(): Record<MiloSubCategory, number> {
 export function findSpecificProductMatches(query: string, limit = 3): IndexedCatalogEntry[] {
   const norm = normalizeStr(query);
   const stopWords = new Set([
-    "hola", "buenas", "buenos", "dias", "tardes", "tienen", "tienes", "venden", "vende",
+    "hola", "buenas", "buenos", "dias", "tardes", "noches", "tienen", "tienes", "venden", "vende",
     "cuanto", "cuesta", "vale", "precio", "cual", "para", "como", "con", "del", "las", "los",
-    "una", "uno", "que", "esta", "este", "por", "favor", "quiero", "necesito", "saber", "el", "la",
+    "una", "uno", "que", "esta", "este", "estan", "tengo", "abiertos", "abierto", "via", "carmen",
+    "retirar", "pedernales", "jama", "cojimies", "manta", "quito", "guayaquil", "hilux", "d-max",
+    "dmax", "fortuner", "aveo", "sail", "spark", "tucson", "sportage", "diesel", "gasolina",
+    "bateria", "ecuador", "bosch", "por", "favor", "quiero", "necesito", "saber", "el", "la",
+    "al", "en", "hay", "hoy", "mismo", "junto", "juntos", "sumale", "tambien",
   ]);
   const tokens = norm
     .split(/[^a-z0-9.+-]+/)
@@ -362,9 +366,15 @@ export function findSpecificProductMatches(query: string, limit = 3): IndexedCat
 
   if (tokens.length === 0) return [];
 
+  const explicitlyAsksFilter = /\b(filtro|filtros|ao-\d+|aa-\d+|afp-\d+|af-\d+)\b/i.test(norm);
+
   const scored: Array<{ score: number; entry: IndexedCatalogEntry }> = [];
   for (const entry of MILO_FULL_CATALOG_INDEX) {
     if (!entry.isRetail) continue;
+    if (entry.subCategory === "baterias" || entry.subCategory === "combos_mannol") continue;
+    if (entry.subCategory === "filtros" && !explicitlyAsksFilter && !tokens.includes(normalizeStr(entry.sku))) {
+      continue;
+    }
     const nameNorm = normalizeStr(`${entry.name} ${entry.presentation}`);
     const skuNorm = normalizeStr(entry.sku);
     let score = 0;
@@ -389,6 +399,7 @@ export function findSpecificProductMatches(query: string, limit = 3): IndexedCat
     }
     if (/ab-?80/.test(norm) && skuNorm === "lp-abr-003") score += 40;
     if (/motor\s+flush\s+professional/.test(norm) && skuNorm === "lp-man-011") score += 45;
+    if (/motor\s+flush.*350/.test(norm) && skuNorm === "lp-man-025") score += 45;
     if (/mariposa|cuerpo\s+de\s+aceleracion/.test(norm) && skuNorm === "lp-man-021") score += 35;
 
     if (hits >= 2 || score >= 16) {
@@ -553,17 +564,11 @@ export function resolveMulticategoryCatalogQuery(
     }
   }
 
-  // 10. Si preguntó por nombre exacto de producto (ej: Motor Flush Professional + Ester, Penetrante AB-80)
-  const exactMatches = findSpecificProductMatches(userText, 3);
-  if (exactMatches.length > 0 && items.length === 0) {
-    pushUnique(exactMatches, exactMatches[0].subCategory);
-  } else if (exactMatches.length > 0) {
-    // Reorder so exact match is #1 in its category
-    const topExact = exactMatches[0];
-    if (matchedSubCategories.includes(topExact.subCategory)) {
-      const filtered = items.filter((i) => i.sku !== topExact.sku);
-      items.length = 0;
-      items.push(topExact, ...filtered);
+  // 10. Si ninguna regla curada de subcategoría coincidió, busca producto específico puntual por nombre/SKU
+  if (items.length === 0) {
+    const exactMatches = findSpecificProductMatches(userText, 3);
+    if (exactMatches.length > 0) {
+      pushUnique(exactMatches, exactMatches[0].subCategory);
     }
   }
 

@@ -1088,7 +1088,12 @@ export function buildDeterministicQuotePlan(params: {
   }
 
   // 6. Consulta multicategoría / producto específico sobre los 426 SKUs (CERO SESGO A ACEITE DE MOTOR)
-  const multiResRaw = wantsBattery ? null : resolveMulticategoryCatalogQuery(userText, effectiveVehicle);
+  const isPureVehicleIntro =
+    Boolean(turnVehicle?.model || turnVehicle?.unmappedLabel) &&
+    !/\b(filtro|filtros|aditivo|grasa|refrigerante|coolant|caja|transmision|diferencial|atf|cvt|tablero|cockpit|carburador|flush|inyector|hidraulic|iso|spray|frenos)\b/.test(
+      qNorm
+    );
+  const multiResRaw = wantsBattery || isPureVehicleIntro ? null : resolveMulticategoryCatalogQuery(userText, effectiveVehicle);
   const multiRes =
     multiResRaw && multiResRaw.matchedSubCategories.every((c) => c === "baterias") ? null : multiResRaw;
   if (multiRes) {

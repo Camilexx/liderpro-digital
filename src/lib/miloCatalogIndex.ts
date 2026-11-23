@@ -36,6 +36,7 @@ export interface RawPricingEntry {
 export interface IndexedCatalogEntry {
   sku: string;
   parentSku?: string;
+  excelCode?: string;
   brand: string;
   rawCategory: string;
   subCategory: MiloSubCategory;
@@ -315,16 +316,20 @@ export const MILO_FULL_CATALOG_INDEX: IndexedCatalogEntry[] = (privatePricing as
   return {
     sku: raw.sku,
     parentSku: raw.parent_sku,
+    excelCode: raw.excel_code,
     brand,
     rawCategory: raw.category || "",
     subCategory,
     name: raw.name,
     presentation,
     priceIva,
-    functionSummary: details.functionSummary,
+    functionSummary:
+      raw.sku === "LP-FIL-024"
+        ? "Filtro Advance código 078AO-50710 (verificar referencia física en bodega antes de cotizar como filtro de aire)"
+        : details.functionSummary,
     synonyms: details.synonyms,
     searchNorm,
-    isRetail: subCategory !== "internal_fee",
+    isRetail: subCategory !== "internal_fee" && raw.sku !== "LP-FIL-024",
   };
 });
 

@@ -1,3 +1,4 @@
+import { formatOfficialBankTransferDetails, OFFICIAL_BANK_ACCOUNT } from "@/data/businessConfig";
 import {
   computeBatteryDiscountPricing,
   extractCityFromText,
@@ -166,7 +167,7 @@ export const MILO_OPENAI_TOOLS: OpenAIToolDefinition[] = [
           cedula_o_ruc: { type: "string", description: "Cédula o RUC si el cliente la dio (para envío nacional o factura)" },
           metodo_pago: {
             type: "string",
-            description: "Efectivo o transferencia (Banco Pichincha, Banco Guayaquil o Banco del Pacífico)",
+            description: "Efectivo (solo Pedernales) o transferencia bancaria a Banco Pichincha (cuenta única 2216090525; interbancarias solo desde bancos con convenio directo)",
           },
           items: {
             type: "array",
@@ -298,13 +299,12 @@ function detectOutOfStockForSingleQuery(norm: string): string | null {
   return null;
 }
 
-function searchFreeTextRetailCatalog(query: string, limit = 5): IndexedCatalogEntry[] {
+function searchFreeTextRetailCatalog(query: string, limit = 5, activeVehicle?: VehicleProfile | null): IndexedCatalogEntry[] {
   const expanded = expandEcuadorianColloquialisms(query);
   const stop = new Set([
     "para", "con", "sin", "del", "las", "los", "una", "uno", "unos", "unas", "que", "como", "cual", "mejor",
     "carro", "auto", "vehiculo", "motor", "precio", "cuesta", "tienen", "necesito", "quiero", "bueno", "buena",
-    "aveo", "hilux", "dmax", "sail", "spark", "sportage", "tucson", "tiggo", "chery", "toyota", "chevrolet",
-    "kia", "hyundai", "nissan", "volkswagen", "gol", "2010", "2015", "2020", "2023", "2024", "2025",
+    "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025",
   ]);
   const tokens = expanded
     .replace(/[^a-z0-9.\-\s]/g, " ")
@@ -315,13 +315,27 @@ function searchFreeTextRetailCatalog(query: string, limit = 5): IndexedCatalogEn
   const wantsIso = expanded.match(/\biso\s*(32|46|68)\b/i)?.[1] || null;
   const wantsCaneca = /\b(caneca|20\s*l|20l|balde|18\s*kg)\b/.test(expanded);
   const wantsGalon = /\b(galon|4\s*l|5\s*l|4l|5l)\b/.test(expanded);
+  const wantsAirFilter = /\bfiltro\s*(?:de\s*)?aire\b/.test(expanded);
+  const activeModelNorm = normalizeText(activeVehicle?.model || activeVehicle?.unmappedLabel || "").trim();
 
   const scored: Array<{ entry: IndexedCatalogEntry; score: number }> = [];
   for (const entry of MILO_FULL_CATALOG_INDEX) {
     if (!entry.isRetail) continue;
+    // Evitar SKU LP-FIL-024 en búsquedas de filtro de aire (excel_code 078AO-50710 corresponde a filtro de aceite)
+    if (entry.sku.toUpperCase() === "LP-FIL-024" && wantsAirFilter) continue;
+
     let score = 0;
     const nameNorm = normalizeText(entry.name);
     const presNorm = normalizeText(entry.presentation);
+
+    // Para filtros específicos, exigir coincidencia de modelo de vehículo o SKU explícito (jamás cruzar Ranger con Aveo)
+    if (entry.subCategory === "filtros" && activeModelNorm.length >= 3) {
+      const modelWords = activeModelNorm.split(/\s+/).filter((w) => w.length >= 3);
+      const matchesVehicle = modelWords.some((w) => nameNorm.includes(w));
+      const explicitSku = tokens.some((t) => entry.sku.toLowerCase() === t);
+      if (!matchesVehicle && !explicitSku) continue;
+      if (matchesVehicle) score += 16;
+    }
 
     if (wantsViscosity) {
       if (nameNorm.includes(wantsViscosity.toLowerCase())) score += 24;
@@ -370,18 +384,19 @@ function resolveVehicleOilCapacityTopUp(
   const combined = normalizeText(`${formatVehicleLabel(vehicle)} ${queryNorm}`);
   const is10w40 = /1A$/i.test(primaryComboSku);
 
+  // Priorizar misma familia/línea del combo elegido: Energy Formula JP 5W-30 1L (012MN7914-1A) antes que For Chinese Cars (012MN7924-1)
   if (/\b(tiggo\s*7|tiggo\s*8|coolray|geely|jetour\s*dashing|changan\s*cs55)\b/.test(combined)) {
     return {
       litersLabel: "4.5 a 4.7 litros con filtro",
       needsExtraLiters: 1,
-      preferred1LSkus: is10w40 ? ["012MN7501-1"] : ["012MN7924-1", "012MN7914-1A"],
+      preferred1LSkus: is10w40 ? ["012MN7501-1"] : ["012MN7914-1A", "012MN7924-1"],
     };
   }
   if (/\b(fortuner|prado|land\s*cruiser|f-?150|trailblazer|blazer|pathfinder|santa\s*fe|sorento|outlander)\b/.test(combined)) {
     return {
       litersLabel: "5.0 a 6.0 litros con filtro",
       needsExtraLiters: 2,
-      preferred1LSkus: is10w40 ? ["012MN7501-1"] : ["012MN7709-1", "012MN7914-1A"],
+      preferred1LSkus: is10w40 ? ["012MN7501-1"] : ["012MN7914-1A", "012MN7709-1"],
     };
   }
   if (/\b(x-?trail|rav\s*4|cx-?5|captiva|tiggo\s*4|grand\s*vitara)\b/.test(combined)) {
@@ -554,7 +569,7 @@ function searchSingleQuery(
     if (!hasKnownVehicle && item.subCategory === "filtros") continue;
     pushCandidate(toCandidatePayload(item));
   }
-  for (const item of searchFreeTextRetailCatalog(rawQuery, 4)) {
+  for (const item of searchFreeTextRetailCatalog(rawQuery, 4, ctx.activeVehicle)) {
     if (!hasKnownVehicle && item.subCategory === "filtros") continue;
     if (candidates.length >= 5) break;
     pushCandidate(toCandidatePayload(item));
@@ -1043,7 +1058,7 @@ export async function executeMiloToolCall(
     if (cart.length === 0) missing.push("Productos en el carrito (usa gestionar_carrito primero)");
     if (!nombre) missing.push("Nombre completo del cliente");
     if (!direccionRaw && tipoEntrega !== "retiro_tienda_pedernales") missing.push("Dirección exacta o terminal/cooperativa");
-    if (!metodoPago) missing.push("Forma de pago (efectivo o transferencia Pichincha/Guayaquil/Pacífico)");
+    if (!metodoPago) missing.push("Forma de pago (efectivo en Pedernales o transferencia a Banco Pichincha)");
 
     const totals = computeCartTotals(cart, ctx.commercialState.batteryTradeIn);
     if (totals.batteryTradeInPending) {
@@ -1058,6 +1073,16 @@ export async function executeMiloToolCall(
         totalActualUsd: totals.totalUsd,
       };
     }
+
+    const metodoNorm = normalizeText(metodoPago);
+    const isTransfer =
+      /transferencia|pichincha|deposito|banco|interbancari|deuna/.test(metodoNorm) ||
+      tipoEntrega === "envio_cooperativa_nacional";
+    const orderStatus = isTransfer ? "awaiting_payment" : "pending_dispatch";
+    const paymentStatus = isTransfer ? "awaiting_receipt" : "not_applicable";
+    const cleanPaymentLabel = isTransfer
+      ? `Transferencia ${OFFICIAL_BANK_ACCOUNT.bank} (Cuenta ${OFFICIAL_BANK_ACCOUNT.accountNumber})`
+      : metodoPago;
 
     const deliveryLabel =
       tipoEntrega === "retiro_tienda_pedernales"
@@ -1079,8 +1104,9 @@ export async function executeMiloToolCall(
       })),
       totalUsd: totals.totalUsd,
       deliveryAddress: deliveryLabel,
-      paymentMethod: metodoPago,
-      status: "pending_dispatch",
+      paymentMethod: cleanPaymentLabel,
+      status: orderStatus,
+      paymentStatus,
     });
 
     ctx.customerName = nombre;
@@ -1096,9 +1122,18 @@ export async function executeMiloToolCall(
       customerName: nombre,
       ciudad,
       deliveryAddress: deliveryLabel,
-      paymentMethod: metodoPago,
+      paymentMethod: cleanPaymentLabel,
+      status: order.status,
+      paymentStatus: order.paymentStatus,
       totalUsd: order.totalUsd,
       items: order.itemsJson,
+      ...(isTransfer
+        ? {
+            datosBancariosOficiales: formatOfficialBankTransferDetails(),
+            instruccionObligatoria:
+              "ENTREGA al cliente los datos EXACTOS de nuestra única cuenta en Banco Pichincha (Cuenta de Ahorros 2216090525, C.I. 1308068814, Titular ADRIAN MOSQUERA), aclara que interbancarias solo desde bancos con convenio directo, y solicita que envíe el COMPROBANTE COMPLETO (fecha, monto, número de comprobante y titular visible) para verificación. PROHIBIDO prometer hora de despacho o autorizar retiro antes de verificar el pago.",
+          }
+        : {}),
     };
   }
 

@@ -1,10 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
 import { updateMessageQaFeedback } from "@/lib/hermesDb";
 import { generateHermesReply, type ChatTurn } from "@/lib/hermesEngine";
+import { handleIncomingPaymentReceipt } from "@/lib/miloPayments";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
-export const maxDuration = 30;
+export const maxDuration = 60;
 
 function generateDemoSessionId(): string {
   return `demo-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
@@ -17,12 +18,18 @@ export async function POST(req: NextRequest) {
       history?: ChatTurn[];
       sessionId?: string;
       customerName?: string;
+      receiptAttachment?: {
+        filename?: string;
+        reference?: string;
+        mediaId?: string;
+      };
     };
 
     const message = (body.message || "").trim();
-    if (!message) {
+    const hasReceipt = Boolean(body.receiptAttachment);
+    if (!message && !hasReceipt) {
       return NextResponse.json(
-        { ok: false, error: "El campo 'message' es requerido." },
+        { ok: false, error: "El campo 'message' o 'receiptAttachment' es requerido." },
         { status: 400 }
       );
     }
@@ -31,6 +38,42 @@ export async function POST(req: NextRequest) {
       typeof body.sessionId === "string" && body.sessionId.trim().length > 0
         ? body.sessionId.trim().slice(0, 120)
         : generateDemoSessionId();
+
+    if (hasReceipt) {
+      const receiptRes = await handleIncomingPaymentReceipt({
+        sessionId,
+        channel: "demo_web",
+        mediaId: body.receiptAttachment?.mediaId || `demo-receipt-${Date.now()}`,
+        filename: body.receiptAttachment?.filename || "comprobante-banco-pichincha.jpg",
+        caption: body.receiptAttachment?.reference || message || "Comprobante completo transferencia Banco Pichincha",
+        userDisplayText: message || `📎 Comprobante enviado (${body.receiptAttachment?.filename || "comprobante.jpg"})`,
+      });
+      return NextResponse.json(
+        {
+          ok: true,
+          reply: receiptRes.reply,
+          model: "milo-receipt-verifier",
+          usedFallback: false,
+          latencyMs: 50,
+          matchedSkus: receiptRes.order?.itemsJson.map((i) => i.sku) || [],
+          catalogSize: 426,
+          sessionId,
+          messageId: receiptRes.messageId,
+          quotedTotalUsd: receiptRes.order?.totalUsd ?? null,
+          cartTotalUsd: receiptRes.order?.totalUsd ?? null,
+          intentTag: "comprobante_pendiente_verificacion",
+          dbStorageMode: receiptRes.dbStorageMode,
+          orderCreated: false,
+          order: receiptRes.order,
+          paymentStatus: receiptRes.order?.paymentStatus ?? null,
+          receiptHandled: receiptRes.handled,
+          notifications: receiptRes.notifications ?? null,
+          escalatedToHuman: false,
+          channel: "whatsapp_demo_milo_24_7",
+        },
+        { status: 200 }
+      );
+    }
 
     const history = Array.isArray(body.history) ? body.history : [];
     const result = await generateHermesReply(message, history, {

@@ -1,10 +1,17 @@
 import crypto from "node:crypto";
 import { NextRequest, NextResponse } from "next/server";
 import {
+  approveOrderPayment,
+  buildApprovedDispatchMessage,
+  buildRejectedPaymentMessage,
   generateAndSaveWeeklyAudit,
   getAdminDashboardSnapshot,
+  insertMessage,
+  rejectOrderPayment,
   resolveCustomerHumanEscalation,
+  sendWhatsAppTextDirect,
   updateOrderStatus,
+  type ChannelType,
   type OrderStatus,
 } from "@/lib/hermesDb";
 
@@ -138,6 +145,7 @@ export async function PATCH(req: NextRequest) {
       sessionId?: string;
       orderId?: number | string;
       status?: string;
+      reason?: string;
     };
 
     if (body.action === "resolve_escalation") {
@@ -152,8 +160,95 @@ export async function PATCH(req: NextRequest) {
       return NextResponse.json({ ok: true, resolved: res.ok, sessionId: targetSession }, { status: 200 });
     }
 
+    if (body.action === "approve_payment") {
+      const targetOrderId = Number(body.orderId);
+      if (!Number.isFinite(targetOrderId) || targetOrderId <= 0) {
+        return NextResponse.json({ ok: false, error: "Se requiere 'orderId' válido." }, { status: 400 });
+      }
+      const approved = await approveOrderPayment(targetOrderId);
+      if (!approved) {
+        return NextResponse.json({ ok: false, error: "Pedido no encontrado." }, { status: 404 });
+      }
+      const dispatchMessage = buildApprovedDispatchMessage(approved);
+      const msgChannel: ChannelType = approved.sessionId.startsWith("wa:")
+        ? "whatsapp"
+        : approved.sessionId.startsWith("ig:")
+        ? "instagram"
+        : approved.sessionId.startsWith("fb:")
+        ? "messenger"
+        : "demo_web";
+
+      await insertMessage({
+        sessionId: approved.sessionId,
+        channel: msgChannel,
+        role: "assistant",
+        content: dispatchMessage,
+        skusUsed: approved.itemsJson.map((i) => i.sku),
+        quotedTotalUsd: approved.totalUsd,
+        intentTag: "pago_verificado_despacho",
+      });
+
+      const waTarget = approved.sessionId.startsWith("wa:")
+        ? approved.sessionId.slice(3)
+        : approved.phone || "";
+      const whatsappNotified =
+        msgChannel === "whatsapp" && waTarget ? await sendWhatsAppTextDirect(waTarget, dispatchMessage) : false;
+
+      return NextResponse.json(
+        { ok: true, order: approved, dispatchMessage, whatsappNotified },
+        { status: 200 }
+      );
+    }
+
+    if (body.action === "reject_payment") {
+      const targetOrderId = Number(body.orderId);
+      if (!Number.isFinite(targetOrderId) || targetOrderId <= 0) {
+        return NextResponse.json({ ok: false, error: "Se requiere 'orderId' válido." }, { status: 400 });
+      }
+      const rejected = await rejectOrderPayment(targetOrderId, body.reason ?? null);
+      if (!rejected) {
+        return NextResponse.json({ ok: false, error: "Pedido no encontrado." }, { status: 404 });
+      }
+      const rejectionMessage = buildRejectedPaymentMessage(rejected, body.reason ?? null);
+      const msgChannel: ChannelType = rejected.sessionId.startsWith("wa:")
+        ? "whatsapp"
+        : rejected.sessionId.startsWith("ig:")
+        ? "instagram"
+        : rejected.sessionId.startsWith("fb:")
+        ? "messenger"
+        : "demo_web";
+
+      await insertMessage({
+        sessionId: rejected.sessionId,
+        channel: msgChannel,
+        role: "assistant",
+        content: rejectionMessage,
+        quotedTotalUsd: rejected.totalUsd,
+        intentTag: "pago_rechazado_reintento",
+      });
+
+      const waTarget = rejected.sessionId.startsWith("wa:")
+        ? rejected.sessionId.slice(3)
+        : rejected.phone || "";
+      const whatsappNotified =
+        msgChannel === "whatsapp" && waTarget ? await sendWhatsAppTextDirect(waTarget, rejectionMessage) : false;
+
+      return NextResponse.json(
+        { ok: true, order: rejected, rejectionMessage, whatsappNotified },
+        { status: 200 }
+      );
+    }
+
     const orderId = Number(body.orderId);
-    const validStatuses: OrderStatus[] = ["pending_dispatch", "dispatched", "completed", "cancelled"];
+    const validStatuses: OrderStatus[] = [
+      "pending_dispatch",
+      "awaiting_payment",
+      "payment_pending_verification",
+      "ready_for_dispatch",
+      "dispatched",
+      "completed",
+      "cancelled",
+    ];
     const nextStatus = validStatuses.includes(body.status as OrderStatus)
       ? (body.status as OrderStatus)
       : null;

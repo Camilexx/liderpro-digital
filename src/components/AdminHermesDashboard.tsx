@@ -6,6 +6,7 @@ import {
   BarChart3,
   Car,
   CheckCircle2,
+  Clock,
   Database,
   Lock,
   LogOut,
@@ -15,6 +16,7 @@ import {
   RefreshCw,
   ShoppingBag,
   Truck,
+  XCircle,
 } from "lucide-react";
 
 interface VehicleProfile {
@@ -36,7 +38,20 @@ interface OrderRecord {
   totalUsd: number;
   deliveryAddress: string | null;
   paymentMethod: string | null;
-  status: "pending_dispatch" | "dispatched" | "completed" | "cancelled";
+  status:
+    | "pending_dispatch"
+    | "awaiting_payment"
+    | "payment_pending_verification"
+    | "ready_for_dispatch"
+    | "dispatched"
+    | "completed"
+    | "cancelled";
+  paymentStatus?: "not_applicable" | "awaiting_receipt" | "pending_verification" | "verified" | "rejected";
+  receiptMediaId?: string | null;
+  receiptReference?: string | null;
+  receiptReceivedAt?: string | null;
+  paymentVerifiedAt?: string | null;
+  dispatchNotifiedAt?: string | null;
   createdAt: string;
 }
 
@@ -261,6 +276,39 @@ export default function AdminHermesDashboard() {
     }
   }
 
+  async function handleVerifyPayment(orderId: number, action: "approve_payment" | "reject_payment") {
+    if (!adminKey) return;
+    let reason: string | undefined;
+    if (action === "reject_payment" && typeof window !== "undefined") {
+      const entered = window.prompt(
+        "Motivo del rechazo (opcional, ej. 'Falta número de comprobante' o 'No refleja acreditación'):",
+        ""
+      );
+      if (entered === null) return;
+      if (entered.trim()) reason = entered.trim();
+    }
+    try {
+      const resp = await fetch("/api/admin/hermes-audit", {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+          "x-hermes-admin-key": adminKey,
+        },
+        body: JSON.stringify({ action, orderId, ...(reason ? { reason } : {}) }),
+      });
+      if (resp.ok) {
+        setAuditToast(
+          action === "approve_payment"
+            ? `Pago del Pedido #${orderId} verificado y notificación de despacho/retiro enviada.`
+            : `Comprobante del Pedido #${orderId} rechazado y cliente notificado.`
+        );
+        await loadDashboard(adminKey, channelFilter, onlyFix);
+      }
+    } catch {
+      // Silencio seguro
+    }
+  }
+
   function handleLogout() {
     sessionStorage.removeItem(STORAGE_KEY_NAME);
     setAdminKey("");
@@ -328,7 +376,12 @@ export default function AdminHermesDashboard() {
     );
   }
 
-  const pendingOrders = (snapshot?.orders || []).filter((o) => o.status === "pending_dispatch");
+  const pendingVerificationOrders = (snapshot?.orders || []).filter(
+    (o) => o.paymentStatus === "pending_verification" || o.status === "payment_pending_verification"
+  );
+  const pendingOrders = (snapshot?.orders || []).filter(
+    (o) => o.status === "pending_dispatch" || o.status === "ready_for_dispatch"
+  );
   const allOrders = snapshot?.orders || [];
   const escalations = snapshot?.escalations || [];
   const audit = snapshot?.audit;
@@ -525,6 +578,88 @@ export default function AdminHermesDashboard() {
           )}
         </section>
 
+        {/* SECCIÓN 0B: COMPROBANTES PENDIENTES POR VERIFICAR (ANTI-FRAUDE) */}
+        <section
+          className={`rounded-2xl border shadow-sm ${
+            pendingVerificationOrders.length > 0 ? "border-amber-400 bg-amber-50/70" : "border-slate-200 bg-white"
+          }`}
+        >
+          <div className="flex items-center justify-between border-b border-amber-200/70 px-4 py-3">
+            <div className="flex items-center gap-2">
+              <Clock className="h-5 w-5 text-amber-600" />
+              <h2 className="text-sm font-bold text-slate-900 sm:text-base">
+                Comprobantes Pendientes por Verificar ({pendingVerificationOrders.length})
+              </h2>
+            </div>
+            {pendingVerificationOrders.length > 0 && (
+              <span className="animate-pulse rounded-full bg-amber-600 px-2.5 py-0.5 text-[11px] font-bold text-white">
+                {pendingVerificationOrders.length} POR VERIFICAR
+              </span>
+            )}
+          </div>
+
+          {pendingVerificationOrders.length === 0 ? (
+            <p className="px-4 py-5 text-center text-xs text-slate-500">
+              No hay comprobantes de transferencia pendientes de verificación.
+            </p>
+          ) : (
+            <div className="divide-y divide-amber-200/70">
+              {pendingVerificationOrders.map((order) => (
+                <div
+                  key={`verify-${order.id}`}
+                  className="flex flex-col gap-3 border-l-4 border-l-amber-500 bg-white/95 p-4 sm:flex-row sm:items-center sm:justify-between"
+                >
+                  <div className="space-y-1 text-xs">
+                    <div className="flex flex-wrap items-center gap-2">
+                      <span className="rounded bg-slate-900 px-2 py-0.5 font-mono font-bold text-white">
+                        Pedido #{order.id}
+                      </span>
+                      <span className="rounded-full bg-amber-100 px-2 py-0.5 font-bold text-amber-900">
+                        ⏳ Comprobante pendiente (NO confirmado)
+                      </span>
+                      {order.receiptReceivedAt && (
+                        <span className="text-slate-500">Recibido: {formatDateEc(order.receiptReceivedAt)}</span>
+                      )}
+                    </div>
+                    <p className="text-sm font-bold text-slate-900">
+                      {order.customerName || "Cliente"} •{" "}
+                      <span className="text-emerald-700">${order.totalUsd.toFixed(2)}</span>{" "}
+                      <span className="font-normal text-slate-500">({order.phone || order.sessionId})</span>
+                    </p>
+                    <p className="text-slate-700">
+                      <strong>Referencia / Archivo:</strong>{" "}
+                      {order.receiptReference || order.receiptMediaId || "Adjunto recibido"} |{" "}
+                      <strong>Entrega:</strong> {order.deliveryAddress || "Por confirmar"}
+                    </p>
+                    <p className="text-slate-600">
+                      <strong>Cuenta destino:</strong> Banco Pichincha 2216090525 (ADRIAN MOSQUERA)
+                    </p>
+                  </div>
+
+                  <div className="flex shrink-0 flex-wrap items-center gap-2">
+                    <button
+                      type="button"
+                      onClick={() => void handleVerifyPayment(order.id, "approve_payment")}
+                      className="inline-flex items-center gap-1.5 rounded-lg bg-emerald-600 px-3 py-1.5 text-xs font-semibold text-white shadow-sm hover:bg-emerald-700"
+                    >
+                      <CheckCircle2 className="h-3.5 w-3.5" />
+                      <span>Aprobar Pago y Despachar</span>
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => void handleVerifyPayment(order.id, "reject_payment")}
+                      className="inline-flex items-center gap-1.5 rounded-lg border border-red-300 bg-white px-3 py-1.5 text-xs font-semibold text-red-700 hover:bg-red-50"
+                    >
+                      <XCircle className="h-3.5 w-3.5" />
+                      <span>Rechazar</span>
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+        </section>
+
         {/* SECCIÓN 1: PEDIDOS PENDIENTES DE DESPACHO (PRIORIDAD ROJA ARRIBA) */}
         <section className="rounded-2xl border border-slate-200 bg-white shadow-sm">
           <div className="flex items-center justify-between border-b border-slate-100 px-4 py-3">
@@ -548,12 +683,19 @@ export default function AdminHermesDashboard() {
           ) : (
             <div className="divide-y divide-slate-100">
               {allOrders.map((order) => {
-                const isPending = order.status === "pending_dispatch";
+                const isPending = order.status === "pending_dispatch" || order.status === "ready_for_dispatch";
+                const isVerifying =
+                  order.status === "payment_pending_verification" || order.paymentStatus === "pending_verification";
+                const isAwaitingPay = order.status === "awaiting_payment";
                 return (
                   <div
                     key={order.id}
                     className={`flex flex-col gap-3 p-4 sm:flex-row sm:items-center sm:justify-between ${
-                      isPending ? "border-l-4 border-l-red-600 bg-red-50/40" : ""
+                      isPending
+                        ? "border-l-4 border-l-red-600 bg-red-50/40"
+                        : isVerifying
+                        ? "border-l-4 border-l-amber-500 bg-amber-50/40"
+                        : ""
                     }`}
                   >
                     <div className="space-y-1 text-xs">
@@ -565,13 +707,25 @@ export default function AdminHermesDashboard() {
                           className={`rounded-full px-2 py-0.5 font-semibold ${
                             isPending
                               ? "bg-red-100 text-red-800"
+                              : isVerifying
+                              ? "bg-amber-100 text-amber-900"
+                              : isAwaitingPay
+                              ? "bg-sky-100 text-sky-900"
                               : order.status === "dispatched"
                               ? "bg-amber-100 text-amber-800"
+                              : order.status === "cancelled"
+                              ? "bg-slate-200 text-slate-700"
                               : "bg-emerald-100 text-emerald-800"
                           }`}
                         >
-                          {isPending
+                          {order.status === "ready_for_dispatch"
+                            ? "✅ Pago verificado • Listo despacho"
+                            : order.status === "pending_dispatch"
                             ? "🔴 Pendiente despacho"
+                            : isVerifying
+                            ? "⏳ Comprobante por verificar"
+                            : isAwaitingPay
+                            ? "💳 Esperando comprobante"
                             : order.status === "dispatched"
                             ? "🚚 En camino"
                             : order.status === "cancelled"

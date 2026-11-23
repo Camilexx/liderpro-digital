@@ -2,11 +2,26 @@ import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
 import { Pool, type PoolConfig } from "pg";
+import { OFFICIAL_BANK_ACCOUNT } from "@/data/businessConfig";
+import { META_CONFIG } from "@/data/metaConfig";
 
 export type CustomerType = "particular" | "camaronera" | "taller";
 export type ChannelType = "whatsapp" | "demo_web" | "instagram" | "messenger";
 export type QaFlag = "good" | "fix";
-export type OrderStatus = "pending_dispatch" | "dispatched" | "completed" | "cancelled";
+export type OrderStatus =
+  | "pending_dispatch"
+  | "awaiting_payment"
+  | "payment_pending_verification"
+  | "ready_for_dispatch"
+  | "dispatched"
+  | "completed"
+  | "cancelled";
+export type PaymentStatus =
+  | "not_applicable"
+  | "awaiting_receipt"
+  | "pending_verification"
+  | "verified"
+  | "rejected";
 export type SalesStage = "descubrimiento" | "cotizacion" | "objecion" | "cierre" | "pedido_confirmado";
 export type EscalationUrgency = "alta" | "media" | "baja";
 
@@ -145,6 +160,12 @@ export interface OrderRecord {
   deliveryAddress: string | null;
   paymentMethod: string | null;
   status: OrderStatus;
+  paymentStatus: PaymentStatus;
+  receiptMediaId: string | null;
+  receiptReference: string | null;
+  receiptReceivedAt: string | null;
+  paymentVerifiedAt: string | null;
+  dispatchNotifiedAt: string | null;
   createdAt: string;
 }
 
@@ -186,6 +207,9 @@ export interface InsertOrderInput {
   deliveryAddress: string | null;
   paymentMethod: string | null;
   status?: OrderStatus;
+  paymentStatus?: PaymentStatus;
+  receiptMediaId?: string | null;
+  receiptReference?: string | null;
 }
 
 export interface OutOfStockRankItem {
@@ -427,11 +451,26 @@ async function getPool(): Promise<Pool | null> {
           delivery_address TEXT,
           payment_method TEXT,
           status TEXT NOT NULL DEFAULT 'pending_dispatch',
+          payment_status TEXT NOT NULL DEFAULT 'not_applicable',
+          receipt_media_id TEXT,
+          receipt_reference TEXT,
+          receipt_received_at TIMESTAMPTZ,
+          payment_verified_at TIMESTAMPTZ,
+          dispatch_notified_at TIMESTAMPTZ,
           created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
         );
 
+        ALTER TABLE orders ADD COLUMN IF NOT EXISTS payment_status TEXT NOT NULL DEFAULT 'not_applicable';
+        ALTER TABLE orders ADD COLUMN IF NOT EXISTS receipt_media_id TEXT;
+        ALTER TABLE orders ADD COLUMN IF NOT EXISTS receipt_reference TEXT;
+        ALTER TABLE orders ADD COLUMN IF NOT EXISTS receipt_received_at TIMESTAMPTZ;
+        ALTER TABLE orders ADD COLUMN IF NOT EXISTS payment_verified_at TIMESTAMPTZ;
+        ALTER TABLE orders ADD COLUMN IF NOT EXISTS dispatch_notified_at TIMESTAMPTZ;
+
         CREATE INDEX IF NOT EXISTS idx_hermes_orders_status_created
           ON orders (status, created_at DESC);
+        CREATE INDEX IF NOT EXISTS idx_hermes_orders_payment_status
+          ON orders (payment_status, created_at DESC);
 
         CREATE TABLE IF NOT EXISTS weekly_audits (
           id BIGSERIAL PRIMARY KEY,
@@ -499,15 +538,40 @@ function mapPgMessageRow(row: Record<string, unknown>): StoredMessageRecord {
   };
 }
 
+const ORDER_SELECT_COLS = `id, session_id, customer_name, phone, vehicle, items_json,
+  total_usd, delivery_address, payment_method, status,
+  payment_status, receipt_media_id, receipt_reference,
+  receipt_received_at, payment_verified_at, dispatch_notified_at, created_at`;
+
 function mapPgOrderRow(row: Record<string, unknown>): OrderRecord {
   const rawItems = Array.isArray(row.items_json)
     ? (row.items_json as OrderRecord["itemsJson"])
     : [];
   const rawStatus = String(row.status || "pending_dispatch");
-  const status: OrderStatus =
-    rawStatus === "dispatched" || rawStatus === "completed" || rawStatus === "cancelled"
-      ? rawStatus
-      : "pending_dispatch";
+  const validStatuses: OrderStatus[] = [
+    "pending_dispatch",
+    "awaiting_payment",
+    "payment_pending_verification",
+    "ready_for_dispatch",
+    "dispatched",
+    "completed",
+    "cancelled",
+  ];
+  const status: OrderStatus = validStatuses.includes(rawStatus as OrderStatus)
+    ? (rawStatus as OrderStatus)
+    : "pending_dispatch";
+
+  const rawPayStatus = String(row.payment_status || "not_applicable");
+  const validPayStatuses: PaymentStatus[] = [
+    "not_applicable",
+    "awaiting_receipt",
+    "pending_verification",
+    "verified",
+    "rejected",
+  ];
+  const paymentStatus: PaymentStatus = validPayStatuses.includes(rawPayStatus as PaymentStatus)
+    ? (rawPayStatus as PaymentStatus)
+    : "not_applicable";
 
   return {
     id: Number(row.id),
@@ -520,6 +584,12 @@ function mapPgOrderRow(row: Record<string, unknown>): OrderRecord {
     deliveryAddress: typeof row.delivery_address === "string" ? row.delivery_address : null,
     paymentMethod: typeof row.payment_method === "string" ? row.payment_method : null,
     status,
+    paymentStatus,
+    receiptMediaId: typeof row.receipt_media_id === "string" ? row.receipt_media_id : null,
+    receiptReference: typeof row.receipt_reference === "string" ? row.receipt_reference : null,
+    receiptReceivedAt: row.receipt_received_at ? new Date(String(row.receipt_received_at)).toISOString() : null,
+    paymentVerifiedAt: row.payment_verified_at ? new Date(String(row.payment_verified_at)).toISOString() : null,
+    dispatchNotifiedAt: row.dispatch_notified_at ? new Date(String(row.dispatch_notified_at)).toISOString() : null,
     createdAt: row.created_at ? new Date(String(row.created_at)).toISOString() : new Date().toISOString(),
   };
 }
@@ -763,6 +833,7 @@ export async function updateMessageQaFeedback(
 export async function insertOrder(input: InsertOrderInput): Promise<{ order: OrderRecord; telegramSent: boolean }> {
   const total = Number(Number(input.totalUsd || 0).toFixed(2));
   const status: OrderStatus = input.status || "pending_dispatch";
+  const paymentStatus: PaymentStatus = input.paymentStatus || "not_applicable";
   let savedOrder: OrderRecord | null = null;
 
   try {
@@ -771,11 +842,11 @@ export async function insertOrder(input: InsertOrderInput): Promise<{ order: Ord
       const { rows } = await pool.query<Record<string, unknown>>(
         `INSERT INTO orders (
            session_id, customer_name, phone, vehicle, items_json,
-           total_usd, delivery_address, payment_method, status, created_at
+           total_usd, delivery_address, payment_method, status,
+           payment_status, receipt_media_id, receipt_reference, created_at
          )
-         VALUES ($1, $2, $3, $4::jsonb, $5::jsonb, $6, $7, $8, $9, NOW())
-         RETURNING id, session_id, customer_name, phone, vehicle, items_json,
-                   total_usd, delivery_address, payment_method, status, created_at`,
+         VALUES ($1, $2, $3, $4::jsonb, $5::jsonb, $6, $7, $8, $9, $10, $11, $12, NOW())
+         RETURNING ${ORDER_SELECT_COLS}`,
         [
           input.sessionId.trim(),
           input.customerName,
@@ -786,6 +857,9 @@ export async function insertOrder(input: InsertOrderInput): Promise<{ order: Ord
           input.deliveryAddress,
           input.paymentMethod,
           status,
+          paymentStatus,
+          input.receiptMediaId ?? null,
+          input.receiptReference ?? null,
         ]
       );
       if (rows.length > 0) {
@@ -809,6 +883,12 @@ export async function insertOrder(input: InsertOrderInput): Promise<{ order: Ord
       deliveryAddress: input.deliveryAddress,
       paymentMethod: input.paymentMethod,
       status,
+      paymentStatus,
+      receiptMediaId: input.receiptMediaId ?? null,
+      receiptReference: input.receiptReference ?? null,
+      receiptReceivedAt: null,
+      paymentVerifiedAt: null,
+      dispatchNotifiedAt: null,
       createdAt: new Date().toISOString(),
     };
     store.orders.push(savedOrder);
@@ -824,12 +904,16 @@ export async function insertOrder(input: InsertOrderInput): Promise<{ order: Ord
         .join(" ")
     : "No especificado";
   const itemsList = savedOrder.itemsJson.map((i) => `• ${i.name} ($${Number(i.unitPriceIva).toFixed(2)})`).join("\n");
+  const headerTag =
+    savedOrder.paymentStatus === "awaiting_receipt"
+      ? `💳 *NUEVO PEDIDO MILO #${savedOrder.id} — ESPERANDO COMPROBANTE (NO DESPACHAR)*`
+      : `🚨 *NUEVO PEDIDO MILO #${savedOrder.id} — DESPACHO INMEDIATO*`;
   const alertText =
-    `🚨 *NUEVO PEDIDO MILO #${savedOrder.id} — DESPACHO INMEDIATO*\n` +
+    `${headerTag}\n` +
     `👤 *Cliente:* ${savedOrder.customerName || "Por confirmar"} (${savedOrder.phone || savedOrder.sessionId})\n` +
     `🚗 *Vehículo:* ${vStr}\n` +
     `📍 *Dirección:* ${savedOrder.deliveryAddress || "Por confirmar"}\n` +
-    `💳 *Pago:* ${savedOrder.paymentMethod || "Por confirmar"}\n` +
+    `💳 *Pago:* ${savedOrder.paymentMethod || "Por confirmar"} (${savedOrder.paymentStatus})\n` +
     `🛒 *Items:*\n${itemsList}\n` +
     `💵 *Total c/IVA:* *$${savedOrder.totalUsd.toFixed(2)}*`;
 
@@ -842,10 +926,14 @@ export async function listOrders(limit = 60): Promise<OrderRecord[]> {
     const pool = await getPool();
     if (pool) {
       const { rows } = await pool.query<Record<string, unknown>>(
-        `SELECT id, session_id, customer_name, phone, vehicle, items_json,
-                total_usd, delivery_address, payment_method, status, created_at
+        `SELECT ${ORDER_SELECT_COLS}
          FROM orders
-         ORDER BY CASE WHEN status = 'pending_dispatch' THEN 0 ELSE 1 END, created_at DESC, id DESC
+         ORDER BY CASE
+           WHEN payment_status = 'pending_verification' OR status = 'payment_pending_verification' THEN 0
+           WHEN status IN ('pending_dispatch', 'ready_for_dispatch') THEN 1
+           WHEN status = 'awaiting_payment' THEN 2
+           ELSE 3
+         END, created_at DESC, id DESC
          LIMIT $1`,
         [limit]
       );
@@ -856,14 +944,168 @@ export async function listOrders(limit = 60): Promise<OrderRecord[]> {
   }
 
   const store = loadFallbackStore();
+  const rank = (o: OrderRecord) =>
+    o.paymentStatus === "pending_verification" || o.status === "payment_pending_verification"
+      ? 0
+      : o.status === "pending_dispatch" || o.status === "ready_for_dispatch"
+      ? 1
+      : o.status === "awaiting_payment"
+      ? 2
+      : 3;
   return [...store.orders]
     .sort((a, b) => {
-      const pa = a.status === "pending_dispatch" ? 0 : 1;
-      const pb = b.status === "pending_dispatch" ? 0 : 1;
-      if (pa !== pb) return pa - pb;
+      const diff = rank(a) - rank(b);
+      if (diff !== 0) return diff;
       return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
     })
     .slice(0, limit);
+}
+
+export async function getOrderById(orderId: number): Promise<OrderRecord | null> {
+  try {
+    const pool = await getPool();
+    if (pool) {
+      const { rows } = await pool.query<Record<string, unknown>>(
+        `SELECT ${ORDER_SELECT_COLS} FROM orders WHERE id = $1 LIMIT 1`,
+        [orderId]
+      );
+      return rows.length > 0 ? mapPgOrderRow(rows[0]) : null;
+    }
+  } catch (err) {
+    console.warn("[HermesDB] getOrderById fallback:", err instanceof Error ? err.message : String(err));
+  }
+  const store = loadFallbackStore();
+  return store.orders.find((o) => o.id === orderId) || null;
+}
+
+export async function getLatestOrderNeedingReceipt(sessionId: string): Promise<OrderRecord | null> {
+  const key = sessionId.trim();
+  if (!key) return null;
+  try {
+    const pool = await getPool();
+    if (pool) {
+      const { rows } = await pool.query<Record<string, unknown>>(
+        `SELECT ${ORDER_SELECT_COLS}
+         FROM orders
+         WHERE session_id = $1
+           AND payment_status IN ('awaiting_receipt', 'rejected')
+           AND status NOT IN ('cancelled', 'completed')
+         ORDER BY created_at DESC, id DESC
+         LIMIT 1`,
+        [key]
+      );
+      return rows.length > 0 ? mapPgOrderRow(rows[0]) : null;
+    }
+  } catch (err) {
+    console.warn("[HermesDB] getLatestOrderNeedingReceipt fallback:", err instanceof Error ? err.message : String(err));
+  }
+  const store = loadFallbackStore();
+  const candidates = store.orders.filter(
+    (o) =>
+      o.sessionId === key &&
+      (o.paymentStatus === "awaiting_receipt" || o.paymentStatus === "rejected") &&
+      o.status !== "cancelled" &&
+      o.status !== "completed"
+  );
+  return candidates.length > 0 ? candidates[candidates.length - 1] : null;
+}
+
+export async function markOrderReceiptPendingVerification(params: {
+  orderId: number;
+  mediaId?: string | null;
+  reference?: string | null;
+}): Promise<OrderRecord | null> {
+  const cleanRef = (params.reference || "Comprobante recibido").trim().slice(0, 260);
+  const cleanMedia = params.mediaId ? params.mediaId.trim().slice(0, 180) : null;
+  try {
+    const pool = await getPool();
+    if (pool) {
+      const { rows } = await pool.query<Record<string, unknown>>(
+        `UPDATE orders
+         SET status = 'payment_pending_verification',
+             payment_status = 'pending_verification',
+             receipt_media_id = COALESCE($2, receipt_media_id),
+             receipt_reference = $3,
+             receipt_received_at = NOW()
+         WHERE id = $1
+         RETURNING ${ORDER_SELECT_COLS}`,
+        [params.orderId, cleanMedia, cleanRef]
+      );
+      return rows.length > 0 ? mapPgOrderRow(rows[0]) : null;
+    }
+  } catch (err) {
+    console.warn("[HermesDB] markOrderReceiptPendingVerification fallback:", err instanceof Error ? err.message : String(err));
+  }
+  const store = loadFallbackStore();
+  const found = store.orders.find((o) => o.id === params.orderId);
+  if (!found) return null;
+  found.status = "payment_pending_verification";
+  found.paymentStatus = "pending_verification";
+  found.receiptMediaId = cleanMedia || found.receiptMediaId;
+  found.receiptReference = cleanRef;
+  found.receiptReceivedAt = new Date().toISOString();
+  persistFallbackStore(store);
+  return found;
+}
+
+export async function approveOrderPayment(orderId: number): Promise<OrderRecord | null> {
+  try {
+    const pool = await getPool();
+    if (pool) {
+      const { rows } = await pool.query<Record<string, unknown>>(
+        `UPDATE orders
+         SET payment_status = 'verified',
+             status = 'ready_for_dispatch',
+             payment_verified_at = NOW(),
+             dispatch_notified_at = NOW()
+         WHERE id = $1
+         RETURNING ${ORDER_SELECT_COLS}`,
+        [orderId]
+      );
+      return rows.length > 0 ? mapPgOrderRow(rows[0]) : null;
+    }
+  } catch (err) {
+    console.warn("[HermesDB] approveOrderPayment fallback:", err instanceof Error ? err.message : String(err));
+  }
+  const store = loadFallbackStore();
+  const found = store.orders.find((o) => o.id === orderId);
+  if (!found) return null;
+  const now = new Date().toISOString();
+  found.paymentStatus = "verified";
+  found.status = "ready_for_dispatch";
+  found.paymentVerifiedAt = now;
+  found.dispatchNotifiedAt = now;
+  persistFallbackStore(store);
+  return found;
+}
+
+export async function rejectOrderPayment(orderId: number, reason?: string | null): Promise<OrderRecord | null> {
+  const cleanNote = reason ? `Rechazado: ${reason.trim().slice(0, 220)}` : "Rechazado: comprobante incompleto o sin acreditación";
+  try {
+    const pool = await getPool();
+    if (pool) {
+      const { rows } = await pool.query<Record<string, unknown>>(
+        `UPDATE orders
+         SET payment_status = 'rejected',
+             status = 'awaiting_payment',
+             receipt_reference = $2
+         WHERE id = $1
+         RETURNING ${ORDER_SELECT_COLS}`,
+        [orderId, cleanNote]
+      );
+      return rows.length > 0 ? mapPgOrderRow(rows[0]) : null;
+    }
+  } catch (err) {
+    console.warn("[HermesDB] rejectOrderPayment fallback:", err instanceof Error ? err.message : String(err));
+  }
+  const store = loadFallbackStore();
+  const found = store.orders.find((o) => o.id === orderId);
+  if (!found) return null;
+  found.paymentStatus = "rejected";
+  found.status = "awaiting_payment";
+  found.receiptReference = cleanNote;
+  persistFallbackStore(store);
+  return found;
 }
 
 export async function updateOrderStatus(
@@ -877,8 +1119,7 @@ export async function updateOrderStatus(
         `UPDATE orders
          SET status = $2
          WHERE id = $1
-         RETURNING id, session_id, customer_name, phone, vehicle, items_json,
-                   total_usd, delivery_address, payment_method, status, created_at`,
+         RETURNING ${ORDER_SELECT_COLS}`,
         [orderId, status]
       );
       if (rows.length > 0) return { ok: true, order: mapPgOrderRow(rows[0]) };
@@ -894,6 +1135,104 @@ export async function updateOrderStatus(
   found.status = status;
   persistFallbackStore(store);
   return { ok: true, order: found };
+}
+
+export async function sendWhatsAppTextDirect(toPhone: string, text: string): Promise<boolean> {
+  const token = (process.env.WHATSAPP_ACCESS_TOKEN || process.env.WHATSAPP_TOKEN || "").trim();
+  const phoneId = META_CONFIG.phoneNumberId247;
+  const cleanTo = (toPhone || "").replace(/[^\d]/g, "");
+  if (!token || !phoneId || !cleanTo || !text.trim()) return false;
+
+  try {
+    const resp = await fetch(`https://graph.facebook.com/${META_CONFIG.graphVersion}/${phoneId}/messages`, {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        messaging_product: "whatsapp",
+        to: cleanTo,
+        type: "text",
+        text: { body: text.slice(0, 3900) },
+      }),
+      signal: AbortSignal.timeout(5000),
+    });
+    return resp.ok;
+  } catch {
+    return false;
+  }
+}
+
+/**
+ * Doble notificación simultánea (ADMIN_NOTIFY_PHONE + COUNTER_NOTIFY_PHONE + Telegram)
+ * cuando llega un comprobante de transferencia pendiente por verificar.
+ */
+export async function notifyReceiptPendingVerification(order: OrderRecord): Promise<{
+  adminWaSent: boolean;
+  counterWaSent: boolean;
+  telegramSent: boolean;
+}> {
+  const itemsList = order.itemsJson
+    .map((i) => `• ${i.qty || 1}x ${i.name} ($${Number(i.unitPriceIva).toFixed(2)})`)
+    .join("\n");
+  const alertText =
+    `⏳ *COMPROBANTE PENDIENTE POR VERIFICAR (NO CONFIRMADO)*\n` +
+    `🧾 *Pedido:* #${order.id}\n` +
+    `👤 *Cliente:* ${order.customerName || "Por confirmar"} (${order.phone || order.sessionId})\n` +
+    `💵 *Monto exacto c/IVA:* *$${order.totalUsd.toFixed(2)}*\n` +
+    `🏦 *Cuenta destino:* ${OFFICIAL_BANK_ACCOUNT.bank} ${OFFICIAL_BANK_ACCOUNT.accountNumber} (${OFFICIAL_BANK_ACCOUNT.holderName})\n` +
+    `📎 *Referencia / Archivo:* ${order.receiptReference || order.receiptMediaId || "Adjunto recibido"}\n` +
+    `📍 *Entrega:* ${order.deliveryAddress || "Por confirmar"}\n` +
+    `🛒 *Detalle:*\n${itemsList}\n\n` +
+    `⚠️ Verificar acreditación real antes de autorizar despacho o retiro desde /admin-hermes.`;
+
+  const adminPhone = (process.env.ADMIN_NOTIFY_PHONE || "").replace(/[^\d]/g, "");
+  const counterPhone = (process.env.COUNTER_NOTIFY_PHONE || "").replace(/[^\d]/g, "");
+
+  const [adminWaSent, counterWaSent, telegramSent] = await Promise.all([
+    adminPhone ? sendWhatsAppTextDirect(adminPhone, alertText) : Promise.resolve(false),
+    counterPhone && counterPhone !== adminPhone
+      ? sendWhatsAppTextDirect(counterPhone, alertText)
+      : Promise.resolve(false),
+    sendTelegramAlert(alertText),
+  ]);
+
+  return { adminWaSent, counterWaSent, telegramSent };
+}
+
+export function buildApprovedDispatchMessage(order: OrderRecord): string {
+  const addr = order.deliveryAddress || "Pedernales";
+  const isPickup = /retiro\s+en\s+(bodega|tienda|local)/i.test(addr);
+  const isNational = /env[ií]o\s+nacional|cooperativa|servientrega|tramaco/i.test(addr);
+  const itemsText = order.itemsJson
+    .map((i) => `• ${i.qty || 1}x ${i.name} — $${Number(i.unitPriceIva).toFixed(2)}`)
+    .join("\n");
+
+  const deliveryInstructions = isPickup
+    ? `🏪 *Retiro autorizado en local:* Pedernales, Vía al Carmen (frente a la gasolinera).\n🕒 *Horario:* Lunes a Sábado de 08:00 a 18:00.\nSolo indica tu nombre (*${order.customerName || "titular"}*) y *Pedido #${order.id}* en mostrador.`
+    : isNational
+    ? `🚚 *Despacho nacional autorizado:* ${addr}.\nNuestro equipo embala tu pedido hoy mismo y te comparte la foto de la guía de envío apenas salga.`
+    : `🚚 *Despacho a domicilio autorizado en Pedernales:* ${addr}.\nNuestro equipo sale a coordinar la entrega contigo hoy mismo.`;
+
+  return (
+    `✅ *¡Pago verificado! Pedido #${order.id} aprobado para despacho*\n\n` +
+    `Hola${order.customerName ? ` ${order.customerName}` : ""}, confirmamos la acreditación de tu transferencia por *$${order.totalUsd.toFixed(2)}* con IVA.\n\n` +
+    `📦 *Detalle:*\n${itemsText}\n\n` +
+    `${deliveryInstructions}\n\n` +
+    `Gracias por comprar en *LíderPro Pedernales* (factura electrónica SRI incluida).`
+  );
+}
+
+export function buildRejectedPaymentMessage(order: OrderRecord, reason?: string | null): string {
+  const detail = reason?.trim()
+    ? `Motivo indicado por verificación: _${reason.trim()}_.`
+    : "El comprobante enviado aún no refleja acreditación en nuestra cuenta de Banco Pichincha o está incompleto.";
+  return (
+    `⚠️ *Actualización de tu Pedido #${order.id} ($${order.totalUsd.toFixed(2)})*\n\n` +
+    `${detail}\n\n` +
+    `Por favor envíanos nuevamente la *captura completa del comprobante* (donde se vea fecha, monto, número de comprobante y titular *${OFFICIAL_BANK_ACCOUNT.holderName}* — Banco Pichincha *${OFFICIAL_BANK_ACCOUNT.accountNumber}*) para completar la verificación y liberar tu despacho o retiro.`
+  );
 }
 
 const OUT_OF_STOCK_PATTERNS: Array<{ label: string; regex: RegExp }> = [

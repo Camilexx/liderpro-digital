@@ -9,6 +9,7 @@ import {
   Lock,
   Mic,
   MicOff,
+  Paperclip,
   RotateCcw,
   Send,
   ShieldCheck,
@@ -318,6 +319,75 @@ export default function DemoWhatsAppSimulator() {
           id: `err-${Date.now()}`,
           sender: "hermes",
           text: "Error temporal de red al consultar a Milo. Por favor intenta nuevamente.",
+          time: nowTime(),
+        },
+      ]);
+    } finally {
+      setIsSending(false);
+      inputRef.current?.focus();
+    }
+  }
+
+  async function handleSendSimulatedReceipt() {
+    if (isSending) return;
+    const filename = `comprobante-pichincha-${Date.now().toString().slice(-4)}.jpg`;
+    const userText = `📎 Adjunto comprobante completo de transferencia Banco Pichincha (${filename})`;
+    setMessages((prev) => [
+      ...prev,
+      {
+        id: `u-rcpt-${Date.now()}`,
+        sender: "user",
+        text: userText,
+        time: nowTime(),
+      },
+    ]);
+    setIsSending(true);
+    try {
+      const resp = await fetch("/api/demo-whatsapp-hermes", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          sessionId,
+          message: userText,
+          receiptAttachment: {
+            filename,
+            reference: `Transferencia Banco Pichincha 2216090525 (${filename})`,
+          },
+        }),
+      });
+      const data = (await resp.json()) as {
+        reply?: string;
+        messageId?: number | null;
+        model?: string;
+        matchedSkus?: string[];
+        quotedTotalUsd?: number | null;
+        intentTag?: string | null;
+      };
+      setMessages((prev) => [
+        ...prev,
+        {
+          id: `h-rcpt-${Date.now()}`,
+          dbMessageId: data.messageId ?? null,
+          sender: "hermes",
+          text:
+            data.reply ||
+            "⏳ Comprobante recibido y enviado a verificación con administración y mostrador (pendiente por verificar).",
+          time: nowTime(),
+          model: data.model || "milo-receipt-verifier",
+          matchedSkus: Array.isArray(data.matchedSkus) ? data.matchedSkus : [],
+          quotedTotalUsd: data.quotedTotalUsd ?? null,
+          intentTag: data.intentTag ?? "comprobante_pendiente_verificacion",
+          qaFlag: null,
+          qaNote: null,
+        },
+      ]);
+    } catch {
+      setMessages((prev) => [
+        ...prev,
+        {
+          id: `err-rcpt-${Date.now()}`,
+          sender: "hermes",
+          text: "Error temporal al adjuntar el comprobante. Intenta nuevamente.",
           time: nowTime(),
         },
       ]);
@@ -671,6 +741,16 @@ export default function DemoWhatsAppSimulator() {
           }}
           className="flex items-center gap-2 border-t border-[#D1D7DB] bg-[#F0F2F5] px-3 py-2.5 sm:px-4"
         >
+          <button
+            type="button"
+            onClick={() => void handleSendSimulatedReceipt()}
+            disabled={isSending}
+            title="Enviar comprobante de transferencia (simular foto/PDF)"
+            aria-label="Enviar comprobante de transferencia"
+            className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white text-[#54656F] shadow-sm transition hover:bg-slate-100 active:scale-95 disabled:opacity-50"
+          >
+            <Paperclip className="h-5 w-5" />
+          </button>
           <input
             ref={inputRef}
             type="text"

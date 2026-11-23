@@ -8,10 +8,11 @@ import {
 } from "@/lib/audioTranscriber";
 import { claimWebhookMessageId } from "@/lib/hermesDb";
 import { generateHermesReply } from "@/lib/hermesEngine";
+import { handleIncomingPaymentReceipt } from "@/lib/miloPayments";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
-export const maxDuration = 30;
+export const maxDuration = 60;
 
 async function postMetaGraph(path: string, token: string, payload: Record<string, unknown>): Promise<void> {
   if (!token) return;
@@ -85,6 +86,8 @@ interface MetaChangeItem {
       type?: string;
       text?: { body?: string };
       audio?: { id?: string; mime_type?: string };
+      image?: { id?: string; mime_type?: string; caption?: string };
+      document?: { id?: string; mime_type?: string; filename?: string; caption?: string };
     }>;
     contacts?: Array<{ wa_id?: string; profile?: { name?: string } }>;
   };
@@ -299,6 +302,26 @@ export async function POST(req: NextRequest) {
                 }
               }
               await sendMetaWhatsAppReply(targetPhoneId, from, replyText);
+            });
+            continue;
+          }
+
+          if (msg.type === "image" || msg.type === "document") {
+            const mediaId = msg.type === "image" ? msg.image?.id || "" : msg.document?.id || "";
+            const filename = msg.type === "document" ? msg.document?.filename || "comprobante.pdf" : "comprobante.jpg";
+            const caption = msg.type === "image" ? msg.image?.caption || "" : msg.document?.caption || "";
+            const dedupKey = msg.id ? `wa:${msg.id}` : `wa_doc:${from}:${mediaId}`;
+            if (!(await claimWebhookMessageId(dedupKey))) continue;
+
+            queuedJobs.push(async () => {
+              const receiptRes = await handleIncomingPaymentReceipt({
+                sessionId: `wa:${from}`,
+                channel: "whatsapp",
+                mediaId,
+                filename,
+                caption,
+              });
+              await sendMetaWhatsAppReply(targetPhoneId, from, receiptRes.reply);
             });
           }
         }

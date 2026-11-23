@@ -40,7 +40,7 @@ export const FAQS_DATA: FAQItem[] = [
     categoryLabel: "Pagos y Facturación",
     question: "¿Cuáles son las formas de pago aceptadas?",
     answer:
-      "Aceptamos transferencias bancarias directas e interbancarias a cuentas corrientes de Banco Pichincha, Banco Guayaquil y Banco del Pacífico. También recibimos pagos móviles instantáneos mediante DeUna, y efectivo directamente en nuestro mostrador del Hub Central de Pedernales.",
+      "Aceptamos efectivo en Pedernales (contra entrega o retiro en tienda) y transferencia a nuestra única cuenta autorizada en Banco Pichincha (Cuenta de Ahorros 2216090525, C.I. 1308068814, Titular: ADRIAN MOSQUERA). También recibimos transferencias interbancarias únicamente desde bancos con convenio directo hacia Banco Pichincha; todo pedido por transferencia se despacha o autoriza para retiro únicamente tras verificar el comprobante completo.",
   },
   {
     id: "pago-2",

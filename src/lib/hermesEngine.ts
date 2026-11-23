@@ -128,7 +128,7 @@ export const MILO_SYSTEM_PROMPT =
   "   • PROHIBIDO REPETIR MULETILLAS DE CIERRE: Nunca repitas la misma pregunta de cierre en dos turnos seguidos. Varía cada cierre según el paso real de la charla (resolver duda -> guiar a retiro o envío -> confirmar datos para despacho).\n" +
   "   • Estilo WhatsApp limpio: párrafos cortos, *negrita* con un asterisco, bullets con •, CERO tablas Markdown.\n" +
   "2) AGILIDAD EN ADITIVOS UNIVERSALES + BLOQUEO DURO DE FILTROS SIN VEHÍCULO:\n" +
-  "   • Si el cliente describe síntoma + combustible (ej. 'humo negro y traga gasolina'), llama de inmediato a `buscar_en_catalogo` y dale de una vez el precio exacto del aditivo universal recomendado (ej. Limpia Inyectores Gasolina a $4.50 c/IVA).\n" +
+  "   • Si el cliente describe síntoma + combustible (ej. 'humo negro y traga gasolina', 'humo azul', 'inyectores sucios', 'se recalienta'), DEBES llamar obligatoriamente a `buscar_en_catalogo` EN ESTE MISMO TURNO antes de responder y entregarle de una vez el nombre y precio exacto con IVA del aditivo universal devuelto por la herramienta (JAMÁS inventes el precio ni uses $35.00 como precio de producto).\n" +
   "   • PROHIBIDO cotizar o dar precio de cualquier filtro específico (aire, aceite, combustible o cabina) o aceite específico antes de conocer marca, modelo y año del vehículo. Si quieres sugerir revisar filtro de aire por humo negro, solo pregúntale qué vehículo y año tiene para cotizárselo exacto.\n" +
   "3) VERIFICACIÓN DE LITRAJE DEL MOTOR (> 4.0 LITROS): Cuando un vehículo requiera más de 4.0 litros de aceite (ej. 4.5–4.7L en SUVs como Chery Tiggo 7 Pro o 5L–6L en camionetas/SUVs grandes si no lleva ya un combo de 7L), DEBES avisar el litraje real y ofrecer sumar el envase adicional de 1 litro de la misma familia (ver 'litroAdicionalRecomendado' en buscar_en_catalogo) para que el cliente no se quede corto en la lubricadora, calculándolo junto en `gestionar_carrito`.\n" +
   "4) PROHIBIDO VOMITAR LISTAS ROBÓTICAS DE 3 OPCIONES SIN CRITERIO: Cuando el cliente pregunte '¿cuál es mejor?' o esté indeciso, RECOMIENDA 1 GANADOR CLARO del último tema conversado y explica en 1 frase sencilla por qué conviene más.\n" +
@@ -645,34 +645,64 @@ export async function generateHermesReply(
 
   // 4. Guardrail de integridad de precios sobre la respuesta final
   if (finalReply) {
-    const allowedPrices = collectAllowedPrices(toolCtx, recentAssistantTexts);
-    const badPrices = findUnverifiedPrices(finalReply, allowedPrices);
+    let allowedPrices = collectAllowedPrices(toolCtx, recentAssistantTexts);
+    let badPrices = findUnverifiedPrices(finalReply, allowedPrices);
     if (badPrices.length > 0 && Date.now() - startedAt < totalBudgetMs - 2200) {
-      const repairMessages: NimMessagePayload[] = [
-        ...llmMessages,
-        { role: "assistant", content: finalReply },
-        {
-          role: "user",
-          content:
-            `[CORRECCIÓN INTERNA DE PRECIOS] Detecté cifras en dólares que no coinciden con los datos exactos de las herramientas (${badPrices
-              .map((p) => `$${p.toFixed(2)}`)
-              .join(", ")}). Reescribe tu respuesta al cliente usando ÚNICAMENTE los precios y totales exactos devueltos por las herramientas (precios válidos: ${Array.from(
-              allowedPrices
-            )
-              .sort((a, b) => a - b)
-              .map((p) => `$${p.toFixed(2)}`)
-              .join(", ")}). No menciones esta corrección interna.`,
-        },
-      ];
-      const repaired = await callNimStep({
-        messages: repairMessages,
-        useTools: false,
-        remainingBudgetMs: totalBudgetMs - (Date.now() - startedAt),
-      });
-      if (repaired.ok && repaired.content) {
-        const candidate = sanitizeWhatsAppFormatting(repaired.content);
-        if (findUnverifiedPrices(candidate, allowedPrices).length === 0) {
-          finalReply = candidate;
+      let autoCatalogContext = "";
+      if (toolCtx.observedPricesUsd.size === 0) {
+        const autoLookup = await executeMiloToolCall(
+          "buscar_en_catalogo",
+          {
+            consultas: [cleanMessage],
+            ...(toolCtx.activeVehicle ? { vehiculo: formatVehicleLabel(toolCtx.activeVehicle) } : {}),
+          },
+          toolCtx
+        );
+        allowedPrices = collectAllowedPrices(toolCtx, recentAssistantTexts);
+        badPrices = findUnverifiedPrices(finalReply, allowedPrices);
+        autoCatalogContext = `\n[CATÁLOGO REAL VERIFICADO PARA ESTE TURNO]: ${JSON.stringify(autoLookup)}`;
+      }
+
+      if (badPrices.length > 0) {
+        const productOnlyPrices = Array.from(allowedPrices)
+          .filter((p) => {
+            if (Math.abs(p - FREE_SHIPPING_THRESHOLD_USD) > 0.02) return true;
+            return toolCtx.observedPricesUsd.has(p);
+          })
+          .sort((a, b) => a - b);
+
+        const priceRuleInstruction =
+          productOnlyPrices.length > 0
+            ? `Reescribe tu respuesta al cliente usando ÚNICAMENTE los precios de productos y totales exactos devueltos por las herramientas (${productOnlyPrices
+                .map((p) => `$${p.toFixed(2)}`)
+                .join(", ")}). Nota: $${FREE_SHIPPING_THRESHOLD_USD.toFixed(
+                2
+              )} es únicamente el mínimo de domicilio gratis en Pedernales, NO el precio de un producto.`
+            : `No tienes ningún precio de producto verificado todavía en herramientas; reescribe tu respuesta SIN poner ningún precio en dólares para productos (recuerda que $${FREE_SHIPPING_THRESHOLD_USD.toFixed(
+                2
+              )} es solo el mínimo de domicilio gratis, jamás el precio de un producto).`;
+
+        const repairMessages: NimMessagePayload[] = [
+          ...llmMessages,
+          { role: "assistant", content: finalReply },
+          {
+            role: "user",
+            content:
+              `[CORRECCIÓN INTERNA DE PRECIOS] Detecté cifras en dólares no verificadas (${badPrices
+                .map((p) => `$${p.toFixed(2)}`)
+                .join(", ")}). ${priceRuleInstruction}${autoCatalogContext}\nNo menciones esta corrección interna.`,
+          },
+        ];
+        const repaired = await callNimStep({
+          messages: repairMessages,
+          useTools: false,
+          remainingBudgetMs: totalBudgetMs - (Date.now() - startedAt),
+        });
+        if (repaired.ok && repaired.content) {
+          const candidate = sanitizeWhatsAppFormatting(repaired.content);
+          if (findUnverifiedPrices(candidate, allowedPrices).length === 0) {
+            finalReply = candidate;
+          }
         }
       }
     }

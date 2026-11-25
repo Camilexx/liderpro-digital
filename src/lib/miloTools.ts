@@ -373,37 +373,126 @@ interface OilCapacityTopUpInfo {
   preferred1LSkus: string[];
 }
 
+function findMatchingOneLiterOil(
+  primary: Pick<CatalogCandidatePayload, "sku" | "name" | "brand">,
+  fallbackSkus: string[]
+): IndexedCatalogEntry | null {
+  const primaryNorm = normalizeText(`${primary.brand} ${primary.name}`);
+  const primaryBrand = normalizeText(primary.brand);
+  const viscMatch = primaryNorm.match(/\b(\d{1,2}w[-\s]?\d{2})\b/i);
+  const targetVisc = viscMatch ? viscMatch[1].replace(/\s+/g, "-") : null;
+
+  // Extract distinctive product line keywords (e.g., "energy formula jp", "classic", "safari", "for chinese cars", "ceramic", "delvac", "diesel turbo")
+  const lineTokens = primaryNorm
+    .replace(/\b(combo|cambio|mannol|filtro|advance|regalo|galon|litros?|1a|1b|1c|2a|2b|2c|sae|api|aceite|motor|metalico|synt|blend|semi|sintetico)\b/g, " ")
+    .replace(/\b\d{1,2}w[-\s]?\d{2}\b/g, " ")
+    .replace(/[^a-z0-9\s]/g, " ")
+    .split(/\s+/)
+    .filter((t) => t.length >= 2 && t !== primaryBrand);
+
+  const oneLiterOils = MILO_FULL_CATALOG_INDEX.filter((e) => {
+    if (!e.isRetail || e.subCategory !== "lubricantes_motor") return false;
+    const pres = normalizeText(`${e.presentation} ${e.name}`);
+    return /\b(1\s*litro|1\s*lt|1l|946\s*ml|1\s*cuarto)\b/.test(pres) && !/\b(4\s*l|5\s*l|20\s*l|galon|caneca)\b/.test(pres);
+  });
+
+  let bestEntry: IndexedCatalogEntry | null = null;
+  let bestScore = -1;
+
+  for (const cand of oneLiterOils) {
+    const cNorm = normalizeText(`${cand.brand} ${cand.name}`);
+    const cBrand = normalizeText(cand.brand);
+    let score = 0;
+
+    // 1. Same viscosity is highest priority
+    if (targetVisc) {
+      if (cNorm.includes(targetVisc)) score += 50;
+      else continue; // Never mismatch viscosity (e.g. never pair 5W-30 1L with 20W-50)
+    }
+
+    // 2. Same brand
+    if (primaryBrand && cBrand === primaryBrand) {
+      score += 35;
+    }
+
+    // 3. Same product line tokens
+    let lineMatches = 0;
+    for (const tok of lineTokens) {
+      if (cNorm.includes(tok)) {
+        lineMatches += 1;
+        score += 18;
+      }
+    }
+
+    // Small bonus for curated fallback order on ties
+    const fbIdx = fallbackSkus.findIndex((s) => s.toUpperCase() === cand.sku.toUpperCase());
+    if (fbIdx >= 0) score += Math.max(1, 6 - fbIdx);
+
+    if (score > bestScore && (score >= 85 || (targetVisc && lineMatches > 0))) {
+      bestScore = score;
+      bestEntry = cand;
+    }
+  }
+
+  if (bestEntry) return bestEntry;
+
+  for (const sku of fallbackSkus) {
+    const entry = getIndexedCatalogEntry(sku);
+    if (entry) return entry;
+  }
+  return null;
+}
+
 function resolveVehicleOilCapacityTopUp(
   vehicle: VehicleProfile | null,
   queryNorm: string,
-  primaryComboSku: string
+  primary: Pick<CatalogCandidatePayload, "sku" | "name" | "brand"> & { presentation?: string }
 ): OilCapacityTopUpInfo | null {
-  // Combos 2A/2B/2C (6L-7L) y 3A/3B (20L) ya cubren motores grandes/diésel
-  if (!/^COMBO-MANNOL-1[ABC]$/i.test(primaryComboSku)) return null;
+  const skuUpper = primary.sku.toUpperCase();
+  const presNorm = normalizeText(`${primary.presentation || ""} ${primary.name}`);
+  // Combos 2A/2B/2C (6L-7L), 3A/3B (20L) y canecas/6L/7L ya cubren motores grandes
+  if (/^COMBO-MANNOL-[23][ABC]$/.test(skuUpper)) return null;
+  if (/\b(6\s*l|7\s*l|20\s*l|caneca|balde|tambor)\b/.test(presNorm)) return null;
+  // Aplica a combos de galón (1A/1B/1C) y a cualquier aceite de motor en presentación de galón / 4L / 3.78L
+  const isFourLiterOrGallon =
+    /^COMBO-MANNOL-1[ABC]$/.test(skuUpper) ||
+    /\b(galon|4\s*l|4\s*litros?|3\.78|3\.785)\b/.test(presNorm);
+  if (!isFourLiterOrGallon) return null;
 
   const combined = normalizeText(`${formatVehicleLabel(vehicle)} ${queryNorm}`);
-  const is10w40 = /1A$/i.test(primaryComboSku);
+  const primaryNorm = normalizeText(`${primary.name}`);
+  const fallbackByVisc = /20w-?50|1c$/i.test(`${primaryNorm} ${skuUpper}`)
+    ? ["012MN7404-1A"]
+    : /10w-?40|1a$/i.test(`${primaryNorm} ${skuUpper}`)
+    ? ["012MN7501-1"]
+    : /5w-?40/i.test(primaryNorm)
+    ? ["012MN7904-1"]
+    : ["012MN7914-1A", "012MN7924-1"];
 
-  // Priorizar misma familia/línea del combo elegido: Energy Formula JP 5W-30 1L (012MN7914-1A) antes que For Chinese Cars (012MN7924-1)
+  const matched1L = findMatchingOneLiterOil(primary, fallbackByVisc);
+  const preferred1LSkus = matched1L
+    ? [matched1L.sku, ...fallbackByVisc.filter((s) => s.toUpperCase() !== matched1L.sku.toUpperCase())]
+    : fallbackByVisc;
+
   if (/\b(tiggo\s*7|tiggo\s*8|coolray|geely|jetour\s*dashing|changan\s*cs55)\b/.test(combined)) {
     return {
       litersLabel: "4.5 a 4.7 litros con filtro",
       needsExtraLiters: 1,
-      preferred1LSkus: is10w40 ? ["012MN7501-1"] : ["012MN7914-1A", "012MN7924-1"],
+      preferred1LSkus,
     };
   }
   if (/\b(fortuner|prado|land\s*cruiser|f-?150|trailblazer|blazer|pathfinder|santa\s*fe|sorento|outlander)\b/.test(combined)) {
     return {
       litersLabel: "5.0 a 6.0 litros con filtro",
       needsExtraLiters: 2,
-      preferred1LSkus: is10w40 ? ["012MN7501-1"] : ["012MN7914-1A", "012MN7709-1"],
+      preferred1LSkus,
     };
   }
   if (/\b(x-?trail|rav\s*4|cx-?5|captiva|tiggo\s*4|grand\s*vitara)\b/.test(combined)) {
     return {
       litersLabel: "4.3 a 4.7 litros con filtro",
       needsExtraLiters: 1,
-      preferred1LSkus: is10w40 ? ["012MN7501-1"] : ["012MN7914-1A", "012MN7713-1"],
+      preferred1LSkus,
     };
   }
   return null;
@@ -449,10 +538,18 @@ function searchSingleQuery(
     !asksTransmission &&
     (/\b(combo|cambio\s+de\s+aceite|aceite\s+(?:de\s+)?motor|aceite\s+y\s+filtro|lubricante)\b/.test(expanded) ||
       (/\baceite\b/.test(expanded) && !/\b(frenos?|cocina|oliva|caja|transmision|hidraulic)\b/.test(expanded)));
+  const asksUniversalAdditive =
+    /\b(aditivo|limpia\s*inyector|inyector|flush|motor\s*flush|octanaje|humo\s+(?:negro|azul)|tratamiento|radiador|refrigerante|coolant|sellador|limpiador|spray|ceratec|molibdeno)\b/.test(
+      expanded
+    );
+  const wantsExplicitViscosity = Boolean(
+    expanded.match(/\b(0w-20|5w-20|5w-30|5w-40|10w-30|10w-40|15w-40|20w-50)\b/i)
+  );
   const asksFilterOnly =
-    /\bfiltro\b/.test(expanded) && !asksOilOrCombo && !asksBattery && !/\bparticulas|dpf\b/.test(expanded);
+    /\bfiltro\b/.test(expanded) && !asksOilOrCombo && !asksBattery && !asksUniversalAdditive && !/\bparticulas|dpf\b/.test(expanded);
 
-  // REGLA DURA V4.1: Prohibido cotizar filtros (aire, aceite, combustible, cabina) sin conocer el vehículo
+  // REGLA DURA V4.2: Prohibido cotizar filtros o aceites de motor genéricos sin conocer vehículo
+  // (Los aditivos universales SÍ se cotizan directo en Turno 1 sin pedir marca/modelo/año)
   if (asksFilterOnly && !hasKnownVehicle) {
     return {
       consulta: rawQuery,
@@ -462,6 +559,19 @@ function searchSingleQuery(
         "BLOQUEADO: Todavía NO conoces marca, modelo ni año del vehículo del cliente. " +
         "PROHIBIDO cotizar un filtro específico o mencionar un precio de filtro antes de saber qué vehículo es. " +
         "Pregunta primero marca, modelo y año del carro.",
+      candidatos: [],
+    };
+  }
+
+  if (asksOilOrCombo && !hasKnownVehicle && !wantsExplicitViscosity && !asksUniversalAdditive && !/\b(caneca|20\s*l|combo-mannol)\b/.test(expanded)) {
+    return {
+      consulta: rawQuery,
+      enStock: false,
+      requiereVehiculo: true,
+      nota:
+        "BLOQUEADO: Todavía NO conoces marca, modelo ni año del vehículo ni la viscosidad exacta. " +
+        "PROHIBIDO cotizar un aceite de motor o combo sin saber qué vehículo es. " +
+        "Pregunta primero marca, modelo y año del carro para recomendar la viscosidad y litraje exactos.",
       candidatos: [],
     };
   }
@@ -533,7 +643,7 @@ function searchSingleQuery(
     let alertaLitraje: string | undefined;
     let litroAdicionalRecomendado: CatalogCandidatePayload | null = null;
     if (primary) {
-      const cap = resolveVehicleOilCapacityTopUp(ctx.activeVehicle, expanded, primary.sku);
+      const cap = resolveVehicleOilCapacityTopUp(ctx.activeVehicle, expanded, primary);
       if (cap && cap.needsExtraLiters > 0) {
         for (const topSku of cap.preferred1LSkus) {
           const entry1L = getIndexedCatalogEntry(topSku);
@@ -908,11 +1018,20 @@ export async function executeMiloToolCall(
         }
       }
 
-      // Aviso de litraje (> 4.0L) si el carrito lleva un Combo de galón (4L) sin envase de 1L adicional
-      const combo1Item = nextCart.find((i) => /^COMBO-MANNOL-1[ABC]$/i.test(i.sku));
+      // Aviso de litraje (> 4.0L) si el carrito lleva un aceite/combo de 4L/galón sin envase de 1L adicional
+      const oil4LItem = nextCart.find(
+        (i) =>
+          /^COMBO-MANNOL-1[ABC]$/i.test(i.sku) ||
+          (i.subCategory === "lubricantes_motor" && /\b(galon|4\s*l|4\s*litros?|3\.78)\b/i.test(`${i.presentation || ""} ${i.name}`))
+      );
       const hasExtra1L = nextCart.some((i) => /1\s*litro|1\s*lt|\b1l\b/i.test(`${i.presentation || ""} ${i.name}`));
-      if (combo1Item && !hasExtra1L) {
-        const cap = resolveVehicleOilCapacityTopUp(ctx.activeVehicle, "", combo1Item.sku);
+      if (oil4LItem && !hasExtra1L) {
+        const cap = resolveVehicleOilCapacityTopUp(ctx.activeVehicle, "", {
+          sku: oil4LItem.sku,
+          name: oil4LItem.name,
+          brand: oil4LItem.brand || "",
+          presentation: oil4LItem.presentation,
+        });
         if (cap && cap.needsExtraLiters > 0) {
           const topEntry = cap.preferred1LSkus.map((s) => getIndexedCatalogEntry(s)).find(Boolean);
           if (topEntry) {

@@ -1177,7 +1177,7 @@ export async function notifyReceiptPendingVerification(order: OrderRecord): Prom
     .map((i) => `• ${i.qty || 1}x ${i.name} ($${Number(i.unitPriceIva).toFixed(2)})`)
     .join("\n");
   const alertText =
-    `⏳ *COMPROBANTE PENDIENTE POR VERIFICAR (NO CONFIRMADO)*\n` +
+    `⏳ *PENDIENTE POR VERIFICAR — NO CONFIRMADO*\n` +
     `🧾 *Pedido:* #${order.id}\n` +
     `👤 *Cliente:* ${order.customerName || "Por confirmar"} (${order.phone || order.sessionId})\n` +
     `💵 *Monto exacto c/IVA:* *$${order.totalUsd.toFixed(2)}*\n` +

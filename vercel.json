@@ -10,6 +10,8 @@
   ],
   "redirects": [
     { "source": "/index.html", "destination": "/", "permanent": true },
+    { "source": "/demo-whatsapp", "destination": "/", "permanent": true },
+    { "source": "/demo-whatsapp/:path*", "destination": "/", "permanent": true },
     { "source": "/catalogo", "destination": "/productos", "permanent": true },
     { "source": "/catalogo/:path*", "destination": "/productos/:path*", "permanent": true },
     { "source": "/fichas/:slug", "destination": "/productos/:slug", "permanent": true },

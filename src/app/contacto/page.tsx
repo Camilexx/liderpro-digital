@@ -87,7 +87,7 @@ export default function ContactPage() {
                 required
                 value={city}
                 onChange={(e) => setCity(e.target.value)}
-                placeholder="Ej. Pedernales, Quito, Santo Domingo, etc."
+                placeholder="Ej. Pedernales, Manta, Santo Domingo, Guayaquil..."
                 className="w-full h-11 px-3.5 bg-slate-50 border border-slate-300 rounded-xl text-sm text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-primary/40 focus:border-brand-primary transition-all"
               />
             </div>
@@ -163,8 +163,8 @@ export default function ContactPage() {
               </div>
             </div>
             <div className="p-3 bg-slate-50 rounded-xl space-y-1 border border-slate-100">
-              <p className="font-bold text-slate-900">Enlace Logístico Sierra — Quito:</p>
-              <p className="text-[11px] text-slate-500">{BUSINESS_CONFIG.locations.quito.address}</p>
+              <p className="font-bold text-slate-900">Envíos a Todo el Ecuador (&lt;48h):</p>
+              <p className="text-[11px] text-slate-500">{BUSINESS_CONFIG.locations.nacional.address}</p>
             </div>
           </div>
         </div>

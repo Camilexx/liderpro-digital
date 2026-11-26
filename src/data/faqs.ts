@@ -14,7 +14,7 @@ export const FAQS_DATA: FAQItem[] = [
     categoryLabel: "Envíos y Rutas",
     question: "¿A qué ciudades de Ecuador realizan envíos?",
     answer:
-      "Despachamos a las 24 provincias del país desde nuestra Sede Central en Pedernales (Manabí). Contamos con rutas directas con entrega en 24h hacia Quito, Santo Domingo, Manta, Portoviejo, Esmeraldas y Guayaquil. Para el resto de ciudades (Ambato, Cuenca, Loja, etc.), la entrega toma de 24h a 48h hábiles por transporte interprovincial o courier.",
+      "Despachamos a las 24 provincias del país desde nuestra Sede Única en Pedernales (Manabí) con entregas en menos de 48h. Contamos con rutas directas hacia Santo Domingo, Manta, Portoviejo, Esmeraldas, Guayaquil y todo el país (Ambato, Cuenca, Loja, Ibarra, Oriente y provincias).",
   },
   {
     id: "env-2",

@@ -1312,7 +1312,7 @@ function buildAuditRecommendations(params: {
   if (recs.length === 0) {
     recs.push(
       params.totalChats === 0
-        ? "Sin volumen suficiente en los últimos 7 días; ejecutar pruebas en /demo-whatsapp o esperar tráfico orgánico."
+        ? "Sin volumen suficiente en los últimos 7 días; esperar tráfico orgánico en WhatsApp."
         : "Operación estable esta semana: 0 fallos QA críticos registrados."
     );
   }

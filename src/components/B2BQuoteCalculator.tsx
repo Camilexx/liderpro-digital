@@ -333,14 +333,14 @@ export default function B2BQuoteCalculator() {
                   type="text"
                   value={deliveryLocation}
                   onChange={(e) => setDeliveryLocation(e.target.value)}
-                  placeholder="Ej: Pedernales, Quito, Manta, Machala..."
+                  placeholder="Ej: Pedernales, Manta, Guayaquil, Machala..."
                   className="w-full pl-9 pr-3 py-2 bg-slate-900 border border-slate-700 rounded-xl text-xs text-white placeholder-slate-500 focus:outline-none focus:border-[#FFC500]"
                 />
               </div>
 
               <div className="flex flex-wrap gap-1 text-[10px] text-slate-400">
                 <span>Rutas Frecuentes:</span>
-                {["Pedernales", "Quito", "Guayaquil", "Manta", "Machala", "Santo Domingo"].map((c) => (
+                {["Pedernales", "Guayaquil", "Manta", "Machala", "Santo Domingo", "Cuenca"].map((c) => (
                   <button
                     key={c}
                     type="button"

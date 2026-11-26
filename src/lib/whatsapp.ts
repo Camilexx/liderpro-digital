@@ -29,7 +29,7 @@ export interface WhatsAppContext {
   city?: string;
   details?: string;
   text?: string;
-  locationChoice?: "pedernales" | "quito" | "nacional";
+  locationChoice?: "pedernales" | "nacional";
   b2bNotes?: string;
 }
 
@@ -144,9 +144,9 @@ export function buildWhatsAppLink(
 
     case "branch": {
       const branchName =
-        context.locationChoice === "quito"
-          ? "Punto de Enlace Quito"
-          : "Sede Central Pedernales (Manabí)";
+        context.locationChoice === "nacional"
+          ? "Despacho Nacional desde Pedernales (<48h)"
+          : "Sede Única Pedernales (Manabí)";
       message = `Hola LiderPro Pedernales, deseo coordinar atención directa o retiro de pedido en ${branchName}.`;
       break;
     }

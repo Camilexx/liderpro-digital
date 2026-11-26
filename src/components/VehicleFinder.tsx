@@ -442,7 +442,7 @@ export default function VehicleFinder({
             </label>
             <input
               type="text"
-              placeholder="Ej. Pedernales, Quito, Manta..."
+              placeholder="Ej. Pedernales, Manta, Guayaquil..."
               value={selectedCity}
               onChange={(e) => setSelectedCity(e.target.value)}
               className="w-full h-12 px-3.5 bg-slate-50 border border-slate-200 rounded-xl text-sm font-medium text-slate-900 focus:bg-white focus:outline-none focus:border-slate-400 transition-colors"

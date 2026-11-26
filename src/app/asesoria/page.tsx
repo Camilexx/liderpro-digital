@@ -122,7 +122,7 @@ export default function AsesoriaPage() {
           </div>
           <div className="flex items-center gap-2">
             <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
-            <span>Despacho Pedernales / Quito</span>
+            <span>Envíos desde Pedernales a todo Ecuador (&lt;48h)</span>
           </div>
         </div>
       </div>

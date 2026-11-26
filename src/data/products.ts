@@ -45,7 +45,7 @@ export interface Product {
   inStock: boolean;
   stockStatusText: string;
   dispatchIndicator: string;
-  primaryOriginRecommendation: "Pedernales" | "Quito" | "Nacional";
+  primaryOriginRecommendation: "Pedernales" | "Nacional";
   imageUrl: string;
   variants?: ProductVariant[];
   compatibleVehicles: {

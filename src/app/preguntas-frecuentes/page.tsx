@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     "Respuestas oficiales sobre envíos diarios a las 24 provincias desde Pedernales, garantías de 12 meses en baterías Bosch y Baterías Ecuador, facturación electrónica SRI y precios para flotas.",
   keywords: [
     "preguntas frecuentes liderpro ecuador",
-    "envios repuestos pedernales manabi quito guayaquil",
+    "envios repuestos pedernales manabi guayaquil ecuador",
     "garantia baterias ecuador bosch",
     "facturacion electronica sri repuestos automotrices",
   ],

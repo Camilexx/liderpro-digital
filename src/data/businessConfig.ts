@@ -38,7 +38,7 @@ export interface BusinessConfig {
       isStrategicHub: boolean;
       features: string[];
     };
-    quito: {
+    nacional: {
       name: string;
       city: string;
       province: string;
@@ -155,34 +155,34 @@ export const BUSINESS_CONFIG: BusinessConfig = {
         "Diagnóstico eléctrico y facturación electrónica SRI inmediata",
       ],
     },
-    quito: {
-      name: "Enlace Logístico Sierra — Quito, Santo Domingo & Costa Norte",
-      city: "Quito",
-      province: "Pichincha",
-      region: "Sierra & Enlace Interprovincial",
-      role: "Ruta directa de recepción y distribución diaria para clientes, talleres y flotas en Quito, Santo Domingo, Manta, Guayaquil y Sierra centro.",
-      address: "Conexión Directa Interprovincial y Courier Autorizado",
+    nacional: {
+      name: "Cobertura Nacional — Envíos a Todo el Ecuador (<48h)",
+      city: "Todo el Ecuador",
+      province: "24 Provincias",
+      region: "Despacho Nacional desde Pedernales",
+      role: "Envíos diarios a todo el Ecuador en menos de 48h desde nuestra sede única en Pedernales para clientes particulares, talleres y flotas.",
+      address: "Despacho directo desde Pedernales por Cooperativa Interprovincial y Courier Autorizado",
       phone: "+593 96 748 9002",
       whatsapp: "593967489002",
       hours: "Lunes a Sábado: 08:00 – 18:00",
-      isStrategicHub: true,
+      isStrategicHub: false,
       features: [
-        "Entrega al día siguiente en Quito, Santo Domingo, Manta y Guayaquil",
+        "Envíos a todo el Ecuador en menos de 48h desde Pedernales",
         "Protocolo de embalaje antiderrame y anclaje técnico de baterías",
-        "Atención corporativa para talleres mecánicos y cooperativas",
-        "Seguimiento con foto de guía de remisión por WhatsApp",
+        "Instalación gratuita de baterías a domicilio dentro de Pedernales",
+        "Seguimiento con foto de guía de remisión y factura electrónica SRI",
       ],
     },
   },
   shipping: {
-    primaryMessage: "Hub Logístico Pedernales: Despacho Diario a las 24 Provincias",
-    subMessage: "Transporte Interprovincial y Encomiendas a Nivel Nacional según Destino",
+    primaryMessage: "Hub Logístico Pedernales: Envíos a Todo el Ecuador (<48h)",
+    subMessage: "Transporte Interprovincial y Encomiendas a Nivel Nacional desde Pedernales",
     disclaimer:
-      "Todos los despachos salen verificados desde nuestra Sede Central en Pedernales (Manabí) con foto de guía y protocolo de seguridad: embalaje reforzado antiderrame para lubricantes/refrigerantes y anclaje técnico para baterías selladas.",
+      "Todos los despachos salen verificados desde nuestra sede única en Pedernales (Manabí) con foto de guía y protocolo de seguridad: embalaje reforzado antiderrame para lubricantes/refrigerantes y anclaje técnico para baterías selladas.",
     zones: [
-      "Eje Directo (Entrega al día siguiente): Quito, Santo Domingo, Manta, Portoviejo, Esmeraldas y Guayaquil",
-      "Manabí y Perfil Costero: Cojimíes, Jama, San Vicente, Bahía, Chone, El Carmen",
-      "Sierra y Austro: Ambato, Riobamba, Latacunga, Cuenca, Loja e Ibarra",
+      "Eje Directo (24h–48h): Santo Domingo, Manta, Portoviejo, Esmeraldas, Guayaquil y todo el país",
+      "Manabí y Perfil Costero: Pedernales (instalación gratis de baterías a domicilio), Cojimíes, Jama, San Vicente, Bahía, Chone, El Carmen",
+      "Sierra, Austro y Oriente: Ambato, Riobamba, Latacunga, Cuenca, Loja, Ibarra y provincias en <48h",
       "Sector Productivo y Camaronero: Despacho de canecas, tambores y baterías Grupo 31 en ruta",
     ],
   },

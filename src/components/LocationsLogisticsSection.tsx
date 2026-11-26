@@ -122,13 +122,13 @@ export default function LocationsLogisticsSection() {
                 Despacho diario por transporte interprovincial y courier a nivel nacional. La empresa logística se define según tu cantón y destino directamente por WhatsApp.
               </p>
               <div className="text-xs text-slate-600 space-y-1.5 border-t border-slate-100 pt-3">
-                <p><strong>Rutas Express 24h:</strong> Quito, Guayaquil, Santo Domingo, Manta, Portoviejo y Esmeraldas.</p>
+                <p><strong>Rutas Express &lt;48h:</strong> Santo Domingo, Manta, Portoviejo, Esmeraldas, Guayaquil, Sierra y todo el país.</p>
                 <p><strong>Seguimiento:</strong> Envío de fotografía de guía y paquete sellado por WhatsApp.</p>
               </div>
             </div>
 
             <a
-              href={buildWhatsAppLink("shipping", { city: "Quito / Guayaquil / Santo Domingo / Manta" })}
+              href={buildWhatsAppLink("shipping", { city: "Santo Domingo / Manta / Guayaquil / Todo Ecuador" })}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-secondary !w-full !py-2.5 !text-xs font-bold flex items-center justify-between group"
@@ -195,7 +195,7 @@ export default function LocationsLogisticsSection() {
                 <span className="w-2 h-2 rounded-full bg-blue-500 shrink-0" />
                 <span>Eje Troncal Nacional</span>
               </div>
-              <p className="text-[11px] text-slate-600 leading-tight">Quito, Santo Domingo, Guayaquil, Quevedo, Esmeraldas.</p>
+              <p className="text-[11px] text-slate-600 leading-tight">Santo Domingo, Guayaquil, Quevedo, Esmeraldas y provincias.</p>
               <span className="inline-block text-[10px] font-bold text-blue-700 bg-blue-50 px-2 py-0.5 rounded border border-blue-200/60 mt-1">
                 Entrega Express 24h
               </span>

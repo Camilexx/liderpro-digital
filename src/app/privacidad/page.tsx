@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title: "Política de Privacidad y Protección de Datos Personales — LiderPro",
     description:
       "Aviso de privacidad conforme a la LOPDP del Ecuador para cotizaciones y facturación SRI.",
-    url: "https://liderpro-digital.vercel.app/privacidad",
+    url: "https://www.liderpropedernales.com/privacidad",
     type: "website",
   },
 };
@@ -124,10 +124,10 @@ export default function PrivacidadPage() {
             </p>
             <div className="flex flex-wrap gap-4 text-xs font-semibold pt-2">
               <span className="bg-slate-100 px-3 py-1.5 rounded-lg border border-slate-200">
-                📧 Correo: privacidad@liderpro.ec
+                📱 WhatsApp Oficial: +593 96 748 9002
               </span>
               <span className="bg-slate-100 px-3 py-1.5 rounded-lg border border-slate-200">
-                📱 WhatsApp Oficial: +593 96 748 9002
+                🌐 Web Oficial: https://www.liderpropedernales.com
               </span>
             </div>
           </div>

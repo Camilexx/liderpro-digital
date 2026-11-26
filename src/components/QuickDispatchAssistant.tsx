@@ -78,7 +78,6 @@ interface QuickCityOption {
 }
 
 const POPULAR_CITIES: QuickCityOption[] = [
-  { id: "quito", name: "Quito", province: "Pichincha", transitTime: "24h", transitLabel: "24 Horas (Entrega al día siguiente)", transportType: "Courier a Domicilio o Transporte Interprovincial", cutoff: "Corte diario: 14:00 y 18:00" },
   { id: "guayaquil", name: "Guayaquil", province: "Guayas", transitTime: "24h", transitLabel: "24 Horas (Entrega al día siguiente)", transportType: "Encomienda Interprovincial Directa o Courier", cutoff: "Corte diario: 14:00 y 18:00" },
   { id: "santo-domingo", name: "Santo Domingo", province: "Sto. Domingo", transitTime: "24h", transitLabel: "24 Horas (Conexión Directa)", transportType: "Transporte Interprovincial Directo", cutoff: "Múltiples salidas diarias continuas" },
   { id: "manta", name: "Manta / Portoviejo", province: "Manabí", transitTime: "24h", transitLabel: "24 Horas (Ruta Costera Directa)", transportType: "Transporte Intercantonal Inmediato", cutoff: "Salidas directas por E382" },
@@ -369,13 +368,13 @@ export default function QuickDispatchAssistant() {
                 </span>
               </div>
               <h4 className="text-lg font-black text-slate-950">
-                Eje Sierra Capital
+                Corredor Sierra &amp; Costa Norte
               </h4>
               <p className="text-xs text-slate-600 leading-relaxed">
-                <strong>Pedernales ➔ El Carmen ➔ Santo Domingo ➔ Alóag ➔ Quito</strong>
+                <strong>Pedernales ➔ El Carmen ➔ Santo Domingo ➔ Sierra Centro</strong>
               </p>
               <p className="text-xs text-slate-500 leading-relaxed">
-                Salida diaria con arribo en la mañana para talleres mecánicos, flotas y clientes particulares en Quito y valles.
+                Salida diaria con entrega en menos de 48h para talleres mecánicos, flotas y clientes particulares en todo el país.
               </p>
             </div>
             <div className="pt-3 border-t border-slate-100 text-[11px] font-bold text-slate-700">

@@ -37,7 +37,7 @@ export const EDUCATIONAL_ARTICLES: EducationalArticle[] = [
     problem:
       "Comprar un aceite muy grueso 'porque el carro ya tiene 100,000 km' es uno de los mitos más dañinos en los talleres automotrices.",
     explanation:
-      "El número antes de la 'W' (Winter/Invierno) indica la fluidez en frío: un '5W' fluye con alta rapidez tanto en mañanas frías de Quito (Sierra) como al arrancar en Pedernales (Costa). El segundo número ('30') mide la protección térmica cuando el motor alcanza 100°C. Si pones un 20W-50 en un motor diseñado para tolerancias estrechas de 5W-30, los impulsadores hidráulicos y la cadena de distribución sufrirán desgaste prematuro.",
+      "El número antes de la 'W' (Winter/Invierno) indica la fluidez en frío: un '5W' fluye con alta rapidez tanto en mañanas frías de la Sierra como al arrancar en Pedernales (Costa). El segundo número ('30') mide la protección térmica cuando el motor alcanza 100°C. Si pones un 20W-50 en un motor diseñado para tolerancias estrechas de 5W-30, los impulsadores hidráulicos y la cadena de distribución sufrirán desgaste prematuro.",
     solution:
       "Consulta siempre el manual del fabricante o escribe a nuestros especialistas LiderPro con el año y kilometraje de tu vehículo para asignarte la fórmula sintética o semisintética exacta.",
     recommendedCategory: "lubricantes",
@@ -71,7 +71,7 @@ export const EDUCATIONAL_ARTICLES: EducationalArticle[] = [
     explanation:
       "El Chevrolet Sail (1.4L y 1.5L) utiliza comúnmente una batería tamaño NS60L (borne izquierdo) de 45Ah a 55Ah con mínimo 420 a 480 CCA para asegurar un arranque óptimo.",
     solution:
-      "En LiderPro contamos con stock permanente de baterías NS60L probadas y listas para instalación en Pedernales y despacho a Quito y provincias.",
+      "En LiderPro contamos con stock permanente de baterías NS60L probadas y listas para instalación gratuita a domicilio en Pedernales y despacho a todo el Ecuador en menos de 48h.",
     recommendedCategory: "baterias",
     metaDescription:
       "Especificaciones de batería para Chevrolet Sail en Ecuador: NS60L, amperios, CCA y consejos de instalación segura.",

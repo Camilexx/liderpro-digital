@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   keywords: [
     "envios repuestos automotrices ecuador",
     "despacho baterias lubricantes pedernales manabi",
-    "encomienda repuestos quito guayaquil manta",
+    "encomienda repuestos guayaquil manta cuenca ecuador",
     "logistica automotriz 24 provincias ecuador",
   ],
   alternates: {

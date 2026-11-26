@@ -107,7 +107,7 @@ export default function EmergencyBanner() {
               </label>
               <input
                 type="text"
-                placeholder="Ej. Pedernales, Quito..."
+                placeholder="Ej. Pedernales, Jama, Cojimíes..."
                 value={city}
                 onChange={(e) => setCity(e.target.value)}
                 className="w-full h-11 px-3 bg-slate-950 border border-slate-800 rounded-xl text-xs text-white placeholder-slate-500 focus:outline-none focus:border-[#FFC500] transition-colors"

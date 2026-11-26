@@ -1,3 +1,4 @@
+import crypto from "node:crypto";
 import { after, NextRequest, NextResponse } from "next/server";
 import { META_CONFIG } from "@/data/metaConfig";
 import {
@@ -14,27 +15,71 @@ export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 export const maxDuration = 60;
 
-async function postMetaGraph(path: string, token: string, payload: Record<string, unknown>): Promise<void> {
-  if (!token) return;
+function verifyMetaSignature(rawBody: string, signatureHeader: string | null): boolean {
+  const appSecret = (process.env.META_APP_SECRET || "").trim();
+  if (!appSecret) return true;
+  if (!signatureHeader || !signatureHeader.startsWith("sha256=")) return false;
+
+  const providedHex = signatureHeader.slice("sha256=".length).trim();
+  if (!/^[0-9a-fA-F]{64}$/.test(providedHex)) return false;
+
+  const expectedHex = crypto
+    .createHmac("sha256", appSecret)
+    .update(rawBody, "utf8")
+    .digest("hex");
+
+  const providedBuf = Buffer.from(providedHex, "hex");
+  const expectedBuf = Buffer.from(expectedHex, "hex");
+  if (providedBuf.length !== expectedBuf.length) return false;
+  return crypto.timingSafeEqual(providedBuf, expectedBuf);
+}
+
+async function postMetaGraph(
+  path: string,
+  token: string,
+  payload: Record<string, unknown>
+): Promise<{ ok: boolean; status: number }> {
+  if (!token) {
+    console.error("[MiloWebhook] missing_token", { path });
+    return { ok: false, status: 0 };
+  }
   try {
-    await fetch(`https://graph.facebook.com/${META_CONFIG.graphVersion}/${path}`, {
+    const res = await fetch(`https://graph.facebook.com/${META_CONFIG.graphVersion}/${path}`, {
       method: "POST",
       headers: {
         Authorization: `Bearer ${token}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify(payload),
-      signal: AbortSignal.timeout(5000),
+      signal: AbortSignal.timeout(10000),
     });
-  } catch {
-    // Nunca romper el ACK 200 al webhook de Meta
+    if (!res.ok) {
+      const safeErr = (await res.text().catch(() => "")).slice(0, 300);
+      console.error("[MiloWebhook] graph_error", { path, status: res.status, body: safeErr });
+      return { ok: false, status: res.status };
+    }
+    return { ok: true, status: res.status };
+  } catch (err) {
+    console.error(
+      "[MiloWebhook] graph_fetch_exception",
+      path,
+      err instanceof Error ? err.message : String(err)
+    );
+    return { ok: false, status: 0 };
   }
 }
 
-async function sendMetaWhatsAppReply(phoneNumberId: string, to: string, text: string): Promise<void> {
+async function sendMetaWhatsAppReply(
+  phoneNumberId: string,
+  to: string,
+  text: string
+): Promise<{ ok: boolean; status: number }> {
   const token = (process.env.WHATSAPP_ACCESS_TOKEN || process.env.WHATSAPP_TOKEN || "").trim();
-  if (!token || !phoneNumberId) return;
-  await postMetaGraph(`${phoneNumberId}/messages`, token, {
+  if (!token || !phoneNumberId) {
+    console.error("[MiloWebhook] missing_wa_credentials", { hasToken: Boolean(token), phoneNumberId });
+    return { ok: false, status: 0 };
+  }
+  return postMetaGraph(`${phoneNumberId}/messages`, token, {
     messaging_product: "whatsapp",
     to,
     type: "text",
@@ -107,10 +152,27 @@ interface MetaWebhookEntry {
  */
 export async function POST(req: NextRequest) {
   try {
-    const body = (await req.json()) as {
+    const rawBody = await req.text();
+    const signatureHeader = req.headers.get("x-hub-signature-256");
+    if (!verifyMetaSignature(rawBody, signatureHeader)) {
+      console.warn("[MiloWebhook] invalid_signature", {
+        hasSignatureHeader: Boolean(signatureHeader),
+      });
+      return NextResponse.json({ error: "Invalid signature" }, { status: 401 });
+    }
+
+    let body: {
       object?: string;
       entry?: MetaWebhookEntry[];
     };
+    try {
+      body = JSON.parse(rawBody) as {
+        object?: string;
+        entry?: MetaWebhookEntry[];
+      };
+    } catch {
+      return NextResponse.json({ error: "Invalid JSON" }, { status: 400 });
+    }
 
     const objType = (body.object || "whatsapp_business_account").toLowerCase();
     const waToken = (process.env.WHATSAPP_ACCESS_TOKEN || process.env.WHATSAPP_TOKEN || "").trim();
@@ -269,7 +331,15 @@ export async function POST(req: NextRequest) {
                 customerPhone: from,
                 timeoutMs: 18000,
               });
-              await sendMetaWhatsAppReply(targetPhoneId, from, hermes.reply);
+              const sendRes = await sendMetaWhatsAppReply(targetPhoneId, from, hermes.reply);
+              console.log("[MiloWebhook] wa_reply_result", {
+                targetPhoneId,
+                toSuffix: from.slice(-4),
+                ok: sendRes.ok,
+                status: sendRes.status,
+                model: hermes.model,
+                usedFallback: hermes.usedFallback,
+              });
             });
             continue;
           }
@@ -330,13 +400,12 @@ export async function POST(req: NextRequest) {
 
     if (queuedJobs.length > 0) {
       after(async () => {
-        for (const job of queuedJobs) {
-          try {
-            await job();
-          } catch (err) {
-            console.warn(
-              "[MiloWebhook] background job error:",
-              err instanceof Error ? err.message : String(err)
+        const results = await Promise.allSettled(queuedJobs.map((job) => job()));
+        for (const res of results) {
+          if (res.status === "rejected") {
+            console.error(
+              "[MiloWebhook] background_job_error",
+              res.reason instanceof Error ? res.reason.message : String(res.reason)
             );
           }
         }
@@ -344,7 +413,8 @@ export async function POST(req: NextRequest) {
     }
 
     return NextResponse.json({ status: "ok", object: objType, queued: queuedJobs.length }, { status: 200 });
-  } catch {
+  } catch (err) {
+    console.error("[MiloWebhook] route_exception", err instanceof Error ? err.message : String(err));
     return NextResponse.json({ status: "ignored" }, { status: 200 });
   }
 }

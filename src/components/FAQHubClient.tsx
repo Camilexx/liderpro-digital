@@ -58,7 +58,7 @@ export default function FAQHubClient() {
         <Search className="w-5 h-5 text-slate-400 absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none" />
         <input
           type="text"
-          placeholder="Buscar por batería, envío a Quito, factura, garantía..."
+          placeholder="Buscar por batería, envío en <48h, factura, garantía..."
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           className="w-full pl-12 pr-4 py-3.5 bg-white text-slate-900 rounded-2xl text-sm placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#FFC500] shadow-lg border border-slate-200"

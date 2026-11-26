@@ -15,14 +15,14 @@ const FAQS: FAQItem[] = [
       "Puedes utilizar nuestro buscador de compatibilidad ingresando marca, modelo, año y motor. Si tu vehículo tiene modificaciones o prefieres verificar directamente, nuestro equipo técnico revisará el catálogo oficial por WhatsApp sin costo.",
   },
   {
-    question: "¿Tienen local físico en Pedernales y en Quito?",
+    question: "¿Dónde está ubicada la tienda física de LíderPro?",
     answer:
-      "Sí. Operamos con presencia estratégica física en Pedernales (Manabí) para atención y distribución en la Costa, y contamos con un punto de atención y coordinación logística en Quito (Pichincha) para clientes de la Sierra.",
+      "Nuestra tienda y bodega única está en Pedernales (Manabí), Vía al Carmen frente a la gasolinera. Dentro de Pedernales ofrecemos instalación gratuita de baterías a domicilio, y despachamos a todo el Ecuador en menos de 48h.",
   },
   {
     question: "¿Cuánto demora en llegar mi pedido a otras provincias del Ecuador?",
     answer:
-      "Coordinamos despachos a nivel nacional desde Pedernales y Quito mediante transporte interprovincial y servicios logísticos autorizados. Consulta el tiempo de entrega estimado y el costo de flete según tu ciudad de destino y disponibilidad por WhatsApp.",
+      "Despachamos diariamente desde LíderPro Pedernales hacia las 24 provincias del Ecuador en menos de 48 horas mediante transporte interprovincial y couriers autorizados. Consulta el tiempo de entrega y costo de flete según tu ciudad por WhatsApp.",
   },
   {
     question: "¿Qué garantía tienen las baterías y repuestos vendidos en LiderPro?",
@@ -30,9 +30,9 @@ const FAQS: FAQItem[] = [
       "Nuestras baterías cuentan con respaldo técnico y garantía de fábrica según la marca y modelo, sujeta a diagnóstico del sistema eléctrico. Los lubricantes y filtros son productos originales de grado técnico con respaldo de lote.",
   },
   {
-    question: "¿Puedo retirar mi compra en el local de Pedernales o Quito?",
+    question: "¿Puedo retirar mi compra en el local de Pedernales?",
     answer:
-      "Sí, puedes coordinar el retiro presencial de tu producto directamente por WhatsApp con uno de nuestros asesores para tenerlo listo a tu llegada.",
+      "Sí, puedes retirar tu compra directamente en nuestra sede de Pedernales o solicitar envío a domicilio dentro del cantón (instalación de baterías gratis a domicilio en Pedernales) o encomienda a todo el Ecuador en <48h.",
   },
   {
     question: "¿Atienden a talleres mecánicos o flotas de transporte?",

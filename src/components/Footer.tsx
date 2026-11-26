@@ -159,8 +159,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/sucursales" className="hover:text-[#FFC500] transition-colors">
-                  Enlace Logístico Sierra — Quito
+                <Link href="/envios" className="hover:text-[#FFC500] transition-colors">
+                  Envíos a Todo el Ecuador (&lt;48h)
                 </Link>
               </li>
               <li>

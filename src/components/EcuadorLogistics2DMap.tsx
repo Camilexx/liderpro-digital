@@ -24,7 +24,7 @@ import {
 type RegionFilter = "todas" | RegionType;
 
 export default function EcuadorLogistics2DMap() {
-  const [selectedCity, setSelectedCity] = useState<MapCityNode>(DESTINATION_NODES[0]); // Default: Quito
+  const [selectedCity, setSelectedCity] = useState<MapCityNode>(DESTINATION_NODES[0]); // Default: Santo Domingo
   const [activeRegion, setActiveRegion] = useState<RegionFilter>("todas");
   const [hoveredNode, setHoveredNode] = useState<MapCityNode | null>(null);
   const [hoveredProvince, setHoveredProvince] = useState<ProvincePath | null>(null);
@@ -179,7 +179,7 @@ export default function EcuadorLogistics2DMap() {
               </text>
             </g>
 
-            {/* Línea Equinoccial 0° 0' 0" (Latitud Cero - Pasa por Pedernales y norte de Quito) */}
+            {/* Línea Equinoccial 0° 0' 0" (Latitud Cero - Pasa por Pedernales) */}
             <g opacity="0.45">
               <line
                 x1="20"

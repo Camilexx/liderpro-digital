@@ -4,22 +4,22 @@ import { MapPin, ShieldCheck } from "lucide-react";
 import { BUSINESS_CONFIG } from "@/data/businessConfig";
 
 export const metadata: Metadata = {
-  title: "Puntos de Atención en Pedernales y Quito | Sede Matriz y Cobertura",
+  title: "Sede Única en Pedernales y Envíos a Todo el Ecuador (<48h) | LiderPro",
   description:
-    "Presencia física en Pedernales (Manabí) y Quito (Pichincha). Atención directa en Bodega Matriz, retiro de repuestos y logística de despacho nacional a las 24 provincias.",
+    "Atención presencial en nuestra sede única en Pedernales (Manabí) con instalación gratuita de baterías a domicilio en Pedernales y envíos a todo el Ecuador en menos de 48h.",
   keywords: [
     "liderpro pedernales direccion",
     "repuestos automotrices pedernales manabi",
-    "baterias y lubricantes quito pedernales",
+    "baterias y lubricantes pedernales envios ecuador",
   ],
   alternates: {
     canonical: "/sucursales",
   },
   openGraph: {
-    title: "Sede Matriz Pedernales y Cobertura Nacional — LiderPro Ecuador",
+    title: "Sede Única Pedernales y Envíos Nacionales <48h — LiderPro Ecuador",
     description:
-      "Bodega Matriz y Centro de Despacho en Pedernales (Manabí) y atención directa a nivel nacional.",
-    url: "https://liderpro-digital.vercel.app/sucursales",
+      "Bodega Matriz y Centro de Despacho en Pedernales (Manabí) con envíos a todo el Ecuador en menos de 48h.",
+    url: "https://www.liderpropedernales.com/sucursales",
     type: "website",
   },
 };
@@ -32,13 +32,13 @@ export default function BranchesPage() {
       <div className="bg-white p-6 sm:p-10 rounded-3xl border border-slate-200 shadow-soft text-center max-w-3xl mx-auto space-y-3">
         <div className="inline-flex items-center gap-2 px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-bold uppercase tracking-wider">
           <MapPin className="w-3.5 h-3.5" />
-          Presencia Física y Puntos de Retiro
+          Sede Única Pedernales & Cobertura Nacional
         </div>
         <h1 className="text-2xl sm:text-4xl font-black text-brand-dark tracking-tight">
-          Nuestros Puntos de Atención: Pedernales & Quito
+          LíderPro Pedernales: Atención Local y Envíos a Todo el Ecuador (&lt;48h)
         </h1>
         <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-          Para brindarte seguridad total y agilidad de entrega, combinamos nuestra base estratégica en Pedernales (Manabí) con la cobertura de la red en Quito (Pichincha).
+          Operamos desde nuestra sede única en Pedernales (Manabí) con instalación gratuita de baterías a domicilio en el cantón y envíos diarios a todo el Ecuador en menos de 48 horas.
         </p>
       </div>
 

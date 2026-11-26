@@ -54,21 +54,6 @@ export const HUB_NODE: MapCityNode = {
 
 export const DESTINATION_NODES: MapCityNode[] = [
   {
-    id: "quito",
-    name: "Quito",
-    province: "Pichincha",
-    region: "sierra",
-    x: 435.0,
-    y: 198.0,
-    labelDx: 10,
-    labelDy: -4,
-    labelAnchor: "start",
-    transitTime: "24h",
-    transportType: "Courier & Encomienda Directa",
-    popularProducts: "Lubricantes sintéticos Mannol/Motul, baterías Bosch, filtros",
-    isHub: false
-  },
-  {
     id: "santo-domingo",
     name: "Santo Domingo",
     province: "Sto. Domingo",

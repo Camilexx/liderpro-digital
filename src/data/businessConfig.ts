@@ -117,8 +117,7 @@ export function getConfiguredBankTransferDetails(): string {
 
 export const BUSINESS_CONFIG: BusinessConfig = {
   name: "LiderPro",
-  // TEMPORARY: Meta Business Verification — remove/revert after approval
-  legalName: "MOSQUERA ROBLES ADRIAN RODOLFO",
+  legalName: "LíderPro Pedernales",
   slogan: "Distribuidor Autorizado Multimarca desde Pedernales para Todo el Ecuador.",
   heroHeadline: "Distribuidor Autorizado Multimarca para Tu Vehículo y Flota.",
   heroSubtitle:

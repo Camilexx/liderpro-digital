@@ -54,7 +54,7 @@ export default function PrivacidadPage() {
               1. Responsable del Tratamiento de los Datos
             </h2>
             <p>
-              El responsable del tratamiento de los datos personales recopilados es <strong>LiderPro Ecuador</strong> (Razón Social / Titular Legal: <strong>{BUSINESS_CONFIG.legalName}</strong>), con domicilio principal y Hub de Operaciones en la ciudad de Pedernales, Provincia de Manabí, República del Ecuador.
+              El responsable del tratamiento de los datos personales recopilados es <strong>LíderPro Pedernales</strong>, con domicilio principal y Hub de Operaciones en la ciudad de Pedernales, Provincia de Manabí, República del Ecuador.
             </p>
           </div>
 

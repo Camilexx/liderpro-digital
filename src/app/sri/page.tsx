@@ -96,12 +96,8 @@ export default function SriPage() {
 
             <div className="space-y-4 text-xs border-t border-slate-100 pt-4">
               <div>
-                <span className="text-slate-400 block font-medium">Nombre Comercial:</span>
-                <span className="text-slate-900 font-bold text-sm">LiderPro Ecuador</span>
-              </div>
-              <div>
-                <span className="text-slate-400 block font-medium">Razón Social / Titular Legal:</span>
-                <span className="text-slate-900 font-bold text-sm">{BUSINESS_CONFIG.legalName}</span>
+                <span className="text-slate-400 block font-medium">Nombre Comercial / Emisor:</span>
+                <span className="text-slate-900 font-bold text-sm">LíderPro Pedernales</span>
               </div>
               <div>
                 <span className="text-slate-400 block font-medium">Actividad Económica:</span>

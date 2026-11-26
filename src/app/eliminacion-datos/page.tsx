@@ -33,7 +33,7 @@ export default function EliminacionDatosPage() {
             Instrucciones para Eliminación de Datos de Usuario
           </h1>
           <p className="text-sm text-slate-300 leading-relaxed">
-            En <strong>LiderPro Pedernales</strong> ({BUSINESS_CONFIG.legalName}) garantizamos tu derecho a solicitar
+            En <strong>LíderPro Pedernales</strong> garantizamos tu derecho a solicitar
             la supresión de tus datos personales recopilados mediante WhatsApp Business, Instagram, Facebook Messenger o
             nuestro portal web.
           </p>

@@ -40,7 +40,7 @@ export const FAQS_DATA: FAQItem[] = [
     categoryLabel: "Pagos y Facturación",
     question: "¿Cuáles son las formas de pago aceptadas?",
     answer:
-      "Aceptamos efectivo en Pedernales (contra entrega o retiro en tienda) y transferencia a nuestra única cuenta autorizada en Banco Pichincha (Cuenta de Ahorros 2216090525, C.I. 1308068814, Titular: ADRIAN MOSQUERA). También recibimos transferencias interbancarias únicamente desde bancos con convenio directo hacia Banco Pichincha; todo pedido por transferencia se despacha o autoriza para retiro únicamente tras verificar el comprobante completo.",
+      "Aceptamos efectivo en Pedernales (contra entrega o retiro en tienda) y transferencia bancaria oficial de LíderPro Pedernales (los datos exactos de transferencia se entregan de forma privada por WhatsApp al confirmar tu pedido). También recibimos transferencias interbancarias únicamente desde bancos con convenio directo; todo pedido por transferencia se despacha o autoriza para retiro únicamente tras verificar el comprobante completo.",
   },
   {
     id: "pago-2",

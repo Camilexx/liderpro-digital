@@ -87,6 +87,50 @@ async function sendMetaWhatsAppReply(
   });
 }
 
+async function sendWhatsAppTypingIndicator(
+  phoneNumberId: string,
+  messageId: string | undefined,
+  token: string
+): Promise<void> {
+  if (!token || !phoneNumberId || !messageId) return;
+  try {
+    await postMetaGraph(`${phoneNumberId}/messages`, token, {
+      messaging_product: "whatsapp",
+      status: "read",
+      message_id: messageId,
+      typing_indicator: { type: "text" },
+    });
+  } catch (err) {
+    console.warn(
+      "[MiloWebhook] typing_indicator_error",
+      err instanceof Error ? err.message : String(err)
+    );
+  }
+}
+
+async function withWhatsAppTypingIndicator<T>(
+  phoneNumberId: string,
+  messageId: string | undefined,
+  token: string,
+  work: () => Promise<T>
+): Promise<T> {
+  if (messageId && token && phoneNumberId) {
+    void sendWhatsAppTypingIndicator(phoneNumberId, messageId, token);
+  }
+  const intervalId =
+    messageId && token && phoneNumberId
+      ? setInterval(() => {
+          void sendWhatsAppTypingIndicator(phoneNumberId, messageId, token);
+        }, 10000)
+      : null;
+
+  try {
+    return await work();
+  } finally {
+    if (intervalId) clearInterval(intervalId);
+  }
+}
+
 function buildPublicCommentAck(channel: "Instagram" | "Facebook"): string {
   return (
     `¡Hola! Gracias por escribir a LíderPro Pedernales 🚗⚡ ` +
@@ -324,21 +368,23 @@ export async function POST(req: NextRequest) {
             if (!(await claimWebhookMessageId(dedupKey))) continue;
 
             queuedJobs.push(async () => {
-              const hermes = await generateHermesReply(textBody, [], {
-                sessionId: `wa:${from}`,
-                channel: "whatsapp",
-                customerName: contactName,
-                customerPhone: from,
-                timeoutMs: 18000,
-              });
-              const sendRes = await sendMetaWhatsAppReply(targetPhoneId, from, hermes.reply);
-              console.log("[MiloWebhook] wa_reply_result", {
-                targetPhoneId,
-                toSuffix: from.slice(-4),
-                ok: sendRes.ok,
-                status: sendRes.status,
-                model: hermes.model,
-                usedFallback: hermes.usedFallback,
+              await withWhatsAppTypingIndicator(targetPhoneId, msg.id, waToken, async () => {
+                const hermes = await generateHermesReply(textBody, [], {
+                  sessionId: `wa:${from}`,
+                  channel: "whatsapp",
+                  customerName: contactName,
+                  customerPhone: from,
+                  timeoutMs: 18000,
+                });
+                const sendRes = await sendMetaWhatsAppReply(targetPhoneId, from, hermes.reply);
+                console.log("[MiloWebhook] wa_reply_result", {
+                  targetPhoneId,
+                  toSuffix: from.slice(-4),
+                  ok: sendRes.ok,
+                  status: sendRes.status,
+                  model: hermes.model,
+                  usedFallback: hermes.usedFallback,
+                });
               });
             });
             continue;
@@ -351,27 +397,29 @@ export async function POST(req: NextRequest) {
             if (!(await claimWebhookMessageId(dedupKey))) continue;
 
             queuedJobs.push(async () => {
-              let replyText = AUDIO_FALLBACK_REPLY_ES;
-              if (audioId && waToken && isAudioTranscriptionConfigured()) {
-                const dl = await downloadMetaWhatsAppMedia(audioId, waToken);
-                if (dl.ok && dl.buffer) {
-                  const tr = await transcribeAudioBuffer({
-                    buffer: dl.buffer,
-                    mimeType: dl.mimeType || audioMime,
-                  });
-                  if (tr.ok && tr.text) {
-                    const hermes = await generateHermesReply(tr.text, [], {
-                      sessionId: `wa:${from}`,
-                      channel: "whatsapp",
-                      customerName: contactName,
-                      customerPhone: from,
-                      timeoutMs: 18000,
+              await withWhatsAppTypingIndicator(targetPhoneId, msg.id, waToken, async () => {
+                let replyText = AUDIO_FALLBACK_REPLY_ES;
+                if (audioId && waToken && isAudioTranscriptionConfigured()) {
+                  const dl = await downloadMetaWhatsAppMedia(audioId, waToken);
+                  if (dl.ok && dl.buffer) {
+                    const tr = await transcribeAudioBuffer({
+                      buffer: dl.buffer,
+                      mimeType: dl.mimeType || audioMime,
                     });
-                    replyText = hermes.reply;
+                    if (tr.ok && tr.text) {
+                      const hermes = await generateHermesReply(tr.text, [], {
+                        sessionId: `wa:${from}`,
+                        channel: "whatsapp",
+                        customerName: contactName,
+                        customerPhone: from,
+                        timeoutMs: 18000,
+                      });
+                      replyText = hermes.reply;
+                    }
                   }
                 }
-              }
-              await sendMetaWhatsAppReply(targetPhoneId, from, replyText);
+                await sendMetaWhatsAppReply(targetPhoneId, from, replyText);
+              });
             });
             continue;
           }
@@ -384,14 +432,16 @@ export async function POST(req: NextRequest) {
             if (!(await claimWebhookMessageId(dedupKey))) continue;
 
             queuedJobs.push(async () => {
-              const receiptRes = await handleIncomingPaymentReceipt({
-                sessionId: `wa:${from}`,
-                channel: "whatsapp",
-                mediaId,
-                filename,
-                caption,
+              await withWhatsAppTypingIndicator(targetPhoneId, msg.id, waToken, async () => {
+                const receiptRes = await handleIncomingPaymentReceipt({
+                  sessionId: `wa:${from}`,
+                  channel: "whatsapp",
+                  mediaId,
+                  filename,
+                  caption,
+                });
+                await sendMetaWhatsAppReply(targetPhoneId, from, receiptRes.reply);
               });
-              await sendMetaWhatsAppReply(targetPhoneId, from, receiptRes.reply);
             });
           }
         }

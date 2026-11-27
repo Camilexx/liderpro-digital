@@ -182,6 +182,7 @@ interface MetaChangeItem {
       };
       button?: { text?: string; payload?: string };
       referral?: {
+        ad_id?: string;
         source_url?: string;
         source_id?: string;
         source_type?: string;
@@ -219,19 +220,32 @@ function extractInboundText(msg: InboundWhatsAppMessage): string {
 }
 
 function extractAdAttribution(msg: InboundWhatsAppMessage, inboundText: string): AdAttribution | null {
-  const adId = msg.referral?.source_id?.trim() || null;
+  const adId = msg.referral?.ad_id?.trim() || msg.referral?.source_id?.trim() || null;
   const ctwaClid = msg.referral?.ctwa_clid?.trim() || null;
   const adHeadline = msg.referral?.headline?.trim() || null;
+  const adBody = msg.referral?.body?.trim() || null;
   const adSourceUrl = msg.referral?.source_url?.trim() || null;
-  const ctx = resolveAdContext(inboundText, adId, null);
-  if (!adId && !ctwaClid && !ctx && !adHeadline) return null;
-  return {
-    adId: adId ?? ctx?.adIds[0] ?? null,
-    adTag: ctx?.adTag ?? null,
-    ctwaClid,
-    adHeadline,
-    adSourceUrl,
-  };
+  const ctx = resolveAdContext(inboundText, adId, null, adHeadline, adBody);
+  if (adId || ctwaClid || ctx || adHeadline || adBody) {
+    return {
+      adId: adId ?? ctx?.adIds[0] ?? null,
+      adTag: ctx?.adTag ?? null,
+      ctwaClid,
+      adHeadline,
+      adSourceUrl,
+    };
+  }
+  const kwMatch = (inboundText || "").match(/\b(COSTA|REEL|PEDERNALES)\b/i);
+  if (kwMatch) {
+    return {
+      adId: null,
+      adTag: `ORG-${kwMatch[1].toUpperCase()}`,
+      ctwaClid: null,
+      adHeadline: null,
+      adSourceUrl: null,
+    };
+  }
+  return null;
 }
 
 interface MetaWebhookEntry {

@@ -175,13 +175,17 @@ export const AD_CONTEXT_MAP: AdContextSpec[] = [
 export function resolveAdContext(
   text: string,
   adId?: string | null,
-  persistedAdTag?: string | null
+  persistedAdTag?: string | null,
+  referralHeadline?: string | null,
+  referralBody?: string | null
 ): AdContextSpec | null {
-  const tagMatch = (text || "").match(/\[(AD-[AB]\d{2})\]/i);
-  if (tagMatch) {
-    const tag = tagMatch[1].toUpperCase();
-    const byTag = AD_CONTEXT_MAP.find((a) => a.adTag === tag);
-    if (byTag) return byTag;
+  for (const candidate of [text || "", referralBody || "", referralHeadline || ""]) {
+    const tagMatch = candidate.match(/\[(AD-[AB]\d{2})\]/i);
+    if (tagMatch) {
+      const tag = tagMatch[1].toUpperCase();
+      const byTag = AD_CONTEXT_MAP.find((a) => a.adTag === tag);
+      if (byTag) return byTag;
+    }
   }
   const cleanId = (adId || "").trim();
   if (cleanId) {

@@ -51,7 +51,7 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
     openGraph: {
       title,
       description,
-      url: `https://liderpro-digital.vercel.app/productos/${product.slug}`,
+      url: `https://www.liderpropedernales.com/productos/${product.slug}`,
       siteName: "LiderPro Ecuador",
       locale: "es_EC",
       type: "website",

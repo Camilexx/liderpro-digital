@@ -25,6 +25,9 @@ export const metadata: Metadata = {
     canonical: "./",
   },
   verification: {
+    ...(process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
+      ? { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION }
+      : {}),
     other: {
       "facebook-domain-verification": META_DOMAIN_VERIFICATION,
     },
@@ -42,23 +45,18 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png?v=2",
   },
   description:
-    "Distribuidor Autorizado Multimarca de lubricantes, baterías, filtros y químicos automotrices e industriales (Baterías Ecuador, Bosch, Mannol, Aroil, Mobil, Motul, Valvoline, Amalie, Advance, ATE, NGK, Denso, Bardahl, Abro). Despacho diario desde Bodega Matriz en Pedernales (Manabí) a las 24 provincias del Ecuador con facturación electrónica SRI.",
+    "Lubricantes (5W-30, 5W-40, 10W-40, 20W-50), baterías a domicilio en Pedernales, filtros y repuestos automotrices (Baterías Ecuador, Bosch, Mannol, Mobil, Amalie, Advance). Despacho diario desde Pedernales (Manabí) a todo Ecuador con factura electrónica SRI.",
   keywords: [
-    "baterias ecuador",
+    "baterias a domicilio pedernales",
+    "baterias ecuador pedernales",
     "baterias bosch ecuador",
-    "lubricantes mannol ecuador",
-    "lubricantes aroil ecuador",
-    "motul ecuador",
+    "lubricantes mannol 5w-30 5w-40 10w-40 20w-50 ecuador",
+    "aceite 20w-50 5w-30 5w-40 pedernales",
     "mobil delvac pedernales",
-    "valvoline ecuador",
-    "amalie motor oil ecuador",
-    "filtros advance ecuador",
-    "bujias ngk denso ecuador",
-    "liquido de frenos ate dot 4",
-    "aditivos bardahl abro ecuador",
-    "repuestos automotrices ecuador",
+    "filtros advance repuestos automotrices ecuador",
+    "cambio de aceite pedernales manabi",
+    "canecas 20l camaroneras flotas ecuador",
     "liderpro pedernales manabi",
-    "baterias camaroneras ecuador",
   ],
   authors: [{ name: BUSINESS_CONFIG.legalName }, { name: "LiderPro Digital" }],
   openGraph: {
@@ -171,13 +169,14 @@ import { WhatsAppSelectorProvider } from "@/context/WhatsAppSelectorContext";
 import QuoteBasketDrawer from "@/components/QuoteBasketDrawer";
 import WhatsAppSelectorModal from "@/components/WhatsAppSelectorModal";
 import MobileBottomBar from "@/components/MobileBottomBar";
+import MetaPixelEvents from "@/components/MetaPixelEvents";
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const metaPixelId = process.env.NEXT_PUBLIC_META_PIXEL_ID;
+  const metaPixelId = process.env.NEXT_PUBLIC_META_PIXEL_ID || "1841181450502602";
   const gaId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || process.env.NEXT_PUBLIC_GA_ID;
 
   return (
@@ -252,6 +251,7 @@ export default function RootLayout({
             <WhatsAppSelectorModal />
             <FloatingWhatsApp />
             <MobileBottomBar />
+            <MetaPixelEvents />
           </QuoteBasketProvider>
         </WhatsAppSelectorProvider>
       </body>

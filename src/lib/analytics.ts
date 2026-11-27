@@ -59,9 +59,50 @@ export function trackEvent(eventName: AnalyticsEventName, payload: AnalyticsPayl
     });
   }
 
-  // Meta Pixel safe trackCustom hook
+  // Meta Pixel safe standard + custom events with deterministic eventID for CAPI dedup
   const fb = window as unknown as { fbq?: (...args: unknown[]) => void };
   if (typeof fb.fbq === "function") {
-    fb.fbq("trackCustom", eventName, payload);
+    const eventId = `lp_${eventName}_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`;
+    fb.fbq("trackCustom", eventName, payload, { eventID: eventId });
+
+    if (eventName === "product_view") {
+      fb.fbq(
+        "track",
+        "ViewContent",
+        {
+          content_name: String(payload.item || payload.content_name || "Producto LiderPro"),
+          content_category: String(payload.category || payload.content_category || "Automotriz"),
+          content_ids: payload.sku ? [String(payload.sku)] : undefined,
+          value: typeof payload.price === "number" ? payload.price : undefined,
+          currency: "USD",
+        },
+        { eventID: `${eventId}_vc` }
+      );
+    }
+
+    const contactLeadEvents = new Set<AnalyticsEventName>([
+      "whatsapp_click",
+      "whatsapp_product",
+      "whatsapp_vehicle",
+      "whatsapp_emergency",
+      "whatsapp_product_detail",
+      "whatsapp_mannol_combo",
+      "shipping_whatsapp_click",
+      "shipping_whatsapp_calc_click",
+      "b2b_whatsapp_click",
+      "basket_whatsapp_quote",
+      "quote_request",
+      "lead_created",
+      "call_click",
+    ]);
+    if (contactLeadEvents.has(eventName)) {
+      const stdPayload = {
+        content_name: String(payload.item || payload.location || eventName),
+        content_category: String(payload.line || payload.category || "WhatsApp_LiderPro"),
+        currency: "USD",
+      };
+      fb.fbq("track", "Contact", stdPayload, { eventID: `${eventId}_ct` });
+      fb.fbq("track", "Lead", stdPayload, { eventID: `${eventId}_ld` });
+    }
   }
 }

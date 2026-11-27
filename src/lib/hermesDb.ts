@@ -23,7 +23,16 @@ export type PaymentStatus =
   | "verified"
   | "rejected";
 export type SalesStage = "descubrimiento" | "cotizacion" | "objecion" | "cierre" | "pedido_confirmado";
+export type FunnelStage = "chat_iniciado" | "producto_cotizado" | "objecion" | "pedido_confirmado";
 export type EscalationUrgency = "alta" | "media" | "baja";
+
+export interface AdAttribution {
+  adId?: string | null;
+  adTag?: string | null;
+  ctwaClid?: string | null;
+  adHeadline?: string | null;
+  adSourceUrl?: string | null;
+}
 
 export interface CartItem {
   sku: string;
@@ -121,6 +130,13 @@ export interface CustomerRecord {
   customerType: CustomerType;
   lastQuote: LastQuoteSnapshot | null;
   commercialState: CommercialState | null;
+  adId?: string | null;
+  adTag?: string | null;
+  ctwaClid?: string | null;
+  adHeadline?: string | null;
+  funnelStage?: FunnelStage;
+  lastFollowupAt?: string | null;
+  followupCount?: number;
   needsHuman?: boolean;
   escalationReason?: string | null;
   escalationSummary?: string | null;
@@ -139,6 +155,9 @@ export interface StoredMessageRecord {
   quotedTotalUsd: number | null;
   latencyMs: number | null;
   intentTag: string | null;
+  adId?: string | null;
+  adTag?: string | null;
+  ctwaClid?: string | null;
   qaFlag: QaFlag | null;
   qaNote: string | null;
   createdAt: string;
@@ -163,6 +182,9 @@ export interface OrderRecord {
   paymentStatus: PaymentStatus;
   receiptMediaId: string | null;
   receiptReference: string | null;
+  adId?: string | null;
+  adTag?: string | null;
+  ctwaClid?: string | null;
   receiptReceivedAt: string | null;
   paymentVerifiedAt: string | null;
   dispatchNotifiedAt: string | null;
@@ -177,6 +199,11 @@ export interface UpsertCustomerInput {
   customerType?: CustomerType;
   lastQuote?: LastQuoteSnapshot | null;
   commercialState?: CommercialState | null;
+  adId?: string | null;
+  adTag?: string | null;
+  ctwaClid?: string | null;
+  adHeadline?: string | null;
+  funnelStage?: FunnelStage;
 }
 
 export interface InsertMessageInput {
@@ -188,6 +215,9 @@ export interface InsertMessageInput {
   quotedTotalUsd?: number | null;
   latencyMs?: number | null;
   intentTag?: string | null;
+  adId?: string | null;
+  adTag?: string | null;
+  ctwaClid?: string | null;
   qaFlag?: QaFlag | null;
   qaNote?: string | null;
 }
@@ -210,6 +240,9 @@ export interface InsertOrderInput {
   paymentStatus?: PaymentStatus;
   receiptMediaId?: string | null;
   receiptReference?: string | null;
+  adId?: string | null;
+  adTag?: string | null;
+  ctwaClid?: string | null;
 }
 
 export interface OutOfStockRankItem {
@@ -259,6 +292,10 @@ export interface AdminChatTurnItem {
   quotedTotalUsd: number | null;
   latencyMs: number | null;
   intentTag: string | null;
+  adId?: string | null;
+  adTag?: string | null;
+  ctwaClid?: string | null;
+  funnelStage?: FunnelStage;
   qaFlag: QaFlag | null;
   qaNote: string | null;
   createdAt: string;
@@ -280,6 +317,17 @@ interface FallbackStoreData {
   messages: StoredMessageRecord[];
   orders: OrderRecord[];
   vehicleSpecCache?: Record<string, VehicleSpecCacheEntry>;
+  conversionEvents?: Array<{
+    id: number;
+    sessionId: string;
+    eventName: FunnelStage;
+    adId: string | null;
+    adTag: string | null;
+    ctwaClid: string | null;
+    valueUsd: number | null;
+    skusUsed: string[];
+    createdAt: string;
+  }>;
   weeklyAudits: Array<{
     id: number;
     periodStart: string;
@@ -397,6 +445,13 @@ async function getPool(): Promise<Pool | null> {
         ALTER TABLE customers ADD COLUMN IF NOT EXISTS escalation_summary TEXT;
         ALTER TABLE customers ADD COLUMN IF NOT EXISTS escalation_urgency TEXT;
         ALTER TABLE customers ADD COLUMN IF NOT EXISTS escalated_at TIMESTAMPTZ;
+        ALTER TABLE customers ADD COLUMN IF NOT EXISTS ad_id TEXT;
+        ALTER TABLE customers ADD COLUMN IF NOT EXISTS ad_tag TEXT;
+        ALTER TABLE customers ADD COLUMN IF NOT EXISTS ctwa_clid TEXT;
+        ALTER TABLE customers ADD COLUMN IF NOT EXISTS ad_headline TEXT;
+        ALTER TABLE customers ADD COLUMN IF NOT EXISTS funnel_stage TEXT NOT NULL DEFAULT 'chat_iniciado';
+        ALTER TABLE customers ADD COLUMN IF NOT EXISTS last_followup_at TIMESTAMPTZ;
+        ALTER TABLE customers ADD COLUMN IF NOT EXISTS followup_count INTEGER NOT NULL DEFAULT 0;
 
         CREATE INDEX IF NOT EXISTS idx_hermes_customers_needs_human
           ON customers (needs_human, escalated_at DESC) WHERE needs_human = TRUE;
@@ -437,6 +492,10 @@ async function getPool(): Promise<Pool | null> {
           ON messages (session_id, created_at DESC);
         CREATE INDEX IF NOT EXISTS idx_hermes_messages_created_at
           ON messages (created_at DESC);
+        ALTER TABLE messages ADD COLUMN IF NOT EXISTS ad_id TEXT;
+        ALTER TABLE messages ADD COLUMN IF NOT EXISTS ad_tag TEXT;
+        ALTER TABLE messages ADD COLUMN IF NOT EXISTS ctwa_clid TEXT;
+
         CREATE INDEX IF NOT EXISTS idx_hermes_messages_qa_flag
           ON messages (qa_flag) WHERE qa_flag IS NOT NULL;
 
@@ -466,6 +525,27 @@ async function getPool(): Promise<Pool | null> {
         ALTER TABLE orders ADD COLUMN IF NOT EXISTS receipt_received_at TIMESTAMPTZ;
         ALTER TABLE orders ADD COLUMN IF NOT EXISTS payment_verified_at TIMESTAMPTZ;
         ALTER TABLE orders ADD COLUMN IF NOT EXISTS dispatch_notified_at TIMESTAMPTZ;
+        ALTER TABLE orders ADD COLUMN IF NOT EXISTS ad_id TEXT;
+        ALTER TABLE orders ADD COLUMN IF NOT EXISTS ad_tag TEXT;
+        ALTER TABLE orders ADD COLUMN IF NOT EXISTS ctwa_clid TEXT;
+
+        CREATE TABLE IF NOT EXISTS conversion_events (
+          id BIGSERIAL PRIMARY KEY,
+          session_id TEXT NOT NULL,
+          event_name TEXT NOT NULL,
+          ad_id TEXT,
+          ad_tag TEXT,
+          ctwa_clid TEXT,
+          value_usd NUMERIC(10, 2),
+          skus_json JSONB NOT NULL DEFAULT '[]'::jsonb,
+          meta_capi_sent BOOLEAN NOT NULL DEFAULT FALSE,
+          created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+        );
+
+        CREATE INDEX IF NOT EXISTS idx_hermes_conv_events_ad_event
+          ON conversion_events (ad_id, event_name, created_at DESC);
+        CREATE INDEX IF NOT EXISTS idx_hermes_conv_events_session
+          ON conversion_events (session_id, created_at DESC);
 
         CREATE INDEX IF NOT EXISTS idx_hermes_orders_status_created
           ON orders (status, created_at DESC);
@@ -507,6 +587,13 @@ function mapPgCustomerRow(row: Record<string, unknown>): CustomerRecord {
     customerType: (row.customer_type as CustomerType) || "particular",
     lastQuote: (row.last_quote as LastQuoteSnapshot | null) ?? null,
     commercialState: (row.commercial_state as CommercialState | null) ?? null,
+    adId: typeof row.ad_id === "string" ? row.ad_id : null,
+    adTag: typeof row.ad_tag === "string" ? row.ad_tag : null,
+    ctwaClid: typeof row.ctwa_clid === "string" ? row.ctwa_clid : null,
+    adHeadline: typeof row.ad_headline === "string" ? row.ad_headline : null,
+    funnelStage: (typeof row.funnel_stage === "string" ? row.funnel_stage : "chat_iniciado") as FunnelStage,
+    lastFollowupAt: row.last_followup_at ? new Date(String(row.last_followup_at)).toISOString() : null,
+    followupCount: row.followup_count !== null && row.followup_count !== undefined ? Number(row.followup_count) : 0,
     needsHuman: Boolean(row.needs_human),
     escalationReason: typeof row.escalation_reason === "string" ? row.escalation_reason : null,
     escalationSummary: typeof row.escalation_summary === "string" ? row.escalation_summary : null,
@@ -532,6 +619,9 @@ function mapPgMessageRow(row: Record<string, unknown>): StoredMessageRecord {
     latencyMs:
       row.latency_ms !== null && row.latency_ms !== undefined ? Number(row.latency_ms) : null,
     intentTag: typeof row.intent_tag === "string" ? row.intent_tag : null,
+    adId: typeof row.ad_id === "string" ? row.ad_id : null,
+    adTag: typeof row.ad_tag === "string" ? row.ad_tag : null,
+    ctwaClid: typeof row.ctwa_clid === "string" ? row.ctwa_clid : null,
     qaFlag: row.qa_flag === "good" || row.qa_flag === "fix" ? row.qa_flag : null,
     qaNote: typeof row.qa_note === "string" ? row.qa_note : null,
     createdAt: row.created_at ? new Date(String(row.created_at)).toISOString() : new Date().toISOString(),
@@ -541,6 +631,7 @@ function mapPgMessageRow(row: Record<string, unknown>): StoredMessageRecord {
 const ORDER_SELECT_COLS = `id, session_id, customer_name, phone, vehicle, items_json,
   total_usd, delivery_address, payment_method, status,
   payment_status, receipt_media_id, receipt_reference,
+  ad_id, ad_tag, ctwa_clid,
   receipt_received_at, payment_verified_at, dispatch_notified_at, created_at`;
 
 function mapPgOrderRow(row: Record<string, unknown>): OrderRecord {
@@ -587,6 +678,9 @@ function mapPgOrderRow(row: Record<string, unknown>): OrderRecord {
     paymentStatus,
     receiptMediaId: typeof row.receipt_media_id === "string" ? row.receipt_media_id : null,
     receiptReference: typeof row.receipt_reference === "string" ? row.receipt_reference : null,
+    adId: typeof row.ad_id === "string" ? row.ad_id : null,
+    adTag: typeof row.ad_tag === "string" ? row.ad_tag : null,
+    ctwaClid: typeof row.ctwa_clid === "string" ? row.ctwa_clid : null,
     receiptReceivedAt: row.receipt_received_at ? new Date(String(row.receipt_received_at)).toISOString() : null,
     paymentVerifiedAt: row.payment_verified_at ? new Date(String(row.payment_verified_at)).toISOString() : null,
     dispatchNotifiedAt: row.dispatch_notified_at ? new Date(String(row.dispatch_notified_at)).toISOString() : null,
@@ -626,6 +720,7 @@ export async function getCustomer(phoneOrSession: string): Promise<CustomerRecor
     if (pool) {
       const { rows } = await pool.query<Record<string, unknown>>(
         `SELECT phone_or_session, name, active_vehicle, city, customer_type, last_quote, commercial_state,
+                ad_id, ad_tag, ctwa_clid, ad_headline, funnel_stage, last_followup_at, followup_count,
                 needs_human, escalation_reason, escalation_summary, escalation_urgency, escalated_at, updated_at
          FROM customers WHERE phone_or_session = $1 LIMIT 1`,
         [key]
@@ -657,10 +752,18 @@ export async function upsertCustomer(input: UpsertCustomerInput): Promise<Custom
       const nextLastQuote = input.lastQuote !== undefined ? input.lastQuote : existing?.lastQuote ?? null;
       const nextCommercialState =
         input.commercialState !== undefined ? input.commercialState : existing?.commercialState ?? null;
+      const nextAdId = input.adId !== undefined ? input.adId : existing?.adId ?? null;
+      const nextAdTag = input.adTag !== undefined ? input.adTag : existing?.adTag ?? null;
+      const nextCtwaClid = input.ctwaClid !== undefined ? input.ctwaClid : existing?.ctwaClid ?? null;
+      const nextAdHeadline = input.adHeadline !== undefined ? input.adHeadline : existing?.adHeadline ?? null;
+      const nextFunnelStage: FunnelStage = input.funnelStage || existing?.funnelStage || "chat_iniciado";
 
       const { rows } = await pool.query<Record<string, unknown>>(
-        `INSERT INTO customers (phone_or_session, name, active_vehicle, city, customer_type, last_quote, commercial_state, updated_at)
-         VALUES ($1, $2, $3::jsonb, $4, $5, $6::jsonb, $7::jsonb, NOW())
+        `INSERT INTO customers (
+           phone_or_session, name, active_vehicle, city, customer_type, last_quote, commercial_state,
+           ad_id, ad_tag, ctwa_clid, ad_headline, funnel_stage, updated_at
+         )
+         VALUES ($1, $2, $3::jsonb, $4, $5, $6::jsonb, $7::jsonb, $9, $10, $11, $12, $13, NOW())
          ON CONFLICT (phone_or_session) DO UPDATE SET
            name = COALESCE(EXCLUDED.name, customers.name),
            active_vehicle = COALESCE(EXCLUDED.active_vehicle, customers.active_vehicle),
@@ -668,8 +771,14 @@ export async function upsertCustomer(input: UpsertCustomerInput): Promise<Custom
            customer_type = COALESCE(EXCLUDED.customer_type, customers.customer_type),
            last_quote = CASE WHEN $8 THEN NULL ELSE COALESCE(EXCLUDED.last_quote, customers.last_quote) END,
            commercial_state = COALESCE(EXCLUDED.commercial_state, customers.commercial_state),
+           ad_id = COALESCE(EXCLUDED.ad_id, customers.ad_id),
+           ad_tag = COALESCE(EXCLUDED.ad_tag, customers.ad_tag),
+           ctwa_clid = COALESCE(EXCLUDED.ctwa_clid, customers.ctwa_clid),
+           ad_headline = COALESCE(EXCLUDED.ad_headline, customers.ad_headline),
+           funnel_stage = COALESCE(EXCLUDED.funnel_stage, customers.funnel_stage),
            updated_at = NOW()
-         RETURNING phone_or_session, name, active_vehicle, city, customer_type, last_quote, commercial_state, updated_at`,
+         RETURNING phone_or_session, name, active_vehicle, city, customer_type, last_quote, commercial_state,
+                   ad_id, ad_tag, ctwa_clid, ad_headline, funnel_stage, last_followup_at, followup_count, updated_at`,
         [
           key,
           nextName,
@@ -679,6 +788,11 @@ export async function upsertCustomer(input: UpsertCustomerInput): Promise<Custom
           nextLastQuote ? JSON.stringify(nextLastQuote) : null,
           nextCommercialState ? JSON.stringify(nextCommercialState) : null,
           clearLastQuote,
+          nextAdId,
+          nextAdTag,
+          nextCtwaClid,
+          nextAdHeadline,
+          nextFunnelStage,
         ]
       );
       if (rows.length > 0) return mapPgCustomerRow(rows[0]);
@@ -697,6 +811,13 @@ export async function upsertCustomer(input: UpsertCustomerInput): Promise<Custom
     customerType: input.customerType || prev?.customerType || "particular",
     lastQuote: input.lastQuote !== undefined ? input.lastQuote : prev?.lastQuote ?? null,
     commercialState: input.commercialState !== undefined ? input.commercialState : prev?.commercialState ?? null,
+    adId: input.adId !== undefined ? input.adId : prev?.adId ?? null,
+    adTag: input.adTag !== undefined ? input.adTag : prev?.adTag ?? null,
+    ctwaClid: input.ctwaClid !== undefined ? input.ctwaClid : prev?.ctwaClid ?? null,
+    adHeadline: input.adHeadline !== undefined ? input.adHeadline : prev?.adHeadline ?? null,
+    funnelStage: input.funnelStage || prev?.funnelStage || "chat_iniciado",
+    lastFollowupAt: prev?.lastFollowupAt ?? null,
+    followupCount: prev?.followupCount ?? 0,
     updatedAt: nowIso,
   };
   store.customers[key] = record;
@@ -713,7 +834,7 @@ export async function getRecentMessages(sessionId: string, limit = 30): Promise<
     if (pool) {
       const { rows } = await pool.query<Record<string, unknown>>(
         `SELECT id, session_id, channel, role, content, skus_used, quoted_total_usd,
-                latency_ms, intent_tag, qa_flag, qa_note, created_at
+                latency_ms, intent_tag, ad_id, ad_tag, ctwa_clid, qa_flag, qa_note, created_at
          FROM messages
          WHERE session_id = $1
          ORDER BY created_at DESC, id DESC
@@ -747,11 +868,11 @@ export async function insertMessage(input: InsertMessageInput): Promise<StoredMe
       const { rows } = await pool.query<Record<string, unknown>>(
         `INSERT INTO messages (
            session_id, channel, role, content, skus_used, quoted_total_usd,
-           latency_ms, intent_tag, qa_flag, qa_note, created_at
+           latency_ms, intent_tag, ad_id, ad_tag, ctwa_clid, qa_flag, qa_note, created_at
          )
-         VALUES ($1, $2, $3, $4, $5::jsonb, $6, $7, $8, $9, $10, NOW())
+         VALUES ($1, $2, $3, $4, $5::jsonb, $6, $7, $8, $9, $10, $11, $12, $13, NOW())
          RETURNING id, session_id, channel, role, content, skus_used, quoted_total_usd,
-                   latency_ms, intent_tag, qa_flag, qa_note, created_at`,
+                   latency_ms, intent_tag, ad_id, ad_tag, ctwa_clid, qa_flag, qa_note, created_at`,
         [
           input.sessionId.trim(),
           input.channel,
@@ -761,6 +882,9 @@ export async function insertMessage(input: InsertMessageInput): Promise<StoredMe
           total,
           latency,
           input.intentTag ?? null,
+          input.adId ?? null,
+          input.adTag ?? null,
+          input.ctwaClid ?? null,
           input.qaFlag ?? null,
           input.qaNote ?? null,
         ]
@@ -782,6 +906,9 @@ export async function insertMessage(input: InsertMessageInput): Promise<StoredMe
     quotedTotalUsd: total,
     latencyMs: latency,
     intentTag: input.intentTag ?? null,
+    adId: input.adId ?? null,
+    adTag: input.adTag ?? null,
+    ctwaClid: input.ctwaClid ?? null,
     qaFlag: input.qaFlag ?? null,
     qaNote: input.qaNote ?? null,
     createdAt: new Date().toISOString(),
@@ -843,9 +970,10 @@ export async function insertOrder(input: InsertOrderInput): Promise<{ order: Ord
         `INSERT INTO orders (
            session_id, customer_name, phone, vehicle, items_json,
            total_usd, delivery_address, payment_method, status,
-           payment_status, receipt_media_id, receipt_reference, created_at
+           payment_status, receipt_media_id, receipt_reference,
+           ad_id, ad_tag, ctwa_clid, created_at
          )
-         VALUES ($1, $2, $3, $4::jsonb, $5::jsonb, $6, $7, $8, $9, $10, $11, $12, NOW())
+         VALUES ($1, $2, $3, $4::jsonb, $5::jsonb, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, NOW())
          RETURNING ${ORDER_SELECT_COLS}`,
         [
           input.sessionId.trim(),
@@ -860,6 +988,9 @@ export async function insertOrder(input: InsertOrderInput): Promise<{ order: Ord
           paymentStatus,
           input.receiptMediaId ?? null,
           input.receiptReference ?? null,
+          input.adId ?? null,
+          input.adTag ?? null,
+          input.ctwaClid ?? null,
         ]
       );
       if (rows.length > 0) {
@@ -886,6 +1017,9 @@ export async function insertOrder(input: InsertOrderInput): Promise<{ order: Ord
       paymentStatus,
       receiptMediaId: input.receiptMediaId ?? null,
       receiptReference: input.receiptReference ?? null,
+      adId: input.adId ?? null,
+      adTag: input.adTag ?? null,
+      ctwaClid: input.ctwaClid ?? null,
       receiptReceivedAt: null,
       paymentVerifiedAt: null,
       dispatchNotifiedAt: null,
@@ -1332,7 +1466,7 @@ async function loadMessagesAndCustomersSince(
     if (pool) {
       const msgRes = await pool.query<Record<string, unknown>>(
         `SELECT id, session_id, channel, role, content, skus_used, quoted_total_usd,
-                latency_ms, intent_tag, qa_flag, qa_note, created_at
+                latency_ms, intent_tag, ad_id, ad_tag, ctwa_clid, qa_flag, qa_note, created_at
          FROM messages
          WHERE created_at >= $1
          ORDER BY created_at ASC, id ASC`,
@@ -1340,6 +1474,7 @@ async function loadMessagesAndCustomersSince(
       );
       const custRes = await pool.query<Record<string, unknown>>(
         `SELECT phone_or_session, name, active_vehicle, city, customer_type, last_quote, commercial_state,
+                ad_id, ad_tag, ctwa_clid, ad_headline, funnel_stage, last_followup_at, followup_count,
                 needs_human, escalation_reason, escalation_summary, escalation_urgency, escalated_at, updated_at
          FROM customers`
       );
@@ -1599,6 +1734,10 @@ export async function getAdminDashboardSnapshot(params: {
       quotedTotalUsd: m.quotedTotalUsd,
       latencyMs: m.latencyMs,
       intentTag: m.intentTag,
+      adId: m.adId ?? cust?.adId ?? null,
+      adTag: m.adTag ?? cust?.adTag ?? null,
+      ctwaClid: m.ctwaClid ?? cust?.ctwaClid ?? null,
+      funnelStage: cust?.funnelStage,
       qaFlag: m.qaFlag,
       qaNote: m.qaNote,
       createdAt: m.createdAt,
@@ -1857,4 +1996,116 @@ export async function claimWebhookMessageId(dedupKey: string): Promise<boolean> 
   }
 
   return true;
+}
+
+export interface ConversionEventInput {
+  sessionId: string;
+  eventName: FunnelStage;
+  adId?: string | null;
+  adTag?: string | null;
+  ctwaClid?: string | null;
+  valueUsd?: number | null;
+  skusUsed?: string[];
+}
+
+export interface PendingFollowupItem {
+  sessionId: string;
+  customerName: string | null;
+  activeVehicle: VehicleProfile | null;
+  adTag: string | null;
+  adId: string | null;
+  funnelStage: FunnelStage;
+  quotedTotalUsd: number | null;
+  updatedAt: string;
+}
+
+export async function recordConversionEvent(input: ConversionEventInput): Promise<void> {
+  const cleanSession = input.sessionId.trim();
+  if (!cleanSession) return;
+  const val =
+    typeof input.valueUsd === "number" && Number.isFinite(input.valueUsd)
+      ? Number(input.valueUsd.toFixed(2))
+      : null;
+  const skus = Array.isArray(input.skusUsed) ? input.skusUsed.slice(0, 12) : [];
+
+  try {
+    const pool = await getPool();
+    if (pool) {
+      await pool.query(
+        `INSERT INTO conversion_events (
+           session_id, event_name, ad_id, ad_tag, ctwa_clid, value_usd, skus_json, created_at
+         )
+         VALUES ($1, $2, $3, $4, $5, $6, $7::jsonb, NOW())`,
+        [cleanSession, input.eventName, input.adId ?? null, input.adTag ?? null, input.ctwaClid ?? null, val, JSON.stringify(skus)]
+      );
+      return;
+    }
+  } catch (err) {
+    console.warn("[HermesDB] recordConversionEvent fallback:", err instanceof Error ? err.message : String(err));
+  }
+
+  const store = loadFallbackStore();
+  if (!store.conversionEvents) store.conversionEvents = [];
+  store.conversionEvents.push({
+    id: store.conversionEvents.length + 1,
+    sessionId: cleanSession,
+    eventName: input.eventName,
+    adId: input.adId ?? null,
+    adTag: input.adTag ?? null,
+    ctwaClid: input.ctwaClid ?? null,
+    valueUsd: val,
+    skusUsed: skus,
+    createdAt: new Date().toISOString(),
+  });
+  if (store.conversionEvents.length > 2000) {
+    store.conversionEvents = store.conversionEvents.slice(-2000);
+  }
+  persistFallbackStore(store);
+}
+
+export async function listPending24hFollowups(
+  minAgeMinutes = 120,
+  maxAgeHours = 20
+): Promise<PendingFollowupItem[]> {
+  try {
+    const pool = await getPool();
+    if (pool) {
+      const { rows } = await pool.query<Record<string, unknown>>(
+        `SELECT c.phone_or_session, c.name, c.active_vehicle, c.ad_tag, c.ad_id, c.funnel_stage,
+                c.commercial_state, c.updated_at
+         FROM customers c
+         WHERE c.phone_or_session LIKE 'wa:%'
+           AND c.funnel_stage IN ('producto_cotizado', 'objecion')
+           AND COALESCE(c.followup_count, 0) = 0
+           AND c.updated_at <= NOW() - ($1::text || ' minutes')::interval
+           AND c.updated_at >= NOW() - ($2::text || ' hours')::interval
+           AND NOT EXISTS (
+             SELECT 1 FROM orders o
+             WHERE o.session_id = c.phone_or_session AND o.status <> 'cancelled'
+           )
+         ORDER BY c.updated_at DESC
+         LIMIT 50`,
+        [String(minAgeMinutes), String(maxAgeHours)]
+      );
+      return rows.map((r) => {
+        const cs = (r.commercial_state as CommercialState | null) ?? null;
+        const cartTotal = cs?.cartItems?.length
+          ? Number(cs.cartItems.reduce((acc, i) => acc + i.unitPriceIva * (i.qty || 1), 0).toFixed(2))
+          : null;
+        return {
+          sessionId: String(r.phone_or_session || ""),
+          customerName: typeof r.name === "string" ? r.name : null,
+          activeVehicle: (r.active_vehicle as VehicleProfile | null) ?? null,
+          adTag: typeof r.ad_tag === "string" ? r.ad_tag : null,
+          adId: typeof r.ad_id === "string" ? r.ad_id : null,
+          funnelStage: (typeof r.funnel_stage === "string" ? r.funnel_stage : "producto_cotizado") as FunnelStage,
+          quotedTotalUsd: cartTotal,
+          updatedAt: r.updated_at ? new Date(String(r.updated_at)).toISOString() : new Date().toISOString(),
+        };
+      });
+    }
+  } catch (err) {
+    console.warn("[HermesDB] listPending24hFollowups fallback:", err instanceof Error ? err.message : String(err));
+  }
+  return [];
 }

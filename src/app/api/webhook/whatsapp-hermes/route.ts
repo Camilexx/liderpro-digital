@@ -7,7 +7,8 @@ import {
   isAudioTranscriptionConfigured,
   transcribeAudioBuffer,
 } from "@/lib/audioTranscriber";
-import { claimWebhookMessageId } from "@/lib/hermesDb";
+import { resolveAdContext } from "@/lib/hermesCatalog";
+import { claimWebhookMessageId, type AdAttribution } from "@/lib/hermesDb";
 import { generateHermesReply } from "@/lib/hermesEngine";
 import { handleIncomingPaymentReceipt } from "@/lib/miloPayments";
 
@@ -174,11 +175,62 @@ interface MetaChangeItem {
       from?: string;
       type?: string;
       text?: { body?: string };
+      interactive?: {
+        type?: string;
+        button_reply?: { id?: string; title?: string };
+        list_reply?: { id?: string; title?: string; description?: string };
+      };
+      button?: { text?: string; payload?: string };
+      referral?: {
+        source_url?: string;
+        source_id?: string;
+        source_type?: string;
+        headline?: string;
+        body?: string;
+        ctwa_clid?: string;
+      };
       audio?: { id?: string; mime_type?: string };
       image?: { id?: string; mime_type?: string; caption?: string };
       document?: { id?: string; mime_type?: string; filename?: string; caption?: string };
     }>;
     contacts?: Array<{ wa_id?: string; profile?: { name?: string } }>;
+  };
+}
+
+type InboundWhatsAppMessage = NonNullable<NonNullable<MetaChangeItem["value"]>["messages"]>[number];
+
+function extractInboundText(msg: InboundWhatsAppMessage): string {
+  if (msg.type === "text" && msg.text?.body) {
+    return msg.text.body.trim();
+  }
+  if (msg.type === "interactive") {
+    return (
+      msg.interactive?.button_reply?.title ||
+      msg.interactive?.list_reply?.title ||
+      msg.interactive?.button_reply?.id ||
+      msg.interactive?.list_reply?.id ||
+      ""
+    ).trim();
+  }
+  if (msg.type === "button") {
+    return (msg.button?.text || msg.button?.payload || "").trim();
+  }
+  return "";
+}
+
+function extractAdAttribution(msg: InboundWhatsAppMessage, inboundText: string): AdAttribution | null {
+  const adId = msg.referral?.source_id?.trim() || null;
+  const ctwaClid = msg.referral?.ctwa_clid?.trim() || null;
+  const adHeadline = msg.referral?.headline?.trim() || null;
+  const adSourceUrl = msg.referral?.source_url?.trim() || null;
+  const ctx = resolveAdContext(inboundText, adId, null);
+  if (!adId && !ctwaClid && !ctx && !adHeadline) return null;
+  return {
+    adId: adId ?? ctx?.adIds[0] ?? null,
+    adTag: ctx?.adTag ?? null,
+    ctwaClid,
+    adHeadline,
+    adSourceUrl,
   };
 }
 
@@ -362,8 +414,10 @@ export async function POST(req: NextRequest) {
           const targetPhoneId = phoneId || META_CONFIG.phoneNumberId247;
           const contactName = contactNameByWaId.get(from) || null;
 
-          if (msg.type === "text" && msg.text?.body) {
-            const textBody = msg.text.body;
+          const textBody = extractInboundText(msg);
+          const adAttribution = extractAdAttribution(msg, textBody);
+
+          if (textBody) {
             const dedupKey = msg.id ? `wa:${msg.id}` : `wa_txt:${from}:${textBody.slice(0, 60)}`;
             if (!(await claimWebhookMessageId(dedupKey))) continue;
 
@@ -374,7 +428,8 @@ export async function POST(req: NextRequest) {
                   channel: "whatsapp",
                   customerName: contactName,
                   customerPhone: from,
-                  timeoutMs: 18000,
+                  adAttribution,
+                  timeoutMs: 11000,
                 });
                 const sendRes = await sendMetaWhatsAppReply(targetPhoneId, from, hermes.reply);
                 console.log("[MiloWebhook] wa_reply_result", {
@@ -412,7 +467,8 @@ export async function POST(req: NextRequest) {
                         channel: "whatsapp",
                         customerName: contactName,
                         customerPhone: from,
-                        timeoutMs: 18000,
+                        adAttribution,
+                        timeoutMs: 11000,
                       });
                       replyText = hermes.reply;
                     }

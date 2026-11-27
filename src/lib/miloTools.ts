@@ -22,6 +22,7 @@ import {
   getCachedVehicleSpec,
   insertOrder,
   setCachedVehicleSpec,
+  type AdAttribution,
   type CartItem,
   type CommercialState,
   type CustomerType,
@@ -45,6 +46,8 @@ export interface MiloToolExecutionContext {
   customerType: CustomerType;
   commercialState: CommercialState;
   observedPricesUsd: Set<number>;
+  primaryRecommendedPriceUsd: number | null;
+  adAttribution?: AdAttribution | null;
   matchedSkus: Set<string>;
   createdOrder: OrderRecord | null;
   escalatedToHuman: boolean;
@@ -505,6 +508,8 @@ function searchSingleQuery(
   consulta: string;
   enStock: boolean;
   requiereVehiculo?: boolean;
+  vehiculoYaResuelto?: boolean;
+  notaTecnica?: string;
   nota?: string;
   alertaLitraje?: string;
   litroAdicionalRecomendado?: CatalogCandidatePayload | null;
@@ -599,9 +604,20 @@ function searchSingleQuery(
       if (idx) pushCandidate(toCandidatePayload(idx));
     }
     const primary = candidates[0] || null;
+    if (primary) {
+      ctx.primaryRecommendedPriceUsd = primary.priceWithTradeIn ?? primary.priceIva;
+    }
+    const vehicleResolved = Boolean(ctx.activeVehicle?.make || ctx.activeVehicle?.model || ctx.activeVehicle?.unmappedLabel);
     return {
       consulta: rawQuery,
       enStock: candidates.length > 0,
+      vehiculoYaResuelto: vehicleResolved,
+      ...(vehicleResolved
+        ? {
+            notaTecnica:
+              "Grupo y opciones de batería ya resueltos para el vehículo del cliente. Cotiza directamente SIN volver a pedir grupo de batería y SIN confundir amperaje (ej. 55 Amp) con número de grupo (ej. Grupo 42).",
+          }
+        : {}),
       nota:
         "Descuentos oficiales vigentes sobre PVP con IVA: Baterías Ecuador 35% entregando usada / 30% sin usada; Bosch 25% entregando usada / 20% sin usada. Instalación + revisión de alternador 100% GRATIS a domicilio en Pedernales.",
       recomendacionPrincipal: primary,
@@ -638,6 +654,9 @@ function searchSingleQuery(
         : candidates[0]) ||
       candidates[0] ||
       null;
+    if (primary) {
+      ctx.primaryRecommendedPriceUsd = primary.priceIva;
+    }
 
     // VERIFICACIÓN DE LITRAJE > 4.0L (V4.1): detectar si el galón de 4L queda corto y ofrecer 1L extra exacto
     let alertaLitraje: string | undefined;
@@ -666,7 +685,7 @@ function searchSingleQuery(
       consulta: rawQuery,
       enStock: candidates.length > 0,
       nota:
-        "IMPORTANTE: Cada Combo MANNOL YA incluye el aceite + filtro de aceite Advance + Cockpit Care con esponja de regalo (NO cobres un filtro de aceite aparte si el cliente lleva un Combo MANNOL). Aclaración: vendemos el kit/productos completos (no hacemos mano de obra de taller mecánico).",
+        "Dato de catálogo: cada Combo MANNOL incluye aceite, filtro de aceite Advance y Cockpit Care con esponja de regalo (no requiere filtro de aceite adicional). Vendemos kits y productos completos; no realizamos mano de obra de taller mecánico.",
       ...(alertaLitraje ? { alertaLitraje, litroAdicionalRecomendado } : {}),
       recomendacionPrincipal: primary,
       candidatos: candidates,
@@ -694,6 +713,10 @@ function searchSingleQuery(
       primary;
   } else if (/flush|limpiar.*motor|lavado\s+interno/.test(expanded)) {
     primary = candidates.find((c) => c.sku.toUpperCase() === "LP-MAN-011") || primary;
+  }
+
+  if (primary && ctx.primaryRecommendedPriceUsd === null) {
+    ctx.primaryRecommendedPriceUsd = primary.priceIva;
   }
 
   return {
@@ -1226,6 +1249,9 @@ export async function executeMiloToolCall(
       paymentMethod: cleanPaymentLabel,
       status: orderStatus,
       paymentStatus,
+      adId: ctx.adAttribution?.adId ?? null,
+      adTag: ctx.adAttribution?.adTag ?? null,
+      ctwaClid: ctx.adAttribution?.ctwaClid ?? null,
     });
 
     ctx.customerName = nombre;

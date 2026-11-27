@@ -106,6 +106,96 @@ for (const item of CATALOG) {
 
 export const FREE_SHIPPING_THRESHOLD_USD = 35;
 
+export interface AdContextSpec {
+  adTag: string;
+  adIds: string[];
+  productLabel: string;
+  primarySku: string;
+  defaultCustomerType: CustomerType;
+  hintForMilo: string;
+}
+
+export const AD_CONTEXT_MAP: AdContextSpec[] = [
+  {
+    adTag: "AD-A10",
+    adIds: ["120255987814910368"],
+    productLabel: "Baterías Ecuador y Bosch a domicilio GRATIS en Pedernales",
+    primarySku: "03042-FE",
+    defaultCustomerType: "particular",
+    hintForMilo:
+      "El cliente viene del anuncio de Baterías a domicilio GRATIS en Pedernales. Si da marca/modelo/año cotiza de inmediato sin pedir grupo; si aún no da vehículo pregunta solo marca, modelo y año.",
+  },
+  {
+    adTag: "AD-A16",
+    adIds: ["120255987815050368"],
+    productLabel: "Combo MANNOL 5W-30/10W-40 + Filtro Advance + Regalo",
+    primarySku: "COMBO-MANNOL-1B",
+    defaultCustomerType: "particular",
+    hintForMilo:
+      "El cliente viene del anuncio de Combo MANNOL + Filtro Advance + Cockpit Care de regalo. Pide solo marca, modelo y año para darle la viscosidad exacta y el precio del combo.",
+  },
+  {
+    adTag: "AD-A01",
+    adIds: ["120255987815370368"],
+    productLabel: "Refrigerantes orgánicos MANNOL AF12+ / G12+ / G11",
+    primarySku: "012MN4012-5",
+    defaultCustomerType: "particular",
+    hintForMilo:
+      "El cliente viene del anuncio de Refrigerantes MANNOL para clima Costa. Cotiza refrigerante rojo/verde/azul según vehículo o color actual del radiador.",
+  },
+  {
+    adTag: "AD-B13",
+    adIds: ["120255987815660368"],
+    productLabel: "Kit 4x4 7 Litros MANNOL 15W-40 + Filtro + Regalo (<48h Ecuador)",
+    primarySku: "COMBO-MANNOL-2A",
+    defaultCustomerType: "particular",
+    hintForMilo:
+      "El cliente viene del anuncio del Kit 4x4 7 Litros MANNOL (COMBO-MANNOL-2A $69.50 c/IVA) con envío nacional <48h. Pide camioneta/año y ciudad para cotizar envío.",
+  },
+  {
+    adTag: "AD-B12",
+    adIds: ["120255987815710368"],
+    productLabel: "Canecas 20L MANNOL Talleres y Flotas (<48h Ecuador)",
+    primarySku: "COMBO-MANNOL-3A",
+    defaultCustomerType: "taller",
+    hintForMilo:
+      "El cliente viene del anuncio B2B de Canecas 20L para talleres y flotas (COMBO-MANNOL-3A 15W-40 $125.00 o 3B 10W-40 $128.50). Pregunta viscosidad/cantidad y ciudad.",
+  },
+  {
+    adTag: "AD-B06",
+    adIds: ["120255987815760368"],
+    productLabel: "Combo MANNOL 5W-40 Turbo Diésel 7L + Filtro + Regalo (<48h Ecuador)",
+    primarySku: "COMBO-MANNOL-2B",
+    defaultCustomerType: "particular",
+    hintForMilo:
+      "El cliente viene del anuncio de MANNOL Diesel Turbo 5W-40 (COMBO-MANNOL-2B $92.50 c/IVA, 7L + filtro + regalo). Pide vehículo y ciudad para confirmar aplicación y envío <48h.",
+  },
+];
+
+export function resolveAdContext(
+  text: string,
+  adId?: string | null,
+  persistedAdTag?: string | null
+): AdContextSpec | null {
+  const tagMatch = (text || "").match(/\[(AD-[AB]\d{2})\]/i);
+  if (tagMatch) {
+    const tag = tagMatch[1].toUpperCase();
+    const byTag = AD_CONTEXT_MAP.find((a) => a.adTag === tag);
+    if (byTag) return byTag;
+  }
+  const cleanId = (adId || "").trim();
+  if (cleanId) {
+    const byId = AD_CONTEXT_MAP.find((a) => a.adIds.includes(cleanId));
+    if (byId) return byId;
+  }
+  const cleanPersisted = (persistedAdTag || "").trim().toUpperCase();
+  if (cleanPersisted) {
+    const byPersisted = AD_CONTEXT_MAP.find((a) => a.adTag === cleanPersisted);
+    if (byPersisted) return byPersisted;
+  }
+  return null;
+}
+
 const HUMAN_PRODUCT_NAMES: Record<string, string> = {
   "COMBO-MANNOL-1A": "Combo MANNOL Classic 10W-40 (galón) + filtro Advance + Cockpit Care con esponja de regalo",
   "COMBO-MANNOL-1B": "Combo MANNOL Energy 5W-30 sintético (galón) + filtro Advance + Cockpit Care con esponja de regalo",
@@ -569,7 +659,9 @@ export function pickMaxTwoLubricantCombos(
   customerType: CustomerType,
   norm: string
 ): QuoteOption[] {
+  const wants5w40Diesel = /\b5w-?40\b|ad-?b06|diesel\s*turbo/i.test(norm);
   const isDiesel =
+    wants5w40Diesel ||
     vehicle?.fuel === "diésel" ||
     /d-?max|hilux|wingle|poer|h-?100|dutro|hino|camaronera|diesel|turbo diesel/.test(norm);
   const isFleet = customerType === "camaronera" || /\b(caneca|20\s*l|20l|flota|hino|camion|camaronera)\b/.test(norm);
@@ -582,6 +674,12 @@ export function pickMaxTwoLubricantCombos(
     labels = [
       "Opción 1 (Trabajo Pesado 15W-40 Caneca 20L)",
       "Opción 2 (Semisintético UHPD 10W-40 Caneca 20L)",
+    ];
+  } else if (wants5w40Diesel) {
+    skus = ["COMBO-MANNOL-2B", "COMBO-MANNOL-2A"];
+    labels = [
+      "Opción 1 (Full Sintético 5W-40 Turbo Diésel 7L)",
+      "Opción 2 (Trabajo Diésel 15W-40 Semisintético 7L)",
     ];
   } else if (isDiesel) {
     skus = ["COMBO-MANNOL-2A", "COMBO-MANNOL-2B"];

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     title: "Contacto y Cotizaciones Especializadas | LiderPro Ecuador",
     description:
       "Atención personalizada para particulares, talleres mecánicos y flotas comerciales con despacho nacional y facturación SRI.",
-    url: "https://liderpro-digital.vercel.app/contacto",
+    url: "https://www.liderpropedernales.com/contacto",
     type: "website",
   },
 };

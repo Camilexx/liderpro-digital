@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     title: `Catálogo Oficial Multimarca LiderPro Ecuador (${CATALOG_COUNT} Líneas)`,
     description:
       `${CATALOG_COUNT} líneas originales en stock para despacho inmediato desde Pedernales a las 24 provincias: baterías, lubricantes, filtros, refrigerantes, aditivos y grasas.`,
-    url: "https://liderpro-digital.vercel.app/productos",
+    url: "https://www.liderpropedernales.com/productos",
     type: "website",
   },
 };

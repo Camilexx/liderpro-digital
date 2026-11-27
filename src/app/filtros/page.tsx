@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     title: "Filtros Automotrices y Servicio Pesado Advance Filters — LiderPro Ecuador",
     description:
       "188 referencias en filtración de aceite, aire, cabina y combustible diésel con equivalencias OEM verificadas y despacho a las 24 provincias.",
-    url: "https://liderpro-digital.vercel.app/filtros",
+    url: "https://www.liderpropedernales.com/filtros",
     type: "website",
     images: [{ url: "/images/products/advance-oil-filter.png", width: 800, height: 800 }],
   },

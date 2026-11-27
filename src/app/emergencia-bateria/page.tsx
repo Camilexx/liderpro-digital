@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: "¿Tu Vehículo No Enciende? Diagnóstico de Batería | LiderPro Ecuador",
     description:
       "Guía técnica de emergencia para identificar si la falla es de batería o alternador. Envío prioritario de baterías selladas Baterías Ecuador y Bosch S4.",
-    url: "https://liderpro-digital.vercel.app/emergencia-bateria",
+    url: "https://www.liderpropedernales.com/emergencia-bateria",
     type: "website",
   },
 };

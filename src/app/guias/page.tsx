@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title: "Guías Técnicas y Consejos Automotrices | LiderPro Ecuador",
     description:
       "Artículos técnicos y consejos prácticos de mantenimiento preventivo, baterías y lubricantes para conductores en Ecuador.",
-    url: "https://liderpro-digital.vercel.app/guias",
+    url: "https://www.liderpropedernales.com/guias",
     type: "website",
   },
 };

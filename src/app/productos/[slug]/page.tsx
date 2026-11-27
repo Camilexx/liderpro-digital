@@ -129,7 +129,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
       {
         "@type": "Product",
         "name": product.name,
-        "image": `https://liderpro-digital.vercel.app${product.imageUrl}`,
+        "image": `https://www.liderpropedernales.com${product.imageUrl}`,
         "description": product.description,
         "sku": product.sku,
         "mpn": product.sku,
@@ -140,7 +140,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
         },
         "offers": {
           "@type": "Offer",
-          "url": `https://liderpro-digital.vercel.app/productos/${product.slug}`,
+          "url": `https://www.liderpropedernales.com/productos/${product.slug}`,
           "priceCurrency": "USD",
           "itemCondition": "https://schema.org/NewCondition",
           "availability": product.inStock
@@ -159,19 +159,19 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
             "@type": "ListItem",
             "position": 1,
             "name": "Inicio",
-            "item": "https://liderpro-digital.vercel.app",
+            "item": "https://www.liderpropedernales.com",
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": catInfo.label,
-            "item": `https://liderpro-digital.vercel.app${catInfo.href}`,
+            "item": `https://www.liderpropedernales.com${catInfo.href}`,
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": product.name,
-            "item": `https://liderpro-digital.vercel.app/productos/${product.slug}`,
+            "item": `https://www.liderpropedernales.com/productos/${product.slug}`,
           },
         ],
       },

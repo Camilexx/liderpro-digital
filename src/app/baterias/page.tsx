@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     title: "Baterías Automotrices Selladas | Baterías Ecuador & Bosch S4 — LiderPro",
     description:
       "Modelos certificados de baterías automotrices y de servicio pesado con garantía oficial de fábrica y despacho seguro a las 24 provincias del Ecuador.",
-    url: "https://liderpro-digital.vercel.app/baterias",
+    url: "https://www.liderpropedernales.com/baterias",
     type: "website",
     images: [{ url: "/images/products/baterias-ecuador-fe.png", width: 800, height: 800 }],
   },

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title: "Buscador de Compatibilidad por Vehículo | LiderPro Ecuador",
     description:
       "Filtra baterías, aceites y filtros compatibles con Chevrolet, Toyota, Hyundai, Kia, Nissan, Hino y Suzuki.",
-    url: "https://liderpro-digital.vercel.app/encuentra-tu-producto",
+    url: "https://www.liderpropedernales.com/encuentra-tu-producto",
     type: "website",
   },
 };

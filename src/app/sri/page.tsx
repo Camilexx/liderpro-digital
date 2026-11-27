@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     title: "Facturación Electrónica SRI & Cumplimiento Tributario — LiderPro",
     description:
       "Facturas electrónicas autorizadas por el SRI, guías de remisión y retenciones para empresas, talleres y personas naturales.",
-    url: "https://liderpro-digital.vercel.app/sri",
+    url: "https://www.liderpropedernales.com/sri",
     type: "website",
   },
 };

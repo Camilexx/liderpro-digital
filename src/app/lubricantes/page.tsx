@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     title: "Aceites y Lubricantes Certificados API / ACEA — LiderPro Ecuador",
     description:
       "Lubricantes sintéticos, semisintéticos, diésel pesado y transmisión en litros, galones, canecas de 20L y tambores. Despacho diario a todo el Ecuador.",
-    url: "https://liderpro-digital.vercel.app/lubricantes",
+    url: "https://www.liderpropedernales.com/lubricantes",
     type: "website",
     images: [{ url: "/images/products/01504MD04-15W40.png", width: 800, height: 800 }],
   },

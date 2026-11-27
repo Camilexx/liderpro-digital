@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title: "Términos y Condiciones de Venta y Servicio — LiderPro Ecuador",
     description:
       "Términos y condiciones comerciales aplicables a despachos, pagos, garantías y facturación en Ecuador.",
-    url: "https://liderpro-digital.vercel.app/terminos",
+    url: "https://www.liderpropedernales.com/terminos",
     type: "website",
   },
 };

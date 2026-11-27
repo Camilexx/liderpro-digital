@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     title: "Atención B2B y Precios Mayoristas para Talleres y Flotas — LiderPro",
     description:
       "Abastecimiento por mayor de lubricantes, baterías y filtros con facturación SRI y entrega directa a operaciones en las 24 provincias.",
-    url: "https://liderpro-digital.vercel.app/b2b",
+    url: "https://www.liderpropedernales.com/b2b",
     type: "website",
   },
 };

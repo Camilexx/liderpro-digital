@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title: "Asesoría Técnica y Diagnóstico Automotriz | LiderPro Ecuador",
     description:
       "Asesoría técnica guiada por WhatsApp para identificar baterías, lubricantes y filtros correctos según marca y modelo.",
-    url: "https://liderpro-digital.vercel.app/asesoria",
+    url: "https://www.liderpropedernales.com/asesoria",
     type: "website",
   },
 };

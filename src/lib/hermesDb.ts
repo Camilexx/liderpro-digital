@@ -1775,78 +1775,169 @@ export async function getAdminDashboardSnapshot(params: {
   };
 }
 
+const escalationAlertDebounce = new Map<string, { reasonKey: string; sentAtMs: number }>();
+const ESCALATION_DEBOUNCE_MS = 30 * 60 * 1000;
+
+function extractWaDigitsFromSession(phoneOrSession: string, customerPhone?: string | null): string {
+  const raw = (customerPhone || "").trim() || phoneOrSession.replace(/^wa:/i, "").trim();
+  const digits = raw.replace(/[^\d]/g, "");
+  return digits.length >= 9 ? digits : "";
+}
+
+function maskWaDigitsForLog(digits: string, fallbackKey: string): string {
+  if (digits.length >= 6) {
+    return `wa:${digits.slice(0, 4)}*****${digits.slice(-3)}`;
+  }
+  if (fallbackKey.startsWith("wa:") && fallbackKey.length > 8) {
+    return `wa:${fallbackKey.slice(3, 7)}*****${fallbackKey.slice(-3)}`;
+  }
+  return fallbackKey;
+}
+
 export async function flagCustomerHumanEscalation(input: {
   phoneOrSession: string;
   reason: string;
   summary: string;
   urgency: EscalationUrgency;
   customerName?: string | null;
+  customerPhone?: string | null;
   city?: string | null;
-}): Promise<{ ok: boolean; telegramSent: boolean }> {
+  adTag?: string | null;
+  vehicleLabel?: string | null;
+  quotedSummary?: string | null;
+  actionNeeded?: string | null;
+  howToHandle?: string | null;
+  suggestedReply?: string | null;
+  sendLiveAlerts?: boolean;
+}): Promise<{
+  ok: boolean;
+  adminWaSent: boolean;
+  telegramSent: boolean;
+  debounced: boolean;
+  alertPreviewMasked: string;
+}> {
   const key = input.phoneOrSession.trim();
-  if (!key) return { ok: false, telegramSent: false };
+  if (!key) {
+    return { ok: false, adminWaSent: false, telegramSent: false, debounced: false, alertPreviewMasked: "" };
+  }
   const safeReason = input.reason.trim().slice(0, 260) || "Atención de asesor humano";
   const safeSummary = input.summary.trim().slice(0, 600);
   const safeUrgency: EscalationUrgency =
     input.urgency === "alta" || input.urgency === "media" || input.urgency === "baja"
       ? input.urgency
       : "alta";
-  const nowIso = new Date().toISOString();
+  const reasonKey = safeReason.toLowerCase().replace(/[^a-z0-9]+/g, "_").slice(0, 60);
+  const nowMs = Date.now();
+  const nowIso = new Date(nowMs).toISOString();
+  const allowLiveAlerts = input.sendLiveAlerts !== false;
 
-  try {
-    const pool = await getPool();
-    if (pool) {
-      await pool.query(
-        `INSERT INTO customers (
-           phone_or_session, name, city, needs_human, escalation_reason,
-           escalation_summary, escalation_urgency, escalated_at, updated_at
-         )
-         VALUES ($1, $2, $3, TRUE, $4, $5, $6, NOW(), NOW())
-         ON CONFLICT (phone_or_session) DO UPDATE SET
-           name = COALESCE(EXCLUDED.name, customers.name),
-           city = COALESCE(EXCLUDED.city, customers.city),
-           needs_human = TRUE,
-           escalation_reason = EXCLUDED.escalation_reason,
-           escalation_summary = EXCLUDED.escalation_summary,
-           escalation_urgency = EXCLUDED.escalation_urgency,
-           escalated_at = NOW(),
-           updated_at = NOW()`,
-        [key, input.customerName ?? null, input.city ?? null, safeReason, safeSummary, safeUrgency]
-      );
-    } else {
-      const store = loadFallbackStore();
-      const prev = store.customers[key];
-      store.customers[key] = {
-        phoneOrSession: key,
-        name: input.customerName ?? prev?.name ?? null,
-        activeVehicle: prev?.activeVehicle ?? null,
-        city: input.city ?? prev?.city ?? null,
-        customerType: prev?.customerType ?? "particular",
-        lastQuote: prev?.lastQuote ?? null,
-        commercialState: prev?.commercialState ?? null,
-        needsHuman: true,
-        escalationReason: safeReason,
-        escalationSummary: safeSummary,
-        escalationUrgency: safeUrgency,
-        escalatedAt: nowIso,
-        updatedAt: nowIso,
-      };
-      persistFallbackStore(store);
-    }
-  } catch (err) {
-    console.warn("[HermesDB] flagCustomerHumanEscalation fallback:", err instanceof Error ? err.message : String(err));
+  let debounced = false;
+  const memPrev = escalationAlertDebounce.get(key);
+  if (memPrev && memPrev.reasonKey === reasonKey && nowMs - memPrev.sentAtMs < ESCALATION_DEBOUNCE_MS) {
+    debounced = true;
   }
 
-  const urgEmoji = safeUrgency === "alta" ? "🔴" : safeUrgency === "media" ? "🟠" : "🟡";
-  const tgText =
-    `🚨 *ESCALAMIENTO HUMANO MILO (${urgEmoji} ${safeUrgency.toUpperCase()})*\n` +
-    `• *Cliente/Sesión:* ${input.customerName || "Sin nombre"} (${key})\n` +
-    (input.city ? `• *Ciudad:* ${input.city}\n` : "") +
-    `• *Motivo:* ${safeReason}\n` +
-    `• *Resumen:* ${safeSummary}\n` +
-    `👉 Atender desde /admin-hermes o WhatsApp Pedernales.`;
-  const telegramSent = await sendTelegramAlert(tgText);
-  return { ok: true, telegramSent };
+  if (allowLiveAlerts) {
+    try {
+      const pool = await getPool();
+      if (pool) {
+        if (!debounced) {
+          const prevRes = await pool.query<{ escalation_reason: string | null; escalated_at: string | null }>(
+            `SELECT escalation_reason, escalated_at FROM customers WHERE phone_or_session = $1 LIMIT 1`,
+            [key]
+          );
+          const prevRow = prevRes.rows[0];
+          if (prevRow?.escalated_at && prevRow.escalation_reason) {
+            const prevReasonKey = prevRow.escalation_reason.toLowerCase().replace(/[^a-z0-9]+/g, "_").slice(0, 60);
+            const ageMs = nowMs - new Date(prevRow.escalated_at).getTime();
+            if (prevReasonKey === reasonKey && ageMs >= 0 && ageMs < ESCALATION_DEBOUNCE_MS) {
+              debounced = true;
+            }
+          }
+        }
+
+        await pool.query(
+          `INSERT INTO customers (
+             phone_or_session, name, city, needs_human, escalation_reason,
+             escalation_summary, escalation_urgency, escalated_at, updated_at
+           )
+           VALUES ($1, $2, $3, TRUE, $4, $5, $6, NOW(), NOW())
+           ON CONFLICT (phone_or_session) DO UPDATE SET
+             name = COALESCE(EXCLUDED.name, customers.name),
+             city = COALESCE(EXCLUDED.city, customers.city),
+             needs_human = TRUE,
+             escalation_reason = EXCLUDED.escalation_reason,
+             escalation_summary = EXCLUDED.escalation_summary,
+             escalation_urgency = EXCLUDED.escalation_urgency,
+             escalated_at = NOW(),
+             updated_at = NOW()`,
+          [key, input.customerName ?? null, input.city ?? null, safeReason, safeSummary, safeUrgency]
+        );
+      } else {
+        const store = loadFallbackStore();
+        const prev = store.customers[key];
+        store.customers[key] = {
+          phoneOrSession: key,
+          name: input.customerName ?? prev?.name ?? null,
+          activeVehicle: prev?.activeVehicle ?? null,
+          city: input.city ?? prev?.city ?? null,
+          customerType: prev?.customerType ?? "particular",
+          lastQuote: prev?.lastQuote ?? null,
+          commercialState: prev?.commercialState ?? null,
+          needsHuman: true,
+          escalationReason: safeReason,
+          escalationSummary: safeSummary,
+          escalationUrgency: safeUrgency,
+          escalatedAt: nowIso,
+          updatedAt: nowIso,
+        };
+        persistFallbackStore(store);
+      }
+    } catch (err) {
+      console.warn("[HermesDB] flagCustomerHumanEscalation fallback:", err instanceof Error ? err.message : String(err));
+    }
+  }
+
+  const digits = extractWaDigitsFromSession(key, input.customerPhone);
+  const maskedPhone = maskWaDigitsForLog(digits, key);
+  const clientContactPrivate = digits ? `https://wa.me/${digits}` : key;
+  const cityLabel = input.city || "Por confirmar";
+  const adTagLabel = input.adTag || "Orgánico";
+  const quotedLine = [input.vehicleLabel, input.quotedSummary || safeSummary].filter(Boolean).join(" | ");
+  const actionLine = input.actionNeeded?.trim() || safeReason;
+  const howToLine =
+    input.howToHandle?.trim() ||
+    `1) Revisa el historial del chat en /admin-hermes sin contradecir los precios ya cotizados.\n` +
+      `2) Confirma el punto pendiente al cliente y cierra el pedido con factura SRI.`;
+  const suggestedLine =
+    input.suggestedReply?.trim() ||
+    `Hola${input.customerName ? ` ${input.customerName}` : ""}, soy el asesor de LíderPro Pedernales. Milo ya me pasó tu consulta completa para confirmarte el dato exacto y dejar listo tu pedido.`;
+
+  const buildAlertBody = (contactRef: string): string =>
+    `🚨 *ESCALAMIENTO MILO — [URGENCIA: ${safeUrgency.toUpperCase()}]*\n` +
+    `*Cliente:* ${input.customerName || "Sin nombre"} | ${contactRef} | ${cityLabel} | ${adTagLabel}\n` +
+    `*Resumen / Ya cotizado por Milo:* ${quotedLine}\n` +
+    `*Qué se necesita:* ${actionLine}\n` +
+    `*Cómo gestionarlo:*\n${howToLine}\n` +
+    `*Respuesta sugerida lista para copiar:*\n"${suggestedLine}"`;
+
+  const privateAlertText = buildAlertBody(clientContactPrivate);
+  const alertPreviewMasked = buildAlertBody(maskedPhone);
+
+  let adminWaSent = false;
+  let telegramSent = false;
+  if (allowLiveAlerts && !debounced) {
+    escalationAlertDebounce.set(key, { reasonKey, sentAtMs: nowMs });
+    const adminPhone = (process.env.ADMIN_NOTIFY_PHONE || "").replace(/[^\d]/g, "");
+    const [waOk, tgOk] = await Promise.all([
+      adminPhone ? sendWhatsAppTextDirect(adminPhone, privateAlertText) : Promise.resolve(false),
+      sendTelegramAlert(alertPreviewMasked),
+    ]);
+    adminWaSent = waOk;
+    telegramSent = tgOk;
+  }
+
+  return { ok: true, adminWaSent, telegramSent, debounced, alertPreviewMasked };
 }
 
 export async function resolveCustomerHumanEscalation(phoneOrSession: string): Promise<{ ok: boolean }> {

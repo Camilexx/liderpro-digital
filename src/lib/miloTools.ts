@@ -49,8 +49,11 @@ export interface MiloToolExecutionContext {
   primaryRecommendedPriceUsd: number | null;
   adAttribution?: AdAttribution | null;
   matchedSkus: Set<string>;
+  primaryQuotedItems?: Array<{ sku: string; qty: number }>;
   createdOrder: OrderRecord | null;
   escalatedToHuman: boolean;
+  escalationAlertPreview?: string | null;
+  sendLiveAlerts?: boolean;
   intentTag: HermesIntentTag;
   toolsUsed: string[];
 }
@@ -210,9 +213,11 @@ export const MILO_OPENAI_TOOLS: OpenAIToolDefinition[] = [
   },
 ];
 
-/** Normaliza jerga y faltas ortográficas comunes de Ecuador (Costa/Manabí y Sierra) */
+/** Normaliza jerga, typos de viscosidad y faltas ortográficas comunes de Ecuador */
 export function expandEcuadorianColloquialisms(text: string): string {
   return normalizeText(text)
+    .replace(/\b16\s*w[-\s]?40\b/g, "15w-40")
+    .replace(/\b(0|5|10|15|20)\s*w\s*(20|30|40|50)\b/g, "$1w-$2")
     .replace(/\b(votando|botando|echando)\s+umo\b/g, "botando humo")
     .replace(/\bumo\b/g, "humo")
     .replace(/\bfull\s+gaso(?:lina)?\b/g, "mucha gasolina traga gasolina")
@@ -372,6 +377,8 @@ function searchFreeTextRetailCatalog(query: string, limit = 5, activeVehicle?: V
 
 interface OilCapacityTopUpInfo {
   litersLabel: string;
+  comboLiters: number;
+  targetLiters: number;
   needsExtraLiters: number;
   preferred1LSkus: string[];
 }
@@ -453,23 +460,36 @@ function resolveVehicleOilCapacityTopUp(
 ): OilCapacityTopUpInfo | null {
   const skuUpper = primary.sku.toUpperCase();
   const presNorm = normalizeText(`${primary.presentation || ""} ${primary.name}`);
-  // Combos 2A/2B/2C (6L-7L), 3A/3B (20L) y canecas/6L/7L ya cubren motores grandes
-  if (/^COMBO-MANNOL-[23][ABC]$/.test(skuUpper)) return null;
-  if (/\b(6\s*l|7\s*l|20\s*l|caneca|balde|tambor)\b/.test(presNorm)) return null;
-  // Aplica a combos de galón (1A/1B/1C) y a cualquier aceite de motor en presentación de galón / 4L / 3.78L
-  const isFourLiterOrGallon =
-    /^COMBO-MANNOL-1[ABC]$/.test(skuUpper) ||
-    /\b(galon|4\s*l|4\s*litros?|3\.78|3\.785)\b/.test(presNorm);
-  if (!isFourLiterOrGallon) return null;
+  // Canecas de 20L / tambores ya cubren uso pesado/flota
+  if (/^COMBO-MANNOL-3[ABC]$/.test(skuUpper)) return null;
+  if (/\b(20\s*l|caneca|balde|tambor)\b/.test(presNorm)) return null;
+
+  let comboLiters = 0;
+  if (/^COMBO-MANNOL-2[AB]$/.test(skuUpper) || /\b7\s*litros?\b|\b7l\b/.test(presNorm)) {
+    comboLiters = 7;
+  } else if (/^COMBO-MANNOL-2C$/.test(skuUpper) || /\b6\s*litros?\b|\b6l\b/.test(presNorm)) {
+    comboLiters = 6;
+  } else if (/^012MN(7709-4|7909-5|7904-5|7104-5A)$/.test(skuUpper) || /\b5\s*l\b/.test(presNorm)) {
+    comboLiters = 5;
+  } else if (/^COMBO-MANNOL-1[ABC]$/.test(skuUpper) || /\b(galon|4\s*l|4\s*litros?|3\.78|3\.785)\b/.test(presNorm)) {
+    comboLiters = 4;
+  }
+  if (comboLiters <= 0) return null;
 
   const combined = normalizeText(`${formatVehicleLabel(vehicle)} ${queryNorm}`);
   const primaryNorm = normalizeText(`${primary.name}`);
   const fallbackByVisc = /20w-?50|1c$/i.test(`${primaryNorm} ${skuUpper}`)
     ? ["012MN7404-1A"]
-    : /10w-?40|1a$/i.test(`${primaryNorm} ${skuUpper}`)
+    : /10w-?40|1a$|2c$/i.test(`${primaryNorm} ${skuUpper}`)
     ? ["012MN7501-1"]
-    : /5w-?40/i.test(primaryNorm)
+    : /5w-?40|2b$/i.test(`${primaryNorm} ${skuUpper}`)
     ? ["012MN7904-1"]
+    : /15w-?40|2a$/i.test(`${primaryNorm} ${skuUpper}`)
+    ? ["012MN7104-1"]
+    : /diesel.*5w-?30|5w-?30.*diesel/i.test(`${primaryNorm} ${combined}`)
+    ? ["012MN7909-1"]
+    : /toyota/i.test(primaryNorm)
+    ? ["012MN7709-1", "012MN7914-1A"]
     : ["012MN7914-1A", "012MN7924-1"];
 
   const matched1L = findMatchingOneLiterOil(primary, fallbackByVisc);
@@ -477,28 +497,54 @@ function resolveVehicleOilCapacityTopUp(
     ? [matched1L.sku, ...fallbackByVisc.filter((s) => s.toUpperCase() !== matched1L.sku.toUpperCase())]
     : fallbackByVisc;
 
-  if (/\b(tiggo\s*7|tiggo\s*8|coolray|geely|jetour\s*dashing|changan\s*cs55)\b/.test(combined)) {
-    return {
-      litersLabel: "4.5 a 4.7 litros con filtro",
-      needsExtraLiters: 1,
-      preferred1LSkus,
-    };
+  let targetLiters = 0;
+  let litersLabel = "";
+
+  const explicitCapacityMatch =
+    queryNorm.match(/\b(?:lleva|necesita|requiere|son|capacidad(?:\s+de)?|kit(?:\s+de)?)\s*(\d{1,2}(?:[.,]\d)?)\s*(?:litros?|lts?|l)\b/i) ||
+    queryNorm.match(/\b([5-9]|1[0-6])(?:[.,]\d)?\s*(?:litros?|lts?|l)\b/i);
+
+  if (/\bdos\s+galones\b/i.test(combined)) {
+    targetLiters = 8;
+    litersLabel = "8 litros (2 galones)";
+  } else if (explicitCapacityMatch) {
+    const parsed = Number(explicitCapacityMatch[1].replace(",", "."));
+    if (Number.isFinite(parsed) && parsed >= 4.2 && parsed <= 18) {
+      targetLiters = parsed;
+      litersLabel = `${parsed} litros`;
+    }
   }
-  if (/\b(fortuner|prado|land\s*cruiser|f-?150|trailblazer|blazer|pathfinder|santa\s*fe|sorento|outlander)\b/.test(combined)) {
-    return {
-      litersLabel: "5.0 a 6.0 litros con filtro",
-      needsExtraLiters: 2,
-      preferred1LSkus,
-    };
+
+  if (targetLiters <= 0) {
+    if (/\branger\b/.test(combined) && /\b3\.2\b/.test(combined)) {
+      targetLiters = 9;
+      litersLabel = "9 litros con filtro";
+    } else if (/\bhi[-\s]?lux\b/.test(combined) && (/\b2\.7\b/.test(combined) || vehicle?.fuel === "gasolina")) {
+      targetLiters = 6;
+      litersLabel = "5.5 a 6.0 litros con filtro";
+    } else if (/\b(tiggo\s*7|tiggo\s*8|coolray|geely|jetour\s*dashing|changan\s*cs55)\b/.test(combined)) {
+      targetLiters = 5;
+      litersLabel = "4.5 a 4.7 litros con filtro";
+    } else if (/\b(fortuner|prado|land\s*cruiser|f-?150|trailblazer|blazer|pathfinder|santa\s*fe|sorento|outlander)\b/.test(combined)) {
+      targetLiters = 6;
+      litersLabel = "5.0 a 6.0 litros con filtro";
+    } else if (/\b(x-?trail|rav\s*4|cx-?5|captiva|tiggo\s*4|grand\s*vitara)\b/.test(combined)) {
+      targetLiters = 5;
+      litersLabel = "4.3 a 4.7 litros con filtro";
+    }
   }
-  if (/\b(x-?trail|rav\s*4|cx-?5|captiva|tiggo\s*4|grand\s*vitara)\b/.test(combined)) {
-    return {
-      litersLabel: "4.3 a 4.7 litros con filtro",
-      needsExtraLiters: 1,
-      preferred1LSkus,
-    };
-  }
-  return null;
+
+  if (targetLiters <= 0) return null;
+  const needsExtraLiters = Math.max(0, Math.ceil(targetLiters - comboLiters));
+  if (needsExtraLiters <= 0) return null;
+
+  return {
+    litersLabel,
+    comboLiters,
+    targetLiters,
+    needsExtraLiters,
+    preferred1LSkus,
+  };
 }
 
 function searchSingleQuery(
@@ -508,6 +554,7 @@ function searchSingleQuery(
   consulta: string;
   enStock: boolean;
   requiereVehiculo?: boolean;
+  requiereCombustible?: boolean;
   vehiculoYaResuelto?: boolean;
   notaTecnica?: string;
   nota?: string;
@@ -626,9 +673,27 @@ function searchSingleQuery(
   }
 
   if (asksOilOrCombo) {
+    const isExplicitGasoline =
+      ctx.activeVehicle?.fuel === "gasolina" || /\b(gasolina|nafta|2\.7)\b/i.test(expanded);
     // 1. Official MANNOL combos (already include Advance oil filter + Cockpit Care gift!)
     const wantsSpecificViscosity = expanded.match(/\b(0w-20|5w-20|5w-30|5w-40|10w-30|10w-40|15w-40|20w-50)\b/i)?.[1];
-    const combos = pickMaxTwoLubricantCombos(ctx.activeVehicle, ctx.customerType, expanded);
+    const combos = pickMaxTwoLubricantCombos(
+      ctx.activeVehicle,
+      ctx.customerType,
+      expanded,
+      ctx.adAttribution?.adTag
+    );
+    if (combos.length === 0 && !wantsSpecificViscosity && hasKnownVehicle) {
+      return {
+        consulta: rawQuery,
+        enStock: false,
+        requiereCombustible: true,
+        nota:
+          "Vehículo dual (gasolina o diésel) sin combustible confirmado todavía. " +
+          "Pregunta en 1 sola línea amable si el motor es a gasolina o diésel para darle la viscosidad y precio exactos.",
+        candidatos: [],
+      };
+    }
     for (const opt of combos) {
       const it = opt.items[0];
       if (!it) continue;
@@ -636,29 +701,39 @@ function searchSingleQuery(
       if (idx) pushCandidate(toCandidatePayload(idx));
     }
     // 2. If user asked a specific viscosity/brand or modern turbo engine (e.g. 5W-30 / 0W-20 / Tiggo 7 Pro), also include standalone matches
-    const freeMatches = searchFreeTextRetailCatalog(rawQuery, 4).filter(
-      (e) => e.subCategory === "lubricantes_motor" || e.subCategory === "combos_mannol"
-    );
+    const freeMatches = searchFreeTextRetailCatalog(expanded, 5, ctx.activeVehicle).filter((e) => {
+      if (e.subCategory !== "lubricantes_motor" && e.subCategory !== "combos_mannol") return false;
+      if (isExplicitGasoline && /\b(15w-?40|5w-?40|diesel|tdi|ts-4)\b/i.test(`${e.sku} ${e.name}`)) {
+        return false;
+      }
+      return true;
+    });
     for (const m of freeMatches) {
       if (candidates.length >= 5) break;
       pushCandidate(toCandidatePayload(m));
     }
-    // Pick best winner: for newer cars (>= 2016) or 5W-30 request prefer synthetic 1B/2B, else balanced 1A/2A
+    // Pick best winner: respect explicit gasoline + 5W-30, else newer cars/5W-40 diesel
+    const preferGas5w30 =
+      isExplicitGasoline && Boolean(wantsSpecificViscosity && /5w-30/i.test(wantsSpecificViscosity));
     const preferSynthetic =
       (ctx.activeVehicle?.year && ctx.activeVehicle.year >= 2016) ||
       Boolean(wantsSpecificViscosity && /5w-30|5w-40|0w-20/i.test(wantsSpecificViscosity)) ||
       /tiggo\s*[478]|turbo|sintetic/i.test(`${formatVehicleLabel(ctx.activeVehicle)} ${expanded}`);
     const primary =
-      (preferSynthetic
+      (preferGas5w30
+        ? candidates.find((c) => /^COMBO-MANNOL-1B$/i.test(c.sku)) ||
+          candidates.find((c) => /5W-30/i.test(c.name) && !/diesel|tdi/i.test(c.name))
+        : preferSynthetic
         ? candidates.find((c) => /1B|2B|5W-30|5W-40|0W-20/i.test(`${c.sku} ${c.name}`))
         : candidates[0]) ||
       candidates[0] ||
       null;
     if (primary) {
       ctx.primaryRecommendedPriceUsd = primary.priceIva;
+      ctx.primaryQuotedItems = [{ sku: primary.sku, qty: 1 }];
     }
 
-    // VERIFICACIÓN DE LITRAJE > 4.0L (V4.1): detectar si el galón de 4L queda corto y ofrecer 1L extra exacto
+    // VERIFICACIÓN DE LITRAJE (> 4.0L / > 7.0L): detectar si falta 1L o 2L adicionales y registrar total exacto
     let alertaLitraje: string | undefined;
     let litroAdicionalRecomendado: CatalogCandidatePayload | null = null;
     if (primary) {
@@ -673,10 +748,20 @@ function searchSingleQuery(
           }
         }
         if (litroAdicionalRecomendado) {
+          const combinedTotalUsd = sumExactPricesIva([
+            primary.priceIva,
+            ...Array(cap.needsExtraLiters).fill(litroAdicionalRecomendado.priceIva),
+          ]);
+          recordPrice(ctx, combinedTotalUsd);
+          ctx.primaryRecommendedPriceUsd = combinedTotalUsd;
+          ctx.primaryQuotedItems = [
+            { sku: primary.sku, qty: 1 },
+            { sku: litroAdicionalRecomendado.sku, qty: cap.needsExtraLiters },
+          ];
           alertaLitraje =
-            `ATENCIÓN LITRAJE (> 4.0L): Este motor lleva ${cap.litersLabel}. ` +
-            `El combo trae galón (4L), así que faltará ${cap.needsExtraLiters} litro(s) adicional(es) para completar el cambio sin quedarse corto en la lubricadora. ` +
-            `DEBES avisar al cliente y ofrecer sumar ${cap.needsExtraLiters}x ${litroAdicionalRecomendado.name} [SKU: ${litroAdicionalRecomendado.sku}] a $${litroAdicionalRecomendado.priceIva.toFixed(2)} c/IVA (inclúyelo en gestionar_carrito si arma el combo completo).`;
+            `ATENCIÓN LITRAJE (${cap.comboLiters}L -> ${cap.targetLiters}L): Este motor lleva ${cap.litersLabel}. ` +
+            `El paquete base trae ${cap.comboLiters}L, así que faltan EXACTAMENTE ${cap.needsExtraLiters} litro(s) adicional(es) para completar ${cap.comboLiters + cap.needsExtraLiters}L sin quedarse corto. ` +
+            `DEBES sumar ${cap.needsExtraLiters}x ${litroAdicionalRecomendado.name} [SKU: ${litroAdicionalRecomendado.sku}] ($${litroAdicionalRecomendado.priceIva.toFixed(2)} c/u) => TOTAL EXACTO DEL KIT COMPLETO: $${combinedTotalUsd.toFixed(2)} c/IVA (inclúyelo así en gestionar_carrito).`;
         }
       }
     }
@@ -1041,27 +1126,30 @@ export async function executeMiloToolCall(
         }
       }
 
-      // Aviso de litraje (> 4.0L) si el carrito lleva un aceite/combo de 4L/galón sin envase de 1L adicional
-      const oil4LItem = nextCart.find(
+      // Aviso de litraje (> 4.0L / > 7.0L) si el carrito lleva aceite sin el complemento de 1L suficiente
+      const oilBaseItem = nextCart.find(
         (i) =>
-          /^COMBO-MANNOL-1[ABC]$/i.test(i.sku) ||
-          (i.subCategory === "lubricantes_motor" && /\b(galon|4\s*l|4\s*litros?|3\.78)\b/i.test(`${i.presentation || ""} ${i.name}`))
+          /^COMBO-MANNOL-[12][ABC]$/i.test(i.sku) ||
+          (i.subCategory === "lubricantes_motor" && /\b(galon|4\s*l|5\s*l|4\s*litros?|3\.78)\b/i.test(`${i.presentation || ""} ${i.name}`))
       );
-      const hasExtra1L = nextCart.some((i) => /1\s*litro|1\s*lt|\b1l\b/i.test(`${i.presentation || ""} ${i.name}`));
-      if (oil4LItem && !hasExtra1L) {
+      const extra1LQty = nextCart
+        .filter((i) => /1\s*litro|1\s*lt|\b1l\b/i.test(`${i.presentation || ""} ${i.name}`))
+        .reduce((acc, i) => acc + Math.max(1, i.qty || 1), 0);
+      if (oilBaseItem) {
         const cap = resolveVehicleOilCapacityTopUp(ctx.activeVehicle, "", {
-          sku: oil4LItem.sku,
-          name: oil4LItem.name,
-          brand: oil4LItem.brand || "",
-          presentation: oil4LItem.presentation,
+          sku: oilBaseItem.sku,
+          name: oilBaseItem.name,
+          brand: oilBaseItem.brand || "",
+          presentation: oilBaseItem.presentation,
         });
-        if (cap && cap.needsExtraLiters > 0) {
+        if (cap && cap.needsExtraLiters > extra1LQty) {
+          const remainingExtra = cap.needsExtraLiters - extra1LQty;
           const topEntry = cap.preferred1LSkus.map((s) => getIndexedCatalogEntry(s)).find(Boolean);
           if (topEntry) {
             recordPrice(ctx, topEntry.priceIva);
             ctx.matchedSkus.add(topEntry.sku);
             warnings.push(
-              `ALERTA LITRAJE: Este vehículo requiere ${cap.litersLabel} (supera el galón de 4L). Avisa al cliente y ofrece sumar ${cap.needsExtraLiters}x ${formatHumanProductName(topEntry.sku, topEntry.name)} [SKU: ${topEntry.sku}] ($${topEntry.priceIva.toFixed(2)} c/IVA) para completar el cambio.`
+              `ALERTA LITRAJE: Este vehículo requiere ${cap.litersLabel}. Para completar sin quedarse corto faltan ${remainingExtra}x ${formatHumanProductName(topEntry.sku, topEntry.name)} [SKU: ${topEntry.sku}] ($${topEntry.priceIva.toFixed(2)} c/u c/IVA).`
             );
           }
         }
@@ -1290,25 +1378,39 @@ export async function executeMiloToolCall(
     const urgency: EscalationUrgency = rawUrg === "media" || rawUrg === "baja" ? rawUrg : "alta";
 
     ctx.customerType = extractCustomerType(`${motivo} ${resumen}`, ctx.customerType);
+    const quotedItemsSummary =
+      ctx.commercialState.cartItems.length > 0
+        ? ctx.commercialState.cartItems.map((i) => `${i.qty}x ${i.name} ($${i.unitPriceIva.toFixed(2)})`).join(" + ")
+        : ctx.primaryQuotedItems && ctx.primaryQuotedItems.length > 0
+        ? ctx.primaryQuotedItems.map((i) => (i.qty > 1 ? `${i.qty}× ${i.sku}` : i.sku)).join(" + ")
+        : Array.from(ctx.matchedSkus).slice(0, 2).join(", ") || null;
     const esc = await flagCustomerHumanEscalation({
       phoneOrSession: ctx.sessionId,
       reason: motivo,
       summary: resumen,
       urgency,
       customerName: ctx.customerName,
+      customerPhone: ctx.customerPhone,
       city: ctx.city,
+      adTag: ctx.adAttribution?.adTag ?? null,
+      vehicleLabel: formatVehicleLabel(ctx.activeVehicle) || null,
+      quotedSummary: quotedItemsSummary,
+      sendLiveAlerts: ctx.sendLiveAlerts !== false,
     });
 
     ctx.escalatedToHuman = true;
+    ctx.escalationAlertPreview = esc.alertPreviewMasked;
     ctx.intentTag = "escalamiento_humano";
 
     return {
       ok: true,
       escalated: true,
+      adminWaNotified: esc.adminWaSent,
       telegramNotified: esc.telegramSent,
+      debounced: esc.debounced,
       urgencia: urgency,
       instrucciones:
-        "Confirma con calidez al cliente que ya escalaste su solicitud a un asesor humano / encargado en Pedernales para que lo contacte enseguida. PROHIBIDO inventar precios mayoristas, plazos de crédito o descuentos no autorizados.",
+        "Responde en máximo 2 líneas directas avisando que ya pasaste el dato exacto al asesor para confirmarle ese punto cuanto antes. PROHIBIDO inventar fletes, precios mayoristas, plazos de crédito o descuentos no autorizados.",
     };
   }
 

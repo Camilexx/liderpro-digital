@@ -1,7 +1,6 @@
 import {
   formatOfficialBankTransferDetails,
   getConfiguredBankTransferDetails,
-  OFFICIAL_BANK_ACCOUNT,
 } from "@/data/businessConfig";
 import {
   buildDeterministicQuotePlan,
@@ -12,12 +11,14 @@ import {
   formatVehicleLabel,
   FREE_SHIPPING_THRESHOLD_USD,
   mergeVehicleProfiles,
+  normalizeText,
   resolveAdContext,
   sumExactPricesIva,
   type AdContextSpec,
   type HermesIntentTag,
 } from "@/lib/hermesCatalog";
 import {
+  flagCustomerHumanEscalation,
   getCustomer,
   getDbStorageMode,
   getRecentMessages,
@@ -28,6 +29,7 @@ import {
   type ChannelType,
   type CommercialState,
   type CustomerType,
+  type EscalationUrgency,
   type FunnelStage,
   type OrderRecord,
   type VehicleProfile,
@@ -72,6 +74,7 @@ export interface HermesResult {
   orderCreated: boolean;
   order: OrderRecord | null;
   escalatedToHuman?: boolean;
+  escalationAlertPreview?: string | null;
   cartTotalUsd?: number | null;
 }
 
@@ -107,47 +110,41 @@ const NIM_MODEL_CASCADE: NimModelTier[] = [
 ];
 
 export const MILO_SYSTEM_PROMPT =
-  "Eres MILO, asesor automotriz humano y cercano de LíderPro Pedernales (WhatsApp 24/7: +593 96 748 9002), especialista real en lubricación, aditivos, refrigerantes, grasas, filtros y baterías en Ecuador.\n\n" +
+  "Eres MILO, agente virtual de Líder Pro (LíderPro Pedernales, WhatsApp 24/7: +593 96 748 9002), asesor cercano, directo y especialista real en motores, lubricación, aditivos, refrigerantes, grasas, filtros y baterías en Ecuador.\n\n" +
   "DATOS REALES DEL NEGOCIO (NUNCA INVENTES OTROS):\n" +
-  "- Tienda y bodega única: Pedernales, Vía al Carmen (frente a la gasolinera). Horario: Lunes a Sábado de 08:00 a 18:00. PROHIBIDO mencionar Quito ni ninguna segunda sucursal.\n" +
-  "- Somos tienda especializada en productos/kits (NO hacemos mano de obra de taller mecánico de cambio de aceite, PERO sí entregamos el combo completo de aceite + filtro Advance + Cockpit Care con esponja de regalo, listo para llevar al mecánico o cambiar en casa).\n" +
-  "- REGLA ÚNICA Y EXACTA DE ENVÍOS Y BATERÍAS (SIN CONTRADICCIONES):\n" +
+  "- Tienda y bodega única: Pedernales, Vía al Carmen (frente a la gasolinera). Horario: Lunes a Sábado de 08:00 a 18:00. Envíos diarios a todo el Ecuador en menos de 48 horas. Nunca menciones sucursales en otras ciudades.\n" +
+  "- Somos tienda especializada en productos y kits (NO hacemos mano de obra de taller mecánico, PERO sí entregamos el combo completo de aceite + filtro Advance + Cockpit Care con esponja de regalo, listo para llevar al mecánico o cambiar en casa).\n" +
+  "- REGLA ÚNICA DE ENVÍOS Y BATERÍAS:\n" +
   "  • Dentro de Pedernales: Domicilio GRATIS en compras/combos desde $35.00, e instalación + chequeo de alternador a domicilio 100% GRATIS en toda batería (sin monto mínimo).\n" +
-  "  • Fuera de Pedernales (todo el Ecuador en menos de 48 horas: Manabí, Esmeraldas, Santo Domingo, Guayaquil, Sierra, Austro y Oriente): Envío desde LíderPro Pedernales por cooperativa de transporte, Servientrega o Tramaco en <48h (el valor del flete se confirma según ciudad y peso; la instalación gratuita de baterías a domicilio aplica únicamente dentro de Pedernales).\n" +
-  "- POLÍTICA OFICIAL ÚNICA DE PAGOS Y ANTI-FRAUDE (ESTRICTO — ÚNICA CUENTA AUTORIZADA EN BANCO PICHINCHA; PROHIBIDO MENCIONAR CUENTAS PROPIAS EN OTROS BANCOS):\n" +
-  "  • Efectivo: aceptado únicamente dentro de Pedernales (contra entrega o retiro en tienda).\n" +
-  "  • Transferencia bancaria — ÚNICA CUENTA AUTORIZADA:\n" +
-  `    - Banco: ${OFFICIAL_BANK_ACCOUNT.bank}\n` +
-  `    - Tipo: ${OFFICIAL_BANK_ACCOUNT.accountType}\n` +
-  `    - Número: ${OFFICIAL_BANK_ACCOUNT.accountNumber}\n` +
-  `    - C.I.: ${OFFICIAL_BANK_ACCOUNT.idNumber}\n` +
-  `    - Titular: ${OFFICIAL_BANK_ACCOUNT.holderName}\n` +
-  `  • Transferencias interbancarias: ${OFFICIAL_BANK_ACCOUNT.interbankRule}\n` +
-  `  • Regla estricta de despacho: ${OFFICIAL_BANK_ACCOUNT.verificationRule}\n` +
-  "  • PROHIBICIÓN ABSOLUTA ANTI-FRAUDE: Si un cliente dice que ya transfirió o envía un comprobante, JAMÁS confirmes el pago ni des hora de salida o autorización de retiro; indica siempre que el comprobante entra a verificación con administración y mostrador (estado: pendiente por verificar) y que apenas sea aprobado se le enviarán por aquí los detalles de despacho o retiro.\n" +
+  "  • Fuera de Pedernales (todo el Ecuador en menos de 48 horas: Manabí, Esmeraldas, Santo Domingo, Guayaquil, Sierra, Austro y Oriente): Envío desde LíderPro Pedernales por cooperativa de transporte, Servientrega o Tramaco en <48h. PROHIBIDO inventar rangos o valores en dólares para el flete; indica siempre que nuestro asesor confirma el valor exacto del envío según ciudad y peso.\n" +
+  "- REGLA DE ORO — CERO FRICCIÓN DE PAGO PREMATURA:\n" +
+  "  • PROHIBIDO mencionar 'transferencia anticipada', 'pago previo', 'no hacemos contra entrega' ni datos bancarios en saludos, cotizaciones o seguimientos.\n" +
+  "  • Los datos de pago (Banco Pichincha) SOLO se muestran cuando el cliente confirma explícitamente que quiere cerrar el pedido o pregunta directamente cómo pagar.\n" +
+  "  • Si un cliente pregunta específicamente por pago contra entrega fuera de Pedernales, responde con tacto y calidez (sin sonar cortante), enfocándote en la seguridad de su compra (factura electrónica SRI, despacho garantizado con foto de guía y seguimiento), y llama a `escalar_a_asesor_humano` si es pedido de volumen/flota.\n" +
+  "  • PROHIBICIÓN ABSOLUTA ANTI-FRAUDE: Si un cliente dice que ya transfirió o envía un comprobante, JAMÁS confirmes el pago ni des hora de salida o autorización de retiro; indica siempre que el comprobante entra a verificación con administración y mostrador (estado: pendiente por verificar).\n" +
   "  • Facturación: 100% con factura electrónica autorizada por el SRI.\n" +
   "- Descuentos oficiales de baterías sobre PVP con IVA: Baterías Ecuador 35% entregando batería usada / 30% sin entregar usada; Baterías Bosch 25% entregando usada / 20% sin usada.\n\n" +
-  "REGLAS DE ORO DE VENTA CONSULTIVA ECUATORIANA (OBLIGATORIAS):\n" +
-  "1) CONVERSA COMO UN VENDEDOR REAL EN ECUADOR (MANABÍ + SIERRA) CON ORTOGRAFÍA IMPECABLE:\n" +
-  "   • Entiende perfecto faltas de ortografía y expresiones locales ('votando umo', 'traga full gaso', 'anda ahogado', 'cascabelea', 'una aceitada', 'batería bajada', 'ñaño/pana/vecino/mi estimado/jefe', 'envío por cooperativa'), pero NUNCA copies las faltas ortográficas del cliente (escribe siempre 'bota humo', 'gasolina', etc.).\n" +
-  "   • MODERACIÓN DE MODISMOS: Usa 'pana', 'vecino' o 'jefe' con naturalidad y moderación (MÁXIMO 1 a 2 veces en toda la conversación, JAMÁS en cada mensaje).\n" +
-  "   • PROHIBIDO REPETIR MULETILLAS DE CIERRE: Nunca repitas la misma pregunta de cierre en dos turnos seguidos. Varía cada cierre según el paso real de la charla (resolver duda -> guiar a retiro o envío -> confirmar datos para despacho).\n" +
-  "   • Formato móvil ultracorto (<=450 caracteres, 4 a 6 líneas): da 1 recomendación ganadora clara con su precio exacto c/IVA + 1 pregunta binaria directa de cierre (retiro/envío o batería usada). PROHIBIDO mostrar códigos SKU internos salvo que el cliente los pida y PROHIBIDO copiar instrucciones internas del sistema.\n" +
-  "   • Contexto de anuncio CTWA: si aparece [ORIGEN ANUNCIO CTWA] y el usuario escribe 'Hola', 'Precio', 'Info' o pulsa un botón, responde directo sobre ese producto/combo con 1 pregunta corta de calificación.\n" +
-  "   • Baterías con vehículo conocido: si el cliente ya indicó su carro, llama a `buscar_en_catalogo` en este turno y cotiza directo SIN pedirle grupo de batería y SIN confundir amperaje (ej. 55 Amp) con número de grupo (Grupo 42).\n" +
-  "   • Estilo WhatsApp limpio: párrafos cortos, *negrita* con un asterisco, bullets con •, CERO tablas Markdown.\n" +
-  "2) AGILIDAD EN ADITIVOS UNIVERSALES + BLOQUEO DURO DE FILTROS SIN VEHÍCULO:\n" +
-  "   • Si el cliente describe síntoma + combustible (ej. 'humo negro y traga gasolina', 'humo azul', 'inyectores sucios', 'se recalienta'), DEBES llamar obligatoriamente a `buscar_en_catalogo` EN ESTE MISMO TURNO antes de responder y entregarle de una vez el nombre y precio exacto con IVA del aditivo universal devuelto por la herramienta (JAMÁS inventes el precio ni uses $35.00 como precio de producto).\n" +
-  "   • PROHIBIDO cotizar o dar precio de cualquier filtro específico (aire, aceite, combustible o cabina) o aceite específico antes de conocer marca, modelo y año del vehículo. Si quieres sugerir revisar filtro de aire por humo negro, solo pregúntale qué vehículo y año tiene para cotizárselo exacto.\n" +
-  "3) VERIFICACIÓN DE LITRAJE DEL MOTOR (> 4.0 LITROS): Cuando un vehículo requiera más de 4.0 litros de aceite (ej. 4.5–4.7L en SUVs como Chery Tiggo 7 Pro o 5L–6L en camionetas/SUVs grandes si no lleva ya un combo de 7L), DEBES avisar el litraje real y ofrecer sumar el envase adicional de 1 litro de la misma familia (ver 'litroAdicionalRecomendado' en buscar_en_catalogo) para que el cliente no se quede corto en la lubricadora, calculándolo junto en `gestionar_carrito`.\n" +
-  "4) PROHIBIDO VOMITAR LISTAS ROBÓTICAS DE 3 OPCIONES SIN CRITERIO: Cuando el cliente pregunte '¿cuál es mejor?' o esté indeciso, RECOMIENDA 1 GANADOR CLARO del último tema conversado y explica en 1 frase sencilla por qué conviene más.\n" +
-  "5) RESUELVE EL MENSAJE COMPLETO EN UN SOLO TURNO: Si piden 2 o 3 cosas distintas a la vez (ej. limpia inyectores + aceite + filtro para Aveo, o batería + aceite para Chery Tiggo 7 Pro), llama a `buscar_en_catalogo` con TODAS las consultas en el mismo arreglo `consultas`. Si piden 'ármame un combo completo' o 'dime el precio de todo', elige el mejor producto de cada ítem (incluyendo el litro extra si el motor supera 4L), llama a `gestionar_carrito` y entrega el desglose + total exacto devuelto por la herramienta.\n" +
-  "6) PROHIBIDO INVENTAR PRECIOS O SUMAR MENTALMENTE: Solo menciona precios exactos con IVA devueltos por `buscar_en_catalogo` o `gestionar_carrito`.\n" +
-  "7) CERO SESGO A ACEITES: Si el cliente preguntó primero por batería y luego dice su carro (ej. 'Volkswagen Gol 2010'), cotiza BATERÍA primero, no metas aceites que no pidió.\n" +
-  "8) VEHÍCULOS POCO COMUNES: Si preguntan qué aceite o batería lleva un vehículo que no está en los resultados locales (ej. Chery Tiggo 7 Pro, Geely Coolray, Jetour), usa `consultar_especificacion_vehiculo_web` + `buscar_en_catalogo` en el mismo flujo para dar respuesta técnica precisa con productos reales nuestros.\n" +
-  "9) PACIENCIA EN CONVERSACIONES LARGAS: Responde con calma cada duda sobre el calor de Manabí, cómo usar un aditivo, envíos por cooperativa, retiro en tienda o factura SRI manteniendo el carrito intacto sin presionar el cierre antes de tiempo.\n" +
-  "10) HONESTIDAD TOTAL Y ESCALAMIENTO HUMANO: Si un producto no existe en bodega (pastillas de freno, líquido de frenos DOT 3/4, bujías, llantas), dilo sin rodeos. Si piden cotización mayorista grande (ej. 20-40 canecas), crédito a 30 días, descuentos fuera de tabla, hablar con un encargado/persona o muestran frustración, llama SIEMPRE a `escalar_a_asesor_humano` sin inventar condiciones ni créditos.\n" +
-  "11) REGISTRO DE PEDIDO: Cuando el cliente ya confirme que quiere pedir y entregue su nombre, dirección/ciudad/retiro y forma de pago, llama a `registrar_pedido` (asegurándote primero que el carrito tenga todos los ítems exactos). Si el pago es por transferencia, entrega los datos exactos de Banco Pichincha (2216090525 / CI 1308068814 / ADRIAN MOSQUERA), aclara interbancarias solo con convenio directo, pide el comprobante COMPLETO y NO prometas hora de salida ni retiro hasta verificación.";
+  "PSICOLOGÍA DE VENTA CONSULTIVA Y RITMO MÓVIL (<= 380–420 CARACTERES):\n" +
+  "1) INTERÉS GENUINO ANTES QUE VENTA FRÍA:\n" +
+  "   • 4x4 / Camionetas: destaca la protección real de motor y turbo con calidad alemana MANNOL, el litraje exacto sin quedarse corto y la comodidad de recibir todo el kit listo en un solo envío.\n" +
+  "   • Flotas / Talleres: destaca cero tiempos muertos, stock inmediato y resolver varias unidades en un solo pedido.\n" +
+  "   • Cierre por micro-compromiso: termina SIEMPRE con 1 pregunta natural centrada en el cliente (ej. '¿Para cuándo le toca el cambio?', '¿Su motor lleva 5 o 6 litros?', '¿Retira en Pedernales o se lo enviamos?').\n" +
+  "   • Entiende faltas de ortografía y jerga local ('votando umo', '16 w40' = 15W-40, 'Dimax' = D-Max, 'traga full gaso'), escribiendo siempre con ortografía impecable.\n" +
+  "   • CERO MULETILLAS REPETITIVAS: JAMÁS uses 'jefe', 'pana', 'vecino' ni 'ñaño' en consultas B2B/flota, ni los repitas en la conversación.\n" +
+  "   • Formato WhatsApp limpio y ultracorto (<= 380–420 caracteres, 4 a 6 líneas): da 1 recomendación ganadora clara con su precio exacto c/IVA + 1 pregunta natural de cierre. CERO tablas Markdown y CERO códigos SKU salvo que los pidan.\n" +
+  "   • Contexto CTWA: si aparece [ORIGEN ANUNCIO CTWA] y escriben 'Hola', 'Precio' o 'Info', responde directo sobre ese producto con 1 pregunta corta de calificación.\n" +
+  "   • Baterías con vehículo conocido: llama a `buscar_en_catalogo` y cotiza directo SIN pedir grupo de batería.\n" +
+  "2) ADITIVOS UNIVERSALES + BLOQUEO DURO DE FILTROS SIN VEHÍCULO:\n" +
+  "   • Ante síntoma + combustible, llama a `buscar_en_catalogo` en este turno y da el precio exacto con IVA del aditivo (JAMÁS uses $35.00 como precio de producto).\n" +
+  "   • PROHIBIDO cotizar filtros o aceites específicos antes de conocer marca, modelo, año y combustible (en pickups duales como D-Max, Hilux, Ranger, BT-50 sin combustible confirmado, pregunta en 1 línea si es gasolina o diésel).\n" +
+  "3) VERIFICACIÓN EXACTA DE LITRAJE (> 4.0L Y > 7.0L): Si `buscar_en_catalogo` devuelve `alertaLitraje`, suma el número exacto de litros adicionales de 1L (ej. 9L = combo 7L + 2x 1L = $121.50; jamás 7L + 1L para 9L) y usa `gestionar_carrito` para devolver el total exacto.\n" +
+  "4) UN GANADOR CLARO: Si preguntan cuál conviene más, recomienda 1 ganador claro y explica en 1 frase por qué protege mejor su motor.\n" +
+  "5) MULTI-CONSULTA EN 1 TURNO: Llama a `buscar_en_catalogo` con todas las consultas en `consultas` y usa `gestionar_carrito` cuando pidan kit completo o total consolidado.\n" +
+  "6) PROHIBIDO INVENTAR PRECIOS O FLETES: Solo usa cifras devueltas por `buscar_en_catalogo` o `gestionar_carrito`.\n" +
+  "7) CERO SESGO A ACEITES: Si preguntaron por batería, cotiza batería primero.\n" +
+  "8) VEHÍCULOS POCO COMUNES: Usa `consultar_especificacion_vehiculo_web` + `buscar_en_catalogo`.\n" +
+  "9) ESCALAMIENTO HUMANO AUTOMÁTICO Y HONESTO: Si un producto no existe en bodega dilo sin rodeos. Si piden flota/proforma (>=3 vehículos o >=5 canecas 20L), vehículos pesados sin filtros mapeados (Sinotruk, Weichai, Glory), valor exacto de flete a otra ciudad para cerrar, descuento especial o hablar con encargado, llama a `escalar_a_asesor_humano` y responde en máximo 2 líneas avisando que ya pasaste el dato exacto para confirmárselo cuanto antes.\n" +
+  "10) REGISTRO DE PEDIDO: Cuando el cliente ya confirme que quiere pedir y dé nombre, dirección/ciudad/retiro y forma de pago, llama a `registrar_pedido`. Solo entonces entrega los datos de Banco Pichincha (2216090525 / CI 1308068814 / ADRIAN MOSQUERA), pide comprobante completo y no prometas hora de salida hasta verificación.";
 
 export const HERMES_SYSTEM_PROMPT = MILO_SYSTEM_PROMPT;
 
@@ -268,10 +265,19 @@ async function callNimStep(params: {
   return { ok: false };
 }
 
+function isPaymentOrClosingTurn(userMessage: string, salesStage?: string): boolean {
+  if (salesStage === "pedido_confirmado") return true;
+  const norm = normalizeText(userMessage);
+  return /\b(pagar|pago|cuenta|banco|pichincha|transfer\w*|deposito|efectivo|contra\s*entrega|pedir|confirmo|confirmar|si\s+quiero|lo\s+llevo|me\s+lo\s+llevo|armame\s+el\s+pedido|tomo\s+el|quiero\s+el)\b/.test(
+    norm
+  );
+}
+
 function buildLiveCustomerContextBlock(
   ctx: MiloToolExecutionContext,
   recentAssistantTexts: string[],
-  adContext: AdContextSpec | null
+  adContext: AdContextSpec | null,
+  userMessage: string
 ): string {
   const lines: string[] = ["[CONTEXTO VIVO DEL CLIENTE EN POSTGRES]"];
   if (adContext) {
@@ -340,16 +346,22 @@ function buildLiveCustomerContextBlock(
     lines.push(`- Últimos SKUs cotizados/recomendados en este chat: ${recDetails}`);
   }
 
-  // [DATOS BANCARIOS OFICIALES VERIFICADOS]
-  const bankDetails = getConfiguredBankTransferDetails() || formatOfficialBankTransferDetails();
-  lines.push(`- [DATOS BANCARIOS OFICIALES ÚNICOS]:\n${bankDetails}`);
+  // [DATOS BANCARIOS OFICIALES VERIFICADOS — SOLO EN CIERRE O CONSULTA EXPLÍCITA DE PAGO]
+  if (isPaymentOrClosingTurn(userMessage, ctx.commercialState.salesStage)) {
+    const bankDetails = getConfiguredBankTransferDetails() || formatOfficialBankTransferDetails();
+    lines.push(`- [DATOS BANCARIOS OFICIALES ÚNICOS]:\n${bankDetails}`);
+  } else {
+    lines.push(
+      "- [REGLA CERO FRICCIÓN]: El cliente aún NO confirmó compra ni preguntó cómo pagar. PROHIBIDO mencionar transferencia anticipada, pago previo, contra entrega o cuenta bancaria en esta respuesta."
+    );
+  }
 
   // [CONTROL DE ESTILO ANTI-REPETICIÓN]
-  const joinedPrev = recentAssistantTexts.join(" ");
-  const slangMatches = joinedPrev.match(/\b(pana|vecino|jefe|ñaño)\b/gi) || [];
-  if (slangMatches.length >= 2) {
+  const joinedPrev = recentAssistantTexts.slice(-3).join(" ");
+  const slangMatches = joinedPrev.match(/\b(pana|vecino|jefe|ñaño|nano)\b/gi) || [];
+  if (slangMatches.length >= 1 || ctx.customerType !== "particular") {
     lines.push(
-      `- [CONTROL DE MODISMOS]: Ya usaste modismos locales (${slangMatches.length} veces) en mensajes previos. En ESTE turno NO uses "pana", "vecino", "jefe" ni "ñaño"; habla natural y cálido sin repetir muletillas.`
+      `- [CONTROL DE MODISMOS ESTRICTO]: En ESTE turno PROHIBIDO usar "jefe", "pana", "vecino" ni "ñaño". Habla natural, experto y cercano sin muletillas.`
     );
   }
   const lastReply = recentAssistantTexts[recentAssistantTexts.length - 1] || "";
@@ -365,7 +377,15 @@ function buildLiveCustomerContextBlock(
   return lines.join("\n");
 }
 
-function sanitizeWhatsAppFormatting(raw: string): string {
+function sanitizeWhatsAppFormatting(
+  raw: string,
+  opts?: {
+    userText?: string;
+    recentAssistantTexts?: string[];
+    isB2BOrFleet?: boolean;
+    allowPaymentDetails?: boolean;
+  }
+): string {
   let text = raw.replace(/\r\n/g, "\n").trim();
   // Convert Markdown bold **x** -> WhatsApp bold *x*
   text = text.replace(/\*\*([^*\n]+)\*\*/g, "*$1*");
@@ -381,8 +401,41 @@ function sanitizeWhatsAppFormatting(raw: string): string {
       .filter(Boolean);
     return cells.length > 0 ? `• ${cells.join(" — ")}` : "";
   });
-  // Clean excessive blank lines
-  text = text.replace(/\n{3,}/g, "\n\n").trim();
+
+  // Bug 4: Cero eco de "Quito" si el usuario no mencionó Quito
+  const userMentionedQuito = /\bquito\b/i.test(normalizeText(opts?.userText || ""));
+  if (!userMentionedQuito) {
+    text = text
+      .replace(/[^.\n]*\bno\s+tenemos\s+sucursal(?:es)?\s+en\s+quito[^.\n]*\.?\s*/gi, "")
+      .replace(/[^.\n]*\bsucursal\s+en\s+quito[^.\n]*\.?\s*/gi, "")
+      .replace(/\bquito\b/gi, "otras ciudades");
+  }
+
+  // Bug 5: Eliminación dura de "Jefe" / modismos si ya aparecieron >=1 vez en últimos 3 turnos o en B2B/flota
+  const prevSlang = (opts?.recentAssistantTexts || []).slice(-3).join(" ");
+  const hasPrevSlang = /\b(jefe|pana|vecino|ñaño|nano)\b/i.test(normalizeText(prevSlang));
+  if (hasPrevSlang || opts?.isB2BOrFleet) {
+    text = text
+      .replace(/(^|[.!?]\s+|\n)(?:hola|buenas|entendido|perfecto|listo|claro|s[ií]),?\s+(?:mi\s+)?(?:jefe|pana|vecino|ñaño)[,!.:]*\s*/gi, (_m, lead: string) => lead)
+      .replace(/(^|[.!?]\s+|\n)(?:mi\s+)?(?:jefe|pana|vecino|ñaño)[,!.:]+\s*([a-záéíóúñ])/gi, (_m, lead: string, nextCh: string) => `${lead}${nextCh.toUpperCase()}`)
+      .replace(/,?\s*\b(?:mi\s+)?(?:jefe|pana|vecino|ñaño)\b([,!.:?]?)/gi, "$1");
+  }
+
+  // Cero fricción de pago prematura si el cliente no preguntó por pago ni está cerrando pedido
+  if (opts && !opts.allowPaymentDetails) {
+    text = text
+      .replace(/[^.\n]*(?:transferencia\s+anticipada|pago\s+previo|no\s+hacemos\s+contra\s*entrega|contra\s*entrega\s+solo\s+aplica|no\s+despachamos\s+hasta\s+verificar|2216090525|1308068814)[^.\n]*\.?\s*/gi, "")
+      .replace(/\n{2,}\s*(?:•\s*)?(?:\*?Pago:?|\*?Pagos:?)\s*[^\n]*(?:\n•[^\n]*)*/gi, "");
+  }
+
+  // Bug 3: Cero rangos en dólares inventados para fletes
+  text = text.replace(
+    /(\b(?:flete|env[ií]o|cooperativa)[^.\n]*?)\s*\(?(?:generalmente|aprox(?:imadamente)?\.?)?\s*(?:entre\s+)?\$\d+(?:[.,]\d+)?\s*(?:-|a|y)\s*\$\d+(?:[.,]\d+)?\)?/gi,
+    "$1 (el valor exacto se confirma con nuestro asesor según ciudad y peso)"
+  );
+
+  // Clean excessive blank lines and stray spacing
+  text = text.replace(/[ \t]{2,}/g, " ").replace(/\n{3,}/g, "\n\n").trim();
   return text;
 }
 
@@ -463,6 +516,136 @@ function findUnverifiedPrices(reply: string, allowed: Set<number>): number[] {
   return bad;
 }
 
+function formatSelectedItemsSummary(
+  cartItems: Array<{ sku: string; qty: number }>,
+  primaryQuotedItems: Array<{ sku: string; qty: number }> | undefined,
+  fallbackSkus: string[]
+): string {
+  const source =
+    cartItems.length > 0
+      ? cartItems.map((i) => ({ sku: i.sku, qty: Math.max(1, i.qty || 1) }))
+      : primaryQuotedItems && primaryQuotedItems.length > 0
+      ? primaryQuotedItems
+      : fallbackSkus.slice(0, 2).map((sku) => ({ sku, qty: 1 }));
+  return source.map((i) => (i.qty > 1 ? `${i.qty}× ${i.sku}` : i.sku)).join(" + ");
+}
+
+function evaluateDeterministicEscalationSignal(params: {
+  cleanMessage: string;
+  city: string | null;
+  customerType: CustomerType;
+  activeVehicle: VehicleProfile | null;
+  quotedTotalUsd: number | null;
+  cartItemsCount: number;
+  selectedSkusLabel: string;
+  matchedSkusCount: number;
+  customerName: string | null;
+}): {
+  reason: string;
+  urgency: EscalationUrgency;
+  shortClientLabel: string;
+  actionNeeded: string;
+  howToHandle: string;
+  suggestedReply: string;
+} | null {
+  const norm = normalizeText(params.cleanMessage)
+    .replace(/\b16\s*w[-\s]?40\b/g, "15w-40")
+    .replace(/\b(0|5|10|15|20)\s*w\s*(20|30|40|50)\b/g, "$1w-$2");
+
+  const vehicleBrands = [
+    /\bsinotruk\b/,
+    /\bweichai\b/,
+    /\bfoton\b/,
+    /\bpoer\b/,
+    /\bglory\b/,
+    /\bhowo\b/,
+    /\bshacman\b/,
+    /\bhino\b/,
+    /\bjac\b/,
+    /\bisuzu\b/,
+    /\b(d[-\s]?max|di[-\s]?max|dimax)\b/,
+    /\bhi[-\s]?lux\b/,
+    /\branger\b/,
+    /\bbt[-\s]?50\b/,
+    /\brich\s*6\b/,
+  ];
+  const brandHits = vehicleBrands.filter((rx) => rx.test(norm)).length;
+  const hasUnmappedHeavy = /\b(sinotruk|weichai|howo|shacman|glory)\b/.test(norm);
+
+  let maxCanecas = 0;
+  const canecaMatches = norm.matchAll(/\b(\d{1,3})\s*(?:canecas?|tambores?|baldes?)\b/g);
+  for (const m of canecaMatches) {
+    const qty = Number(m[1]);
+    if (Number.isFinite(qty) && qty > maxCanecas) maxCanecas = qty;
+  }
+
+  const isFleetOrVolume =
+    brandHits >= 3 ||
+    maxCanecas >= 5 ||
+    (/\b(flota|proforma|mayorista|taller)\b/.test(norm) && (brandHits >= 2 || maxCanecas >= 5 || hasUnmappedHeavy));
+
+  const cityOutsidePedernales = Boolean(params.city && normalizeText(params.city) !== "pedernales");
+  const asksFreightOrOutsideShipping =
+    cityOutsidePedernales &&
+    (/\b(flete|cuanto\s+(?:cuesta|vale|sale)\s+el\s+envio|enviame|enviamelo|despachame|confirmo|quiero\s+pedir|me\s+lo\s+llevo|para\s+[a-z]+|envio\s+a)\b/.test(norm) ||
+      ((params.quotedTotalUsd !== null || params.cartItemsCount > 0 || params.matchedSkusCount > 0) &&
+        /\b(guayaquil|quito|manta|portoviejo|santo\s+domingo|esmeraldas|cuenca|ambato|machala|loja|cooperativa|servientrega|tramaco|envio)\b/.test(norm)));
+
+  const asksSpecialTerms =
+    /\b(descuento\s+(?:especial|mayorista)|credito\s+a\s+\d+|plazo\s+de\s+pago)\b/.test(norm) ||
+    (cityOutsidePedernales && /\bcontra\s*entrega\b/.test(norm));
+
+  const nombre = params.customerName ? ` ${params.customerName}` : "";
+  const cityLabel = params.city || "otra ciudad";
+
+  if (isFleetOrVolume || hasUnmappedHeavy) {
+    return {
+      reason: hasUnmappedHeavy
+        ? "Flota B2B / vehículos pesados sin filtros mapeados"
+        : maxCanecas >= 5
+        ? `Pedido de volumen (${maxCanecas} canecas 20L)`
+        : "Proforma B2B multi-vehículo",
+      urgency: "alta",
+      shortClientLabel: "el stock exacto de filtros y proforma de tu flota",
+      actionNeeded: hasUnmappedHeavy
+        ? "Validar códigos/stock de filtros para Sinotruk/Weichai/Glory y armar proforma B2B unificada."
+        : "Confirmar cantidades exactas de canecas 20L, disponibilidad y proforma B2B.",
+      howToHandle:
+        `1) Revisa las unidades mencionadas (${params.selectedSkusLabel || "canecas 20L MANNOL 15W-40 $125.00 / 10W-40 $128.50"}) y verifica equivalencias de filtros pesados.\n` +
+        `2) Envía la proforma consolidada con factura SRI y coordina un solo despacho.`,
+      suggestedReply: `Hola${nombre}, soy el asesor de LíderPro Pedernales. Milo ya me pasó el detalle de tu flota; estoy validando los filtros exactos para enviarte la proforma completa en un solo despacho.`,
+    };
+  }
+
+  if (asksFreightOrOutsideShipping) {
+    const totalTxt = params.quotedTotalUsd ? `$${params.quotedTotalUsd.toFixed(2)}` : "pendiente";
+    return {
+      reason: `Confirmar flete exacto a ${cityLabel}`,
+      urgency: "alta",
+      shortClientLabel: `el valor exacto del envío a ${cityLabel}`,
+      actionNeeded: `Confirmar valor exacto de flete a ${cityLabel} para ${formatVehicleLabel(params.activeVehicle) || "el kit"} (producto ${totalTxt}).`,
+      howToHandle:
+        `1) Cotiza el peso del kit (${params.selectedSkusLabel || "producto cotizado"} = ${totalTxt}) en cooperativa/Servientrega/Tramaco a ${cityLabel}.\n` +
+        `2) Envía el valor exacto del flete sin contradecir el precio del kit ya dado por Milo y pide datos para el despacho.`,
+      suggestedReply: `Hola${nombre}, soy el asesor de LíderPro Pedernales. Tu kit ya está listo (${totalTxt} c/IVA) y enseguida te confirmo el costo exacto del envío a ${cityLabel} para despacharlo hoy mismo.`,
+    };
+  }
+
+  if (asksSpecialTerms) {
+    return {
+      reason: "Solicitud de descuento especial o excepción de pago",
+      urgency: "media",
+      shortClientLabel: "las condiciones de tu pedido",
+      actionNeeded: `Revisar solicitud de descuento especial / condición de pago para ${cityLabel}.`,
+      howToHandle:
+        `1) Revisa el historial del cliente y el margen del pedido antes de aprobar excepciones.\n` +
+        `2) Responde resaltando garantía original, factura SRI y seguimiento de envío.`,
+      suggestedReply: `Hola${nombre}, soy el asesor de LíderPro Pedernales. Milo me compartió tu consulta y con gusto reviso la mejor alternativa para cerrar tu pedido con factura oficial y despacho garantizado.`,
+    };
+  }
+
+  return null;
+}
 function parseToolArgs(rawArgs: string): Record<string, unknown> {
   try {
     const parsed = JSON.parse(rawArgs || "{}");
@@ -598,6 +781,8 @@ export async function generateHermesReply(
     matchedSkus: new Set<string>(),
     createdOrder: null,
     escalatedToHuman: false,
+    escalationAlertPreview: null,
+    sendLiveAlerts: shouldPersist,
     intentTag: "general",
     toolsUsed: [],
   };
@@ -621,9 +806,20 @@ export async function generateHermesReply(
     .filter((t) => t.role === "assistant")
     .map((t) => t.content);
 
+  const allowPaymentDetails = isPaymentOrClosingTurn(cleanMessage, prevState.salesStage);
+  const isB2BOrFleetTurn =
+    customerType !== "particular" ||
+    /\b(flota|proforma|mayorista|taller|caneca|sinotruk|weichai|howo|shacman|glory)\b/i.test(normalizeText(cleanMessage));
+  const sanitizeOpts = {
+    userText: cleanMessage,
+    recentAssistantTexts,
+    isB2BOrFleet: isB2BOrFleetTurn,
+    allowPaymentDetails,
+  };
+
   const llmMessages: NimMessagePayload[] = [
     { role: "system", content: MILO_SYSTEM_PROMPT },
-    { role: "system", content: buildLiveCustomerContextBlock(toolCtx, recentAssistantTexts, adContext) },
+    { role: "system", content: buildLiveCustomerContextBlock(toolCtx, recentAssistantTexts, adContext, cleanMessage) },
     ...effectiveHistory.slice(-28).map((t) => ({
       role: t.role,
       content: t.content,
@@ -674,7 +870,7 @@ export async function generateHermesReply(
     }
 
     if (stepRes.content && stepRes.content.length > 0) {
-      finalReply = sanitizeWhatsAppFormatting(stepRes.content);
+      finalReply = sanitizeWhatsAppFormatting(stepRes.content, sanitizeOpts);
       break;
     }
   }
@@ -735,7 +931,7 @@ export async function generateHermesReply(
           remainingBudgetMs: totalBudgetMs - (Date.now() - startedAt),
         });
         if (repaired.ok && repaired.content) {
-          const candidate = sanitizeWhatsAppFormatting(repaired.content);
+          const candidate = sanitizeWhatsAppFormatting(repaired.content, sanitizeOpts);
           if (findUnverifiedPrices(candidate, allowedPrices).length === 0) {
             finalReply = candidate;
           }
@@ -748,10 +944,13 @@ export async function generateHermesReply(
   if (!finalReply) {
     usedFallback = true;
     usedModel = "milo-deterministic-fallback";
-    finalReply = buildEmergencyOfflineFallback(
-      cleanMessage,
-      toolCtx,
-      effectiveHistory.map((t) => t.content).join("\n")
+    finalReply = sanitizeWhatsAppFormatting(
+      buildEmergencyOfflineFallback(
+        cleanMessage,
+        toolCtx,
+        effectiveHistory.map((t) => t.content).join("\n")
+      ),
+      sanitizeOpts
     );
   }
 
@@ -768,6 +967,53 @@ export async function generateHermesReply(
     null;
 
   const matchedSkusArr = Array.from(toolCtx.matchedSkus);
+
+  const selectedSkusLabel = formatSelectedItemsSummary(cartItems, toolCtx.primaryQuotedItems, matchedSkusArr);
+
+  // 6. Disparador determinístico de escalamiento al WhatsApp del administrador (con debounce 30 min)
+  if (!toolCtx.escalatedToHuman) {
+    const detEsc = evaluateDeterministicEscalationSignal({
+      cleanMessage,
+      city: toolCtx.city,
+      customerType: toolCtx.customerType,
+      activeVehicle: toolCtx.activeVehicle,
+      quotedTotalUsd,
+      cartItemsCount: cartItems.length,
+      selectedSkusLabel,
+      matchedSkusCount: matchedSkusArr.length,
+      customerName: toolCtx.customerName,
+    });
+    if (detEsc) {
+      const quotedSummary =
+        cartItems.length > 0
+          ? `${cartItems.map((i) => `${i.qty}x ${i.name} ($${i.unitPriceIva.toFixed(2)})`).join(" + ")} [${selectedSkusLabel}] = $${(cartTotalUsd ?? 0).toFixed(2)}`
+          : quotedTotalUsd !== null
+          ? `${selectedSkusLabel || "cotización"} = $${quotedTotalUsd.toFixed(2)} c/IVA`
+          : cleanMessage.slice(0, 140);
+      const esc = await flagCustomerHumanEscalation({
+        phoneOrSession: sessionId,
+        reason: detEsc.reason,
+        summary: cleanMessage.slice(0, 300),
+        urgency: detEsc.urgency,
+        customerName: toolCtx.customerName,
+        customerPhone: toolCtx.customerPhone,
+        city: toolCtx.city,
+        adTag: effectiveAttribution.adTag ?? null,
+        vehicleLabel: formatVehicleLabel(toolCtx.activeVehicle) || null,
+        quotedSummary,
+        actionNeeded: detEsc.actionNeeded,
+        howToHandle: detEsc.howToHandle,
+        suggestedReply: detEsc.suggestedReply,
+        sendLiveAlerts: shouldPersist,
+      });
+      toolCtx.escalatedToHuman = true;
+      toolCtx.escalationAlertPreview = esc.alertPreviewMasked;
+      toolCtx.intentTag = "escalamiento_humano";
+      if (!/\basesor\b/i.test(finalReply)) {
+        finalReply = `${finalReply}\n\nYa pasé tu dato exacto a nuestro asesor para confirmarte ${detEsc.shortClientLabel} cuanto antes.`;
+      }
+    }
+  }
   const hasPriceOrDeliveryObjection =
     /\b(caro|costoso|descuento|rebaja|luego|despu[eé]s|otro\s+d[ií]a|pensarlo|flete|cu[aá]nto\s+(?:cuesta|vale)\s+el\s+env[ií]o)\b/i.test(
       cleanMessage
@@ -849,6 +1095,7 @@ export async function generateHermesReply(
     orderCreated: Boolean(toolCtx.createdOrder),
     order: toolCtx.createdOrder,
     escalatedToHuman: toolCtx.escalatedToHuman,
+    escalationAlertPreview: toolCtx.escalationAlertPreview ?? null,
     cartTotalUsd,
   };
 }

@@ -331,7 +331,7 @@ interface VehicleAliasRule {
 }
 
 const VEHICLE_ALIAS_RULES: VehicleAliasRule[] = [
-  { make: "Chevrolet", modelKeyword: "D-Max", regex: /\b(d[-\s]?max|luv\s*d[-\s]?max)\b/i },
+  { make: "Chevrolet", modelKeyword: "D-Max", regex: /\b(d[-\s]?max|di[-\s]?max|dimax|luv\s*d[-\s]?max)\b/i },
   { make: "Chevrolet", modelKeyword: "Sail", regex: /\bsail\b/i, defaultFuel: "gasolina" },
   { make: "Chevrolet", modelKeyword: "Spark", regex: /\b(spark|beat)\b/i, defaultFuel: "gasolina" },
   { make: "Chevrolet", modelKeyword: "Aveo", regex: /\baveo\b/i, defaultFuel: "gasolina" },
@@ -657,14 +657,48 @@ export function extractBatteryTradeInFromText(text: string): boolean | null {
 export function pickMaxTwoLubricantCombos(
   vehicle: VehicleProfile | null,
   customerType: CustomerType,
-  norm: string
+  norm: string,
+  adTag?: string | null
 ): QuoteOption[] {
-  const wants5w40Diesel = /\b5w-?40\b|ad-?b06|diesel\s*turbo/i.test(norm);
+  const cleanNorm = norm
+    .replace(/\b16\s*w[-\s]?40\b/gi, "15w-40")
+    .replace(/\b(0|5|10|15|20)\s*w\s*(20|30|40|50)\b/gi, "$1w-$2");
+  const combinedText = `${formatVehicleLabel(vehicle)} ${cleanNorm}`;
+  const isExplicitGasoline =
+    vehicle?.fuel === "gasolina" || /\b(gasolina|nafta|2\.7)\b/i.test(cleanNorm);
+  const wants5w30 = /\b5w-?30\b/i.test(cleanNorm);
+  const wants5w40Diesel =
+    !isExplicitGasoline &&
+    (/\b5w-?40\b|ad-?b06|diesel\s*turbo/i.test(cleanNorm) || /^AD-B06$/i.test(adTag || ""));
+  const isDualPickup =
+    /\b(d[-\s]?max|di[-\s]?max|dimax|hi[-\s]?lux|ranger|bt[-\s]?50|poer)\b/i.test(combinedText);
+  const adImpliesDiesel =
+    /^(AD-B06|AD-B13)$/i.test(adTag || "") || /\b(ad-?b06|ad-?b13)\b/i.test(cleanNorm);
+  const isPoer = /\bpoer\b/i.test(combinedText);
+  const isFleet =
+    customerType === "camaronera" ||
+    /\b(caneca|20\s*l|20l|flota|hino|camion|camaronera|sinotruk|weichai|howo|shacman)\b/i.test(cleanNorm);
+
+  if (
+    !isFleet &&
+    !isExplicitGasoline &&
+    isDualPickup &&
+    !vehicle?.fuel &&
+    !wants5w40Diesel &&
+    !wants5w30 &&
+    !/\b(15w-?40|10w-?40|20w-?50|diesel|turbo\s*diesel)\b/i.test(cleanNorm) &&
+    !adImpliesDiesel
+  ) {
+    return [];
+  }
+
   const isDiesel =
-    wants5w40Diesel ||
-    vehicle?.fuel === "diésel" ||
-    /d-?max|hilux|wingle|poer|h-?100|dutro|hino|camaronera|diesel|turbo diesel/.test(norm);
-  const isFleet = customerType === "camaronera" || /\b(caneca|20\s*l|20l|flota|hino|camion|camaronera)\b/.test(norm);
+    !isExplicitGasoline &&
+    (wants5w40Diesel ||
+      vehicle?.fuel === "diésel" ||
+      isPoer ||
+      adImpliesDiesel ||
+      /d[-\s]?max|di[-\s]?max|dimax|hilux|wingle|poer|h-?100|dutro|hino|camaronera|diesel|turbo diesel/i.test(cleanNorm));
 
   let skus: [string, string];
   let labels: [string, string];
@@ -675,6 +709,26 @@ export function pickMaxTwoLubricantCombos(
       "Opción 1 (Trabajo Pesado 15W-40 Caneca 20L)",
       "Opción 2 (Semisintético UHPD 10W-40 Caneca 20L)",
     ];
+  } else if (isExplicitGasoline) {
+    if (wants5w30) {
+      skus = ["COMBO-MANNOL-1B", "COMBO-MANNOL-1A"];
+      labels = [
+        "Opción 1 (100% Sintético 5W-30)",
+        "Opción 2 (Semisintético 10W-40)",
+      ];
+    } else if (vehicle?.year && vehicle.year <= 2012) {
+      skus = ["COMBO-MANNOL-1A", "COMBO-MANNOL-1C"];
+      labels = [
+        "Opción 1 (Semisintético 10W-40)",
+        "Opción 2 (Alto Kilometraje 20W-50)",
+      ];
+    } else {
+      skus = ["COMBO-MANNOL-1A", "COMBO-MANNOL-1B"];
+      labels = [
+        "Opción 1 (Semisintético 10W-40)",
+        "Opción 2 (100% Sintético 5W-30)",
+      ];
+    }
   } else if (wants5w40Diesel) {
     skus = ["COMBO-MANNOL-2B", "COMBO-MANNOL-2A"];
     labels = [
@@ -728,7 +782,7 @@ function classifyBatterySegment(
 
   if (
     vehicle?.fuel === "diésel" ||
-    /\b(d-?max|hilux|fortuner|frontier|np300|navara|bt-?50|ranger|f-?150|l200|montero|prado|land\s*cruiser|sorento|santa\s*fe|wingle|poer|rich\s*6|amarok|h-?100|porter|4x4|pickup|camioneta|suv\s*grande|diesel|turbo\s*diesel)\b/.test(
+    /\b(d[-\s]?max|di[-\s]?max|dimax|hilux|fortuner|frontier|np300|navara|bt-?50|ranger|f-?150|l200|montero|prado|land\s*cruiser|sorento|santa\s*fe|wingle|poer|rich\s*6|amarok|h-?100|porter|4x4|pickup|camioneta|suv\s*grande|diesel|turbo\s*diesel)\b/.test(
       combined
     )
   ) {

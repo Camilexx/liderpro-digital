@@ -4,6 +4,11 @@ import path from "node:path";
 import { Pool, type PoolConfig } from "pg";
 import { OFFICIAL_BANK_ACCOUNT } from "@/data/businessConfig";
 import { META_CONFIG } from "@/data/metaConfig";
+import {
+  AFTER_HOURS_DISPATCH_PHRASE,
+  isWithinSameDayDispatchWindowEC,
+  sanitizeMiloLogisticsText,
+} from "@/lib/miloLogisticsPolicy";
 
 export type CustomerType = "particular" | "camaronera" | "taller";
 export type ChannelType = "whatsapp" | "demo_web" | "instagram" | "messenger";
@@ -1343,11 +1348,12 @@ export function buildApprovedDispatchMessage(order: OrderRecord): string {
     .map((i) => `• ${i.qty || 1}x ${i.name} — $${Number(i.unitPriceIva).toFixed(2)}`)
     .join("\n");
 
+  const sameDayOk = isWithinSameDayDispatchWindowEC();
   const deliveryInstructions = isPickup
     ? `🏪 *Retiro autorizado en local:* Pedernales, Vía al Carmen (frente a la gasolinera).\n🕒 *Horario:* Lunes a Sábado de 08:00 a 18:00.\nSolo indica tu nombre (*${order.customerName || "titular"}*) y *Pedido #${order.id}* en mostrador.`
     : isNational
-    ? `🚚 *Despacho nacional autorizado:* ${addr}.\nNuestro equipo embala tu pedido hoy mismo y te comparte la foto de la guía de envío apenas salga.`
-    : `🚚 *Despacho a domicilio autorizado en Pedernales:* ${addr}.\nNuestro equipo sale a coordinar la entrega contigo hoy mismo.`;
+    ? `🚚 *Despacho nacional coordinado autorizado:* ${sanitizeMiloLogisticsText(addr)}.\n${sameDayOk ? "Nuestro equipo embala tu pedido hoy mismo y te comparte la foto de la guía de envío apenas salga." : `Nuestro equipo procede a ${AFTER_HOURS_DISPATCH_PHRASE}.`}`
+    : `🚚 *Despacho a domicilio autorizado en Pedernales:* ${addr}.\n${sameDayOk ? "Nuestro equipo sale a coordinar la entrega contigo hoy mismo." : "Nuestro equipo deja tu pedido separado hoy en bodega y coordina la entrega en el primer turno hábil."}`;
 
   return (
     `✅ *¡Pago verificado! Pedido #${order.id} aprobado para despacho*\n\n` +
@@ -1905,13 +1911,15 @@ export async function flagCustomerHumanEscalation(input: {
   const adTagLabel = input.adTag || "Orgánico";
   const quotedLine = [input.vehicleLabel, input.quotedSummary || safeSummary].filter(Boolean).join(" | ");
   const actionLine = input.actionNeeded?.trim() || safeReason;
-  const howToLine =
+  const howToLine = sanitizeMiloLogisticsText(
     input.howToHandle?.trim() ||
-    `1) Revisa el historial del chat en /admin-hermes sin contradecir los precios ya cotizados.\n` +
-      `2) Confirma el punto pendiente al cliente y cierra el pedido con factura SRI.`;
-  const suggestedLine =
+      `1) Revisa el historial del chat en /admin-hermes sin contradecir los precios ya cotizados.\n` +
+        `2) Confirma el punto pendiente al cliente (envío a tu ciudad / dirección acordada sin nombrar flotas) y cierra el pedido con factura SRI.`
+  );
+  const suggestedLine = sanitizeMiloLogisticsText(
     input.suggestedReply?.trim() ||
-    `Hola${input.customerName ? ` ${input.customerName}` : ""}, soy el asesor de LíderPro Pedernales. Milo ya me pasó tu consulta completa para confirmarte el dato exacto y dejar listo tu pedido.`;
+      `Hola${input.customerName ? ` ${input.customerName}` : ""}, soy el asesor de LíderPro Pedernales. Milo ya me pasó tu consulta completa para confirmarte el dato exacto y dejar listo tu pedido.`
+  );
 
   const buildAlertBody = (contactRef: string): string =>
     `🚨 *ESCALAMIENTO MILO — [URGENCIA: ${safeUrgency.toUpperCase()}]*\n` +

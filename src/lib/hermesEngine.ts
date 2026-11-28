@@ -3,6 +3,10 @@ import {
   getConfiguredBankTransferDetails,
 } from "@/data/businessConfig";
 import {
+  buildNeutralFreightEscalationCopy,
+  sanitizeMiloLogisticsText,
+} from "@/lib/miloLogisticsPolicy";
+import {
   buildDeterministicQuotePlan,
   extractBatteryTradeInFromText,
   extractCityFromText,
@@ -116,7 +120,8 @@ export const MILO_SYSTEM_PROMPT =
   "- Somos tienda especializada en productos y kits (NO hacemos mano de obra de taller mecánico, PERO sí entregamos el combo completo de aceite + filtro Advance + Cockpit Care con esponja de regalo, listo para llevar al mecánico o cambiar en casa).\n" +
   "- REGLA ÚNICA DE ENVÍOS Y BATERÍAS:\n" +
   "  • Dentro de Pedernales: Domicilio GRATIS en compras/combos desde $35.00, e instalación + chequeo de alternador a domicilio 100% GRATIS en toda batería (sin monto mínimo).\n" +
-  "  • Fuera de Pedernales (todo el Ecuador en menos de 48 horas: Manabí, Esmeraldas, Santo Domingo, Guayaquil, Sierra, Austro y Oriente): Envío desde LíderPro Pedernales por cooperativa de transporte, Servientrega o Tramaco en <48h. PROHIBIDO inventar rangos o valores en dólares para el flete; indica siempre que nuestro asesor confirma el valor exacto del envío según ciudad y peso.\n" +
+  "  • Fuera de Pedernales (todo el Ecuador en menos de 48 horas: Manabí, Esmeraldas, Santo Domingo, Guayaquil, Sierra, Austro y Oriente): Despacho nacional coordinado desde LíderPro Pedernales en <48h. REGLA INQUEBRANTABLE DE TRANSPORTE NEUTRO: PROHIBIDO nombrar, sugerir o asegurar cooperativas de transporte, Servientrega, Tramaco ni ninguna flota específica; usa SIEMPRE 'envío a tu ciudad / dirección acordada' o 'despacho nacional coordinado'. PROHIBIDO inventar rangos o valores en dólares para el flete; indica siempre que nuestro asesor confirma el valor exacto del envío según ciudad y peso.\n" +
+  "  • REGLA INQUEBRANTABLE DE CORTE HORARIO (America/Guayaquil): PROHIBIDO sugerir 'despacharlo hoy mismo' si supera las 16:30 EC (Lun–Vie), 12:00 EC (Sáb) o en domingo; fuera de corte indica SIEMPRE 'dejarlo separado hoy en bodega y despacharlo en el primer turno hábil con guía'.\n" +
   "- REGLA DE ORO — CERO FRICCIÓN DE PAGO PREMATURA:\n" +
   "  • PROHIBIDO mencionar 'transferencia anticipada', 'pago previo', 'no hacemos contra entrega' ni datos bancarios en saludos, cotizaciones o seguimientos.\n" +
   "  • Los datos de pago (Banco Pichincha) SOLO se muestran cuando el cliente confirma explícitamente que quiere cerrar el pedido o pregunta directamente cómo pagar.\n" +
@@ -434,6 +439,9 @@ function sanitizeWhatsAppFormatting(
     "$1 (el valor exacto se confirma con nuestro asesor según ciudad y peso)"
   );
 
+  // Regla inquebrantable de neutralidad logística y corte horario America/Guayaquil
+  text = sanitizeMiloLogisticsText(text);
+
   // Clean excessive blank lines and stray spacing
   text = text.replace(/[ \t]{2,}/g, " ").replace(/\n{3,}/g, "\n\n").trim();
   return text;
@@ -619,15 +627,19 @@ function evaluateDeterministicEscalationSignal(params: {
 
   if (asksFreightOrOutsideShipping) {
     const totalTxt = params.quotedTotalUsd ? `$${params.quotedTotalUsd.toFixed(2)}` : "pendiente";
+    const neutralCopy = buildNeutralFreightEscalationCopy({
+      customerName: params.customerName,
+      cityLabel,
+      totalTxt,
+      selectedSkusLabel: params.selectedSkusLabel,
+    });
     return {
       reason: `Confirmar flete exacto a ${cityLabel}`,
       urgency: "alta",
       shortClientLabel: `el valor exacto del envío a ${cityLabel}`,
       actionNeeded: `Confirmar valor exacto de flete a ${cityLabel} para ${formatVehicleLabel(params.activeVehicle) || "el kit"} (producto ${totalTxt}).`,
-      howToHandle:
-        `1) Cotiza el peso del kit (${params.selectedSkusLabel || "producto cotizado"} = ${totalTxt}) en cooperativa/Servientrega/Tramaco a ${cityLabel}.\n` +
-        `2) Envía el valor exacto del flete sin contradecir el precio del kit ya dado por Milo y pide datos para el despacho.`,
-      suggestedReply: `Hola${nombre}, soy el asesor de LíderPro Pedernales. Tu kit ya está listo (${totalTxt} c/IVA) y enseguida te confirmo el costo exacto del envío a ${cityLabel} para despacharlo hoy mismo.`,
+      howToHandle: neutralCopy.howToHandle,
+      suggestedReply: neutralCopy.suggestedReply,
     };
   }
 

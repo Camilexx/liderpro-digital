@@ -168,7 +168,7 @@ export const MILO_OPENAI_TOOLS: OpenAIToolDefinition[] = [
           },
           direccion_o_terminal: {
             type: "string",
-            description: "Dirección exacta en Pedernales, 'Retiro en tienda Vía al Carmen', o cooperativa/terminal/Servientrega/Tramaco",
+            description: "Dirección exacta en Pedernales, 'Retiro en tienda Vía al Carmen', o ciudad y dirección acordada para despacho nacional coordinado",
           },
           cedula_o_ruc: { type: "string", description: "Cédula o RUC si el cliente la dio (para envío nacional o factura)" },
           metodo_pago: {
@@ -1287,7 +1287,7 @@ export async function executeMiloToolCall(
     const missing: string[] = [];
     if (cart.length === 0) missing.push("Productos en el carrito (usa gestionar_carrito primero)");
     if (!nombre) missing.push("Nombre completo del cliente");
-    if (!direccionRaw && tipoEntrega !== "retiro_tienda_pedernales") missing.push("Dirección exacta o terminal/cooperativa");
+    if (!direccionRaw && tipoEntrega !== "retiro_tienda_pedernales") missing.push("Ciudad y dirección acordada para envío");
     if (!metodoPago) missing.push("Forma de pago (efectivo en Pedernales o transferencia a Banco Pichincha)");
 
     const totals = computeCartTotals(cart, ctx.commercialState.batteryTradeIn);

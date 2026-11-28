@@ -12,9 +12,49 @@
  */
 
 export const AFTER_HOURS_DISPATCH_PHRASE =
-  "dejarlo separado hoy en bodega y despacharlo en el primer turno hábil con guía";
+  "dejarlo separado hoy en bodega y despacharlo en el primer turno hábil con foto de tu guía apenas salga a ruta";
 
-export const SAME_DAY_DISPATCH_PHRASE = "despacharlo hoy mismo con guía";
+export const SAME_DAY_DISPATCH_PHRASE = "despacharlo hoy mismo con foto de tu guía apenas salga a ruta";
+
+export const HUMAN_ESCALATION_MUTE_WINDOW_MS = 24 * 60 * 60 * 1000;
+
+export interface HumanMuteState {
+  needsHuman?: boolean | null;
+  escalatedAt?: string | Date | null;
+  lastHumanInterventionAt?: string | Date | null;
+}
+
+export interface HumanMuteVerdict {
+  muted: boolean;
+  reason: string | null;
+}
+
+/**
+ * HUMAN_ESCALATION_MUTE_LOCK:
+ * Bloquea 100% cualquier respuesta automática o seguimiento si la sesión tiene escalamiento activo
+ * o recibió escalamiento/intervención manual en las últimas 24h (jamás pisar una venta caliente).
+ */
+export function evaluateHumanEscalationMuteLock(
+  state: HumanMuteState | null | undefined,
+  now: Date = new Date()
+): HumanMuteVerdict {
+  if (!state) return { muted: false, reason: null };
+  if (state.needsHuman === true) {
+    return { muted: true, reason: "HUMAN_ESCALATION_MUTE_LOCK:needs_human_active" };
+  }
+  const nowMs = now.getTime();
+  for (const [label, raw] of [
+    ["escalated_within_24h", state.escalatedAt],
+    ["manual_intervention_within_24h", state.lastHumanInterventionAt],
+  ] as const) {
+    if (!raw) continue;
+    const ts = raw instanceof Date ? raw.getTime() : Date.parse(String(raw));
+    if (Number.isFinite(ts) && nowMs - ts >= 0 && nowMs - ts < HUMAN_ESCALATION_MUTE_WINDOW_MS) {
+      return { muted: true, reason: `HUMAN_ESCALATION_MUTE_LOCK:${label}` };
+    }
+  }
+  return { muted: false, reason: null };
+}
 
 export interface EcuadorClock {
   weekday: string; // "Mon".."Sun"

@@ -10,6 +10,10 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import pg from "pg";
+import {
+  evaluateHumanEscalationMuteLock,
+  sanitizeMiloLogisticsText,
+} from "../src/lib/miloLogisticsPolicy.ts";
 
 const { Client } = pg;
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -105,7 +109,28 @@ const PRELOADED_FOLLOWUPS = {
     message:
       "Hola Edwin, soy Milo de Líder Pro. Como su Rich 6 2023 es nueva, vale cuidarle bien el motor desde ya: tenemos el MANNOL Diésel TDI 5W-30 (7L en $103.90) y el Combo 5W-40 7L en $92.50 c/IVA (ya incluye filtro y regalos). Además tenemos sus filtros de aire ($5), combustible ($5.50) y cabina ($5.90) para dejarle el mantenimiento completo. ¿Prefiere mantenerse en 5W-30 o llevar el combo completo?",
   },
+  "976": {
+    label: "Ricky — Lead entrante sin vehículo aún",
+    message:
+      "Hola Ricky, soy Milo de Líder Pro. Vi que nos escribiste ayer y quería saber en qué te podemos ayudar hoy: ¿buscas combo de aceite + filtro, batería o algún producto para tu vehículo? Dime marca, modelo y año y te paso el dato exacto.",
+  },
 };
+
+const LEDGER_PATH = "/opt/nexus/.nexus-ops/milo_followup_24h_ledger.json";
+
+function loadLedger() {
+  if (!fs.existsSync(LEDGER_PATH)) return {};
+  try {
+    return JSON.parse(fs.readFileSync(LEDGER_PATH, "utf8")) || {};
+  } catch {
+    return {};
+  }
+}
+
+function saveLedger(ledger) {
+  fs.mkdirSync(path.dirname(LEDGER_PATH), { recursive: true });
+  fs.writeFileSync(LEDGER_PATH, JSON.stringify(ledger, null, 2) + "\n", { mode: 0o600 });
+}
 
 async function sendWhatsAppMessage(env, toDigits, bodyText) {
   const token = (env.WHATSAPP_ACCESS_TOKEN || env.WHATSAPP_TOKEN || "").trim();
@@ -131,7 +156,14 @@ async function sendWhatsAppMessage(env, toDigits, bodyText) {
   if (!resp.ok) {
     throw new Error(`WA Graph HTTP ${resp.status}: ${txt.slice(0, 180)}`);
   }
-  return txt;
+  let wamid = null;
+  try {
+    const parsed = JSON.parse(txt);
+    wamid = parsed?.messages?.[0]?.id || null;
+  } catch {
+    wamid = null;
+  }
+  return { status: resp.status, wamid };
 }
 
 async function main() {
@@ -145,9 +177,10 @@ async function main() {
   }
   const isDryRun = !wantSend;
   const env = loadEnvSafely();
-  const dbUrl = isDryRun
-    ? (env.LIDERPRO_DATABASE_URL_RO || env.DATABASE_URL || env.POSTGRES_URL || "").trim()
-    : (env.DATABASE_URL || env.POSTGRES_URL || "").trim();
+  const rwDbUrl = (env.DATABASE_URL || env.POSTGRES_URL || "").trim();
+  const roDbUrl = (env.LIDERPRO_DATABASE_URL_RO || "").trim();
+  const dbUrl = isDryRun ? (roDbUrl || rwDbUrl) : (rwDbUrl || roDbUrl);
+  const canWriteDb = Boolean(rwDbUrl) && !isDryRun;
 
   if (!dbUrl) {
     console.error("ERROR: No hay URL de Postgres disponible en entorno.");
@@ -156,7 +189,7 @@ async function main() {
 
   const client = new Client({ connectionString: dbUrl, ssl: { rejectUnauthorized: false } });
   await client.connect();
-  if (isDryRun) {
+  if (!canWriteDb) {
     await client.query("SET SESSION CHARACTERISTICS AS TRANSACTION READ ONLY");
   }
 
@@ -167,6 +200,8 @@ async function main() {
       c.city,
       c.ad_tag,
       c.funnel_stage,
+      COALESCE(c.needs_human, FALSE) AS needs_human,
+      c.escalated_at,
       COALESCE(c.followup_count, 0)::int AS followup_count,
       c.last_followup_at,
       MAX(m.created_at) FILTER (WHERE m.role = 'user') AS last_user_at,
@@ -174,20 +209,24 @@ async function main() {
     FROM customers c
     JOIN messages m ON m.session_id = c.phone_or_session
     WHERE c.phone_or_session LIKE 'wa:%'
+      AND COALESCE(c.needs_human, FALSE) = FALSE
+      AND (c.escalated_at IS NULL OR c.escalated_at < NOW() - INTERVAL '24 hours')
       AND NOT EXISTS (
         SELECT 1 FROM orders o WHERE o.session_id = c.phone_or_session AND o.status <> 'cancelled'
       )
-    GROUP BY c.phone_or_session, c.name, c.city, c.ad_tag, c.funnel_stage, c.followup_count, c.last_followup_at
+    GROUP BY c.phone_or_session, c.name, c.city, c.ad_tag, c.funnel_stage, c.needs_human, c.escalated_at, c.followup_count, c.last_followup_at
     HAVING MAX(m.created_at) FILTER (WHERE m.role = 'user') >= NOW() - INTERVAL '23 hours'
        AND COALESCE(c.followup_count, 0) < 1
     ORDER BY MAX(m.created_at) FILTER (WHERE m.role = 'user') ASC
   `);
 
+  const ledger = loadLedger();
   const nowMs = Date.now();
   console.log(`=== MILO V4.3.1 FOLLOW-UP 24H (${isDryRun ? "DRY-RUN | 0 ENVÍOS REALES" : "LIVE SEND HITL"}) ===`);
-  console.log(`Hora actual EC: ${formatEcTime(new Date(nowMs))} | Leads en ventana (<23h, followup_count=0): ${rows.length}\n`);
+  console.log(`Hora actual EC: ${formatEcTime(new Date(nowMs))} | Leads en ventana (<23h, followup_count=0): ${rows.length} | DB_MODE=${canWriteDb ? "RW" : "RO+LEDGER"}\n`);
 
   let sentCount = 0;
+  let skippedLedger = 0;
 
   for (const row of rows) {
     const session = String(row.phone_or_session || "");
@@ -199,35 +238,61 @@ async function main() {
     const preloaded = PRELOADED_FOLLOWUPS[suffix];
 
     if (!preloaded) continue;
+    const muteVerdict = evaluateHumanEscalationMuteLock({
+      needsHuman: Boolean(row.needs_human),
+      escalatedAt: row.escalated_at || null,
+    });
+    if (muteVerdict.muted) {
+      console.log(`- ${masked} | BLOQUEADO (${muteVerdict.reason})\n`);
+      continue;
+    }
+    const safeMessage = sanitizeMiloLogisticsText(preloaded.message);
+    if (ledger[masked]) {
+      skippedLedger += 1;
+      console.log(`- ${masked} | ${row.name || "Sin nombre"} | YA ENVIADO EN LEDGER (${ledger[masked].sentAt})\n`);
+      continue;
+    }
 
     const urgencyNote = suffix === "985" ? " [⚠️ VENCE PRIMERO ~12:54 PM EC]" : "";
     console.log(
       `- ${masked} | ${row.name || "Sin nombre"} | ${preloaded.label} | followup_count=${row.followup_count}\n` +
         `  Último msg cliente: ${formatEcTime(lastUserAt)} | Vence 24h: ${formatEcTime(expiresAt)} | Restante: ${formatDurationHm(remainingMs)}${urgencyNote}`
     );
-    console.log(`  Mensaje Milo (${preloaded.message.length} chars): "${preloaded.message}"\n`);
+    console.log(`  Mensaje Milo (${safeMessage.length} chars): "${safeMessage}"\n`);
 
     if (!isDryRun) {
       const toDigits = session.replace(/[^\d]/g, "");
-      await sendWhatsAppMessage(env, toDigits, preloaded.message);
-      await client.query(
-        `INSERT INTO messages (session_id, channel, role, content, intent_tag, created_at)
-         VALUES ($1, 'whatsapp', 'assistant', $2, 'followup_24h', NOW())`,
-        [session, preloaded.message]
-      );
-      await client.query(
-        `UPDATE customers
-         SET last_followup_at = NOW(),
-             followup_count = COALESCE(followup_count, 0) + 1,
-             updated_at = NOW()
-         WHERE phone_or_session = $1`,
-        [session]
-      );
+      const waRes = await sendWhatsAppMessage(env, toDigits, safeMessage);
+      const sentAtIso = new Date().toISOString();
+      ledger[masked] = {
+        sessionMasked: masked,
+        suffix,
+        sentAt: sentAtIso,
+        httpStatus: waRes.status,
+        wamid: waRes.wamid,
+      };
+      saveLedger(ledger);
+      if (canWriteDb) {
+        await client.query(
+          `INSERT INTO messages (session_id, channel, role, content, intent_tag, created_at)
+           VALUES ($1, 'whatsapp', 'assistant', $2, 'followup_24h', NOW())`,
+          [session, safeMessage]
+        );
+        await client.query(
+          `UPDATE customers
+           SET last_followup_at = NOW(),
+               followup_count = COALESCE(followup_count, 0) + 1,
+               updated_at = NOW()
+           WHERE phone_or_session = $1`,
+          [session]
+        );
+      }
+      console.log(`  ✅ ENVIADO ${masked} | HTTP ${waRes.status} | wamid=${waRes.wamid || "ok"} | hora_ec=${formatEcTime(new Date())}`);
       sentCount += 1;
     }
   }
 
-  console.log(`RESUMEN: candidatos_precargados=${rows.filter((r) => PRELOADED_FOLLOWUPS[String(r.phone_or_session).slice(-3)]).length}, enviados=${sentCount}, modo=${isDryRun ? "DRY_RUN" : "LIVE_SEND"}`);
+  console.log(`RESUMEN: candidatos_precargados=${rows.filter((r) => PRELOADED_FOLLOWUPS[String(r.phone_or_session).slice(-3)]).length}, skipped_ledger=${skippedLedger}, enviados=${sentCount}, modo=${isDryRun ? "DRY_RUN" : "LIVE_SEND"}`);
   await client.end();
 }
 

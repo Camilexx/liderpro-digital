@@ -8,9 +8,15 @@ import {
   transcribeAudioBuffer,
 } from "@/lib/audioTranscriber";
 import { resolveAdContext } from "@/lib/hermesCatalog";
-import { claimWebhookMessageId, type AdAttribution } from "@/lib/hermesDb";
+import {
+  claimWebhookMessageId,
+  getCustomer,
+  insertMessage,
+  type AdAttribution,
+} from "@/lib/hermesDb";
 import { generateHermesReply } from "@/lib/hermesEngine";
 import { buildCapiPayload, sendWhatsAppCapiEvent } from "@/lib/metaCapi";
+import { evaluateHumanEscalationMuteLock } from "@/lib/miloLogisticsPolicy";
 import { handleIncomingPaymentReceipt } from "@/lib/miloPayments";
 
 export const runtime = "nodejs";
@@ -459,9 +465,32 @@ export async function POST(req: NextRequest) {
             if (!(await claimWebhookMessageId(dedupKey))) continue;
 
             queuedJobs.push(async () => {
+              const sessionId = `wa:${from}`;
+              const existingCust = await getCustomer(sessionId);
+              const muteVerdict = evaluateHumanEscalationMuteLock({
+                needsHuman: existingCust?.needsHuman,
+                escalatedAt: existingCust?.escalatedAt,
+              });
+              if (muteVerdict.muted) {
+                await insertMessage({
+                  sessionId,
+                  channel: "whatsapp",
+                  role: "user",
+                  content: textBody,
+                  intentTag: "human_mute_lock_inbound",
+                  adId: adAttribution?.adId ?? null,
+                  adTag: adAttribution?.adTag ?? null,
+                  ctwaClid: adAttribution?.ctwaClid ?? null,
+                });
+                console.log("[MiloWebhook] HUMAN_ESCALATION_MUTE_LOCK_ACTIVE", {
+                  toSuffix: from.slice(-4),
+                  reason: muteVerdict.reason,
+                });
+                return;
+              }
               await withWhatsAppTypingIndicator(targetPhoneId, msg.id, waToken, async () => {
                 const hermes = await generateHermesReply(textBody, [], {
-                  sessionId: `wa:${from}`,
+                  sessionId,
                   channel: "whatsapp",
                   customerName: contactName,
                   customerPhone: from,
@@ -489,6 +518,19 @@ export async function POST(req: NextRequest) {
             if (!(await claimWebhookMessageId(dedupKey))) continue;
 
             queuedJobs.push(async () => {
+              const sessionId = `wa:${from}`;
+              const existingCust = await getCustomer(sessionId);
+              const muteVerdict = evaluateHumanEscalationMuteLock({
+                needsHuman: existingCust?.needsHuman,
+                escalatedAt: existingCust?.escalatedAt,
+              });
+              if (muteVerdict.muted) {
+                console.log("[MiloWebhook] HUMAN_ESCALATION_MUTE_LOCK_ACTIVE_AUDIO", {
+                  toSuffix: from.slice(-4),
+                  reason: muteVerdict.reason,
+                });
+                return;
+              }
               await withWhatsAppTypingIndicator(targetPhoneId, msg.id, waToken, async () => {
                 let replyText = AUDIO_FALLBACK_REPLY_ES;
                 if (audioId && waToken && isAudioTranscriptionConfigured()) {

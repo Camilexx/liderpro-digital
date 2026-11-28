@@ -5,6 +5,7 @@ import {
   AFTER_HOURS_DISPATCH_PHRASE,
   SAME_DAY_DISPATCH_PHRASE,
   buildNeutralFreightEscalationCopy,
+  evaluateHumanEscalationMuteLock,
   isWithinSameDayDispatchWindowEC,
   sanitizeMiloLogisticsText,
 } from "../src/lib/miloLogisticsPolicy.ts";
@@ -55,4 +56,23 @@ test("escalamiento de flete usa frase neutra + reloj EC real", () => {
     now: ecDate("2026-11-27T10:30:00"),
   });
   assert.ok(friMorning.suggestedReply.includes(SAME_DAY_DISPATCH_PHRASE));
+  assert.ok(friNight.suggestedReply.includes("con foto de tu guía apenas salga a ruta"));
+});
+
+test("HUMAN_ESCALATION_MUTE_LOCK bloquea envíos automáticos en escalamiento activo o intervención < 24h", () => {
+  const now = ecDate("2026-11-27T20:50:00");
+  assert.equal(evaluateHumanEscalationMuteLock({ needsHuman: true }, now).muted, true);
+  assert.equal(
+    evaluateHumanEscalationMuteLock({ needsHuman: false, escalatedAt: ecDate("2026-11-27T19:38:19") }, now).muted,
+    true
+  );
+  assert.equal(
+    evaluateHumanEscalationMuteLock({ needsHuman: false, lastHumanInterventionAt: ecDate("2026-11-27T20:10:00") }, now).muted,
+    true
+  );
+  assert.equal(
+    evaluateHumanEscalationMuteLock({ needsHuman: false, escalatedAt: ecDate("2026-11-25T10:00:00") }, now).muted,
+    false
+  );
+  assert.equal(evaluateHumanEscalationMuteLock(null, now).muted, false);
 });

@@ -146,29 +146,29 @@ export const AD_CONTEXT_MAP: AdContextSpec[] = [
   {
     adTag: "AD-B13",
     adIds: ["120255987815660368"],
-    productLabel: "Kit 4x4 7 Litros MANNOL 15W-40 + Filtro + Regalo (<48h Ecuador)",
+    productLabel: "Kit 4x4 7 Litros MANNOL 15W-40 + Filtro + Regalo + ENVÍO GRATIS (<48h Ecuador)",
     primarySku: "COMBO-MANNOL-2A",
     defaultCustomerType: "particular",
     hintForMilo:
-      "El cliente viene del anuncio del Kit 4x4 7 Litros MANNOL (COMBO-MANNOL-2A $69.50 c/IVA) con envío nacional <48h. Pide camioneta/año y ciudad para cotizar envío.",
+      "El cliente viene del anuncio nacional del Kit 4x4 7 Litros MANNOL (COMBO-MANNOL-2A: $74.50 c/IVA con ENVÍO GRATIS incluido a todo el Ecuador <48h; $69.50 c/IVA en bodega Pedernales). Promueve agresivamente el combo con filtro Advance + Cockpit Care con esponja de REGALO + ENVÍO GRATIS incluido; pide camioneta/año y ciudad.",
   },
   {
     adTag: "AD-B12",
     adIds: ["120255987815710368"],
-    productLabel: "Canecas 20L MANNOL Talleres y Flotas (<48h Ecuador)",
+    productLabel: "Canecas 20L MANNOL Talleres y Flotas + ENVÍO GRATIS (<48h Ecuador)",
     primarySku: "COMBO-MANNOL-3A",
     defaultCustomerType: "taller",
     hintForMilo:
-      "El cliente viene del anuncio B2B de Canecas 20L para talleres y flotas (COMBO-MANNOL-3A 15W-40 $125.00 o 3B 10W-40 $128.50). Pregunta viscosidad/cantidad y ciudad.",
+      "El cliente viene del anuncio nacional B2B de Canecas 20L (ENVÍO GRATIS incluido a todo el Ecuador desde $35; unitario nacional 15W-40 $130.00 / 10W-40 $133.50; multi-caneca suma +$5 fijo único en el total del pedido; en Pedernales base $125.00 / $128.50). Pregunta viscosidad/cantidad y ciudad sin mencionar el ajuste de $5.",
   },
   {
     adTag: "AD-B06",
     adIds: ["120255987815760368"],
-    productLabel: "Combo MANNOL 5W-40 Turbo Diésel 7L + Filtro + Regalo (<48h Ecuador)",
+    productLabel: "Combo MANNOL 5W-40 Turbo Diésel 7L + Filtro + Regalo + ENVÍO GRATIS (<48h Ecuador)",
     primarySku: "COMBO-MANNOL-2B",
     defaultCustomerType: "particular",
     hintForMilo:
-      "El cliente viene del anuncio de MANNOL Diesel Turbo 5W-40 (COMBO-MANNOL-2B $92.50 c/IVA, 7L + filtro + regalo). Pide vehículo y ciudad para confirmar aplicación y envío <48h.",
+      "El cliente viene del anuncio nacional de MANNOL Diesel Turbo 5W-40 (COMBO-MANNOL-2B: $97.50 c/IVA con ENVÍO GRATIS incluido a todo el Ecuador <48h; $92.50 c/IVA en bodega Pedernales). Promueve filtro + Cockpit Care con esponja de REGALO + ENVÍO GRATIS; pide vehículo y ciudad.",
   },
 ];
 

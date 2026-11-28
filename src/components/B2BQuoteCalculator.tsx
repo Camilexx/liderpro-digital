@@ -109,7 +109,7 @@ const VOLUME_TIERS = [
     label: "Escala 2: Flota Mediana o Lubricadora",
     range: "16 a 45 Canecas / Baterías mensuales",
     discountBadge: "Descuento Escalonado Preferencial",
-    deliveryNote: "Tarifa preferencial de flete interprovincial",
+    deliveryNote: "Envío GRATIS incluido desde $35 + despacho coordinado <48h",
   },
   {
     id: "pesado",

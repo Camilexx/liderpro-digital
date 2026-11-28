@@ -50,7 +50,7 @@ export default function ShippingPage() {
           <div className="flex flex-wrap items-center justify-between gap-4">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-emerald-500/15 border border-emerald-500/30 rounded-full text-xs font-bold text-emerald-400 uppercase tracking-wider">
               <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
-              <span>🟢 HUB LOGÍSTICO MATRIZ PEDERNALES — DESPACHO DIARIO ACTIVO</span>
+              <span>🟢 ENVÍO GRATIS A TODO EL ECUADOR DESDE $35 — DESPACHO DIARIO &lt;48H</span>
             </div>
 
             <div className="text-[11px] font-mono text-slate-400 flex items-center gap-2">
@@ -66,7 +66,7 @@ export default function ShippingPage() {
               Red Logística y Despacho Nacional hacia las 24 Provincias
             </h1>
             <p className="text-sm sm:text-lg text-slate-300 font-medium leading-relaxed max-w-3xl">
-              Desde nuestra Bodega Matriz y Centro de Operaciones en <strong className="text-white">Pedernales (Manabí)</strong>, despachamos diariamente lubricantes, baterías y filtros con tiempos de tránsito certificados de 24h a 48h, protocolo técnico de embalaje antiderrame y facturación electrónica autorizada por el SRI.
+              Desde nuestra Bodega Matriz en <strong className="text-white">Pedernales (Manabí)</strong>, despachamos diariamente lubricantes, baterías y filtros con <strong className="text-[#FFC500]">ENVÍO GRATIS a todo el Ecuador en compras desde $35</strong>, entregas certificadas en 24h a 48h, embalaje antiderrame y facturación electrónica SRI.
             </p>
           </div>
 

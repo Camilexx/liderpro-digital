@@ -5,6 +5,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import {
+  applyNationalFreeShippingPricing,
   buildLiveBulkPreCloseReply,
   buildVerifiedEscalationPayload,
   buildWarmEcuadorianGreeting,
@@ -14,6 +15,7 @@ import {
   parseBulkCanecaOrder,
   processPostEscalationPartialData,
   quoteBulkCanecaOrderFromCatalog,
+  resolveHiddenNationalShippingState,
   sanitizeCustomerName,
 } from "../src/lib/miloB2bCloser.ts";
 import {
@@ -201,7 +203,9 @@ test("Regla 5: des-trabe conversacional anti-loop actualiza ciudad 'Envío a cue
   assert.equal(step1.shouldReplyToClient, true);
   assert.ok(step1.clientAckReply);
   assert.match(step1.clientAckReply, /Cuenca/);
-  assert.match(step1.clientAckReply, /\$628\.50/);
+  assert.match(step1.clientAckReply, /\$633\.50/);
+  assert.match(step1.clientAckReply, /ENVÍO GRATIS/i);
+  assert.doesNotMatch(step1.clientAckReply, /\$5|oculto|recargo/i);
   assert.doesNotMatch(step1.clientAckReply, /ciudad de entrega/i, "No debe volver a preguntar ciudad");
   assert.ok(!step1.remainingMissingKeys.includes("ciudad"));
   assert.match(step1.updatedEscalation.confirmedByClient, /Destino confirmado: \*Cuenca\*/);
@@ -219,4 +223,60 @@ test("Regla 5: des-trabe conversacional anti-loop actualiza ciudad 'Envío a cue
   assert.equal(step2.hasNewData, false);
   assert.equal(step2.shouldReplyToClient, false);
   assert.equal(step2.clientAckReply, null);
+});
+
+test("Política Envío Gratis >= $35 + $5 fijos ocultos fuera de Pedernales y anuncios nacionales (con reversa a Pedernales)", () => {
+  // 1. Anuncio nacional AD-B06 sin ciudad todavía -> aplica +$5 oculto
+  const stAdB06 = resolveHiddenNationalShippingState({ city: null, adTag: "AD-B06" });
+  assert.equal(stAdB06.applyHiddenMarkup, true);
+  const combo2bNational = applyNationalFreeShippingPricing(92.5, stAdB06.applyHiddenMarkup);
+  assert.equal(combo2bNational.clientQuotedTotalUsd, 97.5);
+  assert.equal(combo2bNational.hiddenMarkupUsd, 5.0);
+  assert.equal(combo2bNational.qualifiesFreeShipping, true);
+
+  // 2. Pedido < $35 fuera de Pedernales -> $0 incremento oculto + faltante exacto para desbloquear envío gratis
+  const under35 = applyNationalFreeShippingPricing(20.0, true);
+  assert.equal(under35.clientQuotedTotalUsd, 20.0);
+  assert.equal(under35.hiddenMarkupUsd, 0);
+  assert.equal(under35.qualifiesFreeShipping, false);
+  assert.equal(under35.missingForFreeShippingUsd, 15.0);
+
+  // 3. Reversa automática si cliente de anuncio nacional confirma Pedernales / retiro en bodega (-$5 natural)
+  const stPedPickup = resolveHiddenNationalShippingState({
+    city: null,
+    adTag: "AD-B06",
+    userText: "Paso retirando en bodega Pedernales",
+  });
+  assert.equal(stPedPickup.applyHiddenMarkup, false);
+  assert.equal(applyNationalFreeShippingPricing(92.5, stPedPickup.applyHiddenMarkup).clientQuotedTotalUsd, 92.5);
+
+  // 4. Mayorista 5 canecas (4x15W-40 + 1x10W-40) en modo nacional -> $628.50 + $5.00 = $633.50 exactos (prorrateo exacto $126/$129.50)
+  const bulkNat = quoteBulkCanecaOrderFromCatalog("5 canecas: 4 de 15w40 y 1 de 10w40", REAL_CATALOG, {
+    applyHiddenNationalMarkup: true,
+  });
+  assert.ok(bulkNat);
+  assert.equal(bulkNat.baseSubtotalUsd, 628.5);
+  assert.equal(bulkNat.hiddenShippingMarkupUsd, 5.0);
+  assert.equal(bulkNat.subtotalUsd, 633.5);
+  assert.equal(bulkNat.arithmeticBreakdown, "4 × $126.00 + 1 × $129.50 = $633.50");
+
+  const liveNatReply = buildLiveBulkPreCloseReply({
+    bulkQuote: bulkNat,
+    customerName: "f889566",
+    city: "Cuenca",
+    clientMentionedFilters: false,
+  });
+  assert.match(liveNatReply, /\$633\.50/);
+  assert.match(liveNatReply, /ENVÍO GRATIS INCLUIDO a Cuenca/i);
+  assert.doesNotMatch(liveNatReply, /\$5\.00|recargo|oculto|flete aparte/i);
+
+  // 5. Mayorista 3 canecas (no divisible entre 500c) -> $378.50 + $5.00 = $383.50 consolidado sin contradicción aritmética
+  const bulk3Nat = quoteBulkCanecaOrderFromCatalog("3 canecas: 2 de 15w40 y 1 de 10w40", REAL_CATALOG, {
+    applyHiddenNationalMarkup: true,
+  });
+  assert.ok(bulk3Nat);
+  assert.equal(bulk3Nat.baseSubtotalUsd, 378.5);
+  assert.equal(bulk3Nat.hiddenShippingMarkupUsd, 5.0);
+  assert.equal(bulk3Nat.subtotalUsd, 383.5);
+  assert.equal(bulk3Nat.unitDisplayUniform, false);
 });

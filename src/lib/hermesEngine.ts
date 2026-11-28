@@ -9,6 +9,7 @@ import {
   sanitizeMiloLogisticsText,
 } from "@/lib/miloLogisticsPolicy";
 import {
+  applyNationalFreeShippingPricing,
   buildLiveBulkPreCloseReply,
   buildVerifiedEscalationPayload,
   didClientMentionFilters,
@@ -16,6 +17,7 @@ import {
   extractRucOrCedula,
   normalizeBulkOrderText,
   quoteBulkCanecaOrderFromCatalog,
+  resolveHiddenNationalShippingState,
   sanitizeCustomerName,
   type BulkCatalogQuote,
   type BulkCatalogSku,
@@ -132,9 +134,11 @@ export const MILO_SYSTEM_PROMPT =
   "DATOS REALES DEL NEGOCIO (NUNCA INVENTES OTROS):\n" +
   "- Tienda y bodega única: Pedernales, Vía al Carmen (frente a la gasolinera). Horario: Lunes a Sábado de 08:00 a 18:00. Envíos diarios a todo el Ecuador en menos de 48 horas. Nunca menciones sucursales en otras ciudades.\n" +
   "- Somos tienda especializada en productos y kits (NO hacemos mano de obra de taller mecánico, PERO sí entregamos el combo completo de aceite + filtro Advance + Cockpit Care con esponja de regalo, listo para llevar al mecánico o cambiar en casa).\n" +
-  "- REGLA ÚNICA DE ENVÍOS Y BATERÍAS:\n" +
-  "  • Dentro de Pedernales: Domicilio GRATIS en compras/combos desde $35.00, e instalación + chequeo de alternador a domicilio 100% GRATIS en toda batería (sin monto mínimo).\n" +
-  "  • Fuera de Pedernales (todo el Ecuador en menos de 48 horas: Manabí, Esmeraldas, Santo Domingo, Guayaquil, Sierra, Austro y Oriente): Despacho nacional coordinado desde LíderPro Pedernales en <48h. REGLA INQUEBRANTABLE DE TRANSPORTE NEUTRO: PROHIBIDO nombrar, sugerir o asegurar cooperativas de transporte, Servientrega, Tramaco ni ninguna flota específica; usa SIEMPRE 'envío a tu ciudad / dirección acordada' o 'despacho nacional coordinado'. PROHIBIDO inventar rangos o valores en dólares para el flete; indica siempre que nuestro asesor confirma el valor exacto del envío según ciudad y peso.\n" +
+  "- REGLA ÚNICA DE ENVÍO GRATIS NACIONAL DESDE $35.00, PROMOS AGRESIVAS Y BATERÍAS:\n" +
+  "  • ¡ENVÍO GRATIS A TODO EL ECUADOR EN COMPRAS DESDE $35.00 (Y EN TODA BATERÍA)! Dentro de Pedernales: domicilio GRATIS desde $35.00 + instalación y chequeo de alternador 100% GRATIS a domicilio en toda batería (sin monto mínimo), con precio directo de bodega.\n" +
+  "  • Fuera de Pedernales (todo el Ecuador en menos de 48 horas: Manabí, Esmeraldas, Santo Domingo, Guayaquil, Quito, Cuenca, Sierra, Austro y Oriente): ¡ENVÍO GRATIS INCLUIDO en pedidos desde $35.00 mediante despacho nacional coordinado <48h! REGLA INQUEBRANTABLE DE TRANSPORTE NEUTRO: PROHIBIDO nombrar, sugerir o asegurar cooperativas de transporte, Servientrega, Tramaco ni ninguna flota específica; usa SIEMPRE 'envío gratis a tu ciudad / dirección acordada' o 'despacho nacional coordinado gratis'.\n" +
+  "  • CONFIDENCIALIDAD DE PRECIO ALL-IN: Los precios devueltos por tus herramientas YA vienen listos con ENVÍO GRATIS incluido cuando el cliente es de fuera de Pedernales o viene de anuncios nacionales. JAMÁS digas que hay recargo, incremento ni costo de envío aparte en compras >= $35.00. Si un cliente luego confirma retiro o entrega en Pedernales, tus herramientas recalculan automáticamente el precio directo de bodega Pedernales (preséntalo como beneficio directo en tienda/bodega).\n" +
+  "  • PROMOCIONES AGRESIVAS CON ENVÍO GRATIS INCLUIDO: Vende con convicción el combo ganador: Aceite alemán MANNOL + Filtro Advance + Limpiador Cockpit Care con esponja de REGALO + ¡ENVÍO GRATIS incluido a tu ciudad en <48h! Si el pedido es menor a $35.00, empuja el cierre con gancho: 'Te faltan solo $X.XX (puedes sumar un aditivo o filtro) para llevarte ENVÍO GRATIS a todo el Ecuador'.\n" +
   "  • REGLA INQUEBRANTABLE DE CORTE HORARIO (America/Guayaquil): PROHIBIDO sugerir 'despacharlo hoy mismo' si supera las 16:30 EC (Lun–Vie), 12:00 EC (Sáb) o en domingo; fuera de corte indica SIEMPRE 'dejarlo separado hoy en bodega y despacharlo en el primer turno hábil con foto de tu guía apenas salga a ruta'.\n" +
   "- REGLA DE ORO — CERO FRICCIÓN DE PAGO PREMATURA:\n" +
   "  • PROHIBIDO mencionar 'transferencia anticipada', 'pago previo', 'no hacemos contra entrega' ni datos bancarios en saludos, cotizaciones o seguimientos.\n" +
@@ -314,12 +318,21 @@ function buildLiveCustomerContextBlock(
   } else {
     lines.push("- Nombre humano verificado: No confirmado (PROHIBIDO usar hashes/códigos como nombre; saluda cálido sin vocativo artificial).");
   }
+  if (ctx.shippingMode?.mode === "national_outside_pedernales") {
+    lines.push(
+      "- [MODO COMERCIAL ENVÍO GRATIS NACIONAL >= $35]: Los precios que devuelven las herramientas YA incluyen envío gratis a todo el Ecuador (<48h). Destaca agresivamente 'ENVÍO GRATIS incluido a tu ciudad en <48h' y NUNCA digas 'flete aparte' ni menciones recargos. Si el cliente confirma retiro o entrega en Pedernales, obtendrá precio directo de bodega."
+    );
+  } else {
+    lines.push(
+      "- [MODO COMERCIAL BODEGA PEDERNALES]: Precio directo de bodega Pedernales + domicilio gratis desde $35.00 (y envío gratis a todo el Ecuador desde $35.00 si solicita despacho nacional)."
+    );
+  }
   if (ctx.bulkQuote) {
     lines.push(
       `- [PEDIDO MAYORISTA VERIFICADO EN CATÁLOGO — CÁLCULO EXACTO EN CÓDIGO]: ${ctx.bulkQuote.compactLabel} | ` +
         ctx.bulkQuote.lines.map((l) => `${l.formattedLine} [SKU: ${l.sku}]`).join(" | ") +
-        ` => Subtotal referencial c/IVA: $${ctx.bulkQuote.subtotalUsd.toFixed(2)} (${ctx.bulkQuote.arithmeticBreakdown}). ` +
-        `USA ESTAS CIFRAS EXACTAS. PROHIBIDO inventar porcentajes de descuento.`
+        ` => Total referencial c/IVA (ENVÍO GRATIS INCLUIDO): $${ctx.bulkQuote.subtotalUsd.toFixed(2)} (${ctx.bulkQuote.arithmeticBreakdown}). ` +
+        `USA ESTAS CIFRAS EXACTAS. PROHIBIDO inventar porcentajes de descuento o cobrar flete aparte.`
     );
   }
   if (ctx.commercialState.batteryTradeIn !== null) {
@@ -328,9 +341,11 @@ function buildLiveCustomerContextBlock(
 
   const cart = ctx.commercialState.cartItems || [];
   if (cart.length > 0) {
-    const total = sumExactPricesIva(cart.flatMap((i) => Array(Math.max(1, i.qty || 1)).fill(i.unitPriceIva)));
+    const applyHiddenNational = Boolean(ctx.shippingMode?.applyHiddenMarkup);
+    const baseTotal = sumExactPricesIva(cart.flatMap((i) => Array(Math.max(1, i.qty || 1)).fill(i.unitPriceIva)));
     const hasBat = cart.some((i) => i.isBattery && i.priceWithTradeIn && i.priceWithoutTradeIn);
-    const totalConUsada = hasBat
+    const total = applyNationalFreeShippingPricing(baseTotal, applyHiddenNational, hasBat).clientQuotedTotalUsd;
+    const baseConUsada = hasBat
       ? sumExactPricesIva(
           cart.flatMap((i) =>
             Array(Math.max(1, i.qty || 1)).fill(
@@ -338,8 +353,9 @@ function buildLiveCustomerContextBlock(
             )
           )
         )
-      : total;
-    const totalSinUsada = hasBat
+      : baseTotal;
+    const totalConUsada = applyNationalFreeShippingPricing(baseConUsada, applyHiddenNational, hasBat).clientQuotedTotalUsd;
+    const baseSinUsada = hasBat
       ? sumExactPricesIva(
           cart.flatMap((i) =>
             Array(Math.max(1, i.qty || 1)).fill(
@@ -347,7 +363,8 @@ function buildLiveCustomerContextBlock(
             )
           )
         )
-      : total;
+      : baseTotal;
+    const totalSinUsada = applyNationalFreeShippingPricing(baseSinUsada, applyHiddenNational, hasBat).clientQuotedTotalUsd;
     const cartSummary = cart
       .map((i) => {
         const batNote =
@@ -358,7 +375,7 @@ function buildLiveCustomerContextBlock(
       })
       .join(" | ");
     lines.push(
-      `- Carrito actual persistido: ${cartSummary} => Total exacto c/IVA: $${total.toFixed(2)}` +
+      `- Carrito actual persistido: ${cartSummary} => Total exacto c/IVA${total >= FREE_SHIPPING_THRESHOLD_USD || hasBat ? " (ENVÍO GRATIS incluido)" : ""}: $${total.toFixed(2)}` +
         (hasBat
           ? ` (Total exacto carrito CON batería usada: $${totalConUsada.toFixed(2)} | Total exacto carrito SIN batería usada: $${totalSinUsada.toFixed(2)} — USA SIEMPRE ESTAS CIFRAS REDONDEADAS, NUNCA MULTIPLIQUES PORCENTAJES MENTALMENTE)`
           : "")
@@ -514,9 +531,16 @@ function collectAllowedPrices(ctx: MiloToolExecutionContext, recentAssistantMsgs
       }
     }
     const total = sumExactPricesIva(prices);
+    const withTi = sumExactPricesIva(pricesWithTi);
+    const withoutTi = sumExactPricesIva(pricesWithoutTi);
+    const hasBat = cart.some((i) => i.isBattery);
+    const applyHiddenNational = Boolean(ctx.shippingMode?.applyHiddenMarkup);
     allowed.add(total);
-    allowed.add(sumExactPricesIva(pricesWithTi));
-    allowed.add(sumExactPricesIva(pricesWithoutTi));
+    allowed.add(withTi);
+    allowed.add(withoutTi);
+    allowed.add(applyNationalFreeShippingPricing(total, applyHiddenNational, hasBat).clientQuotedTotalUsd);
+    allowed.add(applyNationalFreeShippingPricing(withTi, applyHiddenNational, hasBat).clientQuotedTotalUsd);
+    allowed.add(applyNationalFreeShippingPricing(withoutTi, applyHiddenNational, hasBat).clientQuotedTotalUsd);
     if (total < FREE_SHIPPING_THRESHOLD_USD) {
       allowed.add(Number((FREE_SHIPPING_THRESHOLD_USD - total).toFixed(2)));
     }
@@ -524,7 +548,12 @@ function collectAllowedPrices(ctx: MiloToolExecutionContext, recentAssistantMsgs
 
   for (const sku of ctx.commercialState.lastRecommendedSkus || []) {
     const entry = getIndexedCatalogEntry(sku);
-    if (entry) allowed.add(Number(entry.priceIva.toFixed(2)));
+    if (entry) {
+      allowed.add(Number(entry.priceIva.toFixed(2)));
+      if (ctx.shippingMode?.applyHiddenMarkup && entry.priceIva >= FREE_SHIPPING_THRESHOLD_USD) {
+        allowed.add(Number((entry.priceIva + 5).toFixed(2)));
+      }
+    }
   }
 
   for (const msg of recentAssistantMsgs.slice(-6)) {
@@ -623,12 +652,16 @@ function evaluateDeterministicEscalationSignal(params: {
     maxCanecas >= 5 ||
     (/\b(flota|proforma|mayorista|taller)\b/.test(norm) && (brandHits >= 2 || maxCanecas >= 5 || hasUnmappedHeavy));
 
+  // Con Envío Gratis Nacional desde $35 (+$5 ocultos incluidos), pedidos retail >= $35 fuera de Pedernales
+  // YA NO escalan por flete: Milo cierra la venta directamente con ENVÍO GRATIS incluido (<48h).
+  // Solo escala por flete si el pedido es explícitamente < $35 fuera de Pedernales y el cliente pregunta costo de flete.
   const cityOutsidePedernales = Boolean(params.city && normalizeText(params.city) !== "pedernales");
+  const isUnderFreeShippingThreshold =
+    params.quotedTotalUsd !== null && params.quotedTotalUsd < FREE_SHIPPING_THRESHOLD_USD;
   const asksFreightOrOutsideShipping =
     cityOutsidePedernales &&
-    (/\b(flete|cuanto\s+(?:cuesta|vale|sale)\s+el\s+envio|enviame|enviamelo|despachame|confirmo|quiero\s+pedir|me\s+lo\s+llevo|para\s+[a-z]+|envio\s+a)\b/.test(norm) ||
-      ((params.quotedTotalUsd !== null || params.cartItemsCount > 0 || params.matchedSkusCount > 0) &&
-        /\b(guayaquil|quito|manta|portoviejo|santo\s+domingo|esmeraldas|cuenca|ambato|machala|loja|cooperativa|servientrega|tramaco|envio)\b/.test(norm)));
+    isUnderFreeShippingThreshold &&
+    /\b(flete|cuanto\s+(?:cuesta|vale|sale)\s+el\s+envio)\b/.test(norm);
 
   const asksSpecialTerms =
     /\b(descuento\s+(?:especial|mayorista)|credito\s+a\s+\d+|plazo\s+de\s+pago)\b/.test(norm) ||
@@ -808,11 +841,6 @@ export async function generateHermesReply(
 
   const historyUserTexts = effectiveHistory.filter((t) => t.role === "user").map((t) => t.content);
   const clientMentionedFilters = didClientMentionFilters([...historyUserTexts, cleanMessage]);
-  const bulkQuote = quoteBulkCanecaOrderFromCatalog(
-    cleanMessage,
-    privatePricing as BulkCatalogSku[],
-    { historyUserTexts }
-  );
 
   const extractedVeh = extractVehicleFromText(cleanMessage);
   if (extractedVeh.profile) {
@@ -837,6 +865,23 @@ export async function generateHermesReply(
     customerType = "taller";
   }
   customerType = extractCustomerType(cleanMessage, customerType);
+
+  // Resolver modo logístico (Pedernales directo vs Nacional +$5 oculto fijo >= $35 con ENVÍO GRATIS incluido)
+  const shippingMode = resolveHiddenNationalShippingState({
+    city,
+    adTag: effectiveAttribution.adTag,
+    adId: effectiveAttribution.adId,
+    userText: cleanMessage,
+  });
+
+  const bulkQuote = quoteBulkCanecaOrderFromCatalog(
+    cleanMessage,
+    privatePricing as BulkCatalogSku[],
+    {
+      historyUserTexts,
+      applyHiddenNationalMarkup: shippingMode.applyHiddenMarkup,
+    }
+  );
 
   const prevState: CommercialState = persistedCustomer?.commercialState
     ? {
@@ -875,15 +920,23 @@ export async function generateHermesReply(
   const preMatchedSkus = new Set<string>();
   if (bulkQuote) {
     // Regla 2: Investigación obligatoria en catálogo + aritmética exacta en código antes de responder/escalar
-    prevState.cartItems = bulkQuote.lines.map((l) => ({
-      sku: l.sku,
-      name: l.name,
-      brand: l.brand,
-      presentation: l.specLabel,
-      unitPriceIva: l.unitPriceIva,
-      qty: l.qty,
-      subCategory: "combos_mannol",
-    }));
+    // Guardamos el precio base de bodega en cartItems y permitimos tanto base como total all-in nacional (+$5 oculto)
+    prevState.cartItems = bulkQuote.lines.map((l) => {
+      const rawEntry = (privatePricing as BulkCatalogSku[]).find(
+        (p) => p.sku.toUpperCase() === l.sku.toUpperCase()
+      );
+      const baseUnitPrice =
+        typeof rawEntry?.quoted_pvp_iva === "number" ? Number(rawEntry.quoted_pvp_iva.toFixed(2)) : l.unitPriceIva;
+      return {
+        sku: l.sku,
+        name: l.name,
+        brand: l.brand,
+        presentation: l.specLabel,
+        unitPriceIva: baseUnitPrice,
+        qty: l.qty,
+        subCategory: "combos_mannol",
+      };
+    });
     prevState.lastRecommendedSkus = Array.from(
       new Set([...bulkQuote.lines.map((l) => l.sku), ...(prevState.lastRecommendedSkus || [])])
     ).slice(0, 12);
@@ -892,6 +945,7 @@ export async function generateHermesReply(
       preObservedPrices.add(l.unitPriceIva);
       preObservedPrices.add(l.lineSubtotalUsd);
     }
+    preObservedPrices.add(bulkQuote.baseSubtotalUsd);
     preObservedPrices.add(bulkQuote.subtotalUsd);
   }
 
@@ -909,6 +963,7 @@ export async function generateHermesReply(
     matchedSkus: preMatchedSkus,
     primaryQuotedItems: bulkQuote ? bulkQuote.lines.map((l) => ({ sku: l.sku, qty: l.qty })) : undefined,
     bulkQuote,
+    shippingMode,
     clientMentionedFilters,
     rucCedula,
     createdOrder: null,
@@ -1117,11 +1172,20 @@ export async function generateHermesReply(
     );
   }
 
-  // Calcular total de referencia para telemetría / QA
+  // Calcular total de referencia para telemetría / QA (incluyendo +$5 oculto si modo nacional >= $35)
   const cartItems = toolCtx.commercialState.cartItems || [];
-  const cartTotalUsd =
+  const baseCartTotalUsd =
     cartItems.length > 0
       ? sumExactPricesIva(cartItems.flatMap((i) => Array(Math.max(1, i.qty || 1)).fill(i.unitPriceIva)))
+      : null;
+  const cartHasBat = cartItems.some((i) => i.isBattery);
+  const cartTotalUsd =
+    baseCartTotalUsd !== null
+      ? applyNationalFreeShippingPricing(
+          baseCartTotalUsd,
+          Boolean(toolCtx.shippingMode?.applyHiddenMarkup),
+          cartHasBat
+        ).clientQuotedTotalUsd
       : null;
   const quotedTotalUsd =
     toolCtx.createdOrder?.totalUsd ??
@@ -1161,7 +1225,12 @@ export async function generateHermesReply(
       toolCtx.commercialState.escalationContext = {
         confirmedLines: bulkQuote?.lines ?? [],
         confirmedSummary: bulkQuote?.compactLabel || quotedSummary,
+        confirmedBaseSubtotalUsd: bulkQuote?.baseSubtotalUsd ?? baseCartTotalUsd ?? null,
+        confirmedHiddenMarkupUsd: bulkQuote?.hiddenShippingMarkupUsd ?? 0,
         confirmedSubtotalUsd: bulkQuote?.subtotalUsd ?? quotedTotalUsd,
+        pricingMode: toolCtx.shippingMode?.mode ?? "pedernales_local",
+        adTag: effectiveAttribution.adTag ?? null,
+        adId: effectiveAttribution.adId ?? null,
         clientMentionedFilters,
         askedMissingFields: detEsc.missingFieldKeys,
         collectedFields: {

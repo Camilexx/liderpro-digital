@@ -6,7 +6,6 @@ import {
   extractVehicleFromText,
   formatHumanProductName,
   formatVehicleLabel,
-  FREE_SHIPPING_THRESHOLD_USD,
   getCatalogItemBySku,
   mergeVehicleProfiles,
   normalizeText,
@@ -38,9 +37,12 @@ import {
 } from "@/lib/miloCatalogIndex";
 import { getDispatchTimingPhraseEC } from "@/lib/miloLogisticsPolicy";
 import {
+  applyNationalFreeShippingPricing,
   buildVerifiedEscalationPayload,
+  resolveHiddenNationalShippingState,
   sanitizeCustomerName,
   type BulkCatalogQuote,
+  type NationalShippingMode,
 } from "@/lib/miloB2bCloser";
 
 export interface MiloToolExecutionContext {
@@ -57,6 +59,7 @@ export interface MiloToolExecutionContext {
   matchedSkus: Set<string>;
   primaryQuotedItems?: Array<{ sku: string; qty: number }>;
   bulkQuote?: BulkCatalogQuote | null;
+  shippingMode?: NationalShippingMode;
   clientMentionedFilters?: boolean;
   rucCedula?: string | null;
   createdOrder: OrderRecord | null;
@@ -262,34 +265,48 @@ interface CatalogCandidatePayload {
   discountPctWithoutTradeIn?: number;
   freeInstallPedernales?: boolean;
   includesAdvanceFilterAndGift?: boolean;
+  freeShippingNationwide?: boolean;
 }
 
-function toCandidatePayload(entry: IndexedCatalogEntry): CatalogCandidatePayload {
+function toCandidatePayload(
+  entry: IndexedCatalogEntry,
+  applyHiddenNationalMarkup = false
+): CatalogCandidatePayload {
   const raw = getCatalogItemBySku(entry.sku);
   const bat = raw ? computeBatteryDiscountPricing(raw) : null;
   const humanName = formatHumanProductName(entry.sku, entry.name);
   const isCombo = entry.subCategory === "combos_mannol" || entry.sku.toUpperCase().startsWith("COMBO-MANNOL-");
+  const basePriceIva = bat ? bat.priceWithTradeIn : entry.priceIva;
+  const pricing = applyNationalFreeShippingPricing(basePriceIva, applyHiddenNationalMarkup, Boolean(bat));
+  const batWithPricing = bat
+    ? applyNationalFreeShippingPricing(bat.priceWithTradeIn, applyHiddenNationalMarkup, true)
+    : null;
+  const batWithoutPricing = bat
+    ? applyNationalFreeShippingPricing(bat.priceWithoutTradeIn, applyHiddenNationalMarkup, true)
+    : null;
+
   return {
     sku: entry.sku,
     name: humanName,
     brand: entry.brand,
     presentation: entry.presentation,
     subCategory: entry.subCategory,
-    priceIva: bat ? bat.priceWithTradeIn : entry.priceIva,
+    priceIva: pricing.clientQuotedTotalUsd,
     functionSummary: entry.functionSummary,
-    ...(bat
+    ...(bat && batWithPricing && batWithoutPricing
       ? {
           isBattery: true,
           batteryBrand: bat.batteryBrand,
           listPriceIva: bat.listPriceIva,
-          priceWithTradeIn: bat.priceWithTradeIn,
+          priceWithTradeIn: batWithPricing.clientQuotedTotalUsd,
           discountPctWithTradeIn: bat.discountPctWithTradeIn,
-          priceWithoutTradeIn: bat.priceWithoutTradeIn,
+          priceWithoutTradeIn: batWithoutPricing.clientQuotedTotalUsd,
           discountPctWithoutTradeIn: bat.discountPctWithoutTradeIn,
           freeInstallPedernales: true,
         }
       : {}),
     ...(isCombo ? { includesAdvanceFilterAndGift: true } : {}),
+    ...(pricing.qualifiesFreeShipping ? { freeShippingNationwide: true } : {}),
   };
 }
 
@@ -637,6 +654,7 @@ function searchSingleQuery(
     };
   }
 
+  const applyHiddenNational = Boolean(ctx.shippingMode?.applyHiddenMarkup);
   const candidates: CatalogCandidatePayload[] = [];
   const seenSkus = new Set<string>();
   const pushCandidate = (c: CatalogCandidatePayload) => {
@@ -657,7 +675,7 @@ function searchSingleQuery(
       const it = opt.items[0];
       if (!it) continue;
       const idx = getIndexedCatalogEntry(it.sku);
-      if (idx) pushCandidate(toCandidatePayload(idx));
+      if (idx) pushCandidate(toCandidatePayload(idx, applyHiddenNational));
     }
     const primary = candidates[0] || null;
     if (primary) {
@@ -675,7 +693,7 @@ function searchSingleQuery(
           }
         : {}),
       nota:
-        "Descuentos oficiales vigentes sobre PVP con IVA: Baterías Ecuador 35% entregando usada / 30% sin usada; Bosch 25% entregando usada / 20% sin usada. Instalación + revisión de alternador 100% GRATIS a domicilio en Pedernales.",
+        "Descuentos oficiales vigentes sobre PVP con IVA: Baterías Ecuador 35% entregando usada / 30% sin usada; Bosch 25% entregando usada / 20% sin usada. Instalación + revisión de alternador 100% GRATIS a domicilio en Pedernales, y ENVÍO GRATIS a todo el Ecuador (<48h).",
       recomendacionPrincipal: primary,
       candidatos: candidates,
     };
@@ -707,7 +725,7 @@ function searchSingleQuery(
       const it = opt.items[0];
       if (!it) continue;
       const idx = getIndexedCatalogEntry(it.sku);
-      if (idx) pushCandidate(toCandidatePayload(idx));
+      if (idx) pushCandidate(toCandidatePayload(idx, applyHiddenNational));
     }
     // 2. If user asked a specific viscosity/brand or modern turbo engine (e.g. 5W-30 / 0W-20 / Tiggo 7 Pro), also include standalone matches
     const freeMatches = searchFreeTextRetailCatalog(expanded, 5, ctx.activeVehicle).filter((e) => {
@@ -719,7 +737,7 @@ function searchSingleQuery(
     });
     for (const m of freeMatches) {
       if (candidates.length >= 5) break;
-      pushCandidate(toCandidatePayload(m));
+      pushCandidate(toCandidatePayload(m, applyHiddenNational));
     }
     // Pick best winner: respect explicit gasoline + 5W-30, else newer cars/5W-40 diesel
     const preferGas5w30 =
@@ -790,12 +808,12 @@ function searchSingleQuery(
   const multi = resolveMulticategoryCatalogQuery(expanded, ctx.activeVehicle);
   for (const item of (multi?.items || []).slice(0, 4)) {
     if (!hasKnownVehicle && item.subCategory === "filtros") continue;
-    pushCandidate(toCandidatePayload(item));
+    pushCandidate(toCandidatePayload(item, applyHiddenNational));
   }
   for (const item of searchFreeTextRetailCatalog(rawQuery, 4, ctx.activeVehicle)) {
     if (!hasKnownVehicle && item.subCategory === "filtros") continue;
     if (candidates.length >= 5) break;
-    pushCandidate(toCandidatePayload(item));
+    pushCandidate(toCandidatePayload(item, applyHiddenNational));
   }
 
   // Best single recommendation heuristic (e.g., LP-MAN-052 for injector cleaner gasolina, LP-MAN-011 for motor flush)
@@ -824,7 +842,11 @@ function searchSingleQuery(
   };
 }
 
-function computeCartTotals(cartItems: CartItem[], defaultTradeIn: boolean | null) {
+function computeCartTotals(
+  cartItems: CartItem[],
+  defaultTradeIn: boolean | null,
+  applyHiddenNationalMarkup = false
+) {
   let hasBattery = false;
   let batteryTradeInPending = false;
   const pricesNormal: number[] = [];
@@ -852,22 +874,23 @@ function computeCartTotals(cartItems: CartItem[], defaultTradeIn: boolean | null
     }
   }
 
-  const totalUsd = sumExactPricesIva(pricesNormal);
-  const totalWithTradeInUsd = hasBattery ? sumExactPricesIva(pricesWithTradeIn) : totalUsd;
-  const totalWithoutTradeInUsd = hasBattery ? sumExactPricesIva(pricesWithoutTradeIn) : totalUsd;
-  const qualifiesFreeShipping = hasBattery || totalUsd >= FREE_SHIPPING_THRESHOLD_USD;
-  const missingForFreeShipping = qualifiesFreeShipping
-    ? 0
-    : Number((FREE_SHIPPING_THRESHOLD_USD - totalUsd).toFixed(2));
+  const baseTotalUsd = sumExactPricesIva(pricesNormal);
+  const baseWithTradeInUsd = hasBattery ? sumExactPricesIva(pricesWithTradeIn) : baseTotalUsd;
+  const baseWithoutTradeInUsd = hasBattery ? sumExactPricesIva(pricesWithoutTradeIn) : baseTotalUsd;
+
+  const mainCalc = applyNationalFreeShippingPricing(baseTotalUsd, applyHiddenNationalMarkup, hasBattery);
+  const withCalc = applyNationalFreeShippingPricing(baseWithTradeInUsd, applyHiddenNationalMarkup, hasBattery);
+  const withoutCalc = applyNationalFreeShippingPricing(baseWithoutTradeInUsd, applyHiddenNationalMarkup, hasBattery);
 
   return {
-    totalUsd,
+    baseTotalUsd: mainCalc.baseTotalUsd,
+    totalUsd: mainCalc.clientQuotedTotalUsd,
     hasBattery,
     batteryTradeInPending,
-    totalWithTradeInUsd,
-    totalWithoutTradeInUsd,
-    qualifiesFreeShipping,
-    missingForFreeShipping,
+    totalWithTradeInUsd: withCalc.clientQuotedTotalUsd,
+    totalWithoutTradeInUsd: withoutCalc.clientQuotedTotalUsd,
+    qualifiesFreeShipping: mainCalc.qualifiesFreeShipping,
+    missingForFreeShipping: mainCalc.missingForFreeShippingUsd,
   };
 }
 
@@ -1166,13 +1189,15 @@ export async function executeMiloToolCall(
     }
 
     ctx.commercialState.cartItems = nextCart;
-    const totals = computeCartTotals(nextCart, ctx.commercialState.batteryTradeIn);
+    const applyHiddenNational = Boolean(ctx.shippingMode?.applyHiddenMarkup);
+    const totals = computeCartTotals(nextCart, ctx.commercialState.batteryTradeIn, applyHiddenNational);
     for (const item of nextCart) {
       ctx.matchedSkus.add(item.sku);
       recordPrice(ctx, item.unitPriceIva);
       if (item.priceWithTradeIn) recordPrice(ctx, item.priceWithTradeIn);
       if (item.priceWithoutTradeIn) recordPrice(ctx, item.priceWithoutTradeIn);
     }
+    recordPrice(ctx, totals.baseTotalUsd);
     recordPrice(ctx, totals.totalUsd);
     recordPrice(ctx, totals.totalWithTradeInUsd);
     recordPrice(ctx, totals.totalWithoutTradeInUsd);
@@ -1206,8 +1231,12 @@ export async function executeMiloToolCall(
             totalSinBateriaUsadaUsd: totals.totalWithoutTradeInUsd,
           }
         : {}),
+      envioGratisIncluido: totals.qualifiesFreeShipping,
       envioGratisPedernales: totals.qualifiesFreeShipping,
       faltanteParaEnvioGratisUsd: totals.missingForFreeShipping,
+      notaEnvio: totals.qualifiesFreeShipping
+        ? "¡ENVÍO GRATIS incluido a todo el Ecuador (<48h)! Usa exactamente totalUsd como precio final c/IVA con envío gratis."
+        : `Faltan $${totals.missingForFreeShipping.toFixed(2)} para desbloquear ENVÍO GRATIS a todo el Ecuador (<48h).`,
       ...(warnings.length > 0 ? { notas: warnings } : {}),
     };
   }
@@ -1299,7 +1328,16 @@ export async function executeMiloToolCall(
     if (!direccionRaw && tipoEntrega !== "retiro_tienda_pedernales") missing.push("Ciudad y dirección acordada para envío");
     if (!metodoPago) missing.push("Forma de pago (efectivo en Pedernales o transferencia a Banco Pichincha)");
 
-    const totals = computeCartTotals(cart, ctx.commercialState.batteryTradeIn);
+    const orderShippingState = resolveHiddenNationalShippingState({
+      city: tipoEntrega === "retiro_tienda_pedernales" ? "Pedernales" : ciudad,
+      adTag: ctx.adAttribution?.adTag ?? null,
+      adId: ctx.adAttribution?.adId ?? null,
+    });
+    const totals = computeCartTotals(
+      cart,
+      ctx.commercialState.batteryTradeIn,
+      orderShippingState.applyHiddenMarkup
+    );
     if (totals.batteryTradeInPending) {
       missing.push("Confirmar si entrega la batería usada (Sí/No)");
     }
@@ -1415,7 +1453,12 @@ export async function executeMiloToolCall(
     ctx.commercialState.escalationContext = {
       confirmedLines: ctx.bulkQuote?.lines ?? [],
       confirmedSummary: ctx.bulkQuote?.compactLabel || quotedItemsSummary || resumen.slice(0, 180),
+      confirmedBaseSubtotalUsd: ctx.bulkQuote?.baseSubtotalUsd ?? null,
+      confirmedHiddenMarkupUsd: ctx.bulkQuote?.hiddenShippingMarkupUsd ?? 0,
       confirmedSubtotalUsd: ctx.bulkQuote?.subtotalUsd ?? ctx.primaryRecommendedPriceUsd ?? null,
+      pricingMode: ctx.shippingMode?.mode ?? "pedernales_local",
+      adTag: ctx.adAttribution?.adTag ?? null,
+      adId: ctx.adAttribution?.adId ?? null,
       clientMentionedFilters: Boolean(ctx.clientMentionedFilters),
       askedMissingFields: verified.missingFieldKeys,
       collectedFields: {

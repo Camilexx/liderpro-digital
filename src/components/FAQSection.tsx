@@ -20,9 +20,9 @@ const FAQS: FAQItem[] = [
       "Nuestra tienda y bodega única está en Pedernales (Manabí), Vía al Carmen frente a la gasolinera. Dentro de Pedernales ofrecemos instalación gratuita de baterías a domicilio, y despachamos a todo el Ecuador en menos de 48h.",
   },
   {
-    question: "¿Cuánto demora en llegar mi pedido a otras provincias del Ecuador?",
+    question: "¿Cuánto demora en llegar mi pedido y el envío es gratis?",
     answer:
-      "Despachamos diariamente desde LíderPro Pedernales hacia las 24 provincias del Ecuador en menos de 48 horas mediante transporte interprovincial y couriers autorizados. Consulta el tiempo de entrega y costo de flete según tu ciudad por WhatsApp.",
+      "¡Sí! Ofrecemos ENVÍO GRATIS a las 24 provincias del Ecuador en compras desde $35 (y en toda batería), con despacho diario coordinado en menos de 48 horas desde nuestra bodega matriz en Pedernales y foto de tu guía apenas salga a ruta.",
   },
   {
     question: "¿Qué garantía tienen las baterías y repuestos vendidos en LiderPro?",

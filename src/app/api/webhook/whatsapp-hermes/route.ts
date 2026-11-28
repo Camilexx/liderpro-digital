@@ -504,7 +504,19 @@ export async function POST(req: NextRequest) {
                   existingCity: existingCust?.city ?? null,
                   existingName: existingCust?.name ?? contactName,
                   existingVehicleLabel: formatVehicleLabel(existingCust?.activeVehicle ?? null) || null,
-                  existingContext: existingCust?.commercialState?.escalationContext ?? null,
+                  existingContext: {
+                    ...(existingCust?.commercialState?.escalationContext ?? {}),
+                    adTag:
+                      existingCust?.commercialState?.escalationContext?.adTag ??
+                      adAttribution?.adTag ??
+                      existingCust?.adTag ??
+                      null,
+                    adId:
+                      existingCust?.commercialState?.escalationContext?.adId ??
+                      adAttribution?.adId ??
+                      existingCust?.adId ??
+                      null,
+                  },
                   catalogEntries: privatePricing as BulkCatalogSku[],
                   dispatchTimingPhrase: getDispatchTimingPhraseEC(),
                 });

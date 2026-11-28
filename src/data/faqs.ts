@@ -12,9 +12,9 @@ export const FAQS_DATA: FAQItem[] = [
     id: "env-1",
     category: "envios",
     categoryLabel: "Envíos y Rutas",
-    question: "¿A qué ciudades de Ecuador realizan envíos?",
+    question: "¿A qué ciudades de Ecuador realizan envíos y desde qué monto es gratis?",
     answer:
-      "Despachamos a las 24 provincias del país desde nuestra Sede Única en Pedernales (Manabí) con entregas en menos de 48h. Contamos con rutas directas hacia Santo Domingo, Manta, Portoviejo, Esmeraldas, Guayaquil y todo el país (Ambato, Cuenca, Loja, Ibarra, Oriente y provincias).",
+      "Despachamos a las 24 provincias del Ecuador desde nuestra Sede Única en Pedernales (Manabí) con entregas en menos de 48h y ENVÍO GRATIS en compras desde $35 (y en toda batería). Cubrimos Costa, Sierra y Oriente (Quito, Guayaquil, Cuenca, Manta, Portoviejo, Santo Domingo, Esmeraldas, Ambato, Loja, Ibarra y más).",
   },
   {
     id: "env-2",

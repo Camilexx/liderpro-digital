@@ -54,15 +54,142 @@ export interface BulkCatalogQuote {
   containerType: "caneca_20l" | "tambor_55gl";
   lines: BulkQuoteLine[];
   unmatchedSpecs: string[];
+  baseSubtotalUsd: number;
+  hiddenShippingMarkupUsd: number;
   subtotalUsd: number;
+  freeShippingIncluded: boolean;
+  pricingMode: "pedernales_local" | "national_outside_pedernales";
+  unitDisplayUniform: boolean;
   compactLabel: string; // e.g. "4 × 15W-40 (20L) + 1 × 10W-40 (20L)"
-  arithmeticBreakdown: string; // e.g. "4 × $125.00 + 1 × $128.50 = $628.50"
+  arithmeticBreakdown: string; // e.g. "4 × $126.00 + 1 × $129.50 = $633.50"
+}
+
+export const FREE_SHIPPING_NATIONWIDE_MIN_USD = 35.0;
+export const OUTSIDE_PEDERNALES_HIDDEN_SHIPPING_USD = 5.0;
+
+const NATIONAL_AD_IDS = new Set([
+  "120255987815660368", // AD-B13
+  "120255987815710368", // AD-B12
+  "120255987815760368", // AD-B06
+]);
+
+export interface NationalShippingMode {
+  mode: "pedernales_local" | "national_outside_pedernales";
+  applyHiddenMarkup: boolean;
+  reason: string;
+}
+
+/**
+ * Determina si corresponde aplicar el incremento oculto fijo de $5.00 por pedido (>= $35):
+ * - Si confirma entrega o retiro en Pedernales -> `pedernales_local` ($0 incremento, precio directo bodega).
+ * - Si indica ciudad != Pedernales -> `national_outside_pedernales` (+$5 fijo oculto, envío gratis incluido).
+ * - Si aún no indica ciudad pero llegó de anuncio nacional (AD-B* / IDs nacionales) o pidió envío a otra ciudad ->
+ *   `national_outside_pedernales` (+$5 fijo oculto; si luego confirma Pedernales baja automáticamente a base).
+ */
+export function resolveHiddenNationalShippingState(params: {
+  city?: string | null;
+  adTag?: string | null;
+  adId?: string | null;
+  userText?: string | null;
+}): NationalShippingMode {
+  const normCity = normalizeAscii(params.city || "").trim();
+  const normText = normalizeAscii(params.userText || "");
+
+  const explicitlyPedernalesPickup =
+    normCity === "pedernales" ||
+    /\b(retiro\s+en\s+(?:tienda|bodega|local|pedernales)|retirar\s+en\s+(?:tienda|bodega|local|pedernales)|paso\s+retirando|aqui\s+en\s+pedernales|estoy\s+en\s+pedernales|soy\s+de\s+pedernales|en\s+pedernales)\b/.test(
+      normText
+    );
+
+  if (explicitlyPedernalesPickup) {
+    return {
+      mode: "pedernales_local",
+      applyHiddenMarkup: false,
+      reason: "confirmed_pedernales_or_pickup",
+    };
+  }
+
+  if (normCity && normCity !== "pedernales") {
+    return {
+      mode: "national_outside_pedernales",
+      applyHiddenMarkup: true,
+      reason: `city_outside_pedernales:${normCity}`,
+    };
+  }
+
+  const tag = (params.adTag || "").trim().toUpperCase();
+  const adId = (params.adId || "").trim();
+  if (/^AD-B\d*/i.test(tag) || (adId && NATIONAL_AD_IDS.has(adId))) {
+    return {
+      mode: "national_outside_pedernales",
+      applyHiddenMarkup: true,
+      reason: `national_ad:${tag || adId}`,
+    };
+  }
+
+  if (/\b(otra\s+ciudad|otra\s+provincia|envio\s+nacional|envio\s+a\s+provincia|fuera\s+de\s+pedernales)\b/.test(normText)) {
+    return {
+      mode: "national_outside_pedernales",
+      applyHiddenMarkup: true,
+      reason: "national_shipping_intent",
+    };
+  }
+
+  return {
+    mode: "pedernales_local",
+    applyHiddenMarkup: false,
+    reason: "default_local_pedernales",
+  };
+}
+
+export interface NationalFreeShippingPricing {
+  baseTotalUsd: number;
+  hiddenMarkupUsd: number;
+  clientQuotedTotalUsd: number;
+  qualifiesFreeShipping: boolean;
+  missingForFreeShippingUsd: number;
+}
+
+/**
+ * Calcula el total final al cliente aplicando:
+ * - Envío GRATIS a todo el Ecuador desde $35.00 (o en cualquier batería).
+ * - Incremento oculto fijo de +$5.00 por pedido si aplica modo nacional (>= $35 o batería).
+ */
+export function applyNationalFreeShippingPricing(
+  baseTotalUsd: number,
+  applyHiddenMarkup: boolean,
+  hasBattery = false
+): NationalFreeShippingPricing {
+  const safeBaseCents = Math.max(0, Math.round(Number(baseTotalUsd || 0) * 100));
+  const safeBase = roundUsd(safeBaseCents);
+  const qualifiesFreeShipping = hasBattery || safeBase >= FREE_SHIPPING_NATIONWIDE_MIN_USD;
+  const hiddenCents =
+    applyHiddenMarkup && qualifiesFreeShipping
+      ? Math.round(OUTSIDE_PEDERNALES_HIDDEN_SHIPPING_USD * 100)
+      : 0;
+  const clientQuotedTotalUsd = roundUsd(safeBaseCents + hiddenCents);
+  const missingForFreeShippingUsd = qualifiesFreeShipping
+    ? 0
+    : roundUsd(Math.max(0, Math.round(FREE_SHIPPING_NATIONWIDE_MIN_USD * 100) - safeBaseCents));
+
+  return {
+    baseTotalUsd: safeBase,
+    hiddenMarkupUsd: roundUsd(hiddenCents),
+    clientQuotedTotalUsd,
+    qualifiesFreeShipping,
+    missingForFreeShippingUsd,
+  };
 }
 
 export interface EscalationContextSnapshot {
   confirmedLines: BulkQuoteLine[];
   confirmedSummary: string;
+  confirmedBaseSubtotalUsd?: number | null;
+  confirmedHiddenMarkupUsd?: number | null;
   confirmedSubtotalUsd: number | null;
+  pricingMode?: "pedernales_local" | "national_outside_pedernales";
+  adTag?: string | null;
+  adId?: string | null;
   clientMentionedFilters: boolean;
   askedMissingFields: string[];
   collectedFields: Record<string, string>;
@@ -480,19 +607,34 @@ function resolveCatalogSkuForBulkItem(
 /**
  * Busca en el catálogo real los SKUs vigentes y calcula aritméticamente en código
  * (centavos enteros, cero alucinación LLM) cada línea y el subtotal exacto c/IVA.
+ * Si `applyHiddenNationalMarkup` es true y el pedido >= $35, incorpora de forma oculta
+ * exactamente +$5.00 fijo en el total del pedido (prorrateado exacto si es divisible
+ * entre `totalUnits`, ej. 5 canecas = +$1.00 c/u → $633.50; o consolidado como pack).
  */
 export function quoteBulkCanecaOrderFromCatalog(
   rawText: string,
   catalogEntries?: BulkCatalogSku[],
-  opts?: { historyUserTexts?: string[]; defaultBrand?: string }
+  opts?: {
+    historyUserTexts?: string[];
+    defaultBrand?: string;
+    applyHiddenNationalMarkup?: boolean;
+  }
 ): BulkCatalogQuote | null {
   const parsed = parseBulkCanecaOrder(rawText, opts?.historyUserTexts || []);
   if (!parsed) return null;
 
   const catalog = catalogEntries && catalogEntries.length > 0 ? catalogEntries : CANONICAL_BULK_CATALOG_FALLBACK;
-  const lines: BulkQuoteLine[] = [];
+  const rawLines: Array<{
+    sku: string;
+    name: string;
+    brand: string;
+    specKey: string;
+    specLabel: string;
+    qty: number;
+    baseUnitCents: number;
+  }> = [];
   const unmatchedSpecs: string[] = [];
-  let subtotalCents = 0;
+  let baseSubtotalCents = 0;
 
   for (const item of parsed.items) {
     const matched = resolveCatalogSkuForBulkItem(item, catalog, {
@@ -504,39 +646,67 @@ export function quoteBulkCanecaOrderFromCatalog(
       continue;
     }
     const unitPriceIva = getCatalogUnitPrice(matched);
-    const unitCents = Math.round(unitPriceIva * 100);
-    const lineCents = unitCents * item.qty;
-    subtotalCents += lineCents;
-    const lineSubtotalUsd = roundUsd(lineCents);
-    const brand = (matched.brand || "MANNOL").toUpperCase();
-    const shortName = `${brand} ${item.specLabel}`;
-
-    lines.push({
+    const baseUnitCents = Math.round(unitPriceIva * 100);
+    baseSubtotalCents += baseUnitCents * item.qty;
+    rawLines.push({
       sku: matched.sku,
       name: matched.name,
-      brand,
+      brand: (matched.brand || "MANNOL").toUpperCase(),
       specKey: item.specKey,
       specLabel: item.specLabel,
       qty: item.qty,
-      unitPriceIva,
-      lineSubtotalUsd,
-      formattedLine: `${item.qty} × ${shortName} × ${formatUsd(unitPriceIva)} = ${formatUsd(lineSubtotalUsd)}`,
+      baseUnitCents,
     });
   }
 
-  if (lines.length === 0) return null;
+  if (rawLines.length === 0) return null;
 
-  const subtotalUsd = roundUsd(subtotalCents);
+  const totalUnits = rawLines.reduce((acc, l) => acc + l.qty, 0);
+  const baseSubtotalUsd = roundUsd(baseSubtotalCents);
+  const shippingCalc = applyNationalFreeShippingPricing(
+    baseSubtotalUsd,
+    Boolean(opts?.applyHiddenNationalMarkup),
+    false
+  );
+  const hiddenCents = Math.round(shippingCalc.hiddenMarkupUsd * 100);
+  const canDistributeUniformly = hiddenCents === 0 || hiddenCents % totalUnits === 0;
+  const perUnitExtraCents = canDistributeUniformly ? hiddenCents / totalUnits : 0;
+
+  const lines: BulkQuoteLine[] = rawLines.map((rl) => {
+    const displayedUnitCents = rl.baseUnitCents + perUnitExtraCents;
+    const unitPriceIva = roundUsd(displayedUnitCents);
+    const lineSubtotalUsd = roundUsd(displayedUnitCents * rl.qty);
+    const shortName = `${rl.brand} ${rl.specLabel}`;
+    return {
+      sku: rl.sku,
+      name: rl.name,
+      brand: rl.brand,
+      specKey: rl.specKey,
+      specLabel: rl.specLabel,
+      qty: rl.qty,
+      unitPriceIva,
+      lineSubtotalUsd,
+      formattedLine: `${rl.qty} × ${shortName} × ${formatUsd(unitPriceIva)} = ${formatUsd(lineSubtotalUsd)}`,
+    };
+  });
+
+  const subtotalUsd = shippingCalc.clientQuotedTotalUsd;
   const compactLabel = lines.map((l) => `${l.qty} × ${l.specLabel}`).join(" + ");
-  const arithmeticBreakdown =
-    lines.map((l) => `${l.qty} × ${formatUsd(l.unitPriceIva)}`).join(" + ") + ` = ${formatUsd(subtotalUsd)}`;
+  const arithmeticBreakdown = canDistributeUniformly
+    ? lines.map((l) => `${l.qty} × ${formatUsd(l.unitPriceIva)}`).join(" + ") + ` = ${formatUsd(subtotalUsd)}`
+    : `Pack ${totalUnits} canecas (${compactLabel}) = ${formatUsd(subtotalUsd)}`;
 
   return {
-    totalUnits: lines.reduce((acc, l) => acc + l.qty, 0),
+    totalUnits,
     containerType: parsed.containerType,
     lines,
     unmatchedSpecs,
+    baseSubtotalUsd,
+    hiddenShippingMarkupUsd: shippingCalc.hiddenMarkupUsd,
     subtotalUsd,
+    freeShippingIncluded: shippingCalc.qualifiesFreeShipping,
+    pricingMode: shippingCalc.hiddenMarkupUsd > 0 ? "national_outside_pedernales" : "pedernales_local",
+    unitDisplayUniform: canDistributeUniformly,
     compactLabel,
     arithmeticBreakdown,
   };
@@ -642,13 +812,25 @@ export function buildLiveBulkPreCloseReply(params: {
         : "¡Perfecto!"
       : `${buildWarmEcuadorianGreeting(safeName)}.`;
 
-  const linesBlock = params.bulkQuote.lines
-    .map((l) => `• ${l.qty} × ${l.brand} ${l.specLabel} — ${formatUsd(l.unitPriceIva)} c/u = *${formatUsd(l.lineSubtotalUsd)}*`)
-    .join("\n");
+  const linesBlock = params.bulkQuote.unitDisplayUniform
+    ? params.bulkQuote.lines
+        .map((l) => `• ${l.qty} × ${l.brand} ${l.specLabel} — ${formatUsd(l.unitPriceIva)} c/u = *${formatUsd(l.lineSubtotalUsd)}*`)
+        .join("\n")
+    : params.bulkQuote.lines
+        .map((l) => `• ${l.qty} × ${l.brand} ${l.specLabel}`)
+        .join("\n");
+
+  const freeShippingBadge = params.bulkQuote.freeShippingIncluded
+    ? params.city && normalizeAscii(params.city) === "pedernales"
+      ? "🚚 *ENVÍO A DOMICILIO GRATIS en Pedernales* (precio directo de bodega)"
+      : params.city
+      ? `🚚 *¡ENVÍO GRATIS INCLUIDO a ${params.city} (<48h)!*`
+      : "🚚 *¡ENVÍO GRATIS INCLUIDO a todo el Ecuador (<48h)!*"
+    : "";
 
   const cityNote = params.city
-    ? `Para despacho a *${params.city}*, ya estoy pasando tu detalle exacto a nuestro asesor comercial para confirmarte la mejor escala mayorista y el valor exacto del envío.`
-    : `Ya estoy pasando tu detalle exacto a nuestro asesor comercial para confirmarte la mejor escala mayorista y el envío coordinado <48h.`;
+    ? `Ya pasé tu detalle exacto a nuestro asesor comercial para revisar tu mejor escala mayorista y coordinar tu despacho gratis a *${params.city}*.`
+    : `Ya pasé tu detalle exacto a nuestro asesor comercial para revisar tu mejor escala mayorista y coordinar tu despacho gratis a todo el Ecuador (<48h).`;
 
   // 1 sola pregunta conversacional ágil que pide únicamente lo faltante
   const missingPrompts: string[] = [];
@@ -662,19 +844,20 @@ export function buildLiveBulkPreCloseReply(params: {
   let closingQuestion: string;
   if (missingPrompts.length === 0) {
     closingQuestion =
-      "¿Deseas agregar algún otro producto o te enviamos la proforma oficial con estos datos?";
+      "¿Deseas agregar algún otro producto o te enviamos la proforma oficial con envío gratis incluido?";
   } else if (missingPrompts.length === 1) {
-    closingQuestion = `Para agilizar tu proforma y envío, ¿me ayudas confirmando ${missingPrompts[0]}?`;
+    closingQuestion = `Para agilizar tu proforma y despacho gratis, ¿me ayudas confirmando ${missingPrompts[0]}?`;
   } else {
     const last = missingPrompts.pop();
-    closingQuestion = `Para dejarte lista la proforma y cotizar el envío exacto, ¿me ayudas con ${missingPrompts.join(", ")} y ${last}?`;
+    closingQuestion = `Para dejarte lista la proforma oficial con envío gratis, ¿me ayudas con ${missingPrompts.join(", ")} y ${last}?`;
   }
 
   return (
     `${greeting} Sí tenemos stock inmediato de tus *${params.bulkQuote.totalUnits} canecas MANNOL 20L* (${params.bulkQuote.compactLabel}):\n` +
     `${linesBlock}\n` +
-    `*Subtotal referencial c/IVA:* *${formatUsd(params.bulkQuote.subtotalUsd)}*\n\n` +
-    `${cityNote}\n` +
+    `*Total referencial c/IVA:* *${formatUsd(params.bulkQuote.subtotalUsd)}*` +
+    (freeShippingBadge ? `\n${freeShippingBadge}` : "") +
+    `\n\n${cityNote}\n` +
     `${closingQuestion}`
   );
 }
@@ -721,12 +904,16 @@ export function buildVerifiedEscalationPayload(params: {
     for (const l of params.bulkQuote.lines) {
       confirmedParts.push(`• ${l.formattedLine} [${l.sku}]`);
     }
+    const internalMarginNote =
+      params.bulkQuote.hiddenShippingMarkupUsd > 0
+        ? ` [INTERNO EDWIN: base Pedernales ${formatUsd(params.bulkQuote.baseSubtotalUsd)} + ${formatUsd(params.bulkQuote.hiddenShippingMarkupUsd)} logístico oculto · ENVÍO GRATIS INCLUIDO]`
+        : " [Precio directo bodega Pedernales · envío gratis incluido]";
     confirmedParts.push(
-      `• Resumen: ${params.bulkQuote.compactLabel} → Subtotal referencial c/IVA: *${formatUsd(params.bulkQuote.subtotalUsd)}* (${params.bulkQuote.arithmeticBreakdown})`
+      `• Resumen: ${params.bulkQuote.compactLabel} → Total cotizado al cliente c/IVA: *${formatUsd(params.bulkQuote.subtotalUsd)}* (${params.bulkQuote.arithmeticBreakdown})${internalMarginNote}`
     );
   } else if (params.quotedTotalUsd !== null && params.quotedTotalUsd !== undefined) {
     confirmedParts.push(
-      `• ${params.selectedSkusLabel || "Cotización catálogo"} — Total c/IVA: *${formatUsd(params.quotedTotalUsd)}*`
+      `• ${params.selectedSkusLabel || "Cotización catálogo"} — Total c/IVA (envío gratis incluido desde $35): *${formatUsd(params.quotedTotalUsd)}*`
     );
   } else {
     confirmedParts.push(`• Solicitud cliente: "${normalizeBulkOrderText(params.cleanMessage).slice(0, 180)}"`);
@@ -750,7 +937,7 @@ export function buildVerifiedEscalationPayload(params: {
   const missingFieldsAsked =
     missingKeys.length > 0
       ? describeMissingFieldKeys(missingKeys)
-      : "Ningún dato comercial pendiente del cliente — listo para confirmar flete/escala mayorista y cerrar.";
+      : "Ningún dato comercial pendiente del cliente — listo para confirmar escala mayorista y despachar con envío gratis.";
 
   // 3. Motivo honesto y concreto
   const reason =
@@ -760,16 +947,16 @@ export function buildVerifiedEscalationPayload(params: {
       : params.bulkQuote
       ? `Pedido mayorista (${params.bulkQuote.totalUnits} canecas 20L: ${params.bulkQuote.compactLabel})`
       : params.city && normalizeAscii(params.city) !== "pedernales"
-      ? `Confirmar flete exacto a ${params.city}`
+      ? `Coordinar despacho nacional a ${params.city}`
       : "Atención comercial de asesor");
 
   // 4. Mensaje humano sugerido 100% verificado contra lo que dijo el cliente
-  // PROHIBIDO mencionar filtros si el cliente NO mencionó filtros, y PROHIBIDO usar hashes como nombre.
+  // PROHIBIDO mencionar filtros si el cliente NO mencionó filtros, PROHIBIDO revelar +$5 oculto y PROHIBIDO usar hashes como nombre.
   let suggestedReply: string;
   if (params.bulkQuote) {
-    const orderDesc = `${params.bulkQuote.totalUnits} canecas MANNOL 20L (${params.bulkQuote.compactLabel}, subtotal referencial ${formatUsd(params.bulkQuote.subtotalUsd)} c/IVA)`;
+    const orderDesc = `${params.bulkQuote.totalUnits} canecas MANNOL 20L (${params.bulkQuote.compactLabel}, total referencial ${formatUsd(params.bulkQuote.subtotalUsd)} c/IVA con ENVÍO GRATIS incluido)`;
     const destClause = params.city
-      ? ` con envío coordinado a ${params.city}`
+      ? ` hacia ${params.city}`
       : "";
     const filterClause = params.clientMentionedFilters
       ? params.vehicleLabel
@@ -784,7 +971,7 @@ export function buildVerifiedEscalationPayload(params: {
     const closingClause =
       askParts.length > 0
         ? ` ¿Me confirmas ${askParts.join(" y ")} para enviarte la proforma oficial?`
-        : ` Enseguida te confirmo la mejor escala mayorista${params.city ? ` + valor exacto del envío a ${params.city}` : ""} para ${timing}.`;
+        : ` Enseguida te confirmo la mejor escala mayorista para ${timing}.`;
 
     suggestedReply =
       `${greetingPrefix}, soy el asesor comercial de LíderPro Pedernales. ` +
@@ -801,18 +988,18 @@ export function buildVerifiedEscalationPayload(params: {
         : "";
     suggestedReply =
       `${greetingPrefix}, soy el asesor de LíderPro Pedernales. ` +
-      `Tu pedido (${totalTxt}) ya está listo${filterNote} y enseguida te confirmo el valor exacto del envío a ${cityTxt} para ${timing}.`;
+      `Tu pedido (${totalTxt}, con ENVÍO GRATIS incluido a ${cityTxt}) ya está listo${filterNote} para ${timing}.`;
   }
 
   const howToHandle = params.bulkQuote
-    ? `1) Verifica stock y aplica la escala mayorista real sobre ${params.bulkQuote.compactLabel} (base PVP c/IVA ${formatUsd(params.bulkQuote.subtotalUsd)}).\n` +
-      `2) ${params.city ? `Cotiza flete exacto a ${params.city} (sin nombrar flotas) y` : "Al recibir la ciudad de entrega,"} envía proforma oficial con factura SRI.`
-    : `1) Revisa el resumen verificado sin contradecir precios de catálogo.\n` +
-      `2) Confirma el punto pendiente al cliente (envío a tu ciudad / dirección acordada sin nombrar flotas) y cierra con factura SRI.`;
+    ? `1) Mantén coherencia con el total cotizado al cliente (${formatUsd(params.bulkQuote.subtotalUsd)} c/IVA con envío gratis incluido; base bodega ${formatUsd(params.bulkQuote.baseSubtotalUsd)}) y aplica escala mayorista real sin mencionar el ajuste logístico de $5.\n` +
+      `2) ${params.city ? `Coordina el despacho gratis a ${params.city} (sin nombrar flotas) y` : "Al recibir la ciudad de entrega,"} envía proforma oficial con factura SRI.`
+    : `1) Revisa el resumen verificado sin contradecir precios de catálogo (envío gratis incluido desde $35).\n` +
+      `2) Coordina envío a tu ciudad / dirección acordada (sin nombrar flotas) y cierra con factura SRI.`;
 
   const actionNeeded = params.bulkQuote
-    ? `Validar escala mayorista sobre ${params.bulkQuote.compactLabel} (${formatUsd(params.bulkQuote.subtotalUsd)} base c/IVA)${
-        params.city ? ` y cotizar flete exacto a ${params.city}` : " y esperar ciudad/RUC para proforma"
+    ? `Validar escala mayorista sobre ${params.bulkQuote.compactLabel} (${formatUsd(params.bulkQuote.subtotalUsd)} c/IVA envío gratis incluido)${
+        params.city ? ` y coordinar despacho a ${params.city}` : " y esperar ciudad/RUC para proforma"
       }.`
     : `Atender ${reason}.`;
 
@@ -947,32 +1134,66 @@ export function processPostEscalationPartialData(params: {
     newFieldKeys.push("filtros");
   }
 
-  // 5. ¿Actualizó pedido de canecas?
-  const newBulk = quoteBulkCanecaOrderFromCatalog(text, params.catalogEntries);
+  // 5. ¿Actualizó pedido de canecas o cambió de modo Pedernales <-> Nacional?
+  const nextShippingState = resolveHiddenNationalShippingState({
+    city: updatedCity,
+    adTag: prevCtx.adTag ?? null,
+    adId: prevCtx.adId ?? null,
+    userText: text,
+  });
+  const newBulk = quoteBulkCanecaOrderFromCatalog(text, params.catalogEntries, {
+    applyHiddenNationalMarkup: nextShippingState.applyHiddenMarkup,
+  });
   let activeBulkQuote: BulkCatalogQuote | null = null;
   if (newBulk) {
     prevCtx.confirmedLines = newBulk.lines;
     prevCtx.confirmedSummary = newBulk.compactLabel;
+    prevCtx.confirmedBaseSubtotalUsd = newBulk.baseSubtotalUsd;
+    prevCtx.confirmedHiddenMarkupUsd = newBulk.hiddenShippingMarkupUsd;
     prevCtx.confirmedSubtotalUsd = newBulk.subtotalUsd;
+    prevCtx.pricingMode = newBulk.pricingMode;
     activeBulkQuote = newBulk;
     newFieldKeys.push("pedido_canecas");
   } else if (prevCtx.confirmedLines.length > 0) {
-    const subtotalCents = prevCtx.confirmedLines.reduce(
-      (acc, l) => acc + Math.round(l.unitPriceIva * 100) * l.qty,
-      0
+    // Re-calcular con el modo logístico actual (si pasó a Pedernales, aplica precio directo bodega -$5 sin revelar recargo)
+    const rawFromLines = prevCtx.confirmedLines.map((l) => `${l.qty} de ${l.specKey}`).join(" y ");
+    const recomputed = quoteBulkCanecaOrderFromCatalog(
+      `${prevCtx.confirmedLines.reduce((a, l) => a + l.qty, 0)} canecas ${rawFromLines}`,
+      params.catalogEntries,
+      { applyHiddenNationalMarkup: nextShippingState.applyHiddenMarkup }
     );
-    const subtotalUsd = roundUsd(subtotalCents);
-    activeBulkQuote = {
-      totalUnits: prevCtx.confirmedLines.reduce((acc, l) => acc + l.qty, 0),
-      containerType: "caneca_20l",
-      lines: prevCtx.confirmedLines,
-      unmatchedSpecs: [],
-      subtotalUsd,
-      compactLabel: prevCtx.confirmedLines.map((l) => `${l.qty} × ${l.specLabel}`).join(" + "),
-      arithmeticBreakdown:
-        prevCtx.confirmedLines.map((l) => `${l.qty} × ${formatUsd(l.unitPriceIva)}`).join(" + ") +
-        ` = ${formatUsd(subtotalUsd)}`,
-    };
+    if (recomputed) {
+      prevCtx.confirmedLines = recomputed.lines;
+      prevCtx.confirmedSummary = recomputed.compactLabel;
+      prevCtx.confirmedBaseSubtotalUsd = recomputed.baseSubtotalUsd;
+      prevCtx.confirmedHiddenMarkupUsd = recomputed.hiddenShippingMarkupUsd;
+      prevCtx.confirmedSubtotalUsd = recomputed.subtotalUsd;
+      prevCtx.pricingMode = recomputed.pricingMode;
+      activeBulkQuote = recomputed;
+    } else {
+      const subtotalCents = prevCtx.confirmedLines.reduce(
+        (acc, l) => acc + Math.round(l.unitPriceIva * 100) * l.qty,
+        0
+      );
+      const subtotalUsd = roundUsd(subtotalCents);
+      const baseUsd = prevCtx.confirmedBaseSubtotalUsd ?? subtotalUsd;
+      activeBulkQuote = {
+        totalUnits: prevCtx.confirmedLines.reduce((acc, l) => acc + l.qty, 0),
+        containerType: "caneca_20l",
+        lines: prevCtx.confirmedLines,
+        unmatchedSpecs: [],
+        baseSubtotalUsd: baseUsd,
+        hiddenShippingMarkupUsd: roundUsd(Math.max(0, Math.round((subtotalUsd - baseUsd) * 100))),
+        subtotalUsd,
+        freeShippingIncluded: subtotalUsd >= FREE_SHIPPING_NATIONWIDE_MIN_USD,
+        pricingMode: nextShippingState.mode,
+        unitDisplayUniform: true,
+        compactLabel: prevCtx.confirmedLines.map((l) => `${l.qty} × ${l.specLabel}`).join(" + "),
+        arithmeticBreakdown:
+          prevCtx.confirmedLines.map((l) => `${l.qty} × ${formatUsd(l.unitPriceIva)}`).join(" + ") +
+          ` = ${formatUsd(subtotalUsd)}`,
+      };
+    }
   }
 
   // 6. Vehículo mencionado ahora (simple detector de marcas comunes)
@@ -1025,8 +1246,13 @@ export function processPostEscalationPartialData(params: {
       ackItems.push(`${activeBulkQuote.compactLabel} (ref. *${formatUsd(activeBulkQuote.subtotalUsd)}* c/IVA)`);
     }
 
+    const isPedernalesNow = normalizeAscii(updatedCity || "") === "pedernales";
+    const shippingTag = isPedernalesNow
+      ? "precio directo bodega Pedernales + domicilio gratis"
+      : "con ENVÍO GRATIS incluido";
+
     const orderRef = activeBulkQuote
-      ? ` junto con tus *${activeBulkQuote.totalUnits} canecas* (${activeBulkQuote.compactLabel}, subtotal ref. *${formatUsd(activeBulkQuote.subtotalUsd)}* c/IVA)`
+      ? ` junto con tus *${activeBulkQuote.totalUnits} canecas* (${activeBulkQuote.compactLabel}, total ref. *${formatUsd(activeBulkQuote.subtotalUsd)}* c/IVA, ${shippingTag})`
       : "";
 
     // Jamás repetir preguntas ya contestadas: solo ofrecer de paso lo que siga pendiente
@@ -1044,7 +1270,7 @@ export function processPostEscalationPartialData(params: {
     const tail =
       nextHintParts.length > 0
         ? ` Si deseas adelantar ${nextHintParts.join(" o ")}, me lo dejas por aquí.`
-        : " Enseguida nuestro asesor te envía la proforma final y el valor exacto del envío.";
+        : " Enseguida nuestro asesor te envía la proforma oficial con envío gratis incluido.";
 
     clientAckReply =
       `¡Anotado: ${ackItems.join(" y ")}! Ya actualicé este dato con nuestro asesor${orderRef}.${tail}`;

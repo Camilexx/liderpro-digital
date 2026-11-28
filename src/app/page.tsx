@@ -181,7 +181,7 @@ export default function HomePage() {
             {/* Live Operational Status Pill */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-slate-950 text-white rounded-full text-[11px] font-bold tracking-wider uppercase shadow-sm border border-slate-800">
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-              <span>🟢 Stock disponible en Pedernales para despacho nacional</span>
+              <span>🟢 Envío GRATIS a todo el Ecuador desde $35 · Stock inmediato en Pedernales</span>
             </div>
 
             {/* Main Headline with Satin Brand Gradient */}

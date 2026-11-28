@@ -283,8 +283,8 @@ export default function QuoteBasketDrawer() {
               >
                 <p className={`text-xs font-black ${meter.unlocked ? "text-emerald-800" : "text-slate-800"}`}>
                   {meter.unlocked
-                    ? "✅ ¡ENVÍO GRATIS DESBLOQUEADO EN TU PEDIDO!"
-                    : `🚚 Te faltan $${meter.missing.toFixed(2)} USD en productos (o agregar 1 Combo Cambio MANNOL) para desbloquear tu ENVÍO GRATIS`}
+                    ? "✅ ¡ENVÍO GRATIS A TODO EL ECUADOR DESBLOQUEADO (<48h)!"
+                    : `🚚 Te faltan $${meter.missing.toFixed(2)} USD en productos (o agregar 1 Combo Cambio MANNOL) para desbloquear ENVÍO GRATIS a todo el Ecuador`}
                 </p>
                 <div className="mt-2 h-2.5 w-full rounded-full bg-slate-200 overflow-hidden">
                   <div
@@ -314,7 +314,7 @@ export default function QuoteBasketDrawer() {
                     🎁 Regalo exclusivo en Combo Cambio MANNOL
                   </span>
                   <span className="text-[11px] text-slate-200">
-                    Envío gratis en Combos MANNOL o pedidos ≥ $35 USD
+                    Envío GRATIS a todo el Ecuador (&lt;48h) en Combos MANNOL o pedidos ≥ $35 USD
                   </span>
                 </div>
                 <span className="text-xs font-black text-[#22C55E] bg-[#22C55E]/15 px-2.5 py-1 rounded-lg border border-[#22C55E]/40">

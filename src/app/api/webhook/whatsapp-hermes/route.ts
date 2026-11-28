@@ -1,22 +1,35 @@
 import crypto from "node:crypto";
 import { after, NextRequest, NextResponse } from "next/server";
 import { META_CONFIG } from "@/data/metaConfig";
+import privatePricing from "@/data/privatePricing.server.json";
 import {
   AUDIO_FALLBACK_REPLY_ES,
   downloadMetaWhatsAppMedia,
   isAudioTranscriptionConfigured,
   transcribeAudioBuffer,
 } from "@/lib/audioTranscriber";
-import { resolveAdContext } from "@/lib/hermesCatalog";
+import { formatVehicleLabel, resolveAdContext } from "@/lib/hermesCatalog";
 import {
   claimWebhookMessageId,
+  flagCustomerHumanEscalation,
   getCustomer,
   insertMessage,
+  upsertCustomer,
   type AdAttribution,
+  type CommercialState,
 } from "@/lib/hermesDb";
 import { generateHermesReply } from "@/lib/hermesEngine";
 import { buildCapiPayload, sendWhatsAppCapiEvent } from "@/lib/metaCapi";
-import { evaluateHumanEscalationMuteLock } from "@/lib/miloLogisticsPolicy";
+import {
+  processPostEscalationPartialData,
+  sanitizeCustomerName,
+  type BulkCatalogSku,
+} from "@/lib/miloB2bCloser";
+import {
+  evaluateHumanEscalationMuteLock,
+  getDispatchTimingPhraseEC,
+  sanitizeMiloLogisticsText,
+} from "@/lib/miloLogisticsPolicy";
 import { handleIncomingPaymentReceipt } from "@/lib/miloPayments";
 
 export const runtime = "nodejs";
@@ -154,7 +167,7 @@ export async function GET(req: NextRequest) {
   const token = searchParams.get("hub.verify_token");
   const challenge = searchParams.get("hub.challenge");
 
-  if (mode === "subscribe" && token === META_CONFIG.verifyToken && challenge) {
+  if (mode === "subscribe" && Boolean(META_CONFIG.verifyToken) && token === META_CONFIG.verifyToken && challenge) {
     return new NextResponse(challenge, { status: 200, headers: { "Content-Type": "text/plain" } });
   }
   return NextResponse.json({ error: "Forbidden" }, { status: 403 });
@@ -434,7 +447,7 @@ export async function POST(req: NextRequest) {
           if (!msg.from) continue;
           const from = msg.from;
           const targetPhoneId = phoneId || META_CONFIG.phoneNumberId247;
-          const contactName = contactNameByWaId.get(from) || null;
+          const contactName = sanitizeCustomerName(contactNameByWaId.get(from) || null);
 
           const textBody = extractInboundText(msg);
           const adAttribution = extractAdAttribution(msg, textBody);
@@ -482,6 +495,92 @@ export async function POST(req: NextRequest) {
                   adTag: adAttribution?.adTag ?? null,
                   ctwaClid: adAttribution?.ctwaClid ?? null,
                 });
+
+                // Regla 5 (Des-trabe Conversacional Anti-Loop): si el cliente responde con datos parciales
+                // (ej. "Envío a cuenca", RUC, nombre o vehículos), actualiza contexto, refresca resumen
+                // ejecutivo a Edwin y responde 1 sola confirmación ágil sin repetir preguntas ya contestadas.
+                const postUpdate = processPostEscalationPartialData({
+                  inboundText: textBody,
+                  existingCity: existingCust?.city ?? null,
+                  existingName: existingCust?.name ?? contactName,
+                  existingVehicleLabel: formatVehicleLabel(existingCust?.activeVehicle ?? null) || null,
+                  existingContext: existingCust?.commercialState?.escalationContext ?? null,
+                  catalogEntries: privatePricing as BulkCatalogSku[],
+                  dispatchTimingPhrase: getDispatchTimingPhraseEC(),
+                });
+
+                if (postUpdate.hasNewData) {
+                  const nextCommercialState: CommercialState = {
+                    cartItems: existingCust?.commercialState?.cartItems ?? [],
+                    discussedCategories: existingCust?.commercialState?.discussedCategories ?? [],
+                    batteryTradeIn: existingCust?.commercialState?.batteryTradeIn ?? null,
+                    salesStage: existingCust?.commercialState?.salesStage ?? "cotizacion",
+                    lastSuggestedItems: existingCust?.commercialState?.lastSuggestedItems ?? [],
+                    lastRecommendedSkus: existingCust?.commercialState?.lastRecommendedSkus ?? [],
+                    escalationContext: postUpdate.updatedContext,
+                    updatedAt: new Date().toISOString(),
+                  };
+
+                  await upsertCustomer({
+                    phoneOrSession: sessionId,
+                    name: postUpdate.updatedName ?? sanitizeCustomerName(existingCust?.name) ?? null,
+                    activeVehicle: existingCust?.activeVehicle ?? null,
+                    city: postUpdate.updatedCity ?? existingCust?.city ?? null,
+                    customerType: existingCust?.customerType ?? "taller",
+                    commercialState: nextCommercialState,
+                    adId: adAttribution?.adId ?? existingCust?.adId ?? null,
+                    adTag: adAttribution?.adTag ?? existingCust?.adTag ?? null,
+                    ctwaClid: adAttribution?.ctwaClid ?? existingCust?.ctwaClid ?? null,
+                    adHeadline: adAttribution?.adHeadline ?? existingCust?.adHeadline ?? null,
+                    funnelStage: existingCust?.funnelStage ?? "producto_cotizado",
+                  });
+
+                  await flagCustomerHumanEscalation({
+                    phoneOrSession: sessionId,
+                    reason: postUpdate.updatedEscalation.reason,
+                    summary:
+                      postUpdate.updatedContext.confirmedSummary ||
+                      existingCust?.escalationSummary ||
+                      textBody.slice(0, 240),
+                    urgency: postUpdate.updatedEscalation.urgency,
+                    customerName: postUpdate.updatedName,
+                    customerPhone: from,
+                    city: postUpdate.updatedCity,
+                    adTag: adAttribution?.adTag ?? existingCust?.adTag ?? null,
+                    vehicleLabel: postUpdate.updatedVehicleText,
+                    confirmedByClient: postUpdate.updatedEscalation.confirmedByClient,
+                    missingFieldsAsked: postUpdate.updatedEscalation.missingFieldsAsked,
+                    actionNeeded: postUpdate.updatedEscalation.actionNeeded,
+                    howToHandle: postUpdate.updatedEscalation.howToHandle,
+                    suggestedReply: postUpdate.updatedEscalation.suggestedReply,
+                    sendLiveAlerts: true,
+                    isUpdate: true,
+                    forceRefresh: true,
+                  });
+
+                  if (postUpdate.shouldReplyToClient && postUpdate.clientAckReply) {
+                    const cleanAck = sanitizeMiloLogisticsText(postUpdate.clientAckReply);
+                    await sendMetaWhatsAppReply(targetPhoneId, from, cleanAck);
+                    await insertMessage({
+                      sessionId,
+                      channel: "whatsapp",
+                      role: "assistant",
+                      content: cleanAck,
+                      intentTag: "post_escalation_context_update",
+                      adId: adAttribution?.adId ?? existingCust?.adId ?? null,
+                      adTag: adAttribution?.adTag ?? existingCust?.adTag ?? null,
+                      ctwaClid: adAttribution?.ctwaClid ?? existingCust?.ctwaClid ?? null,
+                    });
+                  }
+
+                  console.log("[MiloWebhook] POST_ESCALATION_CONTEXT_REFRESHED", {
+                    toSuffix: from.slice(-4),
+                    newFields: postUpdate.newFieldKeys,
+                    replied: postUpdate.shouldReplyToClient,
+                  });
+                  return;
+                }
+
                 console.log("[MiloWebhook] HUMAN_ESCALATION_MUTE_LOCK_ACTIVE", {
                   toSuffix: from.slice(-4),
                   reason: muteVerdict.reason,

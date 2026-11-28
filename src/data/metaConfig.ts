@@ -13,7 +13,7 @@ export const META_CONFIG = {
     "1496009743586982"
   ).trim(),
   verifyToken: (
-    process.env.WHATSAPP_VERIFY_TOKEN || "liderpro_hermes_2026_secure"
+    process.env.WHATSAPP_VERIFY_TOKEN || ""
   ).trim(),
   graphVersion: "v21.0",
   line247Digits: "593967489002",

@@ -2,10 +2,24 @@ import {
   formatOfficialBankTransferDetails,
   getConfiguredBankTransferDetails,
 } from "@/data/businessConfig";
+import privatePricing from "@/data/privatePricing.server.json";
 import {
   buildNeutralFreightEscalationCopy,
+  getDispatchTimingPhraseEC,
   sanitizeMiloLogisticsText,
 } from "@/lib/miloLogisticsPolicy";
+import {
+  buildLiveBulkPreCloseReply,
+  buildVerifiedEscalationPayload,
+  didClientMentionFilters,
+  extractExplicitHumanName,
+  extractRucOrCedula,
+  normalizeBulkOrderText,
+  quoteBulkCanecaOrderFromCatalog,
+  sanitizeCustomerName,
+  type BulkCatalogQuote,
+  type BulkCatalogSku,
+} from "@/lib/miloB2bCloser";
 import {
   buildDeterministicQuotePlan,
   extractBatteryTradeInFromText,
@@ -145,10 +159,10 @@ export const MILO_SYSTEM_PROMPT =
   "3) VERIFICACIÓN EXACTA DE LITRAJE (> 4.0L Y > 7.0L): Si `buscar_en_catalogo` devuelve `alertaLitraje`, suma el número exacto de litros adicionales de 1L (ej. 9L = combo 7L + 2x 1L = $121.50; jamás 7L + 1L para 9L) y usa `gestionar_carrito` para devolver el total exacto.\n" +
   "4) UN GANADOR CLARO: Si preguntan cuál conviene más, recomienda 1 ganador claro y explica en 1 frase por qué protege mejor su motor.\n" +
   "5) MULTI-CONSULTA EN 1 TURNO: Llama a `buscar_en_catalogo` con todas las consultas en `consultas` y usa `gestionar_carrito` cuando pidan kit completo o total consolidado.\n" +
-  "6) PROHIBIDO INVENTAR PRECIOS O FLETES: Solo usa cifras devueltas por `buscar_en_catalogo` o `gestionar_carrito`.\n" +
-  "7) CERO SESGO A ACEITES: Si preguntaron por batería, cotiza batería primero.\n" +
+  "6) PROHIBIDO INVENTAR PRECIOS, DESCUENTOS O FLETES: Solo usa cifras exactas devueltas por `buscar_en_catalogo`, `gestionar_carrito` o el bloque `[PEDIDO MAYORISTA VERIFICADO EN CATÁLOGO]`. JAMÁS inventes porcentajes de descuento por volumen en lubricantes ni inviertas precios entre 15W-40 ($125.00) y 10W-40 ($128.50).\n" +
+  "7) CERO SESGO A ACEITES Y HIGIENIZACIÓN DE NOMBRE: Si preguntaron por batería, cotiza batería primero. PROHIBIDO saludar usando hashes, códigos o teléfonos (`f889566`, `AD-B12`, `user_`); si no hay nombre humano real, saluda cálidamente ('¡Hola! Qué gusto saludarte').\n" +
   "8) VEHÍCULOS POCO COMUNES: Usa `consultar_especificacion_vehiculo_web` + `buscar_en_catalogo`.\n" +
-  "9) ESCALAMIENTO HUMANO AUTOMÁTICO Y HONESTO: Si un producto no existe en bodega dilo sin rodeos. Si piden flota/proforma (>=3 vehículos o >=5 canecas 20L), vehículos pesados sin filtros mapeados (Sinotruk, Weichai, Glory), valor exacto de flete a otra ciudad para cerrar, descuento especial o hablar con encargado, llama a `escalar_a_asesor_humano` y responde en máximo 2 líneas avisando que ya pasaste el dato exacto para confirmárselo cuanto antes.\n" +
+  "9) PROTOCOLO OBLIGATORIO INVESTIGAR + APORTAR VALOR + PRE-CERRAR ANTES DE ESCALAR: Si piden canecas 20L, tambores, flota/proforma (>=3 vehículos o >=5 canecas 20L) o envío fuera de Pedernales, PRIMERO confirma disponibilidad y desglose exacto calculado con catálogo (ej. 4 × $125.00 + 1 × $128.50 = $628.50 c/IVA), NUNCA te trabes ni cortes frío con 'te paso con un asesor', y cierra con 1 sola pregunta conversacional ágil por el dato que falte (ciudad/sector exacto de entrega, nombre/RUC para proforma, y marca/modelo/año solo si el cliente pidió filtros). JAMÁS repitas cantidades que el cliente ya confirmó ni inventes filtros que el cliente no mencionó.\n" +
   "10) REGISTRO DE PEDIDO: Cuando el cliente ya confirme que quiere pedir y dé nombre, dirección/ciudad/retiro y forma de pago, llama a `registrar_pedido`. Solo entonces entrega los datos de Banco Pichincha (2216090525 / CI 1308068814 / ADRIAN MOSQUERA), pide comprobante completo y no prometas hora de salida hasta verificación.";
 
 export const HERMES_SYSTEM_PROMPT = MILO_SYSTEM_PROMPT;
@@ -294,7 +308,20 @@ function buildLiveCustomerContextBlock(
   lines.push(`- Vehículo activo: ${vehLabel || "No indicado todavía (PROHIBIDO cotizar filtros hasta conocer marca/modelo/año)"}`);
   lines.push(`- Ciudad: ${ctx.city || "No indicada (asume Pedernales solo si pregunta entrega local)"}`);
   lines.push(`- Tipo de cliente: ${ctx.customerType}`);
-  if (ctx.customerName) lines.push(`- Nombre guardado: ${ctx.customerName}`);
+  const safeCtxName = sanitizeCustomerName(ctx.customerName);
+  if (safeCtxName) {
+    lines.push(`- Nombre humano verificado: ${safeCtxName}`);
+  } else {
+    lines.push("- Nombre humano verificado: No confirmado (PROHIBIDO usar hashes/códigos como nombre; saluda cálido sin vocativo artificial).");
+  }
+  if (ctx.bulkQuote) {
+    lines.push(
+      `- [PEDIDO MAYORISTA VERIFICADO EN CATÁLOGO — CÁLCULO EXACTO EN CÓDIGO]: ${ctx.bulkQuote.compactLabel} | ` +
+        ctx.bulkQuote.lines.map((l) => `${l.formattedLine} [SKU: ${l.sku}]`).join(" | ") +
+        ` => Subtotal referencial c/IVA: $${ctx.bulkQuote.subtotalUsd.toFixed(2)} (${ctx.bulkQuote.arithmeticBreakdown}). ` +
+        `USA ESTAS CIFRAS EXACTAS. PROHIBIDO inventar porcentajes de descuento.`
+    );
+  }
   if (ctx.commercialState.batteryTradeIn !== null) {
     lines.push(`- Batería usada (canje): ${ctx.commercialState.batteryTradeIn ? "SÍ entrega usada" : "NO entrega usada"}`);
   }
@@ -449,7 +476,7 @@ function sanitizeWhatsAppFormatting(
 
 function extractDollarNumbers(text: string): number[] {
   const found: number[] = [];
-  const regex = /\$\s*(\d{1,4}(?:[.,]\d{1,2})?)/g;
+  const regex = /(?:\$|US\$|USD)[\s\u00a0\u202f]*(\d{1,5}(?:[.,]\d{1,2})?)/gi;
   let m: RegExpExecArray | null;
   while ((m = regex.exec(text)) !== null) {
     const val = Number(m[1].replace(",", "."));
@@ -548,17 +575,21 @@ function evaluateDeterministicEscalationSignal(params: {
   selectedSkusLabel: string;
   matchedSkusCount: number;
   customerName: string | null;
+  bulkQuote?: BulkCatalogQuote | null;
+  clientMentionedFilters?: boolean;
+  rucCedula?: string | null;
 }): {
   reason: string;
   urgency: EscalationUrgency;
   shortClientLabel: string;
+  confirmedByClient: string;
+  missingFieldsAsked: string;
+  missingFieldKeys: string[];
   actionNeeded: string;
   howToHandle: string;
   suggestedReply: string;
 } | null {
-  const norm = normalizeText(params.cleanMessage)
-    .replace(/\b16\s*w[-\s]?40\b/g, "15w-40")
-    .replace(/\b(0|5|10|15|20)\s*w\s*(20|30|40|50)\b/g, "$1w-$2");
+  const norm = normalizeBulkOrderText(params.cleanMessage);
 
   const vehicleBrands = [
     /\bsinotruk\b/,
@@ -580,7 +611,7 @@ function evaluateDeterministicEscalationSignal(params: {
   const brandHits = vehicleBrands.filter((rx) => rx.test(norm)).length;
   const hasUnmappedHeavy = /\b(sinotruk|weichai|howo|shacman|glory)\b/.test(norm);
 
-  let maxCanecas = 0;
+  let maxCanecas = params.bulkQuote?.totalUnits || 0;
   const canecaMatches = norm.matchAll(/\b(\d{1,3})\s*(?:canecas?|tambores?|baldes?)\b/g);
   for (const m of canecaMatches) {
     const qty = Number(m[1]);
@@ -603,56 +634,101 @@ function evaluateDeterministicEscalationSignal(params: {
     /\b(descuento\s+(?:especial|mayorista)|credito\s+a\s+\d+|plazo\s+de\s+pago)\b/.test(norm) ||
     (cityOutsidePedernales && /\bcontra\s*entrega\b/.test(norm));
 
-  const nombre = params.customerName ? ` ${params.customerName}` : "";
+  const safeName = sanitizeCustomerName(params.customerName);
   const cityLabel = params.city || "otra ciudad";
+  const timing = getDispatchTimingPhraseEC();
+  const vehicleLabel = formatVehicleLabel(params.activeVehicle) || null;
 
   if (isFleetOrVolume || hasUnmappedHeavy) {
-    return {
-      reason: hasUnmappedHeavy
-        ? "Flota B2B / vehículos pesados sin filtros mapeados"
-        : maxCanecas >= 5
-        ? `Pedido de volumen (${maxCanecas} canecas 20L)`
-        : "Proforma B2B multi-vehículo",
+    const verified = buildVerifiedEscalationPayload({
+      bulkQuote: params.bulkQuote ?? null,
+      cleanMessage: params.cleanMessage,
+      customerName: safeName,
+      city: params.city,
+      rucCedula: params.rucCedula ?? null,
+      vehicleLabel,
+      quotedTotalUsd: params.quotedTotalUsd,
+      selectedSkusLabel: params.selectedSkusLabel,
+      clientMentionedFilters: Boolean(params.clientMentionedFilters),
+      hasUnmappedHeavy,
       urgency: "alta",
-      shortClientLabel: "el stock exacto de filtros y proforma de tu flota",
-      actionNeeded: hasUnmappedHeavy
-        ? "Validar códigos/stock de filtros para Sinotruk/Weichai/Glory y armar proforma B2B unificada."
-        : "Confirmar cantidades exactas de canecas 20L, disponibilidad y proforma B2B.",
-      howToHandle:
-        `1) Revisa las unidades mencionadas (${params.selectedSkusLabel || "canecas 20L MANNOL 15W-40 $125.00 / 10W-40 $128.50"}) y verifica equivalencias de filtros pesados.\n` +
-        `2) Envía la proforma consolidada con factura SRI y coordina un solo despacho.`,
-      suggestedReply: `Hola${nombre}, soy el asesor de LíderPro Pedernales. Milo ya me pasó el detalle de tu flota; estoy validando los filtros exactos para enviarte la proforma completa en un solo despacho.`,
+      dispatchTimingPhrase: timing,
+    });
+    return {
+      reason: verified.reason,
+      urgency: verified.urgency,
+      shortClientLabel: verified.shortClientLabel,
+      confirmedByClient: verified.confirmedByClient,
+      missingFieldsAsked: verified.missingFieldsAsked,
+      missingFieldKeys: verified.missingFieldKeys,
+      actionNeeded: verified.actionNeeded,
+      howToHandle: verified.howToHandle,
+      suggestedReply: verified.suggestedReply,
     };
   }
 
   if (asksFreightOrOutsideShipping) {
     const totalTxt = params.quotedTotalUsd ? `$${params.quotedTotalUsd.toFixed(2)}` : "pendiente";
     const neutralCopy = buildNeutralFreightEscalationCopy({
-      customerName: params.customerName,
+      customerName: safeName,
       cityLabel,
       totalTxt,
       selectedSkusLabel: params.selectedSkusLabel,
+    });
+    const verified = buildVerifiedEscalationPayload({
+      bulkQuote: params.bulkQuote ?? null,
+      cleanMessage: params.cleanMessage,
+      customerName: safeName,
+      city: params.city,
+      rucCedula: params.rucCedula ?? null,
+      vehicleLabel,
+      quotedTotalUsd: params.quotedTotalUsd,
+      selectedSkusLabel: params.selectedSkusLabel,
+      clientMentionedFilters: Boolean(params.clientMentionedFilters),
+      reasonOverride: `Confirmar flete exacto a ${cityLabel}`,
+      urgency: "alta",
+      dispatchTimingPhrase: timing,
     });
     return {
       reason: `Confirmar flete exacto a ${cityLabel}`,
       urgency: "alta",
       shortClientLabel: `el valor exacto del envío a ${cityLabel}`,
-      actionNeeded: `Confirmar valor exacto de flete a ${cityLabel} para ${formatVehicleLabel(params.activeVehicle) || "el kit"} (producto ${totalTxt}).`,
+      confirmedByClient: verified.confirmedByClient,
+      missingFieldsAsked: verified.missingFieldsAsked,
+      missingFieldKeys: verified.missingFieldKeys,
+      actionNeeded: `Confirmar valor exacto de flete a ${cityLabel} para ${vehicleLabel || "el kit"} (producto ${totalTxt}).`,
       howToHandle: neutralCopy.howToHandle,
       suggestedReply: neutralCopy.suggestedReply,
     };
   }
 
   if (asksSpecialTerms) {
+    const verified = buildVerifiedEscalationPayload({
+      bulkQuote: params.bulkQuote ?? null,
+      cleanMessage: params.cleanMessage,
+      customerName: safeName,
+      city: params.city,
+      rucCedula: params.rucCedula ?? null,
+      vehicleLabel,
+      quotedTotalUsd: params.quotedTotalUsd,
+      selectedSkusLabel: params.selectedSkusLabel,
+      clientMentionedFilters: Boolean(params.clientMentionedFilters),
+      reasonOverride: "Solicitud de descuento especial o excepción de pago",
+      urgency: "media",
+      dispatchTimingPhrase: timing,
+    });
     return {
       reason: "Solicitud de descuento especial o excepción de pago",
       urgency: "media",
       shortClientLabel: "las condiciones de tu pedido",
+      confirmedByClient: verified.confirmedByClient,
+      missingFieldsAsked: verified.missingFieldsAsked,
+      missingFieldKeys: verified.missingFieldKeys,
       actionNeeded: `Revisar solicitud de descuento especial / condición de pago para ${cityLabel}.`,
       howToHandle:
         `1) Revisa el historial del cliente y el margen del pedido antes de aprobar excepciones.\n` +
         `2) Responde resaltando garantía original, factura SRI y seguimiento de envío.`,
-      suggestedReply: `Hola${nombre}, soy el asesor de LíderPro Pedernales. Milo me compartió tu consulta y con gusto reviso la mejor alternativa para cerrar tu pedido con factura oficial y despacho garantizado.`,
+      suggestedReply: verified.suggestedReply,
     };
   }
 
@@ -722,7 +798,21 @@ export async function generateHermesReply(
   let activeVehicle = persistedCustomer?.activeVehicle ?? null;
   let city = persistedCustomer?.city ?? null;
   let customerType: CustomerType = persistedCustomer?.customerType ?? "particular";
-  const customerName = options.customerName || persistedCustomer?.name || null;
+  const explicitNameInMsg = extractExplicitHumanName(cleanMessage);
+  const customerName =
+    explicitNameInMsg ||
+    sanitizeCustomerName(options.customerName) ||
+    sanitizeCustomerName(persistedCustomer?.name) ||
+    null;
+  const rucCedula = extractRucOrCedula(cleanMessage);
+
+  const historyUserTexts = effectiveHistory.filter((t) => t.role === "user").map((t) => t.content);
+  const clientMentionedFilters = didClientMentionFilters([...historyUserTexts, cleanMessage]);
+  const bulkQuote = quoteBulkCanecaOrderFromCatalog(
+    cleanMessage,
+    privatePricing as BulkCatalogSku[],
+    { historyUserTexts }
+  );
 
   const extractedVeh = extractVehicleFromText(cleanMessage);
   if (extractedVeh.profile) {
@@ -764,6 +854,7 @@ export async function generateHermesReply(
         lastRecommendedSkus: Array.isArray(persistedCustomer.commercialState.lastRecommendedSkus)
           ? [...persistedCustomer.commercialState.lastRecommendedSkus]
           : [],
+        escalationContext: persistedCustomer.commercialState.escalationContext ?? null,
       }
     : {
         cartItems: [],
@@ -772,11 +863,36 @@ export async function generateHermesReply(
         salesStage: "descubrimiento",
         lastSuggestedItems: [],
         lastRecommendedSkus: [],
+        escalationContext: null,
       };
 
   const explicitTradeIn = extractBatteryTradeInFromText(cleanMessage);
   if (explicitTradeIn !== null) {
     prevState.batteryTradeIn = explicitTradeIn;
+  }
+
+  const preObservedPrices = new Set<number>();
+  const preMatchedSkus = new Set<string>();
+  if (bulkQuote) {
+    // Regla 2: Investigación obligatoria en catálogo + aritmética exacta en código antes de responder/escalar
+    prevState.cartItems = bulkQuote.lines.map((l) => ({
+      sku: l.sku,
+      name: l.name,
+      brand: l.brand,
+      presentation: l.specLabel,
+      unitPriceIva: l.unitPriceIva,
+      qty: l.qty,
+      subCategory: "combos_mannol",
+    }));
+    prevState.lastRecommendedSkus = Array.from(
+      new Set([...bulkQuote.lines.map((l) => l.sku), ...(prevState.lastRecommendedSkus || [])])
+    ).slice(0, 12);
+    for (const l of bulkQuote.lines) {
+      preMatchedSkus.add(l.sku);
+      preObservedPrices.add(l.unitPriceIva);
+      preObservedPrices.add(l.lineSubtotalUsd);
+    }
+    preObservedPrices.add(bulkQuote.subtotalUsd);
   }
 
   const toolCtx: MiloToolExecutionContext = {
@@ -787,15 +903,19 @@ export async function generateHermesReply(
     city,
     customerType,
     commercialState: prevState,
-    observedPricesUsd: new Set<number>(),
-    primaryRecommendedPriceUsd: null,
+    observedPricesUsd: preObservedPrices,
+    primaryRecommendedPriceUsd: bulkQuote ? bulkQuote.subtotalUsd : null,
     adAttribution: effectiveAttribution,
-    matchedSkus: new Set<string>(),
+    matchedSkus: preMatchedSkus,
+    primaryQuotedItems: bulkQuote ? bulkQuote.lines.map((l) => ({ sku: l.sku, qty: l.qty })) : undefined,
+    bulkQuote,
+    clientMentionedFilters,
+    rucCedula,
     createdOrder: null,
     escalatedToHuman: false,
     escalationAlertPreview: null,
     sendLiveAlerts: shouldPersist,
-    intentTag: "general",
+    intentTag: bulkQuote ? "b2b_flota" : "general",
     toolsUsed: [],
   };
 
@@ -952,8 +1072,39 @@ export async function generateHermesReply(
     }
   }
 
-  // 5. Fallback de emergencia SOLO si NVIDIA NIM estuvo completamente caído
-  if (!finalReply) {
+  // 5. Fallback de emergencia o blindaje determinístico de pre-cierre mayorista (Reglas 1-3)
+  if (bulkQuote) {
+    const allowedBulkPrices = collectAllowedPrices(toolCtx, recentAssistantTexts);
+    const hasInventedBulkDiscount = /\b\d{1,2}\s*%\s*(?:de\s+)?descuento\b/i.test(finalReply || "");
+    const hasBadBulkPrices = finalReply ? findUnverifiedPrices(finalReply, allowedBulkPrices).length > 0 : true;
+    const rawPush = (options.customerName || "").trim();
+    const leakedRawHash =
+      Boolean(rawPush) && !sanitizeCustomerName(rawPush) && Boolean(finalReply && finalReply.includes(rawPush));
+    const missingExactSubtotal =
+      !finalReply ||
+      !finalReply.includes(bulkQuote.subtotalUsd.toFixed(2)) &&
+        !finalReply.includes(bulkQuote.subtotalUsd.toFixed(2).replace(".", ","));
+
+    if (
+      !finalReply ||
+      hasInventedBulkDiscount ||
+      hasBadBulkPrices ||
+      leakedRawHash ||
+      missingExactSubtotal
+    ) {
+      finalReply = sanitizeWhatsAppFormatting(
+        buildLiveBulkPreCloseReply({
+          bulkQuote,
+          customerName: toolCtx.customerName,
+          city: toolCtx.city,
+          hasRuc: Boolean(rucCedula),
+          clientMentionedFilters,
+          isFirstGreeting: effectiveHistory.length === 0,
+        }),
+        sanitizeOpts
+      );
+    }
+  } else if (!finalReply) {
     usedFallback = true;
     usedModel = "milo-deterministic-fallback";
     finalReply = sanitizeWhatsAppFormatting(
@@ -982,7 +1133,7 @@ export async function generateHermesReply(
 
   const selectedSkusLabel = formatSelectedItemsSummary(cartItems, toolCtx.primaryQuotedItems, matchedSkusArr);
 
-  // 6. Disparador determinístico de escalamiento al WhatsApp del administrador (con debounce 30 min)
+  // 6. Disparador determinístico de escalamiento verificado (Reglas 1-4, debounce 30 min)
   if (!toolCtx.escalatedToHuman) {
     const detEsc = evaluateDeterministicEscalationSignal({
       cleanMessage,
@@ -994,18 +1145,38 @@ export async function generateHermesReply(
       selectedSkusLabel,
       matchedSkusCount: matchedSkusArr.length,
       customerName: toolCtx.customerName,
+      bulkQuote,
+      clientMentionedFilters,
+      rucCedula,
     });
     if (detEsc) {
-      const quotedSummary =
-        cartItems.length > 0
-          ? `${cartItems.map((i) => `${i.qty}x ${i.name} ($${i.unitPriceIva.toFixed(2)})`).join(" + ")} [${selectedSkusLabel}] = $${(cartTotalUsd ?? 0).toFixed(2)}`
-          : quotedTotalUsd !== null
-          ? `${selectedSkusLabel || "cotización"} = $${quotedTotalUsd.toFixed(2)} c/IVA`
-          : cleanMessage.slice(0, 140);
+      const quotedSummary = bulkQuote
+        ? `${bulkQuote.compactLabel} (${bulkQuote.arithmeticBreakdown})`
+        : cartItems.length > 0
+        ? `${cartItems.map((i) => `${i.qty}x ${i.name} ($${i.unitPriceIva.toFixed(2)})`).join(" + ")} [${selectedSkusLabel}] = $${(cartTotalUsd ?? 0).toFixed(2)}`
+        : quotedTotalUsd !== null
+        ? `${selectedSkusLabel || "cotización"} = $${quotedTotalUsd.toFixed(2)} c/IVA`
+        : normalizeBulkOrderText(cleanMessage).slice(0, 140);
+
+      toolCtx.commercialState.escalationContext = {
+        confirmedLines: bulkQuote?.lines ?? [],
+        confirmedSummary: bulkQuote?.compactLabel || quotedSummary,
+        confirmedSubtotalUsd: bulkQuote?.subtotalUsd ?? quotedTotalUsd,
+        clientMentionedFilters,
+        askedMissingFields: detEsc.missingFieldKeys,
+        collectedFields: {
+          ...(toolCtx.city ? { ciudad: toolCtx.city } : {}),
+          ...(toolCtx.customerName ? { nombre: toolCtx.customerName } : {}),
+          ...(rucCedula ? { ruc: rucCedula } : {}),
+        },
+        postEscalationReplyCount: 0,
+        lastRefreshedAt: new Date().toISOString(),
+      };
+
       const esc = await flagCustomerHumanEscalation({
         phoneOrSession: sessionId,
         reason: detEsc.reason,
-        summary: cleanMessage.slice(0, 300),
+        summary: bulkQuote ? bulkQuote.compactLabel : normalizeBulkOrderText(cleanMessage).slice(0, 300),
         urgency: detEsc.urgency,
         customerName: toolCtx.customerName,
         customerPhone: toolCtx.customerPhone,
@@ -1013,6 +1184,8 @@ export async function generateHermesReply(
         adTag: effectiveAttribution.adTag ?? null,
         vehicleLabel: formatVehicleLabel(toolCtx.activeVehicle) || null,
         quotedSummary,
+        confirmedByClient: detEsc.confirmedByClient,
+        missingFieldsAsked: detEsc.missingFieldsAsked,
         actionNeeded: detEsc.actionNeeded,
         howToHandle: detEsc.howToHandle,
         suggestedReply: detEsc.suggestedReply,
@@ -1022,7 +1195,7 @@ export async function generateHermesReply(
       toolCtx.escalationAlertPreview = esc.alertPreviewMasked;
       toolCtx.intentTag = "escalamiento_humano";
       if (!/\basesor\b/i.test(finalReply)) {
-        finalReply = `${finalReply}\n\nYa pasé tu dato exacto a nuestro asesor para confirmarte ${detEsc.shortClientLabel} cuanto antes.`;
+        finalReply = `${finalReply}\n\nYa pasé tu detalle exacto a nuestro asesor para confirmarte ${detEsc.shortClientLabel} cuanto antes.`;
       }
     }
   }

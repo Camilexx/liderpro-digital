@@ -142,12 +142,21 @@ export function buildNeutralFreightEscalationCopy(params: {
   selectedSkusLabel?: string | null;
   now?: Date;
 }): { howToHandle: string; suggestedReply: string } {
-  const nombre = params.customerName ? ` ${params.customerName}` : "";
+  const rawName = (params.customerName || "").trim();
+  const safeName =
+    rawName &&
+    !/^[a-f0-9]{6,}$/i.test(rawName.replace(/\s+/g, "")) &&
+    !/\d|_/.test(rawName) &&
+    !/^(?:ad|user|usr|lead|wa|id)[-_:.]/i.test(rawName) &&
+    rawName.replace(/[^a-zA-ZáéíóúÁÉÍÓÚñÑüÜ]/g, "").length >= 2
+      ? rawName
+      : "";
+  const greeting = safeName ? `Hola ${safeName}` : "¡Hola! Qué gusto saludarte";
   const timing = getDispatchTimingPhraseEC(params.now);
   const howToHandle =
     `1) Cotiza el flete exacto para ${params.selectedSkusLabel || "el kit cotizado"} (${params.totalTxt}) según peso y destino (${params.cityLabel}) sin prometer flota ni courier específico.\n` +
     `2) Envía el valor exacto del envío a tu ciudad / dirección acordada sin contradecir el precio del kit dado por Milo y pide los datos para despacho nacional coordinado.`;
   const suggestedReply =
-    `Hola${nombre}, soy el asesor de LíderPro Pedernales. Tu kit ya está listo (${params.totalTxt} c/IVA) y enseguida te confirmo el valor exacto del envío a tu ciudad (${params.cityLabel}) para ${timing}.`;
+    `${greeting}, soy el asesor de LíderPro Pedernales. Tu kit ya está listo (${params.totalTxt} c/IVA) y enseguida te confirmo el valor exacto del envío a tu ciudad (${params.cityLabel}) para ${timing}.`;
   return { howToHandle, suggestedReply };
 }

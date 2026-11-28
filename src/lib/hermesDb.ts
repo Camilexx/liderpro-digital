@@ -9,6 +9,12 @@ import {
   isWithinSameDayDispatchWindowEC,
   sanitizeMiloLogisticsText,
 } from "@/lib/miloLogisticsPolicy";
+import {
+  buildWarmEcuadorianGreeting,
+  formatVerifiedEscalationAlert,
+  sanitizeCustomerName,
+  type EscalationContextSnapshot,
+} from "@/lib/miloB2bCloser";
 
 export type CustomerType = "particular" | "camaronera" | "taller";
 export type ChannelType = "whatsapp" | "demo_web" | "instagram" | "messenger";
@@ -61,6 +67,7 @@ export interface CommercialState {
   salesStage: SalesStage;
   lastSuggestedItems: CartItem[];
   lastRecommendedSkus?: string[];
+  escalationContext?: EscalationContextSnapshot | null;
   updatedAt?: string;
 }
 
@@ -1811,10 +1818,14 @@ export async function flagCustomerHumanEscalation(input: {
   adTag?: string | null;
   vehicleLabel?: string | null;
   quotedSummary?: string | null;
+  confirmedByClient?: string | null;
+  missingFieldsAsked?: string | null;
   actionNeeded?: string | null;
   howToHandle?: string | null;
   suggestedReply?: string | null;
   sendLiveAlerts?: boolean;
+  isUpdate?: boolean;
+  forceRefresh?: boolean;
 }): Promise<{
   ok: boolean;
   adminWaSent: boolean;
@@ -1826,6 +1837,7 @@ export async function flagCustomerHumanEscalation(input: {
   if (!key) {
     return { ok: false, adminWaSent: false, telegramSent: false, debounced: false, alertPreviewMasked: "" };
   }
+  const safeCustomerName = sanitizeCustomerName(input.customerName);
   const safeReason = input.reason.trim().slice(0, 260) || "Atención de asesor humano";
   const safeSummary = input.summary.trim().slice(0, 600);
   const safeUrgency: EscalationUrgency =
@@ -1836,10 +1848,11 @@ export async function flagCustomerHumanEscalation(input: {
   const nowMs = Date.now();
   const nowIso = new Date(nowMs).toISOString();
   const allowLiveAlerts = input.sendLiveAlerts !== false;
+  const forceRefresh = Boolean(input.forceRefresh);
 
   let debounced = false;
   const memPrev = escalationAlertDebounce.get(key);
-  if (memPrev && memPrev.reasonKey === reasonKey && nowMs - memPrev.sentAtMs < ESCALATION_DEBOUNCE_MS) {
+  if (!forceRefresh && memPrev && memPrev.reasonKey === reasonKey && nowMs - memPrev.sentAtMs < ESCALATION_DEBOUNCE_MS) {
     debounced = true;
   }
 
@@ -1847,7 +1860,7 @@ export async function flagCustomerHumanEscalation(input: {
     try {
       const pool = await getPool();
       if (pool) {
-        if (!debounced) {
+        if (!debounced && !forceRefresh) {
           const prevRes = await pool.query<{ escalation_reason: string | null; escalated_at: string | null }>(
             `SELECT escalation_reason, escalated_at FROM customers WHERE phone_or_session = $1 LIMIT 1`,
             [key]
@@ -1877,14 +1890,14 @@ export async function flagCustomerHumanEscalation(input: {
              escalation_urgency = EXCLUDED.escalation_urgency,
              escalated_at = NOW(),
              updated_at = NOW()`,
-          [key, input.customerName ?? null, input.city ?? null, safeReason, safeSummary, safeUrgency]
+          [key, safeCustomerName, input.city ?? null, safeReason, safeSummary, safeUrgency]
         );
       } else {
         const store = loadFallbackStore();
         const prev = store.customers[key];
         store.customers[key] = {
           phoneOrSession: key,
-          name: input.customerName ?? prev?.name ?? null,
+          name: safeCustomerName ?? sanitizeCustomerName(prev?.name) ?? null,
           activeVehicle: prev?.activeVehicle ?? null,
           city: input.city ?? prev?.city ?? null,
           customerType: prev?.customerType ?? "particular",
@@ -1907,27 +1920,31 @@ export async function flagCustomerHumanEscalation(input: {
   const digits = extractWaDigitsFromSession(key, input.customerPhone);
   const maskedPhone = maskWaDigitsForLog(digits, key);
   const clientContactPrivate = digits ? `https://wa.me/${digits}` : key;
-  const cityLabel = input.city || "Por confirmar";
-  const adTagLabel = input.adTag || "Orgánico";
   const quotedLine = [input.vehicleLabel, input.quotedSummary || safeSummary].filter(Boolean).join(" | ");
-  const actionLine = input.actionNeeded?.trim() || safeReason;
-  const howToLine = sanitizeMiloLogisticsText(
-    input.howToHandle?.trim() ||
-      `1) Revisa el historial del chat en /admin-hermes sin contradecir los precios ya cotizados.\n` +
-        `2) Confirma el punto pendiente al cliente (envío a tu ciudad / dirección acordada sin nombrar flotas) y cierra el pedido con factura SRI.`
-  );
+  const confirmedBlock =
+    input.confirmedByClient?.trim() || `• ${quotedLine || "Consulta en curso"}`;
+  const missingBlock =
+    input.missingFieldsAsked?.trim() ||
+    input.actionNeeded?.trim() ||
+    "Ciudad/sector de entrega y datos de facturación SRI";
   const suggestedLine = sanitizeMiloLogisticsText(
     input.suggestedReply?.trim() ||
-      `Hola${input.customerName ? ` ${input.customerName}` : ""}, soy el asesor de LíderPro Pedernales. Milo ya me pasó tu consulta completa para confirmarte el dato exacto y dejar listo tu pedido.`
+      `${buildWarmEcuadorianGreeting(safeCustomerName)}, soy el asesor de LíderPro Pedernales. Ya revisé tu consulta completa para confirmarte el dato exacto y dejar listo tu pedido.`
   );
 
   const buildAlertBody = (contactRef: string): string =>
-    `🚨 *ESCALAMIENTO MILO — [URGENCIA: ${safeUrgency.toUpperCase()}]*\n` +
-    `*Cliente:* ${input.customerName || "Sin nombre"} | ${contactRef} | ${cityLabel} | ${adTagLabel}\n` +
-    `*Resumen / Ya cotizado por Milo:* ${quotedLine}\n` +
-    `*Qué se necesita:* ${actionLine}\n` +
-    `*Cómo gestionarlo:*\n${howToLine}\n` +
-    `*Respuesta sugerida lista para copiar:*\n"${suggestedLine}"`;
+    formatVerifiedEscalationAlert({
+      urgency: safeUrgency,
+      customerName: safeCustomerName,
+      contactRef,
+      city: input.city,
+      adTag: input.adTag,
+      reason: safeReason,
+      confirmedByClient: confirmedBlock,
+      missingFieldsAsked: missingBlock,
+      suggestedReply: suggestedLine,
+      isUpdate: input.isUpdate,
+    });
 
   const privateAlertText = buildAlertBody(clientContactPrivate);
   const alertPreviewMasked = buildAlertBody(maskedPhone);

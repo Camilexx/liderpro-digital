@@ -36,6 +36,12 @@ import {
   resolveMulticategoryCatalogQuery,
   type IndexedCatalogEntry,
 } from "@/lib/miloCatalogIndex";
+import { getDispatchTimingPhraseEC } from "@/lib/miloLogisticsPolicy";
+import {
+  buildVerifiedEscalationPayload,
+  sanitizeCustomerName,
+  type BulkCatalogQuote,
+} from "@/lib/miloB2bCloser";
 
 export interface MiloToolExecutionContext {
   sessionId: string;
@@ -50,6 +56,9 @@ export interface MiloToolExecutionContext {
   adAttribution?: AdAttribution | null;
   matchedSkus: Set<string>;
   primaryQuotedItems?: Array<{ sku: string; qty: number }>;
+  bulkQuote?: BulkCatalogQuote | null;
+  clientMentionedFilters?: boolean;
+  rucCedula?: string | null;
   createdOrder: OrderRecord | null;
   escalatedToHuman: boolean;
   escalationAlertPreview?: string | null;
@@ -1376,25 +1385,64 @@ export async function executeMiloToolCall(
     const resumen = String(rawArgs.resumen_corto || motivo).trim();
     const rawUrg = String(rawArgs.urgencia || "alta").toLowerCase();
     const urgency: EscalationUrgency = rawUrg === "media" || rawUrg === "baja" ? rawUrg : "alta";
+    const safeName = sanitizeCustomerName(ctx.customerName);
 
     ctx.customerType = extractCustomerType(`${motivo} ${resumen}`, ctx.customerType);
     const quotedItemsSummary =
-      ctx.commercialState.cartItems.length > 0
+      ctx.bulkQuote
+        ? `${ctx.bulkQuote.compactLabel} = $${ctx.bulkQuote.subtotalUsd.toFixed(2)} c/IVA`
+        : ctx.commercialState.cartItems.length > 0
         ? ctx.commercialState.cartItems.map((i) => `${i.qty}x ${i.name} ($${i.unitPriceIva.toFixed(2)})`).join(" + ")
         : ctx.primaryQuotedItems && ctx.primaryQuotedItems.length > 0
         ? ctx.primaryQuotedItems.map((i) => (i.qty > 1 ? `${i.qty}× ${i.sku}` : i.sku)).join(" + ")
         : Array.from(ctx.matchedSkus).slice(0, 2).join(", ") || null;
+
+    const verified = buildVerifiedEscalationPayload({
+      bulkQuote: ctx.bulkQuote ?? null,
+      cleanMessage: resumen,
+      customerName: safeName,
+      city: ctx.city,
+      rucCedula: ctx.rucCedula ?? null,
+      vehicleLabel: formatVehicleLabel(ctx.activeVehicle) || null,
+      quotedTotalUsd: ctx.bulkQuote?.subtotalUsd ?? ctx.primaryRecommendedPriceUsd,
+      selectedSkusLabel: quotedItemsSummary,
+      clientMentionedFilters: Boolean(ctx.clientMentionedFilters),
+      reasonOverride: motivo,
+      urgency,
+      dispatchTimingPhrase: getDispatchTimingPhraseEC(),
+    });
+
+    ctx.commercialState.escalationContext = {
+      confirmedLines: ctx.bulkQuote?.lines ?? [],
+      confirmedSummary: ctx.bulkQuote?.compactLabel || quotedItemsSummary || resumen.slice(0, 180),
+      confirmedSubtotalUsd: ctx.bulkQuote?.subtotalUsd ?? ctx.primaryRecommendedPriceUsd ?? null,
+      clientMentionedFilters: Boolean(ctx.clientMentionedFilters),
+      askedMissingFields: verified.missingFieldKeys,
+      collectedFields: {
+        ...(ctx.city ? { ciudad: ctx.city } : {}),
+        ...(safeName ? { nombre: safeName } : {}),
+        ...(ctx.rucCedula ? { ruc: ctx.rucCedula } : {}),
+      },
+      postEscalationReplyCount: 0,
+      lastRefreshedAt: new Date().toISOString(),
+    };
+
     const esc = await flagCustomerHumanEscalation({
       phoneOrSession: ctx.sessionId,
-      reason: motivo,
-      summary: resumen,
+      reason: verified.reason,
+      summary: ctx.bulkQuote ? ctx.bulkQuote.compactLabel : resumen,
       urgency,
-      customerName: ctx.customerName,
+      customerName: safeName,
       customerPhone: ctx.customerPhone,
       city: ctx.city,
       adTag: ctx.adAttribution?.adTag ?? null,
       vehicleLabel: formatVehicleLabel(ctx.activeVehicle) || null,
       quotedSummary: quotedItemsSummary,
+      confirmedByClient: verified.confirmedByClient,
+      missingFieldsAsked: verified.missingFieldsAsked,
+      actionNeeded: verified.actionNeeded,
+      howToHandle: verified.howToHandle,
+      suggestedReply: verified.suggestedReply,
       sendLiveAlerts: ctx.sendLiveAlerts !== false,
     });
 
@@ -1410,7 +1458,7 @@ export async function executeMiloToolCall(
       debounced: esc.debounced,
       urgencia: urgency,
       instrucciones:
-        "Responde en máximo 2 líneas directas avisando que ya pasaste el dato exacto al asesor para confirmarle ese punto cuanto antes. PROHIBIDO inventar fletes, precios mayoristas, plazos de crédito o descuentos no autorizados.",
+        "Entrega PRIMERO el desglose exacto confirmado con precios de catálogo (sin inventar descuentos ni fletes) y cierra con 1 sola pregunta ágil por el dato faltante (ciudad/sector exacto o RUC/nombre para proforma). PROHIBIDO cortar frío, mencionar filtros no pedidos o usar hashes como nombre.",
     };
   }
 

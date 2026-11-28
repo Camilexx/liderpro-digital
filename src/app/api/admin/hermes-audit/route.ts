@@ -6,11 +6,13 @@ import {
   buildRejectedPaymentMessage,
   generateAndSaveWeeklyAudit,
   getAdminDashboardSnapshot,
+  getCustomer,
   insertMessage,
   rejectOrderPayment,
   resolveCustomerHumanEscalation,
   sendWhatsAppTextDirect,
   updateOrderStatus,
+  upsertCustomer,
   type ChannelType,
   type OrderStatus,
 } from "@/lib/hermesDb";
@@ -146,7 +148,69 @@ export async function PATCH(req: NextRequest) {
       orderId?: number | string;
       status?: string;
       reason?: string;
+      message?: string;
+      city?: string | null;
+      clearBadName?: boolean;
+      unmute?: boolean;
+      skusUsed?: string[];
+      quotedTotalUsd?: number | null;
+      intentTag?: string;
     };
+
+    if (body.action === "send_verified_reply") {
+      const targetSession = typeof body.sessionId === "string" ? body.sessionId.trim() : "";
+      const replyText = typeof body.message === "string" ? body.message.trim() : "";
+      if (!targetSession || !replyText) {
+        return NextResponse.json(
+          { ok: false, error: "Se requieren 'sessionId' y 'message'." },
+          { status: 400 }
+        );
+      }
+
+      if (body.unmute !== false) {
+        await resolveCustomerHumanEscalation(targetSession);
+      }
+
+      const existing = await getCustomer(targetSession);
+      if (body.city || body.clearBadName) {
+        await upsertCustomer({
+          phoneOrSession: targetSession,
+          name: body.clearBadName ? null : existing?.name ?? null,
+          activeVehicle: existing?.activeVehicle ?? null,
+          city: body.city ?? existing?.city ?? null,
+          customerType: existing?.customerType ?? "taller",
+          commercialState: existing?.commercialState ?? undefined,
+          adId: existing?.adId ?? null,
+          adTag: existing?.adTag ?? null,
+          ctwaClid: existing?.ctwaClid ?? null,
+          adHeadline: existing?.adHeadline ?? null,
+          funnelStage: "producto_cotizado",
+        });
+      }
+
+      const waTarget = targetSession.startsWith("wa:") ? targetSession.slice(3).replace(/[^\d]/g, "") : "";
+      const whatsappSent = waTarget ? await sendWhatsAppTextDirect(waTarget, replyText) : false;
+
+      if (whatsappSent) {
+        await insertMessage({
+          sessionId: targetSession,
+          channel: "whatsapp",
+          role: "assistant",
+          content: replyText,
+          skusUsed: Array.isArray(body.skusUsed) ? body.skusUsed : [],
+          quotedTotalUsd: typeof body.quotedTotalUsd === "number" ? body.quotedTotalUsd : null,
+          intentTag: body.intentTag || "b2b_flota",
+          adId: existing?.adId ?? null,
+          adTag: existing?.adTag ?? null,
+          ctwaClid: existing?.ctwaClid ?? null,
+        });
+      }
+
+      return NextResponse.json(
+        { ok: whatsappSent, sessionId: targetSession, whatsappSent, unmuted: body.unmute !== false },
+        { status: whatsappSent ? 200 : 502 }
+      );
+    }
 
     if (body.action === "resolve_escalation") {
       const targetSession = typeof body.sessionId === "string" ? body.sessionId.trim() : "";

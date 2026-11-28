@@ -166,7 +166,7 @@ export const MILO_SYSTEM_PROMPT =
   "6) PROHIBIDO INVENTAR PRECIOS, DESCUENTOS O FLETES: Solo usa cifras exactas devueltas por `buscar_en_catalogo`, `gestionar_carrito` o el bloque `[PEDIDO MAYORISTA VERIFICADO EN CATÁLOGO]`. JAMÁS inventes porcentajes de descuento por volumen en lubricantes ni inviertas precios entre 15W-40 ($125.00) y 10W-40 ($128.50).\n" +
   "7) CERO SESGO A ACEITES Y HIGIENIZACIÓN DE NOMBRE: Si preguntaron por batería, cotiza batería primero. PROHIBIDO saludar usando hashes, códigos o teléfonos (`f889566`, `AD-B12`, `user_`); si no hay nombre humano real, saluda cálidamente ('¡Hola! Qué gusto saludarte').\n" +
   "8) VEHÍCULOS POCO COMUNES: Usa `consultar_especificacion_vehiculo_web` + `buscar_en_catalogo`.\n" +
-  "9) PROTOCOLO OBLIGATORIO INVESTIGAR + APORTAR VALOR + PRE-CERRAR ANTES DE ESCALAR: Si piden canecas 20L, tambores, flota/proforma (>=3 vehículos o >=5 canecas 20L) o envío fuera de Pedernales, PRIMERO confirma disponibilidad y desglose exacto calculado con catálogo (ej. 4 × $125.00 + 1 × $128.50 = $628.50 c/IVA), NUNCA te trabes ni cortes frío con 'te paso con un asesor', y cierra con 1 sola pregunta conversacional ágil por el dato que falte (ciudad/sector exacto de entrega, nombre/RUC para proforma, y marca/modelo/año solo si el cliente pidió filtros). JAMÁS repitas cantidades que el cliente ya confirmó ni inventes filtros que el cliente no mencionó.\n" +
+  "9) GESTIÓN AUTÓNOMA COMPLETA + ESCALAMIENTO SOLO POR URGENCIA REAL: Gestiona, verifica y cierra TÚ MISMO el 100% de pedidos con precio en catálogo (combos, baterías, canecas 20L hasta 9 unidades, envíos nacionales GRATIS desde $35). Verifica disponibilidad, litraje, ciudad/sector, nombre/RUC y forma de pago, y llama a `registrar_pedido` SIN trabarte ni escalar innecesariamente. Llama a `escalar_a_asesor_humano` ÚNICAMENTE en casos urgentes que no puedas resolver solo: vehículos pesados sin filtros mapeados (Sinotruk/Weichai/Glory), volumen masivo (>=10 canecas o tambores 55 GL), solicitud explícita de crédito/plazo/descuento especial no catalogado, reclamo/garantía urgente o si el cliente exige hablar directamente con el encargado.\n" +
   "10) REGISTRO DE PEDIDO: Cuando el cliente ya confirme que quiere pedir y dé nombre, dirección/ciudad/retiro y forma de pago, llama a `registrar_pedido`. Solo entonces entrega los datos de Banco Pichincha (2216090525 / CI 1308068814 / ADRIAN MOSQUERA), pide comprobante completo y no prometas hora de salida hasta verificación.";
 
 export const HERMES_SYSTEM_PROMPT = MILO_SYSTEM_PROMPT;
@@ -647,10 +647,24 @@ function evaluateDeterministicEscalationSignal(params: {
     if (Number.isFinite(qty) && qty > maxCanecas) maxCanecas = qty;
   }
 
-  const isFleetOrVolume =
+  // Gestión autónoma completa de Milo:
+  // Pedidos estándar de canecas con stock/precio en catálogo (ej. 5 canecas) los gestiona y cierra Milo solo.
+  // Escalar a ADMIN_NOTIFY_PHONE ÚNICAMENTE en casos urgentes reales:
+  // 1) Vehículos pesados sin filtros mapeados (Sinotruk/Weichai/Howo/Shacman/Glory) o tambores 55 GL sin SKU
+  // 2) Flota masiva (>=10 canecas o >=3 marcas distintas)
+  // 3) Urgencia explícita / reclamo / garantía dañada / cliente exige encargado humano
+  // 4) Crédito/plazo, descuento especial explícito o contra entrega fuera de Pedernales
+  const hasUnmatchedBulk = Boolean(params.bulkQuote && params.bulkQuote.unmatchedSpecs.length > 0);
+  const asksUrgentHumanOrComplaint =
+    /\b(urgente|emergencia|hablar\s+con\s+(?:un\s+)?(?:asesor|humano|encargado|gerente|dueno|persona)|pasame\s+con|reclamo|queja|estafa|garantia\s+(?:falla|danada|no\s+sirve)|devolucion)\b/.test(
+      norm
+    );
+  const isMassiveFleetOrUnmapped =
     brandHits >= 3 ||
-    maxCanecas >= 5 ||
-    (/\b(flota|proforma|mayorista|taller)\b/.test(norm) && (brandHits >= 2 || maxCanecas >= 5 || hasUnmappedHeavy));
+    maxCanecas >= 10 ||
+    hasUnmappedHeavy ||
+    hasUnmatchedBulk ||
+    /\btambores?\b|\b55\s*g(?:al|l)\b/.test(norm);
 
   // Con Envío Gratis Nacional desde $35 (+$5 ocultos incluidos), pedidos retail >= $35 fuera de Pedernales
   // YA NO escalan por flete: Milo cierra la venta directamente con ENVÍO GRATIS incluido (<48h).
@@ -672,7 +686,35 @@ function evaluateDeterministicEscalationSignal(params: {
   const timing = getDispatchTimingPhraseEC();
   const vehicleLabel = formatVehicleLabel(params.activeVehicle) || null;
 
-  if (isFleetOrVolume || hasUnmappedHeavy) {
+  if (asksUrgentHumanOrComplaint) {
+    const verified = buildVerifiedEscalationPayload({
+      bulkQuote: params.bulkQuote ?? null,
+      cleanMessage: params.cleanMessage,
+      customerName: safeName,
+      city: params.city,
+      rucCedula: params.rucCedula ?? null,
+      vehicleLabel,
+      quotedTotalUsd: params.quotedTotalUsd,
+      selectedSkusLabel: params.selectedSkusLabel,
+      clientMentionedFilters: Boolean(params.clientMentionedFilters),
+      reasonOverride: "Caso urgente / solicitud directa de atención humana",
+      urgency: "alta",
+      dispatchTimingPhrase: timing,
+    });
+    return {
+      reason: verified.reason,
+      urgency: "alta",
+      shortClientLabel: "tu caso prioritario con nuestro encargado",
+      confirmedByClient: verified.confirmedByClient,
+      missingFieldsAsked: verified.missingFieldsAsked,
+      missingFieldKeys: verified.missingFieldKeys,
+      actionNeeded: verified.actionNeeded,
+      howToHandle: verified.howToHandle,
+      suggestedReply: verified.suggestedReply,
+    };
+  }
+
+  if (isMassiveFleetOrUnmapped) {
     const verified = buildVerifiedEscalationPayload({
       bulkQuote: params.bulkQuote ?? null,
       cleanMessage: params.cleanMessage,

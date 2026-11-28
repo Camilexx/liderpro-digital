@@ -803,6 +803,7 @@ export function buildLiveBulkPreCloseReply(params: {
   hasRuc?: boolean;
   clientMentionedFilters?: boolean;
   isFirstGreeting?: boolean;
+  escalateToAdvisor?: boolean;
 }): string {
   const safeName = sanitizeCustomerName(params.customerName);
   const greeting =
@@ -828,11 +829,16 @@ export function buildLiveBulkPreCloseReply(params: {
       : "🚚 *¡ENVÍO GRATIS INCLUIDO a todo el Ecuador (<48h)!*"
     : "";
 
-  const cityNote = params.city
-    ? `Ya pasé tu detalle exacto a nuestro asesor comercial para revisar tu mejor escala mayorista y coordinar tu despacho gratis a *${params.city}*.`
-    : `Ya pasé tu detalle exacto a nuestro asesor comercial para revisar tu mejor escala mayorista y coordinar tu despacho gratis a todo el Ecuador (<48h).`;
+  const isEscalated = Boolean(params.escalateToAdvisor);
+  const cityNote = isEscalated
+    ? params.city
+      ? `Ya pasé tu requerimiento prioritario a gerencia para validar tu condición especial y coordinar tu despacho gratis a *${params.city}*.`
+      : `Ya pasé tu requerimiento prioritario a gerencia para validar tu condición especial y coordinar tu despacho gratis a todo el Ecuador (<48h).`
+    : params.city
+    ? `Incluye *factura electrónica SRI* y cada combo trae su *filtro pesado + Cockpit Care con esponja de regalo*, listo para coordinar tu despacho gratis a *${params.city}*.`
+    : `Incluye *factura electrónica SRI* y cada combo trae su *filtro pesado + Cockpit Care con esponja de regalo*, listo para despacharlo gratis a tu ciudad (<48h).`;
 
-  // 1 sola pregunta conversacional ágil que pide únicamente lo faltante
+  // 1 sola pregunta conversacional ágil que pide únicamente lo faltante para cerrar autónomamente
   const missingPrompts: string[] = [];
   if (!params.city) missingPrompts.push("la *ciudad y sector exacto* de entrega");
   if (!safeName && !params.hasRuc) missingPrompts.push("tu *nombre o RUC*");
@@ -843,13 +849,18 @@ export function buildLiveBulkPreCloseReply(params: {
 
   let closingQuestion: string;
   if (missingPrompts.length === 0) {
-    closingQuestion =
-      "¿Deseas agregar algún otro producto o te enviamos la proforma oficial con envío gratis incluido?";
+    closingQuestion = isEscalated
+      ? "¿Deseas agregar algún detalle adicional mientras gerencia te confirma?"
+      : "¿Confirmamos tu pedido para registrarlo ahora mismo con factura SRI y envío gratis?";
   } else if (missingPrompts.length === 1) {
-    closingQuestion = `Para agilizar tu proforma y despacho gratis, ¿me ayudas confirmando ${missingPrompts[0]}?`;
+    closingQuestion = isEscalated
+      ? `Para agilizar tu proforma y despacho gratis, ¿me ayudas confirmando ${missingPrompts[0]}?`
+      : `Para registrarte el pedido ahora mismo con envío gratis, ¿me ayudas confirmando ${missingPrompts[0]}?`;
   } else {
     const last = missingPrompts.pop();
-    closingQuestion = `Para dejarte lista la proforma oficial con envío gratis, ¿me ayudas con ${missingPrompts.join(", ")} y ${last}?`;
+    closingQuestion = isEscalated
+      ? `Para dejarte lista la proforma oficial con envío gratis, ¿me ayudas con ${missingPrompts.join(", ")} y ${last}?`
+      : `Para registrarte el pedido y coordinar tu despacho gratis, ¿me ayudas con ${missingPrompts.join(", ")} y ${last}?`;
   }
 
   return (

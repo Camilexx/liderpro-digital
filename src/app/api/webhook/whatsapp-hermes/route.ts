@@ -10,6 +10,7 @@ import {
 import { resolveAdContext } from "@/lib/hermesCatalog";
 import { claimWebhookMessageId, type AdAttribution } from "@/lib/hermesDb";
 import { generateHermesReply } from "@/lib/hermesEngine";
+import { buildCapiPayload, sendWhatsAppCapiEvent } from "@/lib/metaCapi";
 import { handleIncomingPaymentReceipt } from "@/lib/miloPayments";
 
 export const runtime = "nodejs";
@@ -173,6 +174,7 @@ interface MetaChangeItem {
     messages?: Array<{
       id?: string;
       from?: string;
+      timestamp?: string;
       type?: string;
       text?: { body?: string };
       interactive?: {
@@ -430,6 +432,27 @@ export async function POST(req: NextRequest) {
 
           const textBody = extractInboundText(msg);
           const adAttribution = extractAdAttribution(msg, textBody);
+
+          // CAPI server-side (Lead si viene de CTWA con ctwa_clid, Contact si es orgánico).
+          // event_id determinista + claim previo ⇒ deduplicación en instancia caliente, Postgres y Dataset Meta.
+          // META_CAPI_DRY_RUN (default true) mantiene el modo seguro: no hay POST a Graph hasta desactivarlo explícitamente.
+          if (msg.id) {
+            const capiInput = {
+              from,
+              messageId: msg.id,
+              timestamp: msg.timestamp,
+              ctwaClid: adAttribution?.ctwaClid || null,
+              adId: adAttribution?.adId || null,
+              wabaId: entryId || null,
+            };
+            const capiEventId = buildCapiPayload(capiInput, process.env).data[0].event_id;
+            if (await claimWebhookMessageId(`capi:${capiEventId}`)) {
+              queuedJobs.push(async () => {
+                const capiRes = await sendWhatsAppCapiEvent(capiInput);
+                console.log("[MiloWebhook] capi_result", capiRes);
+              });
+            }
+          }
 
           if (textBody) {
             const dedupKey = msg.id ? `wa:${msg.id}` : `wa_txt:${from}:${textBody.slice(0, 60)}`;
